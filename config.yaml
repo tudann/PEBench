@@ -1,0 +1,108 @@
+# PEBench 人工配置：修改不带 # 的行才会生效。
+# 下面以 # 开头的示例可复制使用：复制后替换原有同名行，不要保留两个同名键。
+# 列表用 [值1, 值2]；空列表 [] 表示该条件不限制；null 表示不设置。
+# 四种筛选条件取交集，然后按数据原始顺序截取 limit 个。
+# 路径相对本 YAML 文件；密钥文件相对项目目录。输出必须放在 PFS 数据盘。
+paths:
+  # 原始数据目录：包含三个数据 JSON 和素材文件。
+  data_root: data
+  # 缓存、评分和报告存放处；必须位于 /pfs/pfs-spMCeu 下。
+  output_root: runs
+  # 评估时使用的 PE 候选 JSONL；也可在命令行指定 --candidate-file。
+  candidate_file: null
+  # candidate_file: data/my_candidates.jsonl
+  # make-template 生成待填写的候选文件；每行对应一个选中的 case。
+  template_file: data/pe_candidates_template.jsonl
+
+selection:
+  # 【输入任务模式】T2V=文本生成视频；I2V=参考首帧图片；R2V=参考图片/视频素材。
+  # 当前数据没有独立的 t2va/r2va 标签，不能直接填写这两个值。
+  modes: [t2v]
+  # modes: [i2v]               # 只选 I2V（共 300 条）
+  # modes: [r2v]               # 只选 R2V（共 300 条；含视频素材时需要视频模型）
+  # modes: [t2v, i2v, r2v]     # 三种模式（共 1100 条）
+  # modes: []                  # 等价于不限制模式
+  # 【指定 case】格式为 "模式:capid"。不同模式可能都有 001，因此必须带模式。
+  # 例如 t2v:001 与 i2v:001 是两个不同 case；空列表表示不按编号限制。
+  case_keys: []
+  # case_keys: ["t2v:001"]
+  # case_keys: ["t2v:001", "t2v:003"]
+  # case_keys: ["i2v:001", "r2v:001"]  # 同时将 modes 改为 [i2v, r2v]
+  # 注意：如 modes 为 [t2v]，i2v:001 会被模式条件排除；limit 也会限制最终数量。
+  # 【内容大类】大小写和空格须与下面完全一致；空列表表示全部。
+  # 可选：Action（动作）、Animation（动画）、Cinematography（摄影）、General（通用）、
+  # Music（音乐）、Narrative（叙事）、Sound Effects（音效）、Speech（语音）、
+  # Visual Effects（视觉特效）。类别描述内容，不保证素材本身包含音轨。
+  task_categories: []
+  # task_categories: [Speech]
+  # task_categories: [Speech, Music, "Sound Effects"]
+  # task_categories: [Action, "Visual Effects"]
+  # 【具体内容类型】空列表表示全部。与 task_categories、modes、case_keys 同时满足。
+  # 全部可选类型，按所属类别列出（填写英文原文）：
+  # Action: Combat, Daily Activity, Dance, Sports
+  # Animation: 2D Animation, 3D Animation
+  # Cinematography: Camera Motion, Lighting and Color, Time-Lapse
+  # General: Intellectual Property (IP), Nature, On-Screen Text, Physical Laws, Portrait
+  # Music: Background Music, Instrumental Performance, Music Video, Opera, Singing, Song and Dance
+  # Narrative: Fantasy Story, Historical Story, Modern Story
+  # Sound Effects: Animal Sound, Environmental Sound
+  # Speech: Dialogue, Emotional Vocalization, Explanation, Monologue, Narration
+  # Visual Effects: Light/Weather Effects, Sci-Fi Creature, Transformation, VFX Character, VFX Object
+  task_types: []
+  # task_types: [Dialogue, Narration]       # 语音中的对话和旁白
+  # task_types: [Singing, "Background Music"]
+  # task_types: ["Daily Activity"]
+  # 例如 task_categories 为 [Speech] 且 task_types 为 [Singing] 时没有交集，会报无 case。
+  # 【数量上限】先按上面条件筛选，再按原始顺序取前 N 条；并非随机抽样。
+  limit: 1                  # 默认只跑 1 条，避免意外产生批量费用
+  # limit: 10               # 最多 10 条
+  # limit: null             # 所有符合筛选条件的 case
+  # 例如选择 t2v:001 和 t2v:003 时，需要将 limit 改为 2 或 null 才会选中两条。
+
+run:
+  run_id: null              # null 自动生成；prepare/evaluate 共用同一 ID 可复用缓存
+  # run_id: my-experiment   # 修改 case 范围或已评估的 PE 内容时，请使用新 ID
+  method: method-name       # 候选模板的 method，只能使用字母、数字、点、下划线和连字符
+  # method: my-pe-v1
+  inspect_content: true     # true 校验媒体可解码；false 只检查路径和哈希
+  # inspect_content: false
+  resume: true              # 复用已完成的裁判结果
+  # resume: false           # 重新请求裁判；素材事实缓存仍会复用
+
+provider:
+  type: real                # real 调用真实模型；mock 仅验证协议，不产生有效评分
+  # type: mock
+  trust_env: false          # 当前服务器直连网关；true 使用系统代理等环境设置
+  # trust_env: true
+  timeout_seconds: 300      # 单次请求超时秒数；允许 1–3600
+  # timeout_seconds: 600
+  max_tokens: 8192          # 输出 token 上限；允许 256–65536，实际受模型服务限制
+  # max_tokens: 4096
+  requests_per_minute: 30   # 每个模型客户端请求速率；0 表示不限制
+  # requests_per_minute: 10
+  judge:
+    endpoint: https://agrouter-ng-test.kiwiar.com/v1/chat/completions
+    model: gpt-5.4          # 当前已验证裁判三维调用和图片事实提取
+    # model: gpt-5.4-mini   # 网关曾列出；裁判效果及接口兼容性尚未在本管道验证
+    # model: your-model-name # 其他 OpenAI 兼容模型；也需按实际服务修改 endpoint 和密钥
+    api_key_env: PEBENCH_JUDGE_API_KEY  # 优先使用环境变量
+    api_key_file: secrets/judge_api_key # 环境变量未设置时读取
+  # 图片事实模型：null 表示继承 judge；如需独立模型，删除下面的 null 行，
+  # 再取消以下 image_facts 示例每一行前面的 #，将地址和模型改为实际值。
+  image_facts: null
+  # image_facts:
+  #   endpoint: https://your-image-service/v1/chat/completions
+  #   model: your-image-model
+  #   api_key_env: PEBENCH_IMAGE_FACTS_API_KEY
+  #   api_key_file: secrets/image_api_key
+
+  # 视频事实模型：null 表示尚未配置。以下仅为待接入模板，不代表 Omni 已经联调。
+  # 删除 video_facts: null，取消示例注释，再填写实际地址、模型、密钥及可访问素材的地址。
+  # 当前适配器要求模型接受 video_url，服务能访问 public_base_url；无独立音轨输入适配。
+  video_facts: null
+  # video_facts:
+  #   endpoint: https://your-video-service/v1/chat/completions
+  #   model: your-video-model
+  #   api_key_env: PEBENCH_VIDEO_FACTS_API_KEY
+  #   api_key_file: secrets/video_api_key
+  #   public_base_url: https://your-media-service/data/
