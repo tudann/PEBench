@@ -1,0 +1,190 @@
+{
+  "candidate_hash": "b7efbd8f8da878731b0ca42ccae207f68fa4998b179cca641620f6dac50c4742",
+  "case_key": "r2v:017",
+  "created_at": "2026-11-13T08:24:27+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "GSF",
+      "evidence": [
+        {
+          "quote": "live-action realistic style",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "live-action, realistic 10-second dinner-gathering scene with soft golden natural light, authentic texture, and refined detail",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "The enhanced prompt preserves the requested live-action realistic style and adds compatible elaboration (e.g., 'soft golden natural light', 'authentic texture') without altering the medium or genre. No incompatible aesthetic or visual style is introduced.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SAP",
+      "evidence": [
+        {
+          "quote": "Image 2 smiling and speaking to Image 1",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "<Subject 2> is the middle-aged East Asian man in <Picture 2>... <Subject 1> is the young East Asian man in <Picture 1>",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "image_1: navy suit, white shirt, patterned tie; image_2: black suit, white shirt, red tie",
+          "source": "evidence_facts"
+        }
+      ],
+      "issue": "",
+      "rationale": "Subject identities, appearances, and roles are preserved. The enhanced prompt correctly maps Image 1 to Subject 1 and Image 2 to Subject 2, retaining their clothing, hair, and expressions as described in the original and confirmed in the evidence. No substitutions or omissions occur.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANF",
+      "evidence": [
+        {
+          "quote": "Shot 1 [0–3 seconds]: a medium shot shows Image 2 smiling and speaking to Image 1... Shot 2 [4–6 seconds]: the medium shot cuts to Image 1 listening... Shot 3 [7–10 seconds]: a medium shot focuses on the moment of Image 2’s comment",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "[Shot 1] ... <Subject 2> smiles and speaks warmly... [Shot 2] ... <Subject 1> listens attentively... [Shot 3] ... <Subject 2> delivers... the Wengong Liquor line",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "The sequence of events, shot timing, and narrative intent are preserved. The enhanced prompt maintains the three-shot structure, correct timing, and interaction flow (speaking → listening → concluding line) as specified in the original.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "DLI",
+      "evidence": [
+        {
+          "quote": "Image 2 says with a smile: “Only those who understand liquor choose Wengong Liquor. Its aroma is pure and authentic; the same principle applies to how one conducts oneself and handles affairs.”",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "<Subject 2> (S1) delivers in a deep, compelling voice with a smile, <d>[English] Only those who understand liquor choose Wengong Liquor. Its aroma is pure and authentic; the same principle applies to how one conducts oneself and handles affairs.</d>",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The enhanced prompt adds speaker tags (S1, S2) not present in the original, and slightly rephrases the dialogue delivery (e.g., 'with a warm smile' vs. 'with a kind and natural expression'), though the core verbatim line is preserved.",
+      "rationale": "The exact dialogue line is preserved verbatim. The minor addition of speaker tags (S1/S2) and slight variation in delivery description ('deep, compelling voice' vs. 'kind and natural expression') are compatible elaborations that do not alter the meaning or intent. No paraphrasing or deletion occurs.",
+      "severity": "minor"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ARP",
+      "evidence": [
+        {
+          "quote": "soothing background music intertwined with conversation creates a relaxed atmosphere",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "The soothing background music swells gently beneath the line as the warm exchange concludes",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The enhanced prompt adds a description of background music swelling under Shot 3, which is not explicitly mentioned in the original, though the original does mention 'soothing background music intertwined with conversation'.",
+      "rationale": "The original allows for background music; the enhanced prompt adds a dynamic element (swelling) that is compatible with the relaxed atmosphere. This is a minor elaboration, not a contradiction or omission.",
+      "severity": "minor"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CCP",
+      "evidence": [
+        {
+          "quote": "Shot 1 [0–3 seconds]: a medium shot... Shot 2 [4–6 seconds]: the medium shot cuts to... Shot 3 [7–10 seconds]: a medium shot",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "[Shot 1] The shot begins from <Picture 3>, establishing... medium shot... [Shot 2] At 00:04.000, the shot cuts to a medium shot... [Shot 3] At 00:07.000, the shot cuts back to a medium shot",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "The shot count, scale (medium shot), and timing are preserved. The enhanced prompt adds minor camera movement (slow push-in) and static framing, which are compatible with the original's static medium shots and do not override the intent.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "LCF",
+      "evidence": [
+        {
+          "quote": "natural light and an authentic texture",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "soft golden natural light, authentic texture, and refined detail",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "image_3: warm yellow to amber color temperature, night (city lights visible outside)",
+          "source": "evidence_facts"
+        }
+      ],
+      "issue": "",
+      "rationale": "The lighting conditions (warm, natural, golden) and time of day (night) are preserved and elaborated compatibly. The enhanced prompt aligns with the evidence from Image 3 (warm lighting, night view) and does not alter defining conditions.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SSP",
+      "evidence": [
+        {
+          "quote": "In the scene of Image 3",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "The target video is a 10-second live-action realistic dinner-gathering scene set in <Subject 3>, anchored by <Picture 3> as the scene/keyframe reference.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "image_3: elegant, dimly lit private dining room at night, with a long table set for dinner, wine glasses, plates of food, and a city skyline visible through a window.",
+          "source": "evidence_facts"
+        }
+      ],
+      "issue": "",
+      "rationale": "The setting is preserved as the private dining room from Image 3. The enhanced prompt correctly references Image 3 as the scene anchor and retains key background elements (wood-paneled walls, city view, table setting, Wengong Liquor bottle) without altering spatial relations.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "OTI",
+      "evidence": [
+        {
+          "quote": "Image 2 says with a smile: “Only those who understand liquor choose Wengong Liquor. Its aroma is pure and authentic; the same principle applies to how one conducts oneself and handles affairs.”",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "<d>[English] Only those who understand liquor choose Wengong Liquor. Its aroma is pure and authentic; the same principle applies to how one conducts oneself and handles affairs.</d>",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "The dialogue is preserved verbatim. No visible text (titles, signs, subtitles) is requested or present in the original, so no issue arises. The enhanced prompt does not introduce or alter any on-screen text.",
+      "severity": "none"
+    }
+  ],
+  "dimension": "SF",
+  "dimension_score": 95,
+  "evidence_cache_key": "7904cc32d99d4932a937a0fbc8a73653c5174ce60ea6703d8a281c7a7467cc0d",
+  "judge_cache_key": "a0ca24571ad14d7ab7be626329bd736d7e7015f9ebc418227c8be391591d0377",
+  "method": "glm53_20261112_120702",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"SF\",\n  \"dimension_score\": 95,\n  \"summary\": \"The enhanced prompt preserves the core semantic intent of the original instruction with high fidelity, accurately reflecting the genre, subjects, actions, dialogue, setting, and audio-visual constraints. It elaborates on the original with compatible detail (e.g., clothing, lighting, camera movement) without contradicting or omitting key requirements. Minor issues include slight elaboration beyond the original (e.g., adding 'soothing background music swells gently' under Shot 3) and a minor inconsistency in the dialogue attribution (original says 'Image 2 says', enhanced adds speaker tags S1/S2). No major omissions or contradictions are present. The prompt correctly anchors the scene in Image 3 and references Image 1 and Image 2 for subject identity, preserving the requested live-action realistic style and emotional tone.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"GSF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"live-action realistic style\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"live-action, realistic 10-second dinner-gathering scene with soft golden natural light, authentic texture, and refined detail\"\n        }\n      ],\n      \"rationale\": \"The enhanced prompt preserves the requested live-action realistic style and adds compatible elaboration (e.g., 'soft golden natural light', 'authentic texture') without altering the medium or genre. No incompatible aesthetic or visual style is introduced.\"\n    },\n    {\n      \"criterion\": \"SAP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"Image 2 smiling and speaking to Image 1\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"<Subject 2> is the middle-aged East Asian man in <Picture 2>... <Subject 1> is the young East Asian man in <Picture 1>\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"image_1: navy suit, white shirt, patterned tie; image_2: black suit, white shirt, red tie\"\n        }\n      ],\n      \"rationale\": \"Subject identities, appearances, and roles are preserved. The enhanced prompt correctly maps Image 1 to Subject 1 and Image 2 to Subject 2, retaining their clothing, hair, and expressions as described in the original and confirmed in the evidence. No substitutions or omissions occur.\"\n    },\n    {\n      \"criterion\": \"ANF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"Shot 1 [0–3 seconds]: a medium shot shows Image 2 smiling and speaking to Image 1... Shot 2 [4–6 seconds]: the medium shot cuts to Image 1 listening... Shot 3 [7–10 seconds]: a medium shot focuses on the moment of Image 2’s comment\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"[Shot 1] ... <Subject 2> smiles and speaks warmly... [Shot 2] ... <Subject 1> listens attentively... [Shot 3] ... <Subject 2> delivers... the Wengong Liquor line\"\n        }\n      ],\n      \"rationale\": \"The sequence of events, shot timing, and narrative intent are preserved. The enhanced prompt maintains the three-shot structure, correct timing, and interaction flow (speaking → listening → concluding line) as specified in the original.\"\n    },\n    {\n      \"criterion\": \"DLI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"minor\",\n      \"issue\": \"The enhanced prompt adds speaker tags (S1, S2) not present in the original, and slightly rephrases the dialogue delivery (e.g., 'with a warm smile' vs. 'with a kind and natural expression'), though the core verbatim line is preserved.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"Image 2 says with a smile: “Only those who understand liquor choose Wengong Liquor. Its aroma is pure and authentic; the same principle applies to how one conducts oneself and handles affairs.”\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"<Subject 2> (S1) delivers in a deep, compelling voice with a smile, <d>[English] Only those who understand liquor choose Wengong Liquor. Its aroma is pure and authentic; the same principle applies to how one conducts oneself and handles affairs.</d>\"\n        }\n      ],\n      \"rationale\": \"The exact dialogue line is preserved verbatim. The minor addition of speaker tags (S1/S2) and slight variation in delivery description ('deep, compelling voice' vs. 'kind and natural expression') are compatible elaborations that do not alter the meaning or intent. No paraphrasing or deletion occurs.\"\n    },\n    {\n      \"criterion\": \"ARP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"minor\",\n      \"issue\": \"The enhanced prompt adds a description of background music swelling under Shot 3, which is not explicitly mentioned in the original, though the original does mention 'soothing background music intertwined with conversation'.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"soothing background music intertwined with conversation creates a relaxed atmosphere\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"The soothing background music swells gently beneath the line as the warm exchange concludes\"\n        }\n      ],\n      \"rationale\": \"The original allows for background music; the enhanced prompt adds a dynamic element (swelling) that is compatible with the relaxed atmosphere. This is a minor elaboration, not a contradiction or omission.\"\n    },\n    {\n      \"criterion\": \"CCP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"Shot 1 [0–3 seconds]: a medium shot... Shot 2 [4–6 seconds]: the medium shot cuts to... Shot 3 [7–10 seconds]: a medium shot\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"[Shot 1] The shot begins from <Picture 3>, establishing... medium shot... [Shot 2] At 00:04.000, the shot cuts to a medium shot... [Shot 3] At 00:07.000, the shot cuts back to a medium shot\"\n        }\n      ],\n      \"rationale\": \"The shot count, scale (medium shot), and timing are preserved. The enhanced prompt adds minor camera movement (slow push-in) and static framing, which are compatible with the original's static medium shots and do not override the intent.\"\n    },\n    {\n      \"criterion\": \"LCF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"natural light and an authentic texture\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"soft golden natural light, authentic texture, and refined detail\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"image_3: warm yellow to amber color temperature, night (city lights visible outside)\"\n        }\n      ],\n      \"rationale\": \"The lighting conditions (warm, natural, golden) and time of day (night) are preserved and elaborated compatibly. The enhanced prompt aligns with the evidence from Image 3 (warm lighting, night view) and does not alter defining conditions.\"\n    },\n    {\n      \"criterion\": \"SSP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"In the scene of Image 3\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"The target video is a 10-second live-action realistic dinner-gathering scene set in <Subject 3>, anchored by <Picture 3> as the scene/keyframe reference.\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"image_3: elegant, dimly lit private dining room at night, with a long table set for dinner, wine glasses, plates of food, and a city skyline visible through a window.\"\n        }\n      ],\n      \"rationale\": \"The setting is preserved as the private dining room from Image 3. The enhanced prompt correctly references Image 3 as the scene anchor and retains key background elements (wood-paneled walls, city view, table setting, Wengong Liquor bottle) without altering spatial relations.\"\n    },\n    {\n      \"criterion\": \"OTI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"Image 2 says with a smile: “Only those who understand liquor choose Wengong Liquor. Its aroma is pure and authentic; the same principle applies to how one conducts oneself and handles affairs.”\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"<d>[English] Only those who understand liquor choose Wengong Liquor. Its aroma is pure and authentic; the same principle applies to how one conducts oneself and handles affairs.</d>\"\n        }\n      ],\n      \"rationale\": \"The dialogue is preserved verbatim. No visible text (titles, signs, subtitles) is requested or present in the original, so no issue arises. The enhanced prompt does not introduce or alter any on-screen text.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt preserves the core semantic intent of the original instruction with high fidelity, accurately reflecting the genre, subjects, actions, dialogue, setting, and audio-visual constraints. It elaborates on the original with compatible detail (e.g., clothing, lighting, camera movement) without contradicting or omitting key requirements. Minor issues include slight elaboration beyond the original (e.g., adding 'soothing background music swells gently' under Shot 3) and a minor inconsistency in the dialogue attribution (original says 'Image 2 says', enhanced adds speaker tags S1/S2). No major omissions or contradictions are present. The prompt correctly anchors the scene in Image 3 and references Image 1 and Image 2 for subject identity, preserving the requested live-action realistic style and emotional tone.",
+  "usage": {
+    "completion_tokens": 2206,
+    "prompt_tokens": 4597,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 6803
+  }
+}

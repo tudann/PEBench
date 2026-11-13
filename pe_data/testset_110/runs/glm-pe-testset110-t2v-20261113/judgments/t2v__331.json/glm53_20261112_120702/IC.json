@@ -1,0 +1,119 @@
+{
+  "candidate_hash": "2054a296f205c3dd3abf66c4783ebbdec083ffc2eea5cd48a78938759e41e2cd",
+  "case_key": "t2v:331",
+  "created_at": "2026-11-13T08:27:51+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "SAC",
+      "evidence": [
+        {
+          "quote": "dripping ink beads striking a chroma key backdrop",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "glossy ink beads hanging from the top of the frame against a seamless, evenly lit flat green chroma key backdrop",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "Subject identity (ink beads) and environment (chroma key backdrop) are preserved throughout. Appearance (glossy, multicolor splashes) and behavior (dripping, splashing) are consistently described without drift or duplication. No renaming or disappearance of key elements.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANL",
+      "evidence": [
+        {
+          "quote": "dripping ink beads striking a chroma key backdrop, vivid multicolor splash effect",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "At around 2 seconds, the first bead detaches and falls... each impact blooming into a different color combination... splashes collide mid-air and along the surface, swirling into marbled tendrils",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "Actions follow a coherent causal progression: beads detach → fall → strike → splash → interact → settle. Each step is plausible and binds to the next. No dangling or incompatible events.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "TSC",
+      "evidence": [
+        {
+          "quote": "At around 2 seconds, the first bead detaches... Toward the end, the drips slow; the final bead lands at around 13 seconds",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "dripping ink beads striking a chroma key backdrop",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "Chronology is clear and feasible: beads start dripping at ~2s, continue rhythmically, and end at ~13s within the 15s duration. No overlapping or infeasible timestamps. State transitions (stillness → motion → settling) are logically ordered.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SPC",
+      "evidence": [
+        {
+          "quote": "a static shot with a very slight slow push-in... beads hanging from the top of the frame... striking the backdrop",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "Location (static shot, chroma key backdrop) and trajectory (beads falling from top to bottom) are consistent. Screen direction and relative positions are maintained. No unexplained position swaps or impossible movement paths.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "PL",
+      "evidence": [
+        {
+          "quote": "beads tremble with surface tension... splashes collide mid-air and along the surface, swirling into marbled tendrils and fine mist",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "Physics are plausible for liquid behavior: surface tension, slow-motion impact, splashing, misting, and diffusion. No violations of gravity, contact, or object permanence. The fantasy element (multicolor pigments) is consistent within the artistic context.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "AVS",
+      "evidence": [
+        {
+          "quote": "dripping ink beads striking a chroma key backdrop, vivid multicolor splash effect",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "overall_soundscape: Soft, viscous droplet plips... non_diegetic_music: Sparse, resonant marimba and glass-harmonica tones...",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The enhanced prompt includes detailed non-diegetic music and soundscape not requested in the original prompt, which may introduce an unrequested layer of sensory alignment.",
+      "rationale": "While the soundscape and music are not contradictory, they are not part of the original instruction. The alignment between visuals and audio is internally consistent, but the addition is an elaboration beyond the scope. This is a minor issue as it does not break internal consistency but adds unrequested content.",
+      "severity": "minor"
+    }
+  ],
+  "dimension": "IC",
+  "dimension_score": 95,
+  "evidence_cache_key": "0cea8156d3e5b4f0885573b13d975ad05596ee0d883bc0e929e194394906cc66",
+  "judge_cache_key": "438d7e9fd7332b1041db3e2c26d42cb3fe828e0d369fb59490f6650aee59e97d",
+  "method": "glm53_20261112_120702",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"IC\",\n  \"dimension_score\": 95,\n  \"summary\": \"The enhanced prompt maintains strong internal consistency with the original instruction, elaborating on the visual, auditory, and temporal aspects without introducing contradictions or attribute drift. Subject identity (ink beads), actions (dripping, splashing), and environment (chroma key backdrop) are consistently maintained. Minor issues include slight over-elaboration in sound design and music that are not requested in the original prompt, but do not conflict with it. No major inconsistencies or infeasible sequences are present.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"SAC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"dripping ink beads striking a chroma key backdrop\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"glossy ink beads hanging from the top of the frame against a seamless, evenly lit flat green chroma key backdrop\"\n        }\n      ],\n      \"rationale\": \"Subject identity (ink beads) and environment (chroma key backdrop) are preserved throughout. Appearance (glossy, multicolor splashes) and behavior (dripping, splashing) are consistently described without drift or duplication. No renaming or disappearance of key elements.\"\n    },\n    {\n      \"criterion\": \"ANL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"dripping ink beads striking a chroma key backdrop, vivid multicolor splash effect\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"At around 2 seconds, the first bead detaches and falls... each impact blooming into a different color combination... splashes collide mid-air and along the surface, swirling into marbled tendrils\"\n        }\n      ],\n      \"rationale\": \"Actions follow a coherent causal progression: beads detach → fall → strike → splash → interact → settle. Each step is plausible and binds to the next. No dangling or incompatible events.\"\n    },\n    {\n      \"criterion\": \"TSC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"At around 2 seconds, the first bead detaches... Toward the end, the drips slow; the final bead lands at around 13 seconds\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"dripping ink beads striking a chroma key backdrop\"\n        }\n      ],\n      \"rationale\": \"Chronology is clear and feasible: beads start dripping at ~2s, continue rhythmically, and end at ~13s within the 15s duration. No overlapping or infeasible timestamps. State transitions (stillness → motion → settling) are logically ordered.\"\n    },\n    {\n      \"criterion\": \"SPC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"a static shot with a very slight slow push-in... beads hanging from the top of the frame... striking the backdrop\"\n        }\n      ],\n      \"rationale\": \"Location (static shot, chroma key backdrop) and trajectory (beads falling from top to bottom) are consistent. Screen direction and relative positions are maintained. No unexplained position swaps or impossible movement paths.\"\n    },\n    {\n      \"criterion\": \"PL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"beads tremble with surface tension... splashes collide mid-air and along the surface, swirling into marbled tendrils and fine mist\"\n        }\n      ],\n      \"rationale\": \"Physics are plausible for liquid behavior: surface tension, slow-motion impact, splashing, misting, and diffusion. No violations of gravity, contact, or object permanence. The fantasy element (multicolor pigments) is consistent within the artistic context.\"\n    },\n    {\n      \"criterion\": \"AVS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"minor\",\n      \"issue\": \"The enhanced prompt includes detailed non-diegetic music and soundscape not requested in the original prompt, which may introduce an unrequested layer of sensory alignment.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"dripping ink beads striking a chroma key backdrop, vivid multicolor splash effect\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"overall_soundscape: Soft, viscous droplet plips... non_diegetic_music: Sparse, resonant marimba and glass-harmonica tones...\"\n        }\n      ],\n      \"rationale\": \"While the soundscape and music are not contradictory, they are not part of the original instruction. The alignment between visuals and audio is internally consistent, but the addition is an elaboration beyond the scope. This is a minor issue as it does not break internal consistency but adds unrequested content.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt maintains strong internal consistency with the original instruction, elaborating on the visual, auditory, and temporal aspects without introducing contradictions or attribute drift. Subject identity (ink beads), actions (dripping, splashing), and environment (chroma key backdrop) are consistently maintained. Minor issues include slight over-elaboration in sound design and music that are not requested in the original prompt, but do not conflict with it. No major inconsistencies or infeasible sequences are present.",
+  "usage": {
+    "completion_tokens": 1171,
+    "prompt_tokens": 1115,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 2286
+  }
+}

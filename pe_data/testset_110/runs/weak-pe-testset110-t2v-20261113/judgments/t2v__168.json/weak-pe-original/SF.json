@@ -1,0 +1,178 @@
+{
+  "candidate_hash": "ebebe5a37ef0d5ba66efd343a09bd50f7a72d7750d6a5b81e296359dd1651718",
+  "case_key": "t2v:168",
+  "created_at": "2026-11-13T07:44:18+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "GSF",
+      "evidence": [
+        {
+          "quote": "题材为奇幻自然，其核心内容是展现一只由光尘凝聚而成的渡鸦在破晓时刻落驻到一截横生树干上的过程。",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "整段改成两个人坐着吃饭，不要特效和变形。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "原始指令要求奇幻自然题材、结合自然写实与幻想气质的深冷色系动画短片，增强提示将其改为无特效的日常吃饭场景，彻底替换媒介与美学风格。",
+      "rationale": "奇幻自然题材与‘坐着吃饭’的日常场景在美学与媒介上完全不兼容，且明确禁止特效，直接否定原始幻想元素，构成重大风格替换。",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SAP",
+      "evidence": [
+        {
+          "quote": "一只由光粒构成的渡鸦作为唯一主体",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "先写成只有一个主角，紧接着又写成这个主角同时变成五个外貌不同的人",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "原始主体为‘一只由光尘凝聚而成的渡鸦’，增强提示将其替换为‘两个人’，并进一步要求‘主角同时变成五个外貌不同的人’，完全改变主体身份、数量与属性。",
+      "rationale": "主体从单一生物体变为多人群，且出现身份分裂与多重人格设定，与原始唯一、具象、非人类主体完全矛盾。",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANF",
+      "evidence": [
+        {
+          "quote": "渡鸦开始了一段从容的降落过程...最终停落在枝干上...发出一声低哑而绵长的‘啊—’鸣叫",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "时间倒过来：先给结尾，再跳到一个对不上的开头。中途插进一段无关的屋顶烟花。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "原始动作顺序为渡鸦降落、停驻、鸣叫，增强提示要求‘时间倒过来：先给结尾，再跳到一个对不上的开头’，并插入‘屋顶烟花’等无关事件，破坏叙事逻辑与事件链。",
+      "rationale": "事件顺序被强制倒置，插入无关情节，导致原始叙事意图被彻底破坏，构成重大叙事篡改。",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "DLI",
+      "evidence": [
+        {
+          "quote": "音频类型仅包含环境声与关键音效，不使用任何配乐",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "并且互相对话",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "原始指令未指定对话或歌词，增强提示要求‘互相对话’，但未提供具体台词内容，因此不构成直接违反，但引入了原始未要求的对话元素。",
+      "rationale": "原始无对话要求，增强提示添加对话，虽未指定内容，但引入新叙事元素，构成轻微语义扩展。",
+      "severity": "minor"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ARP",
+      "evidence": [
+        {
+          "quote": "音频类型仅包含环境声与关键音效，不使用任何配乐",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "中途插进一段无关的屋顶烟花",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "原始要求‘不使用任何配乐’，增强提示未提及音乐，但通过‘屋顶烟花’等场景暗示可能包含爆炸音效，且未明确禁止，但原始明确禁止配乐，增强提示未保留此约束。",
+      "rationale": "烟花场景通常伴随爆炸声或音乐，增强提示未明确排除，且原始明确禁止配乐，构成对音频约束的潜在违反。",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CCP",
+      "evidence": [
+        {
+          "quote": "全局镜头语言采用平稳克制的拍摄方式，节奏舒展，以一条完整长镜头承载整个事件",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "写成机位锁死，又写成镜头一直在晃。总时长写成3秒，同时又要求每个分镜各自持续27秒。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "原始要求‘一个不间断的镜头’、‘平稳克制的拍摄方式’，增强提示要求‘机位锁死，又写成镜头一直在晃’，且‘总时长写成3秒，同时又要求每个分镜各自持续27秒’，构成镜头语言与时长的严重矛盾。",
+      "rationale": "镜头运动、时长与分镜结构被自相矛盾地设定，直接违背原始镜头语言要求，构成重大技术指令冲突。",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "LCF",
+      "evidence": [
+        {
+          "quote": "破晓时刻...冷冽色温...雾蓝色与墨绿色构成的低饱和冷调视觉",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "写成正午暴晒，又写成深夜无光",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "原始设定为‘破晓时刻’、‘冷冽色温’、‘雾蓝色与墨绿色构成的低饱和冷调视觉’，增强提示要求‘正午暴晒’与‘深夜无光’，直接冲突时间与光照条件。",
+      "rationale": "时间与光照是视觉风格的核心，正午与深夜的光照条件与原始破晓冷调完全不兼容，构成重大视觉条件篡改。",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SSP",
+      "evidence": [
+        {
+          "quote": "故事发生在一片当代感、笼罩着冷冽色温的清晨林地中...开阔的林间空地里...横生树干",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "整段改成两个人坐着吃饭...中途插进一段无关的屋顶烟花",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "原始场景为‘清晨林地中’、‘开阔的林间空地’、‘横生树干’，增强提示改为‘两个人坐着吃饭’，并插入‘屋顶烟花’，完全替换场景与空间布局。",
+      "rationale": "场景从自然林地变为室内/屋顶用餐场景，空间结构与背景元素被彻底替换，构成重大空间设定错误。",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "OTI",
+      "evidence": [
+        {
+          "quote": "未提及任何可见文字、标题或界面文本",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "未提及任何可见文字、标题或界面文本",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "原始指令未提及任何可见文字、标题或界面文本，增强提示亦未添加此类内容，因此无违反。",
+      "rationale": "无文本元素要求，增强提示未引入，因此无语义保真问题。",
+      "severity": "none"
+    }
+  ],
+  "dimension": "SF",
+  "dimension_score": 0,
+  "evidence_cache_key": "0f4209e0436b2da86d8211bdb0751ac962cd67db2e92072f4e841ace67c3f8ae",
+  "judge_cache_key": "a0ca24571ad14d7ab7be626329bd736d7e7015f9ebc418227c8be391591d0377",
+  "method": "weak-pe-original",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"SF\",\n  \"dimension_score\": 0,\n  \"summary\": \"增强提示完全违背原始指令的语义要求，对所有核心维度（主体、动作、场景、镜头、时间、风格等）进行系统性篡改、矛盾设定与无效指令叠加，导致原始意图彻底丧失，语义保真度为零。\",\n  \"criteria\": [\n    {\n      \"criterion\": \"GSF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"原始指令要求奇幻自然题材、结合自然写实与幻想气质的深冷色系动画短片，增强提示将其改为无特效的日常吃饭场景，彻底替换媒介与美学风格。\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"题材为奇幻自然，其核心内容是展现一只由光尘凝聚而成的渡鸦在破晓时刻落驻到一截横生树干上的过程。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"整段改成两个人坐着吃饭，不要特效和变形。\"\n        }\n      ],\n      \"rationale\": \"奇幻自然题材与‘坐着吃饭’的日常场景在美学与媒介上完全不兼容，且明确禁止特效，直接否定原始幻想元素，构成重大风格替换。\"\n    },\n    {\n      \"criterion\": \"SAP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"原始主体为‘一只由光尘凝聚而成的渡鸦’，增强提示将其替换为‘两个人’，并进一步要求‘主角同时变成五个外貌不同的人’，完全改变主体身份、数量与属性。\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"一只由光粒构成的渡鸦作为唯一主体\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"先写成只有一个主角，紧接着又写成这个主角同时变成五个外貌不同的人\"\n        }\n      ],\n      \"rationale\": \"主体从单一生物体变为多人群，且出现身份分裂与多重人格设定，与原始唯一、具象、非人类主体完全矛盾。\"\n    },\n    {\n      \"criterion\": \"ANF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"原始动作顺序为渡鸦降落、停驻、鸣叫，增强提示要求‘时间倒过来：先给结尾，再跳到一个对不上的开头’，并插入‘屋顶烟花’等无关事件，破坏叙事逻辑与事件链。\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"渡鸦开始了一段从容的降落过程...最终停落在枝干上...发出一声低哑而绵长的‘啊—’鸣叫\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"时间倒过来：先给结尾，再跳到一个对不上的开头。中途插进一段无关的屋顶烟花。\"\n        }\n      ],\n      \"rationale\": \"事件顺序被强制倒置，插入无关情节，导致原始叙事意图被彻底破坏，构成重大叙事篡改。\"\n    },\n    {\n      \"criterion\": \"DLI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"minor\",\n      \"issue\": \"原始指令未指定对话或歌词，增强提示要求‘互相对话’，但未提供具体台词内容，因此不构成直接违反，但引入了原始未要求的对话元素。\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"音频类型仅包含环境声与关键音效，不使用任何配乐\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"并且互相对话\"\n        }\n      ],\n      \"rationale\": \"原始无对话要求，增强提示添加对话，虽未指定内容，但引入新叙事元素，构成轻微语义扩展。\"\n    },\n    {\n      \"criterion\": \"ARP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"原始要求‘不使用任何配乐’，增强提示未提及音乐，但通过‘屋顶烟花’等场景暗示可能包含爆炸音效，且未明确禁止，但原始明确禁止配乐，增强提示未保留此约束。\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"音频类型仅包含环境声与关键音效，不使用任何配乐\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"中途插进一段无关的屋顶烟花\"\n        }\n      ],\n      \"rationale\": \"烟花场景通常伴随爆炸声或音乐，增强提示未明确排除，且原始明确禁止配乐，构成对音频约束的潜在违反。\"\n    },\n    {\n      \"criterion\": \"CCP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"原始要求‘一个不间断的镜头’、‘平稳克制的拍摄方式’，增强提示要求‘机位锁死，又写成镜头一直在晃’，且‘总时长写成3秒，同时又要求每个分镜各自持续27秒’，构成镜头语言与时长的严重矛盾。\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"全局镜头语言采用平稳克制的拍摄方式，节奏舒展，以一条完整长镜头承载整个事件\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"写成机位锁死，又写成镜头一直在晃。总时长写成3秒，同时又要求每个分镜各自持续27秒。\"\n        }\n      ],\n      \"rationale\": \"镜头运动、时长与分镜结构被自相矛盾地设定，直接违背原始镜头语言要求，构成重大技术指令冲突。\"\n    },\n    {\n      \"criterion\": \"LCF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"原始设定为‘破晓时刻’、‘冷冽色温’、‘雾蓝色与墨绿色构成的低饱和冷调视觉’，增强提示要求‘正午暴晒’与‘深夜无光’，直接冲突时间与光照条件。\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"破晓时刻...冷冽色温...雾蓝色与墨绿色构成的低饱和冷调视觉\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"写成正午暴晒，又写成深夜无光\"\n        }\n      ],\n      \"rationale\": \"时间与光照是视觉风格的核心，正午与深夜的光照条件与原始破晓冷调完全不兼容，构成重大视觉条件篡改。\"\n    },\n    {\n      \"criterion\": \"SSP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"原始场景为‘清晨林地中’、‘开阔的林间空地’、‘横生树干’，增强提示改为‘两个人坐着吃饭’，并插入‘屋顶烟花’，完全替换场景与空间布局。\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"故事发生在一片当代感、笼罩着冷冽色温的清晨林地中...开阔的林间空地里...横生树干\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"整段改成两个人坐着吃饭...中途插进一段无关的屋顶烟花\"\n        }\n      ],\n      \"rationale\": \"场景从自然林地变为室内/屋顶用餐场景，空间结构与背景元素被彻底替换，构成重大空间设定错误。\"\n    },\n    {\n      \"criterion\": \"OTI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"原始指令未提及任何可见文字、标题或界面文本，增强提示亦未添加此类内容，因此无违反。\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"未提及任何可见文字、标题或界面文本\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"未提及任何可见文字、标题或界面文本\"\n        }\n      ],\n      \"rationale\": \"无文本元素要求，增强提示未引入，因此无语义保真问题。\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "增强提示完全违背原始指令的语义要求，对所有核心维度（主体、动作、场景、镜头、时间、风格等）进行系统性篡改、矛盾设定与无效指令叠加，导致原始意图彻底丧失，语义保真度为零。",
+  "usage": {
+    "completion_tokens": 1881,
+    "prompt_tokens": 1777,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 3658
+  }
+}

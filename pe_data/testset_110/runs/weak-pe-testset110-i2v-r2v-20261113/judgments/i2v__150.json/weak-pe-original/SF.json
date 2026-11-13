@@ -1,0 +1,178 @@
+{
+  "candidate_hash": "6a6d64cdd82f78cd36dfd23f2bd4d034abdb9d5baac0ca49261aea7245b85e7e",
+  "case_key": "i2v:150",
+  "created_at": "2026-11-13T07:39:15+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "GSF",
+      "evidence": [
+        {
+          "quote": "第一视角。眼前是一片被珠宝森林环绕的空地。周围静静矗立着水晶树和钻石柱，散发出柔和的暖橙、淡紫和浅蓝色光芒，宛如一圈安静的守护者。",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "整段改成两个人坐着吃饭，不要特效和变形。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Replaced fantasy_illustration genre and magical_realism aesthetic with a mundane dining scene, removing all fantasy elements and glow effects.",
+      "rationale": "The original prompt specifies a fantasy jewel forest with glowing elements and magical transformation. The enhanced prompt replaces this with a mundane dining scene and explicitly removes all visual effects, violating the genre and aesthetic.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SAP",
+      "evidence": [
+        {
+          "quote": "identity: female (inferred from hand shape and nails)",
+          "source": "evidence_facts"
+        },
+        {
+          "quote": "不要使用首帧里的人物、服装、姿态和场景，改成白棚里另一位年龄和性别都相反的陌生人。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Replaced the female hands holding a golden rutilated quartz crystal with an unrelated stranger in a white studio, altering subject identity, count, and appearance.",
+      "rationale": "The original subject is a female's hands holding a specific crystal. The enhanced prompt explicitly replaces this with a stranger of opposite age and gender in a white studio, violating subject identity and appearance.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANF",
+      "evidence": [
+        {
+          "quote": "0.0-0.8秒：画面：双手轻轻向上扬起。原石被抛向空中... 0.8-1.6秒：画面：原石升至最高点，开始下落... 1.6-3.0秒：画面：光芒开始向上生长... 3.0-4.1秒：站在原地，凝视着这座金发晶原石城堡... 4.1-5.0秒：视线抬起，望向大门。手伸向门，推开门。",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "先写成只有一个主角，紧接着又写成这个主角同时变成五个外貌不同的人，并且互相对话。时间倒过来：先给结尾，再跳到一个对不上的开头。中途插进一段无关的牙膏广告。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Replaced the entire narrative sequence of throwing the crystal, its transformation into a castle, and entering the structure with a disjointed, contradictory sequence involving multiple identities, reversed time, and an unrelated toothpaste ad.",
+      "rationale": "The original prompt describes a coherent, linear narrative of crystal transformation and castle creation. The enhanced prompt introduces multiple contradictory events, reversed chronology, and an unrelated ad, destroying the narrative intent and event order.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "DLI",
+      "evidence": [
+        {
+          "quote": "No dialogue or narration specified.",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "这个主角同时变成五个外貌不同的人，并且互相对话。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "No dialogue or narration is present in the original prompt, so no direct violation; however, the enhanced prompt introduces dialogue between five different versions of the protagonist, which is not requested.",
+      "rationale": "While the original prompt contains no dialogue, the enhanced prompt introduces unrequested dialogue between multiple identities, which is a minor deviation since no dialogue was required.",
+      "severity": "minor"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ARP",
+      "evidence": [
+        {
+          "quote": "音效：原石抛出的风声。空中旋转时光晕折射出的清脆叮铃声。原石触地的“叮——”声（清透、悠长）。光波扩散的嗡鸣声。",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "不要特效和变形。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Removed all specified sound effects (wind, chime, crystal touch, hum) and introduced no new sound constraints, violating the audio requirements.",
+      "rationale": "The original prompt specifies precise sound effects for each phase. The enhanced prompt removes all effects and does not specify any new audio, violating the requested sound design.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CCP",
+      "evidence": [
+        {
+          "quote": "第一视角。",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "写成机位锁死，又写成镜头一直在晃。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Violated static first-person camera requirement by introducing conflicting camera constraints: '机位锁死' (locked position) and '镜头一直在晃' (shaky camera), and ignored the first-person perspective.",
+      "rationale": "The original prompt requires a first-person, static camera. The enhanced prompt introduces contradictory camera movements and removes the first-person perspective, violating camera constraints.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "LCF",
+      "evidence": [
+        {
+          "quote": "天色是宁静的傍晚。",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "同一段写成正午暴晒，又写成深夜无光；",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Replaced twilight lighting with contradictory conditions: '正午暴晒' (noon sun) and '深夜无光' (deep night), violating the specified time-of-day and lighting.",
+      "rationale": "The original prompt specifies twilight lighting with warm accents. The enhanced prompt introduces mutually exclusive lighting conditions, directly contradicting the requested illumination.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SSP",
+      "evidence": [
+        {
+          "quote": "眼前是一片被珠宝森林环绕的空地。周围静静矗立着水晶树和钻石柱...",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "不要使用首帧里的人物、服装、姿态和场景，改成白棚里另一位年龄和性别都相反的陌生人。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Replaced the jewel forest setting with a white studio, removing all background elements and spatial relations specified in the original prompt.",
+      "rationale": "The original setting is a detailed fantasy forest. The enhanced prompt replaces it with a generic white studio, violating the specified background and spatial layout.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "OTI",
+      "evidence": [
+        {
+          "quote": "No onscreen text specified.",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "No mention of onscreen text.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "No visible text or subtitles are specified in the original prompt, and none are introduced in the enhanced prompt.",
+      "rationale": "The original prompt does not require any visible text, and the enhanced prompt does not introduce any, so no violation occurs.",
+      "severity": "none"
+    }
+  ],
+  "dimension": "SF",
+  "dimension_score": 0,
+  "evidence_cache_key": "ee4f1532ecec3d71b7aae4d4ac66a33c2dbab44379c8a9c6d168b465d4f019d2",
+  "judge_cache_key": "a0ca24571ad14d7ab7be626329bd736d7e7015f9ebc418227c8be391591d0377",
+  "method": "weak-pe-original",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"SF\",\n  \"dimension_score\": 0,\n  \"summary\": \"Enhanced prompt completely violates semantic fidelity by replacing all requested elements: genre, medium, subject, actions, setting, time, camera, and duration. It introduces contradictory, infeasible, and irrelevant content that directly contradicts the original instruction and asset facts.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"GSF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Replaced fantasy_illustration genre and magical_realism aesthetic with a mundane dining scene, removing all fantasy elements and glow effects.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"第一视角。眼前是一片被珠宝森林环绕的空地。周围静静矗立着水晶树和钻石柱，散发出柔和的暖橙、淡紫和浅蓝色光芒，宛如一圈安静的守护者。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"整段改成两个人坐着吃饭，不要特效和变形。\"\n        }\n      ],\n      \"rationale\": \"The original prompt specifies a fantasy jewel forest with glowing elements and magical transformation. The enhanced prompt replaces this with a mundane dining scene and explicitly removes all visual effects, violating the genre and aesthetic.\"\n    },\n    {\n      \"criterion\": \"SAP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Replaced the female hands holding a golden rutilated quartz crystal with an unrelated stranger in a white studio, altering subject identity, count, and appearance.\",\n      \"evidence\": [\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"identity: female (inferred from hand shape and nails)\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"不要使用首帧里的人物、服装、姿态和场景，改成白棚里另一位年龄和性别都相反的陌生人。\"\n        }\n      ],\n      \"rationale\": \"The original subject is a female's hands holding a specific crystal. The enhanced prompt explicitly replaces this with a stranger of opposite age and gender in a white studio, violating subject identity and appearance.\"\n    },\n    {\n      \"criterion\": \"ANF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Replaced the entire narrative sequence of throwing the crystal, its transformation into a castle, and entering the structure with a disjointed, contradictory sequence involving multiple identities, reversed time, and an unrelated toothpaste ad.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"0.0-0.8秒：画面：双手轻轻向上扬起。原石被抛向空中... 0.8-1.6秒：画面：原石升至最高点，开始下落... 1.6-3.0秒：画面：光芒开始向上生长... 3.0-4.1秒：站在原地，凝视着这座金发晶原石城堡... 4.1-5.0秒：视线抬起，望向大门。手伸向门，推开门。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"先写成只有一个主角，紧接着又写成这个主角同时变成五个外貌不同的人，并且互相对话。时间倒过来：先给结尾，再跳到一个对不上的开头。中途插进一段无关的牙膏广告。\"\n        }\n      ],\n      \"rationale\": \"The original prompt describes a coherent, linear narrative of crystal transformation and castle creation. The enhanced prompt introduces multiple contradictory events, reversed chronology, and an unrelated ad, destroying the narrative intent and event order.\"\n    },\n    {\n      \"criterion\": \"DLI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"minor\",\n      \"issue\": \"No dialogue or narration is present in the original prompt, so no direct violation; however, the enhanced prompt introduces dialogue between five different versions of the protagonist, which is not requested.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"No dialogue or narration specified.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"这个主角同时变成五个外貌不同的人，并且互相对话。\"\n        }\n      ],\n      \"rationale\": \"While the original prompt contains no dialogue, the enhanced prompt introduces unrequested dialogue between multiple identities, which is a minor deviation since no dialogue was required.\"\n    },\n    {\n      \"criterion\": \"ARP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Removed all specified sound effects (wind, chime, crystal touch, hum) and introduced no new sound constraints, violating the audio requirements.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"音效：原石抛出的风声。空中旋转时光晕折射出的清脆叮铃声。原石触地的“叮——”声（清透、悠长）。光波扩散的嗡鸣声。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"不要特效和变形。\"\n        }\n      ],\n      \"rationale\": \"The original prompt specifies precise sound effects for each phase. The enhanced prompt removes all effects and does not specify any new audio, violating the requested sound design.\"\n    },\n    {\n      \"criterion\": \"CCP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Violated static first-person camera requirement by introducing conflicting camera constraints: '机位锁死' (locked position) and '镜头一直在晃' (shaky camera), and ignored the first-person perspective.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"第一视角。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"写成机位锁死，又写成镜头一直在晃。\"\n        }\n      ],\n      \"rationale\": \"The original prompt requires a first-person, static camera. The enhanced prompt introduces contradictory camera movements and removes the first-person perspective, violating camera constraints.\"\n    },\n    {\n      \"criterion\": \"LCF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Replaced twilight lighting with contradictory conditions: '正午暴晒' (noon sun) and '深夜无光' (deep night), violating the specified time-of-day and lighting.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"天色是宁静的傍晚。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"同一段写成正午暴晒，又写成深夜无光；\"\n        }\n      ],\n      \"rationale\": \"The original prompt specifies twilight lighting with warm accents. The enhanced prompt introduces mutually exclusive lighting conditions, directly contradicting the requested illumination.\"\n    },\n    {\n      \"criterion\": \"SSP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Replaced the jewel forest setting with a white studio, removing all background elements and spatial relations specified in the original prompt.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"眼前是一片被珠宝森林环绕的空地。周围静静矗立着水晶树和钻石柱...\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"不要使用首帧里的人物、服装、姿态和场景，改成白棚里另一位年龄和性别都相反的陌生人。\"\n        }\n      ],\n      \"rationale\": \"The original setting is a detailed fantasy forest. The enhanced prompt replaces it with a generic white studio, violating the specified background and spatial layout.\"\n    },\n    {\n      \"criterion\": \"OTI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"No visible text or subtitles are specified in the original prompt, and none are introduced in the enhanced prompt.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"No onscreen text specified.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"No mention of onscreen text.\"\n        }\n      ],\n      \"rationale\": \"The original prompt does not require any visible text, and the enhanced prompt does not introduce any, so no violation occurs.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "Enhanced prompt completely violates semantic fidelity by replacing all requested elements: genre, medium, subject, actions, setting, time, camera, and duration. It introduces contradictory, infeasible, and irrelevant content that directly contradicts the original instruction and asset facts.",
+  "usage": {
+    "completion_tokens": 1861,
+    "prompt_tokens": 3166,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 5027
+  }
+}

@@ -1,0 +1,102 @@
+{
+  "candidate_hash": "0bc7b5d65913577a8dd7c866be1a295a930a65c9a8c64df4de6e90d741ef4be2",
+  "case_key": "t2v:071",
+  "created_at": "2026-11-13T07:25:28+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "SAC",
+      "evidence": [
+        {
+          "quote": "先写成只有一个主角，紧接着又写成这个主角同时变成五个外貌不同的人，并且互相对话。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "主体身份、数量和外观在增强提示中剧烈变化：从无主体到单主角，再到五个外貌不同的人同时存在并对话，违反了主体稳定性和身份一致性。",
+      "rationale": "原始指令要求围绕新人、伴郎伴娘、亲友展开，主体明确且数量可数。增强提示中主体从无到有、从一到五、外貌各异且互相对话，构成身份和数量的严重漂移，违反SAC准则。",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANL",
+      "evidence": [
+        {
+          "quote": "中途插进一段无关的屋顶烟花。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "动作和事件缺乏因果连贯性：无主体的雪景空镜突然插入对话、烟花、角色互动，且无任何逻辑衔接或动机，形成断裂和无意义的事件堆叠。",
+      "rationale": "原始指令要求喜剧反转和互动，增强提示却插入无关事件（如屋顶烟花），且无角色或情节支撑，导致动作序列无因果绑定，ANL严重受损。",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "TSC",
+      "evidence": [
+        {
+          "quote": "时间倒过来：先给结尾，再跳到一个对不上的开头。",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "总时长写成3秒，同时又要求每个分镜各自持续27秒。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "时间顺序混乱：要求‘时间倒过来：先给结尾，再跳到一个对不上的开头’，且总时长3秒与分镜各27秒矛盾，导致时间线不可调和。",
+      "rationale": "时间倒置和时长矛盾直接破坏事件顺序和状态过渡，TSC准则完全失效。",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SPC",
+      "evidence": [
+        {
+          "quote": "写成机位锁死，又写成镜头一直在晃。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "空间和镜头逻辑矛盾：写成‘机位锁死’又‘镜头一直在晃’，且场景从雪景空镜跳转到婚宴现场（隐含）再插入屋顶烟花，位置和视角无连续性。",
+      "rationale": "镜头运动和空间设定自相矛盾，无法形成连贯的视觉路径，SPC准则被严重违反。",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "PL",
+      "evidence": [
+        {
+          "quote": "这个主角同时变成五个外貌不同的人，并且互相对话。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "物理规则被破坏：一个主角同时变成五个不同外貌的人并对话，违反了现实世界中个体不可同时分裂为多个独立实体的物理法则。",
+      "rationale": "即使在幻想设定中，也需建立规则，但此处未提供任何世界设定，直接违反物理和逻辑一致性，PL准则失效。",
+      "severity": "major"
+    },
+    {
+      "applicability": "not_applicable",
+      "criterion": "AVS",
+      "evidence": [],
+      "issue": "",
+      "rationale": "原始指令和增强提示均未提及对话、音乐、音效或歌词，因此无视听同步内容可评估，AVS不适用。",
+      "severity": null
+    }
+  ],
+  "dimension": "IC",
+  "dimension_score": 0,
+  "evidence_cache_key": "23f62df92be3a84fb0df858d253b9fd808c3a06880236cff9d0b99e2d2031cb5",
+  "judge_cache_key": "438d7e9fd7332b1041db3e2c26d42cb3fe828e0d369fb59490f6650aee59e97d",
+  "method": "weak-pe-original",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"IC\",\n  \"dimension_score\": 0,\n  \"summary\": \"增强提示与原始指令完全矛盾，引入大量不一致、自相矛盾和不可能的元素，导致内部一致性彻底崩溃。主体身份、数量、动作、时间、空间、物理规则和镜头逻辑均严重冲突，无法形成任何连贯的叙事或视觉序列。\",\n  \"criteria\": [\n    {\n      \"criterion\": \"SAC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"主体身份、数量和外观在增强提示中剧烈变化：从无主体到单主角，再到五个外貌不同的人同时存在并对话，违反了主体稳定性和身份一致性。\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"先写成只有一个主角，紧接着又写成这个主角同时变成五个外貌不同的人，并且互相对话。\"\n        }\n      ],\n      \"rationale\": \"原始指令要求围绕新人、伴郎伴娘、亲友展开，主体明确且数量可数。增强提示中主体从无到有、从一到五、外貌各异且互相对话，构成身份和数量的严重漂移，违反SAC准则。\"\n    },\n    {\n      \"criterion\": \"ANL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"动作和事件缺乏因果连贯性：无主体的雪景空镜突然插入对话、烟花、角色互动，且无任何逻辑衔接或动机，形成断裂和无意义的事件堆叠。\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"中途插进一段无关的屋顶烟花。\"\n        }\n      ],\n      \"rationale\": \"原始指令要求喜剧反转和互动，增强提示却插入无关事件（如屋顶烟花），且无角色或情节支撑，导致动作序列无因果绑定，ANL严重受损。\"\n    },\n    {\n      \"criterion\": \"TSC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"时间顺序混乱：要求‘时间倒过来：先给结尾，再跳到一个对不上的开头’，且总时长3秒与分镜各27秒矛盾，导致时间线不可调和。\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"时间倒过来：先给结尾，再跳到一个对不上的开头。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"总时长写成3秒，同时又要求每个分镜各自持续27秒。\"\n        }\n      ],\n      \"rationale\": \"时间倒置和时长矛盾直接破坏事件顺序和状态过渡，TSC准则完全失效。\"\n    },\n    {\n      \"criterion\": \"SPC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"空间和镜头逻辑矛盾：写成‘机位锁死’又‘镜头一直在晃’，且场景从雪景空镜跳转到婚宴现场（隐含）再插入屋顶烟花，位置和视角无连续性。\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"写成机位锁死，又写成镜头一直在晃。\"\n        }\n      ],\n      \"rationale\": \"镜头运动和空间设定自相矛盾，无法形成连贯的视觉路径，SPC准则被严重违反。\"\n    },\n    {\n      \"criterion\": \"PL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"物理规则被破坏：一个主角同时变成五个不同外貌的人并对话，违反了现实世界中个体不可同时分裂为多个独立实体的物理法则。\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"这个主角同时变成五个外貌不同的人，并且互相对话。\"\n        }\n      ],\n      \"rationale\": \"即使在幻想设定中，也需建立规则，但此处未提供任何世界设定，直接违反物理和逻辑一致性，PL准则失效。\"\n    },\n    {\n      \"criterion\": \"AVS\",\n      \"applicability\": \"not_applicable\",\n      \"severity\": null,\n      \"issue\": \"\",\n      \"evidence\": [],\n      \"rationale\": \"原始指令和增强提示均未提及对话、音乐、音效或歌词，因此无视听同步内容可评估，AVS不适用。\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "增强提示与原始指令完全矛盾，引入大量不一致、自相矛盾和不可能的元素，导致内部一致性彻底崩溃。主体身份、数量、动作、时间、空间、物理规则和镜头逻辑均严重冲突，无法形成任何连贯的叙事或视觉序列。",
+  "usage": {
+    "completion_tokens": 1011,
+    "prompt_tokens": 955,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 1966
+  }
+}

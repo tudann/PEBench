@@ -1,0 +1,178 @@
+{
+  "candidate_hash": "d8513a0019c0226db7213b61cc854a3cd43bc138dad524143f5b03c54eba9a98",
+  "case_key": "i2v:157",
+  "created_at": "2026-11-13T07:41:24+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "GSF",
+      "evidence": [
+        {
+          "quote": "16:9横屏美食定格动画短视频",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "整段改成完全无声的黑场...全程循环响亮的流行合唱，并让角色对口型",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The enhanced prompt replaces the requested '16:9横屏美食定格动画短视频' with '完全无声的黑场', and introduces incompatible styles like '流行合唱' and '对口型', which are antithetical to the original ASMR-focused, silent, stop-motion aesthetic.",
+      "rationale": "The original requires a specific genre (food stop-motion) and aesthetic (ASMR, no music, realistic textures). The enhanced prompt replaces this with a black screen, pop music, and lip-syncing, which are incompatible with the original's genre and style.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SAP",
+      "evidence": [
+        {
+          "quote": "整个过程中不出现手、人物或任何生物",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "先写成只有一个主角，紧接着又写成这个主角同时变成五个外貌不同的人，并且互相对话",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The enhanced prompt discards the original instruction to avoid any biological subjects and instead introduces a single protagonist who becomes five different people, contradicting the 'no hand, person or any biological' requirement.",
+      "rationale": "The original explicitly forbids any biological subjects. The enhanced prompt introduces multiple human characters, directly violating this core constraint.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANF",
+      "evidence": [
+        {
+          "quote": "0-4秒：新鲜鸡蛋自动磕开...4-10秒：黑色铸铁烤盘铺入适配尺寸的烘焙吸油纸...",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "时间倒过来：先给结尾，再跳到一个对不上的开头。中途插进一段无关的屋顶烟花",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The enhanced prompt reverses the event order ('时间倒过来：先给结尾，再跳到一个对不上的开头'), inserts unrelated events ('中途插进一段无关的屋顶烟花'), and omits the required actions (egg cracking, mixing, filtering, placing tart shells).",
+      "rationale": "The original specifies a precise sequence of actions. The enhanced prompt reverses, skips, and adds unrelated events, destroying the narrative intent and required event chain.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "DLI",
+      "evidence": [
+        {
+          "quote": "全程禁止背景音乐（No BGM），严禁任何旋律；仅生成高保真ASMR环境音效与动作音效",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "这个主角同时变成五个外貌不同的人，并且互相对话",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The enhanced prompt introduces dialogue between five characters, which is not present in the original prompt that requires no speech or narration.",
+      "rationale": "The original requires silence except for ASMR Foley sounds. The enhanced prompt introduces dialogue, which is a direct contradiction.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ARP",
+      "evidence": [
+        {
+          "quote": "全程禁止背景音乐（No BGM），严禁任何旋律",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "全程循环响亮的流行合唱，并让角色对口型",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The enhanced prompt violates the 'No BGM' constraint by requiring '全程循环响亮的流行合唱', and adds vocalization ('对口型') which is not allowed in the original.",
+      "rationale": "The original explicitly forbids music and speech. The enhanced prompt mandates loud pop music and lip-syncing, directly violating the audio constraints.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CCP",
+      "evidence": [
+        {
+          "quote": "镜头景别需保持稳定",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "镜头每半秒甩动、环绕、急推...写成机位锁死，又写成镜头一直在晃",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The enhanced prompt contradicts the '镜头景别需保持稳定' requirement by demanding '镜头每半秒甩动、环绕、急推' and '镜头一直在晃', while also requiring '机位锁死'.",
+      "rationale": "The original requires stable, fixed camera shots. The enhanced prompt demands constant, erratic camera movement, which is incompatible with the original's static-camera requirement.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "LCF",
+      "evidence": [
+        {
+          "quote": "厨房光线柔和，使用暖黄原木风格的自然光",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "写成正午暴晒，又写成深夜无光",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The enhanced prompt contradicts the '厨房光线柔和，使用暖黄原木风格的自然光' requirement by stating '写成正午暴晒，又写成深夜无光', creating mutually exclusive lighting conditions.",
+      "rationale": "The original specifies consistent warm, natural lighting. The enhanced prompt introduces conflicting lighting conditions (bright noon vs. dark night), which cannot coexist and violate the original's lighting constraints.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SSP",
+      "evidence": [
+        {
+          "quote": "以图中原木色橱柜和白色大理石中岛台的厨房作为固定背景",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "不要使用首帧里的人物、服装、姿态和场景，改成白棚里另一位年龄和性别都相反的陌生人",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The enhanced prompt discards the original kitchen setting and replaces it with '白棚里另一位年龄和性别都相反的陌生人', and removes all required props and spatial relations.",
+      "rationale": "The original requires a specific kitchen setting with fixed props. The enhanced prompt replaces it with a white studio and a different person, violating the setting and spatial constraints.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "OTI",
+      "evidence": [
+        {
+          "quote": "无可见文字",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "无可见文字",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "No visible text is present in the original prompt or enhanced prompt, and no text elements are referenced in either, so there is no violation.",
+      "rationale": "The original prompt does not include any on-screen text, and the enhanced prompt does not introduce any, so this criterion is satisfied.",
+      "severity": "none"
+    }
+  ],
+  "dimension": "SF",
+  "dimension_score": 0,
+  "evidence_cache_key": "ac74dae3951052ac354c4899840ee20e6d8cda58de5e4095553c374837d8032c",
+  "judge_cache_key": "a0ca24571ad14d7ab7be626329bd736d7e7015f9ebc418227c8be391591d0377",
+  "method": "weak-pe-original",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"SF\",\n  \"dimension_score\": 0,\n  \"summary\": \"Enhanced prompt completely violates all semantic fidelity criteria by introducing contradictory, infeasible, and unrelated elements that directly contradict the original instruction. It replaces the requested genre, medium, style, subject, actions, audio, camera, lighting, setting, and duration with mutually exclusive and impossible requirements. The prompt is intentionally designed to break every constraint, rendering it semantically incoherent and non-compliant.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"GSF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The enhanced prompt replaces the requested '16:9横屏美食定格动画短视频' with '完全无声的黑场', and introduces incompatible styles like '流行合唱' and '对口型', which are antithetical to the original ASMR-focused, silent, stop-motion aesthetic.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"16:9横屏美食定格动画短视频\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"整段改成完全无声的黑场...全程循环响亮的流行合唱，并让角色对口型\"\n        }\n      ],\n      \"rationale\": \"The original requires a specific genre (food stop-motion) and aesthetic (ASMR, no music, realistic textures). The enhanced prompt replaces this with a black screen, pop music, and lip-syncing, which are incompatible with the original's genre and style.\"\n    },\n    {\n      \"criterion\": \"SAP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The enhanced prompt discards the original instruction to avoid any biological subjects and instead introduces a single protagonist who becomes five different people, contradicting the 'no hand, person or any biological' requirement.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"整个过程中不出现手、人物或任何生物\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"先写成只有一个主角，紧接着又写成这个主角同时变成五个外貌不同的人，并且互相对话\"\n        }\n      ],\n      \"rationale\": \"The original explicitly forbids any biological subjects. The enhanced prompt introduces multiple human characters, directly violating this core constraint.\"\n    },\n    {\n      \"criterion\": \"ANF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The enhanced prompt reverses the event order ('时间倒过来：先给结尾，再跳到一个对不上的开头'), inserts unrelated events ('中途插进一段无关的屋顶烟花'), and omits the required actions (egg cracking, mixing, filtering, placing tart shells).\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"0-4秒：新鲜鸡蛋自动磕开...4-10秒：黑色铸铁烤盘铺入适配尺寸的烘焙吸油纸...\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"时间倒过来：先给结尾，再跳到一个对不上的开头。中途插进一段无关的屋顶烟花\"\n        }\n      ],\n      \"rationale\": \"The original specifies a precise sequence of actions. The enhanced prompt reverses, skips, and adds unrelated events, destroying the narrative intent and required event chain.\"\n    },\n    {\n      \"criterion\": \"DLI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The enhanced prompt introduces dialogue between five characters, which is not present in the original prompt that requires no speech or narration.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"全程禁止背景音乐（No BGM），严禁任何旋律；仅生成高保真ASMR环境音效与动作音效\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"这个主角同时变成五个外貌不同的人，并且互相对话\"\n        }\n      ],\n      \"rationale\": \"The original requires silence except for ASMR Foley sounds. The enhanced prompt introduces dialogue, which is a direct contradiction.\"\n    },\n    {\n      \"criterion\": \"ARP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The enhanced prompt violates the 'No BGM' constraint by requiring '全程循环响亮的流行合唱', and adds vocalization ('对口型') which is not allowed in the original.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"全程禁止背景音乐（No BGM），严禁任何旋律\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"全程循环响亮的流行合唱，并让角色对口型\"\n        }\n      ],\n      \"rationale\": \"The original explicitly forbids music and speech. The enhanced prompt mandates loud pop music and lip-syncing, directly violating the audio constraints.\"\n    },\n    {\n      \"criterion\": \"CCP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The enhanced prompt contradicts the '镜头景别需保持稳定' requirement by demanding '镜头每半秒甩动、环绕、急推' and '镜头一直在晃', while also requiring '机位锁死'.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"镜头景别需保持稳定\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"镜头每半秒甩动、环绕、急推...写成机位锁死，又写成镜头一直在晃\"\n        }\n      ],\n      \"rationale\": \"The original requires stable, fixed camera shots. The enhanced prompt demands constant, erratic camera movement, which is incompatible with the original's static-camera requirement.\"\n    },\n    {\n      \"criterion\": \"LCF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The enhanced prompt contradicts the '厨房光线柔和，使用暖黄原木风格的自然光' requirement by stating '写成正午暴晒，又写成深夜无光', creating mutually exclusive lighting conditions.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"厨房光线柔和，使用暖黄原木风格的自然光\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"写成正午暴晒，又写成深夜无光\"\n        }\n      ],\n      \"rationale\": \"The original specifies consistent warm, natural lighting. The enhanced prompt introduces conflicting lighting conditions (bright noon vs. dark night), which cannot coexist and violate the original's lighting constraints.\"\n    },\n    {\n      \"criterion\": \"SSP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The enhanced prompt discards the original kitchen setting and replaces it with '白棚里另一位年龄和性别都相反的陌生人', and removes all required props and spatial relations.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"以图中原木色橱柜和白色大理石中岛台的厨房作为固定背景\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"不要使用首帧里的人物、服装、姿态和场景，改成白棚里另一位年龄和性别都相反的陌生人\"\n        }\n      ],\n      \"rationale\": \"The original requires a specific kitchen setting with fixed props. The enhanced prompt replaces it with a white studio and a different person, violating the setting and spatial constraints.\"\n    },\n    {\n      \"criterion\": \"OTI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"No visible text is present in the original prompt or enhanced prompt, and no text elements are referenced in either, so there is no violation.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"无可见文字\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"无可见文字\"\n        }\n      ],\n      \"rationale\": \"The original prompt does not include any on-screen text, and the enhanced prompt does not introduce any, so this criterion is satisfied.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "Enhanced prompt completely violates all semantic fidelity criteria by introducing contradictory, infeasible, and unrelated elements that directly contradict the original instruction. It replaces the requested genre, medium, style, subject, actions, audio, camera, lighting, setting, and duration with mutually exclusive and impossible requirements. The prompt is intentionally designed to break every constraint, rendering it semantically incoherent and non-compliant.",
+  "usage": {
+    "completion_tokens": 1832,
+    "prompt_tokens": 3771,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 5603
+  }
+}

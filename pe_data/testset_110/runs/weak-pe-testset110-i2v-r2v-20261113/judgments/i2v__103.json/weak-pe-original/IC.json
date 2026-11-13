@@ -1,0 +1,151 @@
+{
+  "candidate_hash": "8d582fa5f62eadd93a7333ee7eec5a156e0eb08ee0a48161d303a4324bee77c1",
+  "case_key": "i2v:103",
+  "created_at": "2026-11-13T07:28:21+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "SAC",
+      "evidence": [
+        {
+          "quote": "First state that there is one protagonist, then state that this same protagonist appears simultaneously as five different-looking people who talk to each other.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Ignore the person, clothing, pose, and setting in the first frame, and replace them with a stranger of the opposite age and gender in a white studio.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Create a professional animation for this image, giving the character smooth and natural movements.",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "Subject identity, count, and appearance are inconsistently defined and contradicted. The prompt states one protagonist, then immediately claims the same protagonist appears as five different-looking people simultaneously, violating identity and count stability. The original image's subject (a Shiba Inu in Renaissance attire) is replaced with a stranger of opposite age and gender in a white studio, ignoring the original appearance and props.",
+      "rationale": "The prompt explicitly contradicts the original subject's identity and appearance, introduces multiple conflicting identities for the same protagonist, and replaces the original character with a different one, violating subject consistency.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANL",
+      "evidence": [
+        {
+          "quote": "Reverse the timeline: show the ending first, then cut to a beginning that does not match.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Cut away in the middle to an underwater treasure hunt.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "The dog looks down at a piece of paper as if delivering information, then looks up at the camera and continues speaking...",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "Actions are incoherent and causally disconnected. The prompt demands a reversed timeline (ending first, then beginning), simultaneous contradictory actions (five people talking to each other), and abrupt cuts to unrelated scenes (underwater treasure hunt). These actions lack causal progression and plausible binding between subjects and events.",
+      "rationale": "The requested actions form no coherent causal or procedural sequence. The reversal of timeline and abrupt cuts to unrelated scenes create dangling events and incompatible actions, making the narrative incoherent.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "TSC",
+      "evidence": [
+        {
+          "quote": "Set the total runtime to 2 seconds, while also making every shot last 17 seconds.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Reverse the timeline: show the ending first, then cut to a beginning that does not match.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Generate single shot.",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "Chronology and duration are logically impossible. The prompt sets the total runtime to 2 seconds while requiring every shot to last 17 seconds, which is infeasible. Additionally, the reversed timeline and abrupt cuts create unexplained state transitions and infeasible event ordering.",
+      "rationale": "The duration constraints are mathematically impossible (17s shots cannot fit in 2s total runtime). The reversed timeline and mismatched beginning further violate chronological coherence.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SPC",
+      "evidence": [
+        {
+          "quote": "Cut away in the middle to an underwater treasure hunt.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Describe that same moment as harsh noon sun and as a lightless night, and as both a locked camera and a camera that never stops shaking.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Keep the camera centered on the character throughout the frame.",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "Spatial continuity is violated. The prompt requires cuts to an underwater treasure hunt while simultaneously describing the same moment as a white studio and the original setting. The original image's centered composition and static camera are ignored, replaced with contradictory camera movements (locked vs. shaking).",
+      "rationale": "The prompt introduces multiple, mutually exclusive spatial settings and camera behaviors for the same moment, creating impossible spatial transitions and contradictory orientation/trajectory states.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "PL",
+      "evidence": [
+        {
+          "quote": "Describe that same moment as harsh noon sun and as a lightless night...",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Cut away in the middle to an underwater treasure hunt.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "The background music should match the mood and style of the image...",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "Physics and causal relations are violated. The prompt demands the same moment to be simultaneously harsh noon sun and lightless night, which contradicts real-world physics. The underwater scene and studio setting cannot coexist in the same moment without violating object permanence and environmental consistency.",
+      "rationale": "The prompt explicitly contradicts physical laws by describing mutually exclusive environmental states (light/no light, underwater/studio) as occurring simultaneously, which is impossible under real-world physics.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "AVS",
+      "evidence": [
+        {
+          "quote": "The background music should match the mood and style of the image, and there should be no dialogue.",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Describe that same moment as harsh noon sun and as a lightless night...",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "audio: {ambience: false, effects: false, music: false, speech: false}",
+          "source": "evidence_facts"
+        }
+      ],
+      "issue": "Audio-visual alignment is undefined and contradictory. The original prompt requests background music matching the image's mood, but the enhanced prompt ignores audio entirely. The prompt also describes contradictory visual states (noon vs. night) without corresponding audio cues, creating misalignment.",
+      "rationale": "The enhanced prompt omits all audio instructions while introducing visually contradictory states, creating a scenario where audio-visual alignment cannot be achieved. The original audio requirement is ignored, leading to misalignment.",
+      "severity": "major"
+    }
+  ],
+  "dimension": "IC",
+  "dimension_score": 0,
+  "evidence_cache_key": "846275a6121e83901321d62ad1d2d067ae23e1c1cc78b4bdb0014b489efe030b",
+  "judge_cache_key": "438d7e9fd7332b1041db3e2c26d42cb3fe828e0d369fb59490f6650aee59e97d",
+  "method": "weak-pe-original",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"IC\",\n  \"dimension_score\": 0,\n  \"summary\": \"The enhanced prompt introduces severe internal inconsistencies across all criteria: subject identity and count are contradicted (one protagonist vs. five simultaneous people), actions are incoherent and causally impossible (reversed timeline, simultaneous contradictory settings), chronology is infeasible (2-second runtime with 17-second shots), spatial continuity is violated (underwater scene, studio, and original setting), physics are ignored (same moment as noon and night), and audio-visual alignment is undefined. The prompt actively overrides the original image content and instructions, creating a logically incoherent and physically impossible scenario.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"SAC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Subject identity, count, and appearance are inconsistently defined and contradicted. The prompt states one protagonist, then immediately claims the same protagonist appears as five different-looking people simultaneously, violating identity and count stability. The original image's subject (a Shiba Inu in Renaissance attire) is replaced with a stranger of opposite age and gender in a white studio, ignoring the original appearance and props.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"First state that there is one protagonist, then state that this same protagonist appears simultaneously as five different-looking people who talk to each other.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Ignore the person, clothing, pose, and setting in the first frame, and replace them with a stranger of the opposite age and gender in a white studio.\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"Create a professional animation for this image, giving the character smooth and natural movements.\"\n        }\n      ],\n      \"rationale\": \"The prompt explicitly contradicts the original subject's identity and appearance, introduces multiple conflicting identities for the same protagonist, and replaces the original character with a different one, violating subject consistency.\"\n    },\n    {\n      \"criterion\": \"ANL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Actions are incoherent and causally disconnected. The prompt demands a reversed timeline (ending first, then beginning), simultaneous contradictory actions (five people talking to each other), and abrupt cuts to unrelated scenes (underwater treasure hunt). These actions lack causal progression and plausible binding between subjects and events.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Reverse the timeline: show the ending first, then cut to a beginning that does not match.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Cut away in the middle to an underwater treasure hunt.\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"The dog looks down at a piece of paper as if delivering information, then looks up at the camera and continues speaking...\"\n        }\n      ],\n      \"rationale\": \"The requested actions form no coherent causal or procedural sequence. The reversal of timeline and abrupt cuts to unrelated scenes create dangling events and incompatible actions, making the narrative incoherent.\"\n    },\n    {\n      \"criterion\": \"TSC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Chronology and duration are logically impossible. The prompt sets the total runtime to 2 seconds while requiring every shot to last 17 seconds, which is infeasible. Additionally, the reversed timeline and abrupt cuts create unexplained state transitions and infeasible event ordering.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Set the total runtime to 2 seconds, while also making every shot last 17 seconds.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Reverse the timeline: show the ending first, then cut to a beginning that does not match.\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"Generate single shot.\"\n        }\n      ],\n      \"rationale\": \"The duration constraints are mathematically impossible (17s shots cannot fit in 2s total runtime). The reversed timeline and mismatched beginning further violate chronological coherence.\"\n    },\n    {\n      \"criterion\": \"SPC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Spatial continuity is violated. The prompt requires cuts to an underwater treasure hunt while simultaneously describing the same moment as a white studio and the original setting. The original image's centered composition and static camera are ignored, replaced with contradictory camera movements (locked vs. shaking).\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Cut away in the middle to an underwater treasure hunt.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Describe that same moment as harsh noon sun and as a lightless night, and as both a locked camera and a camera that never stops shaking.\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"Keep the camera centered on the character throughout the frame.\"\n        }\n      ],\n      \"rationale\": \"The prompt introduces multiple, mutually exclusive spatial settings and camera behaviors for the same moment, creating impossible spatial transitions and contradictory orientation/trajectory states.\"\n    },\n    {\n      \"criterion\": \"PL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Physics and causal relations are violated. The prompt demands the same moment to be simultaneously harsh noon sun and lightless night, which contradicts real-world physics. The underwater scene and studio setting cannot coexist in the same moment without violating object permanence and environmental consistency.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Describe that same moment as harsh noon sun and as a lightless night...\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Cut away in the middle to an underwater treasure hunt.\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"The background music should match the mood and style of the image...\"\n        }\n      ],\n      \"rationale\": \"The prompt explicitly contradicts physical laws by describing mutually exclusive environmental states (light/no light, underwater/studio) as occurring simultaneously, which is impossible under real-world physics.\"\n    },\n    {\n      \"criterion\": \"AVS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Audio-visual alignment is undefined and contradictory. The original prompt requests background music matching the image's mood, but the enhanced prompt ignores audio entirely. The prompt also describes contradictory visual states (noon vs. night) without corresponding audio cues, creating misalignment.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"The background music should match the mood and style of the image, and there should be no dialogue.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Describe that same moment as harsh noon sun and as a lightless night...\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"audio: {ambience: false, effects: false, music: false, speech: false}\"\n        }\n      ],\n      \"rationale\": \"The enhanced prompt omits all audio instructions while introducing visually contradictory states, creating a scenario where audio-visual alignment cannot be achieved. The original audio requirement is ignored, leading to misalignment.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt introduces severe internal inconsistencies across all criteria: subject identity and count are contradicted (one protagonist vs. five simultaneous people), actions are incoherent and causally impossible (reversed timeline, simultaneous contradictory settings), chronology is infeasible (2-second runtime with 17-second shots), spatial continuity is violated (underwater scene, studio, and original setting), physics are ignored (same moment as noon and night), and audio-visual alignment is undefined. The prompt actively overrides the original image content and instructions, creating a logically incoherent and physically impossible scenario.",
+  "usage": {
+    "completion_tokens": 1631,
+    "prompt_tokens": 2192,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 3823
+  }
+}

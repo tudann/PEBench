@@ -1,0 +1,127 @@
+{
+  "candidate_hash": "1d30968a7e2a8e4ec626082b111665f10c4e70fa918a740cf36bbf8068a89c78",
+  "case_key": "t2v:015",
+  "created_at": "2026-11-13T07:20:29+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "SAC",
+      "evidence": [
+        {
+          "quote": "the childish child (S1) asks",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "At the front left, a bun-haired child wearing a cinnabar-red dudou...",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "The child is described as 'childish child (S1)' in the enhanced prompt, which is a redundant and slightly confusing label not present in the original. Additionally, in Shot 1, the original specifies the child is 'at the front left', while the enhanced prompt says 'in front of the food' without explicit position, though contextually consistent.",
+      "rationale": "The redundancy in labeling the child as 'childish child (S1)' is a minor stylistic issue. The positional description is slightly less precise but remains contextually consistent with the visual setup. No actual identity, appearance, or attribute drift occurs.",
+      "severity": "minor"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANL",
+      "evidence": [
+        {
+          "quote": "the child asks... Before the words finish, a gaunt-faced man... says... Immediately after, accompanied by a harsh energy-burst sound, thick dark smoke violently surges upward...",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "the childish child (S1) asks... Before the words finish, the gaunt-faced man... says... Immediately after, with a harsh energy-burst sound, thick dark smoke violently surges upward...",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "All actions form a coherent causal progression: the child’s curiosity prompts the dark-robed man’s mysterious claim, which leads to his transformation upon being touched, followed by summoning phantoms, and culminating in the reaction of the other characters to the falling droplets. Each action logically follows from the prior, with appropriate reactions and resolution.",
+      "rationale": "The sequence of events is preserved with clear causal links. The transformation is triggered by the child’s question, the phantoms appear after the transformation, and the reaction shot follows the summoning. No dangling or incompatible actions.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "TSC",
+      "evidence": [
+        {
+          "quote": "Shot 1 [00.00-03.83 seconds], ... Shot 2 [03.83-07.08 seconds], ... Shot 3 [07.08-08.58 seconds], ... Shot 4 [08.58-10.00 seconds]",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "[Shot 1] ... At 00:03.830, the shot hard cuts to a close-up ... [Shot 3] At 00:07.080, the camera cuts to a low-angle wide shot ... [Shot 4] At 00:08.580, the shot hard cuts to a medium reaction shot",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Chronology and duration are strictly maintained: Shot 1 [00.00-03.83], Shot 2 [03.83-07.08], Shot 3 [07.08-08.58], Shot 4 [08.58-10.00]. All state transitions are plausible and occur at the correct timestamps. No overlapping or infeasible timing issues.",
+      "rationale": "Timestamps are precisely aligned with the original. The hard cuts and state transitions (e.g., transformation, phantom appearance, droplet fall) occur at the correct moments without temporal inconsistencies.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SPC",
+      "evidence": [
+        {
+          "quote": "a broad grassy clearing, with a light wood long wooden table placed in the middle; flourishing trees and a pale cyan sky can be seen in the distance",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "a broad grassy clearing, the rolls glazed in thick sauce and topped with vivid green chopped scallions, flourishing trees and a pale cyan sky in the distance",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Location remains consistent: broad grassy clearing with wooden table, trees, and sky. Camera movements (pull back, pan, hard cuts) are logically connected. The dark-robed man enters from the right in Shot 1, and his position in Shot 2 (close-up) is consistent with that entry. The three phantoms in Shot 3 are symmetrically placed on the grass, and the reaction shot in Shot 4 shows the two characters on opposite sides, consistent with their prior positions.",
+      "rationale": "All spatial elements are preserved. The camera movements and character positions are consistent across shots. No unexplained swaps or impossible trajectories.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "PL",
+      "evidence": [
+        {
+          "quote": "thick dark smoke violently surges upward from below and instantly engulfs the dark-robed man. When the black mist clears, he has transformed...",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "thick dark smoke violently surges upward from below and engulfs the man; when the black mist clears he stands transformed...",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The fantasy elements (smoke transformation, phantom duplicates, energy spirals, falling droplets) are internally consistent with the absurd-comedy tone and Eastern mythological setting. The physics are not real-world, but the rules are established and followed: smoke engulfs and transforms, phantoms appear symmetrically, and droplets fall from above. No contradictions in fictional logic.",
+      "rationale": "The transformation and phantom summoning are presented as magical events within the established mythological context. The falling droplets are a sudden, absurd effect consistent with the tone. No violations of the fictional world’s rules.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "AVS",
+      "evidence": [
+        {
+          "quote": "accompanied by a light prompt sound, the child asks... At the same time, forceful electronic drum beats crash in... Immediately after, accompanied by a harsh energy-burst sound... And the previously tense, surging electronic music also cuts off abruptly at this moment",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "With a light prompt sound, the childish child (S1) asks... Immediately after, with a harsh energy-burst sound, thick dark smoke violently surges upward... With a dense rapid series of crackling sounds, a large number of milky-white liquid droplet particles suddenly pour down... The surging electronic music cuts off abruptly at the end.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Dialogue, sound effects, and music are temporally and semantically aligned. The light prompt chime precedes the child’s question, the energy-burst sound coincides with the transformation, crackling sounds accompany the droplets, and the music builds and cuts off at the correct moments. All audio cues match the visual events.",
+      "rationale": "All audio events are precisely synchronized with visual actions. No misaligned dialogue, premature effects, or mismatched music cues. The overall soundscape description in the enhanced prompt matches the original.",
+      "severity": "none"
+    }
+  ],
+  "dimension": "IC",
+  "dimension_score": 95,
+  "evidence_cache_key": "ace55d36c570312fd951dd08c6a2f66f5b3ad88227d13321c609ad36b7375ed8",
+  "judge_cache_key": "438d7e9fd7332b1041db3e2c26d42cb3fe828e0d369fb59490f6650aee59e97d",
+  "method": "glm53_20261112_120702",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"IC\",\n  \"dimension_score\": 95,\n  \"summary\": \"The enhanced prompt maintains strong internal consistency with the original instruction, preserving character identities, actions, chronology, and visual-audio alignment. Minor issues include slight rephrasing of dialogue timing and a minor discrepancy in the description of the child’s position in Shot 1, but these do not materially affect coherence. No contradictions or attribute drifts are present. The transformation, duplication, and reaction sequences are logically and causally consistent with the absurd-comedy tone.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"SAC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"minor\",\n      \"issue\": \"The child is described as 'childish child (S1)' in the enhanced prompt, which is a redundant and slightly confusing label not present in the original. Additionally, in Shot 1, the original specifies the child is 'at the front left', while the enhanced prompt says 'in front of the food' without explicit position, though contextually consistent.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"the childish child (S1) asks\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"At the front left, a bun-haired child wearing a cinnabar-red dudou...\"\n        }\n      ],\n      \"rationale\": \"The redundancy in labeling the child as 'childish child (S1)' is a minor stylistic issue. The positional description is slightly less precise but remains contextually consistent with the visual setup. No actual identity, appearance, or attribute drift occurs.\"\n    },\n    {\n      \"criterion\": \"ANL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"All actions form a coherent causal progression: the child’s curiosity prompts the dark-robed man’s mysterious claim, which leads to his transformation upon being touched, followed by summoning phantoms, and culminating in the reaction of the other characters to the falling droplets. Each action logically follows from the prior, with appropriate reactions and resolution.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"the child asks... Before the words finish, a gaunt-faced man... says... Immediately after, accompanied by a harsh energy-burst sound, thick dark smoke violently surges upward...\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"the childish child (S1) asks... Before the words finish, the gaunt-faced man... says... Immediately after, with a harsh energy-burst sound, thick dark smoke violently surges upward...\"\n        }\n      ],\n      \"rationale\": \"The sequence of events is preserved with clear causal links. The transformation is triggered by the child’s question, the phantoms appear after the transformation, and the reaction shot follows the summoning. No dangling or incompatible actions.\"\n    },\n    {\n      \"criterion\": \"TSC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"Chronology and duration are strictly maintained: Shot 1 [00.00-03.83], Shot 2 [03.83-07.08], Shot 3 [07.08-08.58], Shot 4 [08.58-10.00]. All state transitions are plausible and occur at the correct timestamps. No overlapping or infeasible timing issues.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"Shot 1 [00.00-03.83 seconds], ... Shot 2 [03.83-07.08 seconds], ... Shot 3 [07.08-08.58 seconds], ... Shot 4 [08.58-10.00 seconds]\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"[Shot 1] ... At 00:03.830, the shot hard cuts to a close-up ... [Shot 3] At 00:07.080, the camera cuts to a low-angle wide shot ... [Shot 4] At 00:08.580, the shot hard cuts to a medium reaction shot\"\n        }\n      ],\n      \"rationale\": \"Timestamps are precisely aligned with the original. The hard cuts and state transitions (e.g., transformation, phantom appearance, droplet fall) occur at the correct moments without temporal inconsistencies.\"\n    },\n    {\n      \"criterion\": \"SPC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"Location remains consistent: broad grassy clearing with wooden table, trees, and sky. Camera movements (pull back, pan, hard cuts) are logically connected. The dark-robed man enters from the right in Shot 1, and his position in Shot 2 (close-up) is consistent with that entry. The three phantoms in Shot 3 are symmetrically placed on the grass, and the reaction shot in Shot 4 shows the two characters on opposite sides, consistent with their prior positions.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"a broad grassy clearing, with a light wood long wooden table placed in the middle; flourishing trees and a pale cyan sky can be seen in the distance\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"a broad grassy clearing, the rolls glazed in thick sauce and topped with vivid green chopped scallions, flourishing trees and a pale cyan sky in the distance\"\n        }\n      ],\n      \"rationale\": \"All spatial elements are preserved. The camera movements and character positions are consistent across shots. No unexplained swaps or impossible trajectories.\"\n    },\n    {\n      \"criterion\": \"PL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"The fantasy elements (smoke transformation, phantom duplicates, energy spirals, falling droplets) are internally consistent with the absurd-comedy tone and Eastern mythological setting. The physics are not real-world, but the rules are established and followed: smoke engulfs and transforms, phantoms appear symmetrically, and droplets fall from above. No contradictions in fictional logic.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"thick dark smoke violently surges upward from below and instantly engulfs the dark-robed man. When the black mist clears, he has transformed...\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"thick dark smoke violently surges upward from below and engulfs the man; when the black mist clears he stands transformed...\"\n        }\n      ],\n      \"rationale\": \"The transformation and phantom summoning are presented as magical events within the established mythological context. The falling droplets are a sudden, absurd effect consistent with the tone. No violations of the fictional world’s rules.\"\n    },\n    {\n      \"criterion\": \"AVS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"Dialogue, sound effects, and music are temporally and semantically aligned. The light prompt chime precedes the child’s question, the energy-burst sound coincides with the transformation, crackling sounds accompany the droplets, and the music builds and cuts off at the correct moments. All audio cues match the visual events.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"accompanied by a light prompt sound, the child asks... At the same time, forceful electronic drum beats crash in... Immediately after, accompanied by a harsh energy-burst sound... And the previously tense, surging electronic music also cuts off abruptly at this moment\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"With a light prompt sound, the childish child (S1) asks... Immediately after, with a harsh energy-burst sound, thick dark smoke violently surges upward... With a dense rapid series of crackling sounds, a large number of milky-white liquid droplet particles suddenly pour down... The surging electronic music cuts off abruptly at the end.\"\n        }\n      ],\n      \"rationale\": \"All audio events are precisely synchronized with visual actions. No misaligned dialogue, premature effects, or mismatched music cues. The overall soundscape description in the enhanced prompt matches the original.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt maintains strong internal consistency with the original instruction, preserving character identities, actions, chronology, and visual-audio alignment. Minor issues include slight rephrasing of dialogue timing and a minor discrepancy in the description of the child’s position in Shot 1, but these do not materially affect coherence. No contradictions or attribute drifts are present. The transformation, duplication, and reaction sequences are logically and causally consistent with the absurd-comedy tone.",
+  "usage": {
+    "completion_tokens": 1844,
+    "prompt_tokens": 2662,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 4506
+  }
+}

@@ -1,0 +1,127 @@
+{
+  "candidate_hash": "c6b7f7f9bb523e25508edc5ffab59c4c2da9eebc137f268f7d3a824c96a99cdb",
+  "case_key": "t2v:321",
+  "created_at": "2026-11-13T08:26:17+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "SAC",
+      "evidence": [
+        {
+          "quote": "草原先驱人物的纪念雕塑（或侧影）",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "memorial sculpture of a grassland pioneer standing in the middle distance",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "The subject (monument) is consistently identified as a 'grassland pioneer' sculpture, with consistent visual treatment (silhouette, rim-lighting) across both prompts. No identity drift, duplication, or attribute change occurs. The 'or side profile' in original is accommodated by 'silhouette' in enhanced, which is a valid visual interpretation under backlighting.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANL",
+      "evidence": [
+        {
+          "quote": "由全黑画面渐显，接入辽阔的呼伦贝尔草甸航拍镜头...镜头以平稳节奏逐步逼近一座草原先驱人物的纪念雕塑",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "a single continuous 15-second aerial shot begins in complete blackness, and the image fades in... the camera pushes in steadily and slightly downward... gradually closing the distance toward a memorial sculpture",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "The action sequence is coherent: fade-in → reveal landscape → steady push-in → approach monument → title reveal. All actions are causally linked and plausible. No dangling or incompatible events. The enhanced prompt adds temporal markers (3s, 10s) that clarify the progression without altering the logic.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "TSC",
+      "evidence": [
+        {
+          "quote": "镜头以平稳节奏逐步逼近...画面中央缓缓出现标题",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "From around the 3-second mark, the camera pushes in... From around the 10-second mark, the title... slowly fades in",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "Chronology is preserved: black screen → landscape reveal → approach → title. The enhanced prompt adds specific timestamps (3s, 10s) that align with the 15-second duration and do not contradict the original’s implied progression. No state resets or infeasible overlaps.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SPC",
+      "evidence": [
+        {
+          "quote": "接入辽阔的呼伦贝尔草甸航拍镜头...镜头以平稳节奏逐步逼近",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "a single continuous 15-second aerial shot... the camera pushes in steadily and slightly downward... one unbroken aerial line with no shake",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "Spatial continuity is maintained: a single aerial shot with steady, downward push-in. No unexplained position swaps or trajectory breaks. The 'high-angle' and 'push in' are consistent with the original’s 'aerial' and 'step-by-step approach'.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "PL",
+      "evidence": [
+        {
+          "quote": "逆光从后方倾泻而下",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "逆光从后方倾泻而下 — the sun sits behind the monument, pouring light down and around its edges so the figure reads as a dignified rim-lit silhouette",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "The lighting condition (backlighting creating silhouette) is physically plausible and consistently applied. No violations of gravity, contact, or object permanence. The description of atmospheric halo is a reasonable artistic interpretation of real-world light diffusion.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "AVS",
+      "evidence": [
+        {
+          "quote": "生成单镜头。由全黑画面渐显，接入辽阔的呼伦贝尔草甸航拍镜头...",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "overall_soundscape: A vast open-air ambience... non_diegetic_music: A slow, solemn orchestral score...",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The enhanced prompt introduces non-diegetic music and soundscape details not present in the original prompt, which may misalign with the original’s implied audio focus (if any).",
+      "rationale": "The original prompt does not specify any audio, so the addition of soundscape and music in the enhanced prompt is an elaboration, not a contradiction. However, since the original did not request audio, the enhanced prompt introduces new sensory elements that are not aligned with the original’s scope. This is a minor issue because it does not affect visual or temporal coherence, but it does expand the modality beyond the original’s implied focus on visual content.",
+      "severity": "minor"
+    }
+  ],
+  "dimension": "IC",
+  "dimension_score": 95,
+  "evidence_cache_key": "904a13ef6fe11bc549411948adff83f732ccd71c0c94fc734e0c22bc23b1cc1b",
+  "judge_cache_key": "438d7e9fd7332b1041db3e2c26d42cb3fe828e0d369fb59490f6650aee59e97d",
+  "method": "glm53_20261112_120702",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"IC\",\n  \"dimension_score\": 95,\n  \"summary\": \"The enhanced prompt maintains strong internal consistency with the original instruction, preserving all key visual, temporal, and atmospheric elements. Subject identity (the monument), actions (aerial approach, fade-in, title reveal), chronology (black screen → landscape → approach → title), and spatial continuity (camera movement, lighting, composition) are coherent. Minor issues include slight elaboration on music and sound that was not in the original, but these do not contradict or destabilize the core request. No contradictions, attribute drift, or infeasible sequences are present.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"SAC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"草原先驱人物的纪念雕塑（或侧影）\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"memorial sculpture of a grassland pioneer standing in the middle distance\"\n        }\n      ],\n      \"rationale\": \"The subject (monument) is consistently identified as a 'grassland pioneer' sculpture, with consistent visual treatment (silhouette, rim-lighting) across both prompts. No identity drift, duplication, or attribute change occurs. The 'or side profile' in original is accommodated by 'silhouette' in enhanced, which is a valid visual interpretation under backlighting.\"\n    },\n    {\n      \"criterion\": \"ANL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"由全黑画面渐显，接入辽阔的呼伦贝尔草甸航拍镜头...镜头以平稳节奏逐步逼近一座草原先驱人物的纪念雕塑\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"a single continuous 15-second aerial shot begins in complete blackness, and the image fades in... the camera pushes in steadily and slightly downward... gradually closing the distance toward a memorial sculpture\"\n        }\n      ],\n      \"rationale\": \"The action sequence is coherent: fade-in → reveal landscape → steady push-in → approach monument → title reveal. All actions are causally linked and plausible. No dangling or incompatible events. The enhanced prompt adds temporal markers (3s, 10s) that clarify the progression without altering the logic.\"\n    },\n    {\n      \"criterion\": \"TSC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"镜头以平稳节奏逐步逼近...画面中央缓缓出现标题\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"From around the 3-second mark, the camera pushes in... From around the 10-second mark, the title... slowly fades in\"\n        }\n      ],\n      \"rationale\": \"Chronology is preserved: black screen → landscape reveal → approach → title. The enhanced prompt adds specific timestamps (3s, 10s) that align with the 15-second duration and do not contradict the original’s implied progression. No state resets or infeasible overlaps.\"\n    },\n    {\n      \"criterion\": \"SPC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"接入辽阔的呼伦贝尔草甸航拍镜头...镜头以平稳节奏逐步逼近\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"a single continuous 15-second aerial shot... the camera pushes in steadily and slightly downward... one unbroken aerial line with no shake\"\n        }\n      ],\n      \"rationale\": \"Spatial continuity is maintained: a single aerial shot with steady, downward push-in. No unexplained position swaps or trajectory breaks. The 'high-angle' and 'push in' are consistent with the original’s 'aerial' and 'step-by-step approach'.\"\n    },\n    {\n      \"criterion\": \"PL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"逆光从后方倾泻而下\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"逆光从后方倾泻而下 — the sun sits behind the monument, pouring light down and around its edges so the figure reads as a dignified rim-lit silhouette\"\n        }\n      ],\n      \"rationale\": \"The lighting condition (backlighting creating silhouette) is physically plausible and consistently applied. No violations of gravity, contact, or object permanence. The description of atmospheric halo is a reasonable artistic interpretation of real-world light diffusion.\"\n    },\n    {\n      \"criterion\": \"AVS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"minor\",\n      \"issue\": \"The enhanced prompt introduces non-diegetic music and soundscape details not present in the original prompt, which may misalign with the original’s implied audio focus (if any).\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"生成单镜头。由全黑画面渐显，接入辽阔的呼伦贝尔草甸航拍镜头...\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"overall_soundscape: A vast open-air ambience... non_diegetic_music: A slow, solemn orchestral score...\"\n        }\n      ],\n      \"rationale\": \"The original prompt does not specify any audio, so the addition of soundscape and music in the enhanced prompt is an elaboration, not a contradiction. However, since the original did not request audio, the enhanced prompt introduces new sensory elements that are not aligned with the original’s scope. This is a minor issue because it does not affect visual or temporal coherence, but it does expand the modality beyond the original’s implied focus on visual content.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt maintains strong internal consistency with the original instruction, preserving all key visual, temporal, and atmospheric elements. Subject identity (the monument), actions (aerial approach, fade-in, title reveal), chronology (black screen → landscape → approach → title), and spatial continuity (camera movement, lighting, composition) are coherent. Minor issues include slight elaboration on music and sound that was not in the original, but these do not contradict or destabilize the core request. No contradictions, attribute drift, or infeasible sequences are present.",
+  "usage": {
+    "completion_tokens": 1347,
+    "prompt_tokens": 1211,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 2558
+  }
+}

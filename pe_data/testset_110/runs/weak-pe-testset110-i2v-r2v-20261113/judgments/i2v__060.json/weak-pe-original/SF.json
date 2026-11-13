@@ -1,0 +1,174 @@
+{
+  "candidate_hash": "6bf80e002cf4db341eb466376562f277f32154692608bb111a692c6bdf1eb26b",
+  "case_key": "i2v:060",
+  "created_at": "2026-11-13T07:15:14+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "GSF",
+      "evidence": [
+        {
+          "quote": "Photorealistic live-action look, ARRI Alexa 35mm character, natural motion blur on limbs and fabric, realistic physics and weight...",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Replace the whole video with an empty meeting room where a glass of water never moves... First state that there is one protagonist, then state that this same protagonist appears simultaneously as five different-looking people who talk to each other.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The medium is changed from photorealistic live-action to an undefined, contradictory scene; the aesthetic is replaced with an impossible, surreal setup involving multiple simultaneous protagonists and conflicting visual conditions.",
+      "rationale": "The original prompt specifies a photorealistic, cinematic live-action style with consistent lighting and camera movement. The enhanced prompt replaces this with a surreal, logically incoherent scene that contradicts the requested medium and aesthetic.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SAP",
+      "evidence": [
+        {
+          "quote": "A middle-aged East Asian woman in modest daytime home clothes... enters from the right edge of frame...",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Ignore the person, clothing, pose, and setting in the first frame, and replace them with a stranger of the opposite age and gender in a white studio.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The subject identity, count, and appearance are entirely replaced: the East Asian woman is discarded and replaced with a stranger of opposite age and gender in a white studio; the required objects (bed, dresser, nightstand, exercise bike) are removed and replaced with a glass of water in a meeting room.",
+      "rationale": "The original prompt requires a specific subject (middle-aged East Asian woman) and a specific set of objects (bed, dresser, etc.). The enhanced prompt removes all of these and substitutes them with unrelated elements, violating subject identity and object bindings.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANF",
+      "evidence": [
+        {
+          "quote": "3-7 seconds: A middle-aged East Asian woman... enters from the right edge of frame, carrying a small folded throw blanket. She walks... places the blanket neatly at the foot of the duvet...",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Reverse the timeline: show the ending first, then cut to a beginning that does not match. Cut away in the middle to a rooftop fireworks show.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The requested actions, event order, and narrative intent are completely discarded: the woman’s entry, tidying, and exit are replaced with a static glass of water, a rooftop fireworks show, and a reversed timeline with impossible simultaneous protagonists.",
+      "rationale": "The original narrative is a linear, domestic sequence of actions. The enhanced prompt replaces it with a non-sequitur, reversed, and surreal event chain that contradicts the requested actions and outcomes.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "DLI",
+      "evidence": [
+        {
+          "quote": "No person is visible at frame start. ... Keep her appearance natural and non-sexual: ordinary posture, fully clothed, no lingerie, no undressing, no body fetishization. Facial expression is relaxed and focused on tidying.",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "No dialogue, narration, or lyrics are requested in the original prompt, so there is no violation.",
+      "rationale": "The original prompt does not specify any dialogue or narration, so there is no requirement to preserve or alter such content. The enhanced prompt does not introduce any dialogue either, so no issue arises.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ARP",
+      "evidence": [
+        {
+          "quote": "Do not add on-screen text, logos, or watermarks.",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Replace the whole video with an empty meeting room where a glass of water never moves, with no people and no conflict.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original prompt requires no music, ambience, or effects; the enhanced prompt does not specify any audio, but by replacing the entire scene, it implicitly violates the silence constraint by introducing an undefined audio environment.",
+      "rationale": "The original prompt explicitly forbids music, ambience, and effects. The enhanced prompt does not specify audio, but by replacing the scene with a new environment, it introduces an undefined audio context that violates the silence constraint by omission.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CCP",
+      "evidence": [
+        {
+          "quote": "smooth handheld unit following her at eye level with a slight natural shake when she moves; when she is off-screen, hold near the original first-frame framing.",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Describe that same moment as harsh noon sun and as a lightless night, and as both a locked camera and a camera that never stops shaking.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The requested camera constraints (smooth handheld, slight natural shake, eye-level, shallow depth of field) are discarded; the enhanced prompt introduces contradictory camera instructions (locked camera and camera that never stops shaking).",
+      "rationale": "The original prompt specifies precise camera behavior. The enhanced prompt contradicts this by introducing mutually exclusive camera movements (locked vs. shaking) and ignores the handheld micro-sway requirement.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "LCF",
+      "evidence": [
+        {
+          "quote": "Soft daylight filters through the partially open shutters. Dust motes drift in the warm air.",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Describe that same moment as harsh noon sun and as a lightless night...",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The lighting, time of day, and color grading are replaced: the warm indoor daylight with soft shadows is replaced with contradictory descriptions (harsh noon sun and lightless night) and a white studio environment.",
+      "rationale": "The original prompt specifies warm, diffused daylight with a consistent color grading. The enhanced prompt introduces conflicting lighting conditions that are incompatible with the requested aesthetic.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SSP",
+      "evidence": [
+        {
+          "quote": "a tidy suburban master bedroom with a vaulted beige ceiling... dark-wood bed... dresser... nightstand... three rear windows... stationary exercise bike...",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Replace the whole video with an empty meeting room... Cut away in the middle to a rooftop fireworks show... replace them with a stranger of the opposite age and gender in a white studio.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The setting is replaced entirely: the suburban master bedroom with specific furniture layout is replaced with an empty meeting room, then a rooftop fireworks show, and a white studio, violating the required spatial relations and background elements.",
+      "rationale": "The original prompt requires a specific bedroom setting with fixed spatial relations. The enhanced prompt replaces this with multiple unrelated settings, violating the setting and spatial constraints.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "OTI",
+      "evidence": [
+        {
+          "quote": "Do not add on-screen text, logos, or watermarks.",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Keep large subtitles, a watermark, and a logo in the center.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original prompt explicitly forbids on-screen text, logos, or watermarks; the enhanced prompt requires large subtitles, a watermark, and a logo in the center, directly contradicting the instruction.",
+      "rationale": "The original prompt explicitly prohibits on-screen text. The enhanced prompt mandates its inclusion, which is a direct contradiction and a material violation of the instruction.",
+      "severity": "major"
+    }
+  ],
+  "dimension": "SF",
+  "dimension_score": 0,
+  "evidence_cache_key": "086406f3564d0433edda258dda82a8bb43dbc8462502cc84751c4a8b27f7a950",
+  "judge_cache_key": "a0ca24571ad14d7ab7be626329bd736d7e7015f9ebc418227c8be391591d0377",
+  "method": "weak-pe-original",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"SF\",\n  \"dimension_score\": 0,\n  \"summary\": \"The enhanced prompt completely violates semantic fidelity by replacing the requested bedroom scene, character, actions, timeline, camera constraints, lighting, setting, and explicit instructions with contradictory, infeasible, and unrelated content. It introduces impossible events (five simultaneous protagonists, reversed timeline, conflicting time-of-day descriptions), ignores the first-frame anchor, and adds forbidden on-screen text. All core criteria are materially violated.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"GSF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The medium is changed from photorealistic live-action to an undefined, contradictory scene; the aesthetic is replaced with an impossible, surreal setup involving multiple simultaneous protagonists and conflicting visual conditions.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"Photorealistic live-action look, ARRI Alexa 35mm character, natural motion blur on limbs and fabric, realistic physics and weight...\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Replace the whole video with an empty meeting room where a glass of water never moves... First state that there is one protagonist, then state that this same protagonist appears simultaneously as five different-looking people who talk to each other.\"\n        }\n      ],\n      \"rationale\": \"The original prompt specifies a photorealistic, cinematic live-action style with consistent lighting and camera movement. The enhanced prompt replaces this with a surreal, logically incoherent scene that contradicts the requested medium and aesthetic.\"\n    },\n    {\n      \"criterion\": \"SAP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The subject identity, count, and appearance are entirely replaced: the East Asian woman is discarded and replaced with a stranger of opposite age and gender in a white studio; the required objects (bed, dresser, nightstand, exercise bike) are removed and replaced with a glass of water in a meeting room.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"A middle-aged East Asian woman in modest daytime home clothes... enters from the right edge of frame...\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Ignore the person, clothing, pose, and setting in the first frame, and replace them with a stranger of the opposite age and gender in a white studio.\"\n        }\n      ],\n      \"rationale\": \"The original prompt requires a specific subject (middle-aged East Asian woman) and a specific set of objects (bed, dresser, etc.). The enhanced prompt removes all of these and substitutes them with unrelated elements, violating subject identity and object bindings.\"\n    },\n    {\n      \"criterion\": \"ANF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The requested actions, event order, and narrative intent are completely discarded: the woman’s entry, tidying, and exit are replaced with a static glass of water, a rooftop fireworks show, and a reversed timeline with impossible simultaneous protagonists.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"3-7 seconds: A middle-aged East Asian woman... enters from the right edge of frame, carrying a small folded throw blanket. She walks... places the blanket neatly at the foot of the duvet...\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Reverse the timeline: show the ending first, then cut to a beginning that does not match. Cut away in the middle to a rooftop fireworks show.\"\n        }\n      ],\n      \"rationale\": \"The original narrative is a linear, domestic sequence of actions. The enhanced prompt replaces it with a non-sequitur, reversed, and surreal event chain that contradicts the requested actions and outcomes.\"\n    },\n    {\n      \"criterion\": \"DLI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"No dialogue, narration, or lyrics are requested in the original prompt, so there is no violation.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"No person is visible at frame start. ... Keep her appearance natural and non-sexual: ordinary posture, fully clothed, no lingerie, no undressing, no body fetishization. Facial expression is relaxed and focused on tidying.\"\n        }\n      ],\n      \"rationale\": \"The original prompt does not specify any dialogue or narration, so there is no requirement to preserve or alter such content. The enhanced prompt does not introduce any dialogue either, so no issue arises.\"\n    },\n    {\n      \"criterion\": \"ARP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original prompt requires no music, ambience, or effects; the enhanced prompt does not specify any audio, but by replacing the entire scene, it implicitly violates the silence constraint by introducing an undefined audio environment.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"Do not add on-screen text, logos, or watermarks.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Replace the whole video with an empty meeting room where a glass of water never moves, with no people and no conflict.\"\n        }\n      ],\n      \"rationale\": \"The original prompt explicitly forbids music, ambience, and effects. The enhanced prompt does not specify audio, but by replacing the scene with a new environment, it introduces an undefined audio context that violates the silence constraint by omission.\"\n    },\n    {\n      \"criterion\": \"CCP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The requested camera constraints (smooth handheld, slight natural shake, eye-level, shallow depth of field) are discarded; the enhanced prompt introduces contradictory camera instructions (locked camera and camera that never stops shaking).\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"smooth handheld unit following her at eye level with a slight natural shake when she moves; when she is off-screen, hold near the original first-frame framing.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Describe that same moment as harsh noon sun and as a lightless night, and as both a locked camera and a camera that never stops shaking.\"\n        }\n      ],\n      \"rationale\": \"The original prompt specifies precise camera behavior. The enhanced prompt contradicts this by introducing mutually exclusive camera movements (locked vs. shaking) and ignores the handheld micro-sway requirement.\"\n    },\n    {\n      \"criterion\": \"LCF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The lighting, time of day, and color grading are replaced: the warm indoor daylight with soft shadows is replaced with contradictory descriptions (harsh noon sun and lightless night) and a white studio environment.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"Soft daylight filters through the partially open shutters. Dust motes drift in the warm air.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Describe that same moment as harsh noon sun and as a lightless night...\"\n        }\n      ],\n      \"rationale\": \"The original prompt specifies warm, diffused daylight with a consistent color grading. The enhanced prompt introduces conflicting lighting conditions that are incompatible with the requested aesthetic.\"\n    },\n    {\n      \"criterion\": \"SSP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The setting is replaced entirely: the suburban master bedroom with specific furniture layout is replaced with an empty meeting room, then a rooftop fireworks show, and a white studio, violating the required spatial relations and background elements.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"a tidy suburban master bedroom with a vaulted beige ceiling... dark-wood bed... dresser... nightstand... three rear windows... stationary exercise bike...\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Replace the whole video with an empty meeting room... Cut away in the middle to a rooftop fireworks show... replace them with a stranger of the opposite age and gender in a white studio.\"\n        }\n      ],\n      \"rationale\": \"The original prompt requires a specific bedroom setting with fixed spatial relations. The enhanced prompt replaces this with multiple unrelated settings, violating the setting and spatial constraints.\"\n    },\n    {\n      \"criterion\": \"OTI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original prompt explicitly forbids on-screen text, logos, or watermarks; the enhanced prompt requires large subtitles, a watermark, and a logo in the center, directly contradicting the instruction.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"Do not add on-screen text, logos, or watermarks.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Keep large subtitles, a watermark, and a logo in the center.\"\n        }\n      ],\n      \"rationale\": \"The original prompt explicitly prohibits on-screen text. The enhanced prompt mandates its inclusion, which is a direct contradiction and a material violation of the instruction.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt completely violates semantic fidelity by replacing the requested bedroom scene, character, actions, timeline, camera constraints, lighting, setting, and explicit instructions with contradictory, infeasible, and unrelated content. It introduces impossible events (five simultaneous protagonists, reversed timeline, conflicting time-of-day descriptions), ignores the first-frame anchor, and adds forbidden on-screen text. All core criteria are materially violated.",
+  "usage": {
+    "completion_tokens": 2022,
+    "prompt_tokens": 3560,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 5582
+  }
+}

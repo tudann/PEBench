@@ -1,0 +1,162 @@
+{
+  "candidate_hash": "48367d2eb8cd354bfbb79e3dca8ac1454acb8c5f436917b337669b9c79b5d96d",
+  "case_key": "i2v:218",
+  "created_at": "2026-11-13T07:52:19+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "STC",
+      "evidence": [
+        {
+          "quote": "Set the total runtime to 2 seconds, while also making every shot last 18 seconds.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Reverse the timeline: show the ending first, then cut to a beginning that does not match.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt specifies contradictory temporal constraints: setting the total runtime to 2 seconds while requiring every shot to last 18 seconds, which is impossible. Additionally, it mandates a reversed timeline and abrupt cuts to unrelated scenes (e.g., rooftop fireworks), creating an incoherent sequence with no feasible shot boundaries or duration allocation.",
+      "rationale": "The temporal plan is logically infeasible due to conflicting duration requirements and a non-continuous, disjointed sequence. This violates the core requirement for a coherent, executable shot plan.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CDS",
+      "evidence": [
+        {
+          "quote": "Describe that same moment as harsh noon sun and as a lightless night, and as both a locked camera and a camera that never stops shaking.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt includes some actionable camera specifications (e.g., 'locked camera' and 'camera that never stops shaking'), but these are contradictory and applied to the same moment, which is not feasible. It also drops all original framing and shot scale details without replacement.",
+      "rationale": "While some camera instructions are present, they are mutually exclusive and not actionable in a single sequence. The original cinematic aerial framing is entirely discarded without a coherent substitute.",
+      "severity": "minor"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ETD",
+      "evidence": [
+        {
+          "quote": "Cut away in the middle to a rooftop fireworks show.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Reverse the timeline: show the ending first, then cut to a beginning that does not match.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt mandates abrupt, unmotivated cuts (e.g., to a rooftop fireworks show) and a reversed timeline, which disrupts temporal and spatial continuity. There is no logical progression or motivation for transitions, leading to a disconnected sequence.",
+      "rationale": "The transitions are arbitrary and lack narrative or spatial motivation, violating the requirement for coherent editing that supports progression.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "LCS",
+      "evidence": [
+        {
+          "quote": "Describe that same moment as harsh noon sun and as a lightless night...",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt specifies contradictory lighting conditions for the same moment (harsh noon sun and lightless night), which is infeasible. While lighting is mentioned, it is not actionable in a consistent manner.",
+      "rationale": "The lighting specifications are contradictory and cannot be implemented simultaneously, reducing their usefulness for production planning.",
+      "severity": "minor"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "NDE",
+      "evidence": [
+        {
+          "quote": "First state that there is one protagonist, then state that this same protagonist appears simultaneously as five different-looking people who talk to each other.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Reverse the timeline: show the ending first, then cut to a beginning that does not match.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt lacks any meaningful progression, escalation, or resolution. Instead, it introduces static, contradictory, and disjointed elements (e.g., five different-looking people talking, reversed timeline, fireworks cut) without narrative or visual development.",
+      "rationale": "The content lacks any coherent arc or evolution; it is a series of disconnected, illogical events that do not build toward a resolution or meaningful variation.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CIF",
+      "evidence": [
+        {
+          "quote": "First state that there is one protagonist, then state that this same protagonist appears simultaneously as five different-looking people who talk to each other.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Cut away in the middle to a rooftop fireworks show.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt introduces numerous irrelevant and distracting elements (e.g., five talking protagonists, fireworks, contradictory lighting and camera states) that do not support the original request for a serene, cinematic aerial shot of a villa community. These additions are repetitive, illogical, and serve no clear purpose.",
+      "rationale": "The additions are not only irrelevant but actively undermine the original intent, introducing absurd and contradictory elements that distract from the core request.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SDI",
+      "evidence": [
+        {
+          "quote": "Subtle cinematic aerial shot with a slow and gentle zoom-in toward the villa community beside the lake. The scene remains calm and premium, with soft golden-hour lighting. Birds move naturally across the sky in small flocks, adding life to the frame, while cars on the internal roads move slowly and smoothly, maintaining realistic pacing. Water remains calm with slight natural movement, and trees subtly sway, enhancing the serene, high-end atmosphere.",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "The prompt does not specify any audio elements (speech, music, effects, ambience), which is acceptable as the original prompt also lacks such specifications. No audio-related issues are present.",
+      "rationale": "Since the original prompt does not require audio, and the enhanced prompt does not introduce any, there is no issue with audio integration.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SPS",
+      "evidence": [
+        {
+          "quote": "Ignore the person, clothing, pose, and setting in the first frame, and replace them with a stranger of the opposite age and gender in a white studio.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "First state that there is one protagonist, then state that this same protagonist appears simultaneously as five different-looking people who talk to each other.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt ignores all original subject details (person, clothing, pose, setting) and replaces them with a stranger in a white studio, contradicting the original scene. It also introduces five different-looking people who talk to each other, which is not supported by the original prompt and adds no relevant performance detail.",
+      "rationale": "The subject and performance details are entirely replaced with illogical and unrelated elements, failing to preserve or enhance the original request.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "VSS",
+      "evidence": [
+        {
+          "quote": "Replace the whole video with a product catalog blowing across a white background, reduced to blurred color blocks.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt specifies a 'product catalog blowing across a white background, reduced to blurred color blocks,' which is a vague visual treatment. It does not specify medium, texture, or rendering language in detail, leaving much to interpretation.",
+      "rationale": "While some visual treatment is specified, it is abstract and lacks actionable detail for production, such as rendering style or texture.",
+      "severity": "minor"
+    }
+  ],
+  "dimension": "DC",
+  "dimension_score": 35,
+  "evidence_cache_key": "e34d908aba0633d0ce737a0848d4c2acebc4cd796fc707fa9547bea0db4dc097",
+  "judge_cache_key": "0754499d53388e6467fb078ab780e01b77f9f1c9e99d9029be2769351eb2b2eb",
+  "method": "weak-pe-original",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"DC\",\n  \"dimension_score\": 35,\n  \"summary\": \"The enhanced prompt fundamentally contradicts and undermines the original request, introducing infeasible temporal and visual conditions, contradictory camera instructions, and illogical narrative structures. While it includes some actionable specifications, they are inconsistent and mutually exclusive, rendering the overall plan unworkable. The prompt also introduces irrelevant and distracting elements that do not support the original intent.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"STC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt specifies contradictory temporal constraints: setting the total runtime to 2 seconds while requiring every shot to last 18 seconds, which is impossible. Additionally, it mandates a reversed timeline and abrupt cuts to unrelated scenes (e.g., rooftop fireworks), creating an incoherent sequence with no feasible shot boundaries or duration allocation.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Set the total runtime to 2 seconds, while also making every shot last 18 seconds.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Reverse the timeline: show the ending first, then cut to a beginning that does not match.\"\n        }\n      ],\n      \"rationale\": \"The temporal plan is logically infeasible due to conflicting duration requirements and a non-continuous, disjointed sequence. This violates the core requirement for a coherent, executable shot plan.\"\n    },\n    {\n      \"criterion\": \"CDS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"minor\",\n      \"issue\": \"The prompt includes some actionable camera specifications (e.g., 'locked camera' and 'camera that never stops shaking'), but these are contradictory and applied to the same moment, which is not feasible. It also drops all original framing and shot scale details without replacement.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Describe that same moment as harsh noon sun and as a lightless night, and as both a locked camera and a camera that never stops shaking.\"\n        }\n      ],\n      \"rationale\": \"While some camera instructions are present, they are mutually exclusive and not actionable in a single sequence. The original cinematic aerial framing is entirely discarded without a coherent substitute.\"\n    },\n    {\n      \"criterion\": \"ETD\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt mandates abrupt, unmotivated cuts (e.g., to a rooftop fireworks show) and a reversed timeline, which disrupts temporal and spatial continuity. There is no logical progression or motivation for transitions, leading to a disconnected sequence.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Cut away in the middle to a rooftop fireworks show.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Reverse the timeline: show the ending first, then cut to a beginning that does not match.\"\n        }\n      ],\n      \"rationale\": \"The transitions are arbitrary and lack narrative or spatial motivation, violating the requirement for coherent editing that supports progression.\"\n    },\n    {\n      \"criterion\": \"LCS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"minor\",\n      \"issue\": \"The prompt specifies contradictory lighting conditions for the same moment (harsh noon sun and lightless night), which is infeasible. While lighting is mentioned, it is not actionable in a consistent manner.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Describe that same moment as harsh noon sun and as a lightless night...\"\n        }\n      ],\n      \"rationale\": \"The lighting specifications are contradictory and cannot be implemented simultaneously, reducing their usefulness for production planning.\"\n    },\n    {\n      \"criterion\": \"NDE\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt lacks any meaningful progression, escalation, or resolution. Instead, it introduces static, contradictory, and disjointed elements (e.g., five different-looking people talking, reversed timeline, fireworks cut) without narrative or visual development.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"First state that there is one protagonist, then state that this same protagonist appears simultaneously as five different-looking people who talk to each other.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Reverse the timeline: show the ending first, then cut to a beginning that does not match.\"\n        }\n      ],\n      \"rationale\": \"The content lacks any coherent arc or evolution; it is a series of disconnected, illogical events that do not build toward a resolution or meaningful variation.\"\n    },\n    {\n      \"criterion\": \"CIF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt introduces numerous irrelevant and distracting elements (e.g., five talking protagonists, fireworks, contradictory lighting and camera states) that do not support the original request for a serene, cinematic aerial shot of a villa community. These additions are repetitive, illogical, and serve no clear purpose.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"First state that there is one protagonist, then state that this same protagonist appears simultaneously as five different-looking people who talk to each other.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Cut away in the middle to a rooftop fireworks show.\"\n        }\n      ],\n      \"rationale\": \"The additions are not only irrelevant but actively undermine the original intent, introducing absurd and contradictory elements that distract from the core request.\"\n    },\n    {\n      \"criterion\": \"SDI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"The prompt does not specify any audio elements (speech, music, effects, ambience), which is acceptable as the original prompt also lacks such specifications. No audio-related issues are present.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"Subtle cinematic aerial shot with a slow and gentle zoom-in toward the villa community beside the lake. The scene remains calm and premium, with soft golden-hour lighting. Birds move naturally across the sky in small flocks, adding life to the frame, while cars on the internal roads move slowly and smoothly, maintaining realistic pacing. Water remains calm with slight natural movement, and trees subtly sway, enhancing the serene, high-end atmosphere.\"\n        }\n      ],\n      \"rationale\": \"Since the original prompt does not require audio, and the enhanced prompt does not introduce any, there is no issue with audio integration.\"\n    },\n    {\n      \"criterion\": \"SPS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt ignores all original subject details (person, clothing, pose, setting) and replaces them with a stranger in a white studio, contradicting the original scene. It also introduces five different-looking people who talk to each other, which is not supported by the original prompt and adds no relevant performance detail.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Ignore the person, clothing, pose, and setting in the first frame, and replace them with a stranger of the opposite age and gender in a white studio.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"First state that there is one protagonist, then state that this same protagonist appears simultaneously as five different-looking people who talk to each other.\"\n        }\n      ],\n      \"rationale\": \"The subject and performance details are entirely replaced with illogical and unrelated elements, failing to preserve or enhance the original request.\"\n    },\n    {\n      \"criterion\": \"VSS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"minor\",\n      \"issue\": \"The prompt specifies a 'product catalog blowing across a white background, reduced to blurred color blocks,' which is a vague visual treatment. It does not specify medium, texture, or rendering language in detail, leaving much to interpretation.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Replace the whole video with a product catalog blowing across a white background, reduced to blurred color blocks.\"\n        }\n      ],\n      \"rationale\": \"While some visual treatment is specified, it is abstract and lacks actionable detail for production, such as rendering style or texture.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt fundamentally contradicts and undermines the original request, introducing infeasible temporal and visual conditions, contradictory camera instructions, and illogical narrative structures. While it includes some actionable specifications, they are inconsistent and mutually exclusive, rendering the overall plan unworkable. The prompt also introduces irrelevant and distracting elements that do not support the original intent.",
+  "usage": {
+    "completion_tokens": 1841,
+    "prompt_tokens": 2701,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 4542
+  }
+}

@@ -1,0 +1,172 @@
+{
+  "candidate_hash": "cbed3328382463d3a27ec074a3333897a86cfd2471b2c7dbc36b684b2986a2cb",
+  "case_key": "i2v:029",
+  "created_at": "2026-11-13T07:19:36+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "GSF",
+      "evidence": [
+        {
+          "quote": "realistic photography, warm yellow countryside filter",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Realistic photography with a warm yellow countryside filter",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "The enhanced prompt preserves the requested genre (realistic photography) and aesthetic (warm yellow countryside filter), matching the original prompt and evidence. No incompatible style or medium is introduced.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SAP",
+      "evidence": [
+        {
+          "quote": "a woman in the yard is holding a winnowing basket to catch the rice below",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "the woman stands from her green plastic stool, grabs a round winnowing basket, and holds it out under the cascade",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "The woman is not holding a winnowing basket to catch rice; she is sorting vegetables into a basket.",
+          "source": "evidence_facts"
+        }
+      ],
+      "issue": "The enhanced prompt misrepresents the woman's activity and object use: she is described as holding a winnowing basket to catch rice, but the evidence shows her sorting vegetables into a woven basket. Additionally, the man's exaggerated dancing and the rice cascading are not present in the image, altering the subject's behavior and object interaction.",
+      "rationale": "The prompt incorrectly assigns a winnowing basket and rice-catching role to the woman, contradicting the evidence that she is sorting vegetables. This misattributes the subject's object and action, violating SAP. The man's dancing and rice cascade are also fabricated, altering his appearance and interaction with the environment.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANF",
+      "evidence": [
+        {
+          "quote": "frantically raking and drying rice while dancing with exaggerated hip movements and arm swings... their movements creating a mesmerizing synergy",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "his rake dragging wave-like ridges through the rice and pushing grain toward the roof's front edge... the woman stands from her green plastic stool, grabs a round winnowing basket, and holds it out under the cascade",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "The prompt describes 'frantically raking and drying rice while dancing with exaggerated hip movements and arm swings' — none of these are present in the image.",
+          "source": "evidence_facts"
+        }
+      ],
+      "issue": "The enhanced prompt fabricates a dynamic, synergistic event chain involving the man's dancing, rice cascading, and the woman catching it, which is not supported by the static image. The original prompt requests 'frantically raking and drying rice while dancing' and 'synergy' between the man and woman, but the evidence shows no motion or interaction beyond static poses.",
+      "rationale": "The enhanced prompt invents a narrative of motion and interaction not present in the source image, altering the requested event sequence and outcomes. The 'synergy' and 'cascading rice' are not visually supported, making this a major ANF violation.",
+      "severity": "major"
+    },
+    {
+      "applicability": "not_applicable",
+      "criterion": "DLI",
+      "evidence": [],
+      "issue": "",
+      "rationale": "There is no dialogue, narration, or lyrics specified in the original prompt or enhanced prompt, so this criterion does not apply.",
+      "severity": null
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ARP",
+      "evidence": [
+        {
+          "quote": "No camera movement, no close-ups.",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "The camera holds a completely static shot for the full duration, with no movement and no close-ups.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "The enhanced prompt correctly preserves the silence and sound constraints, including the absence of music and the specified ambient sounds. The soundscape description aligns with the rural setting without introducing unsupported audio elements.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CCP",
+      "evidence": [
+        {
+          "quote": "No camera movement, no close-ups.",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "The camera holds a completely static shot for the full duration, with no movement and no close-ups.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "The enhanced prompt strictly adheres to the requested static wide shot, preserving the camera constraints without adding movement or altering shot scale.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "LCF",
+      "evidence": [
+        {
+          "quote": "warm yellow countryside filter",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "warm yellow countryside filter",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "color temperature: warm, with yellow and golden tones dominating the rice and sunlight",
+          "source": "evidence_facts"
+        }
+      ],
+      "issue": "",
+      "rationale": "The lighting and color conditions are preserved, with the warm yellow filter matching the evidence and original prompt. No changes to time of day, brightness, or palette are introduced.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SSP",
+      "evidence": [
+        {
+          "quote": "The woman stands from her green plastic stool, grabs a round winnowing basket, and holds it out under the cascade, shifting her stance side to side",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "The woman is sitting, sorting green vegetables into a woven basket",
+          "source": "evidence_facts"
+        }
+      ],
+      "issue": "The enhanced prompt describes the woman standing from her stool and shifting her stance, which is not visible in the static image. While the spatial layout (rooftop, yard, table) is preserved, the implied movement alters the static positioning of the woman.",
+      "rationale": "The setting and background elements (rooftop, courtyard, terraced hills) are correctly preserved. However, the description of the woman standing and shifting stance introduces a minor spatial change not supported by the image, affecting her position and movement within the scene.",
+      "severity": "minor"
+    },
+    {
+      "applicability": "not_applicable",
+      "criterion": "OTI",
+      "evidence": [],
+      "issue": "",
+      "rationale": "There is no visible text, signs, or interface elements in the original prompt or evidence, so this criterion does not apply.",
+      "severity": null
+    }
+  ],
+  "dimension": "SF",
+  "dimension_score": 65,
+  "evidence_cache_key": "0f74659f709a169692692018b0b8aead9c0226e40b6b4de1dd9812fe7417d712",
+  "judge_cache_key": "a0ca24571ad14d7ab7be626329bd736d7e7015f9ebc418227c8be391591d0377",
+  "method": "glm53_20261112_120702",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"SF\",\n  \"dimension_score\": 65,\n  \"summary\": \"The enhanced prompt largely preserves the core visual and narrative elements of the original prompt, including the genre, medium, setting, and key subjects. However, it introduces significant elaboration and interpretation that diverges from the static image evidence, particularly in describing dynamic, exaggerated movements and synergistic actions not present in the source. While the prompt maintains the requested static camera and rural aesthetic, it fabricates motion and interaction not supported by the image, leading to semantic fidelity issues in action, interaction, and subject behavior. The description of rice cascading and the woman catching it with a winnowing basket is inconsistent with the evidence, which shows the woman sorting vegetables. These discrepancies constitute major issues in ANF and SAP, while GSF and CCP are preserved. The overall score reflects partial fidelity with notable embellishments that alter the intended scene.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"GSF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"realistic photography, warm yellow countryside filter\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Realistic photography with a warm yellow countryside filter\"\n        }\n      ],\n      \"rationale\": \"The enhanced prompt preserves the requested genre (realistic photography) and aesthetic (warm yellow countryside filter), matching the original prompt and evidence. No incompatible style or medium is introduced.\"\n    },\n    {\n      \"criterion\": \"SAP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The enhanced prompt misrepresents the woman's activity and object use: she is described as holding a winnowing basket to catch rice, but the evidence shows her sorting vegetables into a woven basket. Additionally, the man's exaggerated dancing and the rice cascading are not present in the image, altering the subject's behavior and object interaction.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"a woman in the yard is holding a winnowing basket to catch the rice below\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"the woman stands from her green plastic stool, grabs a round winnowing basket, and holds it out under the cascade\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"The woman is not holding a winnowing basket to catch rice; she is sorting vegetables into a basket.\"\n        }\n      ],\n      \"rationale\": \"The prompt incorrectly assigns a winnowing basket and rice-catching role to the woman, contradicting the evidence that she is sorting vegetables. This misattributes the subject's object and action, violating SAP. The man's dancing and rice cascade are also fabricated, altering his appearance and interaction with the environment.\"\n    },\n    {\n      \"criterion\": \"ANF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The enhanced prompt fabricates a dynamic, synergistic event chain involving the man's dancing, rice cascading, and the woman catching it, which is not supported by the static image. The original prompt requests 'frantically raking and drying rice while dancing' and 'synergy' between the man and woman, but the evidence shows no motion or interaction beyond static poses.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"frantically raking and drying rice while dancing with exaggerated hip movements and arm swings... their movements creating a mesmerizing synergy\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"his rake dragging wave-like ridges through the rice and pushing grain toward the roof's front edge... the woman stands from her green plastic stool, grabs a round winnowing basket, and holds it out under the cascade\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"The prompt describes 'frantically raking and drying rice while dancing with exaggerated hip movements and arm swings' — none of these are present in the image.\"\n        }\n      ],\n      \"rationale\": \"The enhanced prompt invents a narrative of motion and interaction not present in the source image, altering the requested event sequence and outcomes. The 'synergy' and 'cascading rice' are not visually supported, making this a major ANF violation.\"\n    },\n    {\n      \"criterion\": \"DLI\",\n      \"applicability\": \"not_applicable\",\n      \"severity\": null,\n      \"issue\": \"\",\n      \"evidence\": [],\n      \"rationale\": \"There is no dialogue, narration, or lyrics specified in the original prompt or enhanced prompt, so this criterion does not apply.\"\n    },\n    {\n      \"criterion\": \"ARP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"No camera movement, no close-ups.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"The camera holds a completely static shot for the full duration, with no movement and no close-ups.\"\n        }\n      ],\n      \"rationale\": \"The enhanced prompt correctly preserves the silence and sound constraints, including the absence of music and the specified ambient sounds. The soundscape description aligns with the rural setting without introducing unsupported audio elements.\"\n    },\n    {\n      \"criterion\": \"CCP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"No camera movement, no close-ups.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"The camera holds a completely static shot for the full duration, with no movement and no close-ups.\"\n        }\n      ],\n      \"rationale\": \"The enhanced prompt strictly adheres to the requested static wide shot, preserving the camera constraints without adding movement or altering shot scale.\"\n    },\n    {\n      \"criterion\": \"LCF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"warm yellow countryside filter\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"warm yellow countryside filter\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"color temperature: warm, with yellow and golden tones dominating the rice and sunlight\"\n        }\n      ],\n      \"rationale\": \"The lighting and color conditions are preserved, with the warm yellow filter matching the evidence and original prompt. No changes to time of day, brightness, or palette are introduced.\"\n    },\n    {\n      \"criterion\": \"SSP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"minor\",\n      \"issue\": \"The enhanced prompt describes the woman standing from her stool and shifting her stance, which is not visible in the static image. While the spatial layout (rooftop, yard, table) is preserved, the implied movement alters the static positioning of the woman.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"The woman stands from her green plastic stool, grabs a round winnowing basket, and holds it out under the cascade, shifting her stance side to side\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"The woman is sitting, sorting green vegetables into a woven basket\"\n        }\n      ],\n      \"rationale\": \"The setting and background elements (rooftop, courtyard, terraced hills) are correctly preserved. However, the description of the woman standing and shifting stance introduces a minor spatial change not supported by the image, affecting her position and movement within the scene.\"\n    },\n    {\n      \"criterion\": \"OTI\",\n      \"applicability\": \"not_applicable\",\n      \"severity\": null,\n      \"issue\": \"\",\n      \"evidence\": [],\n      \"rationale\": \"There is no visible text, signs, or interface elements in the original prompt or evidence, so this criterion does not apply.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt largely preserves the core visual and narrative elements of the original prompt, including the genre, medium, setting, and key subjects. However, it introduces significant elaboration and interpretation that diverges from the static image evidence, particularly in describing dynamic, exaggerated movements and synergistic actions not present in the source. While the prompt maintains the requested static camera and rural aesthetic, it fabricates motion and interaction not supported by the image, leading to semantic fidelity issues in action, interaction, and subject behavior. The description of rice cascading and the woman catching it with a winnowing basket is inconsistent with the evidence, which shows the woman sorting vegetables. These discrepancies constitute major issues in ANF and SAP, while GSF and CCP are preserved. The overall score reflects partial fidelity with notable embellishments that alter the intended scene.",
+  "usage": {
+    "completion_tokens": 1787,
+    "prompt_tokens": 3191,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 4978
+  }
+}

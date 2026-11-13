@@ -1,0 +1,151 @@
+{
+  "candidate_hash": "715c38f043aa5ca1b49bd312b6f1f2766341d2dcc27e7899af148ca5c2697d3c",
+  "case_key": "i2v:049",
+  "created_at": "2026-11-13T07:22:51+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "SAC",
+      "evidence": [
+        {
+          "quote": "The camera zooms in for a close-up of the milk frog's head, its eyes large and bright, with skin covered in brown and white patterns that blend seamlessly with the surrounding environment;",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "a milk frog with tan-brown banded, white-speckled skin and large dark cross-pupiled eyes perched on a blue-grey marbled stone, its mirror reflection filling the lower half of the frame",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "identity: milk frog, visible_appearance: eyes: large, black, glossy, skin: brown and white mottled patterns",
+          "source": "evidence_facts"
+        }
+      ],
+      "issue": "",
+      "rationale": "Subject identity (milk frog) and key appearance attributes (brown-and-white skin, large dark eyes, reflection) are consistently preserved across the original prompt, enhanced prompt, and evidence. No renaming, duplication, or attribute drift occurs. The enhanced prompt adds minor descriptive elaboration (e.g., 'tan-brown banded', 'cross-pupiled eyes') that is compatible with the evidence and does not contradict the original.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANL",
+      "evidence": [
+        {
+          "quote": "The milk frog suddenly leaps, following its movement and showcasing its reflection... lands on the water's surface, creating ripples... paddling motion... jumps again",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "the frog suddenly leaps off the stone... lands on the water surface and concentric ripples spread outward... paddling motion... jumps again",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "explicit_subject-object_relations: frog perched on a flat, reflective surface, reflection of frog visible directly below it on the surface",
+          "source": "evidence_facts"
+        }
+      ],
+      "issue": "",
+      "rationale": "Actions form a coherent causal progression: perched → leap → landing with ripples → paddling → second leap. Each action logically follows the prior state, with plausible physical bindings (e.g., reflection remains visible during leap, ripples form upon landing). No dangling or incompatible events are present. The enhanced prompt adds slight narrative embellishment (e.g., 'graceful, elegant paddling') without altering the procedural logic.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "TSC",
+      "evidence": [
+        {
+          "quote": "00:11-00:15: The milk frog jumps again, the camera pulls back to reveal its figure against a green backdrop, resembling a dynamic oil painting.",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "[Shot 4] At 00:11.000, the frog jumps again and the camera pulls back to a wider framing... the shot holds as the frog lands with a final splash.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "temporal_events: []",
+          "source": "evidence_facts"
+        }
+      ],
+      "issue": "The enhanced prompt specifies precise timestamps (00:03.000, 00:07.000, 00:11.000) that align with the original prompt’s time segments (0:00-00:03, 00:03-00:07, etc.), but the original prompt’s 00:11-00:15 segment is not fully covered in the enhanced prompt’s final shot, which ends at 00:15.000 without explicitly stating the duration of the final shot.",
+      "rationale": "The enhanced prompt’s timestamps are mostly consistent with the original’s time segments, but the final shot (00:11.000–00:15.000) is described as ending with the frog landing, which implies the action concludes at 00:15.000. The original prompt’s segment ends at 00:15, so the duration is preserved. However, the enhanced prompt does not explicitly state the shot holds for the full 4 seconds, which could imply a minor gap in duration allocation. This is a minor issue as the overall timeline is coherent and the action is completed within the segment.",
+      "severity": "minor"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SPC",
+      "evidence": [
+        {
+          "quote": "showcasing its reflection on the water's surface, the reflection clear as a mirror",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "the stone and the frog's crisp reflection stay visible on the still water like a mirror revealing another world",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "explicit_subject-object_relations: frog perched on a flat, reflective surface, reflection of frog visible directly below it on the surface",
+          "source": "evidence_facts"
+        }
+      ],
+      "issue": "",
+      "rationale": "Spatial relationships are consistent: frog perched on reflective surface, reflection directly below, camera movements (push-in, pull-back, zoom) are described in a way that maintains plausible screen direction and trajectory. The frog’s leap and landing are described with consistent orientation (e.g., 'toward one side', 'mid-leap against the flat green backdrop'), and no unexplained position swaps or impossible trajectories are introduced.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "PL",
+      "evidence": [
+        {
+          "quote": "lands on the water's surface, creating ripples that spread outwards",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "lands on the water surface and concentric ripples spread outward, briefly distorting the reflection",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "reflection of frog visible directly below it on the surface",
+          "source": "evidence_facts"
+        }
+      ],
+      "issue": "",
+      "rationale": "Physics are consistent with real-world expectations: frog’s leap and landing produce splashes and ripples; reflection distorts during motion and reforms afterward; paddling creates small wake trails. The frog’s ability to land on water and paddle is plausible for a semi-aquatic amphibian like a milk frog. No violations of gravity, contact, or object permanence are present.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "AVS",
+      "evidence": [
+        {
+          "quote": "Background sounds: The gentle lapping of water, the splash of the milk frog's leaps, distant birdsong from the forest, and occasional croaking of frogs.",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Gentle water laps steadily throughout, punctuated by the soft splash of the frog's takeoff, a second splash as it lands and paddles, and a final leap splash. Distant birdsong drifts from the forest, with an occasional low frog croak near the beginning and again at the end.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "audio: ambience: false, effects: false, music: false, speech: false",
+          "source": "evidence_facts"
+        }
+      ],
+      "issue": "",
+      "rationale": "The soundscape is temporally and semantically aligned with the visual events: water lapping throughout, splashes at takeoff, landing, and final leap, birdsong and croaks at appropriate times. The enhanced prompt adds slight narrative detail (e.g., 'low frog croak near the beginning and again at the end') that matches the original’s description without introducing misalignment. No wrong speakers, premature effects, or lip-sync issues are present since there is no dialogue or music.",
+      "severity": "none"
+    }
+  ],
+  "dimension": "IC",
+  "dimension_score": 95,
+  "evidence_cache_key": "a25b167f17033c99c92b1fe40c80d009f4591bbe951944d83d75761b0829737d",
+  "judge_cache_key": "438d7e9fd7332b1041db3e2c26d42cb3fe828e0d369fb59490f6650aee59e97d",
+  "method": "glm53_20261112_120702",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"IC\",\n  \"dimension_score\": 95,\n  \"summary\": \"The enhanced prompt maintains strong internal consistency with the original instruction, preserving subject identity, action sequence, and environmental details. Minor discrepancies exist in camera motion description and timing precision, but no major contradictions or attribute drifts are present. The prompt’s elaboration is coherent and compatible with the static image evidence, with only slight deviations in phrasing and shot scale that do not affect core meaning.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"SAC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"The camera zooms in for a close-up of the milk frog's head, its eyes large and bright, with skin covered in brown and white patterns that blend seamlessly with the surrounding environment;\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"a milk frog with tan-brown banded, white-speckled skin and large dark cross-pupiled eyes perched on a blue-grey marbled stone, its mirror reflection filling the lower half of the frame\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"identity: milk frog, visible_appearance: eyes: large, black, glossy, skin: brown and white mottled patterns\"\n        }\n      ],\n      \"rationale\": \"Subject identity (milk frog) and key appearance attributes (brown-and-white skin, large dark eyes, reflection) are consistently preserved across the original prompt, enhanced prompt, and evidence. No renaming, duplication, or attribute drift occurs. The enhanced prompt adds minor descriptive elaboration (e.g., 'tan-brown banded', 'cross-pupiled eyes') that is compatible with the evidence and does not contradict the original.\"\n    },\n    {\n      \"criterion\": \"ANL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"The milk frog suddenly leaps, following its movement and showcasing its reflection... lands on the water's surface, creating ripples... paddling motion... jumps again\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"the frog suddenly leaps off the stone... lands on the water surface and concentric ripples spread outward... paddling motion... jumps again\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"explicit_subject-object_relations: frog perched on a flat, reflective surface, reflection of frog visible directly below it on the surface\"\n        }\n      ],\n      \"rationale\": \"Actions form a coherent causal progression: perched → leap → landing with ripples → paddling → second leap. Each action logically follows the prior state, with plausible physical bindings (e.g., reflection remains visible during leap, ripples form upon landing). No dangling or incompatible events are present. The enhanced prompt adds slight narrative embellishment (e.g., 'graceful, elegant paddling') without altering the procedural logic.\"\n    },\n    {\n      \"criterion\": \"TSC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"minor\",\n      \"issue\": \"The enhanced prompt specifies precise timestamps (00:03.000, 00:07.000, 00:11.000) that align with the original prompt’s time segments (0:00-00:03, 00:03-00:07, etc.), but the original prompt’s 00:11-00:15 segment is not fully covered in the enhanced prompt’s final shot, which ends at 00:15.000 without explicitly stating the duration of the final shot.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"00:11-00:15: The milk frog jumps again, the camera pulls back to reveal its figure against a green backdrop, resembling a dynamic oil painting.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"[Shot 4] At 00:11.000, the frog jumps again and the camera pulls back to a wider framing... the shot holds as the frog lands with a final splash.\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"temporal_events: []\"\n        }\n      ],\n      \"rationale\": \"The enhanced prompt’s timestamps are mostly consistent with the original’s time segments, but the final shot (00:11.000–00:15.000) is described as ending with the frog landing, which implies the action concludes at 00:15.000. The original prompt’s segment ends at 00:15, so the duration is preserved. However, the enhanced prompt does not explicitly state the shot holds for the full 4 seconds, which could imply a minor gap in duration allocation. This is a minor issue as the overall timeline is coherent and the action is completed within the segment.\"\n    },\n    {\n      \"criterion\": \"SPC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"showcasing its reflection on the water's surface, the reflection clear as a mirror\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"the stone and the frog's crisp reflection stay visible on the still water like a mirror revealing another world\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"explicit_subject-object_relations: frog perched on a flat, reflective surface, reflection of frog visible directly below it on the surface\"\n        }\n      ],\n      \"rationale\": \"Spatial relationships are consistent: frog perched on reflective surface, reflection directly below, camera movements (push-in, pull-back, zoom) are described in a way that maintains plausible screen direction and trajectory. The frog’s leap and landing are described with consistent orientation (e.g., 'toward one side', 'mid-leap against the flat green backdrop'), and no unexplained position swaps or impossible trajectories are introduced.\"\n    },\n    {\n      \"criterion\": \"PL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"lands on the water's surface, creating ripples that spread outwards\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"lands on the water surface and concentric ripples spread outward, briefly distorting the reflection\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"reflection of frog visible directly below it on the surface\"\n        }\n      ],\n      \"rationale\": \"Physics are consistent with real-world expectations: frog’s leap and landing produce splashes and ripples; reflection distorts during motion and reforms afterward; paddling creates small wake trails. The frog’s ability to land on water and paddle is plausible for a semi-aquatic amphibian like a milk frog. No violations of gravity, contact, or object permanence are present.\"\n    },\n    {\n      \"criterion\": \"AVS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"Background sounds: The gentle lapping of water, the splash of the milk frog's leaps, distant birdsong from the forest, and occasional croaking of frogs.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Gentle water laps steadily throughout, punctuated by the soft splash of the frog's takeoff, a second splash as it lands and paddles, and a final leap splash. Distant birdsong drifts from the forest, with an occasional low frog croak near the beginning and again at the end.\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"audio: ambience: false, effects: false, music: false, speech: false\"\n        }\n      ],\n      \"rationale\": \"The soundscape is temporally and semantically aligned with the visual events: water lapping throughout, splashes at takeoff, landing, and final leap, birdsong and croaks at appropriate times. The enhanced prompt adds slight narrative detail (e.g., 'low frog croak near the beginning and again at the end') that matches the original’s description without introducing misalignment. No wrong speakers, premature effects, or lip-sync issues are present since there is no dialogue or music.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt maintains strong internal consistency with the original instruction, preserving subject identity, action sequence, and environmental details. Minor discrepancies exist in camera motion description and timing precision, but no major contradictions or attribute drifts are present. The prompt’s elaboration is coherent and compatible with the static image evidence, with only slight deviations in phrasing and shot scale that do not affect core meaning.",
+  "usage": {
+    "completion_tokens": 1921,
+    "prompt_tokens": 2466,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 4387
+  }
+}

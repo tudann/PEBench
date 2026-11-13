@@ -1,0 +1,146 @@
+{
+  "candidate_hash": "017e2fc21d67eb493a6bc181294900d2d830ee5cb6993f91bb5d68abb4d96646",
+  "case_key": "t2v:024",
+  "created_at": "2026-11-13T07:15:15+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "STC",
+      "evidence": [
+        {
+          "quote": "Set the total runtime to 2 seconds, while also making every shot last 22 seconds.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Reverse the timeline: show the ending first, then cut to a beginning that does not match.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt contains contradictory temporal instructions: setting total runtime to 2 seconds while requiring every shot to last 22 seconds, and reversing the timeline with a beginning that does not match the ending. This creates an infeasible temporal plan with no coherent shot boundaries or duration allocation.",
+      "rationale": "A feasible temporal plan requires consistent duration allocation and logical shot sequencing. The 2-second vs. 22-second contradiction and mismatched beginning/ending make the timeline impossible to execute.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CDS",
+      "evidence": [
+        {
+          "quote": "Describe that same moment as harsh noon sun and as a lightless night, and as both a locked camera and a camera that never stops shaking.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "No actionable specifications for framing, shot scale, angle, viewpoint, lens, focus, or camera movement are provided. The prompt contradicts itself by demanding both a locked camera and a constantly shaking camera for the same moment, which is physically impossible.",
+      "rationale": "Camera specifications must be consistent and actionable. The instruction to use both a locked and a shaking camera simultaneously is infeasible and provides no usable guidance for framing or movement.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ETD",
+      "evidence": [
+        {
+          "quote": "Reverse the timeline: show the ending first, then cut to a beginning that does not match. Cut away in the middle to an underwater treasure hunt.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt mandates a reversed timeline with a mismatched beginning and an abrupt cut to an unrelated underwater treasure hunt, creating disconnected shots with no continuity or narrative motivation. Transitions are not specified and are inherently disruptive.",
+      "rationale": "Cuts and transitions must support narrative or spatial progression. The described cuts are arbitrary and disconnected, violating continuity and rhythmic flow.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "LCS",
+      "evidence": [
+        {
+          "quote": "Describe that same moment as harsh noon sun and as a lightless night...",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt demands contradictory lighting conditions for the same moment: 'harsh noon sun' and 'lightless night', which cannot coexist. No actionable specifications for light source, direction, quality, or grading are provided.",
+      "rationale": "Lighting specifications must be consistent and physically plausible. The instruction to depict the same moment under mutually exclusive lighting conditions is impossible and provides no usable guidance.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "NDE",
+      "evidence": [
+        {
+          "quote": "two people sitting and eating, with no effects or transformation... First state that there is one protagonist, then state that this same protagonist appears simultaneously as five different-looking people who talk to each other.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt lacks any progression, variation, or resolution. It presents a series of disjointed, contradictory scenes (eating people, underwater hunt, multiple identities) without narrative arc or escalation. The content is static and unmotivated.",
+      "rationale": "The requested content form requires progression or variation. The prompt instead presents a chaotic, non-sequential series of unrelated events with no development or resolution.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CIF",
+      "evidence": [
+        {
+          "quote": "Replace the whole video with two people sitting and eating... Reverse the timeline... Cut away in the middle to an underwater treasure hunt... Describe that same moment as harsh noon sun and as a lightless night...",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The additions are not supportive of any central request. The prompt replaces the original content with contradictory, incoherent instructions that serve no purpose other than to disrupt and confuse. The content is padded with irrelevant and impossible elements.",
+      "rationale": "Additions must support the central request. Here, the additions are purely disruptive, contradictory, and irrelevant, undermining any coherent visual output.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SDI",
+      "evidence": [
+        {
+          "quote": "two people sitting and eating, with no effects or transformation.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "No audio elements (speech, music, effects, ambience) are specified. While not required, the absence of any audio integration is notable given the complexity of the visual chaos described.",
+      "rationale": "Audio integration is not required, but the prompt’s lack of any mention of sound or timing for audio cues is consistent with its overall incoherence. This is a minor issue as the primary failure lies in visual structure.",
+      "severity": "minor"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SPS",
+      "evidence": [
+        {
+          "quote": "two people sitting and eating... this same protagonist appears simultaneously as five different-looking people who talk to each other.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "No subject or performance details are provided for the two people eating or the five different-looking versions of the protagonist. There are no specifications for appearance, pose, expression, gesture, movement, or interaction, making performance impossible to define.",
+      "rationale": "Subject and performance details are essential for visual generation. The prompt provides no actionable information about how these characters should appear or behave, rendering them undefined.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "VSS",
+      "evidence": [
+        {
+          "quote": "with no effects or transformation... Describe that same moment as harsh noon sun and as a lightless night...",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "No actionable specification of medium, texture, rendering language, production design, or visual treatment is provided. The prompt contradicts itself by demanding 'no effects or transformation' while also requiring impossible visual conditions (e.g., same moment as both noon and night).",
+      "rationale": "Visual treatment must be consistent and actionable. The contradiction between 'no effects' and extreme visual conditions makes the visual style impossible to define or execute.",
+      "severity": "major"
+    }
+  ],
+  "dimension": "DC",
+  "dimension_score": 0,
+  "evidence_cache_key": "0c60dd0c0a314ca3dd231783da0926ecfdbff20322b70b076e033f711a2c5201",
+  "judge_cache_key": "0754499d53388e6467fb078ab780e01b77f9f1c9e99d9029be2769351eb2b2eb",
+  "method": "weak-pe-original",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"DC\",\n  \"dimension_score\": 0,\n  \"summary\": \"The enhanced prompt is incoherent and contradictory, violating fundamental principles of temporal planning, camera logic, and narrative structure. It explicitly rejects the original prompt’s content and replaces it with impossible, self-contradictory instructions that render the video unfeasible. The prompt contains multiple conflicting directives (e.g., 2-second runtime vs. 22-second shots, simultaneous multiple identities, reversed timeline with mismatched beginnings, contradictory lighting and camera conditions) that cannot be resolved into a coherent visual sequence. No actionable plan for framing, lighting, or transitions is provided, and the additions are purely disruptive rather than supportive.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"STC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt contains contradictory temporal instructions: setting total runtime to 2 seconds while requiring every shot to last 22 seconds, and reversing the timeline with a beginning that does not match the ending. This creates an infeasible temporal plan with no coherent shot boundaries or duration allocation.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Set the total runtime to 2 seconds, while also making every shot last 22 seconds.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Reverse the timeline: show the ending first, then cut to a beginning that does not match.\"\n        }\n      ],\n      \"rationale\": \"A feasible temporal plan requires consistent duration allocation and logical shot sequencing. The 2-second vs. 22-second contradiction and mismatched beginning/ending make the timeline impossible to execute.\"\n    },\n    {\n      \"criterion\": \"CDS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"No actionable specifications for framing, shot scale, angle, viewpoint, lens, focus, or camera movement are provided. The prompt contradicts itself by demanding both a locked camera and a constantly shaking camera for the same moment, which is physically impossible.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Describe that same moment as harsh noon sun and as a lightless night, and as both a locked camera and a camera that never stops shaking.\"\n        }\n      ],\n      \"rationale\": \"Camera specifications must be consistent and actionable. The instruction to use both a locked and a shaking camera simultaneously is infeasible and provides no usable guidance for framing or movement.\"\n    },\n    {\n      \"criterion\": \"ETD\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt mandates a reversed timeline with a mismatched beginning and an abrupt cut to an unrelated underwater treasure hunt, creating disconnected shots with no continuity or narrative motivation. Transitions are not specified and are inherently disruptive.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Reverse the timeline: show the ending first, then cut to a beginning that does not match. Cut away in the middle to an underwater treasure hunt.\"\n        }\n      ],\n      \"rationale\": \"Cuts and transitions must support narrative or spatial progression. The described cuts are arbitrary and disconnected, violating continuity and rhythmic flow.\"\n    },\n    {\n      \"criterion\": \"LCS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt demands contradictory lighting conditions for the same moment: 'harsh noon sun' and 'lightless night', which cannot coexist. No actionable specifications for light source, direction, quality, or grading are provided.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Describe that same moment as harsh noon sun and as a lightless night...\"\n        }\n      ],\n      \"rationale\": \"Lighting specifications must be consistent and physically plausible. The instruction to depict the same moment under mutually exclusive lighting conditions is impossible and provides no usable guidance.\"\n    },\n    {\n      \"criterion\": \"NDE\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt lacks any progression, variation, or resolution. It presents a series of disjointed, contradictory scenes (eating people, underwater hunt, multiple identities) without narrative arc or escalation. The content is static and unmotivated.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"two people sitting and eating, with no effects or transformation... First state that there is one protagonist, then state that this same protagonist appears simultaneously as five different-looking people who talk to each other.\"\n        }\n      ],\n      \"rationale\": \"The requested content form requires progression or variation. The prompt instead presents a chaotic, non-sequential series of unrelated events with no development or resolution.\"\n    },\n    {\n      \"criterion\": \"CIF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The additions are not supportive of any central request. The prompt replaces the original content with contradictory, incoherent instructions that serve no purpose other than to disrupt and confuse. The content is padded with irrelevant and impossible elements.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Replace the whole video with two people sitting and eating... Reverse the timeline... Cut away in the middle to an underwater treasure hunt... Describe that same moment as harsh noon sun and as a lightless night...\"\n        }\n      ],\n      \"rationale\": \"Additions must support the central request. Here, the additions are purely disruptive, contradictory, and irrelevant, undermining any coherent visual output.\"\n    },\n    {\n      \"criterion\": \"SDI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"minor\",\n      \"issue\": \"No audio elements (speech, music, effects, ambience) are specified. While not required, the absence of any audio integration is notable given the complexity of the visual chaos described.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"two people sitting and eating, with no effects or transformation.\"\n        }\n      ],\n      \"rationale\": \"Audio integration is not required, but the prompt’s lack of any mention of sound or timing for audio cues is consistent with its overall incoherence. This is a minor issue as the primary failure lies in visual structure.\"\n    },\n    {\n      \"criterion\": \"SPS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"No subject or performance details are provided for the two people eating or the five different-looking versions of the protagonist. There are no specifications for appearance, pose, expression, gesture, movement, or interaction, making performance impossible to define.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"two people sitting and eating... this same protagonist appears simultaneously as five different-looking people who talk to each other.\"\n        }\n      ],\n      \"rationale\": \"Subject and performance details are essential for visual generation. The prompt provides no actionable information about how these characters should appear or behave, rendering them undefined.\"\n    },\n    {\n      \"criterion\": \"VSS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"No actionable specification of medium, texture, rendering language, production design, or visual treatment is provided. The prompt contradicts itself by demanding 'no effects or transformation' while also requiring impossible visual conditions (e.g., same moment as both noon and night).\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"with no effects or transformation... Describe that same moment as harsh noon sun and as a lightless night...\"\n        }\n      ],\n      \"rationale\": \"Visual treatment must be consistent and actionable. The contradiction between 'no effects' and extreme visual conditions makes the visual style impossible to define or execute.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt is incoherent and contradictory, violating fundamental principles of temporal planning, camera logic, and narrative structure. It explicitly rejects the original prompt’s content and replaces it with impossible, self-contradictory instructions that render the video unfeasible. The prompt contains multiple conflicting directives (e.g., 2-second runtime vs. 22-second shots, simultaneous multiple identities, reversed timeline with mismatched beginnings, contradictory lighting and camera conditions) that cannot be resolved into a coherent visual sequence. No actionable plan for framing, lighting, or transitions is provided, and the additions are purely disruptive rather than supportive.",
+  "usage": {
+    "completion_tokens": 1724,
+    "prompt_tokens": 1099,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 2823
+  }
+}

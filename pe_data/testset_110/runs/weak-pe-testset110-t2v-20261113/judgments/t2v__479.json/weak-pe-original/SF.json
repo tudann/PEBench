@@ -1,0 +1,158 @@
+{
+  "candidate_hash": "367f65592d50f682a06bdc3108e046f7783126b36e62fc36cadf90497fb79713",
+  "case_key": "t2v:479",
+  "created_at": "2026-11-13T08:33:48+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "GSF",
+      "evidence": [
+        {
+          "quote": "三位来自唐山、穿着家居长裙的年轻女生，刚把寝室窗户打理干净，随后套上厚外套，搭乘大巴前往雪场体验滑雪。",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "先写成只有一个主角，紧接着又写成这个主角同时变成五个外貌不同的人，并且互相对话。时间倒过来：先给结尾，再跳到一个对不上的开头。中途插进一段无关的海底寻宝。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Original prompt specifies a realistic daily activity genre with a clear narrative and visual style; enhanced prompt replaces it with surreal, contradictory, and non-coherent elements (e.g., five identities, time reversal, underwater scenes), which are incompatible with the original genre and aesthetic.",
+      "rationale": "The enhanced prompt fundamentally alters the genre from a coherent daily activity to a surreal, fragmented, and contradictory narrative, violating the requested aesthetic and visual style.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SAP",
+      "evidence": [
+        {
+          "quote": "三位来自唐山、穿着家居长裙的年轻女生",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "先写成只有一个主角，紧接着又写成这个主角同时变成五个外貌不同的人",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Original prompt specifies three female subjects from Tangshan in home dresses; enhanced prompt removes all subject identity, count, and appearance, replacing them with a single protagonist who becomes five different people, which contradicts the original subject attributes and count.",
+      "rationale": "The subject identity, count, and appearance are entirely replaced and contradicted, which is a major violation of semantic fidelity.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANF",
+      "evidence": [
+        {
+          "quote": "刚把寝室窗户打理干净，随后套上厚外套，搭乘大巴前往雪场体验滑雪。",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "时间倒过来：先给结尾，再跳到一个对不上的开头。中途插进一段无关的海底寻宝。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Original prompt describes a clear sequence: cleaning windows → putting on coats → taking a bus → skiing. Enhanced prompt replaces this with time reversal, unrelated events (underwater treasure hunt), and contradictory actions, destroying the narrative intent and event order.",
+      "rationale": "The narrative structure is completely dismantled and replaced with incoherent, contradictory events, violating the requested action sequence and intent.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "DLI",
+      "evidence": [
+        {
+          "quote": "三位来自唐山、穿着家居长裙的年轻女生，刚把寝室窗户打理干净，随后套上厚外套，搭乘大巴前往雪场体验滑雪。",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "No dialogue, narration, or lyrics are specified in the original prompt, so there is no requirement to preserve or alter them.",
+      "rationale": "Since no dialogue or narration is present in the original instruction, there is no violation.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ARP",
+      "evidence": [
+        {
+          "quote": "三位来自唐山、穿着家居长裙的年轻女生，刚把寝室窗户打理干净，随后套上厚外套，搭乘大巴前往雪场体验滑雪。",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "No specific speech, music, or sound constraints are mentioned in the original prompt, so no violation occurs.",
+      "rationale": "No audio constraints are specified, so no violation is possible.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CCP",
+      "evidence": [
+        {
+          "quote": "写成机位锁死，又写成镜头一直在晃。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Original prompt implies a continuous narrative with implied camera movement; enhanced prompt contradicts this by requiring both '机位锁死' (locked camera) and '镜头一直在晃' (shaky camera), which are mutually exclusive and infeasible.",
+      "rationale": "The enhanced prompt introduces contradictory and infeasible camera constraints that directly violate the implied continuity and coherence of the original prompt.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "LCF",
+      "evidence": [
+        {
+          "quote": "写成正午暴晒，又写成深夜无光；",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Original prompt implies daytime (cleaning windows, going to ski resort); enhanced prompt contradicts this by requiring both '正午暴晒' (noon sun) and '深夜无光' (deep night, no light), which are incompatible lighting conditions.",
+      "rationale": "The lighting conditions are mutually exclusive and contradict the implied time of day in the original prompt, violating semantic fidelity.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SSP",
+      "evidence": [
+        {
+          "quote": "寝室窗户...搭乘大巴前往雪场",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "空会议室里一杯水纹丝不动...中途插进一段无关的海底寻宝。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Original prompt specifies a dormitory → bus → ski resort setting; enhanced prompt replaces it with an empty meeting room, then inserts an unrelated underwater scene, changing the setting and removing required background elements.",
+      "rationale": "The setting is completely replaced with unrelated and contradictory locations, violating the requested spatial context.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "OTI",
+      "evidence": [
+        {
+          "quote": "三位来自唐山、穿着家居长裙的年轻女生，刚把寝室窗户打理干净，随后套上厚外套，搭乘大巴前往雪场体验滑雪。",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "No visible titles, signs, or interface text are specified in the original prompt, so no violation occurs.",
+      "rationale": "No text elements are present in the original instruction, so no violation is possible.",
+      "severity": "none"
+    }
+  ],
+  "dimension": "SF",
+  "dimension_score": 0,
+  "evidence_cache_key": "e5a81239757bbcc5c63e70d32ca6cb9a2dfdb07e416aec9d19e303bf0e174246",
+  "judge_cache_key": "a0ca24571ad14d7ab7be626329bd736d7e7015f9ebc418227c8be391591d0377",
+  "method": "weak-pe-original",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"SF\",\n  \"dimension_score\": 0,\n  \"summary\": \"Enhanced prompt completely contradicts and replaces all elements of the original instruction, including subject identity, actions, setting, time, camera constraints, and duration. It introduces infeasible contradictions (e.g., 3-second total duration with 27-second per shot) and violates every semantic fidelity criterion.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"GSF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Original prompt specifies a realistic daily activity genre with a clear narrative and visual style; enhanced prompt replaces it with surreal, contradictory, and non-coherent elements (e.g., five identities, time reversal, underwater scenes), which are incompatible with the original genre and aesthetic.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"三位来自唐山、穿着家居长裙的年轻女生，刚把寝室窗户打理干净，随后套上厚外套，搭乘大巴前往雪场体验滑雪。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"先写成只有一个主角，紧接着又写成这个主角同时变成五个外貌不同的人，并且互相对话。时间倒过来：先给结尾，再跳到一个对不上的开头。中途插进一段无关的海底寻宝。\"\n        }\n      ],\n      \"rationale\": \"The enhanced prompt fundamentally alters the genre from a coherent daily activity to a surreal, fragmented, and contradictory narrative, violating the requested aesthetic and visual style.\"\n    },\n    {\n      \"criterion\": \"SAP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Original prompt specifies three female subjects from Tangshan in home dresses; enhanced prompt removes all subject identity, count, and appearance, replacing them with a single protagonist who becomes five different people, which contradicts the original subject attributes and count.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"三位来自唐山、穿着家居长裙的年轻女生\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"先写成只有一个主角，紧接着又写成这个主角同时变成五个外貌不同的人\"\n        }\n      ],\n      \"rationale\": \"The subject identity, count, and appearance are entirely replaced and contradicted, which is a major violation of semantic fidelity.\"\n    },\n    {\n      \"criterion\": \"ANF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Original prompt describes a clear sequence: cleaning windows → putting on coats → taking a bus → skiing. Enhanced prompt replaces this with time reversal, unrelated events (underwater treasure hunt), and contradictory actions, destroying the narrative intent and event order.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"刚把寝室窗户打理干净，随后套上厚外套，搭乘大巴前往雪场体验滑雪。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"时间倒过来：先给结尾，再跳到一个对不上的开头。中途插进一段无关的海底寻宝。\"\n        }\n      ],\n      \"rationale\": \"The narrative structure is completely dismantled and replaced with incoherent, contradictory events, violating the requested action sequence and intent.\"\n    },\n    {\n      \"criterion\": \"DLI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"No dialogue, narration, or lyrics are specified in the original prompt, so there is no requirement to preserve or alter them.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"三位来自唐山、穿着家居长裙的年轻女生，刚把寝室窗户打理干净，随后套上厚外套，搭乘大巴前往雪场体验滑雪。\"\n        }\n      ],\n      \"rationale\": \"Since no dialogue or narration is present in the original instruction, there is no violation.\"\n    },\n    {\n      \"criterion\": \"ARP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"No specific speech, music, or sound constraints are mentioned in the original prompt, so no violation occurs.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"三位来自唐山、穿着家居长裙的年轻女生，刚把寝室窗户打理干净，随后套上厚外套，搭乘大巴前往雪场体验滑雪。\"\n        }\n      ],\n      \"rationale\": \"No audio constraints are specified, so no violation is possible.\"\n    },\n    {\n      \"criterion\": \"CCP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Original prompt implies a continuous narrative with implied camera movement; enhanced prompt contradicts this by requiring both '机位锁死' (locked camera) and '镜头一直在晃' (shaky camera), which are mutually exclusive and infeasible.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"写成机位锁死，又写成镜头一直在晃。\"\n        }\n      ],\n      \"rationale\": \"The enhanced prompt introduces contradictory and infeasible camera constraints that directly violate the implied continuity and coherence of the original prompt.\"\n    },\n    {\n      \"criterion\": \"LCF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Original prompt implies daytime (cleaning windows, going to ski resort); enhanced prompt contradicts this by requiring both '正午暴晒' (noon sun) and '深夜无光' (deep night, no light), which are incompatible lighting conditions.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"写成正午暴晒，又写成深夜无光；\"\n        }\n      ],\n      \"rationale\": \"The lighting conditions are mutually exclusive and contradict the implied time of day in the original prompt, violating semantic fidelity.\"\n    },\n    {\n      \"criterion\": \"SSP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Original prompt specifies a dormitory → bus → ski resort setting; enhanced prompt replaces it with an empty meeting room, then inserts an unrelated underwater scene, changing the setting and removing required background elements.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"寝室窗户...搭乘大巴前往雪场\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"空会议室里一杯水纹丝不动...中途插进一段无关的海底寻宝。\"\n        }\n      ],\n      \"rationale\": \"The setting is completely replaced with unrelated and contradictory locations, violating the requested spatial context.\"\n    },\n    {\n      \"criterion\": \"OTI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"No visible titles, signs, or interface text are specified in the original prompt, so no violation occurs.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"三位来自唐山、穿着家居长裙的年轻女生，刚把寝室窗户打理干净，随后套上厚外套，搭乘大巴前往雪场体验滑雪。\"\n        }\n      ],\n      \"rationale\": \"No text elements are present in the original instruction, so no violation is possible.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "Enhanced prompt completely contradicts and replaces all elements of the original instruction, including subject identity, actions, setting, time, camera constraints, and duration. It introduces infeasible contradictions (e.g., 3-second total duration with 27-second per shot) and violates every semantic fidelity criterion.",
+  "usage": {
+    "completion_tokens": 1634,
+    "prompt_tokens": 1073,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 2707
+  }
+}

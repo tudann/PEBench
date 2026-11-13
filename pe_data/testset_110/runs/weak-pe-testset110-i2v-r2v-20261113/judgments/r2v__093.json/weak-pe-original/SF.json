@@ -1,0 +1,178 @@
+{
+  "candidate_hash": "6cfb7dd21218ce4879c2005ead3a4730a639740684bd3c41c9d673a4079ca6b7",
+  "case_key": "r2v:093",
+  "created_at": "2026-11-13T08:28:22+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "GSF",
+      "evidence": [
+        {
+          "quote": "整体风格要求真实、冷静、现代，并具备汽车广告质感",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "过曝、机位歪斜的空走廊监控，没有光影设计",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original cinematic automotive advertising style is replaced with a distorted, overexposed, and unstable surveillance-style aesthetic. The requested 'realistic, cool-toned, cinematic' look is discarded in favor of 'overexposed, crooked camera, no lighting design', which contradicts the original genre and visual intent.",
+      "rationale": "The original prompt specifies a high-fidelity, cinematic automotive ad with controlled lighting and composition. The enhanced prompt replaces this with a low-fidelity, surveillance-style aesthetic, which is incompatible with the genre and visual style.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SAP",
+      "evidence": [
+        {
+          "quote": "图1为隧道场景环境参考，图2为车辆三视图参考",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "图1换成参考图里没有的角色，并同时当成两个互相矛盾的身份。图2换成参考图里没有的角色，并同时当成两个互相矛盾的身份",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original subject (NIO ET7 car) is discarded. The prompt introduces a single protagonist who then becomes five different people, contradicting the original subject identity and count. The reference images are replaced with non-existent characters, violating the role binding of the provided assets.",
+      "rationale": "The original prompt clearly defines the subjects as the NIO ET7 car, with specific reference roles for the images. The enhanced prompt replaces these with undefined, contradictory characters, breaking subject identity and asset binding.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANF",
+      "evidence": [
+        {
+          "quote": "画面需呈现汽车驶出隧道后重新进入开阔道路的状态",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "时间倒过来：先给结尾，再跳到一个对不上的开头。中途插进一段无关的屋顶烟花",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original narrative of a car exiting a tunnel is replaced with a reversed, incoherent sequence: ending first, then an unrelated beginning, with an inserted rooftop fireworks scene. The required action sequence (approaching exit, exiting, transitioning to open road) is entirely omitted.",
+      "rationale": "The original prompt specifies a clear, linear event chain. The enhanced prompt reverses and fragments this narrative, inserting unrelated events, which fundamentally alters the intended story and action sequence.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "DLI",
+      "evidence": [
+        {
+          "quote": "无对白",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "删掉原来的对白，改成无关旁白",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original instruction explicitly requires '无对白' (no dialogue). The enhanced prompt deletes the original dialogue and replaces it with '无关旁白' (irrelevant narration), which violates the silence constraint and introduces unauthorized speech.",
+      "rationale": "The original prompt mandates silence. The enhanced prompt introduces unauthorized narration, which directly contradicts the dialogue constraint.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ARP",
+      "evidence": [
+        {
+          "quote": "隧道中的回声快速淡出，声音逐步过渡为开阔道路上的风声与更松散的轮胎行驶声",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "过曝、机位歪斜的空走廊监控，没有光影设计",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original prompt specifies a transition from tunnel echo to wind and tire sounds. The enhanced prompt does not address sound at all, but by replacing the scene with a surveillance-style corridor, it implies a different acoustic environment, violating the requested sound design.",
+      "rationale": "The original sound design is tied to the environment and action. The enhanced prompt’s new environment (empty corridor) implies a different acoustic profile, and the absence of any sound specification violates the original audio constraints.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CCP",
+      "evidence": [
+        {
+          "quote": "采用85mm中长焦、中景构图，以后方长焦稳定跟车的拍摄方式展开，始终保证车尾与后挡风玻璃稳定且清晰可见",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "写成机位锁死，又写成镜头一直在晃",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original prompt requires a stable, rear long-lens follow shot with 85mm lens. The enhanced prompt contradicts this by stating '机位锁死，又写成镜头一直在晃' (locked position, then constantly shaking), which is physically impossible and violates the camera constraints.",
+      "rationale": "The original camera plan is specific and stable. The enhanced prompt introduces contradictory motion constraints, making the camera design incoherent and impossible to execute.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "LCF",
+      "evidence": [
+        {
+          "quote": "隧道中的回声快速淡出，声音逐步过渡为开阔道路上的风声与更松散的轮胎行驶声",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "同一段写成正午暴晒，又写成深夜无光",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original prompt specifies a smooth transition from cool tunnel lighting to blue sky light at dusk. The enhanced prompt contradicts this by stating '正午暴晒，又写成深夜无光' (midday sun, then深夜 no light), which is incompatible with the original lighting and time-of-day design.",
+      "rationale": "The original lighting design is tied to a specific time of day (dusk) and smooth transition. The enhanced prompt introduces conflicting lighting conditions, which breaks the visual continuity and intended mood.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SSP",
+      "evidence": [
+        {
+          "quote": "画面需呈现汽车驶出隧道后重新进入开阔道路的状态",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "过曝、机位歪斜的空走廊监控",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original setting is a tunnel exit transitioning to an open road with distant cityscape. The enhanced prompt replaces this with an '空走廊' (empty corridor), which is a completely different environment, violating the setting and spatial layout.",
+      "rationale": "The original setting is defined by the tunnel and open road. The enhanced prompt replaces it with an unrelated corridor, which changes the spatial context and environment entirely.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "OTI",
+      "evidence": [
+        {
+          "quote": "exact_visible_transcription: \"NIO eT7\", location: \"on license plate at rear of car\"",
+          "source": "evidence_facts"
+        },
+        {
+          "quote": "丢掉原指令里的主体身份、人数、动作顺序、场景和明确的镜头要求",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original prompt includes visible text 'NIO eT7' on the license plate. The enhanced prompt does not mention any on-screen text, and by changing the subject to non-existent characters, it implies the text is no longer present, violating the requirement to preserve visible interface text.",
+      "rationale": "The original prompt includes specific on-screen text. The enhanced prompt removes the subject and context, which implies the text is no longer visible, violating the OTI criterion.",
+      "severity": "major"
+    }
+  ],
+  "dimension": "SF",
+  "dimension_score": 0,
+  "evidence_cache_key": "5660b7570f932625df9ef0769ad972b672ebfc448bfbe83cb9bc8279aa2caa24",
+  "judge_cache_key": "a0ca24571ad14d7ab7be626329bd736d7e7015f9ebc418227c8be391591d0377",
+  "method": "weak-pe-original",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"SF\",\n  \"dimension_score\": 0,\n  \"summary\": \"The enhanced prompt completely violates the original instruction by replacing the core subject, scene, camera, lighting, and narrative structure with contradictory, incoherent, and impossible elements. It introduces multiple identity conflicts, temporal reversals, and incompatible visual constraints, rendering the request semantically incoherent and incompatible with the original prompt’s intent.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"GSF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original cinematic automotive advertising style is replaced with a distorted, overexposed, and unstable surveillance-style aesthetic. The requested 'realistic, cool-toned, cinematic' look is discarded in favor of 'overexposed, crooked camera, no lighting design', which contradicts the original genre and visual intent.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"整体风格要求真实、冷静、现代，并具备汽车广告质感\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"过曝、机位歪斜的空走廊监控，没有光影设计\"\n        }\n      ],\n      \"rationale\": \"The original prompt specifies a high-fidelity, cinematic automotive ad with controlled lighting and composition. The enhanced prompt replaces this with a low-fidelity, surveillance-style aesthetic, which is incompatible with the genre and visual style.\"\n    },\n    {\n      \"criterion\": \"SAP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original subject (NIO ET7 car) is discarded. The prompt introduces a single protagonist who then becomes five different people, contradicting the original subject identity and count. The reference images are replaced with non-existent characters, violating the role binding of the provided assets.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"图1为隧道场景环境参考，图2为车辆三视图参考\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"图1换成参考图里没有的角色，并同时当成两个互相矛盾的身份。图2换成参考图里没有的角色，并同时当成两个互相矛盾的身份\"\n        }\n      ],\n      \"rationale\": \"The original prompt clearly defines the subjects as the NIO ET7 car, with specific reference roles for the images. The enhanced prompt replaces these with undefined, contradictory characters, breaking subject identity and asset binding.\"\n    },\n    {\n      \"criterion\": \"ANF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original narrative of a car exiting a tunnel is replaced with a reversed, incoherent sequence: ending first, then an unrelated beginning, with an inserted rooftop fireworks scene. The required action sequence (approaching exit, exiting, transitioning to open road) is entirely omitted.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"画面需呈现汽车驶出隧道后重新进入开阔道路的状态\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"时间倒过来：先给结尾，再跳到一个对不上的开头。中途插进一段无关的屋顶烟花\"\n        }\n      ],\n      \"rationale\": \"The original prompt specifies a clear, linear event chain. The enhanced prompt reverses and fragments this narrative, inserting unrelated events, which fundamentally alters the intended story and action sequence.\"\n    },\n    {\n      \"criterion\": \"DLI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original instruction explicitly requires '无对白' (no dialogue). The enhanced prompt deletes the original dialogue and replaces it with '无关旁白' (irrelevant narration), which violates the silence constraint and introduces unauthorized speech.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"无对白\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"删掉原来的对白，改成无关旁白\"\n        }\n      ],\n      \"rationale\": \"The original prompt mandates silence. The enhanced prompt introduces unauthorized narration, which directly contradicts the dialogue constraint.\"\n    },\n    {\n      \"criterion\": \"ARP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original prompt specifies a transition from tunnel echo to wind and tire sounds. The enhanced prompt does not address sound at all, but by replacing the scene with a surveillance-style corridor, it implies a different acoustic environment, violating the requested sound design.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"隧道中的回声快速淡出，声音逐步过渡为开阔道路上的风声与更松散的轮胎行驶声\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"过曝、机位歪斜的空走廊监控，没有光影设计\"\n        }\n      ],\n      \"rationale\": \"The original sound design is tied to the environment and action. The enhanced prompt’s new environment (empty corridor) implies a different acoustic profile, and the absence of any sound specification violates the original audio constraints.\"\n    },\n    {\n      \"criterion\": \"CCP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original prompt requires a stable, rear long-lens follow shot with 85mm lens. The enhanced prompt contradicts this by stating '机位锁死，又写成镜头一直在晃' (locked position, then constantly shaking), which is physically impossible and violates the camera constraints.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"采用85mm中长焦、中景构图，以后方长焦稳定跟车的拍摄方式展开，始终保证车尾与后挡风玻璃稳定且清晰可见\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"写成机位锁死，又写成镜头一直在晃\"\n        }\n      ],\n      \"rationale\": \"The original camera plan is specific and stable. The enhanced prompt introduces contradictory motion constraints, making the camera design incoherent and impossible to execute.\"\n    },\n    {\n      \"criterion\": \"LCF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original prompt specifies a smooth transition from cool tunnel lighting to blue sky light at dusk. The enhanced prompt contradicts this by stating '正午暴晒，又写成深夜无光' (midday sun, then深夜 no light), which is incompatible with the original lighting and time-of-day design.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"隧道中的回声快速淡出，声音逐步过渡为开阔道路上的风声与更松散的轮胎行驶声\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"同一段写成正午暴晒，又写成深夜无光\"\n        }\n      ],\n      \"rationale\": \"The original lighting design is tied to a specific time of day (dusk) and smooth transition. The enhanced prompt introduces conflicting lighting conditions, which breaks the visual continuity and intended mood.\"\n    },\n    {\n      \"criterion\": \"SSP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original setting is a tunnel exit transitioning to an open road with distant cityscape. The enhanced prompt replaces this with an '空走廊' (empty corridor), which is a completely different environment, violating the setting and spatial layout.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"画面需呈现汽车驶出隧道后重新进入开阔道路的状态\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"过曝、机位歪斜的空走廊监控\"\n        }\n      ],\n      \"rationale\": \"The original setting is defined by the tunnel and open road. The enhanced prompt replaces it with an unrelated corridor, which changes the spatial context and environment entirely.\"\n    },\n    {\n      \"criterion\": \"OTI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original prompt includes visible text 'NIO eT7' on the license plate. The enhanced prompt does not mention any on-screen text, and by changing the subject to non-existent characters, it implies the text is no longer present, violating the requirement to preserve visible interface text.\",\n      \"evidence\": [\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"exact_visible_transcription: \\\"NIO eT7\\\", location: \\\"on license plate at rear of car\\\"\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"丢掉原指令里的主体身份、人数、动作顺序、场景和明确的镜头要求\"\n        }\n      ],\n      \"rationale\": \"The original prompt includes specific on-screen text. The enhanced prompt removes the subject and context, which implies the text is no longer visible, violating the OTI criterion.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt completely violates the original instruction by replacing the core subject, scene, camera, lighting, and narrative structure with contradictory, incoherent, and impossible elements. It introduces multiple identity conflicts, temporal reversals, and incompatible visual constraints, rendering the request semantically incoherent and incompatible with the original prompt’s intent.",
+  "usage": {
+    "completion_tokens": 1995,
+    "prompt_tokens": 3521,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 5516
+  }
+}

@@ -1,0 +1,151 @@
+{
+  "candidate_hash": "810f24dc6534c1518de78cccc7b8db97f47c3c16f6efc4725dc78df56b927632",
+  "case_key": "t2v:063",
+  "created_at": "2026-11-13T07:20:03+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "GSF",
+      "evidence": [
+        {
+          "quote": "As garras enormes de uma besta monstruosa rasgam a parede de tijolo do mosteiro",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Replace the whole video with two people sitting and eating, with no effects or transformation",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original prompt specifies a Sci-Fi Creature genre with visual effects, while the enhanced prompt replaces it with a mundane scene of people eating, removing all genre-defining elements and visual style.",
+      "rationale": "The genre and visual style are fundamentally altered from a high-intensity, creature-driven Sci-Fi scene to a static, non-effects scene, violating the core aesthetic and medium requirements.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SAP",
+      "evidence": [
+        {
+          "quote": "um guerreiro de armadura pesada avança",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "First state that there is one protagonist, then state that this same protagonist appears simultaneously as five different-looking people who talk to each other",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original subject is a single warrior in armor; the enhanced prompt replaces this with two people, then introduces a contradictory identity of one protagonist appearing as five different-looking people simultaneously, which is not present in the original.",
+      "rationale": "The subject identity, count, and appearance are entirely replaced and contradicted, including an impossible simultaneous multiplicity of the same protagonist.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANF",
+      "evidence": [
+        {
+          "quote": "As garras enormes de uma besta monstruosa rasgam a parede de tijolo do mosteiro, um guerreiro de armadura pesada avança com o escudo erguido por entre os escombros em dispersão",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Reverse the timeline: show the ending first, then cut to a beginning that does not match. Cut away in the middle to a rooftop fireworks show.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original action sequence involves a beast tearing a wall, a warrior advancing, and a camera movement. The enhanced prompt replaces this with eating, then reverses the timeline, cuts to fireworks, and introduces contradictory events, completely altering the narrative intent.",
+      "rationale": "The requested event chain is entirely discarded and replaced with a disjointed, contradictory sequence that negates the original narrative structure and intent.",
+      "severity": "major"
+    },
+    {
+      "applicability": "not_applicable",
+      "criterion": "DLI",
+      "evidence": [],
+      "issue": "",
+      "rationale": "The original prompt contains no dialogue, narration, or lyrics, so there is no content to preserve or alter.",
+      "severity": null
+    },
+    {
+      "applicability": "not_applicable",
+      "criterion": "ARP",
+      "evidence": [],
+      "issue": "",
+      "rationale": "The original prompt does not specify any speech, music, or sound effects, so no audio constraints exist to preserve.",
+      "severity": null
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CCP",
+      "evidence": [
+        {
+          "quote": "a câmara avança rapidamente rente ao chão e, em seguida, corta para um grande plano aproximado do escudo",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Drop the requested identity, count, action order, setting, and any explicit camera instruction. ... Describe that same moment as ... a locked camera and a camera that never stops shaking.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original prompt specifies a camera movement: 'a câmara avança rapidamente rente ao chão e, em seguida, corta para um grande plano aproximado do escudo'. The enhanced prompt contradicts this by stating 'Drop the requested identity, count, action order, setting, and any explicit camera instruction' and adds conflicting camera conditions (locked vs. shaking).",
+      "rationale": "The explicit camera movement is discarded and replaced with contradictory and infeasible camera instructions, violating the original camera constraints.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "LCF",
+      "evidence": [
+        {
+          "quote": "As garras enormes de uma besta monstruosa rasgam a parede de tijolo do mosteiro",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Describe that same moment as harsh noon sun and as a lightless night",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original prompt implies a dramatic, possibly overcast or shadowed lighting due to the setting (monastery, rubble, beast attack). The enhanced prompt contradicts this by describing the same moment as 'harsh noon sun' and 'lightless night', which are mutually exclusive and incompatible with the original context.",
+      "rationale": "The lighting conditions are directly contradicted and made impossible by describing the same moment under mutually exclusive conditions, violating the original illumination and time-of-day intent.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SSP",
+      "evidence": [
+        {
+          "quote": "rasgam a parede de tijolo do mosteiro",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Replace the whole video with two people sitting and eating... Cut away in the middle to a rooftop fireworks show.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original setting is a monastery with brick walls and rubble. The enhanced prompt replaces this with a scene of people eating, then cuts to a rooftop fireworks show, completely changing the location and background elements.",
+      "rationale": "The setting is entirely replaced with unrelated locations, removing the required background elements and spatial context.",
+      "severity": "major"
+    },
+    {
+      "applicability": "not_applicable",
+      "criterion": "OTI",
+      "evidence": [],
+      "issue": "",
+      "rationale": "The original prompt contains no visible titles, signs, subtitles, or interface text, so there is no content to preserve.",
+      "severity": null
+    }
+  ],
+  "dimension": "SF",
+  "dimension_score": 0,
+  "evidence_cache_key": "92891e775ca91a0a18e6e9822ed543ab6a67aec7e966e77d107b4f3f959b9fbb",
+  "judge_cache_key": "a0ca24571ad14d7ab7be626329bd736d7e7015f9ebc418227c8be391591d0377",
+  "method": "weak-pe-original",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"SF\",\n  \"dimension_score\": 0,\n  \"summary\": \"The enhanced prompt completely contradicts and replaces the original instruction across all semantic dimensions. It invalidates the genre, subject, action, setting, camera, time, and duration requirements, introducing infeasible contradictions (e.g., 2-second runtime with 17-second shots) and impossible visual states (e.g., simultaneous multiple identities, conflicting lighting, and camera conditions). No semantic fidelity remains.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"GSF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original prompt specifies a Sci-Fi Creature genre with visual effects, while the enhanced prompt replaces it with a mundane scene of people eating, removing all genre-defining elements and visual style.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"As garras enormes de uma besta monstruosa rasgam a parede de tijolo do mosteiro\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Replace the whole video with two people sitting and eating, with no effects or transformation\"\n        }\n      ],\n      \"rationale\": \"The genre and visual style are fundamentally altered from a high-intensity, creature-driven Sci-Fi scene to a static, non-effects scene, violating the core aesthetic and medium requirements.\"\n    },\n    {\n      \"criterion\": \"SAP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original subject is a single warrior in armor; the enhanced prompt replaces this with two people, then introduces a contradictory identity of one protagonist appearing as five different-looking people simultaneously, which is not present in the original.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"um guerreiro de armadura pesada avança\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"First state that there is one protagonist, then state that this same protagonist appears simultaneously as five different-looking people who talk to each other\"\n        }\n      ],\n      \"rationale\": \"The subject identity, count, and appearance are entirely replaced and contradicted, including an impossible simultaneous multiplicity of the same protagonist.\"\n    },\n    {\n      \"criterion\": \"ANF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original action sequence involves a beast tearing a wall, a warrior advancing, and a camera movement. The enhanced prompt replaces this with eating, then reverses the timeline, cuts to fireworks, and introduces contradictory events, completely altering the narrative intent.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"As garras enormes de uma besta monstruosa rasgam a parede de tijolo do mosteiro, um guerreiro de armadura pesada avança com o escudo erguido por entre os escombros em dispersão\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Reverse the timeline: show the ending first, then cut to a beginning that does not match. Cut away in the middle to a rooftop fireworks show.\"\n        }\n      ],\n      \"rationale\": \"The requested event chain is entirely discarded and replaced with a disjointed, contradictory sequence that negates the original narrative structure and intent.\"\n    },\n    {\n      \"criterion\": \"DLI\",\n      \"applicability\": \"not_applicable\",\n      \"severity\": null,\n      \"issue\": \"\",\n      \"evidence\": [],\n      \"rationale\": \"The original prompt contains no dialogue, narration, or lyrics, so there is no content to preserve or alter.\"\n    },\n    {\n      \"criterion\": \"ARP\",\n      \"applicability\": \"not_applicable\",\n      \"severity\": null,\n      \"issue\": \"\",\n      \"evidence\": [],\n      \"rationale\": \"The original prompt does not specify any speech, music, or sound effects, so no audio constraints exist to preserve.\"\n    },\n    {\n      \"criterion\": \"CCP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original prompt specifies a camera movement: 'a câmara avança rapidamente rente ao chão e, em seguida, corta para um grande plano aproximado do escudo'. The enhanced prompt contradicts this by stating 'Drop the requested identity, count, action order, setting, and any explicit camera instruction' and adds conflicting camera conditions (locked vs. shaking).\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"a câmara avança rapidamente rente ao chão e, em seguida, corta para um grande plano aproximado do escudo\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Drop the requested identity, count, action order, setting, and any explicit camera instruction. ... Describe that same moment as ... a locked camera and a camera that never stops shaking.\"\n        }\n      ],\n      \"rationale\": \"The explicit camera movement is discarded and replaced with contradictory and infeasible camera instructions, violating the original camera constraints.\"\n    },\n    {\n      \"criterion\": \"LCF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original prompt implies a dramatic, possibly overcast or shadowed lighting due to the setting (monastery, rubble, beast attack). The enhanced prompt contradicts this by describing the same moment as 'harsh noon sun' and 'lightless night', which are mutually exclusive and incompatible with the original context.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"As garras enormes de uma besta monstruosa rasgam a parede de tijolo do mosteiro\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Describe that same moment as harsh noon sun and as a lightless night\"\n        }\n      ],\n      \"rationale\": \"The lighting conditions are directly contradicted and made impossible by describing the same moment under mutually exclusive conditions, violating the original illumination and time-of-day intent.\"\n    },\n    {\n      \"criterion\": \"SSP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original setting is a monastery with brick walls and rubble. The enhanced prompt replaces this with a scene of people eating, then cuts to a rooftop fireworks show, completely changing the location and background elements.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"rasgam a parede de tijolo do mosteiro\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Replace the whole video with two people sitting and eating... Cut away in the middle to a rooftop fireworks show.\"\n        }\n      ],\n      \"rationale\": \"The setting is entirely replaced with unrelated locations, removing the required background elements and spatial context.\"\n    },\n    {\n      \"criterion\": \"OTI\",\n      \"applicability\": \"not_applicable\",\n      \"severity\": null,\n      \"issue\": \"\",\n      \"evidence\": [],\n      \"rationale\": \"The original prompt contains no visible titles, signs, subtitles, or interface text, so there is no content to preserve.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt completely contradicts and replaces the original instruction across all semantic dimensions. It invalidates the genre, subject, action, setting, camera, time, and duration requirements, introducing infeasible contradictions (e.g., 2-second runtime with 17-second shots) and impossible visual states (e.g., simultaneous multiple identities, conflicting lighting, and camera conditions). No semantic fidelity remains.",
+  "usage": {
+    "completion_tokens": 1605,
+    "prompt_tokens": 1130,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 2735
+  }
+}

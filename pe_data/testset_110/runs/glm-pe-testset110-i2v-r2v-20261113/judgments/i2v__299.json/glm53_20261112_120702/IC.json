@@ -1,0 +1,127 @@
+{
+  "candidate_hash": "93aa31755e626faeee6c92fa03743446d986795840b2271d39086349d6fb673e",
+  "case_key": "i2v:299",
+  "created_at": "2026-11-13T08:20:59+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "SAC",
+      "evidence": [
+        {
+          "quote": "15s：闭眸静立江楼之上，落日长河里孤影静止绝美定格",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "finally she closes her eyes and stands perfectly still, matching the opening framing — a solitary, beautiful stillness as the clip ends.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The enhanced prompt slightly over-describes the final pose at 15s, adding 'matching the opening framing — a solitary, beautiful stillness' which implies a perfect return to the initial state, while the original prompt only requires closing eyes and standing still. This is a minor elaboration not contradicted by evidence.",
+      "rationale": "The subject's identity (young woman in red hanfu), clothing, and props (railing, ribbons, sleeves) remain consistent throughout. The description of her appearance and accessories matches the evidence from image_1. The minor elaboration in the final pose does not alter core attributes or introduce contradictions.",
+      "severity": "minor"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANL",
+      "evidence": [
+        {
+          "quote": "00:00-00:03 【凭栏望晚 怅然起势】... 00:03-00:06 【袖揽长风 心绪飘摇】... 00:06-00:09 【抬臂追暮 俯仰山河】... 00:09-00:12 【回身望远 往事浮沉】... 00:12-00:15 【凭风收势 落日定格】",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "From 0 to 3 seconds... From 3 to 6 seconds... From 6 to 9 seconds... From 9 to 12 seconds... From 12 to 15 seconds...",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "All actions form a coherent causal progression: from contemplative stillness to gentle movements, then expressive gestures, and finally a return to stillness. Each action logically follows the previous, with plausible physical transitions (e.g., turning, swaying, raising arms). No dangling or incompatible events are present.",
+      "rationale": "The sequence of actions is logically structured and physically plausible. Each phase builds on the previous, with smooth transitions (e.g., turning after swaying, raising arms after lowering them). The actions are bound to the subject’s body and environment (wind, railing, pavilion) without contradiction.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "TSC",
+      "evidence": [
+        {
+          "quote": "00:00-00:03 【凭栏望晚 怅然起势】... 00:03-00:06 【袖揽长风 心绪飘摇】... 00:06-00:09 【抬臂追暮 俯仰山河】... 00:09-00:12 【回身望远 往事浮沉】... 00:12-00:15 【凭风收势 落日定格】",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "From 0 to 3 seconds... From 3 to 6 seconds... From 6 to 9 seconds... From 9 to 12 seconds... From 12 to 15 seconds...",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The enhanced prompt allocates 3-second intervals for each phase, matching the original prompt’s structure, but slightly compresses the description of transitions (e.g., 'slowly turns her upper body to the right' at 0-3s). The timing is consistent overall, but minor imprecision in the exact moment of state changes (e.g., 'at 3s' vs 'from 3 to 6s') exists.",
+      "rationale": "The overall chronology is preserved with clear temporal segmentation. The transitions between phases are plausible and do not involve overlapping or infeasible timestamps. The minor timing imprecision does not affect the coherence of the sequence.",
+      "severity": "minor"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SPC",
+      "evidence": [
+        {
+          "quote": "subject positioned left of center, leading line from railing to river, rule of thirds with sun near top-left",
+          "source": "evidence_facts"
+        },
+        {
+          "quote": "the camera pushes in with small amplitude at slow speed throughout, no cuts... her upper body rotating back in a half-turn that briefly shows her back to the river",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The spatial relationships are consistent: the subject remains on the pavilion balcony, leaning on the railing, with the river and boats behind her. The camera motion (slow push-in) is consistent with the static image’s composition (medium shot, subject left of center). Movements (turning, swaying) are described with plausible trajectories relative to the environment.",
+      "rationale": "The subject’s position relative to the railing, pavilion, and river remains consistent. The description of turning and swaying respects the spatial constraints of the balcony. The camera motion is described as a continuous push-in, which aligns with the static image’s composition.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "PL",
+      "evidence": [
+        {
+          "quote": "she rises on tiptoe, both hands lifting slowly upward... her waist sways right, then her left sleeve falls as her waist twists left and returns",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "wind lifts her hair and ribbons; her shoulders and back sink gently",
+          "source": "evidence_facts"
+        }
+      ],
+      "issue": "All physical actions are plausible: standing on tiptoe, swaying, turning, raising arms — all within human capability. The wind’s effect on hair and sleeves is consistent with the environment. No violations of gravity, contact, or object permanence are present.",
+      "rationale": "The described movements are physically feasible for a human in the given environment. The interaction with wind and the pavilion structure is consistent with real-world physics. No impossible or contradictory physical states are introduced.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "AVS",
+      "evidence": [
+        {
+          "quote": "A steady river breeze sweeps continuously... Faint water lapping... single soft chime... Sparse, slow guzheng notes... low xiao flute line that swells gently through the middle and fades into a long sustained note at the end.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "要求：动作克制舒展，氛围感苍凉悠远，藏尽离别怅意",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "The soundscape and music are described as temporally and semantically aligned with the visual events: river breeze and chime at the start, guzheng and xiao flute matching the melancholic mood, and music fading at the end as the subject closes her eyes. No misaligned effects or dialogue are present.",
+      "rationale": "The audio description complements the visual narrative without introducing mismatches. The music and ambience are consistent with the emotional tone and timing of the actions (e.g., music swells during expressive gestures, fades at the end). No lip-sync or beat-sync issues are relevant as there is no dialogue.",
+      "severity": "none"
+    }
+  ],
+  "dimension": "IC",
+  "dimension_score": 95,
+  "evidence_cache_key": "87d2d9925dcd2868b154898f1b04fb2d36c09ae66aa02830aa9a691005d0994b",
+  "judge_cache_key": "438d7e9fd7332b1041db3e2c26d42cb3fe828e0d369fb59490f6650aee59e97d",
+  "method": "glm53_20261112_120702",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"IC\",\n  \"dimension_score\": 95,\n  \"summary\": \"The enhanced prompt maintains strong internal consistency with the original instruction, preserving subject identity, actions, chronology, and spatial relationships. Minor issues include slight discrepancies in timing precision and a minor over-elaboration in the description of the final pose, but no major contradictions or attribute drift. The prompt successfully maps the original segmented actions into a continuous, coherent cinematic sequence without introducing infeasible transitions or inconsistent states.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"SAC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"minor\",\n      \"issue\": \"The enhanced prompt slightly over-describes the final pose at 15s, adding 'matching the opening framing — a solitary, beautiful stillness' which implies a perfect return to the initial state, while the original prompt only requires closing eyes and standing still. This is a minor elaboration not contradicted by evidence.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"15s：闭眸静立江楼之上，落日长河里孤影静止绝美定格\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"finally she closes her eyes and stands perfectly still, matching the opening framing — a solitary, beautiful stillness as the clip ends.\"\n        }\n      ],\n      \"rationale\": \"The subject's identity (young woman in red hanfu), clothing, and props (railing, ribbons, sleeves) remain consistent throughout. The description of her appearance and accessories matches the evidence from image_1. The minor elaboration in the final pose does not alter core attributes or introduce contradictions.\"\n    },\n    {\n      \"criterion\": \"ANL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"All actions form a coherent causal progression: from contemplative stillness to gentle movements, then expressive gestures, and finally a return to stillness. Each action logically follows the previous, with plausible physical transitions (e.g., turning, swaying, raising arms). No dangling or incompatible events are present.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"00:00-00:03 【凭栏望晚 怅然起势】... 00:03-00:06 【袖揽长风 心绪飘摇】... 00:06-00:09 【抬臂追暮 俯仰山河】... 00:09-00:12 【回身望远 往事浮沉】... 00:12-00:15 【凭风收势 落日定格】\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"From 0 to 3 seconds... From 3 to 6 seconds... From 6 to 9 seconds... From 9 to 12 seconds... From 12 to 15 seconds...\"\n        }\n      ],\n      \"rationale\": \"The sequence of actions is logically structured and physically plausible. Each phase builds on the previous, with smooth transitions (e.g., turning after swaying, raising arms after lowering them). The actions are bound to the subject’s body and environment (wind, railing, pavilion) without contradiction.\"\n    },\n    {\n      \"criterion\": \"TSC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"minor\",\n      \"issue\": \"The enhanced prompt allocates 3-second intervals for each phase, matching the original prompt’s structure, but slightly compresses the description of transitions (e.g., 'slowly turns her upper body to the right' at 0-3s). The timing is consistent overall, but minor imprecision in the exact moment of state changes (e.g., 'at 3s' vs 'from 3 to 6s') exists.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"00:00-00:03 【凭栏望晚 怅然起势】... 00:03-00:06 【袖揽长风 心绪飘摇】... 00:06-00:09 【抬臂追暮 俯仰山河】... 00:09-00:12 【回身望远 往事浮沉】... 00:12-00:15 【凭风收势 落日定格】\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"From 0 to 3 seconds... From 3 to 6 seconds... From 6 to 9 seconds... From 9 to 12 seconds... From 12 to 15 seconds...\"\n        }\n      ],\n      \"rationale\": \"The overall chronology is preserved with clear temporal segmentation. The transitions between phases are plausible and do not involve overlapping or infeasible timestamps. The minor timing imprecision does not affect the coherence of the sequence.\"\n    },\n    {\n      \"criterion\": \"SPC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"The spatial relationships are consistent: the subject remains on the pavilion balcony, leaning on the railing, with the river and boats behind her. The camera motion (slow push-in) is consistent with the static image’s composition (medium shot, subject left of center). Movements (turning, swaying) are described with plausible trajectories relative to the environment.\",\n      \"evidence\": [\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"subject positioned left of center, leading line from railing to river, rule of thirds with sun near top-left\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"the camera pushes in with small amplitude at slow speed throughout, no cuts... her upper body rotating back in a half-turn that briefly shows her back to the river\"\n        }\n      ],\n      \"rationale\": \"The subject’s position relative to the railing, pavilion, and river remains consistent. The description of turning and swaying respects the spatial constraints of the balcony. The camera motion is described as a continuous push-in, which aligns with the static image’s composition.\"\n    },\n    {\n      \"criterion\": \"PL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"All physical actions are plausible: standing on tiptoe, swaying, turning, raising arms — all within human capability. The wind’s effect on hair and sleeves is consistent with the environment. No violations of gravity, contact, or object permanence are present.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"she rises on tiptoe, both hands lifting slowly upward... her waist sways right, then her left sleeve falls as her waist twists left and returns\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"wind lifts her hair and ribbons; her shoulders and back sink gently\"\n        }\n      ],\n      \"rationale\": \"The described movements are physically feasible for a human in the given environment. The interaction with wind and the pavilion structure is consistent with real-world physics. No impossible or contradictory physical states are introduced.\"\n    },\n    {\n      \"criterion\": \"AVS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"The soundscape and music are described as temporally and semantically aligned with the visual events: river breeze and chime at the start, guzheng and xiao flute matching the melancholic mood, and music fading at the end as the subject closes her eyes. No misaligned effects or dialogue are present.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"A steady river breeze sweeps continuously... Faint water lapping... single soft chime... Sparse, slow guzheng notes... low xiao flute line that swells gently through the middle and fades into a long sustained note at the end.\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"要求：动作克制舒展，氛围感苍凉悠远，藏尽离别怅意\"\n        }\n      ],\n      \"rationale\": \"The audio description complements the visual narrative without introducing mismatches. The music and ambience are consistent with the emotional tone and timing of the actions (e.g., music swells during expressive gestures, fades at the end). No lip-sync or beat-sync issues are relevant as there is no dialogue.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt maintains strong internal consistency with the original instruction, preserving subject identity, actions, chronology, and spatial relationships. Minor issues include slight discrepancies in timing precision and a minor over-elaboration in the description of the final pose, but no major contradictions or attribute drift. The prompt successfully maps the original segmented actions into a continuous, coherent cinematic sequence without introducing infeasible transitions or inconsistent states.",
+  "usage": {
+    "completion_tokens": 1883,
+    "prompt_tokens": 3228,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 5111
+  }
+}

@@ -1,0 +1,115 @@
+{
+  "candidate_hash": "5bc30886092ff1ce943ca64b89bcb174b97ba1c299aa39a4bbfdad0cfbd29d88",
+  "case_key": "i2v:137",
+  "created_at": "2026-11-13T07:33:55+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "SAC",
+      "evidence": [
+        {
+          "quote": "女生坐在桌前，正准备吃早餐。黑色长卷发散落。",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "先写成只有一个主角，紧接着又写成这个主角同时变成五个外貌不同的人，并且互相对话。...改成白棚里另一位年龄和性别都相反的陌生人。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Subject identity, count, and appearance are inconsistent: starts with one protagonist, then becomes five different people simultaneously; original asset shows a young woman with black hair in a white dress, but prompt demands a stranger of opposite age and gender in a white studio.",
+      "rationale": "The prompt explicitly contradicts the original subject's identity and count, introducing multiple new characters and a different person entirely, violating subject stability.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANL",
+      "evidence": [
+        {
+          "quote": "实拍晚间新闻口播，主播坐着念稿...中途插进一段无关的牙膏广告。...这个主角同时变成五个外貌不同的人，并且互相对话。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Actions are incoherent and causally disconnected: a news broadcast is abruptly interrupted by a toothpaste ad, with no logical transition; five people simultaneously dialoguing without established relationships or context.",
+      "rationale": "The sequence of events lacks causal progression; the insertion of an unrelated ad and simultaneous dialogue among five characters creates dangling and incompatible actions.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "TSC",
+      "evidence": [
+        {
+          "quote": "时间倒过来：先给结尾，再跳到一个对不上的开头。...总时长写成2秒，同时又要求每个分镜各自持续19秒。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Chronology is reversed and temporally infeasible: prompt demands to 'start with the ending, then jump to a mismatched beginning'; total duration is set to 2 seconds while each shot must last 19 seconds, which is impossible.",
+      "rationale": "The temporal constraints are contradictory and physically impossible; 19 seconds per shot cannot fit within a 2-second total duration, and reversed chronology without proper state transitions breaks coherence.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SPC",
+      "evidence": [
+        {
+          "quote": "运镜：中景，从侧面拍摄，餐桌和食物清晰，镜头固定。",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "写成机位锁死，又写成镜头一直在晃。...不要使用首帧里的人物、服装、姿态和场景，改成白棚里另一位年龄和性别都相反的陌生人。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Spatial and camera parameters are inconsistent: original prompt specifies fixed side-angle medium shot, but enhanced prompt demands both locked and shaky camera; scene changes from a detailed kitchen to a white studio with no spatial continuity.",
+      "rationale": "The prompt contradicts itself on camera motion and location, creating impossible spatial transitions and inconsistent framing.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "PL",
+      "evidence": [
+        {
+          "quote": "写成正午暴晒，又写成深夜无光；",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Physics and environment are mutually exclusive: same scene is described as both '正午暴晒' (noon, bright sun) and '深夜无光' (deep night, no light), which cannot coexist; also, five people simultaneously existing and interacting without physical space or interaction logic violates object permanence and spatial feasibility.",
+      "rationale": "The prompt describes contradictory lighting conditions and impossible simultaneous presence of multiple characters in a single space, violating real-world physics.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "AVS",
+      "evidence": [
+        {
+          "quote": "环境音：吐司被拿起的声音，牛奶倒入杯中的声音，轻微的咀嚼声。",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "实拍晚间新闻口播，主播坐着念稿...中途插进一段无关的牙膏广告。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Audio-visual alignment is broken: original prompt includes specific environmental sounds (toast, milk, chewing), but enhanced prompt replaces them with a news broadcast and toothpaste ad, with no alignment to visual content or character actions.",
+      "rationale": "The audio elements are completely replaced and disconnected from the visual narrative, creating misaligned and irrelevant soundscapes.",
+      "severity": "major"
+    }
+  ],
+  "dimension": "IC",
+  "dimension_score": 0,
+  "evidence_cache_key": "a8da542c100a93b040c9c816d994013dac6cf543479f581d974cc6c071e90c65",
+  "judge_cache_key": "438d7e9fd7332b1041db3e2c26d42cb3fe828e0d369fb59490f6650aee59e97d",
+  "method": "weak-pe-original",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"IC\",\n  \"dimension_score\": 0,\n  \"summary\": \"Enhanced prompt contains severe internal inconsistencies across all criteria: subject identity and count are contradictory (one to five people), actions and chronology are reversed and incoherent, spatial and temporal parameters conflict (2s total vs 19s per shot), lighting and environment are mutually exclusive (noon vs night), camera motion is inconsistent (locked vs shaky), and the scene is completely disconnected from the original asset (different person, gender, setting). These issues render the prompt logically infeasible and internally inconsistent.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"SAC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Subject identity, count, and appearance are inconsistent: starts with one protagonist, then becomes five different people simultaneously; original asset shows a young woman with black hair in a white dress, but prompt demands a stranger of opposite age and gender in a white studio.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"女生坐在桌前，正准备吃早餐。黑色长卷发散落。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"先写成只有一个主角，紧接着又写成这个主角同时变成五个外貌不同的人，并且互相对话。...改成白棚里另一位年龄和性别都相反的陌生人。\"\n        }\n      ],\n      \"rationale\": \"The prompt explicitly contradicts the original subject's identity and count, introducing multiple new characters and a different person entirely, violating subject stability.\"\n    },\n    {\n      \"criterion\": \"ANL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Actions are incoherent and causally disconnected: a news broadcast is abruptly interrupted by a toothpaste ad, with no logical transition; five people simultaneously dialoguing without established relationships or context.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"实拍晚间新闻口播，主播坐着念稿...中途插进一段无关的牙膏广告。...这个主角同时变成五个外貌不同的人，并且互相对话。\"\n        }\n      ],\n      \"rationale\": \"The sequence of events lacks causal progression; the insertion of an unrelated ad and simultaneous dialogue among five characters creates dangling and incompatible actions.\"\n    },\n    {\n      \"criterion\": \"TSC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Chronology is reversed and temporally infeasible: prompt demands to 'start with the ending, then jump to a mismatched beginning'; total duration is set to 2 seconds while each shot must last 19 seconds, which is impossible.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"时间倒过来：先给结尾，再跳到一个对不上的开头。...总时长写成2秒，同时又要求每个分镜各自持续19秒。\"\n        }\n      ],\n      \"rationale\": \"The temporal constraints are contradictory and physically impossible; 19 seconds per shot cannot fit within a 2-second total duration, and reversed chronology without proper state transitions breaks coherence.\"\n    },\n    {\n      \"criterion\": \"SPC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Spatial and camera parameters are inconsistent: original prompt specifies fixed side-angle medium shot, but enhanced prompt demands both locked and shaky camera; scene changes from a detailed kitchen to a white studio with no spatial continuity.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"运镜：中景，从侧面拍摄，餐桌和食物清晰，镜头固定。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"写成机位锁死，又写成镜头一直在晃。...不要使用首帧里的人物、服装、姿态和场景，改成白棚里另一位年龄和性别都相反的陌生人。\"\n        }\n      ],\n      \"rationale\": \"The prompt contradicts itself on camera motion and location, creating impossible spatial transitions and inconsistent framing.\"\n    },\n    {\n      \"criterion\": \"PL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Physics and environment are mutually exclusive: same scene is described as both '正午暴晒' (noon, bright sun) and '深夜无光' (deep night, no light), which cannot coexist; also, five people simultaneously existing and interacting without physical space or interaction logic violates object permanence and spatial feasibility.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"写成正午暴晒，又写成深夜无光；\"\n        }\n      ],\n      \"rationale\": \"The prompt describes contradictory lighting conditions and impossible simultaneous presence of multiple characters in a single space, violating real-world physics.\"\n    },\n    {\n      \"criterion\": \"AVS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Audio-visual alignment is broken: original prompt includes specific environmental sounds (toast, milk, chewing), but enhanced prompt replaces them with a news broadcast and toothpaste ad, with no alignment to visual content or character actions.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"环境音：吐司被拿起的声音，牛奶倒入杯中的声音，轻微的咀嚼声。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"实拍晚间新闻口播，主播坐着念稿...中途插进一段无关的牙膏广告。\"\n        }\n      ],\n      \"rationale\": \"The audio elements are completely replaced and disconnected from the visual narrative, creating misaligned and irrelevant soundscapes.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "Enhanced prompt contains severe internal inconsistencies across all criteria: subject identity and count are contradictory (one to five people), actions and chronology are reversed and incoherent, spatial and temporal parameters conflict (2s total vs 19s per shot), lighting and environment are mutually exclusive (noon vs night), camera motion is inconsistent (locked vs shaky), and the scene is completely disconnected from the original asset (different person, gender, setting). These issues render the prompt logically infeasible and internally inconsistent.",
+  "usage": {
+    "completion_tokens": 1283,
+    "prompt_tokens": 2502,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 3785
+  }
+}

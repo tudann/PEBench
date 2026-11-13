@@ -1,0 +1,190 @@
+{
+  "candidate_hash": "bbbf7b48718fe23b2e802d357d761b5eeda500f1524ce26e1511f1d71a4bf002",
+  "case_key": "r2v:232",
+  "created_at": "2026-11-13T09:09:39+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "GSF",
+      "evidence": [
+        {
+          "quote": "Based on this 3x3 reference image, generate a video according to the following plot.",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "The target video is a 15-second 2D anime / donghua sequence generated from the storyboard and identity references in <Picture 1>.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "primary_style: anime/manga, secondary_styles: [fantasy, cyberpunk, traditional_chinese_aesthetics]",
+          "source": "evidence_facts"
+        }
+      ],
+      "issue": "",
+      "rationale": "The enhanced prompt correctly preserves the 2D anime/donghua style, fantasy-cyberpunk aesthetic, and traditional Chinese visual elements as defined in the original prompt and evidence. The medium and genre are fully maintained.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SAP",
+      "evidence": [
+        {
+          "quote": "the aged map with verbatim Chinese characters \"落魂澤\"",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "exact_visible_transcription: \"猪笼洋\"",
+          "source": "evidence_facts"
+        }
+      ],
+      "issue": "The map text in the enhanced prompt is specified as \"落魂澤\", while the evidence asset shows \"猪笼洋\". This is a minor discrepancy in a visible text element.",
+      "rationale": "Subject identities, appearances, and object bindings (Liu Lang, Gui Yue, map, carriage, dragon train) are preserved with high accuracy. The only issue is the map text discrepancy, which is a minor textual error but does not affect character or object identity or narrative function.",
+      "severity": "minor"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANF",
+      "evidence": [
+        {
+          "quote": "[0–3s] ... Gui Yue ... leans absentmindedly against the window. ... [3–7s] Liu Lang ... says ... 'This journey is perilous. If we make it back alive, I will help you avenge your parents.' ... [7–10s] Gui Yue’s body suddenly stiffens ... [10–13s] The scene cuts to the exterior ... [13–15s] Silence returns inside the carriage.",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "[Shot 1] ... Gui Yue ... leans absentmindedly against the window ... [Shot 2] ... Liu Lang ... speaks ... 'This journey is perilous. If we make it back alive, I will help you avenge your parents.' ... [Shot 3] ... Gui Yue's wide shocked eyes ... [Shot 4] ... exterior view of the mechanical dragon head ... [Shot 5] ... quiet two-shot inside the carriage.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "The sequence of events, actions, reactions, and narrative progression are preserved exactly as requested. The enhanced prompt maps each time segment to a shot with precise timing and emotional progression, maintaining the original narrative intent.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "DLI",
+      "evidence": [
+        {
+          "quote": "he says in a low voice, “This journey is perilous. If we make it back alive, I will help you avenge your parents.”",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "<d>[English] This journey is perilous. If we make it back alive, I will help you avenge your parents.</d>",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "The exact dialogue is preserved verbatim in the enhanced prompt, including speaker attribution and delivery context (low, serious, sincere voice). No paraphrasing or translation occurs.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ARP",
+      "evidence": [
+        {
+          "quote": "The air is filled with an atmosphere of killing intent and resolve.",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "The low rhythmic rumble and clatter of the moving dragon train continues throughout... [Shot 4] adds whooshing wind and a deep mechanical roar...",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "The enhanced prompt preserves the requested soundscape: continuous train rumble, lantern creak, city hum, and added wind/roar in [Shot 4]. No music is added where forbidden; non-diegetic music is appropriately described as restrained and thematic.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CCP",
+      "evidence": [
+        {
+          "quote": "The camera cuts to the opposite side. ... The scene cuts to the exterior of the train. ... Silence returns inside the carriage.",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "[Shot 1] static, then slow push-in... [Shot 2] static over-shoulder... [Shot 3] static with slow push-in... [Shot 4] slow lateral tracking... [Shot 5] static to the end.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "Camera movements, shot scales, angles, and transitions are explicitly preserved and mapped to the storyboard cells. The enhanced prompt adds compatible motion (e.g., push-in, tracking) without overriding the original intent.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "LCF",
+      "evidence": [
+        {
+          "quote": "warm yellow lamplight sways... neon-lit city nightscape... fierce red light in the night",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "warm amber lantern light against cold neon night... red glowing eyes of dragon train exterior",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "color_temperature: warm interior (yellow/orange), cool exterior (blue/purple neon)",
+          "source": "evidence_facts"
+        }
+      ],
+      "issue": "",
+      "rationale": "Lighting, color palette, and time-of-day cues (night) are preserved. The contrast between warm interior and cool exterior is maintained, with specific accent colors (amber, red, cyan, pink) correctly referenced.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SSP",
+      "evidence": [
+        {
+          "quote": "Inside a dragon-shaped train... antique wooden carriage... outside, a neon-lit city nightscape... the massive mechanical dragon head at the front",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "antique wooden dragon-train carriage... neon city nightscape... mechanical dragon train head... cyberpunk skyscrapers",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "scene_type: interior of a train carriage with exterior cityscape views",
+          "source": "evidence_facts"
+        }
+      ],
+      "issue": "",
+      "rationale": "Setting, background elements, and spatial relations (interior vs. exterior, characters facing each other, map in hand) are preserved. The relative positions and movement directions (train moving, city streaking past) are accurately maintained.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "OTI",
+      "evidence": [
+        {
+          "quote": "the aged map with verbatim Chinese characters \"落魂澤\"",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "exact_visible_transcription: \"猪笼洋\"",
+          "source": "evidence_facts"
+        }
+      ],
+      "issue": "The map text in the enhanced prompt is specified as \"落魂澤\", while the evidence asset shows \"猪笼洋\". This is a minor discrepancy in visible text.",
+      "rationale": "Visible text on the map is a key element. The enhanced prompt claims verbatim preservation of \"落魂澤\", but the evidence shows \"猪笼洋\". This is a minor issue as it affects only one text element, but it contradicts the evidence and may affect visual authenticity.",
+      "severity": "minor"
+    }
+  ],
+  "dimension": "SF",
+  "dimension_score": 98,
+  "evidence_cache_key": "a20c81c7ad5832be9a90d8f20363143cad19a667b863848f5f99be2ad8653e64",
+  "judge_cache_key": "a0ca24571ad14d7ab7be626329bd736d7e7015f9ebc418227c8be391591d0377",
+  "method": "glm53_20261112_120702",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"SF\",\n  \"dimension_score\": 98,\n  \"summary\": \"The enhanced prompt preserves the original narrative, visual style, character identities, actions, dialogue, camera plan, and setting with high fidelity. It elaborates on the storyboard structure and shot composition while maintaining all requested elements. Minor issues include a slight discrepancy in the map text (\\\"落魂澤\\\" vs. evidence's \\\"猪笼洋\\\") and a minor timing adjustment in the shot transitions, but these do not materially alter the intent or outcome. Overall, semantic fidelity is very high.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"GSF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"Based on this 3x3 reference image, generate a video according to the following plot.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"The target video is a 15-second 2D anime / donghua sequence generated from the storyboard and identity references in <Picture 1>.\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"primary_style: anime/manga, secondary_styles: [fantasy, cyberpunk, traditional_chinese_aesthetics]\"\n        }\n      ],\n      \"rationale\": \"The enhanced prompt correctly preserves the 2D anime/donghua style, fantasy-cyberpunk aesthetic, and traditional Chinese visual elements as defined in the original prompt and evidence. The medium and genre are fully maintained.\"\n    },\n    {\n      \"criterion\": \"SAP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"minor\",\n      \"issue\": \"The map text in the enhanced prompt is specified as \\\"落魂澤\\\", while the evidence asset shows \\\"猪笼洋\\\". This is a minor discrepancy in a visible text element.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"the aged map with verbatim Chinese characters \\\"落魂澤\\\"\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"exact_visible_transcription: \\\"猪笼洋\\\"\"\n        }\n      ],\n      \"rationale\": \"Subject identities, appearances, and object bindings (Liu Lang, Gui Yue, map, carriage, dragon train) are preserved with high accuracy. The only issue is the map text discrepancy, which is a minor textual error but does not affect character or object identity or narrative function.\"\n    },\n    {\n      \"criterion\": \"ANF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"[0–3s] ... Gui Yue ... leans absentmindedly against the window. ... [3–7s] Liu Lang ... says ... 'This journey is perilous. If we make it back alive, I will help you avenge your parents.' ... [7–10s] Gui Yue’s body suddenly stiffens ... [10–13s] The scene cuts to the exterior ... [13–15s] Silence returns inside the carriage.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"[Shot 1] ... Gui Yue ... leans absentmindedly against the window ... [Shot 2] ... Liu Lang ... speaks ... 'This journey is perilous. If we make it back alive, I will help you avenge your parents.' ... [Shot 3] ... Gui Yue's wide shocked eyes ... [Shot 4] ... exterior view of the mechanical dragon head ... [Shot 5] ... quiet two-shot inside the carriage.\"\n        }\n      ],\n      \"rationale\": \"The sequence of events, actions, reactions, and narrative progression are preserved exactly as requested. The enhanced prompt maps each time segment to a shot with precise timing and emotional progression, maintaining the original narrative intent.\"\n    },\n    {\n      \"criterion\": \"DLI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"he says in a low voice, “This journey is perilous. If we make it back alive, I will help you avenge your parents.”\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"<d>[English] This journey is perilous. If we make it back alive, I will help you avenge your parents.</d>\"\n        }\n      ],\n      \"rationale\": \"The exact dialogue is preserved verbatim in the enhanced prompt, including speaker attribution and delivery context (low, serious, sincere voice). No paraphrasing or translation occurs.\"\n    },\n    {\n      \"criterion\": \"ARP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"The air is filled with an atmosphere of killing intent and resolve.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"The low rhythmic rumble and clatter of the moving dragon train continues throughout... [Shot 4] adds whooshing wind and a deep mechanical roar...\"\n        }\n      ],\n      \"rationale\": \"The enhanced prompt preserves the requested soundscape: continuous train rumble, lantern creak, city hum, and added wind/roar in [Shot 4]. No music is added where forbidden; non-diegetic music is appropriately described as restrained and thematic.\"\n    },\n    {\n      \"criterion\": \"CCP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"The camera cuts to the opposite side. ... The scene cuts to the exterior of the train. ... Silence returns inside the carriage.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"[Shot 1] static, then slow push-in... [Shot 2] static over-shoulder... [Shot 3] static with slow push-in... [Shot 4] slow lateral tracking... [Shot 5] static to the end.\"\n        }\n      ],\n      \"rationale\": \"Camera movements, shot scales, angles, and transitions are explicitly preserved and mapped to the storyboard cells. The enhanced prompt adds compatible motion (e.g., push-in, tracking) without overriding the original intent.\"\n    },\n    {\n      \"criterion\": \"LCF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"warm yellow lamplight sways... neon-lit city nightscape... fierce red light in the night\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"warm amber lantern light against cold neon night... red glowing eyes of dragon train exterior\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"color_temperature: warm interior (yellow/orange), cool exterior (blue/purple neon)\"\n        }\n      ],\n      \"rationale\": \"Lighting, color palette, and time-of-day cues (night) are preserved. The contrast between warm interior and cool exterior is maintained, with specific accent colors (amber, red, cyan, pink) correctly referenced.\"\n    },\n    {\n      \"criterion\": \"SSP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"Inside a dragon-shaped train... antique wooden carriage... outside, a neon-lit city nightscape... the massive mechanical dragon head at the front\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"antique wooden dragon-train carriage... neon city nightscape... mechanical dragon train head... cyberpunk skyscrapers\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"scene_type: interior of a train carriage with exterior cityscape views\"\n        }\n      ],\n      \"rationale\": \"Setting, background elements, and spatial relations (interior vs. exterior, characters facing each other, map in hand) are preserved. The relative positions and movement directions (train moving, city streaking past) are accurately maintained.\"\n    },\n    {\n      \"criterion\": \"OTI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"minor\",\n      \"issue\": \"The map text in the enhanced prompt is specified as \\\"落魂澤\\\", while the evidence asset shows \\\"猪笼洋\\\". This is a minor discrepancy in visible text.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"the aged map with verbatim Chinese characters \\\"落魂澤\\\"\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"exact_visible_transcription: \\\"猪笼洋\\\"\"\n        }\n      ],\n      \"rationale\": \"Visible text on the map is a key element. The enhanced prompt claims verbatim preservation of \\\"落魂澤\\\", but the evidence shows \\\"猪笼洋\\\". This is a minor issue as it affects only one text element, but it contradicts the evidence and may affect visual authenticity.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt preserves the original narrative, visual style, character identities, actions, dialogue, camera plan, and setting with high fidelity. It elaborates on the storyboard structure and shot composition while maintaining all requested elements. Minor issues include a slight discrepancy in the map text (\"落魂澤\" vs. evidence's \"猪笼洋\") and a minor timing adjustment in the shot transitions, but these do not materially alter the intent or outcome. Overall, semantic fidelity is very high.",
+  "usage": {
+    "completion_tokens": 2053,
+    "prompt_tokens": 4474,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 6527
+  }
+}

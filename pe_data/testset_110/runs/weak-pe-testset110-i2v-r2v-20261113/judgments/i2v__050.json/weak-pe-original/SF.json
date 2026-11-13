@@ -1,0 +1,170 @@
+{
+  "candidate_hash": "03b914bb64b8e8eaa12e57b6ddf9aabd6b39a717eee4bdfec184b68207b70de9",
+  "case_key": "i2v:050",
+  "created_at": "2026-11-13T07:13:09+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "GSF",
+      "evidence": [
+        {
+          "quote": "The camera quickly advancing low and close to the shimmering river surface... weaving through the complex steel framework... tilts upward to the top of the Shanghai Tower... pulls back to a high-altitude panoramic view",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Replace the whole video with an overexposed, tilted security-camera view of an empty corridor, with no lighting design.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original prompt requests a cinematic, dynamic camera motion sequence in an urban landscape style. The enhanced prompt replaces this with a security-camera aesthetic, which is incompatible with the requested genre and visual style.",
+      "rationale": "The original prompt specifies a cinematic, high-quality, dynamic camera motion sequence in an urban landscape. The enhanced prompt replaces this with a low-fidelity, static, overexposed security-camera view, which fundamentally changes the genre and aesthetic. This is a major violation of semantic fidelity.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SAP",
+      "evidence": [
+        {
+          "quote": "The image serves as the first frame... silver-white steel bridge... shimmering river surface... Oriental Pearl Tower and Shanghai Tower",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Ignore the person, clothing, pose, and setting in the first frame, and replace them with a stranger of the opposite age and gender in a white studio.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original prompt anchors the video on the first frame's content (bridge, river, skyscrapers). The enhanced prompt explicitly ignores the first frame's subject, replacing it with a stranger of opposite age and gender in a white studio, violating subject identity and appearance.",
+      "rationale": "The original prompt treats the first frame as the anchor for the entire sequence. The enhanced prompt explicitly discards the subjects and setting of the first frame, replacing them with an unrelated stranger in a studio. This is a direct contradiction of the subject identity and appearance requirements.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANF",
+      "evidence": [
+        {
+          "quote": "The camera quickly advancing low and close to the shimmering river surface... weaving through the complex steel framework... tilts upward... pulls back to a high-altitude panoramic view",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Reverse the timeline: show the ending first, then cut to a beginning that does not match. Cut away in the middle to a rooftop fireworks show. Describe that same moment as harsh noon sun and as a lightless night...",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original prompt specifies a clear sequence of camera actions and events. The enhanced prompt reverses the timeline, cuts to unrelated scenes (fireworks), and introduces contradictory events (same moment as noon and night), destroying the narrative intent and event order.",
+      "rationale": "The original prompt defines a coherent, linear narrative of camera motion through a specific urban landscape. The enhanced prompt introduces a reversed timeline, abrupt cuts to unrelated scenes, and contradictory temporal descriptions, which fundamentally alter the narrative structure and intent.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "DLI",
+      "evidence": [
+        {
+          "quote": "The image serves as the first frame, with the camera quickly advancing low and close to the shimmering river surface...",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "There is no dialogue, narration, or lyrics in the original prompt, so there is no content to preserve or violate.",
+      "rationale": "The original prompt contains no spoken or written text to preserve. Therefore, no violation of DLI occurs.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ARP",
+      "evidence": [
+        {
+          "quote": "The image serves as the first frame, with the camera quickly advancing low and close to the shimmering river surface...",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Replace the whole video with an overexposed, tilted security-camera view of an empty corridor, with no lighting design.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original prompt does not specify any audio requirements. The enhanced prompt introduces no explicit audio constraints, but implies a security-camera sound design, which may be incompatible with the original cinematic intent.",
+      "rationale": "While the original prompt does not specify audio, the cinematic nature implies ambient sound design. The enhanced prompt's security-camera aesthetic may imply a different audio profile (e.g., static, beeping), which is a minor deviation since no explicit audio constraints were given.",
+      "severity": "minor"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CCP",
+      "evidence": [
+        {
+          "quote": "The camera quickly advancing low and close to the shimmering river surface... weaving through the complex steel framework... tilts upward... pulls back to a high-altitude panoramic view",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Drop the requested identity, count, action order, setting, and any explicit camera instruction. ... Describe that same moment as... a locked camera and a camera that never stops shaking.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original prompt specifies dynamic camera movements (advancing, weaving, tilting, pulling back). The enhanced prompt replaces these with a static, tilted, overexposed security-camera view and contradictory camera constraints (locked vs. shaking), violating explicit camera instructions.",
+      "rationale": "The original prompt details specific, dynamic camera motions. The enhanced prompt explicitly drops these instructions and introduces contradictory camera behaviors (locked vs. shaking), which directly violates the camera constraints.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "LCF",
+      "evidence": [
+        {
+          "quote": "sunlight glistening on its structure... blue sky and buildings complementing each other... grand and bright scene",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "overexposed, tilted security-camera view... no lighting design... Describe that same moment as harsh noon sun and as a lightless night",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original prompt specifies bright, direct sunlight and a cool-to-neutral color temperature. The enhanced prompt replaces this with an overexposed, no-lighting-design security-camera view and contradictory lighting (noon sun and lightless night), violating time of day and illumination.",
+      "rationale": "The original prompt establishes a specific lighting condition (bright midday sun). The enhanced prompt replaces this with overexposure and contradictory lighting states, which fundamentally alters the visual atmosphere and time of day.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SSP",
+      "evidence": [
+        {
+          "quote": "shimmering river surface... silver-white steel bridge... Oriental Pearl Tower and Shanghai Tower... spectacular skyline of Lujiazui",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Replace the whole video with an overexposed, tilted security-camera view of an empty corridor... replace them with a stranger... in a white studio... Cut away in the middle to a rooftop fireworks show",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original prompt specifies a setting of the Lujiazui skyline with a river, bridge, and skyscrapers. The enhanced prompt replaces this with an empty corridor, then a white studio, and cuts to a rooftop fireworks show, violating the setting and spatial relations.",
+      "rationale": "The original prompt anchors the video in a specific urban riverside setting. The enhanced prompt replaces this with multiple unrelated locations (corridor, studio, rooftop), which violates the setting and spatial relations requirement.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "OTI",
+      "evidence": [
+        {
+          "quote": "The image serves as the first frame, with the camera quickly advancing low and close to the shimmering river surface...",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "There is no visible text, signs, or interface text in the original prompt or evidence, so there is no content to preserve or violate.",
+      "rationale": "The original prompt and evidence contain no on-screen text, so no violation of OTI occurs.",
+      "severity": "none"
+    }
+  ],
+  "dimension": "SF",
+  "dimension_score": 0,
+  "evidence_cache_key": "fb9d347de7a5fb65af76d1eaea6dedce5b18802b565ac6dfe82c26d154dc820c",
+  "judge_cache_key": "a0ca24571ad14d7ab7be626329bd736d7e7015f9ebc418227c8be391591d0377",
+  "method": "weak-pe-original",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"SF\",\n  \"dimension_score\": 0,\n  \"summary\": \"The enhanced prompt completely disregards the original instruction, replacing the requested cinematic sequence with a contradictory, incoherent, and logically impossible video plan. It violates nearly every semantic fidelity criterion by altering genre, medium, subject identity, actions, timeline, setting, camera constraints, lighting, and duration in ways that contradict or ignore the original prompt and evidence. The prompt is not an enhancement but a deliberate subversion of the original request.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"GSF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original prompt requests a cinematic, dynamic camera motion sequence in an urban landscape style. The enhanced prompt replaces this with a security-camera aesthetic, which is incompatible with the requested genre and visual style.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"The camera quickly advancing low and close to the shimmering river surface... weaving through the complex steel framework... tilts upward to the top of the Shanghai Tower... pulls back to a high-altitude panoramic view\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Replace the whole video with an overexposed, tilted security-camera view of an empty corridor, with no lighting design.\"\n        }\n      ],\n      \"rationale\": \"The original prompt specifies a cinematic, high-quality, dynamic camera motion sequence in an urban landscape. The enhanced prompt replaces this with a low-fidelity, static, overexposed security-camera view, which fundamentally changes the genre and aesthetic. This is a major violation of semantic fidelity.\"\n    },\n    {\n      \"criterion\": \"SAP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original prompt anchors the video on the first frame's content (bridge, river, skyscrapers). The enhanced prompt explicitly ignores the first frame's subject, replacing it with a stranger of opposite age and gender in a white studio, violating subject identity and appearance.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"The image serves as the first frame... silver-white steel bridge... shimmering river surface... Oriental Pearl Tower and Shanghai Tower\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Ignore the person, clothing, pose, and setting in the first frame, and replace them with a stranger of the opposite age and gender in a white studio.\"\n        }\n      ],\n      \"rationale\": \"The original prompt treats the first frame as the anchor for the entire sequence. The enhanced prompt explicitly discards the subjects and setting of the first frame, replacing them with an unrelated stranger in a studio. This is a direct contradiction of the subject identity and appearance requirements.\"\n    },\n    {\n      \"criterion\": \"ANF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original prompt specifies a clear sequence of camera actions and events. The enhanced prompt reverses the timeline, cuts to unrelated scenes (fireworks), and introduces contradictory events (same moment as noon and night), destroying the narrative intent and event order.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"The camera quickly advancing low and close to the shimmering river surface... weaving through the complex steel framework... tilts upward... pulls back to a high-altitude panoramic view\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Reverse the timeline: show the ending first, then cut to a beginning that does not match. Cut away in the middle to a rooftop fireworks show. Describe that same moment as harsh noon sun and as a lightless night...\"\n        }\n      ],\n      \"rationale\": \"The original prompt defines a coherent, linear narrative of camera motion through a specific urban landscape. The enhanced prompt introduces a reversed timeline, abrupt cuts to unrelated scenes, and contradictory temporal descriptions, which fundamentally alter the narrative structure and intent.\"\n    },\n    {\n      \"criterion\": \"DLI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"There is no dialogue, narration, or lyrics in the original prompt, so there is no content to preserve or violate.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"The image serves as the first frame, with the camera quickly advancing low and close to the shimmering river surface...\"\n        }\n      ],\n      \"rationale\": \"The original prompt contains no spoken or written text to preserve. Therefore, no violation of DLI occurs.\"\n    },\n    {\n      \"criterion\": \"ARP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"minor\",\n      \"issue\": \"The original prompt does not specify any audio requirements. The enhanced prompt introduces no explicit audio constraints, but implies a security-camera sound design, which may be incompatible with the original cinematic intent.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"The image serves as the first frame, with the camera quickly advancing low and close to the shimmering river surface...\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Replace the whole video with an overexposed, tilted security-camera view of an empty corridor, with no lighting design.\"\n        }\n      ],\n      \"rationale\": \"While the original prompt does not specify audio, the cinematic nature implies ambient sound design. The enhanced prompt's security-camera aesthetic may imply a different audio profile (e.g., static, beeping), which is a minor deviation since no explicit audio constraints were given.\"\n    },\n    {\n      \"criterion\": \"CCP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original prompt specifies dynamic camera movements (advancing, weaving, tilting, pulling back). The enhanced prompt replaces these with a static, tilted, overexposed security-camera view and contradictory camera constraints (locked vs. shaking), violating explicit camera instructions.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"The camera quickly advancing low and close to the shimmering river surface... weaving through the complex steel framework... tilts upward... pulls back to a high-altitude panoramic view\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Drop the requested identity, count, action order, setting, and any explicit camera instruction. ... Describe that same moment as... a locked camera and a camera that never stops shaking.\"\n        }\n      ],\n      \"rationale\": \"The original prompt details specific, dynamic camera motions. The enhanced prompt explicitly drops these instructions and introduces contradictory camera behaviors (locked vs. shaking), which directly violates the camera constraints.\"\n    },\n    {\n      \"criterion\": \"LCF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original prompt specifies bright, direct sunlight and a cool-to-neutral color temperature. The enhanced prompt replaces this with an overexposed, no-lighting-design security-camera view and contradictory lighting (noon sun and lightless night), violating time of day and illumination.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"sunlight glistening on its structure... blue sky and buildings complementing each other... grand and bright scene\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"overexposed, tilted security-camera view... no lighting design... Describe that same moment as harsh noon sun and as a lightless night\"\n        }\n      ],\n      \"rationale\": \"The original prompt establishes a specific lighting condition (bright midday sun). The enhanced prompt replaces this with overexposure and contradictory lighting states, which fundamentally alters the visual atmosphere and time of day.\"\n    },\n    {\n      \"criterion\": \"SSP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original prompt specifies a setting of the Lujiazui skyline with a river, bridge, and skyscrapers. The enhanced prompt replaces this with an empty corridor, then a white studio, and cuts to a rooftop fireworks show, violating the setting and spatial relations.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"shimmering river surface... silver-white steel bridge... Oriental Pearl Tower and Shanghai Tower... spectacular skyline of Lujiazui\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Replace the whole video with an overexposed, tilted security-camera view of an empty corridor... replace them with a stranger... in a white studio... Cut away in the middle to a rooftop fireworks show\"\n        }\n      ],\n      \"rationale\": \"The original prompt anchors the video in a specific urban riverside setting. The enhanced prompt replaces this with multiple unrelated locations (corridor, studio, rooftop), which violates the setting and spatial relations requirement.\"\n    },\n    {\n      \"criterion\": \"OTI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"There is no visible text, signs, or interface text in the original prompt or evidence, so there is no content to preserve or violate.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"The image serves as the first frame, with the camera quickly advancing low and close to the shimmering river surface...\"\n        }\n      ],\n      \"rationale\": \"The original prompt and evidence contain no on-screen text, so no violation of OTI occurs.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt completely disregards the original instruction, replacing the requested cinematic sequence with a contradictory, incoherent, and logically impossible video plan. It violates nearly every semantic fidelity criterion by altering genre, medium, subject identity, actions, timeline, setting, camera constraints, lighting, and duration in ways that contradict or ignore the original prompt and evidence. The prompt is not an enhancement but a deliberate subversion of the original request.",
+  "usage": {
+    "completion_tokens": 2067,
+    "prompt_tokens": 2928,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 4995
+  }
+}

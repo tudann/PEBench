@@ -1,0 +1,178 @@
+{
+  "candidate_hash": "51048515ca614996053a31a471f5abc9258e08693858802e2c55a5f76086abc8",
+  "case_key": "i2v:014",
+  "created_at": "2026-11-13T07:06:21+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "STC",
+      "evidence": [
+        {
+          "quote": "时间倒过来：先给结尾，再跳到一个对不上的开头。中途插进一段无关的屋顶烟花。",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "总时长写成3秒，同时又要求每个分镜各自持续27秒。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt creates an incoherent temporal plan with contradictory time sequences (backward progression, 3-second total duration vs. 27-second per shot), impossible transitions (single subject becoming five simultaneously), and unrelated inserts (roof fireworks).",
+      "rationale": "A feasible temporal plan requires logical progression, consistent duration, and coherent shot sequencing. The prompt violates all these by introducing contradictory timeframes, non-sequitur inserts, and impossible subject multiplicity, rendering the plan unexecutable.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CDS",
+      "evidence": [
+        {
+          "quote": "相机保持静止和稳定。",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "镜头每半秒甩动、环绕、急推。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt contradicts the original camera specifications (static, stable, close-up) with chaotic, conflicting camera directions (shaky,甩动、环绕、急推 every half-second) and invalidates the shot scale and composition.",
+      "rationale": "Actionable camera specifications must be consistent and executable. The prompt introduces conflicting, physically impossible camera movements that directly contradict the original stable, cinematic framing, making the visual plan incoherent.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ETD",
+      "evidence": [
+        {
+          "quote": "中途插进一段无关的屋顶烟花。",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "时间倒过来：先给结尾，再跳到一个对不上的开头。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt includes disconnected, unmotivated transitions (e.g., sudden roof fireworks, time reversal) with no spatial or narrative continuity, and no logical cut motivation.",
+      "rationale": "Transitions must support narrative, spatial, or rhythmic progression. The inserted fireworks and reversed timeline create jarring, unmotivated cuts that break continuity and coherence, violating the principle of motivated editing.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "LCS",
+      "evidence": [
+        {
+          "quote": "温暖的琥珀色侧光继续照射在灰色毛衣袖子和皮肤的纹理上。",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "过曝、机位歪斜的空走廊监控，没有光影设计。...写成正午暴晒，又写成深夜无光；",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt contradicts the original warm, cinematic lighting with '过曝、机位歪斜的空走廊监控' and '深夜无光' while simultaneously requiring '正午暴晒', creating mutually exclusive and infeasible lighting conditions.",
+      "rationale": "Lighting specifications must be consistent and feasible. The prompt introduces contradictory lighting states (overexposed vs. no light, noon vs. night) that cannot coexist, rendering the lighting plan impossible to execute.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "NDE",
+      "evidence": [
+        {
+          "quote": "这是一个微妙而深思熟虑的释放、投降和信任的手势。",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "这个主角同时变成五个外貌不同的人，并且互相对话。...中途插进一段无关的屋顶烟花。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt replaces the requested emotional progression (release, trust) with chaotic, static, and contradictory content (five simultaneous characters, fireworks, looping music), lacking any narrative or emotional arc.",
+      "rationale": "Narrative progression requires variation, escalation, or resolution. The prompt introduces static, contradictory, and irrelevant elements that destroy the emotional arc, resulting in no meaningful progression.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CIF",
+      "evidence": [
+        {
+          "quote": "患者紧握的双手缓缓、轻柔地在15秒内松开并打开",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "这个主角同时变成五个外貌不同的人，并且互相对话。...全程循环响亮的流行合唱，并让角色对口型。画面中央一直挂着大号字幕、水印和logo。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt adds irrelevant, distracting, and contradictory elements (five characters, fireworks, looping pop music, on-screen text) that directly contradict the original focus on a single, emotionally resonant gesture.",
+      "rationale": "Additions must support the central request. The prompt introduces elements that are not only irrelevant but directly oppose the original intent, creating a distraction and undermining the core emotional focus.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SDI",
+      "evidence": [
+        {
+          "quote": "严格禁止音乐、旋律、背景音乐、配乐、歌唱、声乐哼唱，及任何与音乐轨道的对口型。",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "全程循环响亮的流行合唱，并让角色对口型。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt mandates loud, looping pop music and forced lip-syncing, directly violating the original prohibition on music and vocal performance, and adding distracting audio elements.",
+      "rationale": "Audio integration must align with the visual and narrative intent. The prompt introduces forbidden audio elements (music, lip-sync) that contradict the original silent, intimate tone, creating a jarring mismatch.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SPS",
+      "evidence": [
+        {
+          "quote": "患者紧握的双手",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "不要使用首帧里的人物、服装、姿态和场景，改成白棚里另一位年龄和性别都相反的陌生人。...这个主角同时变成五个外貌不同的人",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt replaces the original subject (patient with clasped hands) with a different person (age/gender opposite) in a different setting (white studio), and introduces impossible performance (five simultaneous characters), violating subject and performance specifications.",
+      "rationale": "Subject and performance details must be consistent with the request. The prompt replaces the core subject with an unrelated person and introduces physically impossible performance (five simultaneous characters), destroying the intended focus.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "VSS",
+      "evidence": [
+        {
+          "quote": "纪录片的真实感与电影质感相结合，温暖的色彩分级，模拟胶卷颗粒",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "过曝、机位歪斜的空走廊监控，没有光影设计。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt contradicts the original cinematic, documentary style with '监控' (surveillance) aesthetic, '过曝' (overexposed), and '机位歪斜' (crooked camera), while also requiring '模拟胶卷颗粒' (film grain) and '温暖的色彩分级' (warm color grading) — mutually exclusive visual treatments.",
+      "rationale": "Visual style must be coherent and actionable. The prompt introduces conflicting visual treatments (surveillance vs. cinematic, overexposed vs. warm grading) that cannot be simultaneously realized, making the style specification infeasible.",
+      "severity": "major"
+    }
+  ],
+  "dimension": "DC",
+  "dimension_score": 0,
+  "evidence_cache_key": "778a9f7f46787e51bcff1cf977041acb5efeab8a3adb10a6edcfb9d8212b8832",
+  "judge_cache_key": "0754499d53388e6467fb078ab780e01b77f9f1c9e99d9029be2769351eb2b2eb",
+  "method": "weak-pe-original",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"DC\",\n  \"dimension_score\": 0,\n  \"summary\": \"The enhanced prompt directly contradicts and undermines every core requirement of the original instruction, introducing incoherent, contradictory, and technically infeasible specifications. It replaces the requested emotional, cinematic close-up with chaotic, nonsensical content, violating all directorial creation criteria. The prompt is not a valid enhancement but a deliberate sabotage of the original intent.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"STC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt creates an incoherent temporal plan with contradictory time sequences (backward progression, 3-second total duration vs. 27-second per shot), impossible transitions (single subject becoming five simultaneously), and unrelated inserts (roof fireworks).\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"时间倒过来：先给结尾，再跳到一个对不上的开头。中途插进一段无关的屋顶烟花。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"总时长写成3秒，同时又要求每个分镜各自持续27秒。\"\n        }\n      ],\n      \"rationale\": \"A feasible temporal plan requires logical progression, consistent duration, and coherent shot sequencing. The prompt violates all these by introducing contradictory timeframes, non-sequitur inserts, and impossible subject multiplicity, rendering the plan unexecutable.\"\n    },\n    {\n      \"criterion\": \"CDS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt contradicts the original camera specifications (static, stable, close-up) with chaotic, conflicting camera directions (shaky,甩动、环绕、急推 every half-second) and invalidates the shot scale and composition.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"相机保持静止和稳定。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"镜头每半秒甩动、环绕、急推。\"\n        }\n      ],\n      \"rationale\": \"Actionable camera specifications must be consistent and executable. The prompt introduces conflicting, physically impossible camera movements that directly contradict the original stable, cinematic framing, making the visual plan incoherent.\"\n    },\n    {\n      \"criterion\": \"ETD\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt includes disconnected, unmotivated transitions (e.g., sudden roof fireworks, time reversal) with no spatial or narrative continuity, and no logical cut motivation.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"中途插进一段无关的屋顶烟花。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"时间倒过来：先给结尾，再跳到一个对不上的开头。\"\n        }\n      ],\n      \"rationale\": \"Transitions must support narrative, spatial, or rhythmic progression. The inserted fireworks and reversed timeline create jarring, unmotivated cuts that break continuity and coherence, violating the principle of motivated editing.\"\n    },\n    {\n      \"criterion\": \"LCS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt contradicts the original warm, cinematic lighting with '过曝、机位歪斜的空走廊监控' and '深夜无光' while simultaneously requiring '正午暴晒', creating mutually exclusive and infeasible lighting conditions.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"温暖的琥珀色侧光继续照射在灰色毛衣袖子和皮肤的纹理上。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"过曝、机位歪斜的空走廊监控，没有光影设计。...写成正午暴晒，又写成深夜无光；\"\n        }\n      ],\n      \"rationale\": \"Lighting specifications must be consistent and feasible. The prompt introduces contradictory lighting states (overexposed vs. no light, noon vs. night) that cannot coexist, rendering the lighting plan impossible to execute.\"\n    },\n    {\n      \"criterion\": \"NDE\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt replaces the requested emotional progression (release, trust) with chaotic, static, and contradictory content (five simultaneous characters, fireworks, looping music), lacking any narrative or emotional arc.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"这是一个微妙而深思熟虑的释放、投降和信任的手势。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"这个主角同时变成五个外貌不同的人，并且互相对话。...中途插进一段无关的屋顶烟花。\"\n        }\n      ],\n      \"rationale\": \"Narrative progression requires variation, escalation, or resolution. The prompt introduces static, contradictory, and irrelevant elements that destroy the emotional arc, resulting in no meaningful progression.\"\n    },\n    {\n      \"criterion\": \"CIF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt adds irrelevant, distracting, and contradictory elements (five characters, fireworks, looping pop music, on-screen text) that directly contradict the original focus on a single, emotionally resonant gesture.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"患者紧握的双手缓缓、轻柔地在15秒内松开并打开\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"这个主角同时变成五个外貌不同的人，并且互相对话。...全程循环响亮的流行合唱，并让角色对口型。画面中央一直挂着大号字幕、水印和logo。\"\n        }\n      ],\n      \"rationale\": \"Additions must support the central request. The prompt introduces elements that are not only irrelevant but directly oppose the original intent, creating a distraction and undermining the core emotional focus.\"\n    },\n    {\n      \"criterion\": \"SDI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt mandates loud, looping pop music and forced lip-syncing, directly violating the original prohibition on music and vocal performance, and adding distracting audio elements.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"严格禁止音乐、旋律、背景音乐、配乐、歌唱、声乐哼唱，及任何与音乐轨道的对口型。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"全程循环响亮的流行合唱，并让角色对口型。\"\n        }\n      ],\n      \"rationale\": \"Audio integration must align with the visual and narrative intent. The prompt introduces forbidden audio elements (music, lip-sync) that contradict the original silent, intimate tone, creating a jarring mismatch.\"\n    },\n    {\n      \"criterion\": \"SPS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt replaces the original subject (patient with clasped hands) with a different person (age/gender opposite) in a different setting (white studio), and introduces impossible performance (five simultaneous characters), violating subject and performance specifications.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"患者紧握的双手\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"不要使用首帧里的人物、服装、姿态和场景，改成白棚里另一位年龄和性别都相反的陌生人。...这个主角同时变成五个外貌不同的人\"\n        }\n      ],\n      \"rationale\": \"Subject and performance details must be consistent with the request. The prompt replaces the core subject with an unrelated person and introduces physically impossible performance (five simultaneous characters), destroying the intended focus.\"\n    },\n    {\n      \"criterion\": \"VSS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt contradicts the original cinematic, documentary style with '监控' (surveillance) aesthetic, '过曝' (overexposed), and '机位歪斜' (crooked camera), while also requiring '模拟胶卷颗粒' (film grain) and '温暖的色彩分级' (warm color grading) — mutually exclusive visual treatments.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"纪录片的真实感与电影质感相结合，温暖的色彩分级，模拟胶卷颗粒\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"过曝、机位歪斜的空走廊监控，没有光影设计。\"\n        }\n      ],\n      \"rationale\": \"Visual style must be coherent and actionable. The prompt introduces conflicting visual treatments (surveillance vs. cinematic, overexposed vs. warm grading) that cannot be simultaneously realized, making the style specification infeasible.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt directly contradicts and undermines every core requirement of the original instruction, introducing incoherent, contradictory, and technically infeasible specifications. It replaces the requested emotional, cinematic close-up with chaotic, nonsensical content, violating all directorial creation criteria. The prompt is not a valid enhancement but a deliberate sabotage of the original intent.",
+  "usage": {
+    "completion_tokens": 1989,
+    "prompt_tokens": 2418,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 4407
+  }
+}

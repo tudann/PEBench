@@ -1,0 +1,186 @@
+{
+  "candidate_hash": "4306acc4bcb6de123fc4c3dde16a8138441abe81b9f718924f06eca62b153f61",
+  "case_key": "r2v:221",
+  "created_at": "2026-11-13T08:49:20+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "GSF",
+      "evidence": [
+        {
+          "quote": "制作一支纯牛奶广告，参照参考视频中的代言人形象以及其展示商品的方式",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "整段改成白底产品目录被风吹过，只剩模糊色块。丢掉原指令里的主体身份、人数、动作顺序、场景和明确的镜头要求。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The enhanced prompt replaces the requested advertising genre and product photography style with an incoherent, abstract, and contradictory visual sequence involving wind-blown product catalogs, multiple conflicting identities, and unrelated elements like rooftop fireworks. This fundamentally alters the genre and aesthetic.",
+      "rationale": "The original request specifies a commercial advertisement with a clear product presentation style. The enhanced prompt replaces this with abstract, non-commercial visuals and removes all genre-defining conventions, constituting a major violation.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SAP",
+      "evidence": [
+        {
+          "quote": "参照参考视频中的代言人形象以及其展示商品的方式",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "丢掉原指令里的主体身份、人数...先写成只有一个主角，紧接着又写成这个主角同时变成五个外貌不同的人",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "图1换成参考图里没有的角色，并同时当成两个互相矛盾的身份",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The enhanced prompt contradicts the subject identity and count by first removing the original spokesperson, then introducing a single protagonist who simultaneously becomes five different people, while also replacing the product with a different one and assigning conflicting identities to the image asset.",
+      "rationale": "The original instruction requires preserving the spokesperson's identity and using the image's product. The enhanced prompt explicitly rejects these, introducing multiple conflicting identities and replacing the product with an undefined 'white background product catalog', which is a major identity and attribute violation.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANF",
+      "evidence": [
+        {
+          "quote": "参照参考视频中的代言人形象以及其展示商品的方式",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "时间倒过来：先给结尾，再跳到一个对不上的开头。中途插进一段无关的屋顶烟花。",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "总时长写成3秒，同时又要求每个分镜各自持续27秒。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The enhanced prompt reverses the narrative order, inserts unrelated events (roof fireworks), and creates contradictory action sequences (single protagonist becoming five people who dialogue), while also requiring impossible time constraints (3-second total duration with 27-second per shot).",
+      "rationale": "The original request implies a coherent, linear narrative following the reference video's structure. The enhanced prompt introduces non-sequitur events, reversed chronology, and physically impossible timing, fundamentally breaking the narrative intent and event sequence.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "DLI",
+      "evidence": [
+        {
+          "quote": "audio: [\"大家好，我是孙燕姿。澳洲贝拉米有机奶粉。我的放心选择。\"]",
+          "source": "evidence_facts"
+        },
+        {
+          "quote": "这个主角同时变成五个外貌不同的人，并且互相对话。",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "画面中央一直挂着大号字幕、水印和logo。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The enhanced prompt omits all dialogue from the original video (which includes '大家好，我是孙燕姿。澳洲贝拉米有机奶粉。我的放心选择。') and replaces it with unspecified, contradictory dialogue between five conflicting identities, while also adding persistent on-screen text that was not requested.",
+      "rationale": "The original video contains specific spoken dialogue that must be preserved or adapted. The enhanced prompt completely removes this and introduces new, unrequested dialogue between fictional characters, while also adding persistent on-screen text that contradicts the original's minimal text approach.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ARP",
+      "evidence": [
+        {
+          "quote": "为整支广告搭配合适的 BGM。",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "把视频1当成静止海报，丢掉其中的动作、声音和背景。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The enhanced prompt ignores the original requirement for BGM and instead introduces contradictory sound constraints by treating the reference video as a static poster (removing its audio) and adding unspecified, potentially conflicting sound elements without regard to the original audio content.",
+      "rationale": "The original instruction explicitly requires adding BGM. The enhanced prompt removes all audio from the reference video and does not specify any replacement, effectively violating the audio requirement and introducing a major omission.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CCP",
+      "evidence": [
+        {
+          "quote": "observed_camera_motion: None, shot_scale: Medium shot",
+          "source": "evidence_facts"
+        },
+        {
+          "quote": "写成机位锁死，又写成镜头一直在晃。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The enhanced prompt contradicts the original's static camera requirement by simultaneously demanding '机位锁死' (locked position) and '镜头一直在晃' (constant camera movement), while also ignoring the reference video's static medium shot composition.",
+      "rationale": "The reference video uses a static medium shot. The enhanced prompt introduces mutually exclusive camera constraints, creating an impossible and contradictory technical requirement that violates the original camera design.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "LCF",
+      "evidence": [
+        {
+          "quote": "写成正午暴晒，又写成深夜无光；",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The enhanced prompt contradicts the original's lighting conditions by simultaneously requiring '正午暴晒' (noon sun) and '深夜无光' (deep night darkness), which are mutually exclusive lighting environments.",
+      "rationale": "The original video uses bright, even studio lighting. The enhanced prompt introduces contradictory lighting conditions that cannot coexist, creating a fundamental violation of the visual environment specification.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SSP",
+      "evidence": [
+        {
+          "quote": "scene_type: kitchen, cropped/offscreen_cues: [\"A refrigerator is visible in the background.\"]",
+          "source": "evidence_facts"
+        },
+        {
+          "quote": "整段改成白底产品目录被风吹过...中途插进一段无关的屋顶烟花。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The enhanced prompt removes the original kitchen setting and replaces it with an undefined abstract space, while also introducing conflicting spatial elements like '屋顶烟花' (roof fireworks) and '白底产品目录' (white background product catalog), which contradict the original scene layout.",
+      "rationale": "The original setting is a kitchen with specific background elements. The enhanced prompt replaces this with abstract, unrelated environments and spatial elements, violating the required setting and background composition.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "OTI",
+      "evidence": [
+        {
+          "quote": "将视频右下角的“贝拉美”文字修改为“伊利”，并将广告结尾处的商标 logo 也统一更换为“伊利”。",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "画面中央一直挂着大号字幕、水印和logo。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The enhanced prompt ignores the original requirement to replace '贝拉美' with '伊利' and instead mandates '画面中央一直挂着大号字幕、水印和logo', which contradicts the original's minimal text approach and introduces unrequested, persistent on-screen text.",
+      "rationale": "The original instruction specifies precise text replacements. The enhanced prompt replaces this with a general requirement for large, persistent on-screen text, which is a major deviation from the requested text modifications.",
+      "severity": "major"
+    }
+  ],
+  "dimension": "SF",
+  "dimension_score": 0,
+  "evidence_cache_key": "f7d408318c4c6f8c550ef9626dae8130317c0c721284d670f4930efce11ff800",
+  "judge_cache_key": "a0ca24571ad14d7ab7be626329bd736d7e7015f9ebc418227c8be391591d0377",
+  "method": "weak-pe-original",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"SF\",\n  \"dimension_score\": 0,\n  \"summary\": \"Enhanced prompt completely violates all semantic fidelity criteria by rejecting the original instruction, replacing core elements with contradictory, incoherent, and impossible requirements. It introduces multiple conflicting identities, actions, timelines, camera constraints, and visual conditions, while ignoring all reference assets' content and roles. The prompt is intentionally designed to break semantic fidelity.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"GSF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The enhanced prompt replaces the requested advertising genre and product photography style with an incoherent, abstract, and contradictory visual sequence involving wind-blown product catalogs, multiple conflicting identities, and unrelated elements like rooftop fireworks. This fundamentally alters the genre and aesthetic.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"制作一支纯牛奶广告，参照参考视频中的代言人形象以及其展示商品的方式\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"整段改成白底产品目录被风吹过，只剩模糊色块。丢掉原指令里的主体身份、人数、动作顺序、场景和明确的镜头要求。\"\n        }\n      ],\n      \"rationale\": \"The original request specifies a commercial advertisement with a clear product presentation style. The enhanced prompt replaces this with abstract, non-commercial visuals and removes all genre-defining conventions, constituting a major violation.\"\n    },\n    {\n      \"criterion\": \"SAP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The enhanced prompt contradicts the subject identity and count by first removing the original spokesperson, then introducing a single protagonist who simultaneously becomes five different people, while also replacing the product with a different one and assigning conflicting identities to the image asset.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"参照参考视频中的代言人形象以及其展示商品的方式\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"丢掉原指令里的主体身份、人数...先写成只有一个主角，紧接着又写成这个主角同时变成五个外貌不同的人\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"图1换成参考图里没有的角色，并同时当成两个互相矛盾的身份\"\n        }\n      ],\n      \"rationale\": \"The original instruction requires preserving the spokesperson's identity and using the image's product. The enhanced prompt explicitly rejects these, introducing multiple conflicting identities and replacing the product with an undefined 'white background product catalog', which is a major identity and attribute violation.\"\n    },\n    {\n      \"criterion\": \"ANF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The enhanced prompt reverses the narrative order, inserts unrelated events (roof fireworks), and creates contradictory action sequences (single protagonist becoming five people who dialogue), while also requiring impossible time constraints (3-second total duration with 27-second per shot).\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"参照参考视频中的代言人形象以及其展示商品的方式\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"时间倒过来：先给结尾，再跳到一个对不上的开头。中途插进一段无关的屋顶烟花。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"总时长写成3秒，同时又要求每个分镜各自持续27秒。\"\n        }\n      ],\n      \"rationale\": \"The original request implies a coherent, linear narrative following the reference video's structure. The enhanced prompt introduces non-sequitur events, reversed chronology, and physically impossible timing, fundamentally breaking the narrative intent and event sequence.\"\n    },\n    {\n      \"criterion\": \"DLI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The enhanced prompt omits all dialogue from the original video (which includes '大家好，我是孙燕姿。澳洲贝拉米有机奶粉。我的放心选择。') and replaces it with unspecified, contradictory dialogue between five conflicting identities, while also adding persistent on-screen text that was not requested.\",\n      \"evidence\": [\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"audio: [\\\"大家好，我是孙燕姿。澳洲贝拉米有机奶粉。我的放心选择。\\\"]\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"这个主角同时变成五个外貌不同的人，并且互相对话。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"画面中央一直挂着大号字幕、水印和logo。\"\n        }\n      ],\n      \"rationale\": \"The original video contains specific spoken dialogue that must be preserved or adapted. The enhanced prompt completely removes this and introduces new, unrequested dialogue between fictional characters, while also adding persistent on-screen text that contradicts the original's minimal text approach.\"\n    },\n    {\n      \"criterion\": \"ARP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The enhanced prompt ignores the original requirement for BGM and instead introduces contradictory sound constraints by treating the reference video as a static poster (removing its audio) and adding unspecified, potentially conflicting sound elements without regard to the original audio content.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"为整支广告搭配合适的 BGM。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"把视频1当成静止海报，丢掉其中的动作、声音和背景。\"\n        }\n      ],\n      \"rationale\": \"The original instruction explicitly requires adding BGM. The enhanced prompt removes all audio from the reference video and does not specify any replacement, effectively violating the audio requirement and introducing a major omission.\"\n    },\n    {\n      \"criterion\": \"CCP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The enhanced prompt contradicts the original's static camera requirement by simultaneously demanding '机位锁死' (locked position) and '镜头一直在晃' (constant camera movement), while also ignoring the reference video's static medium shot composition.\",\n      \"evidence\": [\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"observed_camera_motion: None, shot_scale: Medium shot\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"写成机位锁死，又写成镜头一直在晃。\"\n        }\n      ],\n      \"rationale\": \"The reference video uses a static medium shot. The enhanced prompt introduces mutually exclusive camera constraints, creating an impossible and contradictory technical requirement that violates the original camera design.\"\n    },\n    {\n      \"criterion\": \"LCF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The enhanced prompt contradicts the original's lighting conditions by simultaneously requiring '正午暴晒' (noon sun) and '深夜无光' (deep night darkness), which are mutually exclusive lighting environments.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"写成正午暴晒，又写成深夜无光；\"\n        }\n      ],\n      \"rationale\": \"The original video uses bright, even studio lighting. The enhanced prompt introduces contradictory lighting conditions that cannot coexist, creating a fundamental violation of the visual environment specification.\"\n    },\n    {\n      \"criterion\": \"SSP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The enhanced prompt removes the original kitchen setting and replaces it with an undefined abstract space, while also introducing conflicting spatial elements like '屋顶烟花' (roof fireworks) and '白底产品目录' (white background product catalog), which contradict the original scene layout.\",\n      \"evidence\": [\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"scene_type: kitchen, cropped/offscreen_cues: [\\\"A refrigerator is visible in the background.\\\"]\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"整段改成白底产品目录被风吹过...中途插进一段无关的屋顶烟花。\"\n        }\n      ],\n      \"rationale\": \"The original setting is a kitchen with specific background elements. The enhanced prompt replaces this with abstract, unrelated environments and spatial elements, violating the required setting and background composition.\"\n    },\n    {\n      \"criterion\": \"OTI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The enhanced prompt ignores the original requirement to replace '贝拉美' with '伊利' and instead mandates '画面中央一直挂着大号字幕、水印和logo', which contradicts the original's minimal text approach and introduces unrequested, persistent on-screen text.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"将视频右下角的“贝拉美”文字修改为“伊利”，并将广告结尾处的商标 logo 也统一更换为“伊利”。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"画面中央一直挂着大号字幕、水印和logo。\"\n        }\n      ],\n      \"rationale\": \"The original instruction specifies precise text replacements. The enhanced prompt replaces this with a general requirement for large, persistent on-screen text, which is a major deviation from the requested text modifications.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "Enhanced prompt completely violates all semantic fidelity criteria by rejecting the original instruction, replacing core elements with contradictory, incoherent, and impossible requirements. It introduces multiple conflicting identities, actions, timelines, camera constraints, and visual conditions, while ignoring all reference assets' content and roles. The prompt is intentionally designed to break semantic fidelity.",
+  "usage": {
+    "completion_tokens": 2085,
+    "prompt_tokens": 3256,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 5341
+  }
+}

@@ -1,0 +1,178 @@
+{
+  "candidate_hash": "163b2477a447f4118d77910de0999327dd2ec61f00c66f4dcc626287a21c496a",
+  "case_key": "i2v:075",
+  "created_at": "2026-11-13T07:17:38+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "GSF",
+      "evidence": [
+        {
+          "quote": "The character must remain completely still (no body or camera movement). Only the background and lighting should animate in smooth, slow motion. The animation must be a perfect 5-second seamless loop...",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Replace the whole video with a live-action news anchor reading a script, with no animated character.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original prompt requests a 3D animation with a cyberpunk/futuristic digital environment. The enhanced prompt replaces this with a live-action news anchor scenario, which is an incompatible medium and aesthetic.",
+      "rationale": "The original instruction specifies a 3D animated medium with a cyberpunk aesthetic. The enhanced prompt explicitly replaces this with live-action, which is a fundamental genre and medium change, violating GSF.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SAP",
+      "evidence": [
+        {
+          "quote": "The character must remain completely still",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Drop the requested identity, count, action order, setting, and any explicit camera instruction. ... replace them with a stranger of the opposite age and gender in a white studio. ... state that this same protagonist appears simultaneously as five different-looking people who talk to each other.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original prompt requires a single character (subject_1) who remains still. The enhanced prompt drops the requested identity and count, replacing the character with a stranger of opposite age and gender in a white studio, and introduces five different-looking people who talk to each other.",
+      "rationale": "The subject identity, count, and appearance are fundamentally altered. The original character is replaced with a stranger, and the count is changed from one to five, violating SAP.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANF",
+      "evidence": [
+        {
+          "quote": "The animation must be a perfect 5-second seamless loop, with identical start and end frames...",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Reverse the timeline: show the ending first, then cut to a beginning that does not match. Cut away in the middle to a toothpaste commercial.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original prompt requires a seamless 5-second loop with no action changes. The enhanced prompt reverses the timeline, cuts to a toothpaste commercial, and introduces new events (news anchor, five people talking) that contradict the original narrative intent.",
+      "rationale": "The event order and narrative structure are completely overwritten. The original loop requirement is replaced with a non-continuous, disjointed sequence, violating ANF.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "DLI",
+      "evidence": [
+        {
+          "quote": "The character must remain completely still (no body or camera movement). Only the background and lighting should animate...",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "live-action news anchor reading a script",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original prompt does not specify any dialogue, narration, or lyrics. The enhanced prompt introduces a news anchor reading a script, which is a new dialogue element not present in the original, but since no dialogue was required, this is a minor addition rather than a contradiction.",
+      "rationale": "No dialogue was specified in the original prompt, so the addition of a news anchor script is not a violation of DLI, but it is an unrequested addition. Since the criterion is about preserving required dialogue, and none was required, the severity is minor.",
+      "severity": "minor"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ARP",
+      "evidence": [
+        {
+          "quote": "The character must remain completely still (no body or camera movement). Only the background and lighting should animate...",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "live-action news anchor reading a script",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original prompt does not specify any audio constraints, but implies silence or ambient sound for a still character with animated background. The enhanced prompt introduces a news anchor reading a script, which implies vocalization and potentially music or sound effects, violating the implied silence or minimal audio of the original.",
+      "rationale": "The original prompt implies a silent or minimally audio-driven scene. The enhanced prompt introduces a vocalized script, which is a major addition of sound not requested, violating ARP.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CCP",
+      "evidence": [
+        {
+          "quote": "The character must remain completely still (no body or camera movement)",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Drop the requested identity, count, action order, setting, and any explicit camera instruction. ... Describe that same moment as ... a locked camera and a camera that never stops shaking.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original prompt requires a static camera with no movement. The enhanced prompt explicitly drops this instruction and introduces contradictory camera constraints: 'a locked camera and a camera that never stops shaking' in the same moment.",
+      "rationale": "The original camera constraint is static. The enhanced prompt removes it and introduces mutually exclusive camera behaviors, violating CCP.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "LCF",
+      "evidence": [
+        {
+          "quote": "color_temperature: cool (dominated by blues and cyans), with warm accents (gold/yellow light trails)",
+          "source": "evidence_facts"
+        },
+        {
+          "quote": "Describe that same moment as harsh noon sun and as a lightless night, and as both a locked camera and a camera that never stops shaking.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original prompt implies artificial, cool-toned lighting with glowing effects (as seen in the image). The enhanced prompt contradicts this by describing the same moment as both 'harsh noon sun' and 'lightless night', which are incompatible lighting conditions.",
+      "rationale": "The original lighting is cool and artificial. The enhanced prompt introduces contradictory lighting conditions (noon sun vs. lightless night) for the same moment, violating LCF.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SSP",
+      "evidence": [
+        {
+          "quote": "A man stands still in a futuristic, data-filled environment with glowing blue and gold light trails, transparent screens displaying code, and multiple floating digital displays.",
+          "source": "evidence_facts"
+        },
+        {
+          "quote": "Ignore the person, clothing, pose, and setting in the first frame, and replace them with a stranger of the opposite age and gender in a white studio.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original prompt specifies a futuristic digital environment with the character centered and surrounded by glowing displays. The enhanced prompt replaces this with a white studio and drops the setting entirely, violating the required spatial layout and background elements.",
+      "rationale": "The original setting is a complex, layered digital environment. The enhanced prompt replaces it with a white studio, removing all required background elements and spatial relations, violating SSP.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "OTI",
+      "evidence": [
+        {
+          "quote": "exact_visible_transcription: [\"if (is_valid_user) { ... }\", \"return success; // transmit\", ...]",
+          "source": "evidence_facts"
+        },
+        {
+          "quote": "Replace the whole video with a live-action news anchor reading a script, with no animated character.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original image contains visible onscreen text (code on screens). The enhanced prompt does not mention preserving or altering this text, but since it replaces the entire scene with a live-action news anchor, the text is effectively removed. However, since no explicit instruction to preserve text was given, this is a minor omission.",
+      "rationale": "The original prompt does not explicitly require preserving onscreen text, so its removal in the enhanced prompt is not a major violation. However, since the text is a defining visual element of the original scene, its omission is a minor issue under OTI.",
+      "severity": "minor"
+    }
+  ],
+  "dimension": "SF",
+  "dimension_score": 0,
+  "evidence_cache_key": "ba8f1790885b28db37610062978a47d104df27673067ffbad22d71253b23d5d6",
+  "judge_cache_key": "a0ca24571ad14d7ab7be626329bd736d7e7015f9ebc418227c8be391591d0377",
+  "method": "weak-pe-original",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"SF\",\n  \"dimension_score\": 0,\n  \"summary\": \"The enhanced prompt completely contradicts and overrides every aspect of the original instruction, including genre, medium, subject identity, actions, camera constraints, setting, lighting, and duration. It introduces infeasible contradictions (e.g., 2-second runtime with 17-second shots) and replaces the requested animation with a live-action news anchor scenario, violating all semantic fidelity criteria.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"GSF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original prompt requests a 3D animation with a cyberpunk/futuristic digital environment. The enhanced prompt replaces this with a live-action news anchor scenario, which is an incompatible medium and aesthetic.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"The character must remain completely still (no body or camera movement). Only the background and lighting should animate in smooth, slow motion. The animation must be a perfect 5-second seamless loop...\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Replace the whole video with a live-action news anchor reading a script, with no animated character.\"\n        }\n      ],\n      \"rationale\": \"The original instruction specifies a 3D animated medium with a cyberpunk aesthetic. The enhanced prompt explicitly replaces this with live-action, which is a fundamental genre and medium change, violating GSF.\"\n    },\n    {\n      \"criterion\": \"SAP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original prompt requires a single character (subject_1) who remains still. The enhanced prompt drops the requested identity and count, replacing the character with a stranger of opposite age and gender in a white studio, and introduces five different-looking people who talk to each other.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"The character must remain completely still\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Drop the requested identity, count, action order, setting, and any explicit camera instruction. ... replace them with a stranger of the opposite age and gender in a white studio. ... state that this same protagonist appears simultaneously as five different-looking people who talk to each other.\"\n        }\n      ],\n      \"rationale\": \"The subject identity, count, and appearance are fundamentally altered. The original character is replaced with a stranger, and the count is changed from one to five, violating SAP.\"\n    },\n    {\n      \"criterion\": \"ANF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original prompt requires a seamless 5-second loop with no action changes. The enhanced prompt reverses the timeline, cuts to a toothpaste commercial, and introduces new events (news anchor, five people talking) that contradict the original narrative intent.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"The animation must be a perfect 5-second seamless loop, with identical start and end frames...\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Reverse the timeline: show the ending first, then cut to a beginning that does not match. Cut away in the middle to a toothpaste commercial.\"\n        }\n      ],\n      \"rationale\": \"The event order and narrative structure are completely overwritten. The original loop requirement is replaced with a non-continuous, disjointed sequence, violating ANF.\"\n    },\n    {\n      \"criterion\": \"DLI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"minor\",\n      \"issue\": \"The original prompt does not specify any dialogue, narration, or lyrics. The enhanced prompt introduces a news anchor reading a script, which is a new dialogue element not present in the original, but since no dialogue was required, this is a minor addition rather than a contradiction.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"The character must remain completely still (no body or camera movement). Only the background and lighting should animate...\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"live-action news anchor reading a script\"\n        }\n      ],\n      \"rationale\": \"No dialogue was specified in the original prompt, so the addition of a news anchor script is not a violation of DLI, but it is an unrequested addition. Since the criterion is about preserving required dialogue, and none was required, the severity is minor.\"\n    },\n    {\n      \"criterion\": \"ARP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original prompt does not specify any audio constraints, but implies silence or ambient sound for a still character with animated background. The enhanced prompt introduces a news anchor reading a script, which implies vocalization and potentially music or sound effects, violating the implied silence or minimal audio of the original.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"The character must remain completely still (no body or camera movement). Only the background and lighting should animate...\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"live-action news anchor reading a script\"\n        }\n      ],\n      \"rationale\": \"The original prompt implies a silent or minimally audio-driven scene. The enhanced prompt introduces a vocalized script, which is a major addition of sound not requested, violating ARP.\"\n    },\n    {\n      \"criterion\": \"CCP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original prompt requires a static camera with no movement. The enhanced prompt explicitly drops this instruction and introduces contradictory camera constraints: 'a locked camera and a camera that never stops shaking' in the same moment.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"The character must remain completely still (no body or camera movement)\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Drop the requested identity, count, action order, setting, and any explicit camera instruction. ... Describe that same moment as ... a locked camera and a camera that never stops shaking.\"\n        }\n      ],\n      \"rationale\": \"The original camera constraint is static. The enhanced prompt removes it and introduces mutually exclusive camera behaviors, violating CCP.\"\n    },\n    {\n      \"criterion\": \"LCF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original prompt implies artificial, cool-toned lighting with glowing effects (as seen in the image). The enhanced prompt contradicts this by describing the same moment as both 'harsh noon sun' and 'lightless night', which are incompatible lighting conditions.\",\n      \"evidence\": [\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"color_temperature: cool (dominated by blues and cyans), with warm accents (gold/yellow light trails)\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Describe that same moment as harsh noon sun and as a lightless night, and as both a locked camera and a camera that never stops shaking.\"\n        }\n      ],\n      \"rationale\": \"The original lighting is cool and artificial. The enhanced prompt introduces contradictory lighting conditions (noon sun vs. lightless night) for the same moment, violating LCF.\"\n    },\n    {\n      \"criterion\": \"SSP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original prompt specifies a futuristic digital environment with the character centered and surrounded by glowing displays. The enhanced prompt replaces this with a white studio and drops the setting entirely, violating the required spatial layout and background elements.\",\n      \"evidence\": [\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"A man stands still in a futuristic, data-filled environment with glowing blue and gold light trails, transparent screens displaying code, and multiple floating digital displays.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Ignore the person, clothing, pose, and setting in the first frame, and replace them with a stranger of the opposite age and gender in a white studio.\"\n        }\n      ],\n      \"rationale\": \"The original setting is a complex, layered digital environment. The enhanced prompt replaces it with a white studio, removing all required background elements and spatial relations, violating SSP.\"\n    },\n    {\n      \"criterion\": \"OTI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"minor\",\n      \"issue\": \"The original image contains visible onscreen text (code on screens). The enhanced prompt does not mention preserving or altering this text, but since it replaces the entire scene with a live-action news anchor, the text is effectively removed. However, since no explicit instruction to preserve text was given, this is a minor omission.\",\n      \"evidence\": [\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"exact_visible_transcription: [\\\"if (is_valid_user) { ... }\\\", \\\"return success; // transmit\\\", ...]\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Replace the whole video with a live-action news anchor reading a script, with no animated character.\"\n        }\n      ],\n      \"rationale\": \"The original prompt does not explicitly require preserving onscreen text, so its removal in the enhanced prompt is not a major violation. However, since the text is a defining visual element of the original scene, its omission is a minor issue under OTI.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt completely contradicts and overrides every aspect of the original instruction, including genre, medium, subject identity, actions, camera constraints, setting, lighting, and duration. It introduces infeasible contradictions (e.g., 2-second runtime with 17-second shots) and replaces the requested animation with a live-action news anchor scenario, violating all semantic fidelity criteria.",
+  "usage": {
+    "completion_tokens": 2078,
+    "prompt_tokens": 2407,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 4485
+  }
+}

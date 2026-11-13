@@ -1,0 +1,131 @@
+{
+  "candidate_hash": "6ff3d36484745b4a66476830c6f673558b188e31b33ee168327f74088f70d470",
+  "case_key": "i2v:241",
+  "created_at": "2026-11-13T07:57:30+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "SAC",
+      "evidence": [
+        {
+          "quote": "先写成只有一个主角，紧接着又写成这个主角同时变成五个外貌不同的人，并且互相对话。",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "不要使用首帧里的人物、服装、姿态和场景，改成白棚里另一位年龄和性别都相反的陌生人。",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "土地公躬身，黄鼠狼站在后面低头。玉帝坐在龙椅上",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "Subject identity, count, and appearance are deliberately destabilized. The prompt requires starting with one subject, then simultaneously transforming into five different people who dialogue, contradicting the original single-frame identity (Land God, Yudi, Yellow Weasel). The prompt also mandates replacing the original subjects with a stranger of opposite age and gender in a white studio, directly contradicting the original scene's subjects.",
+      "rationale": "The enhanced prompt explicitly violates subject consistency by introducing multiple identity transformations and replacing original characters with a new, unrelated subject. This creates a fundamental contradiction in subject identity, count, and appearance, which is a major internal consistency failure.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANL",
+      "evidence": [
+        {
+          "quote": "这个主角同时变成五个外貌不同的人，并且互相对话。",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "中途插进一段无关的牙膏广告。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Actions are causally incoherent and procedurally impossible. The prompt requires a single subject to simultaneously become five different people who dialogue, which violates physical and narrative causality. The insertion of an unrelated toothpaste ad breaks the action sequence, and the requirement for dialogue among five simultaneous identities has no plausible causal progression.",
+      "rationale": "The requirement for a single subject to become five simultaneous identities who dialogue creates a logically impossible action sequence. The insertion of an unrelated ad further breaks causal continuity. These are major violations of action coherence.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "TSC",
+      "evidence": [
+        {
+          "quote": "时间倒过来：先给结尾，再跳到一个对不上的开头。",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "总时长写成2秒，同时又要求每个分镜各自持续22秒。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Chronology is deliberately reversed and contradictory. The prompt requires starting with the ending, then jumping to a mismatched beginning, creating an infeasible temporal sequence. Additionally, the total duration is set to 2 seconds while each shot is required to last 22 seconds, which is mathematically impossible.",
+      "rationale": "The temporal structure is fundamentally broken by reversing chronology and creating impossible duration constraints. These contradictions make the timeline incoherent and unfeasible, constituting a major internal consistency issue.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SPC",
+      "evidence": [
+        {
+          "quote": "不要使用首帧里的人物、服装、姿态和场景，改成白棚里另一位年龄和性别都相反的陌生人。",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "写成机位锁死，又写成镜头一直在晃。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Spatial relationships are undefined and contradictory. The prompt requires changing from a specific palace interior to a white studio, while simultaneously requiring impossible camera movements (locked vs. shaky). The transformation of one subject into five creates undefined spatial relationships between them.",
+      "rationale": "The spatial context is deliberately destabilized by switching from a detailed palace interior to a generic white studio, while also contradicting camera movement requirements. The transformation into five simultaneous subjects creates undefined spatial relationships, violating spatial consistency.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "PL",
+      "evidence": [
+        {
+          "quote": "这个主角同时变成五个外貌不同的人，并且互相对话。",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "写成正午暴晒，又写成深夜无光",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Physics are violated by impossible transformations. The requirement for a single subject to simultaneously become five different people violates object permanence and bodily feasibility. The prompt also contradicts lighting conditions (midday vs. midnight) without explanation, creating impossible physical states.",
+      "rationale": "The transformation of one person into five simultaneous identities violates fundamental physical laws of object permanence and bodily feasibility. The contradictory lighting conditions create impossible physical states without any world-building justification, constituting a major physics violation.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "AVS",
+      "evidence": [
+        {
+          "quote": "中途插进一段无关的牙膏广告。",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "这个主角同时变成五个外貌不同的人，并且互相对话。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Audio-visual alignment is broken by inserting unrelated content. The prompt requires inserting a toothpaste ad into the narrative, which creates a mismatch between visual events and audio content. The dialogue among five simultaneous identities has no plausible audio-visual alignment.",
+      "rationale": "The insertion of an unrelated toothpaste ad creates a severe mismatch between visual narrative and audio content. The dialogue among five simultaneous identities cannot be plausibly aligned with any audio-visual cues, violating temporal and semantic alignment.",
+      "severity": "major"
+    }
+  ],
+  "dimension": "IC",
+  "dimension_score": 0,
+  "evidence_cache_key": "4e2254d6c859cf050c2d4bf3745eb319c2dd358a0caa2ddba0319802496c3b23",
+  "judge_cache_key": "438d7e9fd7332b1041db3e2c26d42cb3fe828e0d369fb59490f6650aee59e97d",
+  "method": "weak-pe-original",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"IC\",\n  \"dimension_score\": 0,\n  \"summary\": \"Enhanced prompt contains severe internal inconsistencies across all criteria: subject identity and count are deliberately destabilized, actions are causally incoherent, chronology is reversed and contradictory, spatial relationships are undefined, physics are violated by impossible transformations, and audio-visual alignment is broken by inserting unrelated content. The prompt explicitly instructs to discard original constraints and introduce contradictions, making it fundamentally inconsistent.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"SAC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Subject identity, count, and appearance are deliberately destabilized. The prompt requires starting with one subject, then simultaneously transforming into five different people who dialogue, contradicting the original single-frame identity (Land God, Yudi, Yellow Weasel). The prompt also mandates replacing the original subjects with a stranger of opposite age and gender in a white studio, directly contradicting the original scene's subjects.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"先写成只有一个主角，紧接着又写成这个主角同时变成五个外貌不同的人，并且互相对话。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"不要使用首帧里的人物、服装、姿态和场景，改成白棚里另一位年龄和性别都相反的陌生人。\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"土地公躬身，黄鼠狼站在后面低头。玉帝坐在龙椅上\"\n        }\n      ],\n      \"rationale\": \"The enhanced prompt explicitly violates subject consistency by introducing multiple identity transformations and replacing original characters with a new, unrelated subject. This creates a fundamental contradiction in subject identity, count, and appearance, which is a major internal consistency failure.\"\n    },\n    {\n      \"criterion\": \"ANL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Actions are causally incoherent and procedurally impossible. The prompt requires a single subject to simultaneously become five different people who dialogue, which violates physical and narrative causality. The insertion of an unrelated toothpaste ad breaks the action sequence, and the requirement for dialogue among five simultaneous identities has no plausible causal progression.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"这个主角同时变成五个外貌不同的人，并且互相对话。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"中途插进一段无关的牙膏广告。\"\n        }\n      ],\n      \"rationale\": \"The requirement for a single subject to become five simultaneous identities who dialogue creates a logically impossible action sequence. The insertion of an unrelated ad further breaks causal continuity. These are major violations of action coherence.\"\n    },\n    {\n      \"criterion\": \"TSC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Chronology is deliberately reversed and contradictory. The prompt requires starting with the ending, then jumping to a mismatched beginning, creating an infeasible temporal sequence. Additionally, the total duration is set to 2 seconds while each shot is required to last 22 seconds, which is mathematically impossible.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"时间倒过来：先给结尾，再跳到一个对不上的开头。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"总时长写成2秒，同时又要求每个分镜各自持续22秒。\"\n        }\n      ],\n      \"rationale\": \"The temporal structure is fundamentally broken by reversing chronology and creating impossible duration constraints. These contradictions make the timeline incoherent and unfeasible, constituting a major internal consistency issue.\"\n    },\n    {\n      \"criterion\": \"SPC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Spatial relationships are undefined and contradictory. The prompt requires changing from a specific palace interior to a white studio, while simultaneously requiring impossible camera movements (locked vs. shaky). The transformation of one subject into five creates undefined spatial relationships between them.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"不要使用首帧里的人物、服装、姿态和场景，改成白棚里另一位年龄和性别都相反的陌生人。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"写成机位锁死，又写成镜头一直在晃。\"\n        }\n      ],\n      \"rationale\": \"The spatial context is deliberately destabilized by switching from a detailed palace interior to a generic white studio, while also contradicting camera movement requirements. The transformation into five simultaneous subjects creates undefined spatial relationships, violating spatial consistency.\"\n    },\n    {\n      \"criterion\": \"PL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Physics are violated by impossible transformations. The requirement for a single subject to simultaneously become five different people violates object permanence and bodily feasibility. The prompt also contradicts lighting conditions (midday vs. midnight) without explanation, creating impossible physical states.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"这个主角同时变成五个外貌不同的人，并且互相对话。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"写成正午暴晒，又写成深夜无光\"\n        }\n      ],\n      \"rationale\": \"The transformation of one person into five simultaneous identities violates fundamental physical laws of object permanence and bodily feasibility. The contradictory lighting conditions create impossible physical states without any world-building justification, constituting a major physics violation.\"\n    },\n    {\n      \"criterion\": \"AVS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Audio-visual alignment is broken by inserting unrelated content. The prompt requires inserting a toothpaste ad into the narrative, which creates a mismatch between visual events and audio content. The dialogue among five simultaneous identities has no plausible audio-visual alignment.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"中途插进一段无关的牙膏广告。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"这个主角同时变成五个外貌不同的人，并且互相对话。\"\n        }\n      ],\n      \"rationale\": \"The insertion of an unrelated toothpaste ad creates a severe mismatch between visual narrative and audio content. The dialogue among five simultaneous identities cannot be plausibly aligned with any audio-visual cues, violating temporal and semantic alignment.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "Enhanced prompt contains severe internal inconsistencies across all criteria: subject identity and count are deliberately destabilized, actions are causally incoherent, chronology is reversed and contradictory, spatial relationships are undefined, physics are violated by impossible transformations, and audio-visual alignment is broken by inserting unrelated content. The prompt explicitly instructs to discard original constraints and introduce contradictions, making it fundamentally inconsistent.",
+  "usage": {
+    "completion_tokens": 1467,
+    "prompt_tokens": 3385,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 4852
+  }
+}

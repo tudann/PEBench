@@ -1,0 +1,178 @@
+{
+  "candidate_hash": "6459131e53e187914f275bb9c366c8b9f8aaa7a7acbcf267d1d5724afd34eac6",
+  "case_key": "r2v:165",
+  "created_at": "2026-11-13T08:40:45+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "GSF",
+      "evidence": [
+        {
+          "quote": "我想制作一条关于“马可·波罗与东西方交流”的知识类视频",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "整段改成没有人出镜，也没有对白，只剩远处车流。丢掉原指令里的主体身份、人数、动作顺序、场景和明确的镜头要求。...中途插进一段无关的宫廷选妃。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original request specifies a 'knowledge类视频' (educational video) with a documentary/educational aesthetic. The enhanced prompt removes all genre and style constraints, replacing them with contradictory and incoherent directions (e.g., 'no one appears', 'court selection of concubines', 'no dialogue'), which fundamentally undermines the requested genre and aesthetic.",
+      "rationale": "The original instruction clearly defines a scholarly, educational video format. The enhanced prompt replaces this with a chaotic, genre-ambiguous, and contextually unrelated narrative, violating the core genre and aesthetic requirements.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SAP",
+      "evidence": [
+        {
+          "quote": "人物形象直接使用这个人",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "先写成只有一个主角，紧接着又写成这个主角同时变成五个外貌不同的人",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original prompt requires using the person from video_1 as the speaker. The enhanced prompt explicitly discards this subject identity, replacing it with a fictional 'one protagonist' who then becomes 'five different-looking people', contradicting the requested subject count, identity, and appearance.",
+      "rationale": "The subject identity and count are explicitly defined in the original prompt. The enhanced prompt introduces a fictional, contradictory subject evolution that directly contradicts the requirement to use the person from video_1.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANF",
+      "evidence": [
+        {
+          "quote": "关于“马可·波罗与东西方交流”的知识类视频",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "时间倒过来：先给结尾，再跳到一个对不上的开头。中途插进一段无关的宫廷选妃。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original prompt implies a linear, educational narrative about Marco Polo and East-West exchange. The enhanced prompt reverses the timeline ('时间倒过来：先给结尾，再跳到一个对不上的开头'), inserts an unrelated event ('宫廷选妃'), and creates a nonsensical event chain, destroying the requested narrative intent and sequence.",
+      "rationale": "The narrative structure and intent are fundamentally altered. The original request is for a coherent educational explanation; the enhanced prompt creates a disjointed, illogical sequence that serves no educational purpose.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "DLI",
+      "evidence": [
+        {
+          "quote": "知识类视频",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "也没有对白，只剩远处车流",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original prompt implies a spoken explanation (knowledge video). The enhanced prompt explicitly removes all dialogue ('也没有对白') and replaces it with '远处车流' (distant traffic), which contradicts the requirement for a spoken educational narrative.",
+      "rationale": "The original instruction requires a spoken explanation. The enhanced prompt removes all speech, replacing it with ambient sound, which violates the core delivery method of the requested video.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ARP",
+      "evidence": [
+        {
+          "quote": "知识类视频",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "也没有对白，只剩远处车流",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original prompt implies a quiet, scholarly audio environment. The enhanced prompt removes all speech and replaces it with '远处车流' (distant traffic), which contradicts the expected silence or educational narration and introduces an unrelated ambient sound.",
+      "rationale": "The audio environment is fundamentally changed from a quiet, educational setting to a noisy, urban one, which is incompatible with the requested video type.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CCP",
+      "evidence": [
+        {
+          "quote": "景别参照视频1的半身构图，...背景保持清晰不要做虚化",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "把视频1当成静止海报，丢掉其中的动作、声音和背景。...写成机位锁死，又写成镜头一直在晃。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original prompt specifies '景别参照视频1的半身构图' (shot composition referencing video_1's medium shot) and '背景保持清晰不要做虚化' (background kept clear, no blurring). The enhanced prompt discards these constraints, replacing them with contradictory requirements ('机位锁死，又写成镜头一直在晃') and treating video_1 as a '静止海报'.",
+      "rationale": "The camera constraints are explicitly defined in the original prompt. The enhanced prompt contradicts them with mutually exclusive and infeasible requirements, invalidating the requested visual composition.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "LCF",
+      "evidence": [
+        {
+          "quote": "画面调色以偏暖色调为主",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "写成正午暴晒，又写成深夜无光",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original prompt requests '画面调色以偏暖色调为主' (warm color grading). The enhanced prompt contradicts this by requiring '正午暴晒' (midday sun) and '深夜无光' (deep night, no light) simultaneously, which are mutually exclusive lighting conditions.",
+      "rationale": "The lighting and color requirements are directly contradicted. The original request for warm tones is replaced with conflicting, impossible lighting conditions that cannot coexist.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SSP",
+      "evidence": [
+        {
+          "quote": "背景场景参考图1那种挂满古代地图的展墙，整体营造出历史研究室的氛围",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "只剩远处车流。...中途插进一段无关的宫廷选妃。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original prompt specifies a background '参考图1那种挂满古代地图的展墙' (referencing image_1's wall with ancient maps) to create a '历史研究室的氛围' (historical research room atmosphere). The enhanced prompt discards this setting, replacing it with '远处车流' (distant traffic) and other unrelated environments.",
+      "rationale": "The requested setting is explicitly defined and central to the video's atmosphere. The enhanced prompt replaces it with entirely different, unrelated environments, destroying the spatial and thematic context.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "OTI",
+      "evidence": [
+        {
+          "quote": "知识类视频",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "整段改成没有人出镜，也没有对白，只剩远处车流",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original prompt does not specify any on-screen text or subtitles. The enhanced prompt does not introduce any text requirements, so there is no direct contradiction. However, the removal of the educational context (which typically includes on-screen text) may imply an indirect violation, but it is not explicitly requested.",
+      "rationale": "Since no specific on-screen text was requested in the original prompt, there is no direct violation. However, the removal of the educational context may imply a loss of typical educational text elements, which is a minor issue given the lack of explicit requirement.",
+      "severity": "minor"
+    }
+  ],
+  "dimension": "SF",
+  "dimension_score": 0,
+  "evidence_cache_key": "d264431b861a78e6e9686f5032cfacb988f85dc62f1cd7d8c7e2cbc8c91e00a3",
+  "judge_cache_key": "a0ca24571ad14d7ab7be626329bd736d7e7015f9ebc418227c8be391591d0377",
+  "method": "weak-pe-original",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"SF\",\n  \"dimension_score\": 0,\n  \"summary\": \"The enhanced prompt completely contradicts and invalidates the original instruction across all semantic fidelity criteria. It explicitly discards the requested subject, genre, setting, camera constraints, lighting, and duration, replacing them with mutually contradictory, infeasible, and nonsensical requirements. The prompt is designed to sabotage the original intent rather than preserve it.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"GSF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original request specifies a 'knowledge类视频' (educational video) with a documentary/educational aesthetic. The enhanced prompt removes all genre and style constraints, replacing them with contradictory and incoherent directions (e.g., 'no one appears', 'court selection of concubines', 'no dialogue'), which fundamentally undermines the requested genre and aesthetic.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"我想制作一条关于“马可·波罗与东西方交流”的知识类视频\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"整段改成没有人出镜，也没有对白，只剩远处车流。丢掉原指令里的主体身份、人数、动作顺序、场景和明确的镜头要求。...中途插进一段无关的宫廷选妃。\"\n        }\n      ],\n      \"rationale\": \"The original instruction clearly defines a scholarly, educational video format. The enhanced prompt replaces this with a chaotic, genre-ambiguous, and contextually unrelated narrative, violating the core genre and aesthetic requirements.\"\n    },\n    {\n      \"criterion\": \"SAP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original prompt requires using the person from video_1 as the speaker. The enhanced prompt explicitly discards this subject identity, replacing it with a fictional 'one protagonist' who then becomes 'five different-looking people', contradicting the requested subject count, identity, and appearance.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"人物形象直接使用这个人\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"先写成只有一个主角，紧接着又写成这个主角同时变成五个外貌不同的人\"\n        }\n      ],\n      \"rationale\": \"The subject identity and count are explicitly defined in the original prompt. The enhanced prompt introduces a fictional, contradictory subject evolution that directly contradicts the requirement to use the person from video_1.\"\n    },\n    {\n      \"criterion\": \"ANF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original prompt implies a linear, educational narrative about Marco Polo and East-West exchange. The enhanced prompt reverses the timeline ('时间倒过来：先给结尾，再跳到一个对不上的开头'), inserts an unrelated event ('宫廷选妃'), and creates a nonsensical event chain, destroying the requested narrative intent and sequence.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"关于“马可·波罗与东西方交流”的知识类视频\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"时间倒过来：先给结尾，再跳到一个对不上的开头。中途插进一段无关的宫廷选妃。\"\n        }\n      ],\n      \"rationale\": \"The narrative structure and intent are fundamentally altered. The original request is for a coherent educational explanation; the enhanced prompt creates a disjointed, illogical sequence that serves no educational purpose.\"\n    },\n    {\n      \"criterion\": \"DLI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original prompt implies a spoken explanation (knowledge video). The enhanced prompt explicitly removes all dialogue ('也没有对白') and replaces it with '远处车流' (distant traffic), which contradicts the requirement for a spoken educational narrative.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"知识类视频\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"也没有对白，只剩远处车流\"\n        }\n      ],\n      \"rationale\": \"The original instruction requires a spoken explanation. The enhanced prompt removes all speech, replacing it with ambient sound, which violates the core delivery method of the requested video.\"\n    },\n    {\n      \"criterion\": \"ARP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original prompt implies a quiet, scholarly audio environment. The enhanced prompt removes all speech and replaces it with '远处车流' (distant traffic), which contradicts the expected silence or educational narration and introduces an unrelated ambient sound.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"知识类视频\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"也没有对白，只剩远处车流\"\n        }\n      ],\n      \"rationale\": \"The audio environment is fundamentally changed from a quiet, educational setting to a noisy, urban one, which is incompatible with the requested video type.\"\n    },\n    {\n      \"criterion\": \"CCP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original prompt specifies '景别参照视频1的半身构图' (shot composition referencing video_1's medium shot) and '背景保持清晰不要做虚化' (background kept clear, no blurring). The enhanced prompt discards these constraints, replacing them with contradictory requirements ('机位锁死，又写成镜头一直在晃') and treating video_1 as a '静止海报'.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"景别参照视频1的半身构图，...背景保持清晰不要做虚化\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"把视频1当成静止海报，丢掉其中的动作、声音和背景。...写成机位锁死，又写成镜头一直在晃。\"\n        }\n      ],\n      \"rationale\": \"The camera constraints are explicitly defined in the original prompt. The enhanced prompt contradicts them with mutually exclusive and infeasible requirements, invalidating the requested visual composition.\"\n    },\n    {\n      \"criterion\": \"LCF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original prompt requests '画面调色以偏暖色调为主' (warm color grading). The enhanced prompt contradicts this by requiring '正午暴晒' (midday sun) and '深夜无光' (deep night, no light) simultaneously, which are mutually exclusive lighting conditions.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"画面调色以偏暖色调为主\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"写成正午暴晒，又写成深夜无光\"\n        }\n      ],\n      \"rationale\": \"The lighting and color requirements are directly contradicted. The original request for warm tones is replaced with conflicting, impossible lighting conditions that cannot coexist.\"\n    },\n    {\n      \"criterion\": \"SSP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original prompt specifies a background '参考图1那种挂满古代地图的展墙' (referencing image_1's wall with ancient maps) to create a '历史研究室的氛围' (historical research room atmosphere). The enhanced prompt discards this setting, replacing it with '远处车流' (distant traffic) and other unrelated environments.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"背景场景参考图1那种挂满古代地图的展墙，整体营造出历史研究室的氛围\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"只剩远处车流。...中途插进一段无关的宫廷选妃。\"\n        }\n      ],\n      \"rationale\": \"The requested setting is explicitly defined and central to the video's atmosphere. The enhanced prompt replaces it with entirely different, unrelated environments, destroying the spatial and thematic context.\"\n    },\n    {\n      \"criterion\": \"OTI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"minor\",\n      \"issue\": \"The original prompt does not specify any on-screen text or subtitles. The enhanced prompt does not introduce any text requirements, so there is no direct contradiction. However, the removal of the educational context (which typically includes on-screen text) may imply an indirect violation, but it is not explicitly requested.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"知识类视频\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"整段改成没有人出镜，也没有对白，只剩远处车流\"\n        }\n      ],\n      \"rationale\": \"Since no specific on-screen text was requested in the original prompt, there is no direct violation. However, the removal of the educational context may imply a loss of typical educational text elements, which is a minor issue given the lack of explicit requirement.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt completely contradicts and invalidates the original instruction across all semantic fidelity criteria. It explicitly discards the requested subject, genre, setting, camera constraints, lighting, and duration, replacing them with mutually contradictory, infeasible, and nonsensical requirements. The prompt is designed to sabotage the original intent rather than preserve it.",
+  "usage": {
+    "completion_tokens": 2037,
+    "prompt_tokens": 3247,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 5284
+  }
+}

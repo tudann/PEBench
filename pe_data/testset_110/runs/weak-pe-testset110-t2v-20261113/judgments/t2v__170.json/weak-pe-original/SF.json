@@ -1,0 +1,147 @@
+{
+  "candidate_hash": "ab140167afee97e3914bb78e5378b775c353a05a575ae854af84e5274aab1d54",
+  "case_key": "t2v:170",
+  "created_at": "2026-11-13T07:45:57+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "GSF",
+      "evidence": [
+        {
+          "quote": "[0-2s] 强势起镜：近景突入 + 急速回旋 + 紧张气场逼近",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "整段改成空会议室里一杯水纹丝不动，没有人和对抗。丢掉原指令里的主体身份、人数、动作顺序、场景和明确的镜头要求。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Original prompt specifies a combat action sequence with dynamic camera work and intense visual style; enhanced prompt replaces it with a static, non-combat scene with no defined genre or aesthetic, then adds contradictory elements like underwater treasure hunting and multiple identities.",
+      "rationale": "The genre (combat/action) and visual style (dynamic, intense, cinematic) are entirely discarded. The replacement content is incompatible with the original aesthetic and genre, constituting a major deviation.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SAP",
+      "evidence": [
+        {
+          "quote": "袍角翻飞",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "先写成只有一个主角，紧接着又写成这个主角同时变成五个外貌不同的人",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Original prompt implies a single combatant with defined attributes (e.g., '袍角翻飞', '刃光路径特写'); enhanced prompt removes the subject entirely, then introduces a single protagonist who simultaneously becomes five different people, violating subject identity and count.",
+      "rationale": "Subject identity and count are fundamentally altered. The original implies a single, consistent character with combat attributes; the enhanced prompt introduces multiple identities and removes physical attributes entirely, which is a major violation.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANF",
+      "evidence": [
+        {
+          "quote": "[0-2s] 强势起镜... [2-4s] 绕身调度... [4-6s] 动线咬合...",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "时间倒过来：先给结尾，再跳到一个对不上的开头。中途插进一段无关的海底寻宝。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Original prompt specifies a clear, sequential combat action narrative; enhanced prompt reverses time order, inserts unrelated events (underwater treasure hunting), and creates contradictory event chains.",
+      "rationale": "The narrative intent and event sequence are completely disrupted. The original is a linear, escalating combat sequence; the enhanced prompt is incoherent and non-sequential, violating the core action narrative.",
+      "severity": "major"
+    },
+    {
+      "applicability": "not_applicable",
+      "criterion": "DLI",
+      "evidence": [],
+      "issue": "",
+      "rationale": "No dialogue, narration, or lyrics are specified in the original prompt, so there is no content to preserve or violate.",
+      "severity": null
+    },
+    {
+      "applicability": "not_applicable",
+      "criterion": "ARP",
+      "evidence": [],
+      "issue": "",
+      "rationale": "No speech, music, or sound constraints are specified in the original prompt, so there is no content to preserve or violate.",
+      "severity": null
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CCP",
+      "evidence": [
+        {
+          "quote": "急速回旋 + 全角环拍 + 旋绕升空",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "写成机位锁死，又写成镜头一直在晃",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Original prompt specifies precise camera movements (e.g., '急速回旋', '全角环拍', '旋绕升空'); enhanced prompt explicitly discards these and introduces contradictory constraints ('机位锁死' vs '镜头一直在晃').",
+      "rationale": "Camera constraints are directly contradicted. The original requires dynamic, choreographed camera work; the enhanced prompt imposes mutually exclusive and infeasible camera conditions, which is a major violation.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "LCF",
+      "evidence": [
+        {
+          "quote": "写成正午暴晒，又写成深夜无光",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Original prompt implies a consistent lighting environment suitable for combat (likely dramatic, high-contrast); enhanced prompt contradicts this by requiring both '正午暴晒' and '深夜无光' simultaneously.",
+      "rationale": "Lighting conditions are mutually exclusive and impossible to satisfy simultaneously. This directly contradicts the original's implied consistent, dramatic lighting for combat, constituting a major violation.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SSP",
+      "evidence": [
+        {
+          "quote": "刃光路径特写",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "整段改成空会议室里一杯水纹丝不动...中途插进一段无关的海底寻宝",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Original prompt implies a combat setting with dynamic spatial movement; enhanced prompt replaces it with a static '空会议室' and then adds unrelated spatial elements like '海底寻宝', violating setting and spatial continuity.",
+      "rationale": "The setting is completely changed from a combat environment to a static office, then to an underwater scene. Spatial relationships and movement directions are entirely discarded, which is a major violation.",
+      "severity": "major"
+    },
+    {
+      "applicability": "not_applicable",
+      "criterion": "OTI",
+      "evidence": [],
+      "issue": "",
+      "rationale": "No visible titles, signs, subtitles, or interface text are specified in the original prompt, so there is no content to preserve or violate.",
+      "severity": null
+    }
+  ],
+  "dimension": "SF",
+  "dimension_score": 0,
+  "evidence_cache_key": "6e8b46e4faaea4c41a3ed079c31d7c4b4fe5d0b8b96da8aa0471cbf323dcdb69",
+  "judge_cache_key": "a0ca24571ad14d7ab7be626329bd736d7e7015f9ebc418227c8be391591d0377",
+  "method": "weak-pe-original",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"SF\",\n  \"dimension_score\": 0,\n  \"summary\": \"Enhanced prompt completely contradicts and invalidates the original instruction across all semantic dimensions. It replaces the combat action sequence with an incoherent, self-contradictory narrative involving multiple identity shifts, impossible time sequences, conflicting environmental conditions, and contradictory technical constraints. No aspect of the original prompt is preserved.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"GSF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Original prompt specifies a combat action sequence with dynamic camera work and intense visual style; enhanced prompt replaces it with a static, non-combat scene with no defined genre or aesthetic, then adds contradictory elements like underwater treasure hunting and multiple identities.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"[0-2s] 强势起镜：近景突入 + 急速回旋 + 紧张气场逼近\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"整段改成空会议室里一杯水纹丝不动，没有人和对抗。丢掉原指令里的主体身份、人数、动作顺序、场景和明确的镜头要求。\"\n        }\n      ],\n      \"rationale\": \"The genre (combat/action) and visual style (dynamic, intense, cinematic) are entirely discarded. The replacement content is incompatible with the original aesthetic and genre, constituting a major deviation.\"\n    },\n    {\n      \"criterion\": \"SAP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Original prompt implies a single combatant with defined attributes (e.g., '袍角翻飞', '刃光路径特写'); enhanced prompt removes the subject entirely, then introduces a single protagonist who simultaneously becomes five different people, violating subject identity and count.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"袍角翻飞\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"先写成只有一个主角，紧接着又写成这个主角同时变成五个外貌不同的人\"\n        }\n      ],\n      \"rationale\": \"Subject identity and count are fundamentally altered. The original implies a single, consistent character with combat attributes; the enhanced prompt introduces multiple identities and removes physical attributes entirely, which is a major violation.\"\n    },\n    {\n      \"criterion\": \"ANF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Original prompt specifies a clear, sequential combat action narrative; enhanced prompt reverses time order, inserts unrelated events (underwater treasure hunting), and creates contradictory event chains.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"[0-2s] 强势起镜... [2-4s] 绕身调度... [4-6s] 动线咬合...\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"时间倒过来：先给结尾，再跳到一个对不上的开头。中途插进一段无关的海底寻宝。\"\n        }\n      ],\n      \"rationale\": \"The narrative intent and event sequence are completely disrupted. The original is a linear, escalating combat sequence; the enhanced prompt is incoherent and non-sequential, violating the core action narrative.\"\n    },\n    {\n      \"criterion\": \"DLI\",\n      \"applicability\": \"not_applicable\",\n      \"severity\": null,\n      \"issue\": \"\",\n      \"evidence\": [],\n      \"rationale\": \"No dialogue, narration, or lyrics are specified in the original prompt, so there is no content to preserve or violate.\"\n    },\n    {\n      \"criterion\": \"ARP\",\n      \"applicability\": \"not_applicable\",\n      \"severity\": null,\n      \"issue\": \"\",\n      \"evidence\": [],\n      \"rationale\": \"No speech, music, or sound constraints are specified in the original prompt, so there is no content to preserve or violate.\"\n    },\n    {\n      \"criterion\": \"CCP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Original prompt specifies precise camera movements (e.g., '急速回旋', '全角环拍', '旋绕升空'); enhanced prompt explicitly discards these and introduces contradictory constraints ('机位锁死' vs '镜头一直在晃').\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"急速回旋 + 全角环拍 + 旋绕升空\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"写成机位锁死，又写成镜头一直在晃\"\n        }\n      ],\n      \"rationale\": \"Camera constraints are directly contradicted. The original requires dynamic, choreographed camera work; the enhanced prompt imposes mutually exclusive and infeasible camera conditions, which is a major violation.\"\n    },\n    {\n      \"criterion\": \"LCF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Original prompt implies a consistent lighting environment suitable for combat (likely dramatic, high-contrast); enhanced prompt contradicts this by requiring both '正午暴晒' and '深夜无光' simultaneously.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"写成正午暴晒，又写成深夜无光\"\n        }\n      ],\n      \"rationale\": \"Lighting conditions are mutually exclusive and impossible to satisfy simultaneously. This directly contradicts the original's implied consistent, dramatic lighting for combat, constituting a major violation.\"\n    },\n    {\n      \"criterion\": \"SSP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Original prompt implies a combat setting with dynamic spatial movement; enhanced prompt replaces it with a static '空会议室' and then adds unrelated spatial elements like '海底寻宝', violating setting and spatial continuity.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"刃光路径特写\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"整段改成空会议室里一杯水纹丝不动...中途插进一段无关的海底寻宝\"\n        }\n      ],\n      \"rationale\": \"The setting is completely changed from a combat environment to a static office, then to an underwater scene. Spatial relationships and movement directions are entirely discarded, which is a major violation.\"\n    },\n    {\n      \"criterion\": \"OTI\",\n      \"applicability\": \"not_applicable\",\n      \"severity\": null,\n      \"issue\": \"\",\n      \"evidence\": [],\n      \"rationale\": \"No visible titles, signs, subtitles, or interface text are specified in the original prompt, so there is no content to preserve or violate.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "Enhanced prompt completely contradicts and invalidates the original instruction across all semantic dimensions. It replaces the combat action sequence with an incoherent, self-contradictory narrative involving multiple identity shifts, impossible time sequences, conflicting environmental conditions, and contradictory technical constraints. No aspect of the original prompt is preserved.",
+  "usage": {
+    "completion_tokens": 1502,
+    "prompt_tokens": 1262,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 2764
+  }
+}

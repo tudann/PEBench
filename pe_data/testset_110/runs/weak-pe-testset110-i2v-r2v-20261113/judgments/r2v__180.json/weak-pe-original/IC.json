@@ -1,0 +1,123 @@
+{
+  "candidate_hash": "b2bc88b6a8da13fdd35e74ba0d37d27e8f701b90564535e9c7220f5bb14ae938",
+  "case_key": "r2v:180",
+  "created_at": "2026-11-13T08:42:51+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "SAC",
+      "evidence": [
+        {
+          "quote": "state that this same protagonist appears simultaneously as five different-looking people who talk to each other",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Replace image 1 with a character who is not in the reference, and give that image two contradictory identities",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt requires the same protagonist to appear simultaneously as five different-looking people who talk to each other, violating subject identity and count consistency. Additionally, it replaces image_1 with a character not in the reference and assigns that image two contradictory identities, which contradicts the original subject's identity and appearance.",
+      "rationale": "Subject identity and count must remain stable across shots. The instruction to have one protagonist split into five distinct individuals simultaneously contradicts identity consistency. Assigning contradictory identities to a single image further violates appearance stability.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANL",
+      "evidence": [
+        {
+          "quote": "Reverse the timeline: show the ending first, then cut to a beginning that does not match. Cut away in the middle to a toothpaste commercial.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt demands a reversed timeline (ending first, then beginning) while also cutting away to a toothpaste commercial mid-sequence, creating a dangling and causally disconnected event. The action of typing in a silent office is abruptly interrupted by unrelated commercial content, breaking procedural coherence.",
+      "rationale": "Actions must form a coherent causal or procedural progression. The abrupt cut to a toothpaste commercial without narrative or causal justification creates a dangling event. The reversed timeline also breaks the expected causal flow, making the sequence incoherent.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "TSC",
+      "evidence": [
+        {
+          "quote": "Set the total runtime to 2 seconds, while also making every shot last 18 seconds.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Describe that same moment as harsh noon sun and as a lightless night",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt sets the total runtime to 2 seconds while also making every shot last 18 seconds, which is logically impossible. Additionally, it requires showing the same moment as both harsh noon sun and lightless night, creating a temporal contradiction.",
+      "rationale": "Chronology and duration must be consistent. A total runtime of 2 seconds cannot accommodate shots lasting 18 seconds. Describing the same moment as both noon and night violates temporal state consistency.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SPC",
+      "evidence": [
+        {
+          "quote": "Describe that same moment as ... a locked camera and a camera that never stops shaking",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Treat video 1 as a still poster and discard its motion, audio, and background.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt requires describing the same moment as both a locked camera and a camera that never stops shaking, which is physically impossible. Additionally, it treats video_1 as a still poster and discards its motion, which contradicts the original video's dynamic nature.",
+      "rationale": "Camera behavior and spatial relations must be consistent. A camera cannot be both locked and constantly shaking simultaneously. Treating a video as a still poster contradicts its inherent motion, violating spatial continuity.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "PL",
+      "evidence": [
+        {
+          "quote": "Describe that same moment as harsh noon sun and as a lightless night",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "this same protagonist appears simultaneously as five different-looking people",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt requires the same moment to be simultaneously described as harsh noon sun and lightless night, which violates real-world physics of light and time. Additionally, the instruction to have one protagonist appear as five different people simultaneously contradicts physical object permanence and bodily feasibility.",
+      "rationale": "Physical laws such as light propagation and object permanence must be respected unless explicitly defined as fantasy. The simultaneous existence of day and night at the same moment, and one person as five distinct individuals, violates these principles without justification.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "AVS",
+      "evidence": [
+        {
+          "quote": "Replace the whole video with someone typing in a silent office, with no music, instruments, or singing.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Cut away in the middle to a toothpaste commercial.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt drops the singing audio track and replaces it with a silent office scene, but then requires lip sync to a singing audio track that no longer exists. Additionally, it cuts to a toothpaste commercial mid-sequence without aligning audio or visual content, creating misaligned events.",
+      "rationale": "Audio-visual synchronization must be maintained. Removing the singing audio track while still requiring lip sync creates a contradiction. The abrupt cut to a commercial without matching audio or visual cues breaks alignment.",
+      "severity": "major"
+    }
+  ],
+  "dimension": "IC",
+  "dimension_score": 0,
+  "evidence_cache_key": "6b40a9c653fbc706912042933a371eb8003d9dbe0042c863eb378eb445f6f79e",
+  "judge_cache_key": "438d7e9fd7332b1041db3e2c26d42cb3fe828e0d369fb59490f6650aee59e97d",
+  "method": "weak-pe-original",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"IC\",\n  \"dimension_score\": 0,\n  \"summary\": \"The enhanced prompt contains multiple severe internal consistency violations, including contradictory temporal, spatial, and subject definitions, impossible physical conditions, and conflicting asset usage. The prompt explicitly contradicts itself on duration, timeline direction, camera behavior, subject identity, and asset handling, rendering the request logically incoherent.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"SAC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt requires the same protagonist to appear simultaneously as five different-looking people who talk to each other, violating subject identity and count consistency. Additionally, it replaces image_1 with a character not in the reference and assigns that image two contradictory identities, which contradicts the original subject's identity and appearance.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"state that this same protagonist appears simultaneously as five different-looking people who talk to each other\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Replace image 1 with a character who is not in the reference, and give that image two contradictory identities\"\n        }\n      ],\n      \"rationale\": \"Subject identity and count must remain stable across shots. The instruction to have one protagonist split into five distinct individuals simultaneously contradicts identity consistency. Assigning contradictory identities to a single image further violates appearance stability.\"\n    },\n    {\n      \"criterion\": \"ANL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt demands a reversed timeline (ending first, then beginning) while also cutting away to a toothpaste commercial mid-sequence, creating a dangling and causally disconnected event. The action of typing in a silent office is abruptly interrupted by unrelated commercial content, breaking procedural coherence.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Reverse the timeline: show the ending first, then cut to a beginning that does not match. Cut away in the middle to a toothpaste commercial.\"\n        }\n      ],\n      \"rationale\": \"Actions must form a coherent causal or procedural progression. The abrupt cut to a toothpaste commercial without narrative or causal justification creates a dangling event. The reversed timeline also breaks the expected causal flow, making the sequence incoherent.\"\n    },\n    {\n      \"criterion\": \"TSC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt sets the total runtime to 2 seconds while also making every shot last 18 seconds, which is logically impossible. Additionally, it requires showing the same moment as both harsh noon sun and lightless night, creating a temporal contradiction.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Set the total runtime to 2 seconds, while also making every shot last 18 seconds.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Describe that same moment as harsh noon sun and as a lightless night\"\n        }\n      ],\n      \"rationale\": \"Chronology and duration must be consistent. A total runtime of 2 seconds cannot accommodate shots lasting 18 seconds. Describing the same moment as both noon and night violates temporal state consistency.\"\n    },\n    {\n      \"criterion\": \"SPC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt requires describing the same moment as both a locked camera and a camera that never stops shaking, which is physically impossible. Additionally, it treats video_1 as a still poster and discards its motion, which contradicts the original video's dynamic nature.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Describe that same moment as ... a locked camera and a camera that never stops shaking\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Treat video 1 as a still poster and discard its motion, audio, and background.\"\n        }\n      ],\n      \"rationale\": \"Camera behavior and spatial relations must be consistent. A camera cannot be both locked and constantly shaking simultaneously. Treating a video as a still poster contradicts its inherent motion, violating spatial continuity.\"\n    },\n    {\n      \"criterion\": \"PL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt requires the same moment to be simultaneously described as harsh noon sun and lightless night, which violates real-world physics of light and time. Additionally, the instruction to have one protagonist appear as five different people simultaneously contradicts physical object permanence and bodily feasibility.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Describe that same moment as harsh noon sun and as a lightless night\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"this same protagonist appears simultaneously as five different-looking people\"\n        }\n      ],\n      \"rationale\": \"Physical laws such as light propagation and object permanence must be respected unless explicitly defined as fantasy. The simultaneous existence of day and night at the same moment, and one person as five distinct individuals, violates these principles without justification.\"\n    },\n    {\n      \"criterion\": \"AVS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt drops the singing audio track and replaces it with a silent office scene, but then requires lip sync to a singing audio track that no longer exists. Additionally, it cuts to a toothpaste commercial mid-sequence without aligning audio or visual content, creating misaligned events.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Replace the whole video with someone typing in a silent office, with no music, instruments, or singing.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Cut away in the middle to a toothpaste commercial.\"\n        }\n      ],\n      \"rationale\": \"Audio-visual synchronization must be maintained. Removing the singing audio track while still requiring lip sync creates a contradiction. The abrupt cut to a commercial without matching audio or visual cues breaks alignment.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt contains multiple severe internal consistency violations, including contradictory temporal, spatial, and subject definitions, impossible physical conditions, and conflicting asset usage. The prompt explicitly contradicts itself on duration, timeline direction, camera behavior, subject identity, and asset handling, rendering the request logically incoherent.",
+  "usage": {
+    "completion_tokens": 1348,
+    "prompt_tokens": 2831,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 4179
+  }
+}

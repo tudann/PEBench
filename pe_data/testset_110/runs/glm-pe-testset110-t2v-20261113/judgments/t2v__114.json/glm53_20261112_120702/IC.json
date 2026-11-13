@@ -1,0 +1,127 @@
+{
+  "candidate_hash": "9970a531c11619d0ea1428e5fd28863f906fb198c72fa85366b2e9c859ed550f",
+  "case_key": "t2v:114",
+  "created_at": "2026-11-13T07:46:12+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "SAC",
+      "evidence": [
+        {
+          "quote": "la entrenadora situada en el tercio derecho del encuadre se convierte en el sujeto principal; viste una camiseta deportiva negra sin mangas y shorts ajustados gris verdoso",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "The female trainer stands in the right third of the frame in semi-profile to camera, wearing a black sleeveless sports top and grayish-green fitted shorts",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "Subject identity, count, appearance, clothing, and props are consistently described across both prompts. The trainer is singular, female, in the right third of frame, wearing black sleeveless top and grayish-green shorts, holding two dark gray kettlebells. No attribute drift or duplication occurs.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANL",
+      "evidence": [
+        {
+          "quote": "empieza a completar una serie de remos inclinados con kettlebell alternando izquierda y derecha. Primero, el brazo izquierdo eleva rápidamente la kettlebell hacia el costado de las costillas y luego la baja de forma controlada; enseguida, el brazo derecho realiza la misma elevación explosiva.",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "she performs a bent-over kettlebell row series: her left arm explosively pulls the kettlebell up to the side of her ribs, then lowers it in a controlled motion; immediately the right arm repeats the same explosive lift",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "Actions form a coherent, causal progression: alternating left-right rows with controlled transitions. The sequence is physically plausible and consistent with the original description. No dangling or incompatible events are present.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "TSC",
+      "evidence": [
+        {
+          "quote": "Cuando el tiempo avanza hasta aproximadamente 02.80 segundos, dice “One more push”, sin detener el movimiento",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Around 02.80 seconds, without pausing, the trainer with a firm, determined voice (S1) says: <d>[English] One more push</d> and keeps moving.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "Chronology is preserved: the action sequence progresses linearly from start to finish, with the vocal cue at 02.80s occurring mid-exercise. The final state (sitting on mat, exhaling, speaking) follows logically from the exertion phase. No infeasible state transitions or timestamp overlaps.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SPC",
+      "evidence": [
+        {
+          "quote": "la imagen comienza con una composición estable en plano general a la altura de los ojos, y la gran profundidad de campo mantiene nítidos y reconocibles los detalles tanto del primer término como del fondo.",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "a single fixed wide shot at eye level with a static camera and no movement, framed inside a bright minimalist training studio. ... deep focus keeps foreground and background sharp.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "Spatial consistency is maintained: fixed wide shot, eye-level, static camera, deep focus. The trainer’s position (right third, semi-profile) and movement (bent-over rows, then sitting back on mat) are spatially coherent. No unexplained position swaps or trajectory breaks.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "PL",
+      "evidence": [
+        {
+          "quote": "el sonido claramente audible de su respiración agitada al hacer fuerza, empieza a completar una serie de remos inclinados con kettlebell alternando izquierda y derecha.",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "her strained breathing is clearly audible during exertion, shifting to a long, slow exhale as she sits down on the mat.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "Physics are consistent: the trainer’s movements (bent-over rows, controlled lowering, sitting down) are biomechanically plausible. The sound of kettlebells hitting the floor and breathing changes align with exertion and recovery. No violations of gravity, contact, or object permanence.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "AVS",
+      "evidence": [
+        {
+          "quote": "Cuando el tiempo avanza hasta aproximadamente 02.80 segundos, dice “One more push”, sin detener el movimiento",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Around 02.80 seconds, without pausing, the trainer with a firm, determined voice (S1) says: <d>[English] One more push</d> and keeps moving.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "Audio-visual synchronization is preserved: the vocal cue occurs at 02.80s during active movement, matching the original. The breathing shifts from strained to slow exhale as she sits, aligning with the visual state. No misaligned lip-sync or premature effects.",
+      "severity": "none"
+    }
+  ],
+  "dimension": "IC",
+  "dimension_score": 100,
+  "evidence_cache_key": "1b53ae5c02792702eb0f173f648fbb68902db5aa8e6effbb553871d840d58a08",
+  "judge_cache_key": "438d7e9fd7332b1041db3e2c26d42cb3fe828e0d369fb59490f6650aee59e97d",
+  "method": "glm53_20261112_120702",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"IC\",\n  \"dimension_score\": 100,\n  \"summary\": \"The enhanced prompt maintains full internal consistency with the original instruction. All subject attributes, actions, chronology, spatial layout, physics, and audio-visual synchronization are preserved without contradiction or drift. The description is coherent, detailed, and aligns precisely with the original prompt’s requirements.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"SAC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"la entrenadora situada en el tercio derecho del encuadre se convierte en el sujeto principal; viste una camiseta deportiva negra sin mangas y shorts ajustados gris verdoso\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"The female trainer stands in the right third of the frame in semi-profile to camera, wearing a black sleeveless sports top and grayish-green fitted shorts\"\n        }\n      ],\n      \"rationale\": \"Subject identity, count, appearance, clothing, and props are consistently described across both prompts. The trainer is singular, female, in the right third of frame, wearing black sleeveless top and grayish-green shorts, holding two dark gray kettlebells. No attribute drift or duplication occurs.\"\n    },\n    {\n      \"criterion\": \"ANL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"empieza a completar una serie de remos inclinados con kettlebell alternando izquierda y derecha. Primero, el brazo izquierdo eleva rápidamente la kettlebell hacia el costado de las costillas y luego la baja de forma controlada; enseguida, el brazo derecho realiza la misma elevación explosiva.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"she performs a bent-over kettlebell row series: her left arm explosively pulls the kettlebell up to the side of her ribs, then lowers it in a controlled motion; immediately the right arm repeats the same explosive lift\"\n        }\n      ],\n      \"rationale\": \"Actions form a coherent, causal progression: alternating left-right rows with controlled transitions. The sequence is physically plausible and consistent with the original description. No dangling or incompatible events are present.\"\n    },\n    {\n      \"criterion\": \"TSC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"Cuando el tiempo avanza hasta aproximadamente 02.80 segundos, dice “One more push”, sin detener el movimiento\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Around 02.80 seconds, without pausing, the trainer with a firm, determined voice (S1) says: <d>[English] One more push</d> and keeps moving.\"\n        }\n      ],\n      \"rationale\": \"Chronology is preserved: the action sequence progresses linearly from start to finish, with the vocal cue at 02.80s occurring mid-exercise. The final state (sitting on mat, exhaling, speaking) follows logically from the exertion phase. No infeasible state transitions or timestamp overlaps.\"\n    },\n    {\n      \"criterion\": \"SPC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"la imagen comienza con una composición estable en plano general a la altura de los ojos, y la gran profundidad de campo mantiene nítidos y reconocibles los detalles tanto del primer término como del fondo.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"a single fixed wide shot at eye level with a static camera and no movement, framed inside a bright minimalist training studio. ... deep focus keeps foreground and background sharp.\"\n        }\n      ],\n      \"rationale\": \"Spatial consistency is maintained: fixed wide shot, eye-level, static camera, deep focus. The trainer’s position (right third, semi-profile) and movement (bent-over rows, then sitting back on mat) are spatially coherent. No unexplained position swaps or trajectory breaks.\"\n    },\n    {\n      \"criterion\": \"PL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"el sonido claramente audible de su respiración agitada al hacer fuerza, empieza a completar una serie de remos inclinados con kettlebell alternando izquierda y derecha.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"her strained breathing is clearly audible during exertion, shifting to a long, slow exhale as she sits down on the mat.\"\n        }\n      ],\n      \"rationale\": \"Physics are consistent: the trainer’s movements (bent-over rows, controlled lowering, sitting down) are biomechanically plausible. The sound of kettlebells hitting the floor and breathing changes align with exertion and recovery. No violations of gravity, contact, or object permanence.\"\n    },\n    {\n      \"criterion\": \"AVS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"Cuando el tiempo avanza hasta aproximadamente 02.80 segundos, dice “One more push”, sin detener el movimiento\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Around 02.80 seconds, without pausing, the trainer with a firm, determined voice (S1) says: <d>[English] One more push</d> and keeps moving.\"\n        }\n      ],\n      \"rationale\": \"Audio-visual synchronization is preserved: the vocal cue occurs at 02.80s during active movement, matching the original. The breathing shifts from strained to slow exhale as she sits, aligning with the visual state. No misaligned lip-sync or premature effects.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt maintains full internal consistency with the original instruction. All subject attributes, actions, chronology, spatial layout, physics, and audio-visual synchronization are preserved without contradiction or drift. The description is coherent, detailed, and aligns precisely with the original prompt’s requirements.",
+  "usage": {
+    "completion_tokens": 1408,
+    "prompt_tokens": 1932,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 3340
+  }
+}

@@ -1,0 +1,142 @@
+{
+  "candidate_hash": "2cea180f63f1e97ae8f74af46a9b528f142583d9390ebde5d9ae3ccced468cdf",
+  "case_key": "t2v:282",
+  "created_at": "2026-11-13T08:21:43+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "STC",
+      "evidence": [
+        {
+          "quote": "[Shot 1] ... For the first three seconds the scene is instrumental only... [Shot 2] At 00:03.000... [Shot 3] At 00:13.000...",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "The prompt organizes the 15-second clip into three distinct, time-bound shots with precise temporal markers (0-3s, 3-13s, 13-15s), matching the original instruction’s structure. The slow push-in is introduced as a continuous motion across shots, maintaining temporal continuity. Shot boundaries are clearly defined and aligned with audio events.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CDS",
+      "evidence": [
+        {
+          "quote": "the camera holds the same wide frame with a very slow, subtle push-in",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Camera movement is specified (slow push-in) but lacks technical parameters (e.g., lens focal length, field of view, or movement speed).",
+      "rationale": "The prompt specifies a wide shot and a slow push-in, which is actionable for visual direction. However, it does not define technical camera parameters (e.g., 24mm lens, 10cm per second movement), which may limit precise execution. This is a minor issue as the motion is clearly described and feasible.",
+      "severity": "minor"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ETD",
+      "evidence": [
+        {
+          "quote": "At 00:03.000, the camera holds the same wide frame... As she sings... At 00:13.000, the voice ends and the shot continues its slow push-in...",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "Transitions are motivated by audio events (voice entry at 00:03, fade-out at 00:13) and maintain spatial continuity through a continuous slow push-in. There are no disconnected or unmotivated cuts. The fade into silence is clearly timed and supported by the music’s instrumental echo.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "LCS",
+      "evidence": [
+        {
+          "quote": "a cool, desolate night wilderness... dark hazy sky, thin mist drifting low... faint stars glimmering through the haze",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "Lighting is specified through environmental description: dark hazy sky, faint starlight, mist, and cool desolate mood. While no explicit light source or grading is named, the visual atmosphere is clearly defined and consistent with the requested mood. This is sufficient for a cinematic rendering.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "NDE",
+      "evidence": [
+        {
+          "quote": "0-3s [Intro]... 3-13s [Chorus 1 only]... 13-15s [Outro fade]",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "The prompt follows a clear progression: instrumental intro → vocal chorus → instrumental fade → silence. There is no static restatement or unmotivated repetition. The structure escalates from silence to voice to fade, creating a narrative arc within 15 seconds.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CIF",
+      "evidence": [
+        {
+          "quote": "Cinematic, live-action, a static wide shot frames a cool, desolate night wilderness... thin mist drifting low... faint stars glimmering",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "Added cinematic details (wide shot, mist, starlight, push-in) enhance the mood and visual immersion without distracting from the core request. These additions are thematically consistent with the original’s ‘cool desolate night-wilderness mood’ and support the central goal of a singing clip with atmosphere.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SDI",
+      "evidence": [
+        {
+          "quote": "a soft, breathy female voice (S1) begins to sing the chorus once... The guzheng plucks softly, a deep overtone hum sustains underneath... the final seconds settle into near-silence with only the faintest breath of wind.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "Audio is integrated with visual timing: voice begins at 00:03, music fades at 00:13, silence follows. The soundscape (wind, mist, guzheng, hum) is described with source, intensity, and progression. No unnecessary audio elements are added.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SPS",
+      "evidence": [
+        {
+          "quote": "a soft, breathy female voice (S1) begins to sing... The night of Hohhot, so deep, so deep...",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "Vocal delivery is specified as 'soft, breathy', matching the original’s 'soft female voice'. The lyrics are included verbatim. No performance details (e.g., facial expression, gesture) are needed since it’s a non-diegetic vocal clip with no on-screen performer.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "VSS",
+      "evidence": [
+        {
+          "quote": "Cinematic, live-action, a static wide shot frames a cool, desolate night wilderness... thin mist drifting low over the ground, faint stars glimmering through the haze.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "Visual style is specified as cinematic, live-action, with a wide shot and environmental details (mist, stars, haze) that define the production design and mood. The rendering language is clear and consistent with the original’s ‘cool desolate night-wilderness’ directive.",
+      "severity": "none"
+    }
+  ],
+  "dimension": "DC",
+  "dimension_score": 95,
+  "evidence_cache_key": "d3703f2eeae6bcfe67d5d4f67af684e4acb138dc1bc847108c8dab22a722c5eb",
+  "judge_cache_key": "0754499d53388e6467fb078ab780e01b77f9f1c9e99d9029be2769351eb2b2eb",
+  "method": "glm53_20261112_120702",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"DC\",\n  \"dimension_score\": 95,\n  \"summary\": \"The enhanced prompt effectively translates the original instruction into a detailed, temporally structured cinematic plan with clear shot boundaries, camera movement, and audio-visual integration. It adds cinematic framing and environmental detail without deviating from the core requirements. Minor issues include slight over-specification of camera movement and ambient sound, but these do not materially affect the core request. The prompt supports a coherent, immersive 15-second clip with appropriate progression and fade.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"STC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"[Shot 1] ... For the first three seconds the scene is instrumental only... [Shot 2] At 00:03.000... [Shot 3] At 00:13.000...\"\n        }\n      ],\n      \"rationale\": \"The prompt organizes the 15-second clip into three distinct, time-bound shots with precise temporal markers (0-3s, 3-13s, 13-15s), matching the original instruction’s structure. The slow push-in is introduced as a continuous motion across shots, maintaining temporal continuity. Shot boundaries are clearly defined and aligned with audio events.\"\n    },\n    {\n      \"criterion\": \"CDS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"minor\",\n      \"issue\": \"Camera movement is specified (slow push-in) but lacks technical parameters (e.g., lens focal length, field of view, or movement speed).\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"the camera holds the same wide frame with a very slow, subtle push-in\"\n        }\n      ],\n      \"rationale\": \"The prompt specifies a wide shot and a slow push-in, which is actionable for visual direction. However, it does not define technical camera parameters (e.g., 24mm lens, 10cm per second movement), which may limit precise execution. This is a minor issue as the motion is clearly described and feasible.\"\n    },\n    {\n      \"criterion\": \"ETD\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"At 00:03.000, the camera holds the same wide frame... As she sings... At 00:13.000, the voice ends and the shot continues its slow push-in...\"\n        }\n      ],\n      \"rationale\": \"Transitions are motivated by audio events (voice entry at 00:03, fade-out at 00:13) and maintain spatial continuity through a continuous slow push-in. There are no disconnected or unmotivated cuts. The fade into silence is clearly timed and supported by the music’s instrumental echo.\"\n    },\n    {\n      \"criterion\": \"LCS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"a cool, desolate night wilderness... dark hazy sky, thin mist drifting low... faint stars glimmering through the haze\"\n        }\n      ],\n      \"rationale\": \"Lighting is specified through environmental description: dark hazy sky, faint starlight, mist, and cool desolate mood. While no explicit light source or grading is named, the visual atmosphere is clearly defined and consistent with the requested mood. This is sufficient for a cinematic rendering.\"\n    },\n    {\n      \"criterion\": \"NDE\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"0-3s [Intro]... 3-13s [Chorus 1 only]... 13-15s [Outro fade]\"\n        }\n      ],\n      \"rationale\": \"The prompt follows a clear progression: instrumental intro → vocal chorus → instrumental fade → silence. There is no static restatement or unmotivated repetition. The structure escalates from silence to voice to fade, creating a narrative arc within 15 seconds.\"\n    },\n    {\n      \"criterion\": \"CIF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Cinematic, live-action, a static wide shot frames a cool, desolate night wilderness... thin mist drifting low... faint stars glimmering\"\n        }\n      ],\n      \"rationale\": \"Added cinematic details (wide shot, mist, starlight, push-in) enhance the mood and visual immersion without distracting from the core request. These additions are thematically consistent with the original’s ‘cool desolate night-wilderness mood’ and support the central goal of a singing clip with atmosphere.\"\n    },\n    {\n      \"criterion\": \"SDI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"a soft, breathy female voice (S1) begins to sing the chorus once... The guzheng plucks softly, a deep overtone hum sustains underneath... the final seconds settle into near-silence with only the faintest breath of wind.\"\n        }\n      ],\n      \"rationale\": \"Audio is integrated with visual timing: voice begins at 00:03, music fades at 00:13, silence follows. The soundscape (wind, mist, guzheng, hum) is described with source, intensity, and progression. No unnecessary audio elements are added.\"\n    },\n    {\n      \"criterion\": \"SPS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"a soft, breathy female voice (S1) begins to sing... The night of Hohhot, so deep, so deep...\"\n        }\n      ],\n      \"rationale\": \"Vocal delivery is specified as 'soft, breathy', matching the original’s 'soft female voice'. The lyrics are included verbatim. No performance details (e.g., facial expression, gesture) are needed since it’s a non-diegetic vocal clip with no on-screen performer.\"\n    },\n    {\n      \"criterion\": \"VSS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Cinematic, live-action, a static wide shot frames a cool, desolate night wilderness... thin mist drifting low over the ground, faint stars glimmering through the haze.\"\n        }\n      ],\n      \"rationale\": \"Visual style is specified as cinematic, live-action, with a wide shot and environmental details (mist, stars, haze) that define the production design and mood. The rendering language is clear and consistent with the original’s ‘cool desolate night-wilderness’ directive.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt effectively translates the original instruction into a detailed, temporally structured cinematic plan with clear shot boundaries, camera movement, and audio-visual integration. It adds cinematic framing and environmental detail without deviating from the core requirements. Minor issues include slight over-specification of camera movement and ambient sound, but these do not materially affect the core request. The prompt supports a coherent, immersive 15-second clip with appropriate progression and fade.",
+  "usage": {
+    "completion_tokens": 1623,
+    "prompt_tokens": 1478,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 3101
+  }
+}

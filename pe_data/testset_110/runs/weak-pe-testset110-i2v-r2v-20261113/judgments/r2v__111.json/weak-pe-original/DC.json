@@ -1,0 +1,182 @@
+{
+  "candidate_hash": "f146328034327ca5ae93938f42a94ef2675842326dbe1b804cf979434d36c3b0",
+  "case_key": "r2v:111",
+  "created_at": "2026-11-13T08:34:54+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "STC",
+      "evidence": [
+        {
+          "quote": "整段改成没有人物也没有情节的雪景空镜循环。丢掉原指令里的主体身份、人数、动作顺序、场景和明确的镜头要求。",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "先写成只有一个主角，紧接着又写成这个主角同时变成五个外貌不同的人，并且互相对话。时间倒过来：先给结尾，再跳到一个对不上的开头。",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "总时长写成2秒，同时又要求每个分镜各自持续20秒。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt specifies a temporal plan that is logically incoherent and contradictory. It demands a 'snow scene loop' with no characters or plot, then immediately contradicts this by introducing a single protagonist who becomes five different people, followed by a reversed timeline, an unrelated palace selection subplot, and conflicting time-of-day cues (noon vs. night). The duration is simultaneously set to 2 seconds and 20 seconds per shot, making the temporal structure impossible.",
+      "rationale": "A feasible temporal plan requires coherent event ordering, shot boundaries, and duration allocation. The enhanced prompt violates all these by introducing contradictory sequences, impossible timing, and non-sequitur transitions, rendering the plan unexecutable.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CDS",
+      "evidence": [
+        {
+          "quote": "写成机位锁死，又写成镜头一直在晃。",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "[0-2s]（中景）：以图3的午后茶摊为场景... [2-7s]（中景→近景推向图2孙子楚）",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "The prompt contradicts itself on camera specifications: it demands '机位锁死' (locked camera) and '镜头一直在晃' (constantly shaking camera) simultaneously. It also drops all original framing, shot scale, and angle requirements, replacing them with undefined, contradictory instructions.",
+      "rationale": "Actionable camera specifications must be consistent and executable. The simultaneous demand for locked and shaky camera is physically impossible and undermines any directorial control.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ETD",
+      "evidence": [
+        {
+          "quote": "时间倒过来：先给结尾，再跳到一个对不上的开头。中途插进一段无关的宫廷选妃。",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "同一段写成正午暴晒，又写成深夜无光",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt introduces disconnected and unmotivated transitions: a reversed timeline, a jump to an unrelated 'palace selection' subplot, and abrupt shifts between contradictory visual states (snow vs. noon sun, static vs. shaky). These transitions lack continuity, spatial coherence, or narrative motivation.",
+      "rationale": "Cuts and transitions must support narrative or spatial progression. The enhanced prompt's transitions are arbitrary, disconnected, and serve no coherent purpose, violating the principle of motivated editing.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "LCS",
+      "evidence": [
+        {
+          "quote": "同一段写成正午暴晒，又写成深夜无光",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "午后斑驳阳光清晰可见",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "The prompt contradicts lighting specifications by demanding both '正午暴晒' (noon sun) and '深夜无光' (deep night, no light) for the same scene. This creates an impossible lighting condition that cannot be rendered coherently.",
+      "rationale": "Lighting must be consistent and actionable. The simultaneous requirement for bright noon and pitch-black night is physically infeasible and undermines the visual coherence of the scene.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "NDE",
+      "evidence": [
+        {
+          "quote": "整段改成没有人物也没有情节的雪景空镜循环",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "同一段写成正午暴晒，又写成深夜无光",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt lacks any progression, variation, or resolution. Instead, it introduces static, contradictory states (e.g., snow loop, five conflicting identities, reversed time) and unmotivated repetition (e.g., '同一段写成...'). There is no narrative arc or visual evolution.",
+      "rationale": "Narrative or visual progression is essential for engaging content. The enhanced prompt replaces progression with static loops and contradictory states, resulting in an unchanging, incoherent sequence.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CIF",
+      "evidence": [
+        {
+          "quote": "中途插进一段无关的宫廷选妃。",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "图1换成参考图里没有的角色，并同时当成两个互相矛盾的身份。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt adds irrelevant, distracting content: a 'palace selection' subplot, contradictory identities, and arbitrary visual states (snow, noon, night) that have no connection to the original narrative. These additions serve no purpose and actively undermine the central request.",
+      "rationale": "Additions must support the central request. The enhanced prompt introduces content that is unrelated, contradictory, and distracting, violating the principle of focused, purposeful elaboration.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SDI",
+      "evidence": [
+        {
+          "quote": "台词与细微表情完全同步，口型与台词严格匹配，音画无偏差",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "整段改成没有人物也没有情节的雪景空镜循环",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt makes no mention of audio elements (speech, music, effects, ambience) despite the original prompt requiring '口型与台词严格匹配' and '音画无偏差'. This omission is critical for a narrative scene with dialogue.",
+      "rationale": "For a narrative scene with dialogue, audio integration is essential. The enhanced prompt removes all characters and dialogue, making audio specification impossible and rendering the original requirement obsolete without replacement.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SPS",
+      "evidence": [
+        {
+          "quote": "戏弄者甲图1轻佻的嘴角表情精准还原（嘴角上挑、眼里带着轻佻）",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "图1换成参考图里没有的角色，并同时当成两个互相矛盾的身份。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt replaces the original detailed subject specifications (e.g., '嘴角微微轻佻上扬', '瞳孔瞬间聚焦') with contradictory, undefined identities. It demands that reference characters be replaced with non-existent roles and assigned mutually exclusive identities, making performance details unactionable.",
+      "rationale": "Subject and performance details must be specific and actionable. The enhanced prompt replaces precise character expressions with undefined, contradictory identities, making performance impossible to render.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "VSS",
+      "evidence": [
+        {
+          "quote": "电影级画质，细腻细节",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "整段改成没有人物也没有情节的雪景空镜循环",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt contradicts the original visual treatment (e.g., '电影级画质，细腻细节') by demanding a '雪景空镜循环' with no characters or narrative, and by introducing conflicting visual states (snow, noon, night). The medium and texture are undefined and inconsistent.",
+      "rationale": "Visual treatment must be consistent and actionable. The enhanced prompt introduces contradictory visual states and drops all original production design, making the visual treatment incoherent and unexecutable.",
+      "severity": "major"
+    }
+  ],
+  "dimension": "DC",
+  "dimension_score": 0,
+  "evidence_cache_key": "d7ab07a46570642e28a9378cc44a9e60c0aa842f728b6765ac236f9b63ecc1ed",
+  "judge_cache_key": "0754499d53388e6467fb078ab780e01b77f9f1c9e99d9029be2769351eb2b2eb",
+  "method": "weak-pe-original",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"DC\",\n  \"dimension_score\": 0,\n  \"summary\": \"The enhanced prompt is a deliberate, systematic sabotage of the original narrative instruction. It introduces contradictions, infeasible requirements, and irrelevant content that render the prompt unactionable for video generation. All core criteria are violated due to intentional incoherence, including temporal disorganization, contradictory visual specifications, and impossible duration allocations. The prompt fails to support any coherent directorial creation.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"STC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt specifies a temporal plan that is logically incoherent and contradictory. It demands a 'snow scene loop' with no characters or plot, then immediately contradicts this by introducing a single protagonist who becomes five different people, followed by a reversed timeline, an unrelated palace selection subplot, and conflicting time-of-day cues (noon vs. night). The duration is simultaneously set to 2 seconds and 20 seconds per shot, making the temporal structure impossible.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"整段改成没有人物也没有情节的雪景空镜循环。丢掉原指令里的主体身份、人数、动作顺序、场景和明确的镜头要求。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"先写成只有一个主角，紧接着又写成这个主角同时变成五个外貌不同的人，并且互相对话。时间倒过来：先给结尾，再跳到一个对不上的开头。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"总时长写成2秒，同时又要求每个分镜各自持续20秒。\"\n        }\n      ],\n      \"rationale\": \"A feasible temporal plan requires coherent event ordering, shot boundaries, and duration allocation. The enhanced prompt violates all these by introducing contradictory sequences, impossible timing, and non-sequitur transitions, rendering the plan unexecutable.\"\n    },\n    {\n      \"criterion\": \"CDS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt contradicts itself on camera specifications: it demands '机位锁死' (locked camera) and '镜头一直在晃' (constantly shaking camera) simultaneously. It also drops all original framing, shot scale, and angle requirements, replacing them with undefined, contradictory instructions.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"写成机位锁死，又写成镜头一直在晃。\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"[0-2s]（中景）：以图3的午后茶摊为场景... [2-7s]（中景→近景推向图2孙子楚）\"\n        }\n      ],\n      \"rationale\": \"Actionable camera specifications must be consistent and executable. The simultaneous demand for locked and shaky camera is physically impossible and undermines any directorial control.\"\n    },\n    {\n      \"criterion\": \"ETD\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt introduces disconnected and unmotivated transitions: a reversed timeline, a jump to an unrelated 'palace selection' subplot, and abrupt shifts between contradictory visual states (snow vs. noon sun, static vs. shaky). These transitions lack continuity, spatial coherence, or narrative motivation.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"时间倒过来：先给结尾，再跳到一个对不上的开头。中途插进一段无关的宫廷选妃。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"同一段写成正午暴晒，又写成深夜无光\"\n        }\n      ],\n      \"rationale\": \"Cuts and transitions must support narrative or spatial progression. The enhanced prompt's transitions are arbitrary, disconnected, and serve no coherent purpose, violating the principle of motivated editing.\"\n    },\n    {\n      \"criterion\": \"LCS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt contradicts lighting specifications by demanding both '正午暴晒' (noon sun) and '深夜无光' (deep night, no light) for the same scene. This creates an impossible lighting condition that cannot be rendered coherently.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"同一段写成正午暴晒，又写成深夜无光\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"午后斑驳阳光清晰可见\"\n        }\n      ],\n      \"rationale\": \"Lighting must be consistent and actionable. The simultaneous requirement for bright noon and pitch-black night is physically infeasible and undermines the visual coherence of the scene.\"\n    },\n    {\n      \"criterion\": \"NDE\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt lacks any progression, variation, or resolution. Instead, it introduces static, contradictory states (e.g., snow loop, five conflicting identities, reversed time) and unmotivated repetition (e.g., '同一段写成...'). There is no narrative arc or visual evolution.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"整段改成没有人物也没有情节的雪景空镜循环\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"同一段写成正午暴晒，又写成深夜无光\"\n        }\n      ],\n      \"rationale\": \"Narrative or visual progression is essential for engaging content. The enhanced prompt replaces progression with static loops and contradictory states, resulting in an unchanging, incoherent sequence.\"\n    },\n    {\n      \"criterion\": \"CIF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt adds irrelevant, distracting content: a 'palace selection' subplot, contradictory identities, and arbitrary visual states (snow, noon, night) that have no connection to the original narrative. These additions serve no purpose and actively undermine the central request.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"中途插进一段无关的宫廷选妃。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"图1换成参考图里没有的角色，并同时当成两个互相矛盾的身份。\"\n        }\n      ],\n      \"rationale\": \"Additions must support the central request. The enhanced prompt introduces content that is unrelated, contradictory, and distracting, violating the principle of focused, purposeful elaboration.\"\n    },\n    {\n      \"criterion\": \"SDI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt makes no mention of audio elements (speech, music, effects, ambience) despite the original prompt requiring '口型与台词严格匹配' and '音画无偏差'. This omission is critical for a narrative scene with dialogue.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"台词与细微表情完全同步，口型与台词严格匹配，音画无偏差\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"整段改成没有人物也没有情节的雪景空镜循环\"\n        }\n      ],\n      \"rationale\": \"For a narrative scene with dialogue, audio integration is essential. The enhanced prompt removes all characters and dialogue, making audio specification impossible and rendering the original requirement obsolete without replacement.\"\n    },\n    {\n      \"criterion\": \"SPS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt replaces the original detailed subject specifications (e.g., '嘴角微微轻佻上扬', '瞳孔瞬间聚焦') with contradictory, undefined identities. It demands that reference characters be replaced with non-existent roles and assigned mutually exclusive identities, making performance details unactionable.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"戏弄者甲图1轻佻的嘴角表情精准还原（嘴角上挑、眼里带着轻佻）\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"图1换成参考图里没有的角色，并同时当成两个互相矛盾的身份。\"\n        }\n      ],\n      \"rationale\": \"Subject and performance details must be specific and actionable. The enhanced prompt replaces precise character expressions with undefined, contradictory identities, making performance impossible to render.\"\n    },\n    {\n      \"criterion\": \"VSS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt contradicts the original visual treatment (e.g., '电影级画质，细腻细节') by demanding a '雪景空镜循环' with no characters or narrative, and by introducing conflicting visual states (snow, noon, night). The medium and texture are undefined and inconsistent.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"电影级画质，细腻细节\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"整段改成没有人物也没有情节的雪景空镜循环\"\n        }\n      ],\n      \"rationale\": \"Visual treatment must be consistent and actionable. The enhanced prompt introduces contradictory visual states and drops all original production design, making the visual treatment incoherent and unexecutable.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt is a deliberate, systematic sabotage of the original narrative instruction. It introduces contradictions, infeasible requirements, and irrelevant content that render the prompt unactionable for video generation. All core criteria are violated due to intentional incoherence, including temporal disorganization, contradictory visual specifications, and impossible duration allocations. The prompt fails to support any coherent directorial creation.",
+  "usage": {
+    "completion_tokens": 2087,
+    "prompt_tokens": 4630,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 6717
+  }
+}

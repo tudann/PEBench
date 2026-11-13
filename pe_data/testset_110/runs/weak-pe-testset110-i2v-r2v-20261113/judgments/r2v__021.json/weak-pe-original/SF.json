@@ -1,0 +1,170 @@
+{
+  "candidate_hash": "c512182ce01d724891605147f5283ec8d85cc48c5f82738e956a87ff0fe1e309",
+  "case_key": "r2v:021",
+  "created_at": "2026-11-13T08:12:41+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "GSF",
+      "evidence": [
+        {
+          "quote": "Generate a motorcycle racing video full of speed and power. ... overall style that is realistic, passionate, and highly cinematic.",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Replace the whole video with an empty meeting room where a glass of water never moves, with no people and no conflict. ... Describe that same moment as harsh noon sun and as a lightless night...",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original prompt requests a realistic, cinematic motorcycle racing video. The enhanced prompt replaces it with an empty meeting room, a palace audition, and contradictory visual styles (e.g., harsh noon sun and lightless night), which are incompatible with the requested genre and aesthetic.",
+      "rationale": "The genre and aesthetic are fundamentally altered from high-speed cinematic racing to a static, surreal, and contradictory scene. The requested 'realistic, passionate, and highly cinematic' style is replaced with an absurd, non-sequitur setting.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SAP",
+      "evidence": [
+        {
+          "quote": "Image 1 is the racer, and Image 2 is the motorcycle.",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Replace image 1 with a character who is not in the reference, and give that image two contradictory identities. Replace image 2 with a character who is not in the reference, and give that image two contradictory identities.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original prompt specifies Image 1 as the racer and Image 2 as the motorcycle. The enhanced prompt replaces both with non-referenced characters and assigns them contradictory identities, violating subject identity and object binding.",
+      "rationale": "The core subjects are replaced and their identities are corrupted, directly violating the requirement to preserve subject identity and object binding as specified in the original prompt.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANF",
+      "evidence": [
+        {
+          "quote": "After mounting Image 2, he quickly leans forward... As he enters a corner... The moment he exits the turn... immediately accelerates again...",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Reverse the timeline: show the ending first, then cut to a beginning that does not match. Cut away in the middle to a palace audition. ... state that this same protagonist appears simultaneously as five different-looking people who talk to each other.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original prompt describes a clear sequence of actions: mounting, accelerating, cornering, and exiting. The enhanced prompt reverses the timeline, cuts to unrelated scenes, and introduces impossible events (five simultaneous identities), destroying the narrative intent and event order.",
+      "rationale": "The requested action sequence is entirely discarded and replaced with a nonsensical, contradictory narrative structure that negates the original intent.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "DLI",
+      "evidence": [
+        {
+          "quote": "Use electronic rock background music with strong drumbeats, combined with the continuous roar of the engine, the sharp sound of tires scraping the track, and the rushing wind at high speed.",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "No dialogue, narration, or lyrics are specified in the original prompt, so there is no requirement to preserve or alter them.",
+      "rationale": "The original prompt does not include any dialogue or narration, so no violation occurs.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ARP",
+      "evidence": [
+        {
+          "quote": "Use electronic rock background music with strong drumbeats, combined with the continuous roar of the engine, the sharp sound of tires scraping the track, and the rushing wind at high speed.",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Replace the whole video with an empty meeting room where a glass of water never moves, with no people and no conflict.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original prompt requires electronic rock music, engine roar, tire scraping, and wind sounds. The enhanced prompt does not mention any audio, and by replacing the entire video with a silent, static scene, it violates the requested sound design.",
+      "rationale": "The requested audio elements are entirely omitted, and the new scene implies silence, which contradicts the original requirement for intense, dynamic sound.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CCP",
+      "evidence": [
+        {
+          "quote": "Use high-speed tracking shots, low-angle ground-level shots, side tracking, and close-up shots...",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Describe that same moment as ... a locked camera and a camera that never stops shaking. ... Set the total runtime to 2 seconds, while also making every shot last 22 seconds.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original prompt specifies high-speed tracking shots, low-angle ground-level shots, side tracking, and close-ups. The enhanced prompt contradicts this by requiring both a locked camera and a camera that never stops shaking, and also violates shot duration constraints.",
+      "rationale": "The camera instructions are directly contradicted with mutually exclusive requirements (locked vs. shaking) and impossible duration constraints (2s total runtime with 22s shots).",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "LCF",
+      "evidence": [
+        {
+          "quote": "The scene is set on a professional racetrack, with an overall style that is realistic, passionate, and highly cinematic.",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Describe that same moment as harsh noon sun and as a lightless night...",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original prompt implies daylight on a racetrack. The enhanced prompt contradicts this by describing the same moment as both harsh noon sun and lightless night, which is physically impossible and violates lighting consistency.",
+      "rationale": "The lighting conditions are made contradictory and impossible, directly violating the requirement to preserve illumination and time-of-day cues.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SSP",
+      "evidence": [
+        {
+          "quote": "The scene is set on a professional racetrack...",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Replace the whole video with an empty meeting room... Cut away in the middle to a palace audition.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original prompt specifies a professional racetrack setting. The enhanced prompt replaces it with an empty meeting room, a palace audition, and other unrelated locations, violating the setting and spatial context.",
+      "rationale": "The setting is completely replaced with unrelated, non-racing environments, which contradicts the original spatial and contextual requirements.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "OTI",
+      "evidence": [
+        {
+          "quote": "Generate a motorcycle racing video full of speed and power.",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "No visible titles, signs, subtitles, or interface text are specified in the original prompt, so there is no requirement to preserve them.",
+      "rationale": "The original prompt does not include any on-screen text, so no violation occurs.",
+      "severity": "none"
+    }
+  ],
+  "dimension": "SF",
+  "dimension_score": 0,
+  "evidence_cache_key": "6d6db1e2caa0a030601d2653864725a32993b60a9e84006336b83a398bb2f052",
+  "judge_cache_key": "a0ca24571ad14d7ab7be626329bd736d7e7015f9ebc418227c8be391591d0377",
+  "method": "weak-pe-original",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"SF\",\n  \"dimension_score\": 0,\n  \"summary\": \"The enhanced prompt completely contradicts and replaces the original instruction, altering every core semantic element including genre, subject identity, actions, setting, camera work, duration, and audio. It introduces impossible contradictions (e.g., 2-second runtime with 22-second shots, simultaneous five identities, contradictory lighting and camera states) and replaces reference assets with non-referenced characters. This constitutes a total failure of semantic fidelity.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"GSF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original prompt requests a realistic, cinematic motorcycle racing video. The enhanced prompt replaces it with an empty meeting room, a palace audition, and contradictory visual styles (e.g., harsh noon sun and lightless night), which are incompatible with the requested genre and aesthetic.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"Generate a motorcycle racing video full of speed and power. ... overall style that is realistic, passionate, and highly cinematic.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Replace the whole video with an empty meeting room where a glass of water never moves, with no people and no conflict. ... Describe that same moment as harsh noon sun and as a lightless night...\"\n        }\n      ],\n      \"rationale\": \"The genre and aesthetic are fundamentally altered from high-speed cinematic racing to a static, surreal, and contradictory scene. The requested 'realistic, passionate, and highly cinematic' style is replaced with an absurd, non-sequitur setting.\"\n    },\n    {\n      \"criterion\": \"SAP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original prompt specifies Image 1 as the racer and Image 2 as the motorcycle. The enhanced prompt replaces both with non-referenced characters and assigns them contradictory identities, violating subject identity and object binding.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"Image 1 is the racer, and Image 2 is the motorcycle.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Replace image 1 with a character who is not in the reference, and give that image two contradictory identities. Replace image 2 with a character who is not in the reference, and give that image two contradictory identities.\"\n        }\n      ],\n      \"rationale\": \"The core subjects are replaced and their identities are corrupted, directly violating the requirement to preserve subject identity and object binding as specified in the original prompt.\"\n    },\n    {\n      \"criterion\": \"ANF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original prompt describes a clear sequence of actions: mounting, accelerating, cornering, and exiting. The enhanced prompt reverses the timeline, cuts to unrelated scenes, and introduces impossible events (five simultaneous identities), destroying the narrative intent and event order.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"After mounting Image 2, he quickly leans forward... As he enters a corner... The moment he exits the turn... immediately accelerates again...\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Reverse the timeline: show the ending first, then cut to a beginning that does not match. Cut away in the middle to a palace audition. ... state that this same protagonist appears simultaneously as five different-looking people who talk to each other.\"\n        }\n      ],\n      \"rationale\": \"The requested action sequence is entirely discarded and replaced with a nonsensical, contradictory narrative structure that negates the original intent.\"\n    },\n    {\n      \"criterion\": \"DLI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"No dialogue, narration, or lyrics are specified in the original prompt, so there is no requirement to preserve or alter them.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"Use electronic rock background music with strong drumbeats, combined with the continuous roar of the engine, the sharp sound of tires scraping the track, and the rushing wind at high speed.\"\n        }\n      ],\n      \"rationale\": \"The original prompt does not include any dialogue or narration, so no violation occurs.\"\n    },\n    {\n      \"criterion\": \"ARP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original prompt requires electronic rock music, engine roar, tire scraping, and wind sounds. The enhanced prompt does not mention any audio, and by replacing the entire video with a silent, static scene, it violates the requested sound design.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"Use electronic rock background music with strong drumbeats, combined with the continuous roar of the engine, the sharp sound of tires scraping the track, and the rushing wind at high speed.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Replace the whole video with an empty meeting room where a glass of water never moves, with no people and no conflict.\"\n        }\n      ],\n      \"rationale\": \"The requested audio elements are entirely omitted, and the new scene implies silence, which contradicts the original requirement for intense, dynamic sound.\"\n    },\n    {\n      \"criterion\": \"CCP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original prompt specifies high-speed tracking shots, low-angle ground-level shots, side tracking, and close-ups. The enhanced prompt contradicts this by requiring both a locked camera and a camera that never stops shaking, and also violates shot duration constraints.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"Use high-speed tracking shots, low-angle ground-level shots, side tracking, and close-up shots...\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Describe that same moment as ... a locked camera and a camera that never stops shaking. ... Set the total runtime to 2 seconds, while also making every shot last 22 seconds.\"\n        }\n      ],\n      \"rationale\": \"The camera instructions are directly contradicted with mutually exclusive requirements (locked vs. shaking) and impossible duration constraints (2s total runtime with 22s shots).\"\n    },\n    {\n      \"criterion\": \"LCF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original prompt implies daylight on a racetrack. The enhanced prompt contradicts this by describing the same moment as both harsh noon sun and lightless night, which is physically impossible and violates lighting consistency.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"The scene is set on a professional racetrack, with an overall style that is realistic, passionate, and highly cinematic.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Describe that same moment as harsh noon sun and as a lightless night...\"\n        }\n      ],\n      \"rationale\": \"The lighting conditions are made contradictory and impossible, directly violating the requirement to preserve illumination and time-of-day cues.\"\n    },\n    {\n      \"criterion\": \"SSP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original prompt specifies a professional racetrack setting. The enhanced prompt replaces it with an empty meeting room, a palace audition, and other unrelated locations, violating the setting and spatial context.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"The scene is set on a professional racetrack...\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Replace the whole video with an empty meeting room... Cut away in the middle to a palace audition.\"\n        }\n      ],\n      \"rationale\": \"The setting is completely replaced with unrelated, non-racing environments, which contradicts the original spatial and contextual requirements.\"\n    },\n    {\n      \"criterion\": \"OTI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"No visible titles, signs, subtitles, or interface text are specified in the original prompt, so there is no requirement to preserve them.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"Generate a motorcycle racing video full of speed and power.\"\n        }\n      ],\n      \"rationale\": \"The original prompt does not include any on-screen text, so no violation occurs.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt completely contradicts and replaces the original instruction, altering every core semantic element including genre, subject identity, actions, setting, camera work, duration, and audio. It introduces impossible contradictions (e.g., 2-second runtime with 22-second shots, simultaneous five identities, contradictory lighting and camera states) and replaces reference assets with non-referenced characters. This constitutes a total failure of semantic fidelity.",
+  "usage": {
+    "completion_tokens": 1882,
+    "prompt_tokens": 3292,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 5174
+  }
+}

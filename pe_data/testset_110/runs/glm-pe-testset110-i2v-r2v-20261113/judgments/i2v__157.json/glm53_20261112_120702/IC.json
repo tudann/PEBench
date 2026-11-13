@@ -1,0 +1,119 @@
+{
+  "candidate_hash": "b8193a627e11817e7c88a751aca2b9767aa126c1c169cd556cb1e1329e757505",
+  "case_key": "i2v:157",
+  "created_at": "2026-11-13T07:54:53+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "SAC",
+      "evidence": [
+        {
+          "quote": "1. 烤盘：30×20cm长方形，黑色哑光铸铁烤盘... 8. 食材：带自然纹理的新鲜鸡蛋、带冰霜的冷冻蛋挞皮",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "a 20cm matte stainless mixing bowl, two fresh textured eggs, a milk pitcher, cream, and a small sugar bowl settle onto the island one by one",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The enhanced prompt introduces a 'milk pitcher' not listed in the original prompt’s fixed props (original_prompt: '1. 烤盘... 8. 食材：带自然纹理的新鲜鸡蛋、带冰霜的冷冻蛋挞皮'), which may imply an unapproved prop addition. Additionally, the 'cream' and 'sugar bowl' are not explicitly in the original’s fixed list, though '淡奶油' and '细白砂糖' are mentioned in the action description. This constitutes a minor attribute drift in the set of persistent props.",
+      "rationale": "The original prompt explicitly lists only 9 fixed props, including eggs and frozen tart shells, but does not mention a milk pitcher or sugar bowl as persistent objects. The enhanced prompt adds these, which may violate the '全程恒定锁定道具' (100% unchanged props) rule. However, since these are part of the action sequence and not required to persist beyond their use, the issue is minor.",
+      "severity": "minor"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANL",
+      "evidence": [
+        {
+          "quote": "the eggs crack open by themselves with a crisp snap; yolks and whites drop in steady streams into the bowl... milk, cream, and fine white sugar pour in measured additions, and a whisk stirs the mixture... custard flows through the mesh... frosted frozen tart shells place themselves one by one into the pan",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The actions in the enhanced prompt form a coherent procedural progression: eggs crack → liquids added → mixing → straining → pan setup → tart shells placed. Each step logically follows the previous, with plausible prerequisites (e.g., mixing before straining) and causal bindings (e.g., eggshells flying off after cracking). No dangling or incompatible events are present.",
+      "rationale": "The sequence of actions is causally coherent and follows a realistic baking workflow. The enhanced prompt maintains the original’s intent of automated, stop-motion food preparation without human intervention.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "TSC",
+      "evidence": [
+        {
+          "quote": "[Shot 2] At 00:03.000, the shot cuts to a macro close-up... [Shot 3] At 00:04.000, the shot cuts back to the medium shot",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "第一段：0-10秒｜精准调制挞液+将挞皮放入盘中（时间区间：0-10秒）",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "The enhanced prompt introduces a shot cut at 00:03.000 to a macro close-up and another at 00:04.000 back to medium shot, which is not explicitly described in the original prompt’s single 0-10s continuous segment. The original prompt does not specify shot changes, so this introduces a temporal structure not accounted for in the original, potentially conflicting with the implied continuous 0-10s action.",
+      "rationale": "The original prompt describes a single 0-10s segment without mentioning shot changes. The enhanced prompt’s introduction of two distinct shots with precise timestamps may imply a structure not requested, though it does not contradict the content. This is a minor deviation in temporal structure.",
+      "severity": "minor"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SPC",
+      "evidence": [
+        {
+          "quote": "the background kitchen identical to <Picture 1> throughout, no brightness jumps, no clipping, floating, or teleporting",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "kitchen_island is positioned in front of refrigerator and oven unit... window is above sink_area",
+          "source": "evidence_facts"
+        }
+      ],
+      "issue": "The enhanced prompt maintains consistent spatial relationships: the kitchen island remains the central focus, props are placed on it, and the background (cabinets, window, appliances) remains unchanged. The shot transitions are described with stable framing, and no unexplained position swaps or movement paths are introduced.",
+      "rationale": "The spatial layout is preserved across shots, and the prompt explicitly states no floating or teleporting. The camera remains static in the medium shot, and the macro shot is described as stable, maintaining spatial consistency.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "PL",
+      "evidence": [
+        {
+          "quote": "Hyper-realistic stop-motion food animation, choppy beat-synced cadence... each item landing firmly in place",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The actions described (eggs cracking by themselves, props landing with tick sounds, custard flowing through a sieve) are presented as stop-motion animation, which is a stylized, non-physical process. The prompt does not claim real-world physics; instead, it adheres to the established rules of stop-motion animation, including object permanence and causal relations within that medium.",
+      "rationale": "The prompt explicitly frames the content as stop-motion, so the 'magic' of objects moving without hands is consistent with the medium’s conventions. No real-world physics violations are present within the defined fictional rules.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "AVS",
+      "evidence": [
+        {
+          "quote": "the eggs crack open by themselves with a crisp snap; yolks and whites drop in steady streams into the bowl with soft plops... the fine hiss of custard straining through the sieve... light clicks as each tart shell settles into the pan",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "音效指令：鸡蛋磕开的清脆爆裂声，蛋液落入碗中的咕咚声...滤网过滤挞液的细密沙沙声...挞皮放置烤盘时的轻微碰撞声",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "The enhanced prompt aligns visible events with sound effects: egg cracking with a 'crisp snap', liquid plops, stirring friction, hissing during straining, and clicks for tart shells. These are strictly synced to the on-screen motion, as required by the original prompt’s 'Foley Sync' constraint.",
+      "rationale": "The sound effects are precisely matched to the visual actions, maintaining temporal and semantic alignment as required. The enhanced prompt does not introduce any misaligned or premature effects.",
+      "severity": "none"
+    }
+  ],
+  "dimension": "IC",
+  "dimension_score": 85,
+  "evidence_cache_key": "ac74dae3951052ac354c4899840ee20e6d8cda58de5e4095553c374837d8032c",
+  "judge_cache_key": "438d7e9fd7332b1041db3e2c26d42cb3fe828e0d369fb59490f6650aee59e97d",
+  "method": "glm53_20261112_120702",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"IC\",\n  \"dimension_score\": 85,\n  \"summary\": \"The enhanced prompt maintains strong internal consistency with the original instruction, preserving key constraints on subject identity, action progression, and spatial-temporal logic. However, minor inconsistencies arise in the handling of props (e.g., the inclusion of a 'milk pitcher' not in the original list) and slight deviations in action sequencing (e.g., the egg cracking and mixing occur in the first shot, while the original prompt specifies a single 0-10s segment). The prompt also introduces a 'macro close-up' at 00:03.000 and a return to medium shot at 00:04.000, which are not explicitly described in the original, potentially introducing a shot transition not accounted for in the original’s continuous 0-10s segment. Despite these, the core requirements of no hands, consistent props, and synchronized ASMR Foley are upheld. The evidence asset (image_1) is a static frame and cannot validate motion or audio, but its visual elements align with the described kitchen setting.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"SAC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"minor\",\n      \"issue\": \"The enhanced prompt introduces a 'milk pitcher' not listed in the original prompt’s fixed props (original_prompt: '1. 烤盘... 8. 食材：带自然纹理的新鲜鸡蛋、带冰霜的冷冻蛋挞皮'), which may imply an unapproved prop addition. Additionally, the 'cream' and 'sugar bowl' are not explicitly in the original’s fixed list, though '淡奶油' and '细白砂糖' are mentioned in the action description. This constitutes a minor attribute drift in the set of persistent props.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"1. 烤盘：30×20cm长方形，黑色哑光铸铁烤盘... 8. 食材：带自然纹理的新鲜鸡蛋、带冰霜的冷冻蛋挞皮\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"a 20cm matte stainless mixing bowl, two fresh textured eggs, a milk pitcher, cream, and a small sugar bowl settle onto the island one by one\"\n        }\n      ],\n      \"rationale\": \"The original prompt explicitly lists only 9 fixed props, including eggs and frozen tart shells, but does not mention a milk pitcher or sugar bowl as persistent objects. The enhanced prompt adds these, which may violate the '全程恒定锁定道具' (100% unchanged props) rule. However, since these are part of the action sequence and not required to persist beyond their use, the issue is minor.\"\n    },\n    {\n      \"criterion\": \"ANL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"The actions in the enhanced prompt form a coherent procedural progression: eggs crack → liquids added → mixing → straining → pan setup → tart shells placed. Each step logically follows the previous, with plausible prerequisites (e.g., mixing before straining) and causal bindings (e.g., eggshells flying off after cracking). No dangling or incompatible events are present.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"the eggs crack open by themselves with a crisp snap; yolks and whites drop in steady streams into the bowl... milk, cream, and fine white sugar pour in measured additions, and a whisk stirs the mixture... custard flows through the mesh... frosted frozen tart shells place themselves one by one into the pan\"\n        }\n      ],\n      \"rationale\": \"The sequence of actions is causally coherent and follows a realistic baking workflow. The enhanced prompt maintains the original’s intent of automated, stop-motion food preparation without human intervention.\"\n    },\n    {\n      \"criterion\": \"TSC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"minor\",\n      \"issue\": \"The enhanced prompt introduces a shot cut at 00:03.000 to a macro close-up and another at 00:04.000 back to medium shot, which is not explicitly described in the original prompt’s single 0-10s continuous segment. The original prompt does not specify shot changes, so this introduces a temporal structure not accounted for in the original, potentially conflicting with the implied continuous 0-10s action.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"[Shot 2] At 00:03.000, the shot cuts to a macro close-up... [Shot 3] At 00:04.000, the shot cuts back to the medium shot\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"第一段：0-10秒｜精准调制挞液+将挞皮放入盘中（时间区间：0-10秒）\"\n        }\n      ],\n      \"rationale\": \"The original prompt describes a single 0-10s segment without mentioning shot changes. The enhanced prompt’s introduction of two distinct shots with precise timestamps may imply a structure not requested, though it does not contradict the content. This is a minor deviation in temporal structure.\"\n    },\n    {\n      \"criterion\": \"SPC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"The enhanced prompt maintains consistent spatial relationships: the kitchen island remains the central focus, props are placed on it, and the background (cabinets, window, appliances) remains unchanged. The shot transitions are described with stable framing, and no unexplained position swaps or movement paths are introduced.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"the background kitchen identical to <Picture 1> throughout, no brightness jumps, no clipping, floating, or teleporting\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"kitchen_island is positioned in front of refrigerator and oven unit... window is above sink_area\"\n        }\n      ],\n      \"rationale\": \"The spatial layout is preserved across shots, and the prompt explicitly states no floating or teleporting. The camera remains static in the medium shot, and the macro shot is described as stable, maintaining spatial consistency.\"\n    },\n    {\n      \"criterion\": \"PL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"The actions described (eggs cracking by themselves, props landing with tick sounds, custard flowing through a sieve) are presented as stop-motion animation, which is a stylized, non-physical process. The prompt does not claim real-world physics; instead, it adheres to the established rules of stop-motion animation, including object permanence and causal relations within that medium.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Hyper-realistic stop-motion food animation, choppy beat-synced cadence... each item landing firmly in place\"\n        }\n      ],\n      \"rationale\": \"The prompt explicitly frames the content as stop-motion, so the 'magic' of objects moving without hands is consistent with the medium’s conventions. No real-world physics violations are present within the defined fictional rules.\"\n    },\n    {\n      \"criterion\": \"AVS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"The enhanced prompt aligns visible events with sound effects: egg cracking with a 'crisp snap', liquid plops, stirring friction, hissing during straining, and clicks for tart shells. These are strictly synced to the on-screen motion, as required by the original prompt’s 'Foley Sync' constraint.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"the eggs crack open by themselves with a crisp snap; yolks and whites drop in steady streams into the bowl with soft plops... the fine hiss of custard straining through the sieve... light clicks as each tart shell settles into the pan\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"音效指令：鸡蛋磕开的清脆爆裂声，蛋液落入碗中的咕咚声...滤网过滤挞液的细密沙沙声...挞皮放置烤盘时的轻微碰撞声\"\n        }\n      ],\n      \"rationale\": \"The sound effects are precisely matched to the visual actions, maintaining temporal and semantic alignment as required. The enhanced prompt does not introduce any misaligned or premature effects.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt maintains strong internal consistency with the original instruction, preserving key constraints on subject identity, action progression, and spatial-temporal logic. However, minor inconsistencies arise in the handling of props (e.g., the inclusion of a 'milk pitcher' not in the original list) and slight deviations in action sequencing (e.g., the egg cracking and mixing occur in the first shot, while the original prompt specifies a single 0-10s segment). The prompt also introduces a 'macro close-up' at 00:03.000 and a return to medium shot at 00:04.000, which are not explicitly described in the original, potentially introducing a shot transition not accounted for in the original’s continuous 0-10s segment. Despite these, the core requirements of no hands, consistent props, and synchronized ASMR Foley are upheld. The evidence asset (image_1) is a static frame and cannot validate motion or audio, but its visual elements align with the described kitchen setting.",
+  "usage": {
+    "completion_tokens": 1878,
+    "prompt_tokens": 3997,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 5875
+  }
+}

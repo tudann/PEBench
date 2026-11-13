@@ -1,0 +1,198 @@
+{
+  "candidate_hash": "29615ffc06c6526c4df78d90c6e7942128b0431ee87f56db74ad504f220775f4",
+  "case_key": "r2v:035",
+  "created_at": "2026-11-13T08:30:37+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "GSF",
+      "evidence": [
+        {
+          "quote": "A 25–30-year-old Western woman with a slim, well-proportioned figure, long wavy hair with a light blonde gradient, refined and sculpted facial features, fresh natural makeup, wearing a blue halter V-neck maxi dress",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "The subject's identity and ethnicity do not match the prompt's description of a 'Western woman' with 'light blonde gradient' hair; the image shows a woman with dark hair and South Asian/Middle Eastern features.",
+          "source": "evidence_facts"
+        },
+        {
+          "quote": "Her facial identity follows the intent's description (blonde hair, sculpted features), which takes precedence over the reference image's face.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The enhanced prompt misrepresents the reference image as a wardrobe guide while ignoring its actual content (outdoor setting, dark hair, flowers), leading to a mismatch in genre and aesthetic. The original prompt specifies an indoor commercial setting with a Western blonde woman, but the reference image shows an outdoor street scene with a South Asian/Middle Eastern woman with dark hair.",
+      "rationale": "The prompt explicitly overrides the reference image's face, but the image's setting, hair color, and accessories are not aligned with the requested genre (indoor commercial fashion) or subject identity. This creates a material inconsistency in genre and aesthetic, as the reference image is a street-style fashion photo, not a retail store commercial.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SAP",
+      "evidence": [
+        {
+          "quote": "long wavy hair with a light blonde gradient",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "The subject's identity and ethnicity do not match the prompt's description of a 'Western woman' with 'light blonde gradient' hair; the image shows a woman with dark hair and South Asian/Middle Eastern features.",
+          "source": "evidence_facts"
+        },
+        {
+          "quote": "The dress is striped, not solid blue as specified in the prompt.",
+          "source": "evidence_facts"
+        },
+        {
+          "quote": "The subject is holding a bouquet of flowers, which is not mentioned in the prompt.",
+          "source": "evidence_facts"
+        }
+      ],
+      "issue": "The subject's appearance is materially inconsistent with the original prompt: the reference image shows dark hair and South Asian/Middle Eastern features, while the prompt requires a Western woman with light blonde gradient hair. Additionally, the dress is striped in the image, not solid blue as specified, and the subject holds a bouquet of flowers not mentioned in the prompt.",
+      "rationale": "The subject's core identity (ethnicity, hair color) and wardrobe (striped vs. solid blue dress, flowers) are materially altered from the original request. These are not minor deviations but fundamental contradictions that affect the visual representation of the subject.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANF",
+      "evidence": [
+        {
+          "quote": "0–3 seconds: She turns her head toward the dress in her hand, opens her mouth as if explaining, repeatedly points with her left index finger at the dress she is wearing...",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "From 0 to 3 seconds, she turns her head toward <Subject 2>, the identical dress on the wooden hanger held in her right hand, opens her mouth as if explaining, and repeatedly points with her left index finger at the dress she is wearing on her own body...",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The action sequence is preserved: turning head, pointing, lifting hand, shifting body, lowering hanger, smiling, and fabric movement are all described in the enhanced prompt and match the original instruction.",
+      "rationale": "The enhanced prompt accurately reproduces the requested action timeline and interactions without omissions or substitutions.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "DLI",
+      "evidence": [
+        {
+          "quote": "Look how similar these two dresses are! The one I'm wearing and the one I'm holding—they're basically twins! Perfect for summer, right? Light, flowy, and so cute!",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "<d>[English] Look how similar these two dresses are! The one I'm wearing and the one I'm holding—they're basically twins! Perfect for summer, right? Light, flowy, and so cute!</d>",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The voiceover script is preserved verbatim in the enhanced prompt, including wording, language, and speaker attribution.",
+      "rationale": "The exact dialogue is preserved without paraphrasing or translation, and speaker attribution is maintained as coming from <Subject 1>.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ARP",
+      "evidence": [
+        {
+          "quote": "No additional diegetic sound effects or music.",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Soft, quiet retail room tone continues throughout the video; no additional diegetic sound effects.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The soundscape is preserved: soft retail room tone with no additional diegetic sound effects or music, matching the original prompt's silence constraint.",
+      "rationale": "The audio constraints are accurately maintained without additions or substitutions.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CCP",
+      "evidence": [
+        {
+          "quote": "Medium shot, eye-level angle, fixed camera, stable frame with no shake",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "[Shot 1] A single continuous medium shot at eye level, fixed camera, stable frame with no shake, running the full 10 seconds with no cuts.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The camera constraints are preserved: single fixed medium shot, eye-level angle, stable frame with no shake, running the full 10 seconds.",
+      "rationale": "The camera language is fully preserved without deviation.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "LCF",
+      "evidence": [
+        {
+          "quote": "Bright indoor commercial lighting, soft warm tones, evenly illuminating the subject and clothing",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "soft warm commercial light evenly illuminating the subject and garments and emphasizing fabric texture and pleats",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "color_temperature: neutral to cool",
+          "source": "evidence_facts"
+        }
+      ],
+      "issue": "The lighting is described as bright indoor commercial lighting with soft warm tones in both prompts, but the reference image shows natural daylight with neutral to cool color temperature, which may affect the final rendering.",
+      "rationale": "While the enhanced prompt correctly specifies warm commercial lighting, the reference image's lighting conditions (natural daylight, neutral-cool) may conflict with the requested warm indoor lighting, potentially affecting the final visual output. This is a minor issue as the prompt's lighting intent is preserved.",
+      "severity": "minor"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SSP",
+      "evidence": [
+        {
+          "quote": "A branded clothing store, indoor retail space, walls covered with identical blue maxi dresses",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "The setting is outdoors on a city street, not an indoor branded clothing store as specified.",
+          "source": "evidence_facts"
+        },
+        {
+          "quote": "bright branded clothing store with walls of identical blue maxi dresses on wooden hangers",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The setting is materially inconsistent: the original prompt specifies an indoor branded clothing store with walls of identical blue dresses, while the reference image shows an outdoor urban street scene with a building entrance and sidewalk.",
+      "rationale": "The enhanced prompt correctly describes the intended setting, but the reference image contradicts it. Since the reference image is the conditioning asset, this creates a material inconsistency in the spatial environment, which is a major issue for semantic fidelity.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "OTI",
+      "evidence": [
+        {
+          "quote": "No subtitles or on-screen text appear at any point.",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "No subtitles or on-screen text appear at any point.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "No on-screen text is requested or present in the enhanced prompt, matching the original instruction's silence on subtitles or interface text.",
+      "rationale": "The constraint on visible text is preserved without deviation.",
+      "severity": "none"
+    }
+  ],
+  "dimension": "SF",
+  "dimension_score": 65,
+  "evidence_cache_key": "3e159e88b0365d5d8fc5bb559d199d354375e0b2d2e0496cb0c1e9c6eb60af5d",
+  "judge_cache_key": "a0ca24571ad14d7ab7be626329bd736d7e7015f9ebc418227c8be391591d0377",
+  "method": "glm53_20261112_120702",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"SF\",\n  \"dimension_score\": 65,\n  \"summary\": \"The enhanced prompt largely preserves the core semantic intent of the original instruction, including subject identity, actions, setting, and voiceover. However, it introduces significant deviations in subject appearance (face and ethnicity), setting (outdoor vs. indoor store), and wardrobe details (striped vs. solid blue dress, flowers not mentioned). The prompt also misrepresents the reference image as a styling guide while ignoring its actual content, leading to a mismatch between the intended and rendered visual. While the action sequence and camera constraints are preserved, the overall visual fidelity is compromised by these material omissions and contradictions.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"GSF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The enhanced prompt misrepresents the reference image as a wardrobe guide while ignoring its actual content (outdoor setting, dark hair, flowers), leading to a mismatch in genre and aesthetic. The original prompt specifies an indoor commercial setting with a Western blonde woman, but the reference image shows an outdoor street scene with a South Asian/Middle Eastern woman with dark hair.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"A 25–30-year-old Western woman with a slim, well-proportioned figure, long wavy hair with a light blonde gradient, refined and sculpted facial features, fresh natural makeup, wearing a blue halter V-neck maxi dress\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"The subject's identity and ethnicity do not match the prompt's description of a 'Western woman' with 'light blonde gradient' hair; the image shows a woman with dark hair and South Asian/Middle Eastern features.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Her facial identity follows the intent's description (blonde hair, sculpted features), which takes precedence over the reference image's face.\"\n        }\n      ],\n      \"rationale\": \"The prompt explicitly overrides the reference image's face, but the image's setting, hair color, and accessories are not aligned with the requested genre (indoor commercial fashion) or subject identity. This creates a material inconsistency in genre and aesthetic, as the reference image is a street-style fashion photo, not a retail store commercial.\"\n    },\n    {\n      \"criterion\": \"SAP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The subject's appearance is materially inconsistent with the original prompt: the reference image shows dark hair and South Asian/Middle Eastern features, while the prompt requires a Western woman with light blonde gradient hair. Additionally, the dress is striped in the image, not solid blue as specified, and the subject holds a bouquet of flowers not mentioned in the prompt.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"long wavy hair with a light blonde gradient\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"The subject's identity and ethnicity do not match the prompt's description of a 'Western woman' with 'light blonde gradient' hair; the image shows a woman with dark hair and South Asian/Middle Eastern features.\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"The dress is striped, not solid blue as specified in the prompt.\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"The subject is holding a bouquet of flowers, which is not mentioned in the prompt.\"\n        }\n      ],\n      \"rationale\": \"The subject's core identity (ethnicity, hair color) and wardrobe (striped vs. solid blue dress, flowers) are materially altered from the original request. These are not minor deviations but fundamental contradictions that affect the visual representation of the subject.\"\n    },\n    {\n      \"criterion\": \"ANF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"The action sequence is preserved: turning head, pointing, lifting hand, shifting body, lowering hanger, smiling, and fabric movement are all described in the enhanced prompt and match the original instruction.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"0–3 seconds: She turns her head toward the dress in her hand, opens her mouth as if explaining, repeatedly points with her left index finger at the dress she is wearing...\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"From 0 to 3 seconds, she turns her head toward <Subject 2>, the identical dress on the wooden hanger held in her right hand, opens her mouth as if explaining, and repeatedly points with her left index finger at the dress she is wearing on her own body...\"\n        }\n      ],\n      \"rationale\": \"The enhanced prompt accurately reproduces the requested action timeline and interactions without omissions or substitutions.\"\n    },\n    {\n      \"criterion\": \"DLI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"The voiceover script is preserved verbatim in the enhanced prompt, including wording, language, and speaker attribution.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"Look how similar these two dresses are! The one I'm wearing and the one I'm holding—they're basically twins! Perfect for summer, right? Light, flowy, and so cute!\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"<d>[English] Look how similar these two dresses are! The one I'm wearing and the one I'm holding—they're basically twins! Perfect for summer, right? Light, flowy, and so cute!</d>\"\n        }\n      ],\n      \"rationale\": \"The exact dialogue is preserved without paraphrasing or translation, and speaker attribution is maintained as coming from <Subject 1>.\"\n    },\n    {\n      \"criterion\": \"ARP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"The soundscape is preserved: soft retail room tone with no additional diegetic sound effects or music, matching the original prompt's silence constraint.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"No additional diegetic sound effects or music.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Soft, quiet retail room tone continues throughout the video; no additional diegetic sound effects.\"\n        }\n      ],\n      \"rationale\": \"The audio constraints are accurately maintained without additions or substitutions.\"\n    },\n    {\n      \"criterion\": \"CCP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"The camera constraints are preserved: single fixed medium shot, eye-level angle, stable frame with no shake, running the full 10 seconds.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"Medium shot, eye-level angle, fixed camera, stable frame with no shake\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"[Shot 1] A single continuous medium shot at eye level, fixed camera, stable frame with no shake, running the full 10 seconds with no cuts.\"\n        }\n      ],\n      \"rationale\": \"The camera language is fully preserved without deviation.\"\n    },\n    {\n      \"criterion\": \"LCF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"minor\",\n      \"issue\": \"The lighting is described as bright indoor commercial lighting with soft warm tones in both prompts, but the reference image shows natural daylight with neutral to cool color temperature, which may affect the final rendering.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"Bright indoor commercial lighting, soft warm tones, evenly illuminating the subject and clothing\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"soft warm commercial light evenly illuminating the subject and garments and emphasizing fabric texture and pleats\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"color_temperature: neutral to cool\"\n        }\n      ],\n      \"rationale\": \"While the enhanced prompt correctly specifies warm commercial lighting, the reference image's lighting conditions (natural daylight, neutral-cool) may conflict with the requested warm indoor lighting, potentially affecting the final visual output. This is a minor issue as the prompt's lighting intent is preserved.\"\n    },\n    {\n      \"criterion\": \"SSP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The setting is materially inconsistent: the original prompt specifies an indoor branded clothing store with walls of identical blue dresses, while the reference image shows an outdoor urban street scene with a building entrance and sidewalk.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"A branded clothing store, indoor retail space, walls covered with identical blue maxi dresses\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"The setting is outdoors on a city street, not an indoor branded clothing store as specified.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"bright branded clothing store with walls of identical blue maxi dresses on wooden hangers\"\n        }\n      ],\n      \"rationale\": \"The enhanced prompt correctly describes the intended setting, but the reference image contradicts it. Since the reference image is the conditioning asset, this creates a material inconsistency in the spatial environment, which is a major issue for semantic fidelity.\"\n    },\n    {\n      \"criterion\": \"OTI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"No on-screen text is requested or present in the enhanced prompt, matching the original instruction's silence on subtitles or interface text.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"No subtitles or on-screen text appear at any point.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"No subtitles or on-screen text appear at any point.\"\n        }\n      ],\n      \"rationale\": \"The constraint on visible text is preserved without deviation.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt largely preserves the core semantic intent of the original instruction, including subject identity, actions, setting, and voiceover. However, it introduces significant deviations in subject appearance (face and ethnicity), setting (outdoor vs. indoor store), and wardrobe details (striped vs. solid blue dress, flowers not mentioned). The prompt also misrepresents the reference image as a styling guide while ignoring its actual content, leading to a mismatch between the intended and rendered visual. While the action sequence and camera constraints are preserved, the overall visual fidelity is compromised by these material omissions and contradictions.",
+  "usage": {
+    "completion_tokens": 2226,
+    "prompt_tokens": 3639,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 5865
+  }
+}

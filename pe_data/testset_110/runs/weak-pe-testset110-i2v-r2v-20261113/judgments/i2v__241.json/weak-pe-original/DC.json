@@ -1,0 +1,178 @@
+{
+  "candidate_hash": "6ff3d36484745b4a66476830c6f673558b188e31b33ee168327f74088f70d470",
+  "case_key": "i2v:241",
+  "created_at": "2026-11-13T07:58:16+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "STC",
+      "evidence": [
+        {
+          "quote": "时间倒过来：先给结尾，再跳到一个对不上的开头。中途插进一段无关的牙膏广告。",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "总时长写成2秒，同时又要求每个分镜各自持续22秒。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt creates an infeasible temporal plan with contradictory duration requirements (2 seconds total vs. 22 seconds per shot), reversed narrative order (ending first, then an unrelated beginning), and abrupt, unmotivated scene cuts (e.g., inserting a toothpaste ad).",
+      "rationale": "A coherent temporal plan requires consistent duration allocation and logical shot sequencing. The prompt's contradictory time constraints and non-sequitur transitions make it impossible to construct a feasible video timeline.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CDS",
+      "evidence": [
+        {
+          "quote": "写成机位锁死，又写成镜头一直在晃。",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "运镜：平视中景，焦段35mm。0-3秒镜头对准土地公的上半身...6-10秒镜头缓慢推近...",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "The prompt contradicts the original camera specifications (e.g., '机位锁死' vs. '镜头一直在晃') and replaces the original framing with vague, conflicting directives ('白棚里另一位年龄和性别都相反的陌生人'), eliminating actionable camera and composition details.",
+      "rationale": "Actionable specifications for framing, shot scale, and camera movement are essential for directorial creation. The enhanced prompt replaces precise, consistent camera directions with mutually exclusive and vague instructions, rendering them unusable.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ETD",
+      "evidence": [
+        {
+          "quote": "中途插进一段无关的牙膏广告。",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "时间倒过来：先给结尾，再跳到一个对不上的开头。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt introduces disconnected, unmotivated transitions (e.g., inserting a toothpaste ad, jumping from ending to unrelated beginning) that violate spatial, temporal, and narrative continuity.",
+      "rationale": "Cuts and transitions must support narrative or spatial progression. The prompt's arbitrary insertions and reversed chronology create disconnection and break continuity, failing the criterion.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "LCS",
+      "evidence": [
+        {
+          "quote": "写成正午暴晒，又写成深夜无光；",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "画面约束：手机后置抓拍，自然光，9:16竖屏。",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "The prompt contradicts the original lighting (e.g., '正午暴晒' vs. '深夜无光') and replaces the natural light, warm color palette, and detailed lighting cues with conflicting, unspecified conditions.",
+      "rationale": "Lighting specifications must be consistent and actionable. The prompt's contradictory lighting conditions (day vs. night) and lack of specific light source details make it impossible to execute a coherent lighting plan.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "NDE",
+      "evidence": [
+        {
+          "quote": "先写成只有一个主角，紧接着又写成这个主角同时变成五个外貌不同的人，并且互相对话。时间倒过来：先给结尾，再跳到一个对不上的开头。中途插进一段无关的牙膏广告。",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "0-3秒...3-6秒...6-10秒...土地公继续讲话...玉帝在听完话后...靠回椅背...",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "The prompt replaces the original narrative progression (Land God's speech, reactions, and camera focus shift) with a static, contradictory structure: a single character splitting into five, then reversing time, inserting ads, and changing environments without narrative motivation or resolution.",
+      "rationale": "Narrative progression requires variation, escalation, or resolution. The enhanced prompt's structure is static, self-contradictory, and lacks any coherent progression, failing the criterion.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CIF",
+      "evidence": [
+        {
+          "quote": "中途插进一段无关的牙膏广告。",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "不要使用首帧里的人物、服装、姿态和场景，改成白棚里另一位年龄和性别都相反的陌生人。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt adds irrelevant, distracting elements (toothpaste ad, five simultaneous characters, reversed time) that contradict and undermine the original central request (a dialogue scene in Lingxiao Baodian with specific characters and actions).",
+      "rationale": "Additions must support the central request. The prompt's additions are arbitrary, contradictory, and directly oppose the original scene, making them inadequate and distracting.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SDI",
+      "evidence": [
+        {
+          "quote": "没有人出镜，也没有对白，只剩远处车流。",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "音效：0-3秒土地公开始说话...3-6秒...6-10秒说话声停止...",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "The prompt removes all original audio specifications (speech, ambient sounds, sound effects) and replaces them with no audio direction, while also introducing an unrelated ad, which contradicts the original dialogue-focused scene.",
+      "rationale": "Audio integration must support the scene. The prompt eliminates all original sound design and replaces it with generic, unrelated audio (distant traffic), failing to integrate speech, effects, or ambience meaningfully.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SPS",
+      "evidence": [
+        {
+          "quote": "不要使用首帧里的人物、服装、姿态和场景...改成白棚里另一位年龄和性别都相反的陌生人。",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "土地公位于大殿中央，身体向前弯曲...玉帝坐在龙椅上...黄鼠狼站在土地公身后...",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "The prompt removes all subject details (Yudi, Land God, Yellow Weasel) and their specific actions, expressions, and interactions, replacing them with a vague, contradictory description of a single character splitting into five, with no defined appearance, pose, or performance.",
+      "rationale": "Subject and performance details are essential for directorial creation. The prompt's replacement of specific, detailed characters with an undefined, contradictory group eliminates all actionable performance specifications.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "VSS",
+      "evidence": [
+        {
+          "quote": "改成白棚里另一位年龄和性别都相反的陌生人。",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "凌霄宝殿内。玉帝坐在龙椅上，土地公躬身，黄鼠狼站在后面低头。",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "The prompt contradicts the original visual style (cinematic, fantasy, traditional Chinese architecture) and replaces it with conflicting, unspecified conditions (white studio, opposite gender/age, no scene details), eliminating actionable production design and visual treatment.",
+      "rationale": "Visual style and production design must be consistent and actionable. The prompt's contradictory environment (white studio vs. palace) and lack of specific visual treatment make it impossible to execute a coherent visual plan.",
+      "severity": "major"
+    }
+  ],
+  "dimension": "DC",
+  "dimension_score": 0,
+  "evidence_cache_key": "4e2254d6c859cf050c2d4bf3745eb319c2dd358a0caa2ddba0319802496c3b23",
+  "judge_cache_key": "0754499d53388e6467fb078ab780e01b77f9f1c9e99d9029be2769351eb2b2eb",
+  "method": "weak-pe-original",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"DC\",\n  \"dimension_score\": 0,\n  \"summary\": \"The enhanced prompt is a deliberate, incoherent, and contradictory rewrite of the original instruction, violating all core criteria for directorial creation. It introduces impossible temporal sequences, conflicting visual specifications, and nonsensical narrative structures, rendering the prompt unfeasible for any video generation. The prompt actively undermines the original scene, characters, and technical requirements, replacing them with absurd, self-contradictory directives.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"STC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt creates an infeasible temporal plan with contradictory duration requirements (2 seconds total vs. 22 seconds per shot), reversed narrative order (ending first, then an unrelated beginning), and abrupt, unmotivated scene cuts (e.g., inserting a toothpaste ad).\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"时间倒过来：先给结尾，再跳到一个对不上的开头。中途插进一段无关的牙膏广告。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"总时长写成2秒，同时又要求每个分镜各自持续22秒。\"\n        }\n      ],\n      \"rationale\": \"A coherent temporal plan requires consistent duration allocation and logical shot sequencing. The prompt's contradictory time constraints and non-sequitur transitions make it impossible to construct a feasible video timeline.\"\n    },\n    {\n      \"criterion\": \"CDS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt contradicts the original camera specifications (e.g., '机位锁死' vs. '镜头一直在晃') and replaces the original framing with vague, conflicting directives ('白棚里另一位年龄和性别都相反的陌生人'), eliminating actionable camera and composition details.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"写成机位锁死，又写成镜头一直在晃。\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"运镜：平视中景，焦段35mm。0-3秒镜头对准土地公的上半身...6-10秒镜头缓慢推近...\"\n        }\n      ],\n      \"rationale\": \"Actionable specifications for framing, shot scale, and camera movement are essential for directorial creation. The enhanced prompt replaces precise, consistent camera directions with mutually exclusive and vague instructions, rendering them unusable.\"\n    },\n    {\n      \"criterion\": \"ETD\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt introduces disconnected, unmotivated transitions (e.g., inserting a toothpaste ad, jumping from ending to unrelated beginning) that violate spatial, temporal, and narrative continuity.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"中途插进一段无关的牙膏广告。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"时间倒过来：先给结尾，再跳到一个对不上的开头。\"\n        }\n      ],\n      \"rationale\": \"Cuts and transitions must support narrative or spatial progression. The prompt's arbitrary insertions and reversed chronology create disconnection and break continuity, failing the criterion.\"\n    },\n    {\n      \"criterion\": \"LCS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt contradicts the original lighting (e.g., '正午暴晒' vs. '深夜无光') and replaces the natural light, warm color palette, and detailed lighting cues with conflicting, unspecified conditions.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"写成正午暴晒，又写成深夜无光；\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"画面约束：手机后置抓拍，自然光，9:16竖屏。\"\n        }\n      ],\n      \"rationale\": \"Lighting specifications must be consistent and actionable. The prompt's contradictory lighting conditions (day vs. night) and lack of specific light source details make it impossible to execute a coherent lighting plan.\"\n    },\n    {\n      \"criterion\": \"NDE\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt replaces the original narrative progression (Land God's speech, reactions, and camera focus shift) with a static, contradictory structure: a single character splitting into five, then reversing time, inserting ads, and changing environments without narrative motivation or resolution.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"先写成只有一个主角，紧接着又写成这个主角同时变成五个外貌不同的人，并且互相对话。时间倒过来：先给结尾，再跳到一个对不上的开头。中途插进一段无关的牙膏广告。\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"0-3秒...3-6秒...6-10秒...土地公继续讲话...玉帝在听完话后...靠回椅背...\"\n        }\n      ],\n      \"rationale\": \"Narrative progression requires variation, escalation, or resolution. The enhanced prompt's structure is static, self-contradictory, and lacks any coherent progression, failing the criterion.\"\n    },\n    {\n      \"criterion\": \"CIF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt adds irrelevant, distracting elements (toothpaste ad, five simultaneous characters, reversed time) that contradict and undermine the original central request (a dialogue scene in Lingxiao Baodian with specific characters and actions).\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"中途插进一段无关的牙膏广告。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"不要使用首帧里的人物、服装、姿态和场景，改成白棚里另一位年龄和性别都相反的陌生人。\"\n        }\n      ],\n      \"rationale\": \"Additions must support the central request. The prompt's additions are arbitrary, contradictory, and directly oppose the original scene, making them inadequate and distracting.\"\n    },\n    {\n      \"criterion\": \"SDI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt removes all original audio specifications (speech, ambient sounds, sound effects) and replaces them with no audio direction, while also introducing an unrelated ad, which contradicts the original dialogue-focused scene.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"没有人出镜，也没有对白，只剩远处车流。\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"音效：0-3秒土地公开始说话...3-6秒...6-10秒说话声停止...\"\n        }\n      ],\n      \"rationale\": \"Audio integration must support the scene. The prompt eliminates all original sound design and replaces it with generic, unrelated audio (distant traffic), failing to integrate speech, effects, or ambience meaningfully.\"\n    },\n    {\n      \"criterion\": \"SPS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt removes all subject details (Yudi, Land God, Yellow Weasel) and their specific actions, expressions, and interactions, replacing them with a vague, contradictory description of a single character splitting into five, with no defined appearance, pose, or performance.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"不要使用首帧里的人物、服装、姿态和场景...改成白棚里另一位年龄和性别都相反的陌生人。\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"土地公位于大殿中央，身体向前弯曲...玉帝坐在龙椅上...黄鼠狼站在土地公身后...\"\n        }\n      ],\n      \"rationale\": \"Subject and performance details are essential for directorial creation. The prompt's replacement of specific, detailed characters with an undefined, contradictory group eliminates all actionable performance specifications.\"\n    },\n    {\n      \"criterion\": \"VSS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt contradicts the original visual style (cinematic, fantasy, traditional Chinese architecture) and replaces it with conflicting, unspecified conditions (white studio, opposite gender/age, no scene details), eliminating actionable production design and visual treatment.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"改成白棚里另一位年龄和性别都相反的陌生人。\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"凌霄宝殿内。玉帝坐在龙椅上，土地公躬身，黄鼠狼站在后面低头。\"\n        }\n      ],\n      \"rationale\": \"Visual style and production design must be consistent and actionable. The prompt's contradictory environment (white studio vs. palace) and lack of specific visual treatment make it impossible to execute a coherent visual plan.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt is a deliberate, incoherent, and contradictory rewrite of the original instruction, violating all core criteria for directorial creation. It introduces impossible temporal sequences, conflicting visual specifications, and nonsensical narrative structures, rendering the prompt unfeasible for any video generation. The prompt actively undermines the original scene, characters, and technical requirements, replacing them with absurd, self-contradictory directives.",
+  "usage": {
+    "completion_tokens": 2042,
+    "prompt_tokens": 3411,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 5453
+  }
+}

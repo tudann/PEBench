@@ -1,0 +1,143 @@
+{
+  "candidate_hash": "026a99306ae6965d22937d05c56d11cb87a99f7f11d4cfabe0e4c7fbab431375",
+  "case_key": "t2v:422",
+  "created_at": "2026-11-13T08:39:45+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "SAC",
+      "evidence": [
+        {
+          "quote": "Keep the character’s styling and facial features consistent throughout the entire film",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "The female lead — consistent throughout in a worn light-blue denim cropped jacket, body-hugging high-waisted denim mini skirt, wide vintage belt, silver metallic accessories, refined retro makeup and hair",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "Subject identity, clothing, and appearance are explicitly maintained across all three shots. No renaming, duplication, or attribute drift occurs. The description of the girl’s outfit and features is identical in both prompts, and the enhanced prompt reinforces consistency with explicit phrasing ('consistent throughout').",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANL",
+      "evidence": [
+        {
+          "quote": "performing large, rhythmic dance movements, including hip twists, hip pushes, and waist sways",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "dances with large, rhythmic movements: hip twists, hip pushes, and waist sways",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "steps precisely on the beat, moving left and right in syncopated dance motions while both arms swing naturally along with her steps",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "Actions form a coherent progression: dance movements in Shot 1, syncopated stepping in Shot 2, and a posed final stance in Shot 3. Each action is causally linked to the music and camera movement, with no dangling or incompatible events. The dance evolves naturally from expressive to precise to posed, matching the beat throughout.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "TSC",
+      "evidence": [
+        {
+          "quote": "At 00:03.500, the camera cuts to a red-orange-blue color-block crosswalk area",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "At 00:07.000, the camera cuts to the side of a red British-style vintage telephone booth",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "then the camera shifts to a red-orange-blue color-block crosswalk area... next the scene comes to the side of a red British-style vintage telephone booth",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "The transition timing between Shot 1 and Shot 2 is specified as 00:03.500, but the original prompt does not specify any timing, making the precise timestamp an addition without explicit grounding. Similarly, Shot 3 begins at 00:07.000, which is 3.5 seconds after Shot 2, but the original prompt does not specify duration or pacing, so the timing is inferred rather than derived.",
+      "rationale": "The enhanced prompt introduces specific timestamps for scene cuts, which are not present in the original instruction. While these timestamps are plausible and do not contradict the original, they are not required by the original prompt and introduce a minor deviation in temporal specification. However, the sequence order and state transitions remain logically consistent.",
+      "severity": "minor"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SPC",
+      "evidence": [
+        {
+          "quote": "slow forward tracking follow shot glides down an old American town street... then the camera shifts to a red-orange-blue color-block crosswalk area... next the scene comes to the side of a red British-style vintage telephone booth",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "slow forward tracking follow shot... cuts to a red-orange-blue color-block crosswalk area... cuts to the side of a red British-style vintage telephone booth",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "Camera movements and scene transitions are described with consistent spatial logic: tracking shot → lateral pan → orbiting shot. The locations are distinct and non-overlapping, and transitions are marked as cuts, which are appropriate for scene changes. No unexplained position swaps or impossible trajectories are described.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "PL",
+      "evidence": [
+        {
+          "quote": "her stage presence relaxed yet expressive, cut crisply to the beat",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "steps precisely on the beat, moving left and right in syncopated dance motions",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "holds the edge of the booth frame with one hand, her body slightly turned and leaning against the booth wall",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "All physical actions are plausible: dancing with rhythmic movements, stepping in sync with music, leaning against a booth. No violations of gravity, contact, or bodily feasibility are present. The description adheres to real-world physics without introducing fantasy elements that would require alternative rules.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "AVS",
+      "evidence": [
+        {
+          "quote": "paired with the retro disco pop track “Cruel Summer.”",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "The retro disco pop track \"Cruel Summer\" plays at a steady upbeat tempo throughout — bright syncopated synth-pop groove with a driving beat, its rhythm crisply matching every dance step, camera move, and cut",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Crisp footfalls, the rustle of denim, and the subtle jingle of silver metallic accessories land in sync with the beat",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "The soundscape and music are explicitly aligned with visual events: dance steps, camera cuts, and movements are all synchronized with the beat. Dialogue or lyrics are not present, but ambient sounds (footfalls, jingle) are precisely timed to the music, ensuring semantic and temporal alignment. No misaligned lip-sync or premature effects are described.",
+      "severity": "none"
+    }
+  ],
+  "dimension": "IC",
+  "dimension_score": 95,
+  "evidence_cache_key": "dc55dbe0a578ad6d1c0d7b89a552adef74f98ea510c943757da036c7367be018",
+  "judge_cache_key": "438d7e9fd7332b1041db3e2c26d42cb3fe828e0d369fb59490f6650aee59e97d",
+  "method": "glm53_20261112_120702",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"IC\",\n  \"dimension_score\": 95,\n  \"summary\": \"The enhanced prompt maintains strong internal consistency with the original instruction, preserving character identity, appearance, actions, and scene transitions. All key attributes (clothing, props, movements, camera work, music alignment) are consistently described across shots. Minor issues include slight redundancy in describing the beat-matching and a minor temporal ambiguity in the transition timing between shots, but no material contradictions or omissions. The overall narrative and visual logic are coherent and plausible.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"SAC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"Keep the character’s styling and facial features consistent throughout the entire film\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"The female lead — consistent throughout in a worn light-blue denim cropped jacket, body-hugging high-waisted denim mini skirt, wide vintage belt, silver metallic accessories, refined retro makeup and hair\"\n        }\n      ],\n      \"rationale\": \"Subject identity, clothing, and appearance are explicitly maintained across all three shots. No renaming, duplication, or attribute drift occurs. The description of the girl’s outfit and features is identical in both prompts, and the enhanced prompt reinforces consistency with explicit phrasing ('consistent throughout').\"\n    },\n    {\n      \"criterion\": \"ANL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"performing large, rhythmic dance movements, including hip twists, hip pushes, and waist sways\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"dances with large, rhythmic movements: hip twists, hip pushes, and waist sways\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"steps precisely on the beat, moving left and right in syncopated dance motions while both arms swing naturally along with her steps\"\n        }\n      ],\n      \"rationale\": \"Actions form a coherent progression: dance movements in Shot 1, syncopated stepping in Shot 2, and a posed final stance in Shot 3. Each action is causally linked to the music and camera movement, with no dangling or incompatible events. The dance evolves naturally from expressive to precise to posed, matching the beat throughout.\"\n    },\n    {\n      \"criterion\": \"TSC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"minor\",\n      \"issue\": \"The transition timing between Shot 1 and Shot 2 is specified as 00:03.500, but the original prompt does not specify any timing, making the precise timestamp an addition without explicit grounding. Similarly, Shot 3 begins at 00:07.000, which is 3.5 seconds after Shot 2, but the original prompt does not specify duration or pacing, so the timing is inferred rather than derived.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"At 00:03.500, the camera cuts to a red-orange-blue color-block crosswalk area\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"At 00:07.000, the camera cuts to the side of a red British-style vintage telephone booth\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"then the camera shifts to a red-orange-blue color-block crosswalk area... next the scene comes to the side of a red British-style vintage telephone booth\"\n        }\n      ],\n      \"rationale\": \"The enhanced prompt introduces specific timestamps for scene cuts, which are not present in the original instruction. While these timestamps are plausible and do not contradict the original, they are not required by the original prompt and introduce a minor deviation in temporal specification. However, the sequence order and state transitions remain logically consistent.\"\n    },\n    {\n      \"criterion\": \"SPC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"slow forward tracking follow shot glides down an old American town street... then the camera shifts to a red-orange-blue color-block crosswalk area... next the scene comes to the side of a red British-style vintage telephone booth\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"slow forward tracking follow shot... cuts to a red-orange-blue color-block crosswalk area... cuts to the side of a red British-style vintage telephone booth\"\n        }\n      ],\n      \"rationale\": \"Camera movements and scene transitions are described with consistent spatial logic: tracking shot → lateral pan → orbiting shot. The locations are distinct and non-overlapping, and transitions are marked as cuts, which are appropriate for scene changes. No unexplained position swaps or impossible trajectories are described.\"\n    },\n    {\n      \"criterion\": \"PL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"her stage presence relaxed yet expressive, cut crisply to the beat\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"steps precisely on the beat, moving left and right in syncopated dance motions\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"holds the edge of the booth frame with one hand, her body slightly turned and leaning against the booth wall\"\n        }\n      ],\n      \"rationale\": \"All physical actions are plausible: dancing with rhythmic movements, stepping in sync with music, leaning against a booth. No violations of gravity, contact, or bodily feasibility are present. The description adheres to real-world physics without introducing fantasy elements that would require alternative rules.\"\n    },\n    {\n      \"criterion\": \"AVS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"paired with the retro disco pop track “Cruel Summer.”\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"The retro disco pop track \\\"Cruel Summer\\\" plays at a steady upbeat tempo throughout — bright syncopated synth-pop groove with a driving beat, its rhythm crisply matching every dance step, camera move, and cut\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Crisp footfalls, the rustle of denim, and the subtle jingle of silver metallic accessories land in sync with the beat\"\n        }\n      ],\n      \"rationale\": \"The soundscape and music are explicitly aligned with visual events: dance steps, camera cuts, and movements are all synchronized with the beat. Dialogue or lyrics are not present, but ambient sounds (footfalls, jingle) are precisely timed to the music, ensuring semantic and temporal alignment. No misaligned lip-sync or premature effects are described.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt maintains strong internal consistency with the original instruction, preserving character identity, appearance, actions, and scene transitions. All key attributes (clothing, props, movements, camera work, music alignment) are consistently described across shots. Minor issues include slight redundancy in describing the beat-matching and a minor temporal ambiguity in the transition timing between shots, but no material contradictions or omissions. The overall narrative and visual logic are coherent and plausible.",
+  "usage": {
+    "completion_tokens": 1574,
+    "prompt_tokens": 1601,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 3175
+  }
+}

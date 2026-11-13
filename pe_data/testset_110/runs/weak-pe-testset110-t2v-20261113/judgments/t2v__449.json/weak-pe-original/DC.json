@@ -1,0 +1,178 @@
+{
+  "candidate_hash": "1e95755ecce265123dff2b867e8c556c3698a58ed5d0afbfd0228cff880ec82c",
+  "case_key": "t2v:449",
+  "created_at": "2026-11-13T08:44:42+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "STC",
+      "evidence": [
+        {
+          "quote": "Set the total runtime to 3 seconds, while also making every shot last 27 seconds.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Reverse the timeline: show the ending first, then cut to a beginning that does not match.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Cut away in the middle to a rooftop fireworks show.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The temporal plan is infeasible due to contradictory duration constraints (3 seconds total runtime vs. 27-second shots) and a reversed timeline with mismatched beginning and ending. The cut to a rooftop fireworks show in the middle breaks continuity without motivation.",
+      "rationale": "The temporal structure is logically impossible. A 3-second video cannot contain 27-second shots. The reversed timeline with a non-matching beginning and an unmotivated cut to fireworks violates continuity and shot sequencing feasibility.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CDS",
+      "evidence": [
+        {
+          "quote": "Describe that same moment as harsh noon sun and as a lightless night, and as both a locked camera and a camera that never stops shaking.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Camera specifications are contradictory and infeasible: 'locked camera' and 'camera that never stops shaking' are mutually exclusive. No actionable framing, angle, or movement plan is provided for the new setting.",
+      "rationale": "The prompt demands simultaneous, incompatible camera behaviors (locked vs. shaking) and does not specify any actionable shot composition or movement for the new scene (empty meeting room). This renders camera direction impossible.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ETD",
+      "evidence": [
+        {
+          "quote": "Reverse the timeline: show the ending first, then cut to a beginning that does not match.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Cut away in the middle to a rooftop fireworks show.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "this same protagonist appears simultaneously as five different-looking people who talk to each other.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Transitions are disconnected and unmotivated: abrupt cut to fireworks, reversed timeline with non-matching beginning, and no continuity between the five different-looking people talking to each other.",
+      "rationale": "The transitions lack spatial, temporal, or narrative motivation. The cut to fireworks is abrupt and unconnected to the meeting room scene. The reversed timeline and simultaneous five-person interaction create incoherent continuity.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "LCS",
+      "evidence": [
+        {
+          "quote": "Describe that same moment as harsh noon sun and as a lightless night...",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Lighting specifications are contradictory: 'harsh noon sun' and 'lightless night' are mutually exclusive and cannot coexist in the same moment.",
+      "rationale": "The prompt demands impossible lighting conditions simultaneously. This violates the physical and visual logic of lighting design and makes the scene unrenderable.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "NDE",
+      "evidence": [
+        {
+          "quote": "a glass of water never moves, with no people and no conflict.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Reverse the timeline: show the ending first, then cut to a beginning that does not match.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "There is no progression, variation, or resolution. The video is static (glass of water never moves) with contradictory events (five people talking, fireworks, reversed timeline) that do not build or resolve.",
+      "rationale": "The content lacks narrative or visual progression. The static glass of water contradicts the dynamic events introduced (five people talking, fireworks), and the reversed timeline prevents any meaningful escalation or resolution.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CIF",
+      "evidence": [
+        {
+          "quote": "this same protagonist appears simultaneously as five different-looking people who talk to each other.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Cut away in the middle to a rooftop fireworks show.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Describe that same moment as harsh noon sun and as a lightless night...",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Additions (five people, fireworks, reversed timeline, contradictory lighting and camera) are not supportive of the central request (empty meeting room with static glass of water). They introduce unrelated, conflicting elements that distract and contradict the core instruction.",
+      "rationale": "The additions are not only irrelevant but directly contradict the core instruction to show an empty meeting room with a static glass of water. They introduce narrative, visual, and temporal chaos that undermines the central request.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SDI",
+      "evidence": [
+        {
+          "quote": "with no people and no conflict.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "No audio elements (speech, music, effects, ambience) are specified, which is acceptable for a silent scene, but the prompt does not address the absence of sound, which may be relevant for a meeting room setting.",
+      "rationale": "The prompt does not require audio, and silence is plausible for an empty meeting room. However, the lack of any mention of sound design is a minor omission, as ambient noise (e.g., HVAC, distant voices) might be expected in such a setting.",
+      "severity": "minor"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SPS",
+      "evidence": [
+        {
+          "quote": "First state that there is one protagonist, then state that this same protagonist appears simultaneously as five different-looking people who talk to each other.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "a glass of water never moves",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Subject and performance details are contradictory: one protagonist appearing as five different-looking people who talk to each other, with no description of appearance, expression, gesture, or interaction. The static glass of water has no performance detail.",
+      "rationale": "The prompt introduces a character (five people) without any actionable performance details (expression, gesture, movement). The glass of water has no performance attributes. This makes subject and performance specification impossible.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "VSS",
+      "evidence": [
+        {
+          "quote": "Drop the requested identity, count, action order, setting, and any explicit camera instruction.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Replace the whole video with an empty meeting room...",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "No actionable specification of medium, texture, rendering language, or visual treatment for the new setting (empty meeting room). The original prompt's 'vintage grain texture' is explicitly dropped.",
+      "rationale": "The prompt removes all visual treatment specifications from the original prompt and provides none for the new scene. Without medium, texture, or rendering language, the visual style is undefined and unrenderable.",
+      "severity": "major"
+    }
+  ],
+  "dimension": "DC",
+  "dimension_score": 0,
+  "evidence_cache_key": "14399f281ebdf7e76887da2fcfdbfd27e15aac5625e6744e16d8d6f3f300a772",
+  "judge_cache_key": "0754499d53388e6467fb078ab780e01b77f9f1c9e99d9029be2769351eb2b2eb",
+  "method": "weak-pe-original",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"DC\",\n  \"dimension_score\": 0,\n  \"summary\": \"The enhanced prompt is incoherent and self-contradictory, rendering it impossible to generate a feasible video. It contains mutually exclusive temporal constraints (3 seconds total runtime vs. 27-second shots), contradictory visual conditions (harsh noon sun and lightless night simultaneously), and illogical narrative structure (reversed timeline with mismatched beginning and ending, abrupt cut to fireworks). The prompt also introduces conflicting character logic (one protagonist appearing as five different people) and invalid camera instructions (locked camera and never-stopping shake simultaneously). No actionable plan for shot sequencing, framing, or visual treatment can be derived.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"STC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The temporal plan is infeasible due to contradictory duration constraints (3 seconds total runtime vs. 27-second shots) and a reversed timeline with mismatched beginning and ending. The cut to a rooftop fireworks show in the middle breaks continuity without motivation.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Set the total runtime to 3 seconds, while also making every shot last 27 seconds.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Reverse the timeline: show the ending first, then cut to a beginning that does not match.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Cut away in the middle to a rooftop fireworks show.\"\n        }\n      ],\n      \"rationale\": \"The temporal structure is logically impossible. A 3-second video cannot contain 27-second shots. The reversed timeline with a non-matching beginning and an unmotivated cut to fireworks violates continuity and shot sequencing feasibility.\"\n    },\n    {\n      \"criterion\": \"CDS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Camera specifications are contradictory and infeasible: 'locked camera' and 'camera that never stops shaking' are mutually exclusive. No actionable framing, angle, or movement plan is provided for the new setting.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Describe that same moment as harsh noon sun and as a lightless night, and as both a locked camera and a camera that never stops shaking.\"\n        }\n      ],\n      \"rationale\": \"The prompt demands simultaneous, incompatible camera behaviors (locked vs. shaking) and does not specify any actionable shot composition or movement for the new scene (empty meeting room). This renders camera direction impossible.\"\n    },\n    {\n      \"criterion\": \"ETD\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Transitions are disconnected and unmotivated: abrupt cut to fireworks, reversed timeline with non-matching beginning, and no continuity between the five different-looking people talking to each other.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Reverse the timeline: show the ending first, then cut to a beginning that does not match.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Cut away in the middle to a rooftop fireworks show.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"this same protagonist appears simultaneously as five different-looking people who talk to each other.\"\n        }\n      ],\n      \"rationale\": \"The transitions lack spatial, temporal, or narrative motivation. The cut to fireworks is abrupt and unconnected to the meeting room scene. The reversed timeline and simultaneous five-person interaction create incoherent continuity.\"\n    },\n    {\n      \"criterion\": \"LCS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Lighting specifications are contradictory: 'harsh noon sun' and 'lightless night' are mutually exclusive and cannot coexist in the same moment.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Describe that same moment as harsh noon sun and as a lightless night...\"\n        }\n      ],\n      \"rationale\": \"The prompt demands impossible lighting conditions simultaneously. This violates the physical and visual logic of lighting design and makes the scene unrenderable.\"\n    },\n    {\n      \"criterion\": \"NDE\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"There is no progression, variation, or resolution. The video is static (glass of water never moves) with contradictory events (five people talking, fireworks, reversed timeline) that do not build or resolve.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"a glass of water never moves, with no people and no conflict.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Reverse the timeline: show the ending first, then cut to a beginning that does not match.\"\n        }\n      ],\n      \"rationale\": \"The content lacks narrative or visual progression. The static glass of water contradicts the dynamic events introduced (five people talking, fireworks), and the reversed timeline prevents any meaningful escalation or resolution.\"\n    },\n    {\n      \"criterion\": \"CIF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Additions (five people, fireworks, reversed timeline, contradictory lighting and camera) are not supportive of the central request (empty meeting room with static glass of water). They introduce unrelated, conflicting elements that distract and contradict the core instruction.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"this same protagonist appears simultaneously as five different-looking people who talk to each other.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Cut away in the middle to a rooftop fireworks show.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Describe that same moment as harsh noon sun and as a lightless night...\"\n        }\n      ],\n      \"rationale\": \"The additions are not only irrelevant but directly contradict the core instruction to show an empty meeting room with a static glass of water. They introduce narrative, visual, and temporal chaos that undermines the central request.\"\n    },\n    {\n      \"criterion\": \"SDI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"minor\",\n      \"issue\": \"No audio elements (speech, music, effects, ambience) are specified, which is acceptable for a silent scene, but the prompt does not address the absence of sound, which may be relevant for a meeting room setting.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"with no people and no conflict.\"\n        }\n      ],\n      \"rationale\": \"The prompt does not require audio, and silence is plausible for an empty meeting room. However, the lack of any mention of sound design is a minor omission, as ambient noise (e.g., HVAC, distant voices) might be expected in such a setting.\"\n    },\n    {\n      \"criterion\": \"SPS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Subject and performance details are contradictory: one protagonist appearing as five different-looking people who talk to each other, with no description of appearance, expression, gesture, or interaction. The static glass of water has no performance detail.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"First state that there is one protagonist, then state that this same protagonist appears simultaneously as five different-looking people who talk to each other.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"a glass of water never moves\"\n        }\n      ],\n      \"rationale\": \"The prompt introduces a character (five people) without any actionable performance details (expression, gesture, movement). The glass of water has no performance attributes. This makes subject and performance specification impossible.\"\n    },\n    {\n      \"criterion\": \"VSS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"No actionable specification of medium, texture, rendering language, or visual treatment for the new setting (empty meeting room). The original prompt's 'vintage grain texture' is explicitly dropped.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Drop the requested identity, count, action order, setting, and any explicit camera instruction.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Replace the whole video with an empty meeting room...\"\n        }\n      ],\n      \"rationale\": \"The prompt removes all visual treatment specifications from the original prompt and provides none for the new scene. Without medium, texture, or rendering language, the visual style is undefined and unrenderable.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt is incoherent and self-contradictory, rendering it impossible to generate a feasible video. It contains mutually exclusive temporal constraints (3 seconds total runtime vs. 27-second shots), contradictory visual conditions (harsh noon sun and lightless night simultaneously), and illogical narrative structure (reversed timeline with mismatched beginning and ending, abrupt cut to fireworks). The prompt also introduces conflicting character logic (one protagonist appearing as five different people) and invalid camera instructions (locked camera and never-stopping shake simultaneously). No actionable plan for shot sequencing, framing, or visual treatment can be derived.",
+  "usage": {
+    "completion_tokens": 1928,
+    "prompt_tokens": 1261,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 3189
+  }
+}

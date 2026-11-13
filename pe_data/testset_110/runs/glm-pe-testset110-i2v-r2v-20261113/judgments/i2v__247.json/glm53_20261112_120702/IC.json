@@ -1,0 +1,139 @@
+{
+  "candidate_hash": "fd94c0e1ad285d59a7308d71a18521444b60c34d8475eec710489c04bf11433d",
+  "case_key": "i2v:247",
+  "created_at": "2026-11-13T08:16:27+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "SAC",
+      "evidence": [
+        {
+          "quote": "身姿挺拔站立，双手自然垂于身侧，指尖微微轻蜷（细微紧张感）",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "centered, hips up, long wavy black hair over both shoulders, cream ribbed tank top, small hoop earrings, upright posture, arms relaxed at her sides with fingertips slightly curled",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "subject_1 is positioned in front of the green screen... beige ribbed tank top, small hoop earrings, long, wavy, black with subtle highlights",
+          "source": "evidence_facts"
+        }
+      ],
+      "issue": "",
+      "rationale": "Subject identity, count, appearance, clothing, and props are consistently preserved. The enhanced prompt accurately reflects the image evidence (e.g., cream ribbed tank top, hoop earrings, long black hair) and original prompt (e.g., upright posture, fingertips curled). No unexplained renaming, duplication, or attribute drift occurs.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANL",
+      "evidence": [
+        {
+          "quote": "半身近景（3:4）...说话时头部微抬，直视镜头，偶尔轻眨一次眼",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "The camera pushes in with small amplitude at very slow speed throughout... her chin lifting slightly on the emphatic phrase",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The enhanced prompt adds a camera push-in motion not explicitly mentioned in the original prompt, which may slightly alter the intended static composition. Additionally, the description of 'chin lifting slightly on the emphatic phrase' introduces a micro-action not directly specified in the original, though it is plausible and consistent with the emotional tone.",
+      "rationale": "The core actions (speaking, head tilt, blinking) are preserved and logically sequenced. The added camera motion and chin lift are minor elaborations that do not contradict the original intent and are plausible within the context. They do not break causal coherence or introduce dangling events.",
+      "severity": "minor"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "TSC",
+      "evidence": [
+        {
+          "quote": "第一次营业有点紧张，但我会用作品说话",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "She blinks once softly, tilts her head up almost imperceptibly, and begins speaking... Toward the end her expression settles back into calm, cool composure",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "The sequence of events (blink → head tilt → speaking → expression settling) is chronologically coherent and matches the duration (7s). No overlapping or infeasible timestamps are present. The state transitions (e.g., from tension to composure) are plausible and consistent with the emotional arc described.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SPC",
+      "evidence": [
+        {
+          "quote": "半身近景（3:4）...直视镜头",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "half-body close-up in vertical framing... centered, hips up... upright posture, arms relaxed at her sides",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "centered subject, symmetrical lighting, balanced framing... subject_1 is positioned in front of the green screen",
+          "source": "evidence_facts"
+        }
+      ],
+      "issue": "",
+      "rationale": "Location (studio), screen direction (frontal), relative position (centered), and orientation (upright) are consistent. The camera push-in is slow and continuous, maintaining spatial coherence. No unexplained position swaps or infeasible trajectories are introduced.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "PL",
+      "evidence": [
+        {
+          "quote": "her articulation slow and clear, her voice rising with quiet conviction and her chin lifting slightly on the emphatic phrase",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "subject_1 is positioned in front of the green screen... studio lights are positioned to the left and right of subject_1",
+          "source": "evidence_facts"
+        }
+      ],
+      "issue": "",
+      "rationale": "All physical actions (blinking, head tilt, speaking) are within human feasibility. The studio environment and lighting setup are consistent with real-world physics. No violations of gravity, contact, or object permanence are present.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "AVS",
+      "evidence": [
+        {
+          "quote": "语速偏慢，吐字清晰沉稳，开篇轻柔，说到“野心”时语气微扬坚定，结尾放缓放柔",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "her voice rising with quiet conviction and her chin lifting slightly on the emphatic phrase, then slowing and softening on the final words",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Quiet studio room tone with a faint electrical hum from the lights. Her voice is the only prominent sound",
+          "source": "evidence_facts"
+        }
+      ],
+      "issue": "",
+      "rationale": "The dialogue is temporally and semantically aligned with the visual actions (e.g., voice rising as chin lifts). The soundscape description matches the visual context (studio, no other movement). No misaligned lip-sync or premature effects are indicated.",
+      "severity": "none"
+    }
+  ],
+  "dimension": "IC",
+  "dimension_score": 95,
+  "evidence_cache_key": "b516858762366c2097e9b495db0cbd7afd6238c2b0a71d4bf3d3a81f6d097e29",
+  "judge_cache_key": "438d7e9fd7332b1041db3e2c26d42cb3fe828e0d369fb59490f6650aee59e97d",
+  "method": "glm53_20261112_120702",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"IC\",\n  \"dimension_score\": 95,\n  \"summary\": \"The enhanced prompt maintains strong internal consistency with the original instruction, preserving subject identity, appearance, actions, and environment. Minor issues include slight over-specification of camera motion and subtle discrepancies in emotional tone description, but no major contradictions or attribute drift. The prompt aligns well with the provided image evidence, with only minor interpretive differences in expression and movement that do not affect core consistency.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"SAC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"身姿挺拔站立，双手自然垂于身侧，指尖微微轻蜷（细微紧张感）\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"centered, hips up, long wavy black hair over both shoulders, cream ribbed tank top, small hoop earrings, upright posture, arms relaxed at her sides with fingertips slightly curled\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"subject_1 is positioned in front of the green screen... beige ribbed tank top, small hoop earrings, long, wavy, black with subtle highlights\"\n        }\n      ],\n      \"rationale\": \"Subject identity, count, appearance, clothing, and props are consistently preserved. The enhanced prompt accurately reflects the image evidence (e.g., cream ribbed tank top, hoop earrings, long black hair) and original prompt (e.g., upright posture, fingertips curled). No unexplained renaming, duplication, or attribute drift occurs.\"\n    },\n    {\n      \"criterion\": \"ANL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"minor\",\n      \"issue\": \"The enhanced prompt adds a camera push-in motion not explicitly mentioned in the original prompt, which may slightly alter the intended static composition. Additionally, the description of 'chin lifting slightly on the emphatic phrase' introduces a micro-action not directly specified in the original, though it is plausible and consistent with the emotional tone.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"半身近景（3:4）...说话时头部微抬，直视镜头，偶尔轻眨一次眼\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"The camera pushes in with small amplitude at very slow speed throughout... her chin lifting slightly on the emphatic phrase\"\n        }\n      ],\n      \"rationale\": \"The core actions (speaking, head tilt, blinking) are preserved and logically sequenced. The added camera motion and chin lift are minor elaborations that do not contradict the original intent and are plausible within the context. They do not break causal coherence or introduce dangling events.\"\n    },\n    {\n      \"criterion\": \"TSC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"第一次营业有点紧张，但我会用作品说话\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"She blinks once softly, tilts her head up almost imperceptibly, and begins speaking... Toward the end her expression settles back into calm, cool composure\"\n        }\n      ],\n      \"rationale\": \"The sequence of events (blink → head tilt → speaking → expression settling) is chronologically coherent and matches the duration (7s). No overlapping or infeasible timestamps are present. The state transitions (e.g., from tension to composure) are plausible and consistent with the emotional arc described.\"\n    },\n    {\n      \"criterion\": \"SPC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"半身近景（3:4）...直视镜头\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"half-body close-up in vertical framing... centered, hips up... upright posture, arms relaxed at her sides\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"centered subject, symmetrical lighting, balanced framing... subject_1 is positioned in front of the green screen\"\n        }\n      ],\n      \"rationale\": \"Location (studio), screen direction (frontal), relative position (centered), and orientation (upright) are consistent. The camera push-in is slow and continuous, maintaining spatial coherence. No unexplained position swaps or infeasible trajectories are introduced.\"\n    },\n    {\n      \"criterion\": \"PL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"her articulation slow and clear, her voice rising with quiet conviction and her chin lifting slightly on the emphatic phrase\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"subject_1 is positioned in front of the green screen... studio lights are positioned to the left and right of subject_1\"\n        }\n      ],\n      \"rationale\": \"All physical actions (blinking, head tilt, speaking) are within human feasibility. The studio environment and lighting setup are consistent with real-world physics. No violations of gravity, contact, or object permanence are present.\"\n    },\n    {\n      \"criterion\": \"AVS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"语速偏慢，吐字清晰沉稳，开篇轻柔，说到“野心”时语气微扬坚定，结尾放缓放柔\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"her voice rising with quiet conviction and her chin lifting slightly on the emphatic phrase, then slowing and softening on the final words\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"Quiet studio room tone with a faint electrical hum from the lights. Her voice is the only prominent sound\"\n        }\n      ],\n      \"rationale\": \"The dialogue is temporally and semantically aligned with the visual actions (e.g., voice rising as chin lifts). The soundscape description matches the visual context (studio, no other movement). No misaligned lip-sync or premature effects are indicated.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt maintains strong internal consistency with the original instruction, preserving subject identity, appearance, actions, and environment. Minor issues include slight over-specification of camera motion and subtle discrepancies in emotional tone description, but no major contradictions or attribute drift. The prompt aligns well with the provided image evidence, with only minor interpretive differences in expression and movement that do not affect core consistency.",
+  "usage": {
+    "completion_tokens": 1433,
+    "prompt_tokens": 2464,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 3897
+  }
+}

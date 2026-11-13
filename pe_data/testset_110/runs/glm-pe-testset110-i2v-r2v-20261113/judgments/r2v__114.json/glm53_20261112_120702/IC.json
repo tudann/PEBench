@@ -1,0 +1,155 @@
+{
+  "candidate_hash": "7ec0631876b9c07f11b89e33d882e27bfda4cab8b5bb4d77b8e83cc6271d4314",
+  "case_key": "r2v:114",
+  "created_at": "2026-11-13T08:52:29+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "SAC",
+      "evidence": [
+        {
+          "quote": "All features of Lin Huizhen must remain absolutely locked to Image 3, and it must be clear that this image is a single-character reference image.",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "<Subject 1> is Lin Huizhen, a 45-year-old elegant East Asian woman whose facial features, long dark wavy hair, pearl earrings, thin gold necklace, and blush-pink wool blazer dress are absolutely locked to <Picture 3>, a single-character reference sheet.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "image_3: visible_appearance: age: middle-aged, clothing: pink fitted coat dress, white high-heeled pumps, hair: long, dark brown, wavy, shoulder-length, jewelry: pearl earrings, gold necklace with small pendant",
+          "source": "evidence_facts"
+        }
+      ],
+      "issue": "",
+      "rationale": "Subject identities, counts, appearances, clothing, and props are consistently preserved across shots. Lin Huizhen’s features are locked to image_3, Li Jianming’s to image_2, and the voice recorder to image_4. No unexplained renaming, duplication, or attribute drift occurs. The enhanced prompt adds minor descriptive elaboration (e.g., 'calculating gleam') but does not contradict or alter the core visual attributes specified in the original.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANL",
+      "evidence": [
+        {
+          "quote": "Image 3 Lin Huizhen is speaking... Li Jianming... gripping the voice recorder... staring intently at Image 3 Lin Huizhen.",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Lin Huizhen speaks with her mouth open, her expression serious and instructive... Li Jianming... grips <Subject 3>, the black voice recorder... staring intently at Lin Huizhen.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "In the soft background, <Subject 2> Li Jianming keeps his mouth closed and slowly nods in agreement.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "Actions form a coherent causal progression: Lin Huizhen speaks in Shot 1, Li Jianming listens intently and grips the recorder; in Shot 2, she continues speaking while he nods in agreement. The actions are plausible, with clear subject-action bindings (e.g., Li Jianming holding the recorder, Lin Huizhen speaking). No incompatible or dangling events are present. The enhanced prompt adds 'calculating gleam' and 'scheming atmosphere' for tone, but these do not alter the procedural logic.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "TSC",
+      "evidence": [
+        {
+          "quote": "[0s]-[3s]... Hard cut transition... [3s]-[6s]",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "[Shot 1]... At 00:03.000, a hard cut to the reverse shot: [Shot 2]... Lin Huizhen continues... finishing her line by 00:05.700",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "The output audio must be in Chinese, and all characters must finish speaking at least 0.3s before the end of the video.",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "Chronology is strictly preserved: Shot 1 runs 0-3s, Shot 2 runs 3-6s, with a hard cut at 3s. Dialogue timing is specified to end by 5.7s, satisfying the 0.3s buffer before the 6s end. No overlapping or infeasible timestamps, unexplained resets, or state inconsistencies are present. The enhanced prompt adds precise timestamps (00:03.000, 00:05.700) which align with the original’s duration and transition requirements.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SPC",
+      "evidence": [
+        {
+          "quote": "over-the-shoulder shot (forward shot)... side shot (reverse shot)",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "[Shot 1]... over-the-shoulder forward shot framed past <Subject 1> Lin Huizhen's shoulder... [Shot 2]... static close-up side profile of <Subject 1> Lin Huizhen",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "image_1: scene_and_spatial_relations: foreground: wooden coffee table, wooden flooring; midground: beige-gray sofa, TV stand; background: large glass doors, cityscape at sunset",
+          "source": "evidence_facts"
+        }
+      ],
+      "issue": "",
+      "rationale": "Spatial relationships are consistent: Shot 1 frames Li Jianming over Lin Huizhen’s shoulder, with sofa in midground; Shot 2 shows Lin Huizhen in side profile with coffee table and flooring in background. Screen direction and relative positions are coherent across shots. No unexplained position swaps or infeasible trajectories are present. The enhanced prompt clarifies the framing and background elements, which align with the original’s spatial cues.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "PL",
+      "evidence": [
+        {
+          "quote": "gripping the voice recorder from Image 4 tightly in his hand",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "grips <Subject 3>, the black voice recorder... tightly in his hand",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "image_4: overall_content_summary: A black digital voice recorder with a rectangular body, small screen, three silver buttons, microphone grille, and USB port",
+          "source": "evidence_facts"
+        }
+      ],
+      "issue": "",
+      "rationale": "Physics and object permanence are respected: Li Jianming holds the recorder in a plausible manner, with no floating or impossible interactions. The recorder’s features are consistent with image_4. The environment (apartment living room) adheres to real-world physics (gravity, lighting, object placement). No bodily infeasibilities or causal violations are present.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "AVS",
+      "evidence": [
+        {
+          "quote": "Audio: Image 3 Lin Huizhen... says: “Someone called to extort the family,”... Ambient sound effects: faint distant city background noise indoors.",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Lin Huizhen speaks... <d>[Chinese]有人打电话来敲诈家里，</d> Faint distant city background noise is audible indoors.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Audio: Lin Huizhen... says: “You were worried it would affect company morale, so you came here specifically to make a record”;\nAmbient sound effects: strictly no sound effects",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Lin Huizhen continues... <d>[Chinese]你担心影响公司士气，所以特意来这里做个记录</d>... This shot contains strictly no ambient sound effects; only her dialogue is audible.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "Audio-visual alignment is maintained: dialogue is spoken by Lin Huizhen in both shots, with correct timing and speaker attribution. Ambient sound is present only in Shot 1 and absent in Shot 2, as specified. No misaligned lip-sync or premature effects are indicated. The enhanced prompt preserves the original audio cues with precise Chinese transcription and sound design.",
+      "severity": "none"
+    }
+  ],
+  "dimension": "IC",
+  "dimension_score": 98,
+  "evidence_cache_key": "8d867ffe01afdaf777bc7f16feca50ec68d0ddafaab98e7f3448a36aa2ea3406",
+  "judge_cache_key": "438d7e9fd7332b1041db3e2c26d42cb3fe828e0d369fb59490f6650aee59e97d",
+  "method": "glm53_20261112_120702",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"IC\",\n  \"dimension_score\": 98,\n  \"summary\": \"The enhanced prompt maintains strong internal consistency with the original instruction, preserving subject identities, actions, chronology, spatial relationships, and audio-visual alignment. All character appearances, props, and environment details are locked to the provided reference images. The shot-reverse-shot structure, hard cut at 3s, and dialogue timing are accurately preserved. Minor issues include slight elaboration in the enhanced prompt (e.g., adding 'calculating gleam' to Lin Huizhen’s eyes) not present in the original, but these do not contradict or alter core requirements. No contradictions, attribute drift, or infeasible sequences are detected.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"SAC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"All features of Lin Huizhen must remain absolutely locked to Image 3, and it must be clear that this image is a single-character reference image.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"<Subject 1> is Lin Huizhen, a 45-year-old elegant East Asian woman whose facial features, long dark wavy hair, pearl earrings, thin gold necklace, and blush-pink wool blazer dress are absolutely locked to <Picture 3>, a single-character reference sheet.\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"image_3: visible_appearance: age: middle-aged, clothing: pink fitted coat dress, white high-heeled pumps, hair: long, dark brown, wavy, shoulder-length, jewelry: pearl earrings, gold necklace with small pendant\"\n        }\n      ],\n      \"rationale\": \"Subject identities, counts, appearances, clothing, and props are consistently preserved across shots. Lin Huizhen’s features are locked to image_3, Li Jianming’s to image_2, and the voice recorder to image_4. No unexplained renaming, duplication, or attribute drift occurs. The enhanced prompt adds minor descriptive elaboration (e.g., 'calculating gleam') but does not contradict or alter the core visual attributes specified in the original.\"\n    },\n    {\n      \"criterion\": \"ANL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"Image 3 Lin Huizhen is speaking... Li Jianming... gripping the voice recorder... staring intently at Image 3 Lin Huizhen.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Lin Huizhen speaks with her mouth open, her expression serious and instructive... Li Jianming... grips <Subject 3>, the black voice recorder... staring intently at Lin Huizhen.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"In the soft background, <Subject 2> Li Jianming keeps his mouth closed and slowly nods in agreement.\"\n        }\n      ],\n      \"rationale\": \"Actions form a coherent causal progression: Lin Huizhen speaks in Shot 1, Li Jianming listens intently and grips the recorder; in Shot 2, she continues speaking while he nods in agreement. The actions are plausible, with clear subject-action bindings (e.g., Li Jianming holding the recorder, Lin Huizhen speaking). No incompatible or dangling events are present. The enhanced prompt adds 'calculating gleam' and 'scheming atmosphere' for tone, but these do not alter the procedural logic.\"\n    },\n    {\n      \"criterion\": \"TSC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"[0s]-[3s]... Hard cut transition... [3s]-[6s]\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"[Shot 1]... At 00:03.000, a hard cut to the reverse shot: [Shot 2]... Lin Huizhen continues... finishing her line by 00:05.700\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"The output audio must be in Chinese, and all characters must finish speaking at least 0.3s before the end of the video.\"\n        }\n      ],\n      \"rationale\": \"Chronology is strictly preserved: Shot 1 runs 0-3s, Shot 2 runs 3-6s, with a hard cut at 3s. Dialogue timing is specified to end by 5.7s, satisfying the 0.3s buffer before the 6s end. No overlapping or infeasible timestamps, unexplained resets, or state inconsistencies are present. The enhanced prompt adds precise timestamps (00:03.000, 00:05.700) which align with the original’s duration and transition requirements.\"\n    },\n    {\n      \"criterion\": \"SPC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"over-the-shoulder shot (forward shot)... side shot (reverse shot)\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"[Shot 1]... over-the-shoulder forward shot framed past <Subject 1> Lin Huizhen's shoulder... [Shot 2]... static close-up side profile of <Subject 1> Lin Huizhen\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"image_1: scene_and_spatial_relations: foreground: wooden coffee table, wooden flooring; midground: beige-gray sofa, TV stand; background: large glass doors, cityscape at sunset\"\n        }\n      ],\n      \"rationale\": \"Spatial relationships are consistent: Shot 1 frames Li Jianming over Lin Huizhen’s shoulder, with sofa in midground; Shot 2 shows Lin Huizhen in side profile with coffee table and flooring in background. Screen direction and relative positions are coherent across shots. No unexplained position swaps or infeasible trajectories are present. The enhanced prompt clarifies the framing and background elements, which align with the original’s spatial cues.\"\n    },\n    {\n      \"criterion\": \"PL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"gripping the voice recorder from Image 4 tightly in his hand\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"grips <Subject 3>, the black voice recorder... tightly in his hand\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"image_4: overall_content_summary: A black digital voice recorder with a rectangular body, small screen, three silver buttons, microphone grille, and USB port\"\n        }\n      ],\n      \"rationale\": \"Physics and object permanence are respected: Li Jianming holds the recorder in a plausible manner, with no floating or impossible interactions. The recorder’s features are consistent with image_4. The environment (apartment living room) adheres to real-world physics (gravity, lighting, object placement). No bodily infeasibilities or causal violations are present.\"\n    },\n    {\n      \"criterion\": \"AVS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"Audio: Image 3 Lin Huizhen... says: “Someone called to extort the family,”... Ambient sound effects: faint distant city background noise indoors.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Lin Huizhen speaks... <d>[Chinese]有人打电话来敲诈家里，</d> Faint distant city background noise is audible indoors.\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"Audio: Lin Huizhen... says: “You were worried it would affect company morale, so you came here specifically to make a record”;\\nAmbient sound effects: strictly no sound effects\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Lin Huizhen continues... <d>[Chinese]你担心影响公司士气，所以特意来这里做个记录</d>... This shot contains strictly no ambient sound effects; only her dialogue is audible.\"\n        }\n      ],\n      \"rationale\": \"Audio-visual alignment is maintained: dialogue is spoken by Lin Huizhen in both shots, with correct timing and speaker attribution. Ambient sound is present only in Shot 1 and absent in Shot 2, as specified. No misaligned lip-sync or premature effects are indicated. The enhanced prompt preserves the original audio cues with precise Chinese transcription and sound design.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt maintains strong internal consistency with the original instruction, preserving subject identities, actions, chronology, spatial relationships, and audio-visual alignment. All character appearances, props, and environment details are locked to the provided reference images. The shot-reverse-shot structure, hard cut at 3s, and dialogue timing are accurately preserved. Minor issues include slight elaboration in the enhanced prompt (e.g., adding 'calculating gleam' to Lin Huizhen’s eyes) not present in the original, but these do not contradict or alter core requirements. No contradictions, attribute drift, or infeasible sequences are detected.",
+  "usage": {
+    "completion_tokens": 1988,
+    "prompt_tokens": 5690,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 7678
+  }
+}

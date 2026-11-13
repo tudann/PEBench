@@ -1,0 +1,174 @@
+{
+  "candidate_hash": "03b914bb64b8e8eaa12e57b6ddf9aabd6b39a717eee4bdfec184b68207b70de9",
+  "case_key": "i2v:050",
+  "created_at": "2026-11-13T07:14:23+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "STC",
+      "evidence": [
+        {
+          "quote": "Set the total runtime to 3 seconds, while also making every shot last 27 seconds.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Reverse the timeline: show the ending first, then cut to a beginning that does not match.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt specifies a 3-second total runtime while requiring every shot to last 27 seconds, which is logically impossible. It also reverses the timeline (showing ending first, then beginning) and cuts away to an unrelated rooftop fireworks show, creating a disjointed and incoherent temporal structure.",
+      "rationale": "A feasible temporal plan requires consistent duration allocation and logical shot sequencing. The 3-second vs. 27-second contradiction and timeline reversal make the plan infeasible.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CDS",
+      "evidence": [
+        {
+          "quote": "Describe that same moment as harsh noon sun and as a lightless night, and as both a locked camera and a camera that never stops shaking.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "overexposed, tilted security-camera view of an empty corridor",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt contradicts itself on camera movement and viewpoint: it demands both a locked camera and a camera that 'never stops shaking,' and also specifies an overexposed, tilted security-camera view while ignoring all original camera instructions. These conflicting specifications prevent actionable framing.",
+      "rationale": "Actionable camera specifications must be consistent and mutually compatible. The prompt's contradictory instructions (locked vs. shaking, security cam vs. original motion) render them unactionable.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ETD",
+      "evidence": [
+        {
+          "quote": "Cut away in the middle to a rooftop fireworks show.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Describe that same moment as harsh noon sun and as a lightless night, and as both a locked camera and a camera that never stops shaking.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt mandates a cut to a rooftop fireworks show in the middle of the sequence without continuity or motivation, and also requires showing the same moment under contradictory lighting and camera conditions, creating disconnected and unmotivated transitions.",
+      "rationale": "Transitions must support narrative, spatial, or rhythmic progression. The abrupt cut to fireworks and contradictory moment descriptions lack continuity and motivation, violating ETD.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "LCS",
+      "evidence": [
+        {
+          "quote": "Drop the requested identity, count, action order, setting, and any explicit camera instruction. ... no lighting design.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Describe that same moment as harsh noon sun and as a lightless night...",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt explicitly states 'no lighting design' and then contradicts itself by describing the same moment as 'harsh noon sun' and 'lightless night,' which are mutually exclusive lighting conditions.",
+      "rationale": "Lighting specifications must be consistent and actionable. The contradiction between 'no lighting design' and specific, opposing lighting conditions makes the prompt incoherent.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "NDE",
+      "evidence": [
+        {
+          "quote": "this same protagonist appears simultaneously as five different-looking people who talk to each other.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Reverse the timeline: show the ending first, then cut to a beginning that does not match.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt lacks any progression, variation, or resolution. Instead, it presents a series of contradictory, static states (e.g., five simultaneous identities, reversed timeline, conflicting lighting) without narrative or visual development.",
+      "rationale": "A video must show progression or variation. The prompt's self-contradictory elements (simultaneous identities, reversed timeline) prevent any meaningful narrative or visual evolution.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CIF",
+      "evidence": [
+        {
+          "quote": "this same protagonist appears simultaneously as five different-looking people who talk to each other.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Cut away in the middle to a rooftop fireworks show.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt adds numerous irrelevant and contradictory elements (five simultaneous identities, rooftop fireworks, conflicting lighting and camera states) that distract from and contradict the original request, which was a coherent cinematic sequence of Shanghai's skyline.",
+      "rationale": "Additions must support the central request. The prompt's additions are unrelated, contradictory, and undermine the original cinematic vision.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SDI",
+      "evidence": [
+        {
+          "quote": "Drop the requested identity, count, action order, setting, and any explicit camera instruction.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt does not specify any audio elements (speech, music, effects, ambience), which is acceptable for a visual-only directive, but the lack of audio integration is not a major issue given the focus on visual contradictions.",
+      "rationale": "Audio integration is not required for all video prompts. The absence here is not a major flaw, though it could be considered a minor omission if audio were expected.",
+      "severity": "minor"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SPS",
+      "evidence": [
+        {
+          "quote": "Ignore the person, clothing, pose, and setting in the first frame, and replace them with a stranger of the opposite age and gender in a white studio.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "this same protagonist appears simultaneously as five different-looking people who talk to each other.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt ignores the original subjects (bridge, skyscrapers, river) and replaces them with a stranger in a white studio, and then introduces five simultaneous, different-looking versions of the protagonist, which contradicts the original visual content and identity.",
+      "rationale": "Subject and performance details must align with the visual content. The prompt's replacement of the original scene with unrelated characters and identities violates SPS.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "VSS",
+      "evidence": [
+        {
+          "quote": "overexposed, tilted security-camera view of an empty corridor",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "replace them with a stranger of the opposite age and gender in a white studio.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt specifies an overexposed, tilted security-camera view, which contradicts the original cinematic, high-quality urban landscape style, and also demands a white studio setting, which is incompatible with the original outdoor, architectural scene.",
+      "rationale": "Visual style must be consistent and appropriate. The security-camera and white studio specifications are incompatible with the original cinematic, urban landscape treatment.",
+      "severity": "major"
+    }
+  ],
+  "dimension": "DC",
+  "dimension_score": 25,
+  "evidence_cache_key": "fb9d347de7a5fb65af76d1eaea6dedce5b18802b565ac6dfe82c26d154dc820c",
+  "judge_cache_key": "0754499d53388e6467fb078ab780e01b77f9f1c9e99d9029be2769351eb2b2eb",
+  "method": "weak-pe-original",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"DC\",\n  \"dimension_score\": 25,\n  \"summary\": \"The enhanced prompt fundamentally contradicts the original instruction and creates an incoherent, logically impossible video plan. It introduces conflicting temporal, spatial, and technical specifications (e.g., 3-second runtime with 27-second shots, reversed timeline, simultaneous multiple identities, contradictory lighting and camera states) that render the directive unfeasible. While it includes some descriptive elements, they are inconsistent and self-contradictory, failing to support a coherent directorial creation.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"STC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt specifies a 3-second total runtime while requiring every shot to last 27 seconds, which is logically impossible. It also reverses the timeline (showing ending first, then beginning) and cuts away to an unrelated rooftop fireworks show, creating a disjointed and incoherent temporal structure.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Set the total runtime to 3 seconds, while also making every shot last 27 seconds.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Reverse the timeline: show the ending first, then cut to a beginning that does not match.\"\n        }\n      ],\n      \"rationale\": \"A feasible temporal plan requires consistent duration allocation and logical shot sequencing. The 3-second vs. 27-second contradiction and timeline reversal make the plan infeasible.\"\n    },\n    {\n      \"criterion\": \"CDS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt contradicts itself on camera movement and viewpoint: it demands both a locked camera and a camera that 'never stops shaking,' and also specifies an overexposed, tilted security-camera view while ignoring all original camera instructions. These conflicting specifications prevent actionable framing.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Describe that same moment as harsh noon sun and as a lightless night, and as both a locked camera and a camera that never stops shaking.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"overexposed, tilted security-camera view of an empty corridor\"\n        }\n      ],\n      \"rationale\": \"Actionable camera specifications must be consistent and mutually compatible. The prompt's contradictory instructions (locked vs. shaking, security cam vs. original motion) render them unactionable.\"\n    },\n    {\n      \"criterion\": \"ETD\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt mandates a cut to a rooftop fireworks show in the middle of the sequence without continuity or motivation, and also requires showing the same moment under contradictory lighting and camera conditions, creating disconnected and unmotivated transitions.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Cut away in the middle to a rooftop fireworks show.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Describe that same moment as harsh noon sun and as a lightless night, and as both a locked camera and a camera that never stops shaking.\"\n        }\n      ],\n      \"rationale\": \"Transitions must support narrative, spatial, or rhythmic progression. The abrupt cut to fireworks and contradictory moment descriptions lack continuity and motivation, violating ETD.\"\n    },\n    {\n      \"criterion\": \"LCS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt explicitly states 'no lighting design' and then contradicts itself by describing the same moment as 'harsh noon sun' and 'lightless night,' which are mutually exclusive lighting conditions.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Drop the requested identity, count, action order, setting, and any explicit camera instruction. ... no lighting design.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Describe that same moment as harsh noon sun and as a lightless night...\"\n        }\n      ],\n      \"rationale\": \"Lighting specifications must be consistent and actionable. The contradiction between 'no lighting design' and specific, opposing lighting conditions makes the prompt incoherent.\"\n    },\n    {\n      \"criterion\": \"NDE\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt lacks any progression, variation, or resolution. Instead, it presents a series of contradictory, static states (e.g., five simultaneous identities, reversed timeline, conflicting lighting) without narrative or visual development.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"this same protagonist appears simultaneously as five different-looking people who talk to each other.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Reverse the timeline: show the ending first, then cut to a beginning that does not match.\"\n        }\n      ],\n      \"rationale\": \"A video must show progression or variation. The prompt's self-contradictory elements (simultaneous identities, reversed timeline) prevent any meaningful narrative or visual evolution.\"\n    },\n    {\n      \"criterion\": \"CIF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt adds numerous irrelevant and contradictory elements (five simultaneous identities, rooftop fireworks, conflicting lighting and camera states) that distract from and contradict the original request, which was a coherent cinematic sequence of Shanghai's skyline.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"this same protagonist appears simultaneously as five different-looking people who talk to each other.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Cut away in the middle to a rooftop fireworks show.\"\n        }\n      ],\n      \"rationale\": \"Additions must support the central request. The prompt's additions are unrelated, contradictory, and undermine the original cinematic vision.\"\n    },\n    {\n      \"criterion\": \"SDI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"minor\",\n      \"issue\": \"The prompt does not specify any audio elements (speech, music, effects, ambience), which is acceptable for a visual-only directive, but the lack of audio integration is not a major issue given the focus on visual contradictions.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Drop the requested identity, count, action order, setting, and any explicit camera instruction.\"\n        }\n      ],\n      \"rationale\": \"Audio integration is not required for all video prompts. The absence here is not a major flaw, though it could be considered a minor omission if audio were expected.\"\n    },\n    {\n      \"criterion\": \"SPS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt ignores the original subjects (bridge, skyscrapers, river) and replaces them with a stranger in a white studio, and then introduces five simultaneous, different-looking versions of the protagonist, which contradicts the original visual content and identity.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Ignore the person, clothing, pose, and setting in the first frame, and replace them with a stranger of the opposite age and gender in a white studio.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"this same protagonist appears simultaneously as five different-looking people who talk to each other.\"\n        }\n      ],\n      \"rationale\": \"Subject and performance details must align with the visual content. The prompt's replacement of the original scene with unrelated characters and identities violates SPS.\"\n    },\n    {\n      \"criterion\": \"VSS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt specifies an overexposed, tilted security-camera view, which contradicts the original cinematic, high-quality urban landscape style, and also demands a white studio setting, which is incompatible with the original outdoor, architectural scene.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"overexposed, tilted security-camera view of an empty corridor\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"replace them with a stranger of the opposite age and gender in a white studio.\"\n        }\n      ],\n      \"rationale\": \"Visual style must be consistent and appropriate. The security-camera and white studio specifications are incompatible with the original cinematic, urban landscape treatment.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt fundamentally contradicts the original instruction and creates an incoherent, logically impossible video plan. It introduces conflicting temporal, spatial, and technical specifications (e.g., 3-second runtime with 27-second shots, reversed timeline, simultaneous multiple identities, contradictory lighting and camera states) that render the directive unfeasible. While it includes some descriptive elements, they are inconsistent and self-contradictory, failing to support a coherent directorial creation.",
+  "usage": {
+    "completion_tokens": 1879,
+    "prompt_tokens": 2830,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 4709
+  }
+}

@@ -1,0 +1,174 @@
+{
+  "candidate_hash": "429971b618547e710e2fde3c8bf551658a2e292c289549f1fa1621b43156d16b",
+  "case_key": "t2v:122",
+  "created_at": "2026-11-13T07:36:02+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "STC",
+      "evidence": [
+        {
+          "quote": "Set the total runtime to 3 seconds, while also making every shot last 27 seconds.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Reverse the timeline: show the ending first, then cut to a beginning that does not match.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The temporal plan is infeasible due to contradictory duration constraints (3 seconds total runtime with every shot lasting 27 seconds) and a reversed timeline that lacks coherent event boundaries or progression.",
+      "rationale": "A 3-second runtime cannot accommodate 27-second shots. The reversed timeline with mismatched beginning and ending creates a non-continuous, logically broken sequence. No feasible shot boundaries or duration allocation exist.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CDS",
+      "evidence": [
+        {
+          "quote": "Drop the requested identity, count, action order, setting, and any explicit camera instruction.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Describe that same moment as harsh noon sun and as a lightless night, and as both a locked camera and a camera that never stops shaking.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "All camera specifications from the original prompt are dropped, replaced with contradictory and infeasible instructions (e.g., 'locked camera and a camera that never stops shaking' simultaneously). No actionable framing, angle, or movement is specified.",
+      "rationale": "The prompt explicitly removes all camera instructions and then introduces mutually exclusive camera states (locked vs. shaking) for the same moment, making any actionable specification impossible.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ETD",
+      "evidence": [
+        {
+          "quote": "Cut away in the middle to a toothpaste commercial.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Reverse the timeline: show the ending first, then cut to a beginning that does not match.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Transitions are described as disconnected and unmotivated: cutting to a toothpaste commercial mid-sequence, reversing timeline, and showing contradictory states without continuity. No narrative or spatial progression is supported.",
+      "rationale": "The cuts are arbitrary and serve no narrative or spatial logic. The toothpaste commercial insertion is unrelated and unmotivated. The reversed timeline creates disorientation without continuity.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "LCS",
+      "evidence": [
+        {
+          "quote": "Drop the requested identity, count, action order, setting, and any explicit camera instruction.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Describe that same moment as harsh noon sun and as a lightless night...",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Lighting is specified as 'no lighting design' and then contradicted by describing the same moment as 'harsh noon sun' and 'lightless night'—incompatible conditions that cannot coexist in a single shot.",
+      "rationale": "The prompt demands mutually exclusive lighting conditions for the same moment, which is physically and visually impossible. No coherent lighting design is possible.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "NDE",
+      "evidence": [
+        {
+          "quote": "this same protagonist appears simultaneously as five different-looking people who talk to each other.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Reverse the timeline: show the ending first, then cut to a beginning that does not match.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt lacks any progression, variation, or resolution. It presents a static, contradictory state (five simultaneous identities, reversed timeline) without narrative arc or escalation.",
+      "rationale": "The content is static and contradictory. There is no progression or resolution—only a paradoxical setup with no development. The narrative is broken and incoherent.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CIF",
+      "evidence": [
+        {
+          "quote": "Cut away in the middle to a toothpaste commercial.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "this same protagonist appears simultaneously as five different-looking people who talk to each other.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Additions (toothpaste commercial, five identities, reversed timeline) are irrelevant, distracting, and contradict the original request. They serve no purpose in supporting the central request.",
+      "rationale": "The additions are arbitrary and unrelated to the original prompt’s intent (a cinematic shot of a man on a bike). They distract and undermine the core request.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SDI",
+      "evidence": [
+        {
+          "quote": "Generate single shot. AI VIDEO GENERATION PROMPT (15 seconds, cinematic, ultra realistic)",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "No audio elements are specified, but the prompt does not require them. The absence is not an issue given the original prompt’s focus on visual content.",
+      "rationale": "The original prompt is purely visual. The enhanced prompt does not introduce audio, so no audio integration is required or missing.",
+      "severity": "minor"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SPS",
+      "evidence": [
+        {
+          "quote": "Drop the requested identity, count, action order, setting, and any explicit camera instruction.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "this same protagonist appears simultaneously as five different-looking people who talk to each other.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Subject and performance details are entirely removed or replaced with impossible conditions (five simultaneous identities, contradictory appearances). No actionable description of appearance, expression, or movement remains.",
+      "rationale": "The original prompt specified a single protagonist with detailed appearance and motion. The enhanced prompt removes all such details and replaces them with an impossible, contradictory setup.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "VSS",
+      "evidence": [
+        {
+          "quote": "Replace the whole video with an overexposed, tilted security-camera view of an empty corridor, with no lighting design.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "cinematic, ultra realistic",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "All visual treatment specifications (cinematic, ultra-realistic, golden lighting, textile detail) are dropped. The prompt replaces them with an overexposed, tilted security-camera view with no design, which contradicts the original style.",
+      "rationale": "The visual style is completely overwritten with a low-fidelity, non-cinematic format. The original high-quality, detailed rendering requirements are discarded.",
+      "severity": "major"
+    }
+  ],
+  "dimension": "DC",
+  "dimension_score": 0,
+  "evidence_cache_key": "2485d143c6bf247ab67663b99352ad96d412033cb9e0e6fb56efbfdf2fa089eb",
+  "judge_cache_key": "0754499d53388e6467fb078ab780e01b77f9f1c9e99d9029be2769351eb2b2eb",
+  "method": "weak-pe-original",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"DC\",\n  \"dimension_score\": 0,\n  \"summary\": \"The enhanced prompt fundamentally contradicts and invalidates the original instruction, creating an infeasible, self-contradictory temporal and visual plan. It introduces impossible conditions (e.g., 3-second runtime with 27-second shots, simultaneous multiple identities, reversed timeline, contradictory lighting and camera states) and removes all actionable cinematic specifications. The prompt is not a valid directorial creation but a deliberate sabotage of the original request.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"STC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The temporal plan is infeasible due to contradictory duration constraints (3 seconds total runtime with every shot lasting 27 seconds) and a reversed timeline that lacks coherent event boundaries or progression.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Set the total runtime to 3 seconds, while also making every shot last 27 seconds.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Reverse the timeline: show the ending first, then cut to a beginning that does not match.\"\n        }\n      ],\n      \"rationale\": \"A 3-second runtime cannot accommodate 27-second shots. The reversed timeline with mismatched beginning and ending creates a non-continuous, logically broken sequence. No feasible shot boundaries or duration allocation exist.\"\n    },\n    {\n      \"criterion\": \"CDS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"All camera specifications from the original prompt are dropped, replaced with contradictory and infeasible instructions (e.g., 'locked camera and a camera that never stops shaking' simultaneously). No actionable framing, angle, or movement is specified.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Drop the requested identity, count, action order, setting, and any explicit camera instruction.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Describe that same moment as harsh noon sun and as a lightless night, and as both a locked camera and a camera that never stops shaking.\"\n        }\n      ],\n      \"rationale\": \"The prompt explicitly removes all camera instructions and then introduces mutually exclusive camera states (locked vs. shaking) for the same moment, making any actionable specification impossible.\"\n    },\n    {\n      \"criterion\": \"ETD\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Transitions are described as disconnected and unmotivated: cutting to a toothpaste commercial mid-sequence, reversing timeline, and showing contradictory states without continuity. No narrative or spatial progression is supported.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Cut away in the middle to a toothpaste commercial.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Reverse the timeline: show the ending first, then cut to a beginning that does not match.\"\n        }\n      ],\n      \"rationale\": \"The cuts are arbitrary and serve no narrative or spatial logic. The toothpaste commercial insertion is unrelated and unmotivated. The reversed timeline creates disorientation without continuity.\"\n    },\n    {\n      \"criterion\": \"LCS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Lighting is specified as 'no lighting design' and then contradicted by describing the same moment as 'harsh noon sun' and 'lightless night'—incompatible conditions that cannot coexist in a single shot.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Drop the requested identity, count, action order, setting, and any explicit camera instruction.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Describe that same moment as harsh noon sun and as a lightless night...\"\n        }\n      ],\n      \"rationale\": \"The prompt demands mutually exclusive lighting conditions for the same moment, which is physically and visually impossible. No coherent lighting design is possible.\"\n    },\n    {\n      \"criterion\": \"NDE\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt lacks any progression, variation, or resolution. It presents a static, contradictory state (five simultaneous identities, reversed timeline) without narrative arc or escalation.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"this same protagonist appears simultaneously as five different-looking people who talk to each other.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Reverse the timeline: show the ending first, then cut to a beginning that does not match.\"\n        }\n      ],\n      \"rationale\": \"The content is static and contradictory. There is no progression or resolution—only a paradoxical setup with no development. The narrative is broken and incoherent.\"\n    },\n    {\n      \"criterion\": \"CIF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Additions (toothpaste commercial, five identities, reversed timeline) are irrelevant, distracting, and contradict the original request. They serve no purpose in supporting the central request.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Cut away in the middle to a toothpaste commercial.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"this same protagonist appears simultaneously as five different-looking people who talk to each other.\"\n        }\n      ],\n      \"rationale\": \"The additions are arbitrary and unrelated to the original prompt’s intent (a cinematic shot of a man on a bike). They distract and undermine the core request.\"\n    },\n    {\n      \"criterion\": \"SDI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"minor\",\n      \"issue\": \"No audio elements are specified, but the prompt does not require them. The absence is not an issue given the original prompt’s focus on visual content.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"Generate single shot. AI VIDEO GENERATION PROMPT (15 seconds, cinematic, ultra realistic)\"\n        }\n      ],\n      \"rationale\": \"The original prompt is purely visual. The enhanced prompt does not introduce audio, so no audio integration is required or missing.\"\n    },\n    {\n      \"criterion\": \"SPS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Subject and performance details are entirely removed or replaced with impossible conditions (five simultaneous identities, contradictory appearances). No actionable description of appearance, expression, or movement remains.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Drop the requested identity, count, action order, setting, and any explicit camera instruction.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"this same protagonist appears simultaneously as five different-looking people who talk to each other.\"\n        }\n      ],\n      \"rationale\": \"The original prompt specified a single protagonist with detailed appearance and motion. The enhanced prompt removes all such details and replaces them with an impossible, contradictory setup.\"\n    },\n    {\n      \"criterion\": \"VSS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"All visual treatment specifications (cinematic, ultra-realistic, golden lighting, textile detail) are dropped. The prompt replaces them with an overexposed, tilted security-camera view with no design, which contradicts the original style.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Replace the whole video with an overexposed, tilted security-camera view of an empty corridor, with no lighting design.\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"cinematic, ultra realistic\"\n        }\n      ],\n      \"rationale\": \"The visual style is completely overwritten with a low-fidelity, non-cinematic format. The original high-quality, detailed rendering requirements are discarded.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt fundamentally contradicts and invalidates the original instruction, creating an infeasible, self-contradictory temporal and visual plan. It introduces impossible conditions (e.g., 3-second runtime with 27-second shots, simultaneous multiple identities, reversed timeline, contradictory lighting and camera states) and removes all actionable cinematic specifications. The prompt is not a valid directorial creation but a deliberate sabotage of the original request.",
+  "usage": {
+    "completion_tokens": 1776,
+    "prompt_tokens": 1358,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 3134
+  }
+}

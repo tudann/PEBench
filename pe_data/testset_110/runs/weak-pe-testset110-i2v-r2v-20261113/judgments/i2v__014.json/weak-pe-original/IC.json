@@ -1,0 +1,127 @@
+{
+  "candidate_hash": "51048515ca614996053a31a471f5abc9258e08693858802e2c55a5f76086abc8",
+  "case_key": "i2v:014",
+  "created_at": "2026-11-13T07:05:37+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "SAC",
+      "evidence": [
+        {
+          "quote": "先写成只有一个主角，紧接着又写成这个主角同时变成五个外貌不同的人，并且互相对话。...改成白棚里另一位年龄和性别都相反的陌生人。",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "患者紧握的双手...灰色毛衣袖子...自然的皮肤细节",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "Subject identity, count, appearance, and clothing are inconsistently and contradictorily defined. The prompt starts with one subject, then simultaneously transforms them into five different people, each with distinct appearances, while also replacing the original subject with a stranger of opposite age and gender in a white studio. This violates subject stability and identity consistency.",
+      "rationale": "The original prompt specifies a single patient with identifiable clothing and physical traits. The enhanced prompt introduces multiple conflicting identities and appearances, including a complete replacement with a stranger, which violates subject continuity and attribute stability.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANL",
+      "evidence": [
+        {
+          "quote": "中途插进一段无关的屋顶烟花。...时间倒过来：先给结尾，再跳到一个对不上的开头。...这个主角同时变成五个外貌不同的人，并且互相对话。",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "患者紧握的双手缓缓、轻柔地在15秒内松开并打开——这是一个微妙而深思熟虑的释放、投降和信任的手势。",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "Actions are incoherent and causally disconnected. The prompt demands a sequence that includes unrelated events (roof fireworks), contradictory actions (simultaneous dialogue among five people), and impossible transitions (time reversal). There is no logical progression or binding between subjects and actions.",
+      "rationale": "The original prompt describes a coherent, emotionally grounded action sequence. The enhanced prompt introduces arbitrary, non-sequitur events and illogical character interactions, breaking causal and procedural coherence.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "TSC",
+      "evidence": [
+        {
+          "quote": "时间倒过来：先给结尾，再跳到一个对不上的开头。...总时长写成3秒，同时又要求每个分镜各自持续27秒。",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "在15秒内松开并打开",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "Chronology is explicitly violated through time reversal and contradictory duration requirements. The prompt states '时间倒过来：先给结尾，再跳到一个对不上的开头' and simultaneously requires '总时长写成3秒，同时又要求每个分镜各自持续27秒', which is logically impossible.",
+      "rationale": "The original prompt specifies a linear 15-second duration. The enhanced prompt introduces contradictory temporal constraints and a reversed timeline, making the sequence infeasible and internally inconsistent.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SPC",
+      "evidence": [
+        {
+          "quote": "写成机位锁死，又写成镜头一直在晃。...镜头每半秒甩动、环绕、急推。...改成白棚里另一位年龄和性别都相反的陌生人。",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "相机保持静止和稳定。...温暖的琥珀色侧光继续照射在灰色毛衣袖子和皮肤的纹理上。",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "Spatial coherence is destroyed. The prompt demands a static camera ('机位锁死') while simultaneously requiring constant motion ('镜头一直在晃', '镜头每半秒甩动、环绕、急推'). It also changes the scene from an indoor setting with specific lighting to a white studio, with no plausible transition.",
+      "rationale": "The original prompt establishes a stable, cinematic composition with specific lighting and camera behavior. The enhanced prompt contradicts this with chaotic camera movement and a complete scene change, violating spatial and compositional consistency.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "PL",
+      "evidence": [
+        {
+          "quote": "这个主角同时变成五个外貌不同的人，并且互相对话。...镜头每半秒甩动、环绕、急推。",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "相机保持静止和稳定。...温暖的琥珀色侧光继续照射在灰色毛衣袖子和皮肤的纹理上。",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "Physics and object permanence are violated. The prompt describes a single person simultaneously becoming five different people, which defies physical laws. Additionally, the requirement for constant, rapid camera movement in a static scene is physically incoherent.",
+      "rationale": "The original prompt adheres to real-world physics with a stable subject and camera. The enhanced prompt introduces impossible transformations and contradictory physical constraints, violating the principle of object permanence and bodily feasibility.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "AVS",
+      "evidence": [
+        {
+          "quote": "全程循环响亮的流行合唱，并让角色对口型。...画面中央一直挂着大号字幕、水印和logo。",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "严格禁止音乐、旋律、背景音乐、配乐、歌唱、声乐哼唱，及任何与音乐轨道的对口型。屏幕上不得出现文字、字幕、说明文字、水印、logo叠加、标识文字或用户界面文本。",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "Audio-visual alignment is completely broken. The prompt demands '全程循环响亮的流行合唱，并让角色对口型' while the original strictly prohibits any music or lip-sync. Additionally, the requirement for '画面中央一直挂着大号字幕、水印和logo' contradicts the original's ban on on-screen text.",
+      "rationale": "The original prompt establishes a silent, text-free, emotionally focused visual narrative. The enhanced prompt introduces loud, distracting audio and visual overlays, creating a direct contradiction in audio-visual alignment and narrative tone.",
+      "severity": "major"
+    }
+  ],
+  "dimension": "IC",
+  "dimension_score": 0,
+  "evidence_cache_key": "778a9f7f46787e51bcff1cf977041acb5efeab8a3adb10a6edcfb9d8212b8832",
+  "judge_cache_key": "438d7e9fd7332b1041db3e2c26d42cb3fe828e0d369fb59490f6650aee59e97d",
+  "method": "weak-pe-original",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"IC\",\n  \"dimension_score\": 0,\n  \"summary\": \"Enhanced prompt fundamentally contradicts and destabilizes every aspect of the original instruction, introducing incoherent, contradictory, and physically impossible elements across all internal consistency criteria. The prompt deliberately violates subject identity, action logic, chronology, spatial coherence, physics, and audio-visual alignment, rendering the entire sequence internally inconsistent and infeasible.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"SAC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Subject identity, count, appearance, and clothing are inconsistently and contradictorily defined. The prompt starts with one subject, then simultaneously transforms them into five different people, each with distinct appearances, while also replacing the original subject with a stranger of opposite age and gender in a white studio. This violates subject stability and identity consistency.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"先写成只有一个主角，紧接着又写成这个主角同时变成五个外貌不同的人，并且互相对话。...改成白棚里另一位年龄和性别都相反的陌生人。\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"患者紧握的双手...灰色毛衣袖子...自然的皮肤细节\"\n        }\n      ],\n      \"rationale\": \"The original prompt specifies a single patient with identifiable clothing and physical traits. The enhanced prompt introduces multiple conflicting identities and appearances, including a complete replacement with a stranger, which violates subject continuity and attribute stability.\"\n    },\n    {\n      \"criterion\": \"ANL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Actions are incoherent and causally disconnected. The prompt demands a sequence that includes unrelated events (roof fireworks), contradictory actions (simultaneous dialogue among five people), and impossible transitions (time reversal). There is no logical progression or binding between subjects and actions.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"中途插进一段无关的屋顶烟花。...时间倒过来：先给结尾，再跳到一个对不上的开头。...这个主角同时变成五个外貌不同的人，并且互相对话。\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"患者紧握的双手缓缓、轻柔地在15秒内松开并打开——这是一个微妙而深思熟虑的释放、投降和信任的手势。\"\n        }\n      ],\n      \"rationale\": \"The original prompt describes a coherent, emotionally grounded action sequence. The enhanced prompt introduces arbitrary, non-sequitur events and illogical character interactions, breaking causal and procedural coherence.\"\n    },\n    {\n      \"criterion\": \"TSC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Chronology is explicitly violated through time reversal and contradictory duration requirements. The prompt states '时间倒过来：先给结尾，再跳到一个对不上的开头' and simultaneously requires '总时长写成3秒，同时又要求每个分镜各自持续27秒', which is logically impossible.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"时间倒过来：先给结尾，再跳到一个对不上的开头。...总时长写成3秒，同时又要求每个分镜各自持续27秒。\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"在15秒内松开并打开\"\n        }\n      ],\n      \"rationale\": \"The original prompt specifies a linear 15-second duration. The enhanced prompt introduces contradictory temporal constraints and a reversed timeline, making the sequence infeasible and internally inconsistent.\"\n    },\n    {\n      \"criterion\": \"SPC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Spatial coherence is destroyed. The prompt demands a static camera ('机位锁死') while simultaneously requiring constant motion ('镜头一直在晃', '镜头每半秒甩动、环绕、急推'). It also changes the scene from an indoor setting with specific lighting to a white studio, with no plausible transition.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"写成机位锁死，又写成镜头一直在晃。...镜头每半秒甩动、环绕、急推。...改成白棚里另一位年龄和性别都相反的陌生人。\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"相机保持静止和稳定。...温暖的琥珀色侧光继续照射在灰色毛衣袖子和皮肤的纹理上。\"\n        }\n      ],\n      \"rationale\": \"The original prompt establishes a stable, cinematic composition with specific lighting and camera behavior. The enhanced prompt contradicts this with chaotic camera movement and a complete scene change, violating spatial and compositional consistency.\"\n    },\n    {\n      \"criterion\": \"PL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Physics and object permanence are violated. The prompt describes a single person simultaneously becoming five different people, which defies physical laws. Additionally, the requirement for constant, rapid camera movement in a static scene is physically incoherent.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"这个主角同时变成五个外貌不同的人，并且互相对话。...镜头每半秒甩动、环绕、急推。\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"相机保持静止和稳定。...温暖的琥珀色侧光继续照射在灰色毛衣袖子和皮肤的纹理上。\"\n        }\n      ],\n      \"rationale\": \"The original prompt adheres to real-world physics with a stable subject and camera. The enhanced prompt introduces impossible transformations and contradictory physical constraints, violating the principle of object permanence and bodily feasibility.\"\n    },\n    {\n      \"criterion\": \"AVS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Audio-visual alignment is completely broken. The prompt demands '全程循环响亮的流行合唱，并让角色对口型' while the original strictly prohibits any music or lip-sync. Additionally, the requirement for '画面中央一直挂着大号字幕、水印和logo' contradicts the original's ban on on-screen text.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"全程循环响亮的流行合唱，并让角色对口型。...画面中央一直挂着大号字幕、水印和logo。\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"严格禁止音乐、旋律、背景音乐、配乐、歌唱、声乐哼唱，及任何与音乐轨道的对口型。屏幕上不得出现文字、字幕、说明文字、水印、logo叠加、标识文字或用户界面文本。\"\n        }\n      ],\n      \"rationale\": \"The original prompt establishes a silent, text-free, emotionally focused visual narrative. The enhanced prompt introduces loud, distracting audio and visual overlays, creating a direct contradiction in audio-visual alignment and narrative tone.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "Enhanced prompt fundamentally contradicts and destabilizes every aspect of the original instruction, introducing incoherent, contradictory, and physically impossible elements across all internal consistency criteria. The prompt deliberately violates subject identity, action logic, chronology, spatial coherence, physics, and audio-visual alignment, rendering the entire sequence internally inconsistent and infeasible.",
+  "usage": {
+    "completion_tokens": 1587,
+    "prompt_tokens": 2392,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 3979
+  }
+}

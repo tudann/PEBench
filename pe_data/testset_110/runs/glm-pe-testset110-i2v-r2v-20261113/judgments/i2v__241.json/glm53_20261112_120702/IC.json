@@ -1,0 +1,135 @@
+{
+  "candidate_hash": "42e56b1b7c15188f9e1e76337140d9561b90b2533a9df63d72480fccaf69fb37",
+  "case_key": "i2v:241",
+  "created_at": "2026-11-13T08:14:29+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "SAC",
+      "evidence": [
+        {
+          "quote": "the weasel stays motionless while its head slowly droops, gaze sliding down toward its own shoulder",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "黄鼠狼站在土地公身后两步远的地方，身体直立，四只脚保持不动。它的头部从平视慢慢垂下，目光从前方转移到肩膀的位置。",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "fists pressed to his chest with thumbs over fingers",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "双手抱拳置于胸前，拳心朝内，拇指压在食指上",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "The enhanced prompt describes the weasel’s head slowly drooping and looking down at its shoulder, but the original image shows it looking up at the elder. Additionally, the hand gesture is described as 'fists with thumbs over fingers' in the enhanced prompt, while the original prompt specifies 'thumb over index finger' — a minor semantic difference in hand positioning.",
+      "rationale": "The subject identities (Land God, Jade Emperor, Yellow Weasel) and their core attributes (clothing, posture, role) are preserved. The minor discrepancy in hand gesture and weasel gaze is a descriptive refinement, not a contradiction. The weasel’s gaze mismatch is between prompt and image, not within the prompt itself, so it does not break internal consistency.",
+      "severity": "minor"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANL",
+      "evidence": [
+        {
+          "quote": "the elder (S1) says... The Emperor leans slightly forward... From 3 to 6 seconds... the elder continues... From 6 to 10 seconds, the elder closes his mouth... the Emperor settles back",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "0-3秒...土地公开始说话...玉帝...身体微微前倾...3-6秒...土地公继续讲话...6-10秒...土地公的嘴巴闭合...玉帝在听完话后...身体从微微前倾恢复到正坐",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "Actions form a coherent causal progression: the elder speaks, the Emperor listens and reacts, the weasel shows remorse. The sequence of bowing, speaking, straightening, and the Emperor’s response is logically ordered and plausible.",
+      "rationale": "The actions are causally linked: speech triggers attention, then reaction. The elder’s bowing and speaking are followed by the Emperor’s physical response (leaning forward, tapping, settling back). The weasel’s head droop is a reaction to the elder’s words. No dangling or incompatible actions.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "TSC",
+      "evidence": [
+        {
+          "quote": "From 0 to 3 seconds... From 3 to 6 seconds... From 6 to 10 seconds",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "0-3秒...3-6秒...6-10秒",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "Chronology is preserved with clear 0-3s, 3-6s, 6-10s segments. State transitions are smooth: bowing → easing → standing; Emperor leaning → tapping → settling. No overlapping or infeasible timestamps.",
+      "rationale": "The timeline is strictly adhered to, with clear demarcations and plausible state changes. The camera motion (push-in) is synchronized with the narrative shift to the weasel, which is consistent with the time segment.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SPC",
+      "evidence": [
+        {
+          "quote": "medium shot favors the elder with a slight low angle so the Emperor remains visible above; the elder front and soft, the Emperor mid-frame in sharp focus, the weasel rear and half-soft",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "镜头对准土地公的上半身，构图中土地公居中，略低角度仰拍，使玉帝也出现在画面上方...镜头保持不动，将土地公、玉帝、黄鼠狼三者都框在画面中",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "Spatial relationships are consistent: elder in foreground right, Emperor in background center, weasel in foreground left. Camera movement (low angle → static → push-in) is coherent and maintains screen direction. No unexplained position swaps.",
+      "rationale": "The spatial layout is maintained across shots. The push-in is described as focusing on the weasel’s shoulder, which is a logical continuation from the static shot. No contradictions in relative positions or trajectories.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "PL",
+      "evidence": [
+        {
+          "quote": "cloth shoes shifting faintly on the stone floor... soft fur-rustle sounds as the weasel lowers its head... faint breathing audible",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "布鞋的鞋尖微微内扣...黄鼠狼低头时脖子毛发的摩擦声...玉帝扶手上手指轻轻叩击扶手的嗒嗒声",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "All physical actions are plausible: bowing, hand gestures, head drooping, breathing, cloth friction, finger tapping. The weasel’s upright stance is consistent with the fantasy setting. No violations of object permanence or gravity.",
+      "rationale": "The described physics (sound of cloth, friction, breathing) are consistent with the environment. The weasel’s anthropomorphic posture is acceptable within the fantasy context. No implausible movements or interactions.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "AVS",
+      "evidence": [
+        {
+          "quote": "the elder (S1) says... his clasped fists bobbing gently with his words... the Emperor's fingers tap the armrest two or three faint times... the weasel's faint breathing audible",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "0-3秒土地公开始说话...3-6秒土地公持续讲话...6-10秒说话声停止...能听到黄鼠狼低头的呼吸声",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "Dialogue is temporally aligned with actions: elder speaks during 0-6s, stops at 6s. Sounds (shoe friction, knuckle clicks, finger taps, breathing) are synchronized with the described events. No misaligned lip-sync or premature effects.",
+      "rationale": "The soundscape is tightly synchronized with the visual actions. The transition from speech to silence is clearly marked at 6s, and the breathing sound is introduced only after the speech ends, matching the narrative.",
+      "severity": "none"
+    }
+  ],
+  "dimension": "IC",
+  "dimension_score": 85,
+  "evidence_cache_key": "4e2254d6c859cf050c2d4bf3745eb319c2dd358a0caa2ddba0319802496c3b23",
+  "judge_cache_key": "438d7e9fd7332b1041db3e2c26d42cb3fe828e0d369fb59490f6650aee59e97d",
+  "method": "glm53_20261112_120702",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"IC\",\n  \"dimension_score\": 85,\n  \"summary\": \"The enhanced prompt maintains strong internal consistency with the original instruction, preserving subject identities, actions, chronology, and spatial relationships. Minor discrepancies exist in the description of the weasel’s gaze and hand gesture, and the camera focus transition is slightly elaborated beyond the original. No major contradictions or omissions are present, and the narrative progression is coherent. The only notable issue is a mismatch between the prompt’s description of the weasel’s head position (looking down at shoulder) and the image’s depiction (looking up), which is noted as a limitation in evidence but does not affect the prompt’s internal logic.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"SAC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"minor\",\n      \"issue\": \"The enhanced prompt describes the weasel’s head slowly drooping and looking down at its shoulder, but the original image shows it looking up at the elder. Additionally, the hand gesture is described as 'fists with thumbs over fingers' in the enhanced prompt, while the original prompt specifies 'thumb over index finger' — a minor semantic difference in hand positioning.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"the weasel stays motionless while its head slowly droops, gaze sliding down toward its own shoulder\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"黄鼠狼站在土地公身后两步远的地方，身体直立，四只脚保持不动。它的头部从平视慢慢垂下，目光从前方转移到肩膀的位置。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"fists pressed to his chest with thumbs over fingers\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"双手抱拳置于胸前，拳心朝内，拇指压在食指上\"\n        }\n      ],\n      \"rationale\": \"The subject identities (Land God, Jade Emperor, Yellow Weasel) and their core attributes (clothing, posture, role) are preserved. The minor discrepancy in hand gesture and weasel gaze is a descriptive refinement, not a contradiction. The weasel’s gaze mismatch is between prompt and image, not within the prompt itself, so it does not break internal consistency.\"\n    },\n    {\n      \"criterion\": \"ANL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"Actions form a coherent causal progression: the elder speaks, the Emperor listens and reacts, the weasel shows remorse. The sequence of bowing, speaking, straightening, and the Emperor’s response is logically ordered and plausible.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"the elder (S1) says... The Emperor leans slightly forward... From 3 to 6 seconds... the elder continues... From 6 to 10 seconds, the elder closes his mouth... the Emperor settles back\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"0-3秒...土地公开始说话...玉帝...身体微微前倾...3-6秒...土地公继续讲话...6-10秒...土地公的嘴巴闭合...玉帝在听完话后...身体从微微前倾恢复到正坐\"\n        }\n      ],\n      \"rationale\": \"The actions are causally linked: speech triggers attention, then reaction. The elder’s bowing and speaking are followed by the Emperor’s physical response (leaning forward, tapping, settling back). The weasel’s head droop is a reaction to the elder’s words. No dangling or incompatible actions.\"\n    },\n    {\n      \"criterion\": \"TSC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"Chronology is preserved with clear 0-3s, 3-6s, 6-10s segments. State transitions are smooth: bowing → easing → standing; Emperor leaning → tapping → settling. No overlapping or infeasible timestamps.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"From 0 to 3 seconds... From 3 to 6 seconds... From 6 to 10 seconds\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"0-3秒...3-6秒...6-10秒\"\n        }\n      ],\n      \"rationale\": \"The timeline is strictly adhered to, with clear demarcations and plausible state changes. The camera motion (push-in) is synchronized with the narrative shift to the weasel, which is consistent with the time segment.\"\n    },\n    {\n      \"criterion\": \"SPC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"Spatial relationships are consistent: elder in foreground right, Emperor in background center, weasel in foreground left. Camera movement (low angle → static → push-in) is coherent and maintains screen direction. No unexplained position swaps.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"medium shot favors the elder with a slight low angle so the Emperor remains visible above; the elder front and soft, the Emperor mid-frame in sharp focus, the weasel rear and half-soft\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"镜头对准土地公的上半身，构图中土地公居中，略低角度仰拍，使玉帝也出现在画面上方...镜头保持不动，将土地公、玉帝、黄鼠狼三者都框在画面中\"\n        }\n      ],\n      \"rationale\": \"The spatial layout is maintained across shots. The push-in is described as focusing on the weasel’s shoulder, which is a logical continuation from the static shot. No contradictions in relative positions or trajectories.\"\n    },\n    {\n      \"criterion\": \"PL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"All physical actions are plausible: bowing, hand gestures, head drooping, breathing, cloth friction, finger tapping. The weasel’s upright stance is consistent with the fantasy setting. No violations of object permanence or gravity.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"cloth shoes shifting faintly on the stone floor... soft fur-rustle sounds as the weasel lowers its head... faint breathing audible\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"布鞋的鞋尖微微内扣...黄鼠狼低头时脖子毛发的摩擦声...玉帝扶手上手指轻轻叩击扶手的嗒嗒声\"\n        }\n      ],\n      \"rationale\": \"The described physics (sound of cloth, friction, breathing) are consistent with the environment. The weasel’s anthropomorphic posture is acceptable within the fantasy context. No implausible movements or interactions.\"\n    },\n    {\n      \"criterion\": \"AVS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"Dialogue is temporally aligned with actions: elder speaks during 0-6s, stops at 6s. Sounds (shoe friction, knuckle clicks, finger taps, breathing) are synchronized with the described events. No misaligned lip-sync or premature effects.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"the elder (S1) says... his clasped fists bobbing gently with his words... the Emperor's fingers tap the armrest two or three faint times... the weasel's faint breathing audible\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"0-3秒土地公开始说话...3-6秒土地公持续讲话...6-10秒说话声停止...能听到黄鼠狼低头的呼吸声\"\n        }\n      ],\n      \"rationale\": \"The soundscape is tightly synchronized with the visual actions. The transition from speech to silence is clearly marked at 6s, and the breathing sound is introduced only after the speech ends, matching the narrative.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt maintains strong internal consistency with the original instruction, preserving subject identities, actions, chronology, and spatial relationships. Minor discrepancies exist in the description of the weasel’s gaze and hand gesture, and the camera focus transition is slightly elaborated beyond the original. No major contradictions or omissions are present, and the narrative progression is coherent. The only notable issue is a mismatch between the prompt’s description of the weasel’s head position (looking down at shoulder) and the image’s depiction (looking up), which is noted as a limitation in evidence but does not affect the prompt’s internal logic.",
+  "usage": {
+    "completion_tokens": 1775,
+    "prompt_tokens": 3789,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 5564
+  }
+}

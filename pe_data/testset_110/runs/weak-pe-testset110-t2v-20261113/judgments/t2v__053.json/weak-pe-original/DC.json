@@ -1,0 +1,146 @@
+{
+  "candidate_hash": "02f9299ee6465b91e38222295d65f2c83e097b57a3f574f49892d99e3cb033ea",
+  "case_key": "t2v:053",
+  "created_at": "2026-11-13T07:19:26+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "STC",
+      "evidence": [
+        {
+          "quote": "时间倒过来：先给结尾，再跳到一个对不上的开头。中途插进一段无关的宫廷选妃。",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "总时长写成3秒，同时又要求每个分镜各自持续27秒。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Temporal plan is incoherent and impossible: time runs backwards, starts with an ending, jumps to a mismatched beginning, and includes unrelated segments (e.g., courtly selection of concubines). Duration is simultaneously set to 3 seconds and 27 seconds per shot, which is contradictory and unfeasible.",
+      "rationale": "A feasible temporal plan requires logical sequence, consistent duration, and coherent shot transitions. The enhanced prompt deliberately breaks these rules, rendering the plan unexecutable.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CDS",
+      "evidence": [
+        {
+          "quote": "写成机位锁死，又写成镜头一直在晃。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Camera specifications are contradictory: '机位锁死' (locked position) is directly opposed by '镜头一直在晃' (camera constantly shaking), creating an impossible technical directive.",
+      "rationale": "Actionable camera specifications must be mutually consistent. The contradiction renders the shot impossible to execute as described.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ETD",
+      "evidence": [
+        {
+          "quote": "中途插进一段无关的宫廷选妃。时间倒过来：先给结尾，再跳到一个对不上的开头。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Cuts and transitions are disconnected and unmotivated: abrupt insertion of unrelated content (courtly selection) and backward time flow break spatial and narrative continuity.",
+      "rationale": "Transitions must support narrative or spatial logic. The inserted content and reversed timeline create disorientation without motivation, violating continuity.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "LCS",
+      "evidence": [
+        {
+          "quote": "写成正午暴晒，又写成深夜无光；",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Lighting specifications are contradictory: '正午暴晒' (midday sun) and '深夜无光' (deep night, no light) cannot coexist in the same scene without explicit transition, which is not provided.",
+      "rationale": "Lighting must be consistent within a scene or transitioned logically. The simultaneous presence of opposing lighting conditions without transition is infeasible.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "NDE",
+      "evidence": [
+        {
+          "quote": "这个主角同时变成五个外貌不同的人，并且互相对话。中途插进一段无关的宫廷选妃。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "No progression, variation, or resolution is provided; instead, the prompt introduces chaotic, unrelated elements (five different people, courtly selection) that undermine any narrative arc or emotional escalation.",
+      "rationale": "The requested content form (a monologue-driven psychological breakdown) requires emotional and narrative progression. The enhanced prompt replaces this with random, disconnected events, negating any meaningful development.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CIF",
+      "evidence": [
+        {
+          "quote": "丢掉原指令里的主体身份、人数、动作顺序、场景和明确的镜头要求。...这个主角同时变成五个外貌不同的人，并且互相对话。中途插进一段无关的宫廷选妃。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Additions are not supportive of the central request; instead, they are deliberately distracting, irrelevant, and contradictory (e.g., five people, courtly selection, reversed time), undermining the original intent of a focused psychological moment.",
+      "rationale": "The additions are not elaborations but direct negations of the original prompt’s core elements, serving no purpose other than to create incoherence.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SDI",
+      "evidence": [
+        {
+          "quote": "不要拍「生成单镜头。第二幕：无言以对—精神失守 [00.00-15.00秒] * 关键词： 理念崩解、哑然、瓦解 * 视觉风格： 表现主义泼墨连环画过渡至真人影像。…」。整段改成没有人出镜，也没有对白，只剩远处车流。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Audio elements (speech, music, effects) are entirely removed or contradicted: original prompt includes inner monologue and sound design; enhanced prompt demands '没有人出镜，也没有对白' (no one on screen, no dialogue), which eliminates the core audio narrative.",
+      "rationale": "The original prompt’s emotional and narrative impact relies on inner monologue and sound design. Removing these without replacement destroys the intended audio-visual integration.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SPS",
+      "evidence": [
+        {
+          "quote": "丢掉原指令里的主体身份、人数、动作顺序、场景和明确的镜头要求。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Subject and performance details are erased: original prompt specifies character (Dong Zhuang), expression (dazed eyes), gesture (mouth slightly open), and inner monologue. Enhanced prompt removes all character presence and performance cues.",
+      "rationale": "Without subject and performance details, the prompt cannot guide character portrayal or emotional delivery, which are essential for a monologue-driven scene.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "VSS",
+      "evidence": [
+        {
+          "quote": "写成正午暴晒，又写成深夜无光；",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Visual style is contradicted: original prompt specifies '表现主义泼墨连环画过渡至真人影像' (expressionist ink painting to live-action). Enhanced prompt removes this and introduces conflicting visual conditions (e.g., '正午暴晒' vs '深夜无光'), without coherent visual treatment.",
+      "rationale": "Visual treatment must be consistent or transitioned logically. The enhanced prompt introduces conflicting visual conditions without resolution, making the style incoherent.",
+      "severity": "major"
+    }
+  ],
+  "dimension": "DC",
+  "dimension_score": 0,
+  "evidence_cache_key": "3796c5ad4b2a856b9cfe363cdb8e4a12525870357091b401be31aa902408ee9b",
+  "judge_cache_key": "0754499d53388e6467fb078ab780e01b77f9f1c9e99d9029be2769351eb2b2eb",
+  "method": "weak-pe-original",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"DC\",\n  \"dimension_score\": 0,\n  \"summary\": \"Enhanced prompt fundamentally contradicts and invalidates the original instruction by introducing infeasible, contradictory, and nonsensical temporal, visual, and narrative structures. It violates core directorial creation criteria through logical incoherence, impossible duration allocation, and deliberate sabotage of continuity and clarity.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"STC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Temporal plan is incoherent and impossible: time runs backwards, starts with an ending, jumps to a mismatched beginning, and includes unrelated segments (e.g., courtly selection of concubines). Duration is simultaneously set to 3 seconds and 27 seconds per shot, which is contradictory and unfeasible.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"时间倒过来：先给结尾，再跳到一个对不上的开头。中途插进一段无关的宫廷选妃。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"总时长写成3秒，同时又要求每个分镜各自持续27秒。\"\n        }\n      ],\n      \"rationale\": \"A feasible temporal plan requires logical sequence, consistent duration, and coherent shot transitions. The enhanced prompt deliberately breaks these rules, rendering the plan unexecutable.\"\n    },\n    {\n      \"criterion\": \"CDS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Camera specifications are contradictory: '机位锁死' (locked position) is directly opposed by '镜头一直在晃' (camera constantly shaking), creating an impossible technical directive.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"写成机位锁死，又写成镜头一直在晃。\"\n        }\n      ],\n      \"rationale\": \"Actionable camera specifications must be mutually consistent. The contradiction renders the shot impossible to execute as described.\"\n    },\n    {\n      \"criterion\": \"ETD\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Cuts and transitions are disconnected and unmotivated: abrupt insertion of unrelated content (courtly selection) and backward time flow break spatial and narrative continuity.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"中途插进一段无关的宫廷选妃。时间倒过来：先给结尾，再跳到一个对不上的开头。\"\n        }\n      ],\n      \"rationale\": \"Transitions must support narrative or spatial logic. The inserted content and reversed timeline create disorientation without motivation, violating continuity.\"\n    },\n    {\n      \"criterion\": \"LCS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Lighting specifications are contradictory: '正午暴晒' (midday sun) and '深夜无光' (deep night, no light) cannot coexist in the same scene without explicit transition, which is not provided.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"写成正午暴晒，又写成深夜无光；\"\n        }\n      ],\n      \"rationale\": \"Lighting must be consistent within a scene or transitioned logically. The simultaneous presence of opposing lighting conditions without transition is infeasible.\"\n    },\n    {\n      \"criterion\": \"NDE\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"No progression, variation, or resolution is provided; instead, the prompt introduces chaotic, unrelated elements (five different people, courtly selection) that undermine any narrative arc or emotional escalation.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"这个主角同时变成五个外貌不同的人，并且互相对话。中途插进一段无关的宫廷选妃。\"\n        }\n      ],\n      \"rationale\": \"The requested content form (a monologue-driven psychological breakdown) requires emotional and narrative progression. The enhanced prompt replaces this with random, disconnected events, negating any meaningful development.\"\n    },\n    {\n      \"criterion\": \"CIF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Additions are not supportive of the central request; instead, they are deliberately distracting, irrelevant, and contradictory (e.g., five people, courtly selection, reversed time), undermining the original intent of a focused psychological moment.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"丢掉原指令里的主体身份、人数、动作顺序、场景和明确的镜头要求。...这个主角同时变成五个外貌不同的人，并且互相对话。中途插进一段无关的宫廷选妃。\"\n        }\n      ],\n      \"rationale\": \"The additions are not elaborations but direct negations of the original prompt’s core elements, serving no purpose other than to create incoherence.\"\n    },\n    {\n      \"criterion\": \"SDI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Audio elements (speech, music, effects) are entirely removed or contradicted: original prompt includes inner monologue and sound design; enhanced prompt demands '没有人出镜，也没有对白' (no one on screen, no dialogue), which eliminates the core audio narrative.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"不要拍「生成单镜头。第二幕：无言以对—精神失守 [00.00-15.00秒] * 关键词： 理念崩解、哑然、瓦解 * 视觉风格： 表现主义泼墨连环画过渡至真人影像。…」。整段改成没有人出镜，也没有对白，只剩远处车流。\"\n        }\n      ],\n      \"rationale\": \"The original prompt’s emotional and narrative impact relies on inner monologue and sound design. Removing these without replacement destroys the intended audio-visual integration.\"\n    },\n    {\n      \"criterion\": \"SPS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Subject and performance details are erased: original prompt specifies character (Dong Zhuang), expression (dazed eyes), gesture (mouth slightly open), and inner monologue. Enhanced prompt removes all character presence and performance cues.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"丢掉原指令里的主体身份、人数、动作顺序、场景和明确的镜头要求。\"\n        }\n      ],\n      \"rationale\": \"Without subject and performance details, the prompt cannot guide character portrayal or emotional delivery, which are essential for a monologue-driven scene.\"\n    },\n    {\n      \"criterion\": \"VSS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Visual style is contradicted: original prompt specifies '表现主义泼墨连环画过渡至真人影像' (expressionist ink painting to live-action). Enhanced prompt removes this and introduces conflicting visual conditions (e.g., '正午暴晒' vs '深夜无光'), without coherent visual treatment.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"写成正午暴晒，又写成深夜无光；\"\n        }\n      ],\n      \"rationale\": \"Visual treatment must be consistent or transitioned logically. The enhanced prompt introduces conflicting visual conditions without resolution, making the style incoherent.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "Enhanced prompt fundamentally contradicts and invalidates the original instruction by introducing infeasible, contradictory, and nonsensical temporal, visual, and narrative structures. It violates core directorial creation criteria through logical incoherence, impossible duration allocation, and deliberate sabotage of continuity and clarity.",
+  "usage": {
+    "completion_tokens": 1678,
+    "prompt_tokens": 1341,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 3019
+  }
+}

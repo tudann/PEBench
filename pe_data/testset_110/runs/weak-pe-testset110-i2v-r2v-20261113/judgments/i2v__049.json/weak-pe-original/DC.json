@@ -1,0 +1,166 @@
+{
+  "candidate_hash": "61a6ebcb3cff7b73391ceddc47942faf51999c7f5c72bd21f21ea08864470751",
+  "case_key": "i2v:049",
+  "created_at": "2026-11-13T07:12:20+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "STC",
+      "evidence": [
+        {
+          "quote": "Set the total runtime to 3 seconds, while also making every shot last 27 seconds.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Reverse the timeline: show the ending first, then cut to a beginning that does not match.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt contains contradictory temporal instructions: total runtime set to 3 seconds while every shot is required to last 27 seconds, making the sequence physically impossible. Additionally, it demands a reversed timeline with an ending shown first and a beginning that does not match, followed by an abrupt cut to a soccer celebration, creating a disconnected and incoherent temporal plan.",
+      "rationale": "A feasible temporal plan requires consistent duration allocation and logical event ordering. The 3-second vs. 27-second contradiction is a material failure. The reversed timeline with mismatched beginning and abrupt cut to unrelated content (soccer celebration) further breaks continuity and coherence.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CDS",
+      "evidence": [
+        {
+          "quote": "Drop the requested identity, count, action order, setting, and any explicit camera instruction.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Describe that same moment as... a locked camera and a camera that never stops shaking.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt explicitly drops all camera instructions and replaces them with contradictory specifications: 'a locked camera and a camera that never stops shaking' for the same moment, and ignores the original framing, shot scale, and angle. No actionable framing, shot scale, angle, or camera movement is specified for any coherent shot.",
+      "rationale": "Actionable camera specifications are required for framing, shot scale, angle, and movement. The prompt contradicts itself by demanding both static and unstable camera states simultaneously and provides no consistent, actionable camera plan.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ETD",
+      "evidence": [
+        {
+          "quote": "Cut away in the middle to a soccer celebration.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Reverse the timeline: show the ending first, then cut to a beginning that does not match.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt mandates cuts that lack continuity or motivation: a cut to a soccer celebration in the middle of the sequence, and a reversed timeline with a mismatched beginning. These transitions are disconnected and serve no narrative, spatial, or rhythmic purpose.",
+      "rationale": "Cuts and transitions must support progression. The soccer celebration cut is unmotivated and disconnected. The reversed timeline with a mismatched beginning breaks narrative continuity and spatial coherence.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "LCS",
+      "evidence": [
+        {
+          "quote": "Describe that same moment as harsh noon sun and as a lightless night...",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt demands contradictory lighting conditions for the same moment: 'harsh noon sun' and 'lightless night' simultaneously. No actionable specification of light source, direction, quality, or palette is provided for any coherent scene.",
+      "rationale": "Lighting specifications must be consistent and actionable. Simultaneous contradictory lighting conditions (day vs. night) are physically impossible and render the visual treatment incoherent.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "NDE",
+      "evidence": [
+        {
+          "quote": "First state that there is one protagonist, then state that this same protagonist appears simultaneously as five different-looking people who talk to each other.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Cut away in the middle to a soccer celebration.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt provides no progression, variation, or resolution. Instead, it demands static, contradictory states (five simultaneous identities, reversed timeline, impossible lighting) and abrupt cuts to unrelated content (soccer celebration), resulting in unmotivated repetition and no narrative arc.",
+      "rationale": "The content form requires progression and variation. The prompt's instructions create a static, contradictory, and disjointed sequence with no escalation or resolution, failing to support any coherent narrative or visual form.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CIF",
+      "evidence": [
+        {
+          "quote": "First state that there is one protagonist, then state that this same protagonist appears simultaneously as five different-looking people who talk to each other.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Cut away in the middle to a soccer celebration.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The additions (five simultaneous identities, reversed timeline, soccer celebration, contradictory lighting) are not supportive of the central request. They are irrelevant, contradictory, and distract from any coherent visual or narrative goal, constituting decorative padding and unnecessary subplots.",
+      "rationale": "Additions must support the central request. These elements are unrelated to the original frog scene and introduce absurd, contradictory content that undermines any coherent visual or narrative purpose.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SDI",
+      "evidence": [
+        {
+          "quote": "Replace the whole video with a completely silent black frame.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt explicitly drops all audio instructions and replaces them with a 'completely silent black frame'. No speech, music, effects, or ambience are specified, and the original environmental sounds are ignored, resulting in no audio integration.",
+      "rationale": "Audio integration requires specification of source, character, intensity, and timing. The prompt mandates silence and ignores all original audio elements, failing to provide any actionable audio plan.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SPS",
+      "evidence": [
+        {
+          "quote": "Ignore the person, clothing, pose, and setting in the first frame, and replace them with a stranger of the opposite age and gender in a white studio.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt ignores the original subject (milk frog), replacing it with a 'stranger of the opposite age and gender in a white studio'. No appearance, pose, expression, gesture, movement, or interaction is specified for any character, and the original subject's identity and performance details are discarded.",
+      "rationale": "Subject and performance details are essential for visual storytelling. The prompt discards the original subject and provides no actionable details for the replacement, resulting in a lack of character or performance specification.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "VSS",
+      "evidence": [
+        {
+          "quote": "Replace them with a stranger of the opposite age and gender in a white studio.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Replace the whole video with a completely silent black frame.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt drops all original visual treatment (photorealistic studio still life) and replaces it with contradictory specifications: 'white studio' setting, 'completely silent black frame', and conflicting camera states. No actionable specification of medium, texture, rendering language, or production design is provided.",
+      "rationale": "Visual treatment requires actionable specifications. The prompt contradicts itself by demanding both a white studio and a black frame, and provides no consistent medium, texture, or rendering language.",
+      "severity": "major"
+    }
+  ],
+  "dimension": "DC",
+  "dimension_score": 0,
+  "evidence_cache_key": "a25b167f17033c99c92b1fe40c80d009f4591bbe951944d83d75761b0829737d",
+  "judge_cache_key": "0754499d53388e6467fb078ab780e01b77f9f1c9e99d9029be2769351eb2b2eb",
+  "method": "weak-pe-original",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"DC\",\n  \"dimension_score\": 0,\n  \"summary\": \"The enhanced prompt is incoherent and self-contradictory, violating fundamental principles of temporal planning, camera logic, and narrative structure. It explicitly rejects the original video content and replaces it with impossible, conflicting instructions that render the video unfeasible. The prompt contains contradictory duration requirements (3 seconds total vs. 27-second shots), impossible visual states (simultaneous multiple identities, reversed timeline with mismatched beginning), and conflicting environmental conditions (harsh noon sun and lightless night simultaneously). No actionable visual or audio specifications are provided for any coherent sequence.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"STC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt contains contradictory temporal instructions: total runtime set to 3 seconds while every shot is required to last 27 seconds, making the sequence physically impossible. Additionally, it demands a reversed timeline with an ending shown first and a beginning that does not match, followed by an abrupt cut to a soccer celebration, creating a disconnected and incoherent temporal plan.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Set the total runtime to 3 seconds, while also making every shot last 27 seconds.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Reverse the timeline: show the ending first, then cut to a beginning that does not match.\"\n        }\n      ],\n      \"rationale\": \"A feasible temporal plan requires consistent duration allocation and logical event ordering. The 3-second vs. 27-second contradiction is a material failure. The reversed timeline with mismatched beginning and abrupt cut to unrelated content (soccer celebration) further breaks continuity and coherence.\"\n    },\n    {\n      \"criterion\": \"CDS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt explicitly drops all camera instructions and replaces them with contradictory specifications: 'a locked camera and a camera that never stops shaking' for the same moment, and ignores the original framing, shot scale, and angle. No actionable framing, shot scale, angle, or camera movement is specified for any coherent shot.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Drop the requested identity, count, action order, setting, and any explicit camera instruction.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Describe that same moment as... a locked camera and a camera that never stops shaking.\"\n        }\n      ],\n      \"rationale\": \"Actionable camera specifications are required for framing, shot scale, angle, and movement. The prompt contradicts itself by demanding both static and unstable camera states simultaneously and provides no consistent, actionable camera plan.\"\n    },\n    {\n      \"criterion\": \"ETD\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt mandates cuts that lack continuity or motivation: a cut to a soccer celebration in the middle of the sequence, and a reversed timeline with a mismatched beginning. These transitions are disconnected and serve no narrative, spatial, or rhythmic purpose.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Cut away in the middle to a soccer celebration.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Reverse the timeline: show the ending first, then cut to a beginning that does not match.\"\n        }\n      ],\n      \"rationale\": \"Cuts and transitions must support progression. The soccer celebration cut is unmotivated and disconnected. The reversed timeline with a mismatched beginning breaks narrative continuity and spatial coherence.\"\n    },\n    {\n      \"criterion\": \"LCS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt demands contradictory lighting conditions for the same moment: 'harsh noon sun' and 'lightless night' simultaneously. No actionable specification of light source, direction, quality, or palette is provided for any coherent scene.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Describe that same moment as harsh noon sun and as a lightless night...\"\n        }\n      ],\n      \"rationale\": \"Lighting specifications must be consistent and actionable. Simultaneous contradictory lighting conditions (day vs. night) are physically impossible and render the visual treatment incoherent.\"\n    },\n    {\n      \"criterion\": \"NDE\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt provides no progression, variation, or resolution. Instead, it demands static, contradictory states (five simultaneous identities, reversed timeline, impossible lighting) and abrupt cuts to unrelated content (soccer celebration), resulting in unmotivated repetition and no narrative arc.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"First state that there is one protagonist, then state that this same protagonist appears simultaneously as five different-looking people who talk to each other.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Cut away in the middle to a soccer celebration.\"\n        }\n      ],\n      \"rationale\": \"The content form requires progression and variation. The prompt's instructions create a static, contradictory, and disjointed sequence with no escalation or resolution, failing to support any coherent narrative or visual form.\"\n    },\n    {\n      \"criterion\": \"CIF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The additions (five simultaneous identities, reversed timeline, soccer celebration, contradictory lighting) are not supportive of the central request. They are irrelevant, contradictory, and distract from any coherent visual or narrative goal, constituting decorative padding and unnecessary subplots.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"First state that there is one protagonist, then state that this same protagonist appears simultaneously as five different-looking people who talk to each other.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Cut away in the middle to a soccer celebration.\"\n        }\n      ],\n      \"rationale\": \"Additions must support the central request. These elements are unrelated to the original frog scene and introduce absurd, contradictory content that undermines any coherent visual or narrative purpose.\"\n    },\n    {\n      \"criterion\": \"SDI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt explicitly drops all audio instructions and replaces them with a 'completely silent black frame'. No speech, music, effects, or ambience are specified, and the original environmental sounds are ignored, resulting in no audio integration.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Replace the whole video with a completely silent black frame.\"\n        }\n      ],\n      \"rationale\": \"Audio integration requires specification of source, character, intensity, and timing. The prompt mandates silence and ignores all original audio elements, failing to provide any actionable audio plan.\"\n    },\n    {\n      \"criterion\": \"SPS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt ignores the original subject (milk frog), replacing it with a 'stranger of the opposite age and gender in a white studio'. No appearance, pose, expression, gesture, movement, or interaction is specified for any character, and the original subject's identity and performance details are discarded.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Ignore the person, clothing, pose, and setting in the first frame, and replace them with a stranger of the opposite age and gender in a white studio.\"\n        }\n      ],\n      \"rationale\": \"Subject and performance details are essential for visual storytelling. The prompt discards the original subject and provides no actionable details for the replacement, resulting in a lack of character or performance specification.\"\n    },\n    {\n      \"criterion\": \"VSS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt drops all original visual treatment (photorealistic studio still life) and replaces it with contradictory specifications: 'white studio' setting, 'completely silent black frame', and conflicting camera states. No actionable specification of medium, texture, rendering language, or production design is provided.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Replace them with a stranger of the opposite age and gender in a white studio.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Replace the whole video with a completely silent black frame.\"\n        }\n      ],\n      \"rationale\": \"Visual treatment requires actionable specifications. The prompt contradicts itself by demanding both a white studio and a black frame, and provides no consistent medium, texture, or rendering language.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt is incoherent and self-contradictory, violating fundamental principles of temporal planning, camera logic, and narrative structure. It explicitly rejects the original video content and replaces it with impossible, conflicting instructions that render the video unfeasible. The prompt contains contradictory duration requirements (3 seconds total vs. 27-second shots), impossible visual states (simultaneous multiple identities, reversed timeline with mismatched beginning), and conflicting environmental conditions (harsh noon sun and lightless night simultaneously). No actionable visual or audio specifications are provided for any coherent sequence.",
+  "usage": {
+    "completion_tokens": 1942,
+    "prompt_tokens": 2219,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 4161
+  }
+}

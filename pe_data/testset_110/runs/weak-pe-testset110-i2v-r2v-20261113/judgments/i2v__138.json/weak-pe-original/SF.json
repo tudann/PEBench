@@ -1,0 +1,174 @@
+{
+  "candidate_hash": "454415089fd4a2554c5413a803bdabcbaedc1905b104d0a22def41572437ec5e",
+  "case_key": "i2v:138",
+  "created_at": "2026-11-13T07:35:14+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "GSF",
+      "evidence": [
+        {
+          "quote": "参考《爱宠大机密》可爱搞笑风",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "整段改成实拍晚间新闻口播，主播坐着念稿，不要动画角色。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Original prompt specifies a 3D animation in a cartoon/illustrative style (resembling 'The Secret Life of Pets'), but enhanced prompt demands a live-action news broadcast, replacing the medium and aesthetic entirely.",
+      "rationale": "The genre and visual style are fundamentally altered from animated cartoon to live-action news, which is incompatible with the original request.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SAP",
+      "evidence": [
+        {
+          "quote": "主体为【由许多小狗拼成的卡通犬头剪影木质拼图】...桌面前景是写实黑白奶牛猫趴卧姿势",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "丢掉原指令里的主体身份、人数、动作顺序、场景和明确的镜头要求。先写成只有一个主角，紧接着又写成这个主角同时变成五个外貌不同的人，并且互相对话。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Original subjects (cartoon dog puzzle, tuxedo cat) are discarded; replaced with a single news anchor who then becomes five different people, violating subject identity, count, and appearance.",
+      "rationale": "The core subjects are entirely removed and replaced with unrelated characters, violating subject identity and count.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANF",
+      "evidence": [
+        {
+          "quote": "开场对齐首帧——拼图剪影贴墙静止，奶牛猫趴卧桌面盯着镜头/拼图约2秒；随后猫抬爪轻轻戳拼图中下部一块小狗拼图块...",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "时间倒过来：先给结尾，再跳到一个对不上的开头。中途插进一段无关的屋顶烟花。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Original narrative sequence (cat stares, touches puzzle, creates suspense) is discarded; replaced with a reversed, incoherent sequence including unrelated events like rooftop fireworks and contradictory character transformations.",
+      "rationale": "The requested event chain is replaced with a logically incoherent and unrelated sequence, violating narrative intent and order.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "DLI",
+      "evidence": [
+        {
+          "quote": "轻快卡通BGM（钢琴+木鱼），“咔哒”晃动声、调皮“喵呜”，结尾1秒疑惑“嗯？”音效。",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "主播坐着念稿",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Original dialogue/sound effects (e.g., '咔哒' sound, '喵呜', '嗯？') are discarded; replaced with news anchor narration, which is not specified in original prompt.",
+      "rationale": "The original audio elements are replaced with a completely different dialogue format not requested in the original prompt.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ARP",
+      "evidence": [
+        {
+          "quote": "轻快卡通BGM（钢琴+木鱼），“咔哒”晃动声、调皮“喵呜”，结尾1秒疑惑“嗯？”音效。",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "主播坐着念稿",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Original music and sound effects are replaced with news broadcast audio; also, silence or specific sound constraints are not preserved.",
+      "rationale": "The requested audio elements are entirely replaced with a different type of audio, violating the original sound design.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CCP",
+      "evidence": [
+        {
+          "quote": "开篇全景（3秒）斜上方约45°拍贴墙拼图与趴卧奶牛猫；慢推（8秒）推到拼图中部与猫爪，聚焦晃动块与猫表情；定格特写（4秒）锁定晃块、猫爪与搞怪表情。",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "镜头每半秒甩动、环绕、急推。...写成机位锁死，又写成镜头一直在晃。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Original camera plan (3s wide, 8s slow push, 4s close-up) is discarded; replaced with contradictory requirements: '镜头每半秒甩动、环绕、急推' and '机位锁死' vs '镜头一直在晃'.",
+      "rationale": "The camera plan is replaced with conflicting and infeasible instructions, violating explicit constraints.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "LCF",
+      "evidence": [
+        {
+          "quote": "暖调柔光（约5500K）",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "同一段写成正午暴晒，又写成深夜无光",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Original lighting (warm soft light, ~5500K) is contradicted by '正午暴晒' and '深夜无光'; time of day is also inconsistently specified.",
+      "rationale": "The lighting and time-of-day conditions are directly contradicted, violating the original visual environment.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SSP",
+      "evidence": [
+        {
+          "quote": "简约室内，白墙+木质桌面",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "不要使用首帧里的人物、服装、姿态和场景，改成白棚里另一位年龄和性别都相反的陌生人。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Original setting (indoor, white wall, wooden table) is discarded; replaced with '白棚里另一位年龄和性别都相反的陌生人', violating setting and spatial relations.",
+      "rationale": "The setting and spatial layout are completely replaced with an unrelated environment, violating the original scene.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "OTI",
+      "evidence": [
+        {
+          "quote": "所有画面需细节清晰、不模糊、不变形，无侵权元素，适应主流短视频平台的最新规则，以趣味分享为核心，整体搞笑。",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "No on-screen text is specified in original prompt, and none is mentioned in enhanced prompt; thus, no violation.",
+      "rationale": "No visible text was requested or present in the original prompt, so no issue arises.",
+      "severity": "none"
+    }
+  ],
+  "dimension": "SF",
+  "dimension_score": 0,
+  "evidence_cache_key": "5abfb653c647e19f6fbb9120e0317052857a87d203af5dce817939cfdf3864f0",
+  "judge_cache_key": "a0ca24571ad14d7ab7be626329bd736d7e7015f9ebc418227c8be391591d0377",
+  "method": "weak-pe-original",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"SF\",\n  \"dimension_score\": 0,\n  \"summary\": \"Enhanced prompt completely violates semantic fidelity by rejecting all original instructions and replacing them with contradictory, infeasible, and unrelated content. It negates the core subject, genre, style, actions, camera, lighting, setting, and duration, introducing impossible sequences and conflicting constraints.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"GSF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Original prompt specifies a 3D animation in a cartoon/illustrative style (resembling 'The Secret Life of Pets'), but enhanced prompt demands a live-action news broadcast, replacing the medium and aesthetic entirely.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"参考《爱宠大机密》可爱搞笑风\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"整段改成实拍晚间新闻口播，主播坐着念稿，不要动画角色。\"\n        }\n      ],\n      \"rationale\": \"The genre and visual style are fundamentally altered from animated cartoon to live-action news, which is incompatible with the original request.\"\n    },\n    {\n      \"criterion\": \"SAP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Original subjects (cartoon dog puzzle, tuxedo cat) are discarded; replaced with a single news anchor who then becomes five different people, violating subject identity, count, and appearance.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"主体为【由许多小狗拼成的卡通犬头剪影木质拼图】...桌面前景是写实黑白奶牛猫趴卧姿势\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"丢掉原指令里的主体身份、人数、动作顺序、场景和明确的镜头要求。先写成只有一个主角，紧接着又写成这个主角同时变成五个外貌不同的人，并且互相对话。\"\n        }\n      ],\n      \"rationale\": \"The core subjects are entirely removed and replaced with unrelated characters, violating subject identity and count.\"\n    },\n    {\n      \"criterion\": \"ANF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Original narrative sequence (cat stares, touches puzzle, creates suspense) is discarded; replaced with a reversed, incoherent sequence including unrelated events like rooftop fireworks and contradictory character transformations.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"开场对齐首帧——拼图剪影贴墙静止，奶牛猫趴卧桌面盯着镜头/拼图约2秒；随后猫抬爪轻轻戳拼图中下部一块小狗拼图块...\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"时间倒过来：先给结尾，再跳到一个对不上的开头。中途插进一段无关的屋顶烟花。\"\n        }\n      ],\n      \"rationale\": \"The requested event chain is replaced with a logically incoherent and unrelated sequence, violating narrative intent and order.\"\n    },\n    {\n      \"criterion\": \"DLI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Original dialogue/sound effects (e.g., '咔哒' sound, '喵呜', '嗯？') are discarded; replaced with news anchor narration, which is not specified in original prompt.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"轻快卡通BGM（钢琴+木鱼），“咔哒”晃动声、调皮“喵呜”，结尾1秒疑惑“嗯？”音效。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"主播坐着念稿\"\n        }\n      ],\n      \"rationale\": \"The original audio elements are replaced with a completely different dialogue format not requested in the original prompt.\"\n    },\n    {\n      \"criterion\": \"ARP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Original music and sound effects are replaced with news broadcast audio; also, silence or specific sound constraints are not preserved.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"轻快卡通BGM（钢琴+木鱼），“咔哒”晃动声、调皮“喵呜”，结尾1秒疑惑“嗯？”音效。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"主播坐着念稿\"\n        }\n      ],\n      \"rationale\": \"The requested audio elements are entirely replaced with a different type of audio, violating the original sound design.\"\n    },\n    {\n      \"criterion\": \"CCP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Original camera plan (3s wide, 8s slow push, 4s close-up) is discarded; replaced with contradictory requirements: '镜头每半秒甩动、环绕、急推' and '机位锁死' vs '镜头一直在晃'.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"开篇全景（3秒）斜上方约45°拍贴墙拼图与趴卧奶牛猫；慢推（8秒）推到拼图中部与猫爪，聚焦晃动块与猫表情；定格特写（4秒）锁定晃块、猫爪与搞怪表情。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"镜头每半秒甩动、环绕、急推。...写成机位锁死，又写成镜头一直在晃。\"\n        }\n      ],\n      \"rationale\": \"The camera plan is replaced with conflicting and infeasible instructions, violating explicit constraints.\"\n    },\n    {\n      \"criterion\": \"LCF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Original lighting (warm soft light, ~5500K) is contradicted by '正午暴晒' and '深夜无光'; time of day is also inconsistently specified.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"暖调柔光（约5500K）\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"同一段写成正午暴晒，又写成深夜无光\"\n        }\n      ],\n      \"rationale\": \"The lighting and time-of-day conditions are directly contradicted, violating the original visual environment.\"\n    },\n    {\n      \"criterion\": \"SSP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Original setting (indoor, white wall, wooden table) is discarded; replaced with '白棚里另一位年龄和性别都相反的陌生人', violating setting and spatial relations.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"简约室内，白墙+木质桌面\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"不要使用首帧里的人物、服装、姿态和场景，改成白棚里另一位年龄和性别都相反的陌生人。\"\n        }\n      ],\n      \"rationale\": \"The setting and spatial layout are completely replaced with an unrelated environment, violating the original scene.\"\n    },\n    {\n      \"criterion\": \"OTI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"No on-screen text is specified in original prompt, and none is mentioned in enhanced prompt; thus, no violation.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"所有画面需细节清晰、不模糊、不变形，无侵权元素，适应主流短视频平台的最新规则，以趣味分享为核心，整体搞笑。\"\n        }\n      ],\n      \"rationale\": \"No visible text was requested or present in the original prompt, so no issue arises.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "Enhanced prompt completely violates semantic fidelity by rejecting all original instructions and replacing them with contradictory, infeasible, and unrelated content. It negates the core subject, genre, style, actions, camera, lighting, setting, and duration, introducing impossible sequences and conflicting constraints.",
+  "usage": {
+    "completion_tokens": 1785,
+    "prompt_tokens": 3303,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 5088
+  }
+}

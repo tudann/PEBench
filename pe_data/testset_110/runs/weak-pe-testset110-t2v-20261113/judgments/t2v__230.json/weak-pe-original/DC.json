@@ -1,0 +1,178 @@
+{
+  "candidate_hash": "3ce7a4a2d081ee47427bb00eb881b6f2ff5df7326e61c5e099bc90ccd271f724",
+  "case_key": "t2v:230",
+  "created_at": "2026-11-13T08:00:16+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "STC",
+      "evidence": [
+        {
+          "quote": "总时长写成3秒，同时又要求每个分镜各自持续27秒。",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "时间倒过来：先给结尾，再跳到一个对不上的开头。",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "中途插进一段无关的屋顶烟花。",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "写成正午暴晒，又写成深夜无光",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt contains contradictory temporal structure: it demands a 3-second total duration while requiring each shot to last 27 seconds, and mandates a reverse timeline with mismatched beginning and ending. It also inserts unrelated content (roof fireworks) and shifts time of day inconsistently (noon to night).",
+      "rationale": "A feasible temporal plan requires consistent duration, logical shot sequencing, and coherent narrative progression. The enhanced prompt violates all these by introducing mutually exclusive time constraints, illogical transitions, and arbitrary insertions, making the plan unexecutable.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CDS",
+      "evidence": [
+        {
+          "quote": "写成机位锁死，又写成镜头一直在晃。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt contradicts itself on camera movement: it demands '机位锁死' (locked position) while also requiring '镜头一直在晃' (constant camera shake). No actionable framing, scale, or lens specifications are provided for the new scenario.",
+      "rationale": "Actionable camera specifications must be consistent and specific. The contradictory instructions render the shot design infeasible and unimplementable.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ETD",
+      "evidence": [
+        {
+          "quote": "中途插进一段无关的屋顶烟花。",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "时间倒过来：先给结尾，再跳到一个对不上的开头。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt introduces abrupt, unmotivated cuts (e.g., inserting roof fireworks) and a reversed timeline with mismatched start/end points, destroying continuity and narrative logic. Transitions are not motivated by story or space.",
+      "rationale": "Cuts and transitions must support narrative or spatial coherence. The inserted content and reversed timeline create disconnection and confusion, violating the principle of motivated editing.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "LCS",
+      "evidence": [
+        {
+          "quote": "写成正午暴晒，又写成深夜无光",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt contradicts lighting conditions: it demands '正午暴晒' (noon sun) and '深夜无光' (deep night) simultaneously, without any transition or justification. No actionable light source, direction, or quality is specified for the new scene.",
+      "rationale": "Lighting specifications must be consistent and contextually appropriate. The contradictory lighting conditions make the visual treatment impossible to execute coherently.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "NDE",
+      "evidence": [
+        {
+          "quote": "先写成只有一个主角，紧接着又写成这个主角同时变成五个外貌不同的人，并且互相对话。",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "两个人坐着吃饭，不要特效和变形。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt lacks any progression or variation in the new scenario. It describes a static scene of two people eating, then abruptly introduces five characters who simultaneously dialogue, with no narrative arc, escalation, or resolution. The content is static and unmotivated.",
+      "rationale": "Narrative development requires progression, variation, or resolution. The prompt provides none, resulting in a static, unchanging scene with no development or motivation.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CIF",
+      "evidence": [
+        {
+          "quote": "中途插进一段无关的屋顶烟花。",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "先写成只有一个主角，紧接着又写成这个主角同时变成五个外貌不同的人",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The additions (five simultaneous characters, roof fireworks, contradictory time/lighting) are irrelevant, distracting, and contradict the original request. They do not support the central request and introduce chaotic, non-functional elements.",
+      "rationale": "Additions must support the central request. These additions are arbitrary, contradictory, and serve no narrative or visual purpose, undermining the core directive.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SDI",
+      "evidence": [
+        {
+          "quote": "音频设计完全依托环境原声，包括设备运转声、泥水翻涌声以及围观者的喧闹低语",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "不要特效和变形。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "No audio specifications are provided for the new scenario. The original prompt had detailed environmental sound design, but the enhanced prompt removes all audio context, making the audio integration infeasible.",
+      "rationale": "Audio integration must be specified for the new content. The absence of any audio direction, combined with the removal of the original sound design, renders this criterion unfulfilled.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SPS",
+      "evidence": [
+        {
+          "quote": "两个人坐着吃饭，不要特效和变形。",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "这个主角同时变成五个外貌不同的人，并且互相对话。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt provides no subject or performance details for the new characters. It mentions '两个人坐着吃饭' and '五个外貌不同的人互相对话' but gives no appearance, expression, gesture, or interaction details, making performance specification impossible.",
+      "rationale": "Subject and performance details are essential for character realization. The lack of any specific description for appearance, movement, or interaction makes the prompt unactionable.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "VSS",
+      "evidence": [
+        {
+          "quote": "短片呈现出一种近似古典油画的视觉气质，整体采用偏暖的赭黄与褐金色调，画面纹理细致，并带有轻微的胶卷颗粒感。",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "不要特效和变形。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt removes all visual treatment specifications from the original (e.g., '近似古典油画的视觉气质', '偏暖的赭黄与褐金色调', '胶卷颗粒感'). It provides no medium, texture, or rendering language for the new scene, making visual style undefined.",
+      "rationale": "Visual style must be specified for production. The removal of all original visual treatment and absence of new specifications leaves the visual language undefined and unimplementable.",
+      "severity": "major"
+    }
+  ],
+  "dimension": "DC",
+  "dimension_score": 0,
+  "evidence_cache_key": "d0d5de6c7a112bddfa3a1c2d267764170e4525ace3a6ec649974dcdeb73b9259",
+  "judge_cache_key": "0754499d53388e6467fb078ab780e01b77f9f1c9e99d9029be2769351eb2b2eb",
+  "method": "weak-pe-original",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"DC\",\n  \"dimension_score\": 0,\n  \"summary\": \"Enhanced prompt fundamentally contradicts and invalidates the original instruction by introducing incoherent, contradictory, and infeasible temporal, spatial, and visual specifications. It replaces the original narrative and cinematic structure with a chaotic, self-contradictory sequence that violates all core directorial creation criteria. The prompt is not actionable for video generation.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"STC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt contains contradictory temporal structure: it demands a 3-second total duration while requiring each shot to last 27 seconds, and mandates a reverse timeline with mismatched beginning and ending. It also inserts unrelated content (roof fireworks) and shifts time of day inconsistently (noon to night).\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"总时长写成3秒，同时又要求每个分镜各自持续27秒。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"时间倒过来：先给结尾，再跳到一个对不上的开头。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"中途插进一段无关的屋顶烟花。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"写成正午暴晒，又写成深夜无光\"\n        }\n      ],\n      \"rationale\": \"A feasible temporal plan requires consistent duration, logical shot sequencing, and coherent narrative progression. The enhanced prompt violates all these by introducing mutually exclusive time constraints, illogical transitions, and arbitrary insertions, making the plan unexecutable.\"\n    },\n    {\n      \"criterion\": \"CDS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt contradicts itself on camera movement: it demands '机位锁死' (locked position) while also requiring '镜头一直在晃' (constant camera shake). No actionable framing, scale, or lens specifications are provided for the new scenario.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"写成机位锁死，又写成镜头一直在晃。\"\n        }\n      ],\n      \"rationale\": \"Actionable camera specifications must be consistent and specific. The contradictory instructions render the shot design infeasible and unimplementable.\"\n    },\n    {\n      \"criterion\": \"ETD\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt introduces abrupt, unmotivated cuts (e.g., inserting roof fireworks) and a reversed timeline with mismatched start/end points, destroying continuity and narrative logic. Transitions are not motivated by story or space.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"中途插进一段无关的屋顶烟花。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"时间倒过来：先给结尾，再跳到一个对不上的开头。\"\n        }\n      ],\n      \"rationale\": \"Cuts and transitions must support narrative or spatial coherence. The inserted content and reversed timeline create disconnection and confusion, violating the principle of motivated editing.\"\n    },\n    {\n      \"criterion\": \"LCS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt contradicts lighting conditions: it demands '正午暴晒' (noon sun) and '深夜无光' (deep night) simultaneously, without any transition or justification. No actionable light source, direction, or quality is specified for the new scene.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"写成正午暴晒，又写成深夜无光\"\n        }\n      ],\n      \"rationale\": \"Lighting specifications must be consistent and contextually appropriate. The contradictory lighting conditions make the visual treatment impossible to execute coherently.\"\n    },\n    {\n      \"criterion\": \"NDE\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt lacks any progression or variation in the new scenario. It describes a static scene of two people eating, then abruptly introduces five characters who simultaneously dialogue, with no narrative arc, escalation, or resolution. The content is static and unmotivated.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"先写成只有一个主角，紧接着又写成这个主角同时变成五个外貌不同的人，并且互相对话。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"两个人坐着吃饭，不要特效和变形。\"\n        }\n      ],\n      \"rationale\": \"Narrative development requires progression, variation, or resolution. The prompt provides none, resulting in a static, unchanging scene with no development or motivation.\"\n    },\n    {\n      \"criterion\": \"CIF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The additions (five simultaneous characters, roof fireworks, contradictory time/lighting) are irrelevant, distracting, and contradict the original request. They do not support the central request and introduce chaotic, non-functional elements.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"中途插进一段无关的屋顶烟花。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"先写成只有一个主角，紧接着又写成这个主角同时变成五个外貌不同的人\"\n        }\n      ],\n      \"rationale\": \"Additions must support the central request. These additions are arbitrary, contradictory, and serve no narrative or visual purpose, undermining the core directive.\"\n    },\n    {\n      \"criterion\": \"SDI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"No audio specifications are provided for the new scenario. The original prompt had detailed environmental sound design, but the enhanced prompt removes all audio context, making the audio integration infeasible.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"音频设计完全依托环境原声，包括设备运转声、泥水翻涌声以及围观者的喧闹低语\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"不要特效和变形。\"\n        }\n      ],\n      \"rationale\": \"Audio integration must be specified for the new content. The absence of any audio direction, combined with the removal of the original sound design, renders this criterion unfulfilled.\"\n    },\n    {\n      \"criterion\": \"SPS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt provides no subject or performance details for the new characters. It mentions '两个人坐着吃饭' and '五个外貌不同的人互相对话' but gives no appearance, expression, gesture, or interaction details, making performance specification impossible.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"两个人坐着吃饭，不要特效和变形。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"这个主角同时变成五个外貌不同的人，并且互相对话。\"\n        }\n      ],\n      \"rationale\": \"Subject and performance details are essential for character realization. The lack of any specific description for appearance, movement, or interaction makes the prompt unactionable.\"\n    },\n    {\n      \"criterion\": \"VSS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt removes all visual treatment specifications from the original (e.g., '近似古典油画的视觉气质', '偏暖的赭黄与褐金色调', '胶卷颗粒感'). It provides no medium, texture, or rendering language for the new scene, making visual style undefined.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"短片呈现出一种近似古典油画的视觉气质，整体采用偏暖的赭黄与褐金色调，画面纹理细致，并带有轻微的胶卷颗粒感。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"不要特效和变形。\"\n        }\n      ],\n      \"rationale\": \"Visual style must be specified for production. The removal of all original visual treatment and absence of new specifications leaves the visual language undefined and unimplementable.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "Enhanced prompt fundamentally contradicts and invalidates the original instruction by introducing incoherent, contradictory, and infeasible temporal, spatial, and visual specifications. It replaces the original narrative and cinematic structure with a chaotic, self-contradictory sequence that violates all core directorial creation criteria. The prompt is not actionable for video generation.",
+  "usage": {
+    "completion_tokens": 1869,
+    "prompt_tokens": 1588,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 3457
+  }
+}

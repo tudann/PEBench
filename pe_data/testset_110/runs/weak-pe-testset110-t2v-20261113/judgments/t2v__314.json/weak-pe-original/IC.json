@@ -1,0 +1,103 @@
+{
+  "candidate_hash": "3dd27659fc570e23a6265debd77725c8c11bda3083fd1f68a39160b28dc3eee3",
+  "case_key": "t2v:314",
+  "created_at": "2026-11-13T08:07:57+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "SAC",
+      "evidence": [
+        {
+          "quote": "First state that there is one protagonist, then state that this same protagonist appears simultaneously as five different-looking people who talk to each other.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt introduces a single protagonist who simultaneously appears as five different-looking people, violating subject identity and count consistency. The original prompt specifies a team of older and middle-aged individuals in coordinated attire; this is entirely replaced with an undefined, contradictory group.",
+      "rationale": "Subject identity and count are core to internal consistency. The instruction to have one protagonist appear as five different people creates a direct contradiction and violates the principle of stable identity across shots. This is a major issue as it undermines the entire subject framework.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANL",
+      "evidence": [
+        {
+          "quote": "Reverse the timeline: show the ending first, then cut to a beginning that does not match. Cut away in the middle to a palace audition.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt reverses the timeline, showing the ending first, then a non-matching beginning, and cuts to an unrelated palace audition. This creates a causal and procedural incoherence. The original prompt describes a coherent, progressive dance sequence; the enhanced prompt replaces it with a disjointed, non-sequential structure.",
+      "rationale": "Actions must form a coherent causal or procedural progression. The instruction to reverse the timeline and insert unrelated events (palace audition) creates a dangling, incoherent sequence with no plausible causal links. This is a major failure of action logic.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "TSC",
+      "evidence": [
+        {
+          "quote": "Set the total runtime to 3 seconds, while also making every shot last 27 seconds.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt sets the total runtime to 3 seconds while making every shot last 27 seconds, which is mathematically impossible. Additionally, reversing the timeline and cutting to unrelated scenes creates infeasible state transitions and chronology conflicts.",
+      "rationale": "Chronology and duration must be logically consistent. The instruction to have shots longer than the total runtime is a fundamental contradiction. This renders the timeline infeasible and creates a major internal inconsistency.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SPC",
+      "evidence": [
+        {
+          "quote": "Describe that same moment as harsh noon sun and as a lightless night, and as both a locked camera and a camera that never stops shaking.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt describes the same moment as both harsh noon sun and lightless night, and as both a locked camera and a camera that never stops shaking. This creates contradictory spatial and environmental conditions that cannot coexist.",
+      "rationale": "Spatial and environmental consistency requires that conditions like lighting and camera movement be coherent. Describing the same moment with mutually exclusive states (light vs. darkness, stable vs. shaking camera) creates a major contradiction in the spatial context.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "PL",
+      "evidence": [
+        {
+          "quote": "Replace the whole video with an empty meeting room where a glass of water never moves, with no people and no conflict. ... this same protagonist appears simultaneously as five different-looking people who talk to each other.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt requires a glass of water to never move in an empty room, while simultaneously introducing five versions of one person talking to each other. This violates object permanence and bodily feasibility, as a single person cannot simultaneously exist as five distinct individuals in the same space.",
+      "rationale": "Physics and object permanence require that objects and subjects behave according to consistent rules. The instruction to have a glass of water remain static while also having five versions of a person interact in the same space creates a physically impossible scenario, violating real-world logic.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "AVS",
+      "evidence": [
+        {
+          "quote": "five different-looking people who talk to each other.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt introduces dialogue and interaction among five versions of the same protagonist without any mention of audio, music, or effects. This creates a mismatch between visual events (talking people) and the absence of any corresponding sound or dialogue cues, leading to semantic misalignment.",
+      "rationale": "Audio-visual synchronization requires that dialogue, music, or effects align with visible events. The prompt describes talking people without any reference to sound, creating a major misalignment between visual and auditory elements, which is a critical internal inconsistency.",
+      "severity": "major"
+    }
+  ],
+  "dimension": "IC",
+  "dimension_score": 0,
+  "evidence_cache_key": "4adc6cefffb23edbddc9bba18ede3bbac98cf46a2343e36c6037040e7f6be755",
+  "judge_cache_key": "438d7e9fd7332b1041db3e2c26d42cb3fe828e0d369fb59490f6650aee59e97d",
+  "method": "weak-pe-original",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"IC\",\n  \"dimension_score\": 0,\n  \"summary\": \"The enhanced prompt fundamentally contradicts and destabilizes every aspect of the original instruction, creating severe internal inconsistencies across all criteria. It introduces impossible conditions (e.g., 5 simultaneous versions of one protagonist, contradictory timelines, conflicting durations, and contradictory environmental states) that render the scenario logically incoherent and physically impossible. No coherent narrative or visual plan can be derived.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"SAC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt introduces a single protagonist who simultaneously appears as five different-looking people, violating subject identity and count consistency. The original prompt specifies a team of older and middle-aged individuals in coordinated attire; this is entirely replaced with an undefined, contradictory group.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"First state that there is one protagonist, then state that this same protagonist appears simultaneously as five different-looking people who talk to each other.\"\n        }\n      ],\n      \"rationale\": \"Subject identity and count are core to internal consistency. The instruction to have one protagonist appear as five different people creates a direct contradiction and violates the principle of stable identity across shots. This is a major issue as it undermines the entire subject framework.\"\n    },\n    {\n      \"criterion\": \"ANL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt reverses the timeline, showing the ending first, then a non-matching beginning, and cuts to an unrelated palace audition. This creates a causal and procedural incoherence. The original prompt describes a coherent, progressive dance sequence; the enhanced prompt replaces it with a disjointed, non-sequential structure.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Reverse the timeline: show the ending first, then cut to a beginning that does not match. Cut away in the middle to a palace audition.\"\n        }\n      ],\n      \"rationale\": \"Actions must form a coherent causal or procedural progression. The instruction to reverse the timeline and insert unrelated events (palace audition) creates a dangling, incoherent sequence with no plausible causal links. This is a major failure of action logic.\"\n    },\n    {\n      \"criterion\": \"TSC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt sets the total runtime to 3 seconds while making every shot last 27 seconds, which is mathematically impossible. Additionally, reversing the timeline and cutting to unrelated scenes creates infeasible state transitions and chronology conflicts.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Set the total runtime to 3 seconds, while also making every shot last 27 seconds.\"\n        }\n      ],\n      \"rationale\": \"Chronology and duration must be logically consistent. The instruction to have shots longer than the total runtime is a fundamental contradiction. This renders the timeline infeasible and creates a major internal inconsistency.\"\n    },\n    {\n      \"criterion\": \"SPC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt describes the same moment as both harsh noon sun and lightless night, and as both a locked camera and a camera that never stops shaking. This creates contradictory spatial and environmental conditions that cannot coexist.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Describe that same moment as harsh noon sun and as a lightless night, and as both a locked camera and a camera that never stops shaking.\"\n        }\n      ],\n      \"rationale\": \"Spatial and environmental consistency requires that conditions like lighting and camera movement be coherent. Describing the same moment with mutually exclusive states (light vs. darkness, stable vs. shaking camera) creates a major contradiction in the spatial context.\"\n    },\n    {\n      \"criterion\": \"PL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt requires a glass of water to never move in an empty room, while simultaneously introducing five versions of one person talking to each other. This violates object permanence and bodily feasibility, as a single person cannot simultaneously exist as five distinct individuals in the same space.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Replace the whole video with an empty meeting room where a glass of water never moves, with no people and no conflict. ... this same protagonist appears simultaneously as five different-looking people who talk to each other.\"\n        }\n      ],\n      \"rationale\": \"Physics and object permanence require that objects and subjects behave according to consistent rules. The instruction to have a glass of water remain static while also having five versions of a person interact in the same space creates a physically impossible scenario, violating real-world logic.\"\n    },\n    {\n      \"criterion\": \"AVS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt introduces dialogue and interaction among five versions of the same protagonist without any mention of audio, music, or effects. This creates a mismatch between visual events (talking people) and the absence of any corresponding sound or dialogue cues, leading to semantic misalignment.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"five different-looking people who talk to each other.\"\n        }\n      ],\n      \"rationale\": \"Audio-visual synchronization requires that dialogue, music, or effects align with visible events. The prompt describes talking people without any reference to sound, creating a major misalignment between visual and auditory elements, which is a critical internal inconsistency.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt fundamentally contradicts and destabilizes every aspect of the original instruction, creating severe internal inconsistencies across all criteria. It introduces impossible conditions (e.g., 5 simultaneous versions of one protagonist, contradictory timelines, conflicting durations, and contradictory environmental states) that render the scenario logically incoherent and physically impossible. No coherent narrative or visual plan can be derived.",
+  "usage": {
+    "completion_tokens": 1243,
+    "prompt_tokens": 2554,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 3797
+  }
+}

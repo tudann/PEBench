@@ -1,0 +1,127 @@
+{
+  "candidate_hash": "af9f1e6e783b562363eaf57c40486d7bc8c506b035c3cceda492a950702247a1",
+  "case_key": "t2v:187",
+  "created_at": "2026-11-13T08:07:03+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "SAC",
+      "evidence": [
+        {
+          "quote": "Steadicam shot trailing a woman chanting lyrics while sprinting along shattered avenues",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "a Steadicam shot trails closely behind a woman sprinting down a shattered avenue",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "Subject identity (woman), action (sprinting, chanting), and environment (shattered avenue) are preserved. No unexplained changes to appearance, clothing, or props. The woman remains the sole subject of focus throughout.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANL",
+      "evidence": [
+        {
+          "quote": "bystanders scattering in fear, rubble cascading from cracked high-rises",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Terrified bystanders scatter to the sides, diving into doorways and behind abandoned cars as she weaves past them",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "Actions form a coherent causal chain: woman sprints → bystanders scatter → rubble falls → haze billows. The sequence is plausible and logically connected. No dangling or incompatible events.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "TSC",
+      "evidence": [
+        {
+          "quote": "sprinting along shattered avenues, rubble cascading from cracked high-rises, drifting haze billowing in slow motion",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "in the final seconds the haze momentarily swallows her silhouette as she sprints on",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "Chronology is consistent: the woman moves forward through the scene, haze increases, and ends with her silhouette obscured — a natural progression. No timestamp conflicts or state resets.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SPC",
+      "evidence": [
+        {
+          "quote": "Steadicam shot trailing a woman... along shattered avenues",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "The Steadicam keeps a relentless forward trailing motion with subtle handheld-style sway",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "Camera movement is consistent with subject motion — trailing from behind, maintaining relative position. No unexplained position swaps or impossible trajectories. Bystanders' movements are spatially plausible (diving into doorways, behind cars).",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "PL",
+      "evidence": [
+        {
+          "quote": "rubble cascading from cracked high-rises, drifting haze billowing in slow motion",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "chunks of rubble cascade down the facades and crash onto the pavement, kicking up dust around her feet",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "Physics are consistent: rubble falls due to structural failure, dust is kicked up by impact, haze drifts naturally. No violations of gravity, contact, or object permanence. Slow-motion haze is a stylistic choice, not a physical contradiction.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "AVS",
+      "evidence": [
+        {
+          "quote": "woman chanting lyrics",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "her voice raw and urgent (S1), chants lyrics between ragged breaths: <d>[English] Run — the sky is falling down!</d>",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The enhanced prompt adds a vocal line (S1) with lyrics, but the original prompt does not specify dialogue or lyrics. While this is a plausible addition for a music video, it introduces a new element not present in the original instruction.",
+      "rationale": "The original prompt mentions 'chanting lyrics' but does not specify content or speaker designation. The enhanced prompt adds specific lyrics and speaker label (S1), which is a minor elaboration. While not contradictory, it introduces new semantic content not in the original, which may affect alignment if the music video’s audio track is fixed. However, since this is a music video task, such elaboration is contextually acceptable and does not break internal consistency.",
+      "severity": "minor"
+    }
+  ],
+  "dimension": "IC",
+  "dimension_score": 95,
+  "evidence_cache_key": "921c3f1f6dd16a61a1b915bd6daeb591c663fa1e0cf07269c576dc879494ea21",
+  "judge_cache_key": "438d7e9fd7332b1041db3e2c26d42cb3fe828e0d369fb59490f6650aee59e97d",
+  "method": "glm53_20261112_120702",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"IC\",\n  \"dimension_score\": 95,\n  \"summary\": \"The enhanced prompt maintains strong internal consistency with the original instruction, preserving all key visual and auditory elements. Subject identity, actions, environment, and temporal progression are coherent and consistent. Minor elaboration on sound design and camera motion does not introduce contradictions. No major issues detected.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"SAC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"Steadicam shot trailing a woman chanting lyrics while sprinting along shattered avenues\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"a Steadicam shot trails closely behind a woman sprinting down a shattered avenue\"\n        }\n      ],\n      \"rationale\": \"Subject identity (woman), action (sprinting, chanting), and environment (shattered avenue) are preserved. No unexplained changes to appearance, clothing, or props. The woman remains the sole subject of focus throughout.\"\n    },\n    {\n      \"criterion\": \"ANL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"bystanders scattering in fear, rubble cascading from cracked high-rises\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Terrified bystanders scatter to the sides, diving into doorways and behind abandoned cars as she weaves past them\"\n        }\n      ],\n      \"rationale\": \"Actions form a coherent causal chain: woman sprints → bystanders scatter → rubble falls → haze billows. The sequence is plausible and logically connected. No dangling or incompatible events.\"\n    },\n    {\n      \"criterion\": \"TSC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"sprinting along shattered avenues, rubble cascading from cracked high-rises, drifting haze billowing in slow motion\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"in the final seconds the haze momentarily swallows her silhouette as she sprints on\"\n        }\n      ],\n      \"rationale\": \"Chronology is consistent: the woman moves forward through the scene, haze increases, and ends with her silhouette obscured — a natural progression. No timestamp conflicts or state resets.\"\n    },\n    {\n      \"criterion\": \"SPC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"Steadicam shot trailing a woman... along shattered avenues\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"The Steadicam keeps a relentless forward trailing motion with subtle handheld-style sway\"\n        }\n      ],\n      \"rationale\": \"Camera movement is consistent with subject motion — trailing from behind, maintaining relative position. No unexplained position swaps or impossible trajectories. Bystanders' movements are spatially plausible (diving into doorways, behind cars).\"\n    },\n    {\n      \"criterion\": \"PL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"rubble cascading from cracked high-rises, drifting haze billowing in slow motion\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"chunks of rubble cascade down the facades and crash onto the pavement, kicking up dust around her feet\"\n        }\n      ],\n      \"rationale\": \"Physics are consistent: rubble falls due to structural failure, dust is kicked up by impact, haze drifts naturally. No violations of gravity, contact, or object permanence. Slow-motion haze is a stylistic choice, not a physical contradiction.\"\n    },\n    {\n      \"criterion\": \"AVS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"minor\",\n      \"issue\": \"The enhanced prompt adds a vocal line (S1) with lyrics, but the original prompt does not specify dialogue or lyrics. While this is a plausible addition for a music video, it introduces a new element not present in the original instruction.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"woman chanting lyrics\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"her voice raw and urgent (S1), chants lyrics between ragged breaths: <d>[English] Run — the sky is falling down!</d>\"\n        }\n      ],\n      \"rationale\": \"The original prompt mentions 'chanting lyrics' but does not specify content or speaker designation. The enhanced prompt adds specific lyrics and speaker label (S1), which is a minor elaboration. While not contradictory, it introduces new semantic content not in the original, which may affect alignment if the music video’s audio track is fixed. However, since this is a music video task, such elaboration is contextually acceptable and does not break internal consistency.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt maintains strong internal consistency with the original instruction, preserving all key visual and auditory elements. Subject identity, actions, environment, and temporal progression are coherent and consistent. Minor elaboration on sound design and camera motion does not introduce contradictions. No major issues detected.",
+  "usage": {
+    "completion_tokens": 1152,
+    "prompt_tokens": 1082,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 2234
+  }
+}

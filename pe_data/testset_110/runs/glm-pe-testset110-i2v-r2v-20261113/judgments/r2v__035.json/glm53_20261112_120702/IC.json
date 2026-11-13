@@ -1,0 +1,127 @@
+{
+  "candidate_hash": "29615ffc06c6526c4df78d90c6e7942128b0431ee87f56db74ad504f220775f4",
+  "case_key": "r2v:035",
+  "created_at": "2026-11-13T08:31:09+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "SAC",
+      "evidence": [
+        {
+          "quote": "The subject's identity and ethnicity do not match the prompt's description of a 'Western woman' with 'light blonde gradient' hair; the image shows a woman with dark hair and South Asian/Middle Eastern features.",
+          "source": "evidence_facts"
+        },
+        {
+          "quote": "The dress is striped, not solid blue as specified in the prompt.",
+          "source": "evidence_facts"
+        },
+        {
+          "quote": "No bracelets or rings are visible.",
+          "source": "evidence_facts"
+        }
+      ],
+      "issue": "Subject identity, hair color, ethnicity, and accessories do not match the prompt. The image shows a woman with dark hair and South Asian/Middle Eastern features, while the prompt specifies a Western woman with light blonde gradient hair. Accessories like bracelets and rings are absent, and the dress is striped, not solid blue.",
+      "rationale": "The subject’s core identity and appearance are fundamentally inconsistent with the prompt. The prompt requires a Western woman with light blonde hair and specific accessories, but the evidence shows a different ethnicity, hair color, and missing accessories. This is a major identity and attribute drift.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANL",
+      "evidence": [
+        {
+          "quote": "The prompt specifies a 10-second video with dynamic actions (turning head, pointing, lifting dress, etc.), but this is a static image with no motion.",
+          "source": "evidence_facts"
+        },
+        {
+          "quote": "0–3 seconds: She turns her head toward the dress in her hand, opens her mouth as if explaining, repeatedly points with her left index finger at the dress she is wearing...",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "The prompt describes a sequence of actions (turning head, pointing, lifting dress, smiling) over 10 seconds, but the evidence is a static image with no motion or action progression. The voiceover is also unverifiable due to lack of audio.",
+      "rationale": "The action sequence described in the prompt is entirely absent in the evidence. The static image cannot support the causal progression of actions over time, making the action logic incoherent and unverifiable. This is a major failure in action coherence.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "TSC",
+      "evidence": [
+        {
+          "quote": "0–3 seconds: She turns her head toward the dress in her hand... 3–6 seconds: She lifts her head to face the camera... 6–10 seconds: She lowers the hanger...",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "The prompt specifies a 10-second video with dynamic actions... but this is a static image with no motion.",
+          "source": "evidence_facts"
+        }
+      ],
+      "issue": "The prompt specifies a 10-second video with distinct temporal segments (0–3s, 3–6s, 6–10s), but the evidence is a single static frame with no temporal progression. There is no way to verify state transitions or duration allocation.",
+      "rationale": "The temporal structure of the video is completely unrepresented in the evidence. The prompt’s time-based actions and state transitions cannot be evaluated, making the chronology infeasible to verify. This is a major issue in temporal consistency.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SPC",
+      "evidence": [
+        {
+          "quote": "The setting is outdoors on a city street, not an indoor branded clothing store as specified.",
+          "source": "evidence_facts"
+        },
+        {
+          "quote": "A branded clothing store, indoor retail space, walls covered with identical blue maxi dresses...",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "The prompt specifies an indoor branded clothing store with walls of identical blue dresses, but the evidence shows an outdoor urban street scene with a building entrance. The spatial context is entirely mismatched.",
+      "rationale": "The spatial environment is fundamentally inconsistent with the prompt. The evidence shows an outdoor street scene, while the prompt requires an indoor retail space. This is a major spatial inconsistency.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "PL",
+      "evidence": [
+        {
+          "quote": "The woman is standing upright, facing slightly to the right, head tilted upward, looking away from the camera.",
+          "source": "evidence_facts"
+        }
+      ],
+      "issue": "No physical inconsistencies are evident in the static image. The subject stands upright, the dress hangs naturally, and there are no violations of gravity or object permanence within the single frame.",
+      "rationale": "Within the single static frame, the subject and objects are physically plausible. There are no visible violations of real-world physics, such as floating objects or impossible poses. The issue lies in the mismatch with the prompt, not in internal physics.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "AVS",
+      "evidence": [
+        {
+          "quote": "[Voiceover] Look how similar these two dresses are! The one I'm wearing and the one I'm holding—they're basically twins! Perfect for summer, right? Light, flowy, and so cute!",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "No audio or temporal events are present in the image, making it impossible to evaluate the voiceover or motion-based requirements.",
+          "source": "evidence_facts"
+        }
+      ],
+      "issue": "The prompt includes a voiceover that should be synchronized with the subject’s lip movements and actions, but the evidence is a static image with no audio or motion. Therefore, alignment between dialogue and visual events cannot be verified.",
+      "rationale": "The voiceover is a key component of the prompt, requiring temporal and semantic alignment with the subject’s actions and expressions. Since the evidence is static and lacks audio, this alignment cannot be assessed, constituting a major failure in audio-visual synchronization.",
+      "severity": "major"
+    }
+  ],
+  "dimension": "IC",
+  "dimension_score": 30,
+  "evidence_cache_key": "3e159e88b0365d5d8fc5bb559d199d354375e0b2d2e0496cb0c1e9c6eb60af5d",
+  "judge_cache_key": "438d7e9fd7332b1041db3e2c26d42cb3fe828e0d369fb59490f6650aee59e97d",
+  "method": "glm53_20261112_120702",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"IC\",\n  \"dimension_score\": 30,\n  \"summary\": \"The enhanced prompt attempts to preserve subject identity, actions, and environment as specified in the original prompt, but the provided evidence (a single static image) contradicts multiple key elements: subject appearance (dark hair, non-Western features), clothing (striped dress, flat sandals, no bracelets/rings), setting (outdoor street, not indoor store), and actions (no motion). The prompt’s internal consistency is compromised by these mismatches, especially since the evidence is the only available asset for evaluation. The prompt’s retention analysis claims full preservation, but the evidence shows partial or complete failure in subject identity, clothing, accessories, and environment. The voiceover and temporal actions are unverifiable due to the static nature of the image.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"SAC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Subject identity, hair color, ethnicity, and accessories do not match the prompt. The image shows a woman with dark hair and South Asian/Middle Eastern features, while the prompt specifies a Western woman with light blonde gradient hair. Accessories like bracelets and rings are absent, and the dress is striped, not solid blue.\",\n      \"evidence\": [\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"The subject's identity and ethnicity do not match the prompt's description of a 'Western woman' with 'light blonde gradient' hair; the image shows a woman with dark hair and South Asian/Middle Eastern features.\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"The dress is striped, not solid blue as specified in the prompt.\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"No bracelets or rings are visible.\"\n        }\n      ],\n      \"rationale\": \"The subject’s core identity and appearance are fundamentally inconsistent with the prompt. The prompt requires a Western woman with light blonde hair and specific accessories, but the evidence shows a different ethnicity, hair color, and missing accessories. This is a major identity and attribute drift.\"\n    },\n    {\n      \"criterion\": \"ANL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt describes a sequence of actions (turning head, pointing, lifting dress, smiling) over 10 seconds, but the evidence is a static image with no motion or action progression. The voiceover is also unverifiable due to lack of audio.\",\n      \"evidence\": [\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"The prompt specifies a 10-second video with dynamic actions (turning head, pointing, lifting dress, etc.), but this is a static image with no motion.\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"0–3 seconds: She turns her head toward the dress in her hand, opens her mouth as if explaining, repeatedly points with her left index finger at the dress she is wearing...\"\n        }\n      ],\n      \"rationale\": \"The action sequence described in the prompt is entirely absent in the evidence. The static image cannot support the causal progression of actions over time, making the action logic incoherent and unverifiable. This is a major failure in action coherence.\"\n    },\n    {\n      \"criterion\": \"TSC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt specifies a 10-second video with distinct temporal segments (0–3s, 3–6s, 6–10s), but the evidence is a single static frame with no temporal progression. There is no way to verify state transitions or duration allocation.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"0–3 seconds: She turns her head toward the dress in her hand... 3–6 seconds: She lifts her head to face the camera... 6–10 seconds: She lowers the hanger...\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"The prompt specifies a 10-second video with dynamic actions... but this is a static image with no motion.\"\n        }\n      ],\n      \"rationale\": \"The temporal structure of the video is completely unrepresented in the evidence. The prompt’s time-based actions and state transitions cannot be evaluated, making the chronology infeasible to verify. This is a major issue in temporal consistency.\"\n    },\n    {\n      \"criterion\": \"SPC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt specifies an indoor branded clothing store with walls of identical blue dresses, but the evidence shows an outdoor urban street scene with a building entrance. The spatial context is entirely mismatched.\",\n      \"evidence\": [\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"The setting is outdoors on a city street, not an indoor branded clothing store as specified.\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"A branded clothing store, indoor retail space, walls covered with identical blue maxi dresses...\"\n        }\n      ],\n      \"rationale\": \"The spatial environment is fundamentally inconsistent with the prompt. The evidence shows an outdoor street scene, while the prompt requires an indoor retail space. This is a major spatial inconsistency.\"\n    },\n    {\n      \"criterion\": \"PL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"No physical inconsistencies are evident in the static image. The subject stands upright, the dress hangs naturally, and there are no violations of gravity or object permanence within the single frame.\",\n      \"evidence\": [\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"The woman is standing upright, facing slightly to the right, head tilted upward, looking away from the camera.\"\n        }\n      ],\n      \"rationale\": \"Within the single static frame, the subject and objects are physically plausible. There are no visible violations of real-world physics, such as floating objects or impossible poses. The issue lies in the mismatch with the prompt, not in internal physics.\"\n    },\n    {\n      \"criterion\": \"AVS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt includes a voiceover that should be synchronized with the subject’s lip movements and actions, but the evidence is a static image with no audio or motion. Therefore, alignment between dialogue and visual events cannot be verified.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"[Voiceover] Look how similar these two dresses are! The one I'm wearing and the one I'm holding—they're basically twins! Perfect for summer, right? Light, flowy, and so cute!\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"No audio or temporal events are present in the image, making it impossible to evaluate the voiceover or motion-based requirements.\"\n        }\n      ],\n      \"rationale\": \"The voiceover is a key component of the prompt, requiring temporal and semantic alignment with the subject’s actions and expressions. Since the evidence is static and lacks audio, this alignment cannot be assessed, constituting a major failure in audio-visual synchronization.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt attempts to preserve subject identity, actions, and environment as specified in the original prompt, but the provided evidence (a single static image) contradicts multiple key elements: subject appearance (dark hair, non-Western features), clothing (striped dress, flat sandals, no bracelets/rings), setting (outdoor street, not indoor store), and actions (no motion). The prompt’s internal consistency is compromised by these mismatches, especially since the evidence is the only available asset for evaluation. The prompt’s retention analysis claims full preservation, but the evidence shows partial or complete failure in subject identity, clothing, accessories, and environment. The voiceover and temporal actions are unverifiable due to the static nature of the image.",
+  "usage": {
+    "completion_tokens": 1584,
+    "prompt_tokens": 3515,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 5099
+  }
+}

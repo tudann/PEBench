@@ -1,0 +1,135 @@
+{
+  "candidate_hash": "2282d7bd752a5e209ecf7443186dc221e3e458e0683648674a62805f75a639d2",
+  "case_key": "i2v:141",
+  "created_at": "2026-11-13T07:37:51+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "SAC",
+      "evidence": [
+        {
+          "quote": "银灰虎斑猫（无绿领结、非奶牛猫）对着绑在木柱上的酱板鸭抬爪对峙",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "丢掉原指令里的主体身份、人数、动作顺序、场景和明确的镜头要求。先写成只有一个主角，紧接着又写成这个主角同时变成五个外貌不同的人，并且互相对话。",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "silver_tabby_cat...roasted_duck...cat_1 is facing duck_1 directly",
+          "source": "evidence_facts"
+        }
+      ],
+      "issue": "主体身份、数量、外观、服装、场景等发生剧烈且无解释的变更，从原始提示中的猫、狗、鸭三主体，变为无主体的雪景空镜，再突然出现一个主角，随后又分裂为五个外貌不同的人并对话，与原始资产中猫和鸭的拟人化设定完全断裂。",
+      "rationale": "原始提示明确设定两个拟人化主体（猫和鸭），并有具体外观、姿态和互动。增强提示完全抛弃这些，引入无关联的雪景、单主角、五人对话，且未提供任何身份或外观描述，导致主体属性完全丢失，违反SAC一致性。",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANL",
+      "evidence": [
+        {
+          "quote": "时间倒过来：先给结尾，再跳到一个对不上的开头。中途插进一段无关的屋顶烟花。",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "猫咪抬爪指酱板鸭神情凶狠，酱板鸭无奈...猫咪猛地转头懵住看柴犬...猫狗鸭同框",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "动作序列完全断裂，无因果或逻辑连接。从无情节的雪景空镜，突然出现对话的五人，且时间倒置（先结尾后开头），中途插入无关的屋顶烟花，导致动作无前提、无反应、无绑定，无法形成任何连贯行为链。",
+      "rationale": "原始提示有清晰的六镜头动作序列，形成完整叙事弧。增强提示破坏所有动作逻辑，插入无关事件，且时间顺序混乱，导致行为无因果、无反应，严重违反ANL。",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "TSC",
+      "evidence": [
+        {
+          "quote": "总时长写成3秒，同时又要求每个分镜各自持续27秒。",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "时间倒过来：先给结尾，再跳到一个对不上的开头。",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "时长15秒，镜头1时长2秒，镜头2时长3秒...镜头6时长2秒",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "时间线完全混乱。要求总时长3秒，但每个分镜持续27秒，时间上不可行；同时要求时间倒置（先结尾后开头），且中途插入无关事件，导致事件顺序与状态转换无法成立。",
+      "rationale": "3秒总时长与27秒分镜时长矛盾，且时间倒置导致事件顺序无法成立，状态转换无依据，违反TSC。",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SPC",
+      "evidence": [
+        {
+          "quote": "暖光中式复古院落光影自然",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "改成白棚里另一位年龄和性别都相反的陌生人。...写成机位锁死，又写成镜头一直在晃。",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "traditional_chinese_courtyard",
+          "source": "evidence_facts"
+        }
+      ],
+      "issue": "空间设定完全冲突。原始提示为中式复古院落，增强提示要求改为白棚，且镜头运动从“锁死”变为“一直在晃”，同时要求“不要使用首帧里的人物、服装、姿态和场景”，导致空间、位置、镜头运动无一致性。",
+      "rationale": "原始场景为中式院落，增强提示要求改为白棚，且镜头运动矛盾，空间设定无连续性，违反SPC。",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "PL",
+      "evidence": [
+        {
+          "quote": "这个主角同时变成五个外貌不同的人，并且互相对话。...写成正午暴晒，又写成深夜无光；写成机位锁死，又写成镜头一直在晃。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "物理规则被严重违反。一个主角同时变成五个外貌不同的人并对话，违背基本物理和生物学规则；同一场景中同时出现正午暴晒与深夜无光，光照条件矛盾；镜头运动与场景设定冲突（白棚中镜头晃动无依据）。",
+      "rationale": "一个主体分裂为五个独立个体并对话，无任何解释或设定支持，违反物理规则；光照和镜头运动设定自相矛盾，违反PL。",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "AVS",
+      "evidence": [
+        {
+          "quote": "所有台词、音效与画面动作完全同步...全程无字幕。",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "画面中央一直挂着大号字幕、水印和logo。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "原始提示要求音频与画面动作完全同步，增强提示未提及音频，但要求“画面中央一直挂着大号字幕、水印和logo”，与原始“全程无字幕”矛盾，且未说明音频如何与这些字幕同步，导致视听对齐无法实现。",
+      "rationale": "原始要求无字幕，增强提示强制添加字幕，且未说明音频与字幕的同步逻辑，导致视听元素无法对齐，违反AVS。",
+      "severity": "major"
+    }
+  ],
+  "dimension": "IC",
+  "dimension_score": 0,
+  "evidence_cache_key": "db8276b4306f456799b783ab31151c1a0d876e0aef545d96b7704bcb5e699309",
+  "judge_cache_key": "438d7e9fd7332b1041db3e2c26d42cb3fe828e0d369fb59490f6650aee59e97d",
+  "method": "weak-pe-original",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"IC\",\n  \"dimension_score\": 0,\n  \"summary\": \"增强提示词在内部一致性上存在严重问题，包含多重矛盾、不连贯的设定和逻辑断裂，导致无法生成符合基本叙事或视觉连贯性的内容。主体身份、数量、动作、时间、空间、物理规则、镜头语言和时长等核心要素均出现重大冲突，且与原始提示和首帧资产完全脱节。\",\n  \"criteria\": [\n    {\n      \"criterion\": \"SAC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"主体身份、数量、外观、服装、场景等发生剧烈且无解释的变更，从原始提示中的猫、狗、鸭三主体，变为无主体的雪景空镜，再突然出现一个主角，随后又分裂为五个外貌不同的人并对话，与原始资产中猫和鸭的拟人化设定完全断裂。\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"银灰虎斑猫（无绿领结、非奶牛猫）对着绑在木柱上的酱板鸭抬爪对峙\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"丢掉原指令里的主体身份、人数、动作顺序、场景和明确的镜头要求。先写成只有一个主角，紧接着又写成这个主角同时变成五个外貌不同的人，并且互相对话。\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"silver_tabby_cat...roasted_duck...cat_1 is facing duck_1 directly\"\n        }\n      ],\n      \"rationale\": \"原始提示明确设定两个拟人化主体（猫和鸭），并有具体外观、姿态和互动。增强提示完全抛弃这些，引入无关联的雪景、单主角、五人对话，且未提供任何身份或外观描述，导致主体属性完全丢失，违反SAC一致性。\"\n    },\n    {\n      \"criterion\": \"ANL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"动作序列完全断裂，无因果或逻辑连接。从无情节的雪景空镜，突然出现对话的五人，且时间倒置（先结尾后开头），中途插入无关的屋顶烟花，导致动作无前提、无反应、无绑定，无法形成任何连贯行为链。\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"时间倒过来：先给结尾，再跳到一个对不上的开头。中途插进一段无关的屋顶烟花。\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"镜头1...镜头2...镜头3...镜头4...镜头5...镜头6\"  ,\n          \"quote\": \"猫咪抬爪指酱板鸭神情凶狠，酱板鸭无奈...猫咪猛地转头懵住看柴犬...猫狗鸭同框\"\n        }\n      ],\n      \"rationale\": \"原始提示有清晰的六镜头动作序列，形成完整叙事弧。增强提示破坏所有动作逻辑，插入无关事件，且时间顺序混乱，导致行为无因果、无反应，严重违反ANL。\"\n    },\n    {\n      \"criterion\": \"TSC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"时间线完全混乱。要求总时长3秒，但每个分镜持续27秒，时间上不可行；同时要求时间倒置（先结尾后开头），且中途插入无关事件，导致事件顺序与状态转换无法成立。\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"总时长写成3秒，同时又要求每个分镜各自持续27秒。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"时间倒过来：先给结尾，再跳到一个对不上的开头。\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"时长15秒，镜头1时长2秒，镜头2时长3秒...镜头6时长2秒\"\n        }\n      ],\n      \"rationale\": \"3秒总时长与27秒分镜时长矛盾，且时间倒置导致事件顺序无法成立，状态转换无依据，违反TSC。\"\n    },\n    {\n      \"criterion\": \"SPC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"空间设定完全冲突。原始提示为中式复古院落，增强提示要求改为白棚，且镜头运动从“锁死”变为“一直在晃”，同时要求“不要使用首帧里的人物、服装、姿态和场景”，导致空间、位置、镜头运动无一致性。\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"暖光中式复古院落光影自然\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"改成白棚里另一位年龄和性别都相反的陌生人。...写成机位锁死，又写成镜头一直在晃。\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"traditional_chinese_courtyard\"\n        }\n      ],\n      \"rationale\": \"原始场景为中式院落，增强提示要求改为白棚，且镜头运动矛盾，空间设定无连续性，违反SPC。\"\n    },\n    {\n      \"criterion\": \"PL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"物理规则被严重违反。一个主角同时变成五个外貌不同的人并对话，违背基本物理和生物学规则；同一场景中同时出现正午暴晒与深夜无光，光照条件矛盾；镜头运动与场景设定冲突（白棚中镜头晃动无依据）。\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"这个主角同时变成五个外貌不同的人，并且互相对话。...写成正午暴晒，又写成深夜无光；写成机位锁死，又写成镜头一直在晃。\"\n        }\n      ],\n      \"rationale\": \"一个主体分裂为五个独立个体并对话，无任何解释或设定支持，违反物理规则；光照和镜头运动设定自相矛盾，违反PL。\"\n    },\n    {\n      \"criterion\": \"AVS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"原始提示要求音频与画面动作完全同步，增强提示未提及音频，但要求“画面中央一直挂着大号字幕、水印和logo”，与原始“全程无字幕”矛盾，且未说明音频如何与这些字幕同步，导致视听对齐无法实现。\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"所有台词、音效与画面动作完全同步...全程无字幕。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"画面中央一直挂着大号字幕、水印和logo。\"\n        }\n      ],\n      \"rationale\": \"原始要求无字幕，增强提示强制添加字幕，且未说明音频与字幕的同步逻辑，导致视听元素无法对齐，违反AVS。\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "增强提示词在内部一致性上存在严重问题，包含多重矛盾、不连贯的设定和逻辑断裂，导致无法生成符合基本叙事或视觉连贯性的内容。主体身份、数量、动作、时间、空间、物理规则、镜头语言和时长等核心要素均出现重大冲突，且与原始提示和首帧资产完全脱节。",
+  "usage": {
+    "completion_tokens": 1628,
+    "prompt_tokens": 2819,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 4447
+  }
+}

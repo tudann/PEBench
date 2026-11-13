@@ -1,0 +1,182 @@
+{
+  "candidate_hash": "d50441cc446ca6cc0f52e5b08b29f9639b63f0d4d68d5c0a2f7ea6527e2ed33f",
+  "case_key": "r2v:021",
+  "created_at": "2026-11-13T08:28:31+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "GSF",
+      "evidence": [
+        {
+          "quote": "Generate a motorcycle racing video full of speed and power... overall style that is realistic, passionate, and highly cinematic.",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "The target video is a realistic, passionate, highly cinematic 10-second motorcycle racing sequence on a professional racetrack.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "The enhanced prompt preserves the requested genre (motorcycle racing), medium (video), and aesthetic (realistic, passionate, highly cinematic). It does not introduce incompatible styles or replace the medium.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SAP",
+      "evidence": [
+        {
+          "quote": "Image 1 is the racer... wearing a full professional racing suit and helmet.",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "<Subject 1> is the racer, a young man whose facial identity comes from <Picture 1>... dressed in a full professional racing suit and a full-face helmet.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "<Subject 2> is the motorcycle, the sleek red/coral futuristic sport bike from <Picture 2>...",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "Subject identities, count, and attributes are preserved. The racer’s facial identity from Image 1 and the motorcycle’s design from Image 2 are correctly anchored and maintained throughout the sequence. No substitutions or omissions of key attributes.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANF",
+      "evidence": [
+        {
+          "quote": "After mounting Image 2, he quickly leans forward... twisting the throttle... The motorcycle instantly roars to life and launches forward... As he enters a corner, Image 1 leans dramatically... The moment he exits the turn, Image 1 quickly pulls his body weight back in, straightens the bike, and immediately accelerates again.",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "mounts <Subject 2>, twists the throttle, launches down the straight, leans dramatically through a corner... then straightens up and accelerates hard past the camera.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "The sequence of actions—mounting, throttle twist, launch, corner lean, knee scrape, and re-acceleration—is preserved in correct order and intent. The enhanced prompt adds shot-specific timing (e.g., 00:02.000, 00:04.000) which is compatible elaboration, not a substitution.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "DLI",
+      "evidence": [
+        {
+          "quote": "Use electronic rock background music... combined with the continuous roar of the engine, the sharp sound of tires scraping the track, and the rushing wind at high speed.",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "No dialogue, no on-screen text.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "The original prompt does not specify any dialogue or narration. The enhanced prompt correctly preserves the absence of dialogue and on-screen text, as required.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ARP",
+      "evidence": [
+        {
+          "quote": "Use electronic rock background music with strong drumbeats, combined with the continuous roar of the engine, the sharp sound of tires scraping the track, and the rushing wind at high speed.",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Continuous engine roar rising on the throttle twist and launch, the sharp screech of tires gripping and scraping through the corner, and rushing high-speed wind throughout... An electronic rock score with strong, driving drumbeats underscores the entire 10 seconds.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "The requested soundscape—engine roar, tire screech, wind, and electronic rock music—is preserved. The enhanced prompt adds rhythmic alignment with drumbeats, which is compatible elaboration, not a violation.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CCP",
+      "evidence": [
+        {
+          "quote": "Use high-speed tracking shots, low-angle ground-level shots, side tracking, and close-up shots...",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "[Shot 2] At 00:02.000, the shot cuts to a low-angle ground-level view at tarmac level... [Shot 3] At 00:04.000, a side-tracking shot moves with the bike...",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The enhanced prompt adds specific shot timing (e.g., 00:02.000, 00:04.000) and shot descriptions (e.g., 'low-angle ground-level view at tarmac level') that were not explicitly requested in the original prompt, but these do not contradict or override the original intent.",
+      "rationale": "The original prompt requested specific camera types (tracking, low-angle, side, close-up) but not precise timing or shot-by-shot breakdown. The enhanced prompt’s elaboration is compatible and does not override the original intent. This is a minor issue due to added detail, not a material deviation.",
+      "severity": "minor"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "LCF",
+      "evidence": [
+        {
+          "quote": "overall style that is realistic, passionate, and highly cinematic.",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "realistic, passionate, highly cinematic 10-second motorcycle racing sequence... under hard daylight, with hot asphalt shimmer, aggressive motion blur...",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "The enhanced prompt preserves the requested lighting conditions (hard daylight, heat shimmer) and visual style (motion blur, cinematic tone). No incompatible lighting or color grading is introduced.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SSP",
+      "evidence": [
+        {
+          "quote": "The scene is set on a professional racetrack...",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "professional racetrack... background barriers and grandstands streaking into heavy motion blur...",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "The setting (professional racetrack) and spatial elements (barriers, grandstands, tarmac) are preserved. The enhanced prompt adds motion blur and heat shimmer, which are compatible with the setting and do not alter spatial relations.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "OTI",
+      "evidence": [
+        {
+          "quote": "Use electronic rock background music... combined with the continuous roar of the engine... rushing wind at high speed.",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "No dialogue, no on-screen text.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "The original prompt does not request any on-screen text, subtitles, or titles. The enhanced prompt correctly preserves the absence of visible text, as required.",
+      "severity": "none"
+    }
+  ],
+  "dimension": "SF",
+  "dimension_score": 95,
+  "evidence_cache_key": "6d6db1e2caa0a030601d2653864725a32993b60a9e84006336b83a398bb2f052",
+  "judge_cache_key": "a0ca24571ad14d7ab7be626329bd736d7e7015f9ebc418227c8be391591d0377",
+  "method": "glm53_20261112_120702",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"SF\",\n  \"dimension_score\": 95,\n  \"summary\": \"The enhanced prompt preserves the core semantic intent of the original instruction with high fidelity, accurately reflecting the requested genre, subject identities, actions, camera work, soundscape, and cinematic style. It correctly assigns Image 1 as the racer and Image 2 as the motorcycle, and elaborates on their visual attributes and actions with precision. Minor issues include slight elaboration on camera shot timing and music rhythm that were not explicitly requested, but these do not contradict or weaken the original intent. The prompt correctly omits dialogue and on-screen text as required. No material omissions or contradictions are present.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"GSF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"Generate a motorcycle racing video full of speed and power... overall style that is realistic, passionate, and highly cinematic.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"The target video is a realistic, passionate, highly cinematic 10-second motorcycle racing sequence on a professional racetrack.\"\n        }\n      ],\n      \"rationale\": \"The enhanced prompt preserves the requested genre (motorcycle racing), medium (video), and aesthetic (realistic, passionate, highly cinematic). It does not introduce incompatible styles or replace the medium.\"\n    },\n    {\n      \"criterion\": \"SAP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"Image 1 is the racer... wearing a full professional racing suit and helmet.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"<Subject 1> is the racer, a young man whose facial identity comes from <Picture 1>... dressed in a full professional racing suit and a full-face helmet.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"<Subject 2> is the motorcycle, the sleek red/coral futuristic sport bike from <Picture 2>...\"\n        }\n      ],\n      \"rationale\": \"Subject identities, count, and attributes are preserved. The racer’s facial identity from Image 1 and the motorcycle’s design from Image 2 are correctly anchored and maintained throughout the sequence. No substitutions or omissions of key attributes.\"\n    },\n    {\n      \"criterion\": \"ANF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"After mounting Image 2, he quickly leans forward... twisting the throttle... The motorcycle instantly roars to life and launches forward... As he enters a corner, Image 1 leans dramatically... The moment he exits the turn, Image 1 quickly pulls his body weight back in, straightens the bike, and immediately accelerates again.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"mounts <Subject 2>, twists the throttle, launches down the straight, leans dramatically through a corner... then straightens up and accelerates hard past the camera.\"\n        }\n      ],\n      \"rationale\": \"The sequence of actions—mounting, throttle twist, launch, corner lean, knee scrape, and re-acceleration—is preserved in correct order and intent. The enhanced prompt adds shot-specific timing (e.g., 00:02.000, 00:04.000) which is compatible elaboration, not a substitution.\"\n    },\n    {\n      \"criterion\": \"DLI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"Use electronic rock background music... combined with the continuous roar of the engine, the sharp sound of tires scraping the track, and the rushing wind at high speed.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"No dialogue, no on-screen text.\"\n        }\n      ],\n      \"rationale\": \"The original prompt does not specify any dialogue or narration. The enhanced prompt correctly preserves the absence of dialogue and on-screen text, as required.\"\n    },\n    {\n      \"criterion\": \"ARP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"Use electronic rock background music with strong drumbeats, combined with the continuous roar of the engine, the sharp sound of tires scraping the track, and the rushing wind at high speed.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Continuous engine roar rising on the throttle twist and launch, the sharp screech of tires gripping and scraping through the corner, and rushing high-speed wind throughout... An electronic rock score with strong, driving drumbeats underscores the entire 10 seconds.\"\n        }\n      ],\n      \"rationale\": \"The requested soundscape—engine roar, tire screech, wind, and electronic rock music—is preserved. The enhanced prompt adds rhythmic alignment with drumbeats, which is compatible elaboration, not a violation.\"\n    },\n    {\n      \"criterion\": \"CCP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"minor\",\n      \"issue\": \"The enhanced prompt adds specific shot timing (e.g., 00:02.000, 00:04.000) and shot descriptions (e.g., 'low-angle ground-level view at tarmac level') that were not explicitly requested in the original prompt, but these do not contradict or override the original intent.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"Use high-speed tracking shots, low-angle ground-level shots, side tracking, and close-up shots...\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"[Shot 2] At 00:02.000, the shot cuts to a low-angle ground-level view at tarmac level... [Shot 3] At 00:04.000, a side-tracking shot moves with the bike...\"\n        }\n      ],\n      \"rationale\": \"The original prompt requested specific camera types (tracking, low-angle, side, close-up) but not precise timing or shot-by-shot breakdown. The enhanced prompt’s elaboration is compatible and does not override the original intent. This is a minor issue due to added detail, not a material deviation.\"\n    },\n    {\n      \"criterion\": \"LCF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"overall style that is realistic, passionate, and highly cinematic.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"realistic, passionate, highly cinematic 10-second motorcycle racing sequence... under hard daylight, with hot asphalt shimmer, aggressive motion blur...\"\n        }\n      ],\n      \"rationale\": \"The enhanced prompt preserves the requested lighting conditions (hard daylight, heat shimmer) and visual style (motion blur, cinematic tone). No incompatible lighting or color grading is introduced.\"\n    },\n    {\n      \"criterion\": \"SSP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"The scene is set on a professional racetrack...\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"professional racetrack... background barriers and grandstands streaking into heavy motion blur...\"\n        }\n      ],\n      \"rationale\": \"The setting (professional racetrack) and spatial elements (barriers, grandstands, tarmac) are preserved. The enhanced prompt adds motion blur and heat shimmer, which are compatible with the setting and do not alter spatial relations.\"\n    },\n    {\n      \"criterion\": \"OTI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"Use electronic rock background music... combined with the continuous roar of the engine... rushing wind at high speed.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"No dialogue, no on-screen text.\"\n        }\n      ],\n      \"rationale\": \"The original prompt does not request any on-screen text, subtitles, or titles. The enhanced prompt correctly preserves the absence of visible text, as required.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt preserves the core semantic intent of the original instruction with high fidelity, accurately reflecting the requested genre, subject identities, actions, camera work, soundscape, and cinematic style. It correctly assigns Image 1 as the racer and Image 2 as the motorcycle, and elaborates on their visual attributes and actions with precision. Minor issues include slight elaboration on camera shot timing and music rhythm that were not explicitly requested, but these do not contradict or weaken the original intent. The prompt correctly omits dialogue and on-screen text as required. No material omissions or contradictions are present.",
+  "usage": {
+    "completion_tokens": 1920,
+    "prompt_tokens": 4303,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 6223
+  }
+}

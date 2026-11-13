@@ -1,0 +1,135 @@
+{
+  "candidate_hash": "da43b47b2bb178b7d1b7f4fbc46af4926c26ff4bfeb0826f6d8602661315e7b2",
+  "case_key": "r2v:221",
+  "created_at": "2026-11-13T09:07:22+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "SAC",
+      "evidence": [
+        {
+          "quote": "<Subject 1> is the female spokesperson from <Video 1>, with short dark hair, a white loose top, and a warm smile; her greeting close-up, playful hair-toss motion, product-holding pose, and on-camera delivery are all preserved from the source video.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "The spokesperson is holding the product box.",
+          "source": "evidence_facts"
+        },
+        {
+          "quote": "<Subject 2> is the 伊利纯牛奶 250mL carton defined by <Picture 1>: a white carton with blue wave design, 伊利 red logo top-left, Beijing 2022 Winter Olympics emblem and “北京2022年冬奥会官方合作伙伴” text, large blue “纯牛奶” lettering, gold ribbon “奥运品质 全新升级”, green pasture with cows illustration, milk splash, gold badge “优质乳蛋白 3.2g/100mL”, and “净含量：250mL”",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "Subject 1’s identity, appearance, and actions are preserved exactly as in the source video. Subject 2 (the milk carton) is accurately defined by image_1 with all specified visual attributes. No unexplained renaming, duplication, or attribute drift occurs. The replacement of the original product box with the new carton is consistent and correctly attributed to image_1.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANL",
+      "evidence": [
+        {
+          "quote": "The target video is an edited version of <Video 1>, extended to 15 seconds. <Subject 1> retains her greeting, hair toss, and product presentation exactly as in the source, but the box she holds is replaced by <Subject 2>, the 伊利纯牛奶 250mL carton from <Picture 1>.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "The spokesperson introduces herself. The spokesperson holds up the product. The brand logo is displayed.",
+          "source": "evidence_facts"
+        }
+      ],
+      "issue": "",
+      "rationale": "Actions follow a coherent causal progression: greeting → hair toss → product presentation → end card. The sequence is preserved from the source, with only the product and associated text replaced. No incompatible or dangling events are introduced. The replacement of the product is logically bound to the spokesperson’s action of holding it, and the new product’s features are presented in a plausible manner.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "TSC",
+      "evidence": [
+        {
+          "quote": "[Shot 4] At 00:09.000, the frame cuts to <Subject 4>, the blue end card, static and holding for the final six seconds. ... holding cleanly to the end at 00:15.000.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "The brand logo is displayed. timestamp: 00:06-00:08",
+          "source": "evidence_facts"
+        }
+      ],
+      "issue": "The enhanced prompt implies the end card holds for 6 seconds (00:09.000–00:15.000), but the source video’s end card (00:06–00:08) only lasts 2 seconds. While the extension is acceptable for the 15-second target, the description of the end card’s duration is slightly inconsistent with the source, potentially leading to misalignment if not adjusted.",
+      "rationale": "The timeline is mostly consistent: Shot 1 (0–2s), Shot 2 (2–4s), Shot 3 (4–9s), Shot 4 (9–15s). The extension of the end card to 6 seconds is a reasonable adaptation for the 15-second duration. However, the prompt’s description of the end card’s hold time (6s) contradicts the source’s 2s duration, which is a minor inconsistency in temporal alignment with the source structure. This does not break the video’s internal logic but may require adjustment for fidelity to the original pacing.",
+      "severity": "minor"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SPC",
+      "evidence": [
+        {
+          "quote": "The setting <Subject 3>, camera work, and lighting are unchanged.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "The spokesperson is holding the product box. The camera holds a static framing with a slight slow push-in, exactly as in the source.",
+          "source": "evidence_facts"
+        }
+      ],
+      "issue": "",
+      "rationale": "The spatial environment (bright white kitchen/bathroom set) and camera work (static framing, slow push-in) are preserved. The spokesperson’s position and movement (greeting, hair toss, product presentation) are consistent with the source. No unexplained position swaps or movement path inconsistencies are present. The product replacement occurs in the same spatial context without altering the scene’s layout.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "PL",
+      "evidence": [
+        {
+          "quote": "The target video is a bright, clean 15-second commercial advertisement in the style of <Video 1>, with soft even lighting, a white airy setting, and a blue subtitle bar; all camera work mirrors the source.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Bright, even lighting. The spokesperson is holding the product box.",
+          "source": "evidence_facts"
+        }
+      ],
+      "issue": "",
+      "rationale": "All physical interactions are plausible: the spokesperson holds the carton in a natural, stable manner; lighting and object permanence are consistent; no violations of gravity or bodily feasibility occur. The replacement of the product box with the carton is a straightforward substitution without altering the physical logic of the scene.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "AVS",
+      "evidence": [
+        {
+          "quote": "The subtitle bar reads “大家好，我是孙燕姿”; the right-side caption reads “孙燕姿 伊利品牌代言人” with her signature; the bottom-right watermark reads “伊利”.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "The product subtitle appears on the blue bar reading “伊利纯牛奶”. The subtitle reads “奥运品质 全新升级”.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "若画面字幕中有介绍商品的相关文字，同样全部改为当前商品信息。",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "All on-screen text (subtitles, watermark, end card) is aligned with the visual events and speaker. The spokesperson’s dialogue matches the on-screen text in timing and content. The new BGM is introduced as non-diegetic and does not conflict with the visual or spoken content. No misaligned lip-sync, premature effects, or incorrect speaker attribution is present.",
+      "severity": "none"
+    }
+  ],
+  "dimension": "IC",
+  "dimension_score": 95,
+  "evidence_cache_key": "f7d408318c4c6f8c550ef9626dae8130317c0c721284d670f4930efce11ff800",
+  "judge_cache_key": "438d7e9fd7332b1041db3e2c26d42cb3fe828e0d369fb59490f6650aee59e97d",
+  "method": "glm53_20261112_120702",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"IC\",\n  \"dimension_score\": 95,\n  \"summary\": \"The enhanced prompt maintains strong internal consistency with the original instruction, preserving subject identity, actions, chronology, and spatial elements while accurately replacing product, text, and logo elements as requested. Minor issues include slight over-specification of non-essential details (e.g., exact timing of subtitle changes) and a minor inconsistency in the description of the end card’s hold duration (implied 6s vs. source 2s), but these do not materially affect the core requirements. All requested substitutions are correctly implemented without contradiction or drift.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"SAC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"<Subject 1> is the female spokesperson from <Video 1>, with short dark hair, a white loose top, and a warm smile; her greeting close-up, playful hair-toss motion, product-holding pose, and on-camera delivery are all preserved from the source video.\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"The spokesperson is holding the product box.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"<Subject 2> is the 伊利纯牛奶 250mL carton defined by <Picture 1>: a white carton with blue wave design, 伊利 red logo top-left, Beijing 2022 Winter Olympics emblem and “北京2022年冬奥会官方合作伙伴” text, large blue “纯牛奶” lettering, gold ribbon “奥运品质 全新升级”, green pasture with cows illustration, milk splash, gold badge “优质乳蛋白 3.2g/100mL”, and “净含量：250mL”\"\n        }\n      ],\n      \"rationale\": \"Subject 1’s identity, appearance, and actions are preserved exactly as in the source video. Subject 2 (the milk carton) is accurately defined by image_1 with all specified visual attributes. No unexplained renaming, duplication, or attribute drift occurs. The replacement of the original product box with the new carton is consistent and correctly attributed to image_1.\"\n    },\n    {\n      \"criterion\": \"ANL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"The target video is an edited version of <Video 1>, extended to 15 seconds. <Subject 1> retains her greeting, hair toss, and product presentation exactly as in the source, but the box she holds is replaced by <Subject 2>, the 伊利纯牛奶 250mL carton from <Picture 1>.\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"The spokesperson introduces herself. The spokesperson holds up the product. The brand logo is displayed.\"\n        }\n      ],\n      \"rationale\": \"Actions follow a coherent causal progression: greeting → hair toss → product presentation → end card. The sequence is preserved from the source, with only the product and associated text replaced. No incompatible or dangling events are introduced. The replacement of the product is logically bound to the spokesperson’s action of holding it, and the new product’s features are presented in a plausible manner.\"\n    },\n    {\n      \"criterion\": \"TSC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"minor\",\n      \"issue\": \"The enhanced prompt implies the end card holds for 6 seconds (00:09.000–00:15.000), but the source video’s end card (00:06–00:08) only lasts 2 seconds. While the extension is acceptable for the 15-second target, the description of the end card’s duration is slightly inconsistent with the source, potentially leading to misalignment if not adjusted.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"[Shot 4] At 00:09.000, the frame cuts to <Subject 4>, the blue end card, static and holding for the final six seconds. ... holding cleanly to the end at 00:15.000.\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"The brand logo is displayed. timestamp: 00:06-00:08\"\n        }\n      ],\n      \"rationale\": \"The timeline is mostly consistent: Shot 1 (0–2s), Shot 2 (2–4s), Shot 3 (4–9s), Shot 4 (9–15s). The extension of the end card to 6 seconds is a reasonable adaptation for the 15-second duration. However, the prompt’s description of the end card’s hold time (6s) contradicts the source’s 2s duration, which is a minor inconsistency in temporal alignment with the source structure. This does not break the video’s internal logic but may require adjustment for fidelity to the original pacing.\"\n    },\n    {\n      \"criterion\": \"SPC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"The setting <Subject 3>, camera work, and lighting are unchanged.\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"The spokesperson is holding the product box. The camera holds a static framing with a slight slow push-in, exactly as in the source.\"\n        }\n      ],\n      \"rationale\": \"The spatial environment (bright white kitchen/bathroom set) and camera work (static framing, slow push-in) are preserved. The spokesperson’s position and movement (greeting, hair toss, product presentation) are consistent with the source. No unexplained position swaps or movement path inconsistencies are present. The product replacement occurs in the same spatial context without altering the scene’s layout.\"\n    },\n    {\n      \"criterion\": \"PL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"The target video is a bright, clean 15-second commercial advertisement in the style of <Video 1>, with soft even lighting, a white airy setting, and a blue subtitle bar; all camera work mirrors the source.\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"Bright, even lighting. The spokesperson is holding the product box.\"\n        }\n      ],\n      \"rationale\": \"All physical interactions are plausible: the spokesperson holds the carton in a natural, stable manner; lighting and object permanence are consistent; no violations of gravity or bodily feasibility occur. The replacement of the product box with the carton is a straightforward substitution without altering the physical logic of the scene.\"\n    },\n    {\n      \"criterion\": \"AVS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"The subtitle bar reads “大家好，我是孙燕姿”; the right-side caption reads “孙燕姿 伊利品牌代言人” with her signature; the bottom-right watermark reads “伊利”.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"The product subtitle appears on the blue bar reading “伊利纯牛奶”. The subtitle reads “奥运品质 全新升级”.\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"若画面字幕中有介绍商品的相关文字，同样全部改为当前商品信息。\"\n        }\n      ],\n      \"rationale\": \"All on-screen text (subtitles, watermark, end card) is aligned with the visual events and speaker. The spokesperson’s dialogue matches the on-screen text in timing and content. The new BGM is introduced as non-diegetic and does not conflict with the visual or spoken content. No misaligned lip-sync, premature effects, or incorrect speaker attribution is present.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt maintains strong internal consistency with the original instruction, preserving subject identity, actions, chronology, and spatial elements while accurately replacing product, text, and logo elements as requested. Minor issues include slight over-specification of non-essential details (e.g., exact timing of subtitle changes) and a minor inconsistency in the description of the end card’s hold duration (implied 6s vs. source 2s), but these do not materially affect the core requirements. All requested substitutions are correctly implemented without contradiction or drift.",
+  "usage": {
+    "completion_tokens": 1806,
+    "prompt_tokens": 4313,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 6119
+  }
+}

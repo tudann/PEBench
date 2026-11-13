@@ -1,0 +1,123 @@
+{
+  "candidate_hash": "f3158ef03bf04b080edfbd13b94e73fb606d057d4d731543baa02090e08d8064",
+  "case_key": "i2v:260",
+  "created_at": "2026-11-13T08:18:46+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "SAC",
+      "evidence": [
+        {
+          "quote": "the cat with white/cream fur, blue eyes, a pink satin bow and multi-strand pearl necklace, the dog with fluffy golden fur, front paws on the desk",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "fluffy white cat (possibly Ragdoll or similar breed)... pink satin bow tie, multi-strand pearl necklace",
+          "source": "evidence_facts"
+        }
+      ],
+      "issue": "Subject identity, count, appearance, clothing, and props remain stable throughout. The golden retriever puppy and Ragdoll cat are consistently described with matching fur, eyes, accessories (pink bow, pearl necklace), and positions. No unexplained renaming, duplication, or attribute drift occurs.",
+      "rationale": "The enhanced prompt accurately preserves the visual attributes of both subjects as described in the evidence and original prompt. The consistent description of fur, eyes, accessories, and positions across all time points ensures no drift or inconsistency.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANL",
+      "evidence": [
+        {
+          "quote": "At 00:02.500, both pets hold their poses... At 00:05.000, the cat turns its head slightly toward the dog with a disdainful expression... At 00:07.500, the dog turns its head toward the cat... At 00:10.000, the dog gives a small emphatic head bob... At 00:12.500, the cat shakes its head, raises a paw to cover its face, and sighs",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "0-2.5s 猫：老师我想换座位... 5-7.5s 猫：我旁边坐了一只傻狗... 7.5-10s 狗狗：你旁边才坐了只傻狗... 10-12.5s 狗狗：大傻狗... 12.5-15s 猫摇头捂脸叹气",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "Actions form a coherent causal progression: the cat requests a seat change, the teacher asks why, the cat blames the dog, the dog retorts, escalates, and the cat reacts with embarrassment. Each action logically follows the previous, with appropriate reactions and no dangling events.",
+      "rationale": "The sequence of dialogue and reactions is causally linked and plausible. The cat’s request leads to the teacher’s question, which triggers the cat’s complaint, prompting the dog’s rebuttal and escalation, culminating in the cat’s embarrassed reaction. No incompatible or unexplained actions are introduced.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "TSC",
+      "evidence": [
+        {
+          "quote": "a static shot with a very slow push-in at slow speed frames a golden retriever puppy... At 00:12.500, the cat shakes its head... the frame settles on this two-shot composition",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "12.5-15s 猫摇头捂脸叹气",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "The enhanced prompt adds a slow push-in at the start, which is not mentioned in the original prompt. While this does not contradict the original, it introduces a new temporal element not requested. Additionally, the original prompt specifies 12.5-15s for the cat’s final reaction, while the enhanced prompt ends at 00:12.500, implying the final 2.5s are silent or static — a minor deviation from the original’s implied duration.",
+      "rationale": "The push-in is a minor elaboration not present in the original, but does not break chronology. The timing at 00:12.500 may imply the final 2.5s are static, whereas the original suggests the action continues until 15s. This is a minor deviation, not a major contradiction.",
+      "severity": "minor"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SPC",
+      "evidence": [
+        {
+          "quote": "a static shot with a very slow push-in... golden retriever puppy on the left and a ragdoll cat on the right sitting side by side at a wooden school desk",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "dog_1 and cat_1 are seated side-by-side at the same desk",
+          "source": "evidence_facts"
+        }
+      ],
+      "issue": "Location, screen direction, and relative positions are consistent. Both animals remain seated side-by-side at the same desk throughout. The camera maintains a frontal, medium shot with shallow depth of field. No unexplained position swaps or movement paths are introduced.",
+      "rationale": "The spatial relationships are preserved: left/right positioning, same desk, frontal view. The slow push-in is a controlled camera movement that does not alter subject positions or orientation. No impossible trajectories or exits are introduced.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "PL",
+      "evidence": [
+        {
+          "quote": "the cat raises a paw slightly... the dog's ears perk up... the dog turns its head toward the cat with slight bark-like mouth movement... the cat shakes its head, raises a paw to cover its face, and sighs",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "All actions are physically plausible within the 3D CG animation context. The cat’s head tilt, paw raise, and sigh; the dog’s head bob and bark-like mouth movement — all are consistent with animal anatomy and motion. No gravity violations, object permanence issues, or bodily impossibilities are present.",
+      "rationale": "The described movements are within the realm of plausible animal behavior in a stylized 3D animation. The prompt does not attempt to depict impossible physics, and all actions are consistent with the medium.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "AVS",
+      "evidence": [
+        {
+          "quote": "At 00:02.500... off-screen female teacher's voice (S2) asks: <d>[Chinese] 为什么呀</d> with the subtitle \"为什么呀\" displayed. At 00:05.000, the cat turns its head... says: <d>[Chinese] 我旁边坐了一只傻狗</d> with the subtitle \"我旁边坐了一只傻狗\"",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "0-2.5s 猫：老师我想换座位... 2.5-5s 画外音老师：为什么呀... 5-7.5s 猫：我旁边坐了一只傻狗",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "Dialogue, subtitles, and sound effects are temporally and semantically aligned. Each line of dialogue is paired with the correct speaker (cat, dog, teacher), appears at the correct timestamp, and is accompanied by matching subtitles. Sound effects (paw tap, huff, sigh) are placed at appropriate moments.",
+      "rationale": "Each dialogue line is correctly attributed to the speaker, appears at the specified time, and is accompanied by the corresponding subtitle. The soundscape description aligns with the actions (e.g., sigh at 00:12.500). No misaligned lip-sync or premature effects are described.",
+      "severity": "none"
+    }
+  ],
+  "dimension": "IC",
+  "dimension_score": 95,
+  "evidence_cache_key": "e8fbe91c80a0cc726aaf4df3ded01d24982e17418fbede9298afbd95f8af9b29",
+  "judge_cache_key": "438d7e9fd7332b1041db3e2c26d42cb3fe828e0d369fb59490f6650aee59e97d",
+  "method": "glm53_20261112_120702",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"IC\",\n  \"dimension_score\": 95,\n  \"summary\": \"The enhanced prompt maintains strong internal consistency with the original instruction, preserving subject identity, actions, chronology, and spatial relationships. Minor issues include slight elaboration beyond the original prompt (e.g., camera motion, detailed props) and a small inconsistency in the cat’s expression at 00:12.500 (prompt says 'shakes head, raises paw to cover face' while original only says '摇头捂脸叹气'), but these do not materially alter the core narrative or visual plan. No contradictions, attribute drift, or physics violations are present.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"SAC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"Subject identity, count, appearance, clothing, and props remain stable throughout. The golden retriever puppy and Ragdoll cat are consistently described with matching fur, eyes, accessories (pink bow, pearl necklace), and positions. No unexplained renaming, duplication, or attribute drift occurs.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"the cat with white/cream fur, blue eyes, a pink satin bow and multi-strand pearl necklace, the dog with fluffy golden fur, front paws on the desk\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"fluffy white cat (possibly Ragdoll or similar breed)... pink satin bow tie, multi-strand pearl necklace\"\n        }\n      ],\n      \"rationale\": \"The enhanced prompt accurately preserves the visual attributes of both subjects as described in the evidence and original prompt. The consistent description of fur, eyes, accessories, and positions across all time points ensures no drift or inconsistency.\"\n    },\n    {\n      \"criterion\": \"ANL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"Actions form a coherent causal progression: the cat requests a seat change, the teacher asks why, the cat blames the dog, the dog retorts, escalates, and the cat reacts with embarrassment. Each action logically follows the previous, with appropriate reactions and no dangling events.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"At 00:02.500, both pets hold their poses... At 00:05.000, the cat turns its head slightly toward the dog with a disdainful expression... At 00:07.500, the dog turns its head toward the cat... At 00:10.000, the dog gives a small emphatic head bob... At 00:12.500, the cat shakes its head, raises a paw to cover its face, and sighs\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"0-2.5s 猫：老师我想换座位... 5-7.5s 猫：我旁边坐了一只傻狗... 7.5-10s 狗狗：你旁边才坐了只傻狗... 10-12.5s 狗狗：大傻狗... 12.5-15s 猫摇头捂脸叹气\"\n        }\n      ],\n      \"rationale\": \"The sequence of dialogue and reactions is causally linked and plausible. The cat’s request leads to the teacher’s question, which triggers the cat’s complaint, prompting the dog’s rebuttal and escalation, culminating in the cat’s embarrassed reaction. No incompatible or unexplained actions are introduced.\"\n    },\n    {\n      \"criterion\": \"TSC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"minor\",\n      \"issue\": \"The enhanced prompt adds a slow push-in at the start, which is not mentioned in the original prompt. While this does not contradict the original, it introduces a new temporal element not requested. Additionally, the original prompt specifies 12.5-15s for the cat’s final reaction, while the enhanced prompt ends at 00:12.500, implying the final 2.5s are silent or static — a minor deviation from the original’s implied duration.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"a static shot with a very slow push-in at slow speed frames a golden retriever puppy... At 00:12.500, the cat shakes its head... the frame settles on this two-shot composition\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"12.5-15s 猫摇头捂脸叹气\"\n        }\n      ],\n      \"rationale\": \"The push-in is a minor elaboration not present in the original, but does not break chronology. The timing at 00:12.500 may imply the final 2.5s are static, whereas the original suggests the action continues until 15s. This is a minor deviation, not a major contradiction.\"\n    },\n    {\n      \"criterion\": \"SPC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"Location, screen direction, and relative positions are consistent. Both animals remain seated side-by-side at the same desk throughout. The camera maintains a frontal, medium shot with shallow depth of field. No unexplained position swaps or movement paths are introduced.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"a static shot with a very slow push-in... golden retriever puppy on the left and a ragdoll cat on the right sitting side by side at a wooden school desk\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"dog_1 and cat_1 are seated side-by-side at the same desk\"\n        }\n      ],\n      \"rationale\": \"The spatial relationships are preserved: left/right positioning, same desk, frontal view. The slow push-in is a controlled camera movement that does not alter subject positions or orientation. No impossible trajectories or exits are introduced.\"\n    },\n    {\n      \"criterion\": \"PL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"All actions are physically plausible within the 3D CG animation context. The cat’s head tilt, paw raise, and sigh; the dog’s head bob and bark-like mouth movement — all are consistent with animal anatomy and motion. No gravity violations, object permanence issues, or bodily impossibilities are present.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"the cat raises a paw slightly... the dog's ears perk up... the dog turns its head toward the cat with slight bark-like mouth movement... the cat shakes its head, raises a paw to cover its face, and sighs\"\n        }\n      ],\n      \"rationale\": \"The described movements are within the realm of plausible animal behavior in a stylized 3D animation. The prompt does not attempt to depict impossible physics, and all actions are consistent with the medium.\"\n    },\n    {\n      \"criterion\": \"AVS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"Dialogue, subtitles, and sound effects are temporally and semantically aligned. Each line of dialogue is paired with the correct speaker (cat, dog, teacher), appears at the correct timestamp, and is accompanied by matching subtitles. Sound effects (paw tap, huff, sigh) are placed at appropriate moments.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"At 00:02.500... off-screen female teacher's voice (S2) asks: <d>[Chinese] 为什么呀</d> with the subtitle \\\"为什么呀\\\" displayed. At 00:05.000, the cat turns its head... says: <d>[Chinese] 我旁边坐了一只傻狗</d> with the subtitle \\\"我旁边坐了一只傻狗\\\"\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"0-2.5s 猫：老师我想换座位... 2.5-5s 画外音老师：为什么呀... 5-7.5s 猫：我旁边坐了一只傻狗\"\n        }\n      ],\n      \"rationale\": \"Each dialogue line is correctly attributed to the speaker, appears at the specified time, and is accompanied by the corresponding subtitle. The soundscape description aligns with the actions (e.g., sigh at 00:12.500). No misaligned lip-sync or premature effects are described.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt maintains strong internal consistency with the original instruction, preserving subject identity, actions, chronology, and spatial relationships. Minor issues include slight elaboration beyond the original prompt (e.g., camera motion, detailed props) and a small inconsistency in the cat’s expression at 00:12.500 (prompt says 'shakes head, raises paw to cover face' while original only says '摇头捂脸叹气'), but these do not materially alter the core narrative or visual plan. No contradictions, attribute drift, or physics violations are present.",
+  "usage": {
+    "completion_tokens": 1907,
+    "prompt_tokens": 2879,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 4786
+  }
+}

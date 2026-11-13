@@ -1,0 +1,178 @@
+{
+  "candidate_hash": "ac30ced55ab0d2fa63470c6c511e797d6f208c5cdcd714ccc0978d9b92889771",
+  "case_key": "i2v:134",
+  "created_at": "2026-11-13T07:31:28+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "GSF",
+      "evidence": [
+        {
+          "quote": "要求必须真人第一人称手机手持拍摄视角，沉浸式vlog质感，自然日光照明，画面明亮清晰。",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "整段改成实拍晚间新闻口播，主播坐着念稿，不要动画角色。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Replaced the requested genre (immersive vlog) with a news broadcast, and removed all visual style constraints (first-person, handheld, natural daylight).",
+      "rationale": "The original prompt specifies a first-person, handheld, vlog-style video with natural daylight. The enhanced prompt explicitly replaces this with a news broadcast format, which is a genre and aesthetic mismatch. This is a major violation of GSF.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SAP",
+      "evidence": [
+        {
+          "quote": "真实儿童乐园充气城堡场景，真实小朋友出镜，使用真实道具",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "先写成只有一个主角，紧接着又写成这个主角同时变成五个外貌不同的人，并且互相对话。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Replaced the original subjects (children in inflatable castle) with a single news anchor who then splits into five different people, contradicting subject identity, count, and appearance.",
+      "rationale": "The original prompt requires real children in a specific setting. The enhanced prompt replaces them with a news anchor and then five different people, which is a complete substitution of subject identity and count. This is a major violation of SAP.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANF",
+      "evidence": [
+        {
+          "quote": "15秒短视频，节奏紧凑、动作夸张，呈现一个调皮小学生在充气城堡里“跑酷式”撒欢的全过程",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "时间倒过来：先给结尾，再跳到一个对不上的开头。中途插进一段无关的屋顶烟花。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Reversed the event order (ending first, then an unrelated beginning), added irrelevant events (roof fireworks), and contradicted the narrative intent of a child's playful run in an inflatable castle.",
+      "rationale": "The original prompt specifies a clear, chronological narrative of a child's actions in an inflatable castle. The enhanced prompt reverses the timeline, inserts unrelated content, and breaks the narrative flow. This is a major violation of ANF.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "DLI",
+      "evidence": [
+        {
+          "quote": "周围小朋友或者环境要跟第一人称的我有所互动。",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "主播坐着念稿",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "No dialogue or narration is specified in the original prompt, so no direct violation occurs, but the enhanced prompt introduces a news broadcast format which implies narration without specifying content.",
+      "rationale": "The original prompt does not specify any dialogue or narration, so there is no exact wording to preserve. However, the enhanced prompt introduces a news broadcast format which implies narration, which was not requested. This is a minor issue as it does not contradict existing requirements but adds unrequested content.",
+      "severity": "minor"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ARP",
+      "evidence": [
+        {
+          "quote": "真实儿童乐园充气城堡场景，真实小朋友出镜",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "主播坐着念稿",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original prompt implies silence or ambient park sounds, but the enhanced prompt introduces a news broadcast format which requires voiceover, contradicting the implied audio constraints.",
+      "rationale": "The original prompt does not specify audio, but the context implies ambient park sounds or silence. The enhanced prompt explicitly requires a news anchor reading a script, which introduces a new audio element (voiceover) not requested. This is a major violation of ARP.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CCP",
+      "evidence": [
+        {
+          "quote": "第一人称低机位手持视角",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "写成机位锁死，又写成镜头一直在晃。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Contradicted the requested camera constraints (first-person, handheld, low-angle) by introducing a static news broadcast camera and then adding '镜头一直在晃' (camera constantly shaking), creating conflicting requirements.",
+      "rationale": "The original prompt specifies a first-person, handheld, low-angle camera. The enhanced prompt contradicts this by introducing a static news camera and then adding constant shaking, which is incompatible with the original intent. This is a major violation of CCP.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "LCF",
+      "evidence": [
+        {
+          "quote": "自然日光照明，画面明亮清晰。",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "同一段写成正午暴晒，又写成深夜无光",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Contradicted the requested natural daylight lighting by introducing '晚间新闻' (evening news) and then '深夜无光' (deep night, no light), while also specifying '正午暴晒' (noon, intense sun), creating conflicting lighting conditions.",
+      "rationale": "The original prompt requires natural daylight. The enhanced prompt introduces multiple conflicting lighting conditions (evening, deep night, noon), which is a major violation of LCF.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SSP",
+      "evidence": [
+        {
+          "quote": "真实儿童乐园充气城堡场景",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "不要使用首帧里的人物、服装、姿态和场景，改成白棚里另一位年龄和性别都相反的陌生人。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Replaced the original setting (inflatable castle in a children's amusement park) with a white studio and a different person, contradicting the required background, layout, and spatial relations.",
+      "rationale": "The original prompt specifies a specific outdoor setting with children and an inflatable castle. The enhanced prompt replaces this with a white studio and a different person, which is a complete substitution of setting and spatial relations. This is a major violation of SSP.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "OTI",
+      "evidence": [
+        {
+          "quote": "整体风格：真实但戏剧化，突出孩子旺盛精力与充气城堡的极致弹性",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "不要使用首帧里的人物、服装、姿态和场景",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "No on-screen text is specified in the original prompt, and the enhanced prompt does not introduce any text, so no violation occurs.",
+      "rationale": "The original prompt does not specify any on-screen text, and the enhanced prompt does not introduce any. Therefore, there is no violation of OTI.",
+      "severity": "none"
+    }
+  ],
+  "dimension": "SF",
+  "dimension_score": 0,
+  "evidence_cache_key": "e92d72017c48fb31ac58c26a99febe84af5332dd598b17a8b53622075041217a",
+  "judge_cache_key": "a0ca24571ad14d7ab7be626329bd736d7e7015f9ebc418227c8be391591d0377",
+  "method": "weak-pe-original",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"SF\",\n  \"dimension_score\": 0,\n  \"summary\": \"Enhanced prompt completely violates semantic fidelity by rejecting all original requirements and introducing contradictory, infeasible, and unrelated elements. It replaces the first-person vlog style with a news broadcast, changes the subject to five conflicting identities, reverses time order, adds irrelevant content (roof fireworks), and contradicts lighting, camera, duration, and setting constraints. The prompt is intentionally designed to break every criterion.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"GSF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Replaced the requested genre (immersive vlog) with a news broadcast, and removed all visual style constraints (first-person, handheld, natural daylight).\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"要求必须真人第一人称手机手持拍摄视角，沉浸式vlog质感，自然日光照明，画面明亮清晰。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"整段改成实拍晚间新闻口播，主播坐着念稿，不要动画角色。\"\n        }\n      ],\n      \"rationale\": \"The original prompt specifies a first-person, handheld, vlog-style video with natural daylight. The enhanced prompt explicitly replaces this with a news broadcast format, which is a genre and aesthetic mismatch. This is a major violation of GSF.\"\n    },\n    {\n      \"criterion\": \"SAP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Replaced the original subjects (children in inflatable castle) with a single news anchor who then splits into five different people, contradicting subject identity, count, and appearance.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"真实儿童乐园充气城堡场景，真实小朋友出镜，使用真实道具\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"先写成只有一个主角，紧接着又写成这个主角同时变成五个外貌不同的人，并且互相对话。\"\n        }\n      ],\n      \"rationale\": \"The original prompt requires real children in a specific setting. The enhanced prompt replaces them with a news anchor and then five different people, which is a complete substitution of subject identity and count. This is a major violation of SAP.\"\n    },\n    {\n      \"criterion\": \"ANF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Reversed the event order (ending first, then an unrelated beginning), added irrelevant events (roof fireworks), and contradicted the narrative intent of a child's playful run in an inflatable castle.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"15秒短视频，节奏紧凑、动作夸张，呈现一个调皮小学生在充气城堡里“跑酷式”撒欢的全过程\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"时间倒过来：先给结尾，再跳到一个对不上的开头。中途插进一段无关的屋顶烟花。\"\n        }\n      ],\n      \"rationale\": \"The original prompt specifies a clear, chronological narrative of a child's actions in an inflatable castle. The enhanced prompt reverses the timeline, inserts unrelated content, and breaks the narrative flow. This is a major violation of ANF.\"\n    },\n    {\n      \"criterion\": \"DLI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"minor\",\n      \"issue\": \"No dialogue or narration is specified in the original prompt, so no direct violation occurs, but the enhanced prompt introduces a news broadcast format which implies narration without specifying content.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"周围小朋友或者环境要跟第一人称的我有所互动。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"主播坐着念稿\"\n        }\n      ],\n      \"rationale\": \"The original prompt does not specify any dialogue or narration, so there is no exact wording to preserve. However, the enhanced prompt introduces a news broadcast format which implies narration, which was not requested. This is a minor issue as it does not contradict existing requirements but adds unrequested content.\"\n    },\n    {\n      \"criterion\": \"ARP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original prompt implies silence or ambient park sounds, but the enhanced prompt introduces a news broadcast format which requires voiceover, contradicting the implied audio constraints.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"真实儿童乐园充气城堡场景，真实小朋友出镜\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"主播坐着念稿\"\n        }\n      ],\n      \"rationale\": \"The original prompt does not specify audio, but the context implies ambient park sounds or silence. The enhanced prompt explicitly requires a news anchor reading a script, which introduces a new audio element (voiceover) not requested. This is a major violation of ARP.\"\n    },\n    {\n      \"criterion\": \"CCP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Contradicted the requested camera constraints (first-person, handheld, low-angle) by introducing a static news broadcast camera and then adding '镜头一直在晃' (camera constantly shaking), creating conflicting requirements.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"第一人称低机位手持视角\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"写成机位锁死，又写成镜头一直在晃。\"\n        }\n      ],\n      \"rationale\": \"The original prompt specifies a first-person, handheld, low-angle camera. The enhanced prompt contradicts this by introducing a static news camera and then adding constant shaking, which is incompatible with the original intent. This is a major violation of CCP.\"\n    },\n    {\n      \"criterion\": \"LCF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Contradicted the requested natural daylight lighting by introducing '晚间新闻' (evening news) and then '深夜无光' (deep night, no light), while also specifying '正午暴晒' (noon, intense sun), creating conflicting lighting conditions.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"自然日光照明，画面明亮清晰。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"同一段写成正午暴晒，又写成深夜无光\"\n        }\n      ],\n      \"rationale\": \"The original prompt requires natural daylight. The enhanced prompt introduces multiple conflicting lighting conditions (evening, deep night, noon), which is a major violation of LCF.\"\n    },\n    {\n      \"criterion\": \"SSP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Replaced the original setting (inflatable castle in a children's amusement park) with a white studio and a different person, contradicting the required background, layout, and spatial relations.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"真实儿童乐园充气城堡场景\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"不要使用首帧里的人物、服装、姿态和场景，改成白棚里另一位年龄和性别都相反的陌生人。\"\n        }\n      ],\n      \"rationale\": \"The original prompt specifies a specific outdoor setting with children and an inflatable castle. The enhanced prompt replaces this with a white studio and a different person, which is a complete substitution of setting and spatial relations. This is a major violation of SSP.\"\n    },\n    {\n      \"criterion\": \"OTI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"No on-screen text is specified in the original prompt, and the enhanced prompt does not introduce any text, so no violation occurs.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"整体风格：真实但戏剧化，突出孩子旺盛精力与充气城堡的极致弹性\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"不要使用首帧里的人物、服装、姿态和场景\"\n        }\n      ],\n      \"rationale\": \"The original prompt does not specify any on-screen text, and the enhanced prompt does not introduce any. Therefore, there is no violation of OTI.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "Enhanced prompt completely violates semantic fidelity by rejecting all original requirements and introducing contradictory, infeasible, and unrelated elements. It replaces the first-person vlog style with a news broadcast, changes the subject to five conflicting identities, reverses time order, adds irrelevant content (roof fireworks), and contradicts lighting, camera, duration, and setting constraints. The prompt is intentionally designed to break every criterion.",
+  "usage": {
+    "completion_tokens": 1898,
+    "prompt_tokens": 3230,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 5128
+  }
+}

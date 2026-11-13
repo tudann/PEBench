@@ -1,0 +1,198 @@
+{
+  "candidate_hash": "ea4297f643764111423113114b47995da31f778118818c91e5dd51f554b3b93c",
+  "case_key": "r2v:053",
+  "created_at": "2026-11-13T08:32:27+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "GSF",
+      "evidence": [
+        {
+          "quote": "Generate a single shot... 120fps, slow motion... suited to the visual impact of a 5-second short video",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "The target video is a single continuous 5-second shot of high-impact cinematic fantasy combat, rendered in slow motion with cold high-contrast daylight and gritty realism",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "The enhanced prompt preserves the requested medium (single shot, slow-motion video), genre (cinematic fantasy combat), and aesthetic (gritty realism, high-contrast daylight). The visual style is compatible with the original instruction and does not introduce incompatible references.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SAP",
+      "evidence": [
+        {
+          "quote": "strictly match the core features of the two character images (armor, horns/ears, hairstyle, weapons)",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "<Subject 1> is the demon warrior from <Picture 1>: long messy black hair with white streaks, large curved black horns, pale skin, piercing light-blue eyes, scar under left eye, pointed ears, white bandage-wrapped hands, and sleek dark navy-blue segmented plate armor...",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "<Subject 2> is the tiger warrior from <Picture 2>: long wild golden-brown hair, tiger ears, orange-and-black tiger-striped face paint, dark brown studded leather warrior outfit... gripping a twisted wooden staff as his key weapon.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "All subject identities, appearances, attributes, and objects are preserved exactly as specified in the original prompt. The enhanced prompt explicitly matches core features (horns/ears, armor, hairstyle, weapons) from the reference images without substitution or omission.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANF",
+      "evidence": [
+        {
+          "quote": "Image 1 throws a punch at Image 2, Image 2 counterattacks, and Image 1 and Image 2 alternate offense and defense, with blocking and counterattacks, fully presenting the back-and-forth rhythm of attack, defense, and counterattack [5s]",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "<Subject 1> throws a heavy opening punch at <Subject 2>; <Subject 2> twists aside and counterattacks with his twisted wooden staff, and from 2–5s the two alternate offense and defense with blocks, staff counters, and evasive steps",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "The action sequence is preserved with correct event order: opening punch, evasion/counterattack, then alternating offense-defense rhythm. The enhanced prompt adds compatible elaboration (e.g., 'evasive steps', 'staff counters') without altering the core narrative intent or sequence.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "DLI",
+      "evidence": [
+        {
+          "quote": "Generate a single shot... [5s]",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "The target video is a single continuous 5-second shot... No dialogue, no on-screen text — pure action.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "The original prompt does not specify any dialogue or narration, and the enhanced prompt correctly preserves this by explicitly stating 'No dialogue, no on-screen text'. There is no paraphrasing or addition of speech content.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ARP",
+      "evidence": [
+        {
+          "quote": "Generate a single shot... 120fps, slow motion... suited to the visual impact of a 5-second short video",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Diegetic sound in this shot: crisp snow crunch underfoot, sharp impact thuds on armor and staff blocks, whooshes of snow spray, and rocks clattering and tumbling.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "non_diegetic_music: An intense, percussive cinematic combat score synchronized to the impact beats...",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The enhanced prompt adds detailed diegetic and non-diegetic sound design not explicitly requested in the original prompt, including specific sound effects (snow crunch, impact thuds, rocks clattering) and a percussive combat score. While compatible, this is an elaboration beyond the original instruction.",
+      "rationale": "The original prompt does not mention any sound constraints, so the addition of detailed audio design is not a contradiction. However, it is an elaboration that goes beyond the original scope. Since no sound constraints were violated, this is a minor issue.",
+      "severity": "minor"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CCP",
+      "evidence": [
+        {
+          "quote": "Camera design: add \"tracking shots + close-ups\" and let the AI automatically generate smooth camera movement to enhance the cinematic feel.",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "the camera performs a smooth continuous tracking movement circling the duel, pushing into tight close-ups on the fighters' faces, the bandaged fist, and the staff shaft at each impact, then pulling back out to follow the next exchange",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "The enhanced prompt preserves the requested camera design (tracking shots + close-ups) and adds compatible elaboration (circling movement, push-in close-ups) without overriding the original intent. The camera remains a single continuous shot as required.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "LCF",
+      "evidence": [
+        {
+          "quote": "use the snowy mountain environment from Image 3, adding environmental interactions such as \"snow spraying\" and \"rocks colliding\" to enhance realism.",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "cold high-contrast daylight and gritty realism; every impact produces visible snow spray and shockwave effects",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "light_sources_and_direction: sunlight from upper left, casting long shadows and highlighting ridges; color_temperature: cool; dominant_colors: [blue, gray, white]",
+          "source": "evidence_facts"
+        }
+      ],
+      "issue": "",
+      "rationale": "The enhanced prompt preserves the specified time of day (daylight), illumination (cold, high-contrast), and color palette (cool tones, blue/gray/white) from Image 3. Environmental interactions (snow spray, rocks colliding) are added without altering the defining lighting conditions.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SSP",
+      "evidence": [
+        {
+          "quote": "use the snowy mountain environment from Image 3",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "<Subject 3> is the snowy mountain pass environment from <Picture 3>: jagged rocky peaks, snow-covered valleys and slopes, dark rock ridges, clear pale-blue sky, and cold sunlight.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "The shot opens on <Subject 3>, the snowy mountain pass from <Picture 3>, jagged peaks and snow-covered slopes under cold pale-blue daylight, the composition anchored to <Picture 3>.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "The setting is preserved exactly as specified: snowy mountain pass with jagged peaks, dark rock ridges, and pale-blue sky. The spatial layout and relative positions are maintained, with environmental interactions (snow, rocks) added without altering the core setting.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "OTI",
+      "evidence": [
+        {
+          "quote": "Generate a single shot... [5s]",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "No dialogue, no on-screen text — pure action.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "onscreen_text: presence: false",
+          "source": "evidence_facts"
+        }
+      ],
+      "issue": "",
+      "rationale": "The original prompt does not specify any on-screen text, and the enhanced prompt correctly preserves this by explicitly stating 'no on-screen text'. The watermark '豆包AI生成' in Image 3 is noted as a non-scene element and not included in the video output.",
+      "severity": "none"
+    }
+  ],
+  "dimension": "SF",
+  "dimension_score": 95,
+  "evidence_cache_key": "25ad5fb7b510ed3ab92da595e813d11c3111ca7d07199b90b666cae4e882c153",
+  "judge_cache_key": "a0ca24571ad14d7ab7be626329bd736d7e7015f9ebc418227c8be391591d0377",
+  "method": "glm53_20261112_120702",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"SF\",\n  \"dimension_score\": 95,\n  \"summary\": \"The enhanced prompt preserves the core semantic intent of the original instruction with high fidelity. It accurately defines the two combatants and environment from the reference images, maintains the requested combat rhythm, slow-motion cinematic style, and environmental interactions. Minor issues include slight elaboration on camera movement and sound design beyond the original prompt, but these do not contradict or weaken the core requirements. The prompt correctly anchors the scene to Image 3 and preserves all specified visual and action elements.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"GSF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"Generate a single shot... 120fps, slow motion... suited to the visual impact of a 5-second short video\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"The target video is a single continuous 5-second shot of high-impact cinematic fantasy combat, rendered in slow motion with cold high-contrast daylight and gritty realism\"\n        }\n      ],\n      \"rationale\": \"The enhanced prompt preserves the requested medium (single shot, slow-motion video), genre (cinematic fantasy combat), and aesthetic (gritty realism, high-contrast daylight). The visual style is compatible with the original instruction and does not introduce incompatible references.\"\n    },\n    {\n      \"criterion\": \"SAP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"strictly match the core features of the two character images (armor, horns/ears, hairstyle, weapons)\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"<Subject 1> is the demon warrior from <Picture 1>: long messy black hair with white streaks, large curved black horns, pale skin, piercing light-blue eyes, scar under left eye, pointed ears, white bandage-wrapped hands, and sleek dark navy-blue segmented plate armor...\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"<Subject 2> is the tiger warrior from <Picture 2>: long wild golden-brown hair, tiger ears, orange-and-black tiger-striped face paint, dark brown studded leather warrior outfit... gripping a twisted wooden staff as his key weapon.\"\n        }\n      ],\n      \"rationale\": \"All subject identities, appearances, attributes, and objects are preserved exactly as specified in the original prompt. The enhanced prompt explicitly matches core features (horns/ears, armor, hairstyle, weapons) from the reference images without substitution or omission.\"\n    },\n    {\n      \"criterion\": \"ANF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"Image 1 throws a punch at Image 2, Image 2 counterattacks, and Image 1 and Image 2 alternate offense and defense, with blocking and counterattacks, fully presenting the back-and-forth rhythm of attack, defense, and counterattack [5s]\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"<Subject 1> throws a heavy opening punch at <Subject 2>; <Subject 2> twists aside and counterattacks with his twisted wooden staff, and from 2–5s the two alternate offense and defense with blocks, staff counters, and evasive steps\"\n        }\n      ],\n      \"rationale\": \"The action sequence is preserved with correct event order: opening punch, evasion/counterattack, then alternating offense-defense rhythm. The enhanced prompt adds compatible elaboration (e.g., 'evasive steps', 'staff counters') without altering the core narrative intent or sequence.\"\n    },\n    {\n      \"criterion\": \"DLI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"Generate a single shot... [5s]\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"The target video is a single continuous 5-second shot... No dialogue, no on-screen text — pure action.\"\n        }\n      ],\n      \"rationale\": \"The original prompt does not specify any dialogue or narration, and the enhanced prompt correctly preserves this by explicitly stating 'No dialogue, no on-screen text'. There is no paraphrasing or addition of speech content.\"\n    },\n    {\n      \"criterion\": \"ARP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"minor\",\n      \"issue\": \"The enhanced prompt adds detailed diegetic and non-diegetic sound design not explicitly requested in the original prompt, including specific sound effects (snow crunch, impact thuds, rocks clattering) and a percussive combat score. While compatible, this is an elaboration beyond the original instruction.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"Generate a single shot... 120fps, slow motion... suited to the visual impact of a 5-second short video\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Diegetic sound in this shot: crisp snow crunch underfoot, sharp impact thuds on armor and staff blocks, whooshes of snow spray, and rocks clattering and tumbling.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"non_diegetic_music: An intense, percussive cinematic combat score synchronized to the impact beats...\"\n        }\n      ],\n      \"rationale\": \"The original prompt does not mention any sound constraints, so the addition of detailed audio design is not a contradiction. However, it is an elaboration that goes beyond the original scope. Since no sound constraints were violated, this is a minor issue.\"\n    },\n    {\n      \"criterion\": \"CCP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"Camera design: add \\\"tracking shots + close-ups\\\" and let the AI automatically generate smooth camera movement to enhance the cinematic feel.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"the camera performs a smooth continuous tracking movement circling the duel, pushing into tight close-ups on the fighters' faces, the bandaged fist, and the staff shaft at each impact, then pulling back out to follow the next exchange\"\n        }\n      ],\n      \"rationale\": \"The enhanced prompt preserves the requested camera design (tracking shots + close-ups) and adds compatible elaboration (circling movement, push-in close-ups) without overriding the original intent. The camera remains a single continuous shot as required.\"\n    },\n    {\n      \"criterion\": \"LCF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"use the snowy mountain environment from Image 3, adding environmental interactions such as \\\"snow spraying\\\" and \\\"rocks colliding\\\" to enhance realism.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"cold high-contrast daylight and gritty realism; every impact produces visible snow spray and shockwave effects\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"light_sources_and_direction: sunlight from upper left, casting long shadows and highlighting ridges; color_temperature: cool; dominant_colors: [blue, gray, white]\"\n        }\n      ],\n      \"rationale\": \"The enhanced prompt preserves the specified time of day (daylight), illumination (cold, high-contrast), and color palette (cool tones, blue/gray/white) from Image 3. Environmental interactions (snow spray, rocks colliding) are added without altering the defining lighting conditions.\"\n    },\n    {\n      \"criterion\": \"SSP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"use the snowy mountain environment from Image 3\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"<Subject 3> is the snowy mountain pass environment from <Picture 3>: jagged rocky peaks, snow-covered valleys and slopes, dark rock ridges, clear pale-blue sky, and cold sunlight.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"The shot opens on <Subject 3>, the snowy mountain pass from <Picture 3>, jagged peaks and snow-covered slopes under cold pale-blue daylight, the composition anchored to <Picture 3>.\"\n        }\n      ],\n      \"rationale\": \"The setting is preserved exactly as specified: snowy mountain pass with jagged peaks, dark rock ridges, and pale-blue sky. The spatial layout and relative positions are maintained, with environmental interactions (snow, rocks) added without altering the core setting.\"\n    },\n    {\n      \"criterion\": \"OTI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"Generate a single shot... [5s]\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"No dialogue, no on-screen text — pure action.\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"onscreen_text: presence: false\"\n        }\n      ],\n      \"rationale\": \"The original prompt does not specify any on-screen text, and the enhanced prompt correctly preserves this by explicitly stating 'no on-screen text'. The watermark '豆包AI生成' in Image 3 is noted as a non-scene element and not included in the video output.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt preserves the core semantic intent of the original instruction with high fidelity. It accurately defines the two combatants and environment from the reference images, maintains the requested combat rhythm, slow-motion cinematic style, and environmental interactions. Minor issues include slight elaboration on camera movement and sound design beyond the original prompt, but these do not contradict or weaken the core requirements. The prompt correctly anchors the scene to Image 3 and preserves all specified visual and action elements.",
+  "usage": {
+    "completion_tokens": 2176,
+    "prompt_tokens": 4909,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 7085
+  }
+}

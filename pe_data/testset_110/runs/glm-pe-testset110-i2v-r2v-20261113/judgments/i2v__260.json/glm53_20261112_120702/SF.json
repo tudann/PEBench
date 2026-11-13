@@ -1,0 +1,178 @@
+{
+  "candidate_hash": "f3158ef03bf04b080edfbd13b94e73fb606d057d4d731543baa02090e08d8064",
+  "case_key": "i2v:260",
+  "created_at": "2026-11-13T08:18:09+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "GSF",
+      "evidence": [
+        {
+          "quote": "竖屏9:16短视频，AI萌宠搞笑剧情风格对话/字幕",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "3D CG cute-pet comedy skit, vertical composition, a static shot with a very slow push-in at slow speed",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The enhanced prompt adds a 'very slow push-in' camera motion not specified in the original prompt, which is a minor elaboration. The genre 'AI萌宠搞笑剧情风格' is preserved with 3D CG cute-pet comedy skit, vertical composition, and playful tone.",
+      "rationale": "The genre and aesthetic are preserved; the added camera motion is a minor, compatible elaboration that does not contradict the original static image reference or the comedic tone.",
+      "severity": "minor"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SAP",
+      "evidence": [
+        {
+          "quote": "golden retriever puppy and a fluffy white cat with blue eyes are sitting side-by-side at a wooden school desk",
+          "source": "evidence_facts"
+        },
+        {
+          "quote": "the cat with white/cream fur, blue eyes, a pink satin bow and multi-strand pearl necklace, the dog with fluffy golden fur, front paws on the desk",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Subject identities (golden retriever puppy, fluffy white cat), attributes (pink satin bow, pearl necklace, blue eyes, golden fur), and positions (side-by-side at wooden desk) are preserved exactly as in the image. No morphing or ghosting is allowed, matching the original instruction.",
+      "rationale": "All subject attributes and spatial relationships are accurately preserved from the reference image and original prompt.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANF",
+      "evidence": [
+        {
+          "quote": "0-2.5s 猫：老师我想换座位\n2.5-5s 画外音老师：为什么呀\n5-7.5s 猫：我旁边坐了一只傻狗\n7.5-10s 狗狗：你旁边才坐了只傻狗\n10-12.5s 狗狗：大傻狗\n12.5-15s 猫摇头捂脸叹气",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "At 0.00 seconds... cat raises a paw... says: <d>[Chinese] 老师我想换座位</d>... At 00:02.500... teacher asks: <d>[Chinese] 为什么呀</d>... At 00:05.000... cat says: <d>[Chinese] 我旁边坐了一只傻狗</d>... At 00:07.500... dog retorts: <d>[Chinese] 你旁边才坐了只傻狗</d>... At 00:10.000... dog repeats: <d>[Chinese] 大傻狗</d>... At 00:12.500... cat shakes its head, raises a paw to cover its face, and sighs",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The sequence of actions and dialogue events is preserved in correct order: cat requests seat change, teacher asks why, cat insults dog, dog retorts, dog repeats insult, cat reacts with despair. All events match the original timeline and narrative intent.",
+      "rationale": "The event chain is preserved exactly as specified, with no omissions, substitutions, or reversals.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "DLI",
+      "evidence": [
+        {
+          "quote": "老师我想换座位\n为什么呀\n我旁边坐了一只傻狗\n你旁边才坐了只傻狗\n大傻狗",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "<d>[Chinese] 老师我想换座位</d>... <d>[Chinese] 为什么呀</d>... <d>[Chinese] 我旁边坐了一只傻狗</d>... <d>[Chinese] 你旁边才坐了只傻狗</d>... <d>[Chinese] 大傻狗</d>",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "All dialogue lines are preserved in exact Chinese wording, with correct speaker attribution (cat, teacher, dog) and timing. Subtitles match the spoken lines exactly as required.",
+      "rationale": "Exact quotations are preserved without paraphrasing or translation; speaker attribution is maintained.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ARP",
+      "evidence": [
+        {
+          "quote": "猫（四川女娃口音）... 狗狗（四川男娃口音）",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "cheerful young female voice with a Sichuan accent (S1)... young male voice with a Sichuan accent (S3)... quiet classroom ambience... light, playful plucked ukulele notes",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt specifies vocalizations (cheerful young female voice with Sichuan accent for cat, young male voice with Sichuan accent for dog) and ambient sounds (quiet classroom, paw tap, huff, sigh). No music is forbidden; instead, light ukulele music is added, which is compatible with the comedic tone.",
+      "rationale": "Vocalization styles are preserved; ambient sounds are added appropriately; non-diegetic music is compatible with the genre and not prohibited.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CCP",
+      "evidence": [
+        {
+          "quote": "竖屏9:16短视频，画面清晰连贯，画面不出现穿模重影等问题",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "a static shot with a very slow push-in at slow speed",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original prompt does not specify camera motion, but the enhanced prompt adds a 'very slow push-in' at slow speed. This is a minor elaboration that does not override the static nature of the reference image but may slightly alter the visual experience.",
+      "rationale": "The camera motion is not explicitly required or forbidden in the original; the slow push-in is a compatible, minor addition that does not contradict the static image reference.",
+      "severity": "minor"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "LCF",
+      "evidence": [
+        {
+          "quote": "natural light from window on the right, creating soft shadows on the left wall... bright, even lighting suggests midday or early afternoon",
+          "source": "evidence_facts"
+        },
+        {
+          "quote": "soft daylight from the window with a beige curtain",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The lighting is preserved as soft daylight from the window with a beige curtain, warm to neutral color temperature, and bright, even illumination suggesting midday. Dominant colors (golden fur, white fur, light wood, pink bow) are consistent with the image.",
+      "rationale": "Lighting conditions and color palette are preserved without alteration.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SSP",
+      "evidence": [
+        {
+          "quote": "window with white frame and light beige curtains... view of brick building outside window... dog_1 and cat_1 are seated side-by-side at the same desk",
+          "source": "evidence_facts"
+        },
+        {
+          "quote": "sitting side by side at a wooden school desk in a bright classroom",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The setting is preserved as a classroom with a wooden school desk, window with beige curtain, and background elements (brick building outside). Subjects remain side-by-side at the desk with no spatial relation changes.",
+      "rationale": "All spatial relations and background elements are preserved as in the reference image.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "OTI",
+      "evidence": [
+        {
+          "quote": "exact_visible_transcription: '豆包AI生成', location: bottom right corner",
+          "source": "evidence_facts"
+        },
+        {
+          "quote": "subtitle reading \"老师我想换座位\" appears at the bottom of the frame... subtitle \"为什么呀\" displayed... subtitle \"我旁边坐了一只傻狗\"... subtitle \"你旁边才坐了只傻狗\"... subtitle \"大傻狗\"",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The watermark '豆包AI生成' is preserved in the bottom-right corner. Subtitles are added exactly as spoken, matching the dialogue timing and wording.",
+      "rationale": "Visible text is preserved exactly; subtitles are added as required without substitution or omission.",
+      "severity": "none"
+    }
+  ],
+  "dimension": "SF",
+  "dimension_score": 95,
+  "evidence_cache_key": "e8fbe91c80a0cc726aaf4df3ded01d24982e17418fbede9298afbd95f8af9b29",
+  "judge_cache_key": "a0ca24571ad14d7ab7be626329bd736d7e7015f9ebc418227c8be391591d0377",
+  "method": "glm53_20261112_120702",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"SF\",\n  \"dimension_score\": 95,\n  \"summary\": \"The enhanced prompt preserves the core semantic intent of the original instruction with high fidelity, accurately reflecting the genre, subjects, actions, dialogue, and visual style. Minor issues include slight elaboration on camera motion (slow push-in) not in the original, and a more detailed description of the classroom environment beyond the image. No major contradictions or omissions are present. The watermark and character attributes are preserved, and the dialogue is accurately transcribed with speaker attribution and subtitles. The only notable deviation is the addition of a slow push-in camera movement, which is not specified in the original prompt but is compatible with the static image reference.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"GSF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"minor\",\n      \"issue\": \"The enhanced prompt adds a 'very slow push-in' camera motion not specified in the original prompt, which is a minor elaboration. The genre 'AI萌宠搞笑剧情风格' is preserved with 3D CG cute-pet comedy skit, vertical composition, and playful tone.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"竖屏9:16短视频，AI萌宠搞笑剧情风格对话/字幕\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"3D CG cute-pet comedy skit, vertical composition, a static shot with a very slow push-in at slow speed\"\n        }\n      ],\n      \"rationale\": \"The genre and aesthetic are preserved; the added camera motion is a minor, compatible elaboration that does not contradict the original static image reference or the comedic tone.\"\n    },\n    {\n      \"criterion\": \"SAP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"Subject identities (golden retriever puppy, fluffy white cat), attributes (pink satin bow, pearl necklace, blue eyes, golden fur), and positions (side-by-side at wooden desk) are preserved exactly as in the image. No morphing or ghosting is allowed, matching the original instruction.\",\n      \"evidence\": [\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"golden retriever puppy and a fluffy white cat with blue eyes are sitting side-by-side at a wooden school desk\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"the cat with white/cream fur, blue eyes, a pink satin bow and multi-strand pearl necklace, the dog with fluffy golden fur, front paws on the desk\"\n        }\n      ],\n      \"rationale\": \"All subject attributes and spatial relationships are accurately preserved from the reference image and original prompt.\"\n    },\n    {\n      \"criterion\": \"ANF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"The sequence of actions and dialogue events is preserved in correct order: cat requests seat change, teacher asks why, cat insults dog, dog retorts, dog repeats insult, cat reacts with despair. All events match the original timeline and narrative intent.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"0-2.5s 猫：老师我想换座位\\n2.5-5s 画外音老师：为什么呀\\n5-7.5s 猫：我旁边坐了一只傻狗\\n7.5-10s 狗狗：你旁边才坐了只傻狗\\n10-12.5s 狗狗：大傻狗\\n12.5-15s 猫摇头捂脸叹气\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"At 0.00 seconds... cat raises a paw... says: <d>[Chinese] 老师我想换座位</d>... At 00:02.500... teacher asks: <d>[Chinese] 为什么呀</d>... At 00:05.000... cat says: <d>[Chinese] 我旁边坐了一只傻狗</d>... At 00:07.500... dog retorts: <d>[Chinese] 你旁边才坐了只傻狗</d>... At 00:10.000... dog repeats: <d>[Chinese] 大傻狗</d>... At 00:12.500... cat shakes its head, raises a paw to cover its face, and sighs\"\n        }\n      ],\n      \"rationale\": \"The event chain is preserved exactly as specified, with no omissions, substitutions, or reversals.\"\n    },\n    {\n      \"criterion\": \"DLI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"All dialogue lines are preserved in exact Chinese wording, with correct speaker attribution (cat, teacher, dog) and timing. Subtitles match the spoken lines exactly as required.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"老师我想换座位\\n为什么呀\\n我旁边坐了一只傻狗\\n你旁边才坐了只傻狗\\n大傻狗\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"<d>[Chinese] 老师我想换座位</d>... <d>[Chinese] 为什么呀</d>... <d>[Chinese] 我旁边坐了一只傻狗</d>... <d>[Chinese] 你旁边才坐了只傻狗</d>... <d>[Chinese] 大傻狗</d>\"\n        }\n      ],\n      \"rationale\": \"Exact quotations are preserved without paraphrasing or translation; speaker attribution is maintained.\"\n    },\n    {\n      \"criterion\": \"ARP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"The prompt specifies vocalizations (cheerful young female voice with Sichuan accent for cat, young male voice with Sichuan accent for dog) and ambient sounds (quiet classroom, paw tap, huff, sigh). No music is forbidden; instead, light ukulele music is added, which is compatible with the comedic tone.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"猫（四川女娃口音）... 狗狗（四川男娃口音）\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"cheerful young female voice with a Sichuan accent (S1)... young male voice with a Sichuan accent (S3)... quiet classroom ambience... light, playful plucked ukulele notes\"\n        }\n      ],\n      \"rationale\": \"Vocalization styles are preserved; ambient sounds are added appropriately; non-diegetic music is compatible with the genre and not prohibited.\"\n    },\n    {\n      \"criterion\": \"CCP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"minor\",\n      \"issue\": \"The original prompt does not specify camera motion, but the enhanced prompt adds a 'very slow push-in' at slow speed. This is a minor elaboration that does not override the static nature of the reference image but may slightly alter the visual experience.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"竖屏9:16短视频，画面清晰连贯，画面不出现穿模重影等问题\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"a static shot with a very slow push-in at slow speed\"\n        }\n      ],\n      \"rationale\": \"The camera motion is not explicitly required or forbidden in the original; the slow push-in is a compatible, minor addition that does not contradict the static image reference.\"\n    },\n    {\n      \"criterion\": \"LCF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"The lighting is preserved as soft daylight from the window with a beige curtain, warm to neutral color temperature, and bright, even illumination suggesting midday. Dominant colors (golden fur, white fur, light wood, pink bow) are consistent with the image.\",\n      \"evidence\": [\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"natural light from window on the right, creating soft shadows on the left wall... bright, even lighting suggests midday or early afternoon\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"soft daylight from the window with a beige curtain\"\n        }\n      ],\n      \"rationale\": \"Lighting conditions and color palette are preserved without alteration.\"\n    },\n    {\n      \"criterion\": \"SSP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"The setting is preserved as a classroom with a wooden school desk, window with beige curtain, and background elements (brick building outside). Subjects remain side-by-side at the desk with no spatial relation changes.\",\n      \"evidence\": [\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"window with white frame and light beige curtains... view of brick building outside window... dog_1 and cat_1 are seated side-by-side at the same desk\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"sitting side by side at a wooden school desk in a bright classroom\"\n        }\n      ],\n      \"rationale\": \"All spatial relations and background elements are preserved as in the reference image.\"\n    },\n    {\n      \"criterion\": \"OTI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"The watermark '豆包AI生成' is preserved in the bottom-right corner. Subtitles are added exactly as spoken, matching the dialogue timing and wording.\",\n      \"evidence\": [\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"exact_visible_transcription: '豆包AI生成', location: bottom right corner\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"subtitle reading \\\"老师我想换座位\\\" appears at the bottom of the frame... subtitle \\\"为什么呀\\\" displayed... subtitle \\\"我旁边坐了一只傻狗\\\"... subtitle \\\"你旁边才坐了只傻狗\\\"... subtitle \\\"大傻狗\\\"\"\n        }\n      ],\n      \"rationale\": \"Visible text is preserved exactly; subtitles are added as required without substitution or omission.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt preserves the core semantic intent of the original instruction with high fidelity, accurately reflecting the genre, subjects, actions, dialogue, and visual style. Minor issues include slight elaboration on camera motion (slow push-in) not in the original, and a more detailed description of the classroom environment beyond the image. No major contradictions or omissions are present. The watermark and character attributes are preserved, and the dialogue is accurately transcribed with speaker attribution and subtitles. The only notable deviation is the addition of a slow push-in camera movement, which is not specified in the original prompt but is compatible with the static image reference.",
+  "usage": {
+    "completion_tokens": 2291,
+    "prompt_tokens": 3003,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 5294
+  }
+}

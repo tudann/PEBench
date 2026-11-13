@@ -1,0 +1,170 @@
+{
+  "candidate_hash": "99332d45c944a6bfc4f813bb9ef4a87d0dde4de5ef425c86c2ec1ab1efa21aa0",
+  "case_key": "t2v:394",
+  "created_at": "2026-11-13T08:21:47+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "GSF",
+      "evidence": [
+        {
+          "quote": "DreamWorks-inspired 3D animated clip.",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Replace the whole video with a live-action news anchor reading a script, with no animated character.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Replaced the requested 'DreamWorks-inspired 3D animated clip' with a live-action news anchor, changing the medium and genre entirely.",
+      "rationale": "The original request specifies a 3D animated style; the enhanced prompt explicitly rejects animation and replaces it with live-action, which is a fundamental genre and medium substitution.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SAP",
+      "evidence": [
+        {
+          "quote": "The main character is a cute everyday object turned into a 3D animated mascot...",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "First state that there is one protagonist, then state that this same protagonist appears simultaneously as five different-looking people who talk to each other.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Dropped the requested character identity (a cute everyday object turned into a mascot) and replaced it with a protagonist who simultaneously appears as five different-looking people.",
+      "rationale": "The original character is a single, defined animated object; the enhanced prompt introduces a contradictory, impossible identity structure that violates the subject's identity and count.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANF",
+      "evidence": [
+        {
+          "quote": "Reverse the timeline: show the ending first, then cut to a beginning that does not match. Cut away in the middle to a soccer celebration.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Reversed the timeline (showing ending first, then a mismatched beginning), added an unrelated soccer celebration, and introduced contradictory temporal events.",
+      "rationale": "The original prompt implies a linear, coherent narrative with a single character speaking; the enhanced prompt introduces a non-linear, disjointed, and unrelated event sequence that contradicts the narrative intent.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "DLI",
+      "evidence": [
+        {
+          "quote": "Dialogue: \"Honestly, that’s not easy! There are too many unforgettable moments.\"",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "live-action news anchor reading a script",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Dropped the exact dialogue in Malayalam and replaced it with unspecified news anchor script, violating the required wording and language.",
+      "rationale": "The original requires specific dialogue in Malayalam with accurate mouth movement; the enhanced prompt removes this entirely, replacing it with an unspecified script, which is a direct violation.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ARP",
+      "evidence": [
+        {
+          "quote": "Gentle upbeat background music with faint room tone.",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Replace the whole video with a live-action news anchor reading a script",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Dropped the requested gentle upbeat background music and room tone, and replaced it with no specified audio, violating the sound constraints.",
+      "rationale": "The original specifies music and ambience; the enhanced prompt does not preserve these, and introduces a new audio context (news anchor) without specifying if music is present or absent, thus violating the requirement.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CCP",
+      "evidence": [
+        {
+          "quote": "gradual forward camera move",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Describe that same moment as... a locked camera and a camera that never stops shaking. Set the total runtime to 3 seconds, while also making every shot last 27 seconds.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Dropped the requested gradual forward camera move and replaced it with contradictory camera instructions (locked vs. never stops shaking), and added impossible shot durations.",
+      "rationale": "The original specifies a single, smooth camera movement; the enhanced prompt introduces mutually exclusive camera behaviors and logically impossible timing (3s total runtime with 27s shots), which overrides the explicit camera intent.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "LCF",
+      "evidence": [
+        {
+          "quote": "golden daylight spilling through a nearby window",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Describe that same moment as harsh noon sun and as a lightless night",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Replaced the specified golden daylight with contradictory lighting conditions (harsh noon sun and lightless night) in the same moment.",
+      "rationale": "The original specifies a consistent lighting condition; the enhanced prompt introduces mutually exclusive lighting states simultaneously, which contradicts the requested illumination and time of day.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SSP",
+      "evidence": [
+        {
+          "quote": "Set it inside a snug indoor setting with golden daylight spilling through a nearby window, delicate shading, and a cinematic blurred background.",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Replace the whole video with a live-action news anchor... Cut away in the middle to a soccer celebration.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Dropped the snug indoor setting with cinematic blurred background and replaced it with unspecified live-action news studio and soccer celebration, violating setting and background constraints.",
+      "rationale": "The original setting is a specific indoor environment; the enhanced prompt replaces it with unrelated, unspecified locations, violating the setting and background requirements.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "OTI",
+      "evidence": [
+        {
+          "quote": "No flickering, shaking, visual glitches, brand marks, or watermarks.",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "No visible text (titles, signs, subtitles) is requested in the original prompt, so no violation occurs, but the enhanced prompt does not introduce any text either.",
+      "rationale": "The original prompt does not specify any visible text, so this criterion is not violated. However, the enhanced prompt also does not introduce any text, so no issue arises. This is a minor issue only because the criterion is not triggered by the original request.",
+      "severity": "minor"
+    }
+  ],
+  "dimension": "SF",
+  "dimension_score": 0,
+  "evidence_cache_key": "54d38b9fee4d1df01796d2be275c060eeaa72f8cb3eb38481a84d780f23934b4",
+  "judge_cache_key": "a0ca24571ad14d7ab7be626329bd736d7e7015f9ebc418227c8be391591d0377",
+  "method": "weak-pe-original",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"SF\",\n  \"dimension_score\": 0,\n  \"summary\": \"The enhanced prompt completely contradicts and replaces the original instruction across all semantic dimensions. It negates the requested genre, medium, character, setting, actions, dialogue, camera, lighting, and duration, introducing incompatible and logically impossible requirements. This constitutes a total failure of semantic fidelity.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"GSF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Replaced the requested 'DreamWorks-inspired 3D animated clip' with a live-action news anchor, changing the medium and genre entirely.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"DreamWorks-inspired 3D animated clip.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Replace the whole video with a live-action news anchor reading a script, with no animated character.\"\n        }\n      ],\n      \"rationale\": \"The original request specifies a 3D animated style; the enhanced prompt explicitly rejects animation and replaces it with live-action, which is a fundamental genre and medium substitution.\"\n    },\n    {\n      \"criterion\": \"SAP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Dropped the requested character identity (a cute everyday object turned into a mascot) and replaced it with a protagonist who simultaneously appears as five different-looking people.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"The main character is a cute everyday object turned into a 3D animated mascot...\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"First state that there is one protagonist, then state that this same protagonist appears simultaneously as five different-looking people who talk to each other.\"\n        }\n      ],\n      \"rationale\": \"The original character is a single, defined animated object; the enhanced prompt introduces a contradictory, impossible identity structure that violates the subject's identity and count.\"\n    },\n    {\n      \"criterion\": \"ANF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Reversed the timeline (showing ending first, then a mismatched beginning), added an unrelated soccer celebration, and introduced contradictory temporal events.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Reverse the timeline: show the ending first, then cut to a beginning that does not match. Cut away in the middle to a soccer celebration.\"\n        }\n      ],\n      \"rationale\": \"The original prompt implies a linear, coherent narrative with a single character speaking; the enhanced prompt introduces a non-linear, disjointed, and unrelated event sequence that contradicts the narrative intent.\"\n    },\n    {\n      \"criterion\": \"DLI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Dropped the exact dialogue in Malayalam and replaced it with unspecified news anchor script, violating the required wording and language.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"Dialogue: \\\"Honestly, that’s not easy! There are too many unforgettable moments.\\\"\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"live-action news anchor reading a script\"\n        }\n      ],\n      \"rationale\": \"The original requires specific dialogue in Malayalam with accurate mouth movement; the enhanced prompt removes this entirely, replacing it with an unspecified script, which is a direct violation.\"\n    },\n    {\n      \"criterion\": \"ARP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Dropped the requested gentle upbeat background music and room tone, and replaced it with no specified audio, violating the sound constraints.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"Gentle upbeat background music with faint room tone.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Replace the whole video with a live-action news anchor reading a script\"\n        }\n      ],\n      \"rationale\": \"The original specifies music and ambience; the enhanced prompt does not preserve these, and introduces a new audio context (news anchor) without specifying if music is present or absent, thus violating the requirement.\"\n    },\n    {\n      \"criterion\": \"CCP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Dropped the requested gradual forward camera move and replaced it with contradictory camera instructions (locked vs. never stops shaking), and added impossible shot durations.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"gradual forward camera move\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Describe that same moment as... a locked camera and a camera that never stops shaking. Set the total runtime to 3 seconds, while also making every shot last 27 seconds.\"\n        }\n      ],\n      \"rationale\": \"The original specifies a single, smooth camera movement; the enhanced prompt introduces mutually exclusive camera behaviors and logically impossible timing (3s total runtime with 27s shots), which overrides the explicit camera intent.\"\n    },\n    {\n      \"criterion\": \"LCF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Replaced the specified golden daylight with contradictory lighting conditions (harsh noon sun and lightless night) in the same moment.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"golden daylight spilling through a nearby window\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Describe that same moment as harsh noon sun and as a lightless night\"\n        }\n      ],\n      \"rationale\": \"The original specifies a consistent lighting condition; the enhanced prompt introduces mutually exclusive lighting states simultaneously, which contradicts the requested illumination and time of day.\"\n    },\n    {\n      \"criterion\": \"SSP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Dropped the snug indoor setting with cinematic blurred background and replaced it with unspecified live-action news studio and soccer celebration, violating setting and background constraints.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"Set it inside a snug indoor setting with golden daylight spilling through a nearby window, delicate shading, and a cinematic blurred background.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Replace the whole video with a live-action news anchor... Cut away in the middle to a soccer celebration.\"\n        }\n      ],\n      \"rationale\": \"The original setting is a specific indoor environment; the enhanced prompt replaces it with unrelated, unspecified locations, violating the setting and background requirements.\"\n    },\n    {\n      \"criterion\": \"OTI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"minor\",\n      \"issue\": \"No visible text (titles, signs, subtitles) is requested in the original prompt, so no violation occurs, but the enhanced prompt does not introduce any text either.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"No flickering, shaking, visual glitches, brand marks, or watermarks.\"\n        }\n      ],\n      \"rationale\": \"The original prompt does not specify any visible text, so this criterion is not violated. However, the enhanced prompt also does not introduce any text, so no issue arises. This is a minor issue only because the criterion is not triggered by the original request.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt completely contradicts and replaces the original instruction across all semantic dimensions. It negates the requested genre, medium, character, setting, actions, dialogue, camera, lighting, and duration, introducing incompatible and logically impossible requirements. This constitutes a total failure of semantic fidelity.",
+  "usage": {
+    "completion_tokens": 1661,
+    "prompt_tokens": 1185,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 2846
+  }
+}

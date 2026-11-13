@@ -1,0 +1,123 @@
+{
+  "candidate_hash": "63dd9c18e477930470b7b518cddcbd1c13228ffeec7c12130ca7e5f1a2a219d1",
+  "case_key": "t2v:105",
+  "created_at": "2026-11-13T07:30:07+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "SAC",
+      "evidence": [
+        {
+          "quote": "已成长为成年的黑冠长臂猿的它",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "这个主角同时变成五个外貌不同的人，并且互相对话",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "主体身份从单一成年黑冠长臂猿被替换为五个外貌不同的人，且同时存在并对话，违反了原始指令中明确的单一主体身份和动物属性。",
+      "rationale": "原始指令明确指定主体为‘它’，即单一个体黑冠长臂猿，而增强提示强行将其变为五个不同人类，且互相对话，这在物种、数量和身份上构成根本性矛盾，导致主体属性完全漂移。",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANL",
+      "evidence": [
+        {
+          "quote": "发出高亢绵长…啼鸣。它沿着垂落的藤条与交错的树枝灵活腾跃，以特别的鸣声传情，用轻盈矫健的动作展现生命力，向倾心的对象表达爱意；对方循声应和，随后两只长臂猿并肩掠过层层翠绿林冠",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "中途插进一段无关的海底寻宝",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "动作序列被完全打乱，原始指令中‘鸣叫→腾跃→传情→应和→并肩掠过’的因果链被破坏，代之以无逻辑的对话和海底寻宝，缺乏任何合理的动作衔接或因果关系。",
+      "rationale": "原始动作序列具有清晰的浪漫叙事逻辑，而增强提示插入无关情节（海底寻宝）并破坏主体行为动机，导致动作之间无因果绑定，形成断裂和无意义的事件堆叠。",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "TSC",
+      "evidence": [
+        {
+          "quote": "时间倒过来：先给结尾，再跳到一个对不上的开头。总时长写成3秒，同时又要求每个分镜各自持续27秒",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "时间顺序被倒置（先结尾再开头），且总时长设定为3秒，同时要求每个分镜持续27秒，时间维度自相矛盾，无法实现。",
+      "rationale": "3秒总时长与每个分镜27秒的要求在数学上不可调和，且时间倒置导致事件顺序混乱，破坏了任何可能的叙事或视觉连贯性。",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SPC",
+      "evidence": [
+        {
+          "quote": "在茂密热带森林的高处枝梢间",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "中途插进一段无关的海底寻宝。写成机位锁死，又写成镜头一直在晃",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "场景从热带森林突然切换到海底，且镜头要求从‘锁死’变为‘一直在晃’，空间和镜头运动完全不一致，无法形成连贯的视觉路径。",
+      "rationale": "原始场景为森林高处，增强提示插入海底场景，且镜头运动要求矛盾，导致空间位置和视角无法衔接，违反基本的空间连续性原则。",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "PL",
+      "evidence": [
+        {
+          "quote": "这个主角同时变成五个外貌不同的人，并且互相对话",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "总时长写成3秒，同时又要求每个分镜各自持续27秒",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "一个生物同时变成五个不同人类并对话，违背生物学和物理现实；同时要求在3秒内完成27秒分镜，违反时间物理规律。",
+      "rationale": "主体同时变为五个人类在现实中不可能，且时间要求自相矛盾，违反基本物理和因果法则，即使在幻想设定中也未建立任何规则支持。",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "AVS",
+      "evidence": [
+        {
+          "quote": "发出高亢绵长、极具海南黑冠长臂猿特征的啼鸣",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "整段改成完全无声的黑场",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "原始指令要求动物啼鸣，增强提示要求‘完全无声的黑场’，且插入无关对话和海底场景，导致声音与视觉内容完全脱节，无任何对齐。",
+      "rationale": "原始任务为动物声音生成，增强提示要求无声黑场，且插入人类对话，导致声音与画面内容完全错位，无法实现视听同步。",
+      "severity": "major"
+    }
+  ],
+  "dimension": "IC",
+  "dimension_score": 0,
+  "evidence_cache_key": "ccf5fa76b0ed8013ba37e42739b9ccc97cdc4811eaceec09b39493da7325455c",
+  "judge_cache_key": "438d7e9fd7332b1041db3e2c26d42cb3fe828e0d369fb59490f6650aee59e97d",
+  "method": "weak-pe-original",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"IC\",\n  \"dimension_score\": 0,\n  \"summary\": \"增强提示完全违背原始指令的主体、动作、场景和时序要求，引入多重矛盾、不一致和不可能的设定，导致内部一致性彻底崩溃。主体身份、数量、动作、时间、空间、镜头和时长等所有维度均出现严重冲突，无法形成任何连贯的叙事或视觉逻辑。\",\n  \"criteria\": [\n    {\n      \"criterion\": \"SAC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"主体身份从单一成年黑冠长臂猿被替换为五个外貌不同的人，且同时存在并对话，违反了原始指令中明确的单一主体身份和动物属性。\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"已成长为成年的黑冠长臂猿的它\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"这个主角同时变成五个外貌不同的人，并且互相对话\"\n        }\n      ],\n      \"rationale\": \"原始指令明确指定主体为‘它’，即单一个体黑冠长臂猿，而增强提示强行将其变为五个不同人类，且互相对话，这在物种、数量和身份上构成根本性矛盾，导致主体属性完全漂移。\"\n    },\n    {\n      \"criterion\": \"ANL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"动作序列被完全打乱，原始指令中‘鸣叫→腾跃→传情→应和→并肩掠过’的因果链被破坏，代之以无逻辑的对话和海底寻宝，缺乏任何合理的动作衔接或因果关系。\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"发出高亢绵长…啼鸣。它沿着垂落的藤条与交错的树枝灵活腾跃，以特别的鸣声传情，用轻盈矫健的动作展现生命力，向倾心的对象表达爱意；对方循声应和，随后两只长臂猿并肩掠过层层翠绿林冠\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"中途插进一段无关的海底寻宝\"\n        }\n      ],\n      \"rationale\": \"原始动作序列具有清晰的浪漫叙事逻辑，而增强提示插入无关情节（海底寻宝）并破坏主体行为动机，导致动作之间无因果绑定，形成断裂和无意义的事件堆叠。\"\n    },\n    {\n      \"criterion\": \"TSC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"时间顺序被倒置（先结尾再开头），且总时长设定为3秒，同时要求每个分镜持续27秒，时间维度自相矛盾，无法实现。\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"时间倒过来：先给结尾，再跳到一个对不上的开头。总时长写成3秒，同时又要求每个分镜各自持续27秒\"\n        }\n      ],\n      \"rationale\": \"3秒总时长与每个分镜27秒的要求在数学上不可调和，且时间倒置导致事件顺序混乱，破坏了任何可能的叙事或视觉连贯性。\"\n    },\n    {\n      \"criterion\": \"SPC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"场景从热带森林突然切换到海底，且镜头要求从‘锁死’变为‘一直在晃’，空间和镜头运动完全不一致，无法形成连贯的视觉路径。\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"在茂密热带森林的高处枝梢间\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"中途插进一段无关的海底寻宝。写成机位锁死，又写成镜头一直在晃\"\n        }\n      ],\n      \"rationale\": \"原始场景为森林高处，增强提示插入海底场景，且镜头运动要求矛盾，导致空间位置和视角无法衔接，违反基本的空间连续性原则。\"\n    },\n    {\n      \"criterion\": \"PL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"一个生物同时变成五个不同人类并对话，违背生物学和物理现实；同时要求在3秒内完成27秒分镜，违反时间物理规律。\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"这个主角同时变成五个外貌不同的人，并且互相对话\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"总时长写成3秒，同时又要求每个分镜各自持续27秒\"\n        }\n      ],\n      \"rationale\": \"主体同时变为五个人类在现实中不可能，且时间要求自相矛盾，违反基本物理和因果法则，即使在幻想设定中也未建立任何规则支持。\"\n    },\n    {\n      \"criterion\": \"AVS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"原始指令要求动物啼鸣，增强提示要求‘完全无声的黑场’，且插入无关对话和海底场景，导致声音与视觉内容完全脱节，无任何对齐。\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"发出高亢绵长、极具海南黑冠长臂猿特征的啼鸣\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"整段改成完全无声的黑场\"\n        }\n      ],\n      \"rationale\": \"原始任务为动物声音生成，增强提示要求无声黑场，且插入人类对话，导致声音与画面内容完全错位，无法实现视听同步。\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "增强提示完全违背原始指令的主体、动作、场景和时序要求，引入多重矛盾、不一致和不可能的设定，导致内部一致性彻底崩溃。主体身份、数量、动作、时间、空间、镜头和时长等所有维度均出现严重冲突，无法形成任何连贯的叙事或视觉逻辑。",
+  "usage": {
+    "completion_tokens": 1323,
+    "prompt_tokens": 1064,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 2387
+  }
+}

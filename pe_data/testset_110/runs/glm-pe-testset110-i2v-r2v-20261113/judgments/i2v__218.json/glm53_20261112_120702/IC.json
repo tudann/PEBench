@@ -1,0 +1,147 @@
+{
+  "candidate_hash": "92be617676a3bc434c05228a8a97f269105a8d0c07da9374f5807d36b8916751",
+  "case_key": "i2v:218",
+  "created_at": "2026-11-13T08:06:54+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "SAC",
+      "evidence": [
+        {
+          "quote": "Subtle cinematic aerial shot with a slow and gentle zoom-in toward the villa community beside the lake.",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "a high-angle aerial shot begins exactly at the composition of <Picture 1>: a dense, orderly villa community of white and cream modern two-story houses with flat roofs arranged in neat rows, a larger white clubhouse-style building at upper-left, a green tennis court at upper-right, and a gated entrance with white pillars at lower-left...",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "villa_community is adjacent to lake... ducks_on_lake are on surface of lake... cars_on_roads are on internal roads within villa_community... birds_in_sky are above villa_community and forest",
+          "source": "evidence_facts"
+        }
+      ],
+      "issue": "",
+      "rationale": "All subjects (villa community, lake, ducks, birds, cars, trees) are consistently identified and positioned across the prompt and evidence. The enhanced prompt adds specific architectural details (clubhouse, tennis court, gate) not in the original, but these are compatible and do not alter core identity or appearance. No renaming, duplication, or attribute drift occurs.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANL",
+      "evidence": [
+        {
+          "quote": "Birds move naturally across the sky in small flocks, adding life to the frame, while cars on the internal roads move slowly and smoothly, maintaining realistic pacing.",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "The small flock of birds in the upper-right sky drifts naturally across the frame, flapping softly and staying small and distant, while the ducks glide slowly across the lake, leaving faint ripples. Cars on the internal roads... move slowly and smoothly along their lanes at a calm, realistic pace.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "birds_in_sky are in flight, moving across sky... ducks_on_lake are swimming, creating concentric ripples... cars_on_roads are moving slowly along roads",
+          "source": "evidence_facts"
+        }
+      ],
+      "issue": "",
+      "rationale": "Actions are coherent and causally plausible: birds fly, ducks swim, cars drive—all at realistic, calm paces. There are no incompatible or dangling events. The enhanced prompt elaborates on movement (e.g., 'flapping softly', 'leaving faint ripples') without introducing contradictions.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "TSC",
+      "evidence": [
+        {
+          "quote": "Subtle cinematic aerial shot with a slow and gentle zoom-in toward the villa community beside the lake.",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "The camera performs one slow, gentle, continuous zoom-in toward the villa community over the full six seconds, with no pans and no cuts.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "observed_camera_motion: none (still image, but prompt describes slow zoom-in)",
+          "source": "evidence_facts"
+        }
+      ],
+      "issue": "",
+      "rationale": "Chronology is clear: a single continuous zoom-in over 6 seconds. No overlapping or infeasible timestamps. The prompt specifies no cuts or pans, and the evidence supports a static starting frame with implied motion. No unexplained resets or state transitions.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SPC",
+      "evidence": [
+        {
+          "quote": "Subtle cinematic aerial shot... villa community beside the lake.",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "a high-angle aerial shot begins exactly at the composition of <Picture 1>: a dense, orderly villa community... surrounded by dense forest with the calm lake occupying the lower third...",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "villa_community is adjacent to lake... trees_and_forest surround villa_community and border lake... foreground: lake, ducks_on_lake, trees_along_lake... midground: villa_community, cars_on_roads... background: trees_and_forest, birds_in_sky",
+          "source": "evidence_facts"
+        }
+      ],
+      "issue": "",
+      "rationale": "Spatial relationships are consistent: villa community adjacent to lake, forest surrounding both, birds above, ducks on lake surface. The camera zoom-in is described as continuous and centered, preserving screen direction and relative positions. No unexplained position swaps or impossible trajectories.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "PL",
+      "evidence": [
+        {
+          "quote": "Water remains calm with slight natural movement, and trees subtly sway, enhancing the serene, high-end atmosphere.",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "The lake surface stays calm with a subtle golden shimmer and only slight ripple movement, and the forest canopy and community greenery sway very subtly in a light breeze.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "lake: calm with gentle ripples... trees_and_forest: lush green canopy with subtle suggestion of sway... cars_on_roads: moving slowly and smoothly",
+          "source": "evidence_facts"
+        }
+      ],
+      "issue": "",
+      "rationale": "Physics are consistent: water ripples plausibly from ducks, trees sway gently in breeze, cars move smoothly on roads. No violations of gravity, contact, or object permanence. The scene adheres to real-world physics without fantasy elements.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "AVS",
+      "evidence": [
+        {
+          "quote": "Subtle cinematic aerial shot with a slow and gentle zoom-in toward the villa community beside the lake. The scene remains calm and premium, with soft golden-hour lighting. Birds move naturally across the sky in small flocks, adding life to the frame, while cars on the internal roads move slowly and smoothly, maintaining realistic pacing. Water remains calm with slight natural movement, and trees subtly sway, enhancing the serene, high-end atmosphere.",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "overall_soundscape: A quiet, distant ambient bed of light wind over water, with faint, soft wingbeats from the passing birds and the barely audible hum of slow-moving cars far below. Gentle water lapping and subtle rustling of leaves continue underneath.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The enhanced prompt includes a detailed soundscape description (wind, wingbeats, car hum, water lapping, leaves rustling) that is not referenced or implied in the original prompt, which mentions no audio. While plausible, this addition is not aligned with the original instruction’s silence on sound.",
+      "rationale": "The original prompt does not mention sound, so the addition of a detailed soundscape in the enhanced prompt is an elaboration not requested. While the sounds are semantically aligned with the visual events (birds, cars, water, trees), the absence of any audio reference in the original makes this a minor deviation. It does not contradict the visuals but extends beyond the original scope.",
+      "severity": "minor"
+    }
+  ],
+  "dimension": "IC",
+  "dimension_score": 95,
+  "evidence_cache_key": "e34d908aba0633d0ce737a0848d4c2acebc4cd796fc707fa9547bea0db4dc097",
+  "judge_cache_key": "438d7e9fd7332b1041db3e2c26d42cb3fe828e0d369fb59490f6650aee59e97d",
+  "method": "glm53_20261112_120702",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"IC\",\n  \"dimension_score\": 95,\n  \"summary\": \"The enhanced prompt maintains strong internal consistency with the original instruction, preserving subject identity, actions, chronology, and spatial relationships. The only minor issue is the addition of specific elements (e.g., clubhouse, tennis court, gated entrance) not mentioned in the original prompt, which introduces slight elaboration but does not contradict or destabilize the scene. All temporal, spatial, and physical elements are coherent and plausible within the described cinematic context.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"SAC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"Subtle cinematic aerial shot with a slow and gentle zoom-in toward the villa community beside the lake.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"a high-angle aerial shot begins exactly at the composition of <Picture 1>: a dense, orderly villa community of white and cream modern two-story houses with flat roofs arranged in neat rows, a larger white clubhouse-style building at upper-left, a green tennis court at upper-right, and a gated entrance with white pillars at lower-left...\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"villa_community is adjacent to lake... ducks_on_lake are on surface of lake... cars_on_roads are on internal roads within villa_community... birds_in_sky are above villa_community and forest\"\n        }\n      ],\n      \"rationale\": \"All subjects (villa community, lake, ducks, birds, cars, trees) are consistently identified and positioned across the prompt and evidence. The enhanced prompt adds specific architectural details (clubhouse, tennis court, gate) not in the original, but these are compatible and do not alter core identity or appearance. No renaming, duplication, or attribute drift occurs.\"\n    },\n    {\n      \"criterion\": \"ANL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"Birds move naturally across the sky in small flocks, adding life to the frame, while cars on the internal roads move slowly and smoothly, maintaining realistic pacing.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"The small flock of birds in the upper-right sky drifts naturally across the frame, flapping softly and staying small and distant, while the ducks glide slowly across the lake, leaving faint ripples. Cars on the internal roads... move slowly and smoothly along their lanes at a calm, realistic pace.\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"birds_in_sky are in flight, moving across sky... ducks_on_lake are swimming, creating concentric ripples... cars_on_roads are moving slowly along roads\"\n        }\n      ],\n      \"rationale\": \"Actions are coherent and causally plausible: birds fly, ducks swim, cars drive—all at realistic, calm paces. There are no incompatible or dangling events. The enhanced prompt elaborates on movement (e.g., 'flapping softly', 'leaving faint ripples') without introducing contradictions.\"\n    },\n    {\n      \"criterion\": \"TSC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"Subtle cinematic aerial shot with a slow and gentle zoom-in toward the villa community beside the lake.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"The camera performs one slow, gentle, continuous zoom-in toward the villa community over the full six seconds, with no pans and no cuts.\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"observed_camera_motion: none (still image, but prompt describes slow zoom-in)\"\n        }\n      ],\n      \"rationale\": \"Chronology is clear: a single continuous zoom-in over 6 seconds. No overlapping or infeasible timestamps. The prompt specifies no cuts or pans, and the evidence supports a static starting frame with implied motion. No unexplained resets or state transitions.\"\n    },\n    {\n      \"criterion\": \"SPC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"Subtle cinematic aerial shot... villa community beside the lake.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"a high-angle aerial shot begins exactly at the composition of <Picture 1>: a dense, orderly villa community... surrounded by dense forest with the calm lake occupying the lower third...\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"villa_community is adjacent to lake... trees_and_forest surround villa_community and border lake... foreground: lake, ducks_on_lake, trees_along_lake... midground: villa_community, cars_on_roads... background: trees_and_forest, birds_in_sky\"\n        }\n      ],\n      \"rationale\": \"Spatial relationships are consistent: villa community adjacent to lake, forest surrounding both, birds above, ducks on lake surface. The camera zoom-in is described as continuous and centered, preserving screen direction and relative positions. No unexplained position swaps or impossible trajectories.\"\n    },\n    {\n      \"criterion\": \"PL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"Water remains calm with slight natural movement, and trees subtly sway, enhancing the serene, high-end atmosphere.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"The lake surface stays calm with a subtle golden shimmer and only slight ripple movement, and the forest canopy and community greenery sway very subtly in a light breeze.\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"lake: calm with gentle ripples... trees_and_forest: lush green canopy with subtle suggestion of sway... cars_on_roads: moving slowly and smoothly\"\n        }\n      ],\n      \"rationale\": \"Physics are consistent: water ripples plausibly from ducks, trees sway gently in breeze, cars move smoothly on roads. No violations of gravity, contact, or object permanence. The scene adheres to real-world physics without fantasy elements.\"\n    },\n    {\n      \"criterion\": \"AVS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"minor\",\n      \"issue\": \"The enhanced prompt includes a detailed soundscape description (wind, wingbeats, car hum, water lapping, leaves rustling) that is not referenced or implied in the original prompt, which mentions no audio. While plausible, this addition is not aligned with the original instruction’s silence on sound.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"Subtle cinematic aerial shot with a slow and gentle zoom-in toward the villa community beside the lake. The scene remains calm and premium, with soft golden-hour lighting. Birds move naturally across the sky in small flocks, adding life to the frame, while cars on the internal roads move slowly and smoothly, maintaining realistic pacing. Water remains calm with slight natural movement, and trees subtly sway, enhancing the serene, high-end atmosphere.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"overall_soundscape: A quiet, distant ambient bed of light wind over water, with faint, soft wingbeats from the passing birds and the barely audible hum of slow-moving cars far below. Gentle water lapping and subtle rustling of leaves continue underneath.\"\n        }\n      ],\n      \"rationale\": \"The original prompt does not mention sound, so the addition of a detailed soundscape in the enhanced prompt is an elaboration not requested. While the sounds are semantically aligned with the visual events (birds, cars, water, trees), the absence of any audio reference in the original makes this a minor deviation. It does not contradict the visuals but extends beyond the original scope.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt maintains strong internal consistency with the original instruction, preserving subject identity, actions, chronology, and spatial relationships. The only minor issue is the addition of specific elements (e.g., clubhouse, tennis court, gated entrance) not mentioned in the original prompt, which introduces slight elaboration but does not contradict or destabilize the scene. All temporal, spatial, and physical elements are coherent and plausible within the described cinematic context.",
+  "usage": {
+    "completion_tokens": 1779,
+    "prompt_tokens": 2863,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 4642
+  }
+}

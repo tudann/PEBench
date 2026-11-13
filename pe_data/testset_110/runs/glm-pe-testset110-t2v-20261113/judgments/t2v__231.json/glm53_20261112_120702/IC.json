@@ -1,0 +1,127 @@
+{
+  "candidate_hash": "0d500eda780592dca2a40cb41b168281e8d3f4909cf5707a59c922eb144612a7",
+  "case_key": "t2v:231",
+  "created_at": "2026-11-13T08:19:24+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "SAC",
+      "evidence": [
+        {
+          "quote": "a rubber-powered pirate fighter... a blond ninja pursues him with lifelike duplicate avatars",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "a rubber-powered pirate fighter... a blond ninja pursuing him, flanked by several lifelike duplicate avatars",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "Subject identities (pirate, ninja, duplicates) and attributes (rubber-powered, blond, lifelike avatars) are preserved. No renaming, duplication, or attribute drift occurs. The pirate’s stretchable arm and the ninja’s wind-chakra projectile are consistently described.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANL",
+      "evidence": [
+        {
+          "quote": "The confrontation shifts... pirate vaults and whips... ninja pursues... action peaks in an explosive impact... pirate unleashes a blazing punch... colliding head-on with the ninja’s spinning wind-chakra projectile",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "He ricochets off walls... ninja pursuing him... both fighters land... pirate unleashes a blazing punch... ninja hurls a spinning wind-chakra projectile... the two collide head-on",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "Actions form a coherent causal progression: pursuit → vertical parkour → landing → collision. The pirate’s fire punch and ninja’s wind projectile are shown as compatible, colliding forces. No dangling or incompatible events.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "TSC",
+      "evidence": [
+        {
+          "quote": "At 00:05.000, the shot cuts to a blond ninja... At 00:09.000, the shot cuts to the open dusty ground... At 00:12.000, the shot cuts to an ultra-wide crane view",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "15 seconds. The confrontation shifts... action peaks in an explosive impact... Ultra-wide crane view revealing the historic skyline",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "The enhanced prompt adds specific timestamps (00:05.000, 00:09.000, 00:12.000) not present in the original, but these do not contradict the original’s 15-second duration or event order.",
+      "rationale": "The timestamps are internally consistent and fit within the 15-second duration. The sequence order (pursuit → collision → crane reveal) matches the original. The minor issue is the addition of timestamps not in the original, but they do not alter the timeline or cause infeasibility.",
+      "severity": "minor"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SPC",
+      "evidence": [
+        {
+          "quote": "vaults and whips between the soaring adobe structures... pursuing him with lifelike duplicate avatars springing along the vertical facades... explosive impact on the open ground below... ultra-wide crane view revealing the historic skyline",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "tracks a rubber-powered pirate fighter as he sprints, vaults, and whips... ricochets off walls and ledges... cuts to the open dusty ground below... crane view rising slowly to reveal the historic Sana'a skyline",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "Spatial transitions are coherent: vertical movement between towers → landing on ground → crane rise to skyline. No unexplained position swaps or impossible trajectories. Screen direction and relative positions are consistent with a follow-cam → tracking → crane shot progression.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "PL",
+      "evidence": [
+        {
+          "quote": "rubber-powered pirate fighter... stretching arm... wind-chakra projectile... turbulent air funnel",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "elastic, springy momentum... stretchable arm... spinning wind-chakra projectile... spiraling vortex of dust and flame",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "The fantasy elements (rubber-powered elasticity, wind-chakra, fire punch) are internally consistent and follow their own rules. The collision producing a shockwave and air funnel is plausible within the cinematic fantasy context. No real-world physics violations that contradict the established world.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "AVS",
+      "evidence": [
+        {
+          "quote": "Rapid footsteps and elastic snapping... poof bursts of the duplicates... shrieking whine of compressed spiraling air... massive explosive impact... roaring shockwave... deep sustained impact hit... thinning into a slow fading drone",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "high-intensity cinematic live-action sequence... explosive impact... ultra-wide crane view",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "The soundscape and music are temporally and semantically aligned with the visual events: footsteps during chase, poof bursts with duplicates, shrieking wind before impact, explosion sound at collision, and fading drone after. No misaligned lip-sync or beat-sync issues since no dialogue is present.",
+      "severity": "none"
+    }
+  ],
+  "dimension": "IC",
+  "dimension_score": 95,
+  "evidence_cache_key": "c10067fba73e86925afd07c3d7ca61f672eb1cd45e1b00b3fe73366da7944d7c",
+  "judge_cache_key": "438d7e9fd7332b1041db3e2c26d42cb3fe828e0d369fb59490f6650aee59e97d",
+  "method": "glm53_20261112_120702",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"IC\",\n  \"dimension_score\": 95,\n  \"summary\": \"The enhanced prompt maintains strong internal consistency with the original instruction, preserving subject identities, actions, chronology, and environment. Minor issues include slight elaboration on the ninja’s duplicates and the addition of a specific timestamp for the crane shot, which is not in the original but does not contradict it. No contradictions, attribute drift, or physics violations are present. The sequence is coherent and plausible within the cinematic fantasy context.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"SAC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"a rubber-powered pirate fighter... a blond ninja pursues him with lifelike duplicate avatars\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"a rubber-powered pirate fighter... a blond ninja pursuing him, flanked by several lifelike duplicate avatars\"\n        }\n      ],\n      \"rationale\": \"Subject identities (pirate, ninja, duplicates) and attributes (rubber-powered, blond, lifelike avatars) are preserved. No renaming, duplication, or attribute drift occurs. The pirate’s stretchable arm and the ninja’s wind-chakra projectile are consistently described.\"\n    },\n    {\n      \"criterion\": \"ANL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"The confrontation shifts... pirate vaults and whips... ninja pursues... action peaks in an explosive impact... pirate unleashes a blazing punch... colliding head-on with the ninja’s spinning wind-chakra projectile\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"He ricochets off walls... ninja pursuing him... both fighters land... pirate unleashes a blazing punch... ninja hurls a spinning wind-chakra projectile... the two collide head-on\"\n        }\n      ],\n      \"rationale\": \"Actions form a coherent causal progression: pursuit → vertical parkour → landing → collision. The pirate’s fire punch and ninja’s wind projectile are shown as compatible, colliding forces. No dangling or incompatible events.\"\n    },\n    {\n      \"criterion\": \"TSC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"minor\",\n      \"issue\": \"The enhanced prompt adds specific timestamps (00:05.000, 00:09.000, 00:12.000) not present in the original, but these do not contradict the original’s 15-second duration or event order.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"At 00:05.000, the shot cuts to a blond ninja... At 00:09.000, the shot cuts to the open dusty ground... At 00:12.000, the shot cuts to an ultra-wide crane view\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"15 seconds. The confrontation shifts... action peaks in an explosive impact... Ultra-wide crane view revealing the historic skyline\"\n        }\n      ],\n      \"rationale\": \"The timestamps are internally consistent and fit within the 15-second duration. The sequence order (pursuit → collision → crane reveal) matches the original. The minor issue is the addition of timestamps not in the original, but they do not alter the timeline or cause infeasibility.\"\n    },\n    {\n      \"criterion\": \"SPC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"vaults and whips between the soaring adobe structures... pursuing him with lifelike duplicate avatars springing along the vertical facades... explosive impact on the open ground below... ultra-wide crane view revealing the historic skyline\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"tracks a rubber-powered pirate fighter as he sprints, vaults, and whips... ricochets off walls and ledges... cuts to the open dusty ground below... crane view rising slowly to reveal the historic Sana'a skyline\"\n        }\n      ],\n      \"rationale\": \"Spatial transitions are coherent: vertical movement between towers → landing on ground → crane rise to skyline. No unexplained position swaps or impossible trajectories. Screen direction and relative positions are consistent with a follow-cam → tracking → crane shot progression.\"\n    },\n    {\n      \"criterion\": \"PL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"rubber-powered pirate fighter... stretching arm... wind-chakra projectile... turbulent air funnel\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"elastic, springy momentum... stretchable arm... spinning wind-chakra projectile... spiraling vortex of dust and flame\"\n        }\n      ],\n      \"rationale\": \"The fantasy elements (rubber-powered elasticity, wind-chakra, fire punch) are internally consistent and follow their own rules. The collision producing a shockwave and air funnel is plausible within the cinematic fantasy context. No real-world physics violations that contradict the established world.\"\n    },\n    {\n      \"criterion\": \"AVS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Rapid footsteps and elastic snapping... poof bursts of the duplicates... shrieking whine of compressed spiraling air... massive explosive impact... roaring shockwave... deep sustained impact hit... thinning into a slow fading drone\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"high-intensity cinematic live-action sequence... explosive impact... ultra-wide crane view\"\n        }\n      ],\n      \"rationale\": \"The soundscape and music are temporally and semantically aligned with the visual events: footsteps during chase, poof bursts with duplicates, shrieking wind before impact, explosion sound at collision, and fading drone after. No misaligned lip-sync or beat-sync issues since no dialogue is present.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt maintains strong internal consistency with the original instruction, preserving subject identities, actions, chronology, and environment. Minor issues include slight elaboration on the ninja’s duplicates and the addition of a specific timestamp for the crane shot, which is not in the original but does not contradict it. No contradictions, attribute drift, or physics violations are present. The sequence is coherent and plausible within the cinematic fantasy context.",
+  "usage": {
+    "completion_tokens": 1401,
+    "prompt_tokens": 1393,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 2794
+  }
+}

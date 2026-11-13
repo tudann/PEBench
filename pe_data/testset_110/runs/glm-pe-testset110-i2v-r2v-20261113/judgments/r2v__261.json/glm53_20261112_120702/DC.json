@@ -1,0 +1,178 @@
+{
+  "candidate_hash": "add9ddeed6935bfb8ddfb0e103e28b2be297bea370e9c886560612f1416e4ae4",
+  "case_key": "r2v:261",
+  "created_at": "2026-11-13T09:14:45+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "STC",
+      "evidence": [
+        {
+          "quote": "A cooking-show style video featuring the man from Video 1 as he grills food and then plates the finished dish.",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "The target video is a 15-second cooking-show clip...",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "timestamp: 00:00-00:03",
+          "source": "evidence_facts"
+        }
+      ],
+      "issue": "The temporal plan is mostly feasible and well-structured, but the total duration is specified as 15 seconds while the original instruction and evidence suggest 16 seconds. The final presentation pose is held from 12s to 15s (3s), whereas the original video holds the pose for 3s from 00:00 to 00:03 — a 3-second duration, which matches. However, the overall clip duration is 15s, while the original is 16s, creating a minor discrepancy.",
+      "rationale": "The temporal plan is logically segmented into three beats with clear timing (0–7s, 7–12s, 12–15s), and the camera movement and actions are well-aligned. The 1-second duration mismatch is minor and does not affect the feasibility or coherence of the plan.",
+      "severity": "minor"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CDS",
+      "evidence": [
+        {
+          "quote": "A single continuous medium shot frames <Subject 1>... The camera holds static. At 00:07.000, still within the same continuous take, the camera begins a small slow push-in...",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "shot_scale: medium shot, observed_camera_motion: none, angle: frontal, height: eye-level",
+          "source": "evidence_facts"
+        }
+      ],
+      "issue": "The prompt specifies a static medium shot with a slow push-in, eye-level frontal angle, and consistent framing throughout. Shot scale, camera movement, and viewpoint are clearly defined and actionable.",
+      "rationale": "All camera parameters are explicitly defined and consistent with the source video’s style. The push-in is precisely timed and motivated by the plating action, ensuring continuity.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ETD",
+      "evidence": [
+        {
+          "quote": "still within the same continuous take, the camera begins a small slow push-in as <Subject 1> lifts the grilled kebabs off the heat...",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "The man stands in the kitchen, then holds up a plate with food and smiles at the camera.",
+          "source": "evidence_facts"
+        }
+      ],
+      "issue": "Cuts and transitions are minimal and well-motivated: a single continuous take with a slow push-in at 7s, timed to the plating action. The transition from grilling to plating is seamless and narratively logical. The final hold at 12s–15s is a motivated pause for presentation, matching the original’s structure.",
+      "rationale": "The single continuous shot with a motivated push-in supports spatial and narrative continuity. No abrupt or unmotivated cuts are present.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "LCS",
+      "evidence": [
+        {
+          "quote": "bright, polished cooking-show clip in soft, even studio lighting",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "light_sources_and_direction_effect: bright, even lighting from the front, color_temperature: neutral",
+          "source": "evidence_facts"
+        }
+      ],
+      "issue": "Lighting is specified as 'bright, even studio lighting' with neutral color temperature, matching the source video’s lighting facts. The prompt references the same lighting mood and visual treatment, ensuring consistency.",
+      "rationale": "The lighting specifications are directly aligned with the source video, with no contradictions or omissions. The prompt ensures consistent visual tone.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "NDE",
+      "evidence": [
+        {
+          "quote": "From 0 to 7 seconds, he grills... At 00:07.000... arranges them on the black plate... At 00:12.000, raises the finished plate... holds the plate steady through the final frame.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "The man stands in the kitchen, then holds up a plate with food and smiles at the camera.",
+          "source": "evidence_facts"
+        }
+      ],
+      "issue": "The prompt shows clear progression: grilling → plating → presentation. There is variation in action (sizzling, tongs, plating), escalation in focus (from cooking to final dish), and resolution in the final plate-lift. The narrative arc is complete and motivated.",
+      "rationale": "The sequence follows a logical, escalating structure from cooking to presentation, with clear motivation for each phase. No static or repetitive elements are present.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CIF",
+      "evidence": [
+        {
+          "quote": "subject_definitions: <Subject 1>, <Subject 2>, <Subject 3>... summary: [reference generation]... detailed_description: [Shot 1, 2, 3]... overall_soundscape... non_diegetic_music",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "All additions (e.g., detailed subject definitions, audio cues, lighting, camera movement) directly support the central request of replicating the cooking-show clip. There is no padding, template language, or irrelevant subplot.",
+      "rationale": "Every element in the enhanced prompt serves the core goal of generating a faithful, actionable cooking-show clip. The additions are precise and relevant.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SDI",
+      "evidence": [
+        {
+          "quote": "<d>[English] Nice char on those — almost there.</d>... <d>[English] And our prawn kebabs are ready to enjoy.</d>... Light, upbeat cooking-show background music... gentle lift in energy at the final plate reveal...",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "speech: [transcription: 'Prawn Kebabs on Asparagus Skewers are ready']",
+          "source": "evidence_facts"
+        }
+      ],
+      "issue": "Speech is specified with timing, content, and vocal tone. Music is described as light, upbeat, with a lift at the reveal. Diegetic sounds (sizzle, clink) are timed to actions. All audio elements are integrated with visual timing and source.",
+      "rationale": "Audio is specified with source, timing, and progression, and is tightly synchronized with visual events. No audio elements are missing or misaligned.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SPS",
+      "evidence": [
+        {
+          "quote": "South Asian man with short dark hair and a full beard, wearing a blue button-up shirt... warm, animated presenting style... glancing between the pan and the camera... smiling warmly... holds the plate steady toward the lens",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "man with dark hair and a beard, wearing a blue button-up shirt, current_pose_state: standing, holding a plate with both hands, expression: smiling",
+          "source": "evidence_facts"
+        }
+      ],
+      "issue": "Subject appearance (hair, beard, shirt, watch, bracelet), pose (standing, holding plate), expression (warm, smiling), movement (grilling, plating, lifting), and vocal delivery (friendly, upbeat) are all specified and consistent with the source video.",
+      "rationale": "All performance details are accurately preserved and specified, ensuring fidelity to the source subject’s identity and behavior.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "VSS",
+      "evidence": [
+        {
+          "quote": "bright, polished cooking-show clip... blue-and-wood studio kitchen set... small chef-logo watermark... photorealistic style",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "primary_style: cooking show, realism: photorealistic, scene_type: kitchen",
+          "source": "evidence_facts"
+        }
+      ],
+      "issue": "Medium is specified as video, style as cooking show, realism as photorealistic. Production design (blue open shelving, wooden cabinets, red kettle, etc.) is detailed. Visual treatment (bright, even lighting, studio kitchen) is consistent with source.",
+      "rationale": "The visual style, medium, and production design are fully specified and aligned with the source video, ensuring generation consistency.",
+      "severity": "none"
+    }
+  ],
+  "dimension": "DC",
+  "dimension_score": 92,
+  "evidence_cache_key": "289d3eccac84eafbd746bff1199cce1faa229632513e19fff1700368e452d7e1",
+  "judge_cache_key": "0754499d53388e6467fb078ab780e01b77f9f1c9e99d9029be2769351eb2b2eb",
+  "method": "glm53_20261112_120702",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"DC\",\n  \"dimension_score\": 92,\n  \"summary\": \"The enhanced prompt provides a highly detailed, coherent, and actionable plan for a 15-second cooking-show clip, closely replicating the style, set, and presentation of the source video. It includes precise temporal segmentation, camera movement, subject actions, audio cues, and visual specifications. The only minor issue is a slight mismatch in duration (15s vs. 16s), and the final shot’s hold is slightly longer than the original’s 3-second presentation. Overall, the prompt is well-structured and generation-ready with minimal omissions.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"STC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"minor\",\n      \"issue\": \"The temporal plan is mostly feasible and well-structured, but the total duration is specified as 15 seconds while the original instruction and evidence suggest 16 seconds. The final presentation pose is held from 12s to 15s (3s), whereas the original video holds the pose for 3s from 00:00 to 00:03 — a 3-second duration, which matches. However, the overall clip duration is 15s, while the original is 16s, creating a minor discrepancy.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"A cooking-show style video featuring the man from Video 1 as he grills food and then plates the finished dish.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"The target video is a 15-second cooking-show clip...\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"timestamp: 00:00-00:03\"\n        }\n      ],\n      \"rationale\": \"The temporal plan is logically segmented into three beats with clear timing (0–7s, 7–12s, 12–15s), and the camera movement and actions are well-aligned. The 1-second duration mismatch is minor and does not affect the feasibility or coherence of the plan.\"\n    },\n    {\n      \"criterion\": \"CDS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"The prompt specifies a static medium shot with a slow push-in, eye-level frontal angle, and consistent framing throughout. Shot scale, camera movement, and viewpoint are clearly defined and actionable.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"A single continuous medium shot frames <Subject 1>... The camera holds static. At 00:07.000, still within the same continuous take, the camera begins a small slow push-in...\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"shot_scale: medium shot, observed_camera_motion: none, angle: frontal, height: eye-level\"\n        }\n      ],\n      \"rationale\": \"All camera parameters are explicitly defined and consistent with the source video’s style. The push-in is precisely timed and motivated by the plating action, ensuring continuity.\"\n    },\n    {\n      \"criterion\": \"ETD\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"Cuts and transitions are minimal and well-motivated: a single continuous take with a slow push-in at 7s, timed to the plating action. The transition from grilling to plating is seamless and narratively logical. The final hold at 12s–15s is a motivated pause for presentation, matching the original’s structure.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"still within the same continuous take, the camera begins a small slow push-in as <Subject 1> lifts the grilled kebabs off the heat...\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"The man stands in the kitchen, then holds up a plate with food and smiles at the camera.\"\n        }\n      ],\n      \"rationale\": \"The single continuous shot with a motivated push-in supports spatial and narrative continuity. No abrupt or unmotivated cuts are present.\"\n    },\n    {\n      \"criterion\": \"LCS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"Lighting is specified as 'bright, even studio lighting' with neutral color temperature, matching the source video’s lighting facts. The prompt references the same lighting mood and visual treatment, ensuring consistency.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"bright, polished cooking-show clip in soft, even studio lighting\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"light_sources_and_direction_effect: bright, even lighting from the front, color_temperature: neutral\"\n        }\n      ],\n      \"rationale\": \"The lighting specifications are directly aligned with the source video, with no contradictions or omissions. The prompt ensures consistent visual tone.\"\n    },\n    {\n      \"criterion\": \"NDE\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"The prompt shows clear progression: grilling → plating → presentation. There is variation in action (sizzling, tongs, plating), escalation in focus (from cooking to final dish), and resolution in the final plate-lift. The narrative arc is complete and motivated.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"From 0 to 7 seconds, he grills... At 00:07.000... arranges them on the black plate... At 00:12.000, raises the finished plate... holds the plate steady through the final frame.\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"The man stands in the kitchen, then holds up a plate with food and smiles at the camera.\"\n        }\n      ],\n      \"rationale\": \"The sequence follows a logical, escalating structure from cooking to presentation, with clear motivation for each phase. No static or repetitive elements are present.\"\n    },\n    {\n      \"criterion\": \"CIF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"All additions (e.g., detailed subject definitions, audio cues, lighting, camera movement) directly support the central request of replicating the cooking-show clip. There is no padding, template language, or irrelevant subplot.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"subject_definitions: <Subject 1>, <Subject 2>, <Subject 3>... summary: [reference generation]... detailed_description: [Shot 1, 2, 3]... overall_soundscape... non_diegetic_music\"\n        }\n      ],\n      \"rationale\": \"Every element in the enhanced prompt serves the core goal of generating a faithful, actionable cooking-show clip. The additions are precise and relevant.\"\n    },\n    {\n      \"criterion\": \"SDI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"Speech is specified with timing, content, and vocal tone. Music is described as light, upbeat, with a lift at the reveal. Diegetic sounds (sizzle, clink) are timed to actions. All audio elements are integrated with visual timing and source.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"<d>[English] Nice char on those — almost there.</d>... <d>[English] And our prawn kebabs are ready to enjoy.</d>... Light, upbeat cooking-show background music... gentle lift in energy at the final plate reveal...\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"speech: [transcription: 'Prawn Kebabs on Asparagus Skewers are ready']\"\n        }\n      ],\n      \"rationale\": \"Audio is specified with source, timing, and progression, and is tightly synchronized with visual events. No audio elements are missing or misaligned.\"\n    },\n    {\n      \"criterion\": \"SPS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"Subject appearance (hair, beard, shirt, watch, bracelet), pose (standing, holding plate), expression (warm, smiling), movement (grilling, plating, lifting), and vocal delivery (friendly, upbeat) are all specified and consistent with the source video.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"South Asian man with short dark hair and a full beard, wearing a blue button-up shirt... warm, animated presenting style... glancing between the pan and the camera... smiling warmly... holds the plate steady toward the lens\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"man with dark hair and a beard, wearing a blue button-up shirt, current_pose_state: standing, holding a plate with both hands, expression: smiling\"\n        }\n      ],\n      \"rationale\": \"All performance details are accurately preserved and specified, ensuring fidelity to the source subject’s identity and behavior.\"\n    },\n    {\n      \"criterion\": \"VSS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"Medium is specified as video, style as cooking show, realism as photorealistic. Production design (blue open shelving, wooden cabinets, red kettle, etc.) is detailed. Visual treatment (bright, even lighting, studio kitchen) is consistent with source.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"bright, polished cooking-show clip... blue-and-wood studio kitchen set... small chef-logo watermark... photorealistic style\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"primary_style: cooking show, realism: photorealistic, scene_type: kitchen\"\n        }\n      ],\n      \"rationale\": \"The visual style, medium, and production design are fully specified and aligned with the source video, ensuring generation consistency.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt provides a highly detailed, coherent, and actionable plan for a 15-second cooking-show clip, closely replicating the style, set, and presentation of the source video. It includes precise temporal segmentation, camera movement, subject actions, audio cues, and visual specifications. The only minor issue is a slight mismatch in duration (15s vs. 16s), and the final shot’s hold is slightly longer than the original’s 3-second presentation. Overall, the prompt is well-structured and generation-ready with minimal omissions.",
+  "usage": {
+    "completion_tokens": 2232,
+    "prompt_tokens": 2667,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 4899
+  }
+}

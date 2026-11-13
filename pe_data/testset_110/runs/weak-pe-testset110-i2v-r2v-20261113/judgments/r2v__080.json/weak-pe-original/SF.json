@@ -1,0 +1,178 @@
+{
+  "candidate_hash": "5f045d58bc67d4c57d302b351d617d195928b83a951a9fe0e852bd4b9a17c52d",
+  "case_key": "r2v:080",
+  "created_at": "2026-11-13T08:22:45+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "GSF",
+      "evidence": [
+        {
+          "quote": "现代办公室环境，韩系WEBTOON漫画风，电影感构图，竖屏9:16。",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "整段改成没有人物也没有情节的雪景空镜循环。丢掉原指令里的主体身份、人数、动作顺序、场景和明确的镜头要求。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Replaced the requested '韩系WEBTOON漫画风，电影感构图' with an undefined, contradictory '雪景空镜循环' and removed all genre-defining elements.",
+      "rationale": "The original prompt specifies a clear genre (Korean WEBTOON, cinematic composition) and visual style. The enhanced prompt explicitly discards these and replaces them with a generic snow scene, which is incompatible with the requested aesthetic and narrative tone.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SAP",
+      "evidence": [
+        {
+          "quote": "陈凯，他坐在角落的工位上，神情疲惫又麻木。",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "先写成只有一个主角，紧接着又写成这个主角同时变成五个外貌不同的人，并且互相对话。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Removed the protagonist '陈凯' and replaced him with multiple contradictory identities, including five different people who simultaneously interact, violating subject identity and count.",
+      "rationale": "The original prompt centers on a single, identifiable protagonist. The enhanced prompt introduces multiple conflicting identities and interactions, directly contradicting the subject's identity and count.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANF",
+      "evidence": [
+        {
+          "quote": "镜头1（0-4秒）...镜头2（4-7秒）...镜头3（7-11秒）...镜头4（11-15秒）",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "时间倒过来：先给结尾，再跳到一个对不上的开头。中途插进一段无关的宫廷选妃。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Reversed the narrative order, inserted unrelated events (courtship scene), and removed all original actions and outcomes, destroying the narrative intent.",
+      "rationale": "The original prompt follows a linear, cause-effect narrative structure. The enhanced prompt explicitly reverses this, inserts unrelated content, and removes all original events, fundamentally altering the story.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "DLI",
+      "evidence": [
+        {
+          "quote": "旁白（低沉）\n\n38岁这年，房贷刚刚扣完，公司就决定不要我了。",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "丢掉原指令里的主体身份、人数、动作顺序、场景和明确的镜头要求。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Removed all original dialogue and narration, including the critical旁白 and character lines, and replaced them with no specified speech.",
+      "rationale": "The original prompt includes specific, emotionally charged dialogue and narration essential to the story. The enhanced prompt removes all of it, violating the requirement to preserve exact wording and speaker attribution.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ARP",
+      "evidence": [
+        {
+          "quote": "BGM\n\n低沉钢琴\n压迫感环境底噪",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "丢掉原指令里的主体身份、人数、动作顺序、场景和明确的镜头要求。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Removed all specified audio elements (BGM, sound effects, ambience) and replaced them with no constraints, contradicting the original audio design.",
+      "rationale": "The original prompt specifies a detailed audio design (low piano, ambient noise). The enhanced prompt removes all audio constraints, which is a material violation of the requested sound design.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CCP",
+      "evidence": [
+        {
+          "quote": "镜头中景缓缓推进到陈凯",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "写成机位锁死，又写成镜头一直在晃。镜头每半秒甩动、环绕、急推。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Contradicted camera constraints by simultaneously requiring '机位锁死' and '镜头一直在晃', and added extreme, incompatible movements (每半秒甩动、环绕、急推).",
+      "rationale": "The original prompt includes specific, controlled camera movements. The enhanced prompt introduces contradictory and technically impossible camera behaviors, violating the explicit constraints.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "LCF",
+      "evidence": [
+        {
+          "quote": "冷白色灯光笼罩着写字楼开放办公区",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "同一段写成正午暴晒，又写成深夜无光；",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Contradicted lighting conditions by requiring both '正午暴晒' and '深夜无光', which are mutually exclusive and incompatible with the original '冷白色灯光' setting.",
+      "rationale": "The original prompt specifies a consistent lighting condition (cool white office lighting). The enhanced prompt introduces contradictory lighting states that cannot coexist, breaking the visual continuity.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SSP",
+      "evidence": [
+        {
+          "quote": "写字楼开放办公区",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "整段改成没有人物也没有情节的雪景空镜循环。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Removed the specified setting (写字楼开放办公区, street scene) and replaced it with an undefined '雪景空镜', altering the spatial context entirely.",
+      "rationale": "The original prompt specifies a detailed, narrative-driven setting. The enhanced prompt replaces it with a generic, non-narrative snow scene, which is a complete spatial and contextual violation.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "OTI",
+      "evidence": [
+        {
+          "quote": "结尾钩子字幕\n\n第2集：体面，被生活撕碎",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "画面中央一直挂着大号字幕、水印和logo。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Added a requirement for '画面中央一直挂着大号字幕、水印和logo', which contradicts the original clean visual design and adds unwanted on-screen text.",
+      "rationale": "The original prompt includes only one specific, timed subtitle. The enhanced prompt mandates persistent, intrusive text elements, which are not only unrequested but also visually disruptive and contradictory to the cinematic style.",
+      "severity": "major"
+    }
+  ],
+  "dimension": "SF",
+  "dimension_score": 0,
+  "evidence_cache_key": "50aff9c04c32428849e270823a14f291f55b37b4aa96c564da7d60136f16d151",
+  "judge_cache_key": "a0ca24571ad14d7ab7be626329bd736d7e7015f9ebc418227c8be391591d0377",
+  "method": "weak-pe-original",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"SF\",\n  \"dimension_score\": 0,\n  \"summary\": \"Enhanced prompt completely violates semantic fidelity by replacing the original narrative, characters, setting, and visual style with contradictory, incoherent, and impossible instructions. All core criteria are materially broken, including genre, subject identity, actions, camera constraints, lighting, setting, and temporal structure. The prompt is intentionally designed to sabotage the original request.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"GSF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Replaced the requested '韩系WEBTOON漫画风，电影感构图' with an undefined, contradictory '雪景空镜循环' and removed all genre-defining elements.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"现代办公室环境，韩系WEBTOON漫画风，电影感构图，竖屏9:16。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"整段改成没有人物也没有情节的雪景空镜循环。丢掉原指令里的主体身份、人数、动作顺序、场景和明确的镜头要求。\"\n        }\n      ],\n      \"rationale\": \"The original prompt specifies a clear genre (Korean WEBTOON, cinematic composition) and visual style. The enhanced prompt explicitly discards these and replaces them with a generic snow scene, which is incompatible with the requested aesthetic and narrative tone.\"\n    },\n    {\n      \"criterion\": \"SAP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Removed the protagonist '陈凯' and replaced him with multiple contradictory identities, including five different people who simultaneously interact, violating subject identity and count.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"陈凯，他坐在角落的工位上，神情疲惫又麻木。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"先写成只有一个主角，紧接着又写成这个主角同时变成五个外貌不同的人，并且互相对话。\"\n        }\n      ],\n      \"rationale\": \"The original prompt centers on a single, identifiable protagonist. The enhanced prompt introduces multiple conflicting identities and interactions, directly contradicting the subject's identity and count.\"\n    },\n    {\n      \"criterion\": \"ANF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Reversed the narrative order, inserted unrelated events (courtship scene), and removed all original actions and outcomes, destroying the narrative intent.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"镜头1（0-4秒）...镜头2（4-7秒）...镜头3（7-11秒）...镜头4（11-15秒）\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"时间倒过来：先给结尾，再跳到一个对不上的开头。中途插进一段无关的宫廷选妃。\"\n        }\n      ],\n      \"rationale\": \"The original prompt follows a linear, cause-effect narrative structure. The enhanced prompt explicitly reverses this, inserts unrelated content, and removes all original events, fundamentally altering the story.\"\n    },\n    {\n      \"criterion\": \"DLI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Removed all original dialogue and narration, including the critical旁白 and character lines, and replaced them with no specified speech.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"旁白（低沉）\\n\\n38岁这年，房贷刚刚扣完，公司就决定不要我了。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"丢掉原指令里的主体身份、人数、动作顺序、场景和明确的镜头要求。\"\n        }\n      ],\n      \"rationale\": \"The original prompt includes specific, emotionally charged dialogue and narration essential to the story. The enhanced prompt removes all of it, violating the requirement to preserve exact wording and speaker attribution.\"\n    },\n    {\n      \"criterion\": \"ARP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Removed all specified audio elements (BGM, sound effects, ambience) and replaced them with no constraints, contradicting the original audio design.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"BGM\\n\\n低沉钢琴\\n压迫感环境底噪\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"丢掉原指令里的主体身份、人数、动作顺序、场景和明确的镜头要求。\"\n        }\n      ],\n      \"rationale\": \"The original prompt specifies a detailed audio design (low piano, ambient noise). The enhanced prompt removes all audio constraints, which is a material violation of the requested sound design.\"\n    },\n    {\n      \"criterion\": \"CCP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Contradicted camera constraints by simultaneously requiring '机位锁死' and '镜头一直在晃', and added extreme, incompatible movements (每半秒甩动、环绕、急推).\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"镜头中景缓缓推进到陈凯\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"写成机位锁死，又写成镜头一直在晃。镜头每半秒甩动、环绕、急推。\"\n        }\n      ],\n      \"rationale\": \"The original prompt includes specific, controlled camera movements. The enhanced prompt introduces contradictory and technically impossible camera behaviors, violating the explicit constraints.\"\n    },\n    {\n      \"criterion\": \"LCF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Contradicted lighting conditions by requiring both '正午暴晒' and '深夜无光', which are mutually exclusive and incompatible with the original '冷白色灯光' setting.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"冷白色灯光笼罩着写字楼开放办公区\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"同一段写成正午暴晒，又写成深夜无光；\"\n        }\n      ],\n      \"rationale\": \"The original prompt specifies a consistent lighting condition (cool white office lighting). The enhanced prompt introduces contradictory lighting states that cannot coexist, breaking the visual continuity.\"\n    },\n    {\n      \"criterion\": \"SSP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Removed the specified setting (写字楼开放办公区, street scene) and replaced it with an undefined '雪景空镜', altering the spatial context entirely.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"写字楼开放办公区\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"整段改成没有人物也没有情节的雪景空镜循环。\"\n        }\n      ],\n      \"rationale\": \"The original prompt specifies a detailed, narrative-driven setting. The enhanced prompt replaces it with a generic, non-narrative snow scene, which is a complete spatial and contextual violation.\"\n    },\n    {\n      \"criterion\": \"OTI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Added a requirement for '画面中央一直挂着大号字幕、水印和logo', which contradicts the original clean visual design and adds unwanted on-screen text.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"结尾钩子字幕\\n\\n第2集：体面，被生活撕碎\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"画面中央一直挂着大号字幕、水印和logo。\"\n        }\n      ],\n      \"rationale\": \"The original prompt includes only one specific, timed subtitle. The enhanced prompt mandates persistent, intrusive text elements, which are not only unrequested but also visually disruptive and contradictory to the cinematic style.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "Enhanced prompt completely violates semantic fidelity by replacing the original narrative, characters, setting, and visual style with contradictory, incoherent, and impossible instructions. All core criteria are materially broken, including genre, subject identity, actions, camera constraints, lighting, setting, and temporal structure. The prompt is intentionally designed to sabotage the original request.",
+  "usage": {
+    "completion_tokens": 1825,
+    "prompt_tokens": 2860,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 4685
+  }
+}

@@ -1,0 +1,139 @@
+{
+  "candidate_hash": "ca5523dd034204e9e0c4b607b3c73870449facf3061d5e5c22b09fd1dc052824",
+  "case_key": "i2v:105",
+  "created_at": "2026-11-13T07:41:16+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "SAC",
+      "evidence": [
+        {
+          "quote": "anime cette même femme ainsi que ce même dragon sans altérer leur apparence.",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "the same woman with long wavy blue-grey hair, silver-blue crown, jeweled choker and arm cuffs, barefoot with jeweled ankle piece, wearing the iridescent blue-green corset gown...",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Fast clicking footsteps of heels on the runway...",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The enhanced prompt adds specific details about the woman’s jewelry (jeweled choker, arm cuffs, ankle piece) and the dragon’s crystalline scales and glowing eyes, which are not explicitly mentioned in the original prompt. Additionally, the original prompt does not specify the woman’s barefoot state, while the enhanced prompt explicitly states she is barefoot with jeweled anklets, conflicting with the audio description of 'fast clicking footsteps of heels'.",
+      "rationale": "The original prompt requires preserving the appearance of the woman and dragon without alteration. The enhanced prompt introduces specific attributes (jewelry, barefoot) not present in the original image description, which may be inferred from the image but are not explicitly required. The contradiction between 'barefoot' and 'clicking heels' is a minor inconsistency, as the audio description may be an artistic interpretation rather than a literal requirement. This does not materially alter the core identity or visual continuity.",
+      "severity": "minor"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANL",
+      "evidence": [
+        {
+          "quote": "La femme avance très rapidement... Le dragon la suit juste derrière... À la fin, elle s’arrête et prend de courtes poses stylées.",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "the woman advances very rapidly down the runway... the dragon follows immediately behind... At around 3.5 seconds she reaches the end of the runway, stops, and strikes two short stylized poses...",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The actions described — rapid walk, camera follow, poses at the end — form a coherent causal progression. The woman’s movement is followed by the dragon, and both halt together at the end. The actions are plausible within the fantasy context and align with the original prompt’s request for a fast, fluid walk and stylized poses.",
+      "rationale": "The sequence of actions is logically connected: movement → approach → stop → pose. The dragon’s behavior is consistent with its role as a companion. No dangling or incompatible events are present. The enhanced prompt adds detail (e.g., camera angle shifts) that enhances coherence without breaking it.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "TSC",
+      "evidence": [
+        {
+          "quote": "At 0.00 seconds into the target video, <Picture 1> (from [Shot 1]) is fully referenced.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "At around 3.5 seconds she reaches the end of the runway, stops, and strikes two short stylized poses...",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "La femme avance très rapidement... À la fin, elle s’arrête et prend de courtes poses stylées.",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "The timeline is clearly defined: 0.00s start from the image, rapid walk until ~3.5s, then poses. The duration (5s) is respected, with the final 1.5s allocated to the poses. No overlapping or infeasible timestamps are present. The state transitions (movement → stop → pose) are plausible and consistent.",
+      "rationale": "The temporal structure is coherent and matches the original prompt’s intent. The 3.5s mark for stopping is within the 5s duration, allowing for the final poses. No unexplained resets or state inconsistencies are present.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SPC",
+      "evidence": [
+        {
+          "quote": "the same woman... mid-stride facing the camera on the runway... the massive ice-blue crystalline dragon... looms symmetrically behind her",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "the camera follows the movement smoothly in one continuous take, starting frontal, shifting to a side angle as she passes, then returning to a frontal angle.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "woman_1 is standing on the runway in front of dragon_1... audience_1 is seated on both sides of the runway",
+          "source": "evidence_facts"
+        }
+      ],
+      "issue": "The spatial layout is consistent: woman in front, dragon behind, audience on both sides. The camera movement (frontal → side → frontal) is plausible and matches the subject’s motion. The runway extends beyond the frame, allowing for the forward movement. No unexplained position swaps or impossible trajectories are described.",
+      "rationale": "The spatial relationships are preserved from the reference image. The camera movement is described as smooth and follows the subject’s path, which is physically plausible. The runway’s extension beyond the frame supports the forward motion.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "PL",
+      "evidence": [
+        {
+          "quote": "the dress train and water-like splashes trailing dynamically behind her; the dragon follows immediately behind at a similar fast, elegant, controlled pace, wings slightly folding as it moves forward.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "massive, icy blue dragon with crystalline scales, glowing eyes, large wings, sharp claws",
+          "source": "evidence_facts"
+        }
+      ],
+      "issue": "The physics are consistent within the fantasy context: the dragon’s crystalline form and glowing eyes are plausible as magical elements. The woman’s barefoot movement with a heavy gown and train is supported by the description of fluid, accelerated motion. The dress’s water-like splashes and the dragon’s clawed footsteps are consistent with the environment.",
+      "rationale": "The fantasy elements (crystalline dragon, water-like gown) are treated as part of the world’s logic. The motion and interactions (e.g., trailing train, clawed footsteps) are consistent with the described materials and environment. No violations of object permanence or bodily feasibility are present.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "AVS",
+      "evidence": [
+        {
+          "quote": "Fast clicking footsteps of heels on the runway and the heavy measured claws of the dragon striking the floor...",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "barefoot with jeweled ankle piece",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The enhanced prompt includes an audio description of 'fast clicking footsteps of heels' which contradicts the visual description of the woman being barefoot. This creates a minor misalignment between visual and auditory elements. The music and ambience are described as aligning with the scene, but the heel sound is inconsistent with the barefoot state.",
+      "rationale": "The audio description of 'clicking heels' is inconsistent with the visual description of bare feet. While this may be an artistic choice, it creates a minor sensory misalignment. The music and ambience are otherwise well-aligned with the scene’s mood and actions.",
+      "severity": "minor"
+    }
+  ],
+  "dimension": "IC",
+  "dimension_score": 95,
+  "evidence_cache_key": "1eb0b3b49c99a9517fdde5d49d79afdf7fc8db576ebfdbf550e90bb023df3077",
+  "judge_cache_key": "438d7e9fd7332b1041db3e2c26d42cb3fe828e0d369fb59490f6650aee59e97d",
+  "method": "glm53_20261112_120702",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"IC\",\n  \"dimension_score\": 95,\n  \"summary\": \"The enhanced prompt maintains strong internal consistency with the original instruction, preserving subject identity, appearance, actions, and environment. Minor issues include slight elaboration beyond the original prompt (e.g., specific jewelry details, audience filming) and a small discrepancy in the description of the woman’s footwear (barefoot with anklets vs. implied heels in the original prompt’s audio description). No major contradictions or attribute drift are present. The temporal progression, spatial layout, and physics are coherent and plausible within the fantasy context.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"SAC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"minor\",\n      \"issue\": \"The enhanced prompt adds specific details about the woman’s jewelry (jeweled choker, arm cuffs, ankle piece) and the dragon’s crystalline scales and glowing eyes, which are not explicitly mentioned in the original prompt. Additionally, the original prompt does not specify the woman’s barefoot state, while the enhanced prompt explicitly states she is barefoot with jeweled anklets, conflicting with the audio description of 'fast clicking footsteps of heels'.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"anime cette même femme ainsi que ce même dragon sans altérer leur apparence.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"the same woman with long wavy blue-grey hair, silver-blue crown, jeweled choker and arm cuffs, barefoot with jeweled ankle piece, wearing the iridescent blue-green corset gown...\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Fast clicking footsteps of heels on the runway...\"\n        }\n      ],\n      \"rationale\": \"The original prompt requires preserving the appearance of the woman and dragon without alteration. The enhanced prompt introduces specific attributes (jewelry, barefoot) not present in the original image description, which may be inferred from the image but are not explicitly required. The contradiction between 'barefoot' and 'clicking heels' is a minor inconsistency, as the audio description may be an artistic interpretation rather than a literal requirement. This does not materially alter the core identity or visual continuity.\"\n    },\n    {\n      \"criterion\": \"ANL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"The actions described — rapid walk, camera follow, poses at the end — form a coherent causal progression. The woman’s movement is followed by the dragon, and both halt together at the end. The actions are plausible within the fantasy context and align with the original prompt’s request for a fast, fluid walk and stylized poses.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"La femme avance très rapidement... Le dragon la suit juste derrière... À la fin, elle s’arrête et prend de courtes poses stylées.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"the woman advances very rapidly down the runway... the dragon follows immediately behind... At around 3.5 seconds she reaches the end of the runway, stops, and strikes two short stylized poses...\"\n        }\n      ],\n      \"rationale\": \"The sequence of actions is logically connected: movement → approach → stop → pose. The dragon’s behavior is consistent with its role as a companion. No dangling or incompatible events are present. The enhanced prompt adds detail (e.g., camera angle shifts) that enhances coherence without breaking it.\"\n    },\n    {\n      \"criterion\": \"TSC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"The timeline is clearly defined: 0.00s start from the image, rapid walk until ~3.5s, then poses. The duration (5s) is respected, with the final 1.5s allocated to the poses. No overlapping or infeasible timestamps are present. The state transitions (movement → stop → pose) are plausible and consistent.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"At 0.00 seconds into the target video, <Picture 1> (from [Shot 1]) is fully referenced.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"At around 3.5 seconds she reaches the end of the runway, stops, and strikes two short stylized poses...\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"La femme avance très rapidement... À la fin, elle s’arrête et prend de courtes poses stylées.\"\n        }\n      ],\n      \"rationale\": \"The temporal structure is coherent and matches the original prompt’s intent. The 3.5s mark for stopping is within the 5s duration, allowing for the final poses. No unexplained resets or state inconsistencies are present.\"\n    },\n    {\n      \"criterion\": \"SPC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"The spatial layout is consistent: woman in front, dragon behind, audience on both sides. The camera movement (frontal → side → frontal) is plausible and matches the subject’s motion. The runway extends beyond the frame, allowing for the forward movement. No unexplained position swaps or impossible trajectories are described.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"the same woman... mid-stride facing the camera on the runway... the massive ice-blue crystalline dragon... looms symmetrically behind her\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"the camera follows the movement smoothly in one continuous take, starting frontal, shifting to a side angle as she passes, then returning to a frontal angle.\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"woman_1 is standing on the runway in front of dragon_1... audience_1 is seated on both sides of the runway\"\n        }\n      ],\n      \"rationale\": \"The spatial relationships are preserved from the reference image. The camera movement is described as smooth and follows the subject’s path, which is physically plausible. The runway’s extension beyond the frame supports the forward motion.\"\n    },\n    {\n      \"criterion\": \"PL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"The physics are consistent within the fantasy context: the dragon’s crystalline form and glowing eyes are plausible as magical elements. The woman’s barefoot movement with a heavy gown and train is supported by the description of fluid, accelerated motion. The dress’s water-like splashes and the dragon’s clawed footsteps are consistent with the environment.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"the dress train and water-like splashes trailing dynamically behind her; the dragon follows immediately behind at a similar fast, elegant, controlled pace, wings slightly folding as it moves forward.\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"massive, icy blue dragon with crystalline scales, glowing eyes, large wings, sharp claws\"\n        }\n      ],\n      \"rationale\": \"The fantasy elements (crystalline dragon, water-like gown) are treated as part of the world’s logic. The motion and interactions (e.g., trailing train, clawed footsteps) are consistent with the described materials and environment. No violations of object permanence or bodily feasibility are present.\"\n    },\n    {\n      \"criterion\": \"AVS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"minor\",\n      \"issue\": \"The enhanced prompt includes an audio description of 'fast clicking footsteps of heels' which contradicts the visual description of the woman being barefoot. This creates a minor misalignment between visual and auditory elements. The music and ambience are described as aligning with the scene, but the heel sound is inconsistent with the barefoot state.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Fast clicking footsteps of heels on the runway and the heavy measured claws of the dragon striking the floor...\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"barefoot with jeweled ankle piece\"\n        }\n      ],\n      \"rationale\": \"The audio description of 'clicking heels' is inconsistent with the visual description of bare feet. While this may be an artistic choice, it creates a minor sensory misalignment. The music and ambience are otherwise well-aligned with the scene’s mood and actions.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt maintains strong internal consistency with the original instruction, preserving subject identity, appearance, actions, and environment. Minor issues include slight elaboration beyond the original prompt (e.g., specific jewelry details, audience filming) and a small discrepancy in the description of the woman’s footwear (barefoot with anklets vs. implied heels in the original prompt’s audio description). No major contradictions or attribute drift are present. The temporal progression, spatial layout, and physics are coherent and plausible within the fantasy context.",
+  "usage": {
+    "completion_tokens": 1860,
+    "prompt_tokens": 3111,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 4971
+  }
+}

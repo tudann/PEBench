@@ -1,0 +1,131 @@
+{
+  "candidate_hash": "984033bd32a3dd55b0e573200406fa3d7f553843e3350606c91cb2aac1a65309",
+  "case_key": "i2v:098",
+  "created_at": "2026-11-13T07:34:54+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "SAC",
+      "evidence": [
+        {
+          "quote": "slow organic finger movement like growing roots, subtle moss shifting, light sliding across textures, seamless loop",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "a hand made of gnarled bark and twisted roots grips a vertical moss-covered tree trunk, fingers wrapping from the left with fingertips visible on the right side, the bark-ridged forearm extending out of frame to the left, moss patches, small green ferns, thin spider silk strands near the lower left, and faint dust specks drifting in the black void background",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "A highly detailed, static image of a hand-like structure composed of gnarled wood, moss, and small ferns, set against a black background, evoking a living, organic creature.",
+          "source": "evidence_facts"
+        }
+      ],
+      "issue": "",
+      "rationale": "Subject identity (bark hand), count (single hand), appearance (gnarled bark, moss, ferns), props (tree trunk), and persistent attributes (black background, spider silk, dust) are consistently preserved. The enhanced prompt does not introduce new subjects or alter core attributes, maintaining stability across the loop.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANL",
+      "evidence": [
+        {
+          "quote": "slow organic finger movement like growing roots, subtle moss shifting, light sliding across textures, seamless loop",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "the bark fingers move extremely slowly and organically, as if growing rather than flexing — each fingertip creeps a few millimeters tighter around the trunk, joints easing like swelling wood, while root tendrils on the back of the hand subtly thicken and shift. The moss clumps swell and settle, tiny leaves tremble faintly, and the fern fronds sway almost imperceptibly.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "Actions are coherent and causally linked: finger movement mimics root growth, moss and ferns respond to subtle environmental shifts, and light movement is tied to the organic progression. The loop closure (fingers returning to initial position, light returning to start) resolves the sequence plausibly without dangling events.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "TSC",
+      "evidence": [
+        {
+          "quote": "the camera holds nearly static with a barely perceptible slow push-in toward the knuckles. ... A soft band of light slides slowly across the bark and moss textures from upper left toward lower right",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "observed_camera_motion: none (static image)",
+          "source": "evidence_facts"
+        }
+      ],
+      "issue": "The prompt specifies a 'barely perceptible slow push-in' and 'light band slides slowly across the bark and moss textures from upper left toward lower right' over 5 seconds, but the original image is static and provides no temporal evidence to verify these motions. While plausible, the exact timing and duration of these changes are not anchored to the reference image.",
+      "rationale": "The timeline is logically structured: slow organic movement over 5 seconds, with a return to initial state at the end. The push-in and light slide are described as gradual and consistent with the duration. The minor issue is that these motions are inferred rather than verified from the still image, but they do not contradict the original prompt or visual evidence.",
+      "severity": "minor"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SPC",
+      "evidence": [
+        {
+          "quote": "fingers wrapping from the left with fingertips visible on the right side, the bark-ridged forearm extending out of frame to the left",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "the hand structure is pressed against or attached to a vertical wooden trunk; the hand and trunk extend beyond the frame on the left and right",
+          "source": "evidence_facts"
+        }
+      ],
+      "issue": "",
+      "rationale": "Spatial relationships are consistent: hand grips trunk from left to right, forearm extends left, trunk is vertical. The enhanced prompt maintains these positions and does not introduce unexplained swaps or trajectories. The slight camera push-in is minimal and does not disrupt spatial coherence.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "PL",
+      "evidence": [
+        {
+          "quote": "the bark fingers move extremely slowly and organically, as if growing rather than flexing — each fingertip creeps a few millimeters tighter around the trunk, joints easing like swelling wood",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "slow organic finger movement like growing roots",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "The motion is described as organic growth, not mechanical flexing, which is consistent with the fantasy/sci-fi creature context. Moss and ferns shifting, light sliding, and dust drifting are all plausible within the established world logic. No violations of physics or object permanence are present.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "AVS",
+      "evidence": [
+        {
+          "quote": "Near-silence with a faint low forest-at-night ambience; extremely subtle creaking and settling sounds of wood fibers, the soft rustle of tiny leaves and moss shifting, and barely audible drifting air in the dark background.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "slow organic finger movement like growing roots, subtle moss shifting, light sliding across textures, seamless loop",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "The soundscape aligns with the visual events: creaking wood fibers match finger growth, rustling leaves and moss match their subtle shifting, and drifting air matches dust movement. No misaligned effects or dialogue are present. The audio is non-diegetic and ambient, fitting the scene.",
+      "severity": "none"
+    }
+  ],
+  "dimension": "IC",
+  "dimension_score": 95,
+  "evidence_cache_key": "4fbaa6b50028c777a33fb61940c28c74e88513af983cc78b8e515d886556fb49",
+  "judge_cache_key": "438d7e9fd7332b1041db3e2c26d42cb3fe828e0d369fb59490f6650aee59e97d",
+  "method": "glm53_20261112_120702",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"IC\",\n  \"dimension_score\": 95,\n  \"summary\": \"The enhanced prompt maintains strong internal consistency with the original instruction, preserving subject identity, actions, and environment across the 5-second duration. The description aligns with the static reference image while adding plausible, coherent motion and lighting changes. Minor issues include slight over-specification of camera motion and light behavior that may not be fully verifiable from the still image, but these do not materially contradict the original prompt or visual evidence.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"SAC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"slow organic finger movement like growing roots, subtle moss shifting, light sliding across textures, seamless loop\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"a hand made of gnarled bark and twisted roots grips a vertical moss-covered tree trunk, fingers wrapping from the left with fingertips visible on the right side, the bark-ridged forearm extending out of frame to the left, moss patches, small green ferns, thin spider silk strands near the lower left, and faint dust specks drifting in the black void background\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"A highly detailed, static image of a hand-like structure composed of gnarled wood, moss, and small ferns, set against a black background, evoking a living, organic creature.\"\n        }\n      ],\n      \"rationale\": \"Subject identity (bark hand), count (single hand), appearance (gnarled bark, moss, ferns), props (tree trunk), and persistent attributes (black background, spider silk, dust) are consistently preserved. The enhanced prompt does not introduce new subjects or alter core attributes, maintaining stability across the loop.\"\n    },\n    {\n      \"criterion\": \"ANL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"slow organic finger movement like growing roots, subtle moss shifting, light sliding across textures, seamless loop\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"the bark fingers move extremely slowly and organically, as if growing rather than flexing — each fingertip creeps a few millimeters tighter around the trunk, joints easing like swelling wood, while root tendrils on the back of the hand subtly thicken and shift. The moss clumps swell and settle, tiny leaves tremble faintly, and the fern fronds sway almost imperceptibly.\"\n        }\n      ],\n      \"rationale\": \"Actions are coherent and causally linked: finger movement mimics root growth, moss and ferns respond to subtle environmental shifts, and light movement is tied to the organic progression. The loop closure (fingers returning to initial position, light returning to start) resolves the sequence plausibly without dangling events.\"\n    },\n    {\n      \"criterion\": \"TSC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"minor\",\n      \"issue\": \"The prompt specifies a 'barely perceptible slow push-in' and 'light band slides slowly across the bark and moss textures from upper left toward lower right' over 5 seconds, but the original image is static and provides no temporal evidence to verify these motions. While plausible, the exact timing and duration of these changes are not anchored to the reference image.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"the camera holds nearly static with a barely perceptible slow push-in toward the knuckles. ... A soft band of light slides slowly across the bark and moss textures from upper left toward lower right\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"observed_camera_motion: none (static image)\"\n        }\n      ],\n      \"rationale\": \"The timeline is logically structured: slow organic movement over 5 seconds, with a return to initial state at the end. The push-in and light slide are described as gradual and consistent with the duration. The minor issue is that these motions are inferred rather than verified from the still image, but they do not contradict the original prompt or visual evidence.\"\n    },\n    {\n      \"criterion\": \"SPC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"fingers wrapping from the left with fingertips visible on the right side, the bark-ridged forearm extending out of frame to the left\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"the hand structure is pressed against or attached to a vertical wooden trunk; the hand and trunk extend beyond the frame on the left and right\"\n        }\n      ],\n      \"rationale\": \"Spatial relationships are consistent: hand grips trunk from left to right, forearm extends left, trunk is vertical. The enhanced prompt maintains these positions and does not introduce unexplained swaps or trajectories. The slight camera push-in is minimal and does not disrupt spatial coherence.\"\n    },\n    {\n      \"criterion\": \"PL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"the bark fingers move extremely slowly and organically, as if growing rather than flexing — each fingertip creeps a few millimeters tighter around the trunk, joints easing like swelling wood\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"slow organic finger movement like growing roots\"\n        }\n      ],\n      \"rationale\": \"The motion is described as organic growth, not mechanical flexing, which is consistent with the fantasy/sci-fi creature context. Moss and ferns shifting, light sliding, and dust drifting are all plausible within the established world logic. No violations of physics or object permanence are present.\"\n    },\n    {\n      \"criterion\": \"AVS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Near-silence with a faint low forest-at-night ambience; extremely subtle creaking and settling sounds of wood fibers, the soft rustle of tiny leaves and moss shifting, and barely audible drifting air in the dark background.\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"slow organic finger movement like growing roots, subtle moss shifting, light sliding across textures, seamless loop\"\n        }\n      ],\n      \"rationale\": \"The soundscape aligns with the visual events: creaking wood fibers match finger growth, rustling leaves and moss match their subtle shifting, and drifting air matches dust movement. No misaligned effects or dialogue are present. The audio is non-diegetic and ambient, fitting the scene.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt maintains strong internal consistency with the original instruction, preserving subject identity, actions, and environment across the 5-second duration. The description aligns with the static reference image while adding plausible, coherent motion and lighting changes. Minor issues include slight over-specification of camera motion and light behavior that may not be fully verifiable from the still image, but these do not materially contradict the original prompt or visual evidence.",
+  "usage": {
+    "completion_tokens": 1524,
+    "prompt_tokens": 2367,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 3891
+  }
+}

@@ -1,0 +1,160 @@
+{
+  "candidate_hash": "b8193a627e11817e7c88a751aca2b9767aa126c1c169cd556cb1e1329e757505",
+  "case_key": "i2v:157",
+  "created_at": "2026-11-13T07:54:10+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "GSF",
+      "evidence": [
+        {
+          "quote": "16:9横屏美食定格动画短视频，总时长10秒，采用12帧/秒的顿挫卡点节奏",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Hyper-realistic stop-motion food animation, choppy beat-synced cadence",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "The enhanced prompt correctly preserves the genre (stop-motion food animation), medium (video), and aesthetic (hyper-realistic, warm natural lighting). The 12fps beat-synced cadence is maintained. No incompatible style is introduced.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SAP",
+      "evidence": [
+        {
+          "quote": "1. 烤盘：30×20cm长方形，黑色哑光铸铁烤盘... 5. 餐盘：直径25cm浅棕色圆形木质餐盘... 7. 隔热垫：深灰色方形隔热硅胶垫",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "a 30×20cm black matte cast-iron baking pan... a 20cm matte stainless mixing bowl... milk, cream, and fine white sugar pour in measured additions",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The enhanced prompt omits several required props from the original list: wooden plate (直径25cm浅棕色圆形木质餐盘), silicone mat (深灰色方形隔热硅胶垫), and does not explicitly reference the milk pitcher or cream container as distinct items, though they are implied in the liquid additions.",
+      "rationale": "While the core props (baking pan, mixing bowl, eggs, sieve, parchment paper) are preserved, the omission of the wooden plate and silicone mat violates the explicit '恒定锁定道具' requirement. The milk/cream/sugar are grouped without distinct object references, which may affect visual fidelity. These are minor omissions, not material to the core narrative.",
+      "severity": "minor"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANF",
+      "evidence": [
+        {
+          "quote": "0-4秒：新鲜鸡蛋自动磕开，蛋液匀速落入哑光不锈钢搅拌碗中... 搅拌完成后，挞液通过细密不锈钢滤网匀速滤入不锈钢尖嘴量杯... 4-10秒：黑色铸铁烤盘铺入适配尺寸的烘焙吸油纸，带冰霜的冷冻蛋挞皮匀速摆入烤盘内",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "In stop-motion steps synced to tick sounds, a 40×30cm bamboo cutting board... two fresh textured eggs... crack open by themselves... milk, cream, and fine white sugar pour in... whisk stirs... [Shot 2] ...custard flows through the mesh... [Shot 3] ...a 30×20cm black matte cast-iron baking pan lands... parchment paper settles... frosted frozen tart shells place themselves one by one",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "The sequence of events is preserved: egg cracking, mixing, straining, then pan placement and tart shell arrangement. The timing (0-4s, 4-10s) is respected. The actions are described with appropriate motion and outcomes. No substitutions or reversals are present.",
+      "severity": "none"
+    },
+    {
+      "applicability": "not_applicable",
+      "criterion": "DLI",
+      "evidence": [],
+      "issue": "",
+      "rationale": "There is no dialogue, narration, or lyrics in the original prompt or enhanced prompt. The criterion is not applicable.",
+      "severity": null
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ARP",
+      "evidence": [
+        {
+          "quote": "重点突出定格动画特有的顿挫声、蛋液流动声、挞液过滤声、烤箱烘烤声与挞皮脱模的清脆声",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Stop-motion tick sounds mark each prop landing, followed by the crisp crack of eggs, liquid plops into the bowl, the soft whoosh of eggshells flying off, steady metallic stirring friction, the fine hiss of custard straining through the sieve, the soft rustle of parchment paper, and light clicks as each tart shell settles into the pan",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The enhanced prompt omits specific audio elements required in the original: '烤箱烘烤声' (oven baking sound) and '挞皮脱模的清脆声' (crisp demolding sound). It also does not explicitly mention the 'ASMR' quality or 'Foley Sync' as a constraint, though it describes sync with motion.",
+      "rationale": "The core ASMR/Foley sounds (crack, plop, stir, hiss, click) are preserved, but the omission of oven baking and demolding sounds is a minor deviation from the explicit audio constraints. The enhanced prompt does not explicitly state 'no music' or 'ASMR', though it implies it through description.",
+      "severity": "minor"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CCP",
+      "evidence": [
+        {
+          "quote": "镜头景别需保持稳定，所有动作应匀速流畅地贴合卡点节奏",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "a static eye-level shot opens exactly on <Picture 1>... [Shot 2] At 00:03.000, the shot cuts to a macro close-up with stable framing... [Shot 3] At 00:04.000, the shot cuts back to the medium shot",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "The enhanced prompt preserves the static camera for the first shot, introduces a macro close-up at 00:03, and returns to medium shot at 00:04, which is consistent with the original's implied shot structure. The camera movement is explicitly described and does not override the static requirement for the main scene.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "LCF",
+      "evidence": [
+        {
+          "quote": "厨房光线柔和，使用暖黄原木风格的自然光",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "soft warm diffused daylight from the window, with no people, hands, or creatures anywhere",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "The lighting is preserved as soft, warm, diffused daylight. The color palette (white marble, oak cabinets, stainless steel) is consistent with the original. No changes to brightness, contrast, or grading are indicated.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SSP",
+      "evidence": [
+        {
+          "quote": "以图中原木色橱柜和白色大理石中岛台的厨房作为固定背景",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "the empty white marble island with grey veining in the foreground, warm oak-toned shaker cabinets, stainless built-in ovens, and soft warm diffused daylight from the window",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "The setting is preserved: kitchen with white marble island, oak cabinets, stainless appliances. The relative positions (island in foreground, cabinets in background) are maintained. The background remains unchanged throughout.",
+      "severity": "none"
+    },
+    {
+      "applicability": "not_applicable",
+      "criterion": "OTI",
+      "evidence": [],
+      "issue": "",
+      "rationale": "There is no visible text, titles, signs, or interface elements in the original prompt or enhanced prompt. The criterion is not applicable.",
+      "severity": null
+    }
+  ],
+  "dimension": "SF",
+  "dimension_score": 85,
+  "evidence_cache_key": "ac74dae3951052ac354c4899840ee20e6d8cda58de5e4095553c374837d8032c",
+  "judge_cache_key": "a0ca24571ad14d7ab7be626329bd736d7e7015f9ebc418227c8be391591d0377",
+  "method": "glm53_20261112_120702",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"SF\",\n  \"dimension_score\": 85,\n  \"summary\": \"The enhanced prompt largely preserves the semantic fidelity of the original instruction, maintaining core genre, style, subject identity, actions, and audio constraints. However, it introduces minor deviations in prop list scope, omits some required props (e.g., wooden plate, silicone mat), and slightly alters the audio description by omitting specific sounds like oven baking and demolding. The visual and temporal structure is well-aligned, but the omission of certain props and audio elements constitutes minor issues. No major contradictions or infeasible sequences are present.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"GSF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"16:9横屏美食定格动画短视频，总时长10秒，采用12帧/秒的顿挫卡点节奏\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Hyper-realistic stop-motion food animation, choppy beat-synced cadence\"\n        }\n      ],\n      \"rationale\": \"The enhanced prompt correctly preserves the genre (stop-motion food animation), medium (video), and aesthetic (hyper-realistic, warm natural lighting). The 12fps beat-synced cadence is maintained. No incompatible style is introduced.\"\n    },\n    {\n      \"criterion\": \"SAP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"minor\",\n      \"issue\": \"The enhanced prompt omits several required props from the original list: wooden plate (直径25cm浅棕色圆形木质餐盘), silicone mat (深灰色方形隔热硅胶垫), and does not explicitly reference the milk pitcher or cream container as distinct items, though they are implied in the liquid additions.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"1. 烤盘：30×20cm长方形，黑色哑光铸铁烤盘... 5. 餐盘：直径25cm浅棕色圆形木质餐盘... 7. 隔热垫：深灰色方形隔热硅胶垫\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"a 30×20cm black matte cast-iron baking pan... a 20cm matte stainless mixing bowl... milk, cream, and fine white sugar pour in measured additions\"\n        }\n      ],\n      \"rationale\": \"While the core props (baking pan, mixing bowl, eggs, sieve, parchment paper) are preserved, the omission of the wooden plate and silicone mat violates the explicit '恒定锁定道具' requirement. The milk/cream/sugar are grouped without distinct object references, which may affect visual fidelity. These are minor omissions, not material to the core narrative.\"\n    },\n    {\n      \"criterion\": \"ANF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"0-4秒：新鲜鸡蛋自动磕开，蛋液匀速落入哑光不锈钢搅拌碗中... 搅拌完成后，挞液通过细密不锈钢滤网匀速滤入不锈钢尖嘴量杯... 4-10秒：黑色铸铁烤盘铺入适配尺寸的烘焙吸油纸，带冰霜的冷冻蛋挞皮匀速摆入烤盘内\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"In stop-motion steps synced to tick sounds, a 40×30cm bamboo cutting board... two fresh textured eggs... crack open by themselves... milk, cream, and fine white sugar pour in... whisk stirs... [Shot 2] ...custard flows through the mesh... [Shot 3] ...a 30×20cm black matte cast-iron baking pan lands... parchment paper settles... frosted frozen tart shells place themselves one by one\"\n        }\n      ],\n      \"rationale\": \"The sequence of events is preserved: egg cracking, mixing, straining, then pan placement and tart shell arrangement. The timing (0-4s, 4-10s) is respected. The actions are described with appropriate motion and outcomes. No substitutions or reversals are present.\"\n    },\n    {\n      \"criterion\": \"DLI\",\n      \"applicability\": \"not_applicable\",\n      \"severity\": null,\n      \"issue\": \"\",\n      \"evidence\": [],\n      \"rationale\": \"There is no dialogue, narration, or lyrics in the original prompt or enhanced prompt. The criterion is not applicable.\"\n    },\n    {\n      \"criterion\": \"ARP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"minor\",\n      \"issue\": \"The enhanced prompt omits specific audio elements required in the original: '烤箱烘烤声' (oven baking sound) and '挞皮脱模的清脆声' (crisp demolding sound). It also does not explicitly mention the 'ASMR' quality or 'Foley Sync' as a constraint, though it describes sync with motion.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"重点突出定格动画特有的顿挫声、蛋液流动声、挞液过滤声、烤箱烘烤声与挞皮脱模的清脆声\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Stop-motion tick sounds mark each prop landing, followed by the crisp crack of eggs, liquid plops into the bowl, the soft whoosh of eggshells flying off, steady metallic stirring friction, the fine hiss of custard straining through the sieve, the soft rustle of parchment paper, and light clicks as each tart shell settles into the pan\"\n        }\n      ],\n      \"rationale\": \"The core ASMR/Foley sounds (crack, plop, stir, hiss, click) are preserved, but the omission of oven baking and demolding sounds is a minor deviation from the explicit audio constraints. The enhanced prompt does not explicitly state 'no music' or 'ASMR', though it implies it through description.\"\n    },\n    {\n      \"criterion\": \"CCP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"镜头景别需保持稳定，所有动作应匀速流畅地贴合卡点节奏\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"a static eye-level shot opens exactly on <Picture 1>... [Shot 2] At 00:03.000, the shot cuts to a macro close-up with stable framing... [Shot 3] At 00:04.000, the shot cuts back to the medium shot\"\n        }\n      ],\n      \"rationale\": \"The enhanced prompt preserves the static camera for the first shot, introduces a macro close-up at 00:03, and returns to medium shot at 00:04, which is consistent with the original's implied shot structure. The camera movement is explicitly described and does not override the static requirement for the main scene.\"\n    },\n    {\n      \"criterion\": \"LCF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"厨房光线柔和，使用暖黄原木风格的自然光\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"soft warm diffused daylight from the window, with no people, hands, or creatures anywhere\"\n        }\n      ],\n      \"rationale\": \"The lighting is preserved as soft, warm, diffused daylight. The color palette (white marble, oak cabinets, stainless steel) is consistent with the original. No changes to brightness, contrast, or grading are indicated.\"\n    },\n    {\n      \"criterion\": \"SSP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"以图中原木色橱柜和白色大理石中岛台的厨房作为固定背景\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"the empty white marble island with grey veining in the foreground, warm oak-toned shaker cabinets, stainless built-in ovens, and soft warm diffused daylight from the window\"\n        }\n      ],\n      \"rationale\": \"The setting is preserved: kitchen with white marble island, oak cabinets, stainless appliances. The relative positions (island in foreground, cabinets in background) are maintained. The background remains unchanged throughout.\"\n    },\n    {\n      \"criterion\": \"OTI\",\n      \"applicability\": \"not_applicable\",\n      \"severity\": null,\n      \"issue\": \"\",\n      \"evidence\": [],\n      \"rationale\": \"There is no visible text, titles, signs, or interface elements in the original prompt or enhanced prompt. The criterion is not applicable.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt largely preserves the semantic fidelity of the original instruction, maintaining core genre, style, subject identity, actions, and audio constraints. However, it introduces minor deviations in prop list scope, omits some required props (e.g., wooden plate, silicone mat), and slightly alters the audio description by omitting specific sounds like oven baking and demolding. The visual and temporal structure is well-aligned, but the omission of certain props and audio elements constitutes minor issues. No major contradictions or infeasible sequences are present.",
+  "usage": {
+    "completion_tokens": 2013,
+    "prompt_tokens": 4121,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 6134
+  }
+}

@@ -1,0 +1,142 @@
+{
+  "candidate_hash": "42b10646650c1c5a4da7a9d317f1bcd042df8bd4ef44360a2fce350555ff6794",
+  "case_key": "t2v:498",
+  "created_at": "2026-11-13T08:45:16+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "STC",
+      "evidence": [
+        {
+          "quote": "Set the total runtime to 3 seconds, while also making every shot last 27 seconds.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The temporal plan is infeasible due to contradictory duration constraints (3 seconds total runtime with every shot lasting 27 seconds) and a reversed, non-continuous timeline that lacks coherent event boundaries or progression.",
+      "rationale": "A 3-second runtime cannot accommodate 27-second shots. The instruction to reverse the timeline and cut to a non-matching beginning further breaks temporal continuity, making the sequence impossible to execute.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CDS",
+      "evidence": [
+        {
+          "quote": "Describe that same moment as harsh noon sun and as a lightless night, and as both a locked camera and a camera that never stops shaking.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Camera specifications are contradictory and impossible: the prompt demands both a locked camera and a camera that never stops shaking simultaneously, and also requires multiple conflicting visual states (e.g., harsh noon sun and lightless night) in the same moment.",
+      "rationale": "Simultaneous contradictory camera movements and lighting conditions are physically and technically impossible, rendering the prompt unactionable for any video generation system.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ETD",
+      "evidence": [
+        {
+          "quote": "Cut away in the middle to a palace audition. Reverse the timeline: show the ending first, then cut to a beginning that does not match.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Cuts and transitions are described without continuity or motivation: the prompt instructs to cut to a palace audition mid-sequence and reverse the timeline without establishing narrative or spatial coherence.",
+      "rationale": "The cuts lack motivation and continuity, creating a disjointed sequence with no logical progression. The reversed timeline with a mismatched beginning violates narrative coherence.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "LCS",
+      "evidence": [
+        {
+          "quote": "Describe that same moment as harsh noon sun and as a lightless night...",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Lighting specifications are contradictory: the prompt demands the same moment to be both 'harsh noon sun' and 'lightless night', which is physically impossible.",
+      "rationale": "Simultaneous contradictory lighting conditions cannot be rendered in a single visual moment, making the prompt infeasible for any visual production.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "NDE",
+      "evidence": [
+        {
+          "quote": "Replace the whole video with an empty meeting room where a glass of water never moves, with no people and no conflict.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "There is no progression, variation, or resolution; the prompt describes a static scene (glass of water never moves) with contradictory character and timeline structures, resulting in a static, unmotivated sequence.",
+      "rationale": "The prompt abandons the original dynamic combat narrative for a static, unchanging scene with no narrative arc or development, violating the requirement for progression or escalation.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CIF",
+      "evidence": [
+        {
+          "quote": "First state that there is one protagonist, then state that this same protagonist appears simultaneously as five different-looking people who talk to each other.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Additions (e.g., five simultaneous versions of one protagonist, palace audition, contradictory lighting and camera states) are not supportive of the central request but instead create incoherence and distraction.",
+      "rationale": "The additions contradict the original prompt’s focus on a combat scene and introduce illogical, distracting elements that undermine any coherent visual narrative.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SDI",
+      "evidence": [
+        {
+          "quote": "Replace the whole video with an empty meeting room where a glass of water never moves, with no people and no conflict.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "No audio elements (speech, music, effects, ambience) are specified, which is acceptable for a visual-only prompt, but the lack of any audio cues may affect the intended mood or pacing.",
+      "rationale": "While audio is not required, the complete absence of any mention of sound or effects may limit the richness of the scene, especially given the original prompt’s emphasis on tension and impact.",
+      "severity": "minor"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SPS",
+      "evidence": [
+        {
+          "quote": "First state that there is one protagonist, then state that this same protagonist appears simultaneously as five different-looking people who talk to each other.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Subject and performance details are contradictory: one protagonist appears as five different people simultaneously, with no description of appearance, expression, gesture, or interaction, making performance impossible to render.",
+      "rationale": "The prompt creates a logical paradox: a single protagonist cannot simultaneously appear as five distinct individuals without clear specification of their identities, expressions, or interactions, rendering performance details infeasible.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "VSS",
+      "evidence": [
+        {
+          "quote": "Describe that same moment as harsh noon sun and as a lightless night, and as both a locked camera and a camera that never stops shaking.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Visual treatment is not specified beyond contradictory lighting and camera conditions; no medium, texture, rendering language, or production design is defined, leaving the visual style undefined.",
+      "rationale": "The prompt provides no actionable visual treatment beyond contradictory conditions, leaving the medium, texture, or rendering style unspecified, which is essential for video generation.",
+      "severity": "major"
+    }
+  ],
+  "dimension": "DC",
+  "dimension_score": 0,
+  "evidence_cache_key": "099c0ea00de3ca073f2c2bf752a3cec59eb509c74a76abde22235b7bc17773c3",
+  "judge_cache_key": "0754499d53388e6467fb078ab780e01b77f9f1c9e99d9029be2769351eb2b2eb",
+  "method": "weak-pe-original",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"DC\",\n  \"dimension_score\": 0,\n  \"summary\": \"The enhanced prompt is incoherent and contradictory, violating fundamental principles of temporal planning, camera specification, and narrative logic. It introduces impossible conditions (e.g., 3-second runtime with 27-second shots), contradictory visual states (harsh noon sun and lightless night simultaneously), and illogical character structure (one protagonist appearing as five different people simultaneously). The prompt also abandons the original combat scene entirely without a coherent replacement, rendering it unusable for video generation.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"STC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The temporal plan is infeasible due to contradictory duration constraints (3 seconds total runtime with every shot lasting 27 seconds) and a reversed, non-continuous timeline that lacks coherent event boundaries or progression.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Set the total runtime to 3 seconds, while also making every shot last 27 seconds.\"\n        }\n      ],\n      \"rationale\": \"A 3-second runtime cannot accommodate 27-second shots. The instruction to reverse the timeline and cut to a non-matching beginning further breaks temporal continuity, making the sequence impossible to execute.\"\n    },\n    {\n      \"criterion\": \"CDS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Camera specifications are contradictory and impossible: the prompt demands both a locked camera and a camera that never stops shaking simultaneously, and also requires multiple conflicting visual states (e.g., harsh noon sun and lightless night) in the same moment.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Describe that same moment as harsh noon sun and as a lightless night, and as both a locked camera and a camera that never stops shaking.\"\n        }\n      ],\n      \"rationale\": \"Simultaneous contradictory camera movements and lighting conditions are physically and technically impossible, rendering the prompt unactionable for any video generation system.\"\n    },\n    {\n      \"criterion\": \"ETD\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Cuts and transitions are described without continuity or motivation: the prompt instructs to cut to a palace audition mid-sequence and reverse the timeline without establishing narrative or spatial coherence.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Cut away in the middle to a palace audition. Reverse the timeline: show the ending first, then cut to a beginning that does not match.\"\n        }\n      ],\n      \"rationale\": \"The cuts lack motivation and continuity, creating a disjointed sequence with no logical progression. The reversed timeline with a mismatched beginning violates narrative coherence.\"\n    },\n    {\n      \"criterion\": \"LCS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Lighting specifications are contradictory: the prompt demands the same moment to be both 'harsh noon sun' and 'lightless night', which is physically impossible.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Describe that same moment as harsh noon sun and as a lightless night...\"\n        }\n      ],\n      \"rationale\": \"Simultaneous contradictory lighting conditions cannot be rendered in a single visual moment, making the prompt infeasible for any visual production.\"\n    },\n    {\n      \"criterion\": \"NDE\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"There is no progression, variation, or resolution; the prompt describes a static scene (glass of water never moves) with contradictory character and timeline structures, resulting in a static, unmotivated sequence.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Replace the whole video with an empty meeting room where a glass of water never moves, with no people and no conflict.\"\n        }\n      ],\n      \"rationale\": \"The prompt abandons the original dynamic combat narrative for a static, unchanging scene with no narrative arc or development, violating the requirement for progression or escalation.\"\n    },\n    {\n      \"criterion\": \"CIF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Additions (e.g., five simultaneous versions of one protagonist, palace audition, contradictory lighting and camera states) are not supportive of the central request but instead create incoherence and distraction.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"First state that there is one protagonist, then state that this same protagonist appears simultaneously as five different-looking people who talk to each other.\"\n        }\n      ],\n      \"rationale\": \"The additions contradict the original prompt’s focus on a combat scene and introduce illogical, distracting elements that undermine any coherent visual narrative.\"\n    },\n    {\n      \"criterion\": \"SDI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"minor\",\n      \"issue\": \"No audio elements (speech, music, effects, ambience) are specified, which is acceptable for a visual-only prompt, but the lack of any audio cues may affect the intended mood or pacing.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Replace the whole video with an empty meeting room where a glass of water never moves, with no people and no conflict.\"\n        }\n      ],\n      \"rationale\": \"While audio is not required, the complete absence of any mention of sound or effects may limit the richness of the scene, especially given the original prompt’s emphasis on tension and impact.\"\n    },\n    {\n      \"criterion\": \"SPS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Subject and performance details are contradictory: one protagonist appears as five different people simultaneously, with no description of appearance, expression, gesture, or interaction, making performance impossible to render.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"First state that there is one protagonist, then state that this same protagonist appears simultaneously as five different-looking people who talk to each other.\"\n        }\n      ],\n      \"rationale\": \"The prompt creates a logical paradox: a single protagonist cannot simultaneously appear as five distinct individuals without clear specification of their identities, expressions, or interactions, rendering performance details infeasible.\"\n    },\n    {\n      \"criterion\": \"VSS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Visual treatment is not specified beyond contradictory lighting and camera conditions; no medium, texture, rendering language, or production design is defined, leaving the visual style undefined.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Describe that same moment as harsh noon sun and as a lightless night, and as both a locked camera and a camera that never stops shaking.\"\n        }\n      ],\n      \"rationale\": \"The prompt provides no actionable visual treatment beyond contradictory conditions, leaving the medium, texture, or rendering style unspecified, which is essential for video generation.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt is incoherent and contradictory, violating fundamental principles of temporal planning, camera specification, and narrative logic. It introduces impossible conditions (e.g., 3-second runtime with 27-second shots), contradictory visual states (harsh noon sun and lightless night simultaneously), and illogical character structure (one protagonist appearing as five different people simultaneously). The prompt also abandons the original combat scene entirely without a coherent replacement, rendering it unusable for video generation.",
+  "usage": {
+    "completion_tokens": 1574,
+    "prompt_tokens": 1145,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 2719
+  }
+}

@@ -1,0 +1,182 @@
+{
+  "candidate_hash": "a62a3ca6227d2e40157028e3df5234be9f5a6c2413d46e68274a7e7d28f20f5b",
+  "case_key": "r2v:011",
+  "created_at": "2026-11-13T08:05:27+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "GSF",
+      "evidence": [
+        {
+          "quote": "3D Chinese anime photorealistic photography style, with strong light-and-shadow contrast, ultra- visuals, and a rich sense of draping.",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Replace the whole video with a looping snowy landscape with no characters and no plot.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original 3D Chinese anime photorealistic photography style with strong light-and-shadow contrast and rich draping is replaced with a looping snowy landscape, which is an incompatible medium and aesthetic.",
+      "rationale": "The requested genre, medium, and visual style are entirely discarded in favor of a generic snowy landscape, which contradicts the specific stylistic and aesthetic requirements of the original prompt.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SAP",
+      "evidence": [
+        {
+          "quote": "the girl in Image 1",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Replace image 1 with a character who is not in the reference, and give that image two contradictory identities.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "First state that there is one protagonist, then state that this same protagonist appears simultaneously as five different-looking people who talk to each other.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The subject identity, count, and appearance are violated by replacing the girl in Image 1 with non-reference characters and assigning contradictory identities, and by introducing five simultaneous protagonists.",
+      "rationale": "The original subject (a single girl) is replaced with non-reference characters and contradictory identities, and the count is altered from one to five, violating subject identity and count.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANF",
+      "evidence": [
+        {
+          "quote": "Shot 1 [0–3 seconds]: a close-up shows the girl... eyes tightly closed... Shot 2 [4–6 seconds]: ...slowly opening her eyes... Shot 3 [7–10 seconds]: ...softly says, “Hiss...”",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Reverse the timeline: show the ending first, then cut to a beginning that does not match. Cut away in the middle to a soccer celebration.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The requested action sequence (eyes closed → opening eyes → speaking) is replaced with a reversed timeline, a soccer celebration cutaway, and contradictory temporal descriptions (harsh noon sun and lightless night).",
+      "rationale": "The narrative intent and event order are fundamentally altered, with the original emotional progression replaced by incoherent and contradictory events.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "DLI",
+      "evidence": [
+        {
+          "quote": "softly says, “Hiss...”",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Replace the whole video with a looping snowy landscape with no characters and no plot.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The exact dialogue 'Hiss...' is omitted, and no dialogue is preserved or referenced in the enhanced prompt.",
+      "rationale": "The required dialogue is entirely removed, violating the preservation of exact wording and speaker attribution.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ARP",
+      "evidence": [
+        {
+          "quote": "only faint breathing can be heard... her voice weak yet charged with emotional tension.",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Replace the whole video with a looping snowy landscape with no characters and no plot.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original audio constraints (faint breathing, weak voice) are replaced with no audio, and no sound effects or music are preserved.",
+      "rationale": "All requested audio elements are omitted, and no sound constraints are preserved, violating the audio requirements.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CCP",
+      "evidence": [
+        {
+          "quote": "Shot 1 [0–3 seconds]... Shot 2 [4–6 seconds]... Shot 3 [7–10 seconds]",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Set the total runtime to 2 seconds, while also making every shot last 22 seconds. ... Describe that same moment as ... a locked camera and a camera that never stops shaking.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The explicit camera constraints (three shots with specific durations and angles) are replaced with contradictory instructions (2-second runtime with 22-second shots, locked camera vs. shaking camera).",
+      "rationale": "The camera constraints are logically impossible and directly contradict the original shot structure and timing.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "LCF",
+      "evidence": [
+        {
+          "quote": "strong light-and-shadow contrast",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Describe that same moment as harsh noon sun and as a lightless night",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The lighting conditions (strong light-and-shadow contrast, warm golden hour) are replaced with contradictory descriptions (harsh noon sun and lightless night).",
+      "rationale": "The lighting and time-of-day cues are directly contradicted, violating the specified illumination and visual tone.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SSP",
+      "evidence": [
+        {
+          "quote": "inside a room... lying on a bed within a pale cyan gauze canopy",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Replace the whole video with a looping snowy landscape with no characters and no plot.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The setting (room with pale cyan gauze canopy) is replaced with a snowy landscape, and the spatial relations are discarded.",
+      "rationale": "The original setting and background elements are entirely removed, violating the required environment and spatial layout.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "OTI",
+      "evidence": [
+        {
+          "quote": "No visible text or subtitles are mentioned.",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "onscreen_text: presence: false",
+          "source": "evidence_facts"
+        }
+      ],
+      "issue": "No onscreen text is present in the original prompt or evidence, so there is no requirement to preserve or alter it.",
+      "rationale": "There is no onscreen text to preserve, so the criterion is satisfied by default.",
+      "severity": "none"
+    }
+  ],
+  "dimension": "SF",
+  "dimension_score": 0,
+  "evidence_cache_key": "b34825e5de25fb4381ebcec3bae39c35892e892515684ae5e7248f906cd1051f",
+  "judge_cache_key": "a0ca24571ad14d7ab7be626329bd736d7e7015f9ebc418227c8be391591d0377",
+  "method": "weak-pe-original",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"SF\",\n  \"dimension_score\": 0,\n  \"summary\": \"The enhanced prompt completely violates semantic fidelity by replacing the original narrative, characters, setting, and visual style with contradictory, infeasible, and nonsensical instructions. It directly contradicts every core requirement of the original prompt, including subject identity, action sequence, setting, camera constraints, and temporal logic. The prompt is designed to break the task rather than fulfill it.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"GSF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original 3D Chinese anime photorealistic photography style with strong light-and-shadow contrast and rich draping is replaced with a looping snowy landscape, which is an incompatible medium and aesthetic.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"3D Chinese anime photorealistic photography style, with strong light-and-shadow contrast, ultra- visuals, and a rich sense of draping.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Replace the whole video with a looping snowy landscape with no characters and no plot.\"\n        }\n      ],\n      \"rationale\": \"The requested genre, medium, and visual style are entirely discarded in favor of a generic snowy landscape, which contradicts the specific stylistic and aesthetic requirements of the original prompt.\"\n    },\n    {\n      \"criterion\": \"SAP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The subject identity, count, and appearance are violated by replacing the girl in Image 1 with non-reference characters and assigning contradictory identities, and by introducing five simultaneous protagonists.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"the girl in Image 1\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Replace image 1 with a character who is not in the reference, and give that image two contradictory identities.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"First state that there is one protagonist, then state that this same protagonist appears simultaneously as five different-looking people who talk to each other.\"\n        }\n      ],\n      \"rationale\": \"The original subject (a single girl) is replaced with non-reference characters and contradictory identities, and the count is altered from one to five, violating subject identity and count.\"\n    },\n    {\n      \"criterion\": \"ANF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The requested action sequence (eyes closed → opening eyes → speaking) is replaced with a reversed timeline, a soccer celebration cutaway, and contradictory temporal descriptions (harsh noon sun and lightless night).\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"Shot 1 [0–3 seconds]: a close-up shows the girl... eyes tightly closed... Shot 2 [4–6 seconds]: ...slowly opening her eyes... Shot 3 [7–10 seconds]: ...softly says, “Hiss...”\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Reverse the timeline: show the ending first, then cut to a beginning that does not match. Cut away in the middle to a soccer celebration.\"\n        }\n      ],\n      \"rationale\": \"The narrative intent and event order are fundamentally altered, with the original emotional progression replaced by incoherent and contradictory events.\"\n    },\n    {\n      \"criterion\": \"DLI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The exact dialogue 'Hiss...' is omitted, and no dialogue is preserved or referenced in the enhanced prompt.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"softly says, “Hiss...”\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Replace the whole video with a looping snowy landscape with no characters and no plot.\"\n        }\n      ],\n      \"rationale\": \"The required dialogue is entirely removed, violating the preservation of exact wording and speaker attribution.\"\n    },\n    {\n      \"criterion\": \"ARP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original audio constraints (faint breathing, weak voice) are replaced with no audio, and no sound effects or music are preserved.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"only faint breathing can be heard... her voice weak yet charged with emotional tension.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Replace the whole video with a looping snowy landscape with no characters and no plot.\"\n        }\n      ],\n      \"rationale\": \"All requested audio elements are omitted, and no sound constraints are preserved, violating the audio requirements.\"\n    },\n    {\n      \"criterion\": \"CCP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The explicit camera constraints (three shots with specific durations and angles) are replaced with contradictory instructions (2-second runtime with 22-second shots, locked camera vs. shaking camera).\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"Shot 1 [0–3 seconds]... Shot 2 [4–6 seconds]... Shot 3 [7–10 seconds]\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Set the total runtime to 2 seconds, while also making every shot last 22 seconds. ... Describe that same moment as ... a locked camera and a camera that never stops shaking.\"\n        }\n      ],\n      \"rationale\": \"The camera constraints are logically impossible and directly contradict the original shot structure and timing.\"\n    },\n    {\n      \"criterion\": \"LCF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The lighting conditions (strong light-and-shadow contrast, warm golden hour) are replaced with contradictory descriptions (harsh noon sun and lightless night).\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"strong light-and-shadow contrast\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Describe that same moment as harsh noon sun and as a lightless night\"\n        }\n      ],\n      \"rationale\": \"The lighting and time-of-day cues are directly contradicted, violating the specified illumination and visual tone.\"\n    },\n    {\n      \"criterion\": \"SSP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The setting (room with pale cyan gauze canopy) is replaced with a snowy landscape, and the spatial relations are discarded.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"inside a room... lying on a bed within a pale cyan gauze canopy\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Replace the whole video with a looping snowy landscape with no characters and no plot.\"\n        }\n      ],\n      \"rationale\": \"The original setting and background elements are entirely removed, violating the required environment and spatial layout.\"\n    },\n    {\n      \"criterion\": \"OTI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"No onscreen text is present in the original prompt or evidence, so there is no requirement to preserve or alter it.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"No visible text or subtitles are mentioned.\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"onscreen_text: presence: false\"\n        }\n      ],\n      \"rationale\": \"There is no onscreen text to preserve, so the criterion is satisfied by default.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt completely violates semantic fidelity by replacing the original narrative, characters, setting, and visual style with contradictory, infeasible, and nonsensical instructions. It directly contradicts every core requirement of the original prompt, including subject identity, action sequence, setting, camera constraints, and temporal logic. The prompt is designed to break the task rather than fulfill it.",
+  "usage": {
+    "completion_tokens": 1740,
+    "prompt_tokens": 3224,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 4964
+  }
+}

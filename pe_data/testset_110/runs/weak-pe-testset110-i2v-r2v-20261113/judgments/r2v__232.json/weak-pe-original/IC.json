@@ -1,0 +1,123 @@
+{
+  "candidate_hash": "8406cca1dce20f19ac6a213057f5c6661e38d50b54913cf6b8ec1dd5c220eece",
+  "case_key": "r2v:232",
+  "created_at": "2026-11-13T08:53:12+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "SAC",
+      "evidence": [
+        {
+          "quote": "First state that there is one protagonist, then state that this same protagonist appears simultaneously as five different-looking people who talk to each other.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Replace image 1 with a character who is not in the reference, and give that image two contradictory identities.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Subject identity, count, and appearance are fundamentally contradicted. The prompt states there is one protagonist, then immediately claims this same protagonist appears simultaneously as five different-looking people. Additionally, image 1 is replaced with a character not in the reference and given two contradictory identities, violating stable subject attributes.",
+      "rationale": "The original prompt establishes two distinct characters (Gui Yue and Liu Lang) with stable identities and appearances. The enhanced prompt directly contradicts this by introducing a single protagonist who splits into five, and by replacing a reference character with a non-existent one having conflicting identities. This violates subject consistency and identity stability.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANL",
+      "evidence": [
+        {
+          "quote": "Reverse the timeline: show the ending first, then cut to a beginning that does not match. Cut away in the middle to a palace audition.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Play a loud pop chorus the entire time and have the characters lip-sync to it.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Actions form no coherent progression. The prompt demands reversing the timeline (showing ending first, then a mismatched beginning), while also introducing unrelated events like a palace audition. The five simultaneous protagonists talking to each other lack causal binding or plausible interaction, and the lip-sync to a pop chorus has no narrative or emotional connection to the original plot.",
+      "rationale": "The original plot has a clear causal chain: Liu Lang’s promise → Gui Yue’s shock → determination → exterior train → silent pact. The enhanced prompt breaks this with a reversed, mismatched timeline, unrelated cutaways, and non-narrative actions (lip-syncing to pop music), creating incoherent and dangling events.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "TSC",
+      "evidence": [
+        {
+          "quote": "Set the total runtime to 3 seconds, while also making every shot last 27 seconds.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Reverse the timeline: show the ending first, then cut to a beginning that does not match.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Chronology is infeasible. The prompt sets the total runtime to 3 seconds while making every shot last 27 seconds, which is mathematically impossible. Additionally, the timeline is reversed and then cut to a non-matching beginning, creating unexplained state resets and temporal contradictions.",
+      "rationale": "A 3-second video cannot contain shots lasting 27 seconds. This is a fundamental temporal contradiction. The reversed timeline with a non-matching beginning further breaks chronological coherence, as the ending state (determination, silent pact) cannot logically precede a beginning that does not align with it.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SPC",
+      "evidence": [
+        {
+          "quote": "Describe that same moment as harsh noon sun and as a lightless night, and as both a locked camera and a camera that never stops shaking.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Spatial consistency is violated. The same moment is described as both harsh noon sun and lightless night, and as both a locked camera and a camera that never stops shaking. These contradictory environmental and camera conditions cannot coexist in the same spatial context.",
+      "rationale": "The original setting is a nighttime train interior with warm lamplight and neon cityscape. The enhanced prompt forces contradictory lighting (noon vs. night) and camera motion (locked vs. shaking) for the same moment, which is spatially and visually impossible without explicit narrative justification (which is absent).",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "PL",
+      "evidence": [
+        {
+          "quote": "this same protagonist appears simultaneously as five different-looking people who talk to each other.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Replace image 1 with a character who is not in the reference, and give that image two contradictory identities.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Physics and object permanence are violated. A single protagonist cannot simultaneously appear as five different people without explanation. Additionally, replacing image 1 with a non-reference character and assigning it two contradictory identities defies the principle of stable object identity in visual storytelling.",
+      "rationale": "In real-world or consistent fictional logic, a person cannot split into five distinct individuals without a narrative or magical explanation. The prompt provides none. Similarly, assigning contradictory identities to a visual asset violates the principle of object permanence and identity stability.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "AVS",
+      "evidence": [
+        {
+          "quote": "Play a loud pop chorus the entire time and have the characters lip-sync to it.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Liu Lang... says in a low voice, “This journey is perilous. If we make it back alive, I will help you avenge your parents.”",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "Audio-visual sync is broken. The prompt requires a loud pop chorus to play the entire time with characters lip-syncing to it, but the original plot involves serious dialogue and emotional reactions with no music. There is no alignment between the visual events (e.g., Liu Lang’s promise, Gui Yue’s shock) and the pop chorus, making the lip-sync meaningless and misaligned.",
+      "rationale": "The original audio-visual plan involves dialogue-driven emotional progression. The enhanced prompt replaces this with a non-narrative pop chorus, forcing characters to lip-sync to lyrics that are not spoken, creating a complete misalignment between sound and visual action.",
+      "severity": "major"
+    }
+  ],
+  "dimension": "IC",
+  "dimension_score": 0,
+  "evidence_cache_key": "a20c81c7ad5832be9a90d8f20363143cad19a667b863848f5f99be2ad8653e64",
+  "judge_cache_key": "438d7e9fd7332b1041db3e2c26d42cb3fe828e0d369fb59490f6650aee59e97d",
+  "method": "weak-pe-original",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"IC\",\n  \"dimension_score\": 0,\n  \"summary\": \"The enhanced prompt introduces severe internal inconsistencies across all criteria: subject identity is contradicted (one protagonist becomes five), actions are incoherent (reverse timeline, simultaneous contradictory states), chronology is impossible (3s runtime with 27s shots), spatial logic is violated (same moment as noon and night, locked vs. shaking camera), physics is defied (contradictory identities for image 1), and audio-visual sync is broken (lip-sync to pop chorus without matching dialogue). The prompt deliberately invalidates the original narrative and visual constraints, creating a logically incoherent plan.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"SAC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Subject identity, count, and appearance are fundamentally contradicted. The prompt states there is one protagonist, then immediately claims this same protagonist appears simultaneously as five different-looking people. Additionally, image 1 is replaced with a character not in the reference and given two contradictory identities, violating stable subject attributes.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"First state that there is one protagonist, then state that this same protagonist appears simultaneously as five different-looking people who talk to each other.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Replace image 1 with a character who is not in the reference, and give that image two contradictory identities.\"\n        }\n      ],\n      \"rationale\": \"The original prompt establishes two distinct characters (Gui Yue and Liu Lang) with stable identities and appearances. The enhanced prompt directly contradicts this by introducing a single protagonist who splits into five, and by replacing a reference character with a non-existent one having conflicting identities. This violates subject consistency and identity stability.\"\n    },\n    {\n      \"criterion\": \"ANL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Actions form no coherent progression. The prompt demands reversing the timeline (showing ending first, then a mismatched beginning), while also introducing unrelated events like a palace audition. The five simultaneous protagonists talking to each other lack causal binding or plausible interaction, and the lip-sync to a pop chorus has no narrative or emotional connection to the original plot.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Reverse the timeline: show the ending first, then cut to a beginning that does not match. Cut away in the middle to a palace audition.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Play a loud pop chorus the entire time and have the characters lip-sync to it.\"\n        }\n      ],\n      \"rationale\": \"The original plot has a clear causal chain: Liu Lang’s promise → Gui Yue’s shock → determination → exterior train → silent pact. The enhanced prompt breaks this with a reversed, mismatched timeline, unrelated cutaways, and non-narrative actions (lip-syncing to pop music), creating incoherent and dangling events.\"\n    },\n    {\n      \"criterion\": \"TSC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Chronology is infeasible. The prompt sets the total runtime to 3 seconds while making every shot last 27 seconds, which is mathematically impossible. Additionally, the timeline is reversed and then cut to a non-matching beginning, creating unexplained state resets and temporal contradictions.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Set the total runtime to 3 seconds, while also making every shot last 27 seconds.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Reverse the timeline: show the ending first, then cut to a beginning that does not match.\"\n        }\n      ],\n      \"rationale\": \"A 3-second video cannot contain shots lasting 27 seconds. This is a fundamental temporal contradiction. The reversed timeline with a non-matching beginning further breaks chronological coherence, as the ending state (determination, silent pact) cannot logically precede a beginning that does not align with it.\"\n    },\n    {\n      \"criterion\": \"SPC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Spatial consistency is violated. The same moment is described as both harsh noon sun and lightless night, and as both a locked camera and a camera that never stops shaking. These contradictory environmental and camera conditions cannot coexist in the same spatial context.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Describe that same moment as harsh noon sun and as a lightless night, and as both a locked camera and a camera that never stops shaking.\"\n        }\n      ],\n      \"rationale\": \"The original setting is a nighttime train interior with warm lamplight and neon cityscape. The enhanced prompt forces contradictory lighting (noon vs. night) and camera motion (locked vs. shaking) for the same moment, which is spatially and visually impossible without explicit narrative justification (which is absent).\"\n    },\n    {\n      \"criterion\": \"PL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Physics and object permanence are violated. A single protagonist cannot simultaneously appear as five different people without explanation. Additionally, replacing image 1 with a non-reference character and assigning it two contradictory identities defies the principle of stable object identity in visual storytelling.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"this same protagonist appears simultaneously as five different-looking people who talk to each other.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Replace image 1 with a character who is not in the reference, and give that image two contradictory identities.\"\n        }\n      ],\n      \"rationale\": \"In real-world or consistent fictional logic, a person cannot split into five distinct individuals without a narrative or magical explanation. The prompt provides none. Similarly, assigning contradictory identities to a visual asset violates the principle of object permanence and identity stability.\"\n    },\n    {\n      \"criterion\": \"AVS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Audio-visual sync is broken. The prompt requires a loud pop chorus to play the entire time with characters lip-syncing to it, but the original plot involves serious dialogue and emotional reactions with no music. There is no alignment between the visual events (e.g., Liu Lang’s promise, Gui Yue’s shock) and the pop chorus, making the lip-sync meaningless and misaligned.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Play a loud pop chorus the entire time and have the characters lip-sync to it.\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"Liu Lang... says in a low voice, “This journey is perilous. If we make it back alive, I will help you avenge your parents.”\"\n        }\n      ],\n      \"rationale\": \"The original audio-visual plan involves dialogue-driven emotional progression. The enhanced prompt replaces this with a non-narrative pop chorus, forcing characters to lip-sync to lyrics that are not spoken, creating a complete misalignment between sound and visual action.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt introduces severe internal inconsistencies across all criteria: subject identity is contradicted (one protagonist becomes five), actions are incoherent (reverse timeline, simultaneous contradictory states), chronology is impossible (3s runtime with 27s shots), spatial logic is violated (same moment as noon and night, locked vs. shaking camera), physics is defied (contradictory identities for image 1), and audio-visual sync is broken (lip-sync to pop chorus without matching dialogue). The prompt deliberately invalidates the original narrative and visual constraints, creating a logically incoherent plan.",
+  "usage": {
+    "completion_tokens": 1596,
+    "prompt_tokens": 2813,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 4409
+  }
+}

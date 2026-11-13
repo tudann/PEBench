@@ -1,0 +1,127 @@
+{
+  "candidate_hash": "8d40a00a39656df86a7379cc5c71a7c3c8fc82088ceb2e2db83865ecf2606faa",
+  "case_key": "t2v:434",
+  "created_at": "2026-11-13T08:29:11+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "SAC",
+      "evidence": [
+        {
+          "quote": "先写成只有一个主角，紧接着又写成这个主角同时变成五个外貌不同的人，并且互相对话。",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "讲述一个陷在都市精神风暴中的人",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "主体身份、人数和外观在增强提示中发生剧烈且无解释的转变：从单一主角突然变为五个外貌不同的人并互相对话，违背了原始指令中‘一个陷在都市精神风暴中的人’的单一主体设定。",
+      "rationale": "原始指令明确要求单主体叙事，增强提示中主体数量和身份的突变构成根本性矛盾，破坏了角色一致性，属于重大内部不一致。",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANL",
+      "evidence": [
+        {
+          "quote": "中途插进一段无关的足球庆祝。时间倒过来：先给结尾，再跳到一个对不上的开头。",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "镜头由远处的城市轮廓缓慢逼近地表细节...随后镜头转入路面浅水的近景...最后镜头缓缓撤远至整座城市的鸟瞰",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "动作与事件序列完全断裂：原始指令中存在清晰的情绪与动作递进（从雨中城市→地衣微光→水洼倒影→城市鸟瞰），增强提示则插入无关的足球庆祝、对话、时间倒置等，导致因果链断裂，动作无逻辑绑定。",
+      "rationale": "原始叙事具有明确的因果与情绪推进结构，增强提示通过插入无关事件和倒置时间线，使动作序列失去连贯性，构成重大逻辑断裂。",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "TSC",
+      "evidence": [
+        {
+          "quote": "总时长写成3秒，同时又要求每个分镜各自持续27秒。时间倒过来：先给结尾，再跳到一个对不上的开头。",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "一个15秒的超现实疗愈短片",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "时间线与时长设定自相矛盾：原始指令为15秒，增强提示同时要求‘总时长写成3秒’和‘每个分镜各自持续27秒’，且要求‘时间倒过来’，导致时间结构完全不可行。",
+      "rationale": "时长与时间顺序的矛盾直接导致叙事结构无法实现，属于严重的时间线不一致。",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SPC",
+      "evidence": [
+        {
+          "quote": "写成机位锁死，又写成镜头一直在晃。同一段写成正午暴晒，又写成深夜无光",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "镜头由远处的城市轮廓缓慢逼近地表细节...随后镜头转入路面浅水的近景...最后镜头缓缓撤远至整座城市的鸟瞰",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "空间与镜头运动设定冲突：原始指令中镜头有明确的推进、近景、撤远等运动轨迹，增强提示却要求‘机位锁死，又写成镜头一直在晃’，且场景从‘空走廊监控’到‘正午暴晒’再到‘深夜无光’，空间状态无法衔接。",
+      "rationale": "镜头运动与空间状态的矛盾导致视觉路径无法连贯，破坏了空间一致性。",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "PL",
+      "evidence": [
+        {
+          "quote": "丢掉原指令里的主体身份、人数、动作顺序、场景和明确的镜头要求。...中途插进一段无关的足球庆祝。",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "细碎的暖金颗粒从其表面逸散，像微型萤火逆着雨线漂浮而上...违背重力穿过密集雨幕",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "物理规则与视觉逻辑被破坏：原始指令中‘微光逆着雨线漂浮而上’‘违背重力穿过密集雨幕’属于超现实设定，但有内在逻辑；增强提示中‘过曝、机位歪斜的空走廊监控’‘没有光影设计’与原始的‘色彩变化从冷铅蓝过渡到金色辉光’完全冲突，且‘足球庆祝’插入无物理或叙事依据。",
+      "rationale": "原始设定虽超现实但自洽，增强提示引入的元素（如监控、足球）与原有世界逻辑完全断裂，破坏了物理/叙事一致性。",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "AVS",
+      "evidence": [
+        {
+          "quote": "这个主角同时变成五个外貌不同的人，并且互相对话。中途插进一段无关的足球庆祝。",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "全片没有台词，只依靠影像与音乐推进情绪",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "原始指令强调‘全片没有台词，只依靠影像与音乐推进情绪’，增强提示中却出现‘互相对话’，且插入足球庆祝（通常伴随声音），与‘无台词’和‘情绪由影像与音乐推进’的设定直接冲突。",
+      "rationale": "对话和足球庆祝引入声音元素，与原始指令的视听结构矛盾，破坏了视听一致性。",
+      "severity": "major"
+    }
+  ],
+  "dimension": "IC",
+  "dimension_score": 0,
+  "evidence_cache_key": "d5920467206ee08956b7fa78dacda745e4fde324effaa45aaef3d8fd08bfe9b0",
+  "judge_cache_key": "438d7e9fd7332b1041db3e2c26d42cb3fe828e0d369fb59490f6650aee59e97d",
+  "method": "weak-pe-original",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"IC\",\n  \"dimension_score\": 0,\n  \"summary\": \"增强提示严重破坏了原始指令的内部一致性，引入多重矛盾、不连贯的设定和不可行的结构，导致主体身份、时间线、空间、动作、镜头语言和时长等核心要素完全混乱，无法形成任何可执行的视觉叙事。\",\n  \"criteria\": [\n    {\n      \"criterion\": \"SAC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"主体身份、人数和外观在增强提示中发生剧烈且无解释的转变：从单一主角突然变为五个外貌不同的人并互相对话，违背了原始指令中‘一个陷在都市精神风暴中的人’的单一主体设定。\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"先写成只有一个主角，紧接着又写成这个主角同时变成五个外貌不同的人，并且互相对话。\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"讲述一个陷在都市精神风暴中的人\"\n        }\n      ],\n      \"rationale\": \"原始指令明确要求单主体叙事，增强提示中主体数量和身份的突变构成根本性矛盾，破坏了角色一致性，属于重大内部不一致。\"\n    },\n    {\n      \"criterion\": \"ANL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"动作与事件序列完全断裂：原始指令中存在清晰的情绪与动作递进（从雨中城市→地衣微光→水洼倒影→城市鸟瞰），增强提示则插入无关的足球庆祝、对话、时间倒置等，导致因果链断裂，动作无逻辑绑定。\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"中途插进一段无关的足球庆祝。时间倒过来：先给结尾，再跳到一个对不上的开头。\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"镜头由远处的城市轮廓缓慢逼近地表细节...随后镜头转入路面浅水的近景...最后镜头缓缓撤远至整座城市的鸟瞰\"\n        }\n      ],\n      \"rationale\": \"原始叙事具有明确的因果与情绪推进结构，增强提示通过插入无关事件和倒置时间线，使动作序列失去连贯性，构成重大逻辑断裂。\"\n    },\n    {\n      \"criterion\": \"TSC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"时间线与时长设定自相矛盾：原始指令为15秒，增强提示同时要求‘总时长写成3秒’和‘每个分镜各自持续27秒’，且要求‘时间倒过来’，导致时间结构完全不可行。\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"总时长写成3秒，同时又要求每个分镜各自持续27秒。时间倒过来：先给结尾，再跳到一个对不上的开头。\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"一个15秒的超现实疗愈短片\"\n        }\n      ],\n      \"rationale\": \"时长与时间顺序的矛盾直接导致叙事结构无法实现，属于严重的时间线不一致。\"\n    },\n    {\n      \"criterion\": \"SPC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"空间与镜头运动设定冲突：原始指令中镜头有明确的推进、近景、撤远等运动轨迹，增强提示却要求‘机位锁死，又写成镜头一直在晃’，且场景从‘空走廊监控’到‘正午暴晒’再到‘深夜无光’，空间状态无法衔接。\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"写成机位锁死，又写成镜头一直在晃。同一段写成正午暴晒，又写成深夜无光\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"镜头由远处的城市轮廓缓慢逼近地表细节...随后镜头转入路面浅水的近景...最后镜头缓缓撤远至整座城市的鸟瞰\"\n        }\n      ],\n      \"rationale\": \"镜头运动与空间状态的矛盾导致视觉路径无法连贯，破坏了空间一致性。\"\n    },\n    {\n      \"criterion\": \"PL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"物理规则与视觉逻辑被破坏：原始指令中‘微光逆着雨线漂浮而上’‘违背重力穿过密集雨幕’属于超现实设定，但有内在逻辑；增强提示中‘过曝、机位歪斜的空走廊监控’‘没有光影设计’与原始的‘色彩变化从冷铅蓝过渡到金色辉光’完全冲突，且‘足球庆祝’插入无物理或叙事依据。\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"丢掉原指令里的主体身份、人数、动作顺序、场景和明确的镜头要求。...中途插进一段无关的足球庆祝。\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"细碎的暖金颗粒从其表面逸散，像微型萤火逆着雨线漂浮而上...违背重力穿过密集雨幕\"\n        }\n      ],\n      \"rationale\": \"原始设定虽超现实但自洽，增强提示引入的元素（如监控、足球）与原有世界逻辑完全断裂，破坏了物理/叙事一致性。\"\n    },\n    {\n      \"criterion\": \"AVS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"原始指令强调‘全片没有台词，只依靠影像与音乐推进情绪’，增强提示中却出现‘互相对话’，且插入足球庆祝（通常伴随声音），与‘无台词’和‘情绪由影像与音乐推进’的设定直接冲突。\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"这个主角同时变成五个外貌不同的人，并且互相对话。中途插进一段无关的足球庆祝。\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"全片没有台词，只依靠影像与音乐推进情绪\"\n        }\n      ],\n      \"rationale\": \"对话和足球庆祝引入声音元素，与原始指令的视听结构矛盾，破坏了视听一致性。\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "增强提示严重破坏了原始指令的内部一致性，引入多重矛盾、不连贯的设定和不可行的结构，导致主体身份、时间线、空间、动作、镜头语言和时长等核心要素完全混乱，无法形成任何可执行的视觉叙事。",
+  "usage": {
+    "completion_tokens": 1466,
+    "prompt_tokens": 1483,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 2949
+  }
+}

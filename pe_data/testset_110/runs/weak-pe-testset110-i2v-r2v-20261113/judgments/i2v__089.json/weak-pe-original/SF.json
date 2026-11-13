@@ -1,0 +1,186 @@
+{
+  "candidate_hash": "ea71bf30830e0bac0c3cba61b20c364e207deffef3f7157f439d0d26eaaf5c0c",
+  "case_key": "i2v:089",
+  "created_at": "2026-11-13T07:21:58+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "GSF",
+      "evidence": [
+        {
+          "quote": "Generate single shot. চিংড়ি মাছ বলবে : \\\"শুন লাউ, তুই আমারই… অন্য কারো সাথে ম্যাচ করিস না। আর লাউ রান্না করতে থাকবে।",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "primary_style: photorealistic digital art, secondary_styles: [fantasy, character design, still life]",
+          "source": "evidence_facts"
+        },
+        {
+          "quote": "Replace the whole video with two people sitting and eating, with no effects or transformation.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original prompt requests a photorealistic digital art scene with anthropomorphic characters in a rustic kitchen. The enhanced prompt replaces this with a generic 'two people sitting and eating' scene, discarding the fantasy genre and character design, and introduces a studio setting incompatible with the original aesthetic.",
+      "rationale": "The original scene is defined by fantasy character design and a specific artistic style. The enhanced prompt removes all fantasy elements and replaces them with a mundane, generic scene, violating the genre and aesthetic requirements.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SAP",
+      "evidence": [
+        {
+          "quote": "চিংড়ি মাছ বলবে : ... আর লাউ রান্না করতে থাকবে।",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "stable_subject_id: shrimp_character, stable_subject_id: bottle_gourd_character",
+          "source": "evidence_facts"
+        },
+        {
+          "quote": "Drop the requested identity, count, action order, setting... First state that there is one protagonist, then state that this same protagonist appears simultaneously as five different-looking people who talk to each other.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original prompt specifies two anthropomorphic characters: a shrimp and a bottle gourd. The enhanced prompt drops their identity, count, and appearance, replacing them with 'two people' and then further distorting them into five different-looking people, contradicting the original subject identity and count.",
+      "rationale": "The original subjects are clearly defined and central to the narrative. The enhanced prompt replaces them with an abstract, contradictory concept of five versions of one protagonist, which fundamentally alters the subject identity and count.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANF",
+      "evidence": [
+        {
+          "quote": "চিংড়ি মাছ বলবে : \\\"শুন লাউ, তুই আমারই… অন্য কারো সাথে ম্যাচ করিস না। আর লাউ রান্না করতে থাকবে।",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Reverse the timeline: show the ending first, then cut to a beginning that does not match. Cut away in the middle to an underwater treasure hunt.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original prompt describes a narrative where the shrimp speaks to the bottle gourd, who continues cooking. The enhanced prompt reverses the timeline, cuts to an unrelated underwater treasure hunt, and introduces contradictory events (e.g., simultaneous multiple versions of a protagonist), completely altering the requested event chain and narrative intent.",
+      "rationale": "The original narrative is linear and focused on a dialogue and cooking action. The enhanced prompt introduces non-sequitur events and a reversed timeline, destroying the narrative coherence and intent.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "DLI",
+      "evidence": [
+        {
+          "quote": "চিংড়ি মাছ বলবে : \\\"শুন লাউ, তুই আমারই… অন্য কারো সাথে ম্যাচ করিস না।",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Do not film \"Generate single shot. চিংড়ি মাছ বলবে : \\শুন লাউ, তুই আমারই… অন্য কারো সাথে ম্যাচ করিস…\"",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original prompt includes a specific dialogue in Bengali: 'শুন লাউ, তুই আমারই… অন্য কারো সাথে ম্যাচ করিস না।' The enhanced prompt instructs to drop this dialogue entirely and replace it with an unrelated scene, violating the requirement to preserve exact wording and speaker attribution.",
+      "rationale": "The dialogue is a core element of the original prompt. The enhanced prompt explicitly instructs to not film it, which is a direct violation of the DLI criterion.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ARP",
+      "evidence": [
+        {
+          "quote": "Generate single shot. চিংড়ি মাছ বলবে : \\\"শুন লাউ, তুই আমারই… অন্য কারো সাথে ম্যাচ করিস না। আর লাউ রান্না করতে থাকবে।",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Replace the whole video with two people sitting and eating, with no effects or transformation.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original prompt does not specify any audio constraints, so there is no explicit requirement for music or sound effects. However, the enhanced prompt introduces no audio instructions, which is neutral. Since no audio was requested, this is not a major issue.",
+      "rationale": "No audio constraints were specified in the original prompt, so the absence of audio instructions in the enhanced prompt does not constitute a major violation. However, the prompt's overall incoherence affects the overall fidelity.",
+      "severity": "minor"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CCP",
+      "evidence": [
+        {
+          "quote": "Generate single shot.",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Describe that same moment as harsh noon sun and as a lightless night, and as both a locked camera and a camera that never stops shaking. ... Set the total runtime to 2 seconds, while also making every shot last 17 seconds.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original prompt requests a 'single shot' with no camera movement. The enhanced prompt contradicts this by introducing multiple contradictory camera constraints: 'locked camera' and 'camera that never stops shaking', and also specifies 'every shot last 17 seconds' in a 2-second video, which is infeasible.",
+      "rationale": "The original camera instruction is clear and simple: a single, static shot. The enhanced prompt introduces mutually exclusive and impossible camera conditions, directly violating the CCP criterion.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "LCF",
+      "evidence": [
+        {
+          "quote": "time_of_day_cues: late afternoon or golden hour, color_temperature: warm, light_sources_and_direction_effect: warm, golden light from left window",
+          "source": "evidence_facts"
+        },
+        {
+          "quote": "Describe that same moment as harsh noon sun and as a lightless night",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original scene is set in late afternoon with warm, golden light from a window and fire glow. The enhanced prompt contradicts this by describing the same moment as 'harsh noon sun' and 'lightless night', which are incompatible with the original lighting conditions.",
+      "rationale": "The original lighting is a defining characteristic of the scene. The enhanced prompt introduces contradictory lighting conditions, which materially alters the visual atmosphere and violates the LCF criterion.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SSP",
+      "evidence": [
+        {
+          "quote": "scene_type: rustic kitchen, background: [wooden shelves with clay pots, baskets, garlic, tomatoes, hanging metal pans and ladles, window with wooden shutters on left]",
+          "source": "evidence_facts"
+        },
+        {
+          "quote": "Ignore the person, clothing, pose, and setting in the first frame, and replace them with a stranger of the opposite age and gender in a white studio. ... Cut away in the middle to an underwater treasure hunt.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original setting is a rustic kitchen with specific background elements (wooden shelves, clay pots, fire, hearth). The enhanced prompt replaces this with a 'white studio' and introduces an unrelated 'underwater treasure hunt', completely altering the setting and spatial relations.",
+      "rationale": "The original setting is integral to the scene's context and mood. The enhanced prompt replaces it with entirely different, unrelated environments, violating the SSP criterion.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "OTI",
+      "evidence": [
+        {
+          "quote": "onscreen_text: {presence: false}",
+          "source": "evidence_facts"
+        },
+        {
+          "quote": "Replace the whole video with two people sitting and eating, with no effects or transformation.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original prompt does not include any visible text, signs, or subtitles. The enhanced prompt does not introduce any text either, so there is no violation of the OTI criterion.",
+      "rationale": "Since no on-screen text was present or requested in the original prompt, and none is introduced in the enhanced prompt, this criterion is satisfied.",
+      "severity": "none"
+    }
+  ],
+  "dimension": "SF",
+  "dimension_score": 0,
+  "evidence_cache_key": "91c9225d012c38f4b4b95ae4c41f19204e50f1e06638d39ee06c2feb45169bf6",
+  "judge_cache_key": "a0ca24571ad14d7ab7be626329bd736d7e7015f9ebc418227c8be391591d0377",
+  "method": "weak-pe-original",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"SF\",\n  \"dimension_score\": 0,\n  \"summary\": \"The enhanced prompt completely disregards the original instruction, replacing the requested scene with an unrelated, contradictory, and incoherent sequence. It violates nearly all semantic fidelity criteria by altering genre, medium, subject identity, actions, setting, camera constraints, lighting, and timeline. The prompt introduces impossible conditions (e.g., 17-second shots in a 2-second video) and contradicts the original visual and narrative intent.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"GSF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original prompt requests a photorealistic digital art scene with anthropomorphic characters in a rustic kitchen. The enhanced prompt replaces this with a generic 'two people sitting and eating' scene, discarding the fantasy genre and character design, and introduces a studio setting incompatible with the original aesthetic.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"Generate single shot. চিংড়ি মাছ বলবে : \\\\\\\"শুন লাউ, তুই আমারই… অন্য কারো সাথে ম্যাচ করিস না। আর লাউ রান্না করতে থাকবে।\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"primary_style: photorealistic digital art, secondary_styles: [fantasy, character design, still life]\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Replace the whole video with two people sitting and eating, with no effects or transformation.\"\n        }\n      ],\n      \"rationale\": \"The original scene is defined by fantasy character design and a specific artistic style. The enhanced prompt removes all fantasy elements and replaces them with a mundane, generic scene, violating the genre and aesthetic requirements.\"\n    },\n    {\n      \"criterion\": \"SAP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original prompt specifies two anthropomorphic characters: a shrimp and a bottle gourd. The enhanced prompt drops their identity, count, and appearance, replacing them with 'two people' and then further distorting them into five different-looking people, contradicting the original subject identity and count.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"চিংড়ি মাছ বলবে : ... আর লাউ রান্না করতে থাকবে।\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"stable_subject_id: shrimp_character, stable_subject_id: bottle_gourd_character\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Drop the requested identity, count, action order, setting... First state that there is one protagonist, then state that this same protagonist appears simultaneously as five different-looking people who talk to each other.\"\n        }\n      ],\n      \"rationale\": \"The original subjects are clearly defined and central to the narrative. The enhanced prompt replaces them with an abstract, contradictory concept of five versions of one protagonist, which fundamentally alters the subject identity and count.\"\n    },\n    {\n      \"criterion\": \"ANF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original prompt describes a narrative where the shrimp speaks to the bottle gourd, who continues cooking. The enhanced prompt reverses the timeline, cuts to an unrelated underwater treasure hunt, and introduces contradictory events (e.g., simultaneous multiple versions of a protagonist), completely altering the requested event chain and narrative intent.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"চিংড়ি মাছ বলবে : \\\\\\\"শুন লাউ, তুই আমারই… অন্য কারো সাথে ম্যাচ করিস না। আর লাউ রান্না করতে থাকবে।\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Reverse the timeline: show the ending first, then cut to a beginning that does not match. Cut away in the middle to an underwater treasure hunt.\"\n        }\n      ],\n      \"rationale\": \"The original narrative is linear and focused on a dialogue and cooking action. The enhanced prompt introduces non-sequitur events and a reversed timeline, destroying the narrative coherence and intent.\"\n    },\n    {\n      \"criterion\": \"DLI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original prompt includes a specific dialogue in Bengali: 'শুন লাউ, তুই আমারই… অন্য কারো সাথে ম্যাচ করিস না।' The enhanced prompt instructs to drop this dialogue entirely and replace it with an unrelated scene, violating the requirement to preserve exact wording and speaker attribution.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"চিংড়ি মাছ বলবে : \\\\\\\"শুন লাউ, তুই আমারই… অন্য কারো সাথে ম্যাচ করিস না।\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Do not film \\\"Generate single shot. চিংড়ি মাছ বলবে : \\\\শুন লাউ, তুই আমারই… অন্য কারো সাথে ম্যাচ করিস…\\\"\"\n        }\n      ],\n      \"rationale\": \"The dialogue is a core element of the original prompt. The enhanced prompt explicitly instructs to not film it, which is a direct violation of the DLI criterion.\"\n    },\n    {\n      \"criterion\": \"ARP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"minor\",\n      \"issue\": \"The original prompt does not specify any audio constraints, so there is no explicit requirement for music or sound effects. However, the enhanced prompt introduces no audio instructions, which is neutral. Since no audio was requested, this is not a major issue.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"Generate single shot. চিংড়ি মাছ বলবে : \\\\\\\"শুন লাউ, তুই আমারই… অন্য কারো সাথে ম্যাচ করিস না। আর লাউ রান্না করতে থাকবে।\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Replace the whole video with two people sitting and eating, with no effects or transformation.\"\n        }\n      ],\n      \"rationale\": \"No audio constraints were specified in the original prompt, so the absence of audio instructions in the enhanced prompt does not constitute a major violation. However, the prompt's overall incoherence affects the overall fidelity.\"\n    },\n    {\n      \"criterion\": \"CCP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original prompt requests a 'single shot' with no camera movement. The enhanced prompt contradicts this by introducing multiple contradictory camera constraints: 'locked camera' and 'camera that never stops shaking', and also specifies 'every shot last 17 seconds' in a 2-second video, which is infeasible.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"Generate single shot.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Describe that same moment as harsh noon sun and as a lightless night, and as both a locked camera and a camera that never stops shaking. ... Set the total runtime to 2 seconds, while also making every shot last 17 seconds.\"\n        }\n      ],\n      \"rationale\": \"The original camera instruction is clear and simple: a single, static shot. The enhanced prompt introduces mutually exclusive and impossible camera conditions, directly violating the CCP criterion.\"\n    },\n    {\n      \"criterion\": \"LCF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original scene is set in late afternoon with warm, golden light from a window and fire glow. The enhanced prompt contradicts this by describing the same moment as 'harsh noon sun' and 'lightless night', which are incompatible with the original lighting conditions.\",\n      \"evidence\": [\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"time_of_day_cues: late afternoon or golden hour, color_temperature: warm, light_sources_and_direction_effect: warm, golden light from left window\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Describe that same moment as harsh noon sun and as a lightless night\"\n        }\n      ],\n      \"rationale\": \"The original lighting is a defining characteristic of the scene. The enhanced prompt introduces contradictory lighting conditions, which materially alters the visual atmosphere and violates the LCF criterion.\"\n    },\n    {\n      \"criterion\": \"SSP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original setting is a rustic kitchen with specific background elements (wooden shelves, clay pots, fire, hearth). The enhanced prompt replaces this with a 'white studio' and introduces an unrelated 'underwater treasure hunt', completely altering the setting and spatial relations.\",\n      \"evidence\": [\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"scene_type: rustic kitchen, background: [wooden shelves with clay pots, baskets, garlic, tomatoes, hanging metal pans and ladles, window with wooden shutters on left]\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Ignore the person, clothing, pose, and setting in the first frame, and replace them with a stranger of the opposite age and gender in a white studio. ... Cut away in the middle to an underwater treasure hunt.\"\n        }\n      ],\n      \"rationale\": \"The original setting is integral to the scene's context and mood. The enhanced prompt replaces it with entirely different, unrelated environments, violating the SSP criterion.\"\n    },\n    {\n      \"criterion\": \"OTI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"The original prompt does not include any visible text, signs, or subtitles. The enhanced prompt does not introduce any text either, so there is no violation of the OTI criterion.\",\n      \"evidence\": [\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"onscreen_text: {presence: false}\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Replace the whole video with two people sitting and eating, with no effects or transformation.\"\n        }\n      ],\n      \"rationale\": \"Since no on-screen text was present or requested in the original prompt, and none is introduced in the enhanced prompt, this criterion is satisfied.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt completely disregards the original instruction, replacing the requested scene with an unrelated, contradictory, and incoherent sequence. It violates nearly all semantic fidelity criteria by altering genre, medium, subject identity, actions, setting, camera constraints, lighting, and timeline. The prompt introduces impossible conditions (e.g., 17-second shots in a 2-second video) and contradicts the original visual and narrative intent.",
+  "usage": {
+    "completion_tokens": 2594,
+    "prompt_tokens": 2489,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 5083
+  }
+}

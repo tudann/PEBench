@@ -1,0 +1,151 @@
+{
+  "candidate_hash": "74e1175626bc3498bd6198b4b16f43faa8ebb88753f72611e3ce54a2758c20a4",
+  "case_key": "i2v:100",
+  "created_at": "2026-11-13T07:36:58+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "SAC",
+      "evidence": [
+        {
+          "quote": "An animate a grand stone bull adorned with crystal horns, which are enveloped in flowers and moss",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "massive stone bull exactly as shown in <Picture 1> — cracked grey rock plates, moss patches and twisting vines with small orange and pink flowers sprawling across its back, shoulders, and legs, two large translucent crystal horns curving upward with internal sparkles, a glowing crystal lotus-like flower on its forehead, and an amber-orange eye",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "stone bull, composed of rough, gray stone with visible cracks and textures, covered in green vines, moss patches, and luminous flowers (pink, orange, white, blue)",
+          "source": "evidence_facts"
+        }
+      ],
+      "issue": "",
+      "rationale": "Subject identity (stone bull), count (one), appearance (cracked stone, moss, vines, flowers, crystal horns, glowing forehead), and props (crystal horns, lotus flower) are consistently preserved across the original prompt, enhanced prompt, and evidence. No renaming, duplication, or attribute drift occurs. The enhanced prompt adds minor details (e.g., 'amber-orange eye', 'lotus-like flower') that are consistent with the image and original description.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANL",
+      "evidence": [
+        {
+          "quote": "Animate a grand stone bull ... as it strolls gently through a sunlit, magical forest",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "its front left leg lifted mid-step amid vivid wildflowers ... continues strolling gently forward-right at a calm, heavy, deliberate pace",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "current_pose/state: standing still, facing slightly to the right, head turned toward the viewer",
+          "source": "evidence_facts"
+        }
+      ],
+      "issue": "",
+      "rationale": "The action of the bull strolling is coherent and causally plausible. The enhanced prompt describes a continuous, deliberate motion (lifting front left leg, stepping forward-right) that logically follows from the static image’s pose. The motion is consistent with the subject’s heavy, stone nature. No incompatible or dangling actions are present.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "TSC",
+      "evidence": [
+        {
+          "quote": "at 0.00 seconds into the target video, <Picture 1> (from [Shot 1]) is fully referenced",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "The camera pushes in with small amplitude at slow speed toward the bull's head as it completes its raised step and continues strolling gently forward-right",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Animate a grand stone bull ... as it strolls gently through a sunlit, magical forest",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "Chronology is clear: the video begins with the image state, then progresses with the bull completing its step and continuing forward. The camera motion is slow and continuous, matching the bull’s pace. No overlapping or infeasible timestamps or state resets are described. The duration (7s) is not contradicted by the prompt’s pacing.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SPC",
+      "evidence": [
+        {
+          "quote": "eye-level slightly low-angle close-up frames the massive stone bull exactly as shown in <Picture 1>",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "camera pushes in with small amplitude at slow speed toward the bull's head as it continues strolling gently forward-right",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "composition: bull positioned slightly off-center to the left, with sunlight entering from top-right, creating strong diagonal light rays",
+          "source": "evidence_facts"
+        }
+      ],
+      "issue": "",
+      "rationale": "Location (magical forest), screen direction (forward-right motion), and camera trajectory (push-in toward head) are consistent. The bull’s movement direction (forward-right) aligns with the camera’s push-in, and the composition remains stable. No unexplained position swaps or infeasible trajectories are described.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "PL",
+      "evidence": [
+        {
+          "quote": "its hooves pressing softly into the flowered ground and disturbing a few petals and loose dust",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "crystal horns shimmer and refract the sunbeams, casting a soft pulsing glow onto nearby flowers",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "heavy stone hooves press into soft earth with low, muffled thuds, scattering petals and fine dust",
+          "source": "evidence_facts"
+        }
+      ],
+      "issue": "",
+      "rationale": "Physics are consistent with the fantasy setting: stone bull moves with heavy, deliberate steps; hooves disturb ground and petals; crystal horns refract light plausibly. No violations of gravity, contact, or object permanence. The fantasy elements (glowing horns, floating particles) are internally consistent and not contradicted.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "AVS",
+      "evidence": [
+        {
+          "quote": "The ambiance is enchanting, filled with golden particles drifting through the air, crafting a tranquil and captivating moment in nature.",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "overall_soundscape: A tranquil forest ambience with soft birdsong and a gentle breeze through leaves. Heavy stone hooves press into soft earth with low, muffled thuds, scattering petals and fine dust, while faint crystalline chimes shimmer from the glowing horns.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "non_diegetic_music: N/A",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The enhanced prompt includes a detailed soundscape and non-diegetic music description, which are not present in the original prompt. While not contradictory, these additions are not required by the original instruction and may be considered elaboration beyond the scope.",
+      "rationale": "The soundscape and effects are semantically aligned with the visual events (hooves, chimes from horns, birdsong). However, the original prompt does not mention audio, so the addition of detailed sound design is an elaboration. Since it does not contradict or misalign with the visuals, the issue is minor. The absence of music (N/A) is consistent with the original prompt’s focus on visual ambiance.",
+      "severity": "minor"
+    }
+  ],
+  "dimension": "IC",
+  "dimension_score": 95,
+  "evidence_cache_key": "0c6f96d1f2ee2cc26eb32b61e439c33ceebaecbd2b6c461ddab55cdca7b26f87",
+  "judge_cache_key": "438d7e9fd7332b1041db3e2c26d42cb3fe828e0d369fb59490f6650aee59e97d",
+  "method": "glm53_20261112_120702",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"IC\",\n  \"dimension_score\": 95,\n  \"summary\": \"The enhanced prompt maintains strong internal consistency with the original instruction, preserving subject identity, appearance, environment, and motion logic. Minor issues include slight elaboration beyond the original prompt (e.g., specific camera motion, petal drift, and sound details) that are not contradicted but not strictly required. No contradictions, attribute drift, or infeasible sequences are present. The prompt’s temporal and spatial logic is coherent, and all elements align with the original image and description.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"SAC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"An animate a grand stone bull adorned with crystal horns, which are enveloped in flowers and moss\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"massive stone bull exactly as shown in <Picture 1> — cracked grey rock plates, moss patches and twisting vines with small orange and pink flowers sprawling across its back, shoulders, and legs, two large translucent crystal horns curving upward with internal sparkles, a glowing crystal lotus-like flower on its forehead, and an amber-orange eye\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"stone bull, composed of rough, gray stone with visible cracks and textures, covered in green vines, moss patches, and luminous flowers (pink, orange, white, blue)\"\n        }\n      ],\n      \"rationale\": \"Subject identity (stone bull), count (one), appearance (cracked stone, moss, vines, flowers, crystal horns, glowing forehead), and props (crystal horns, lotus flower) are consistently preserved across the original prompt, enhanced prompt, and evidence. No renaming, duplication, or attribute drift occurs. The enhanced prompt adds minor details (e.g., 'amber-orange eye', 'lotus-like flower') that are consistent with the image and original description.\"\n    },\n    {\n      \"criterion\": \"ANL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"Animate a grand stone bull ... as it strolls gently through a sunlit, magical forest\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"its front left leg lifted mid-step amid vivid wildflowers ... continues strolling gently forward-right at a calm, heavy, deliberate pace\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"current_pose/state: standing still, facing slightly to the right, head turned toward the viewer\"\n        }\n      ],\n      \"rationale\": \"The action of the bull strolling is coherent and causally plausible. The enhanced prompt describes a continuous, deliberate motion (lifting front left leg, stepping forward-right) that logically follows from the static image’s pose. The motion is consistent with the subject’s heavy, stone nature. No incompatible or dangling actions are present.\"\n    },\n    {\n      \"criterion\": \"TSC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"at 0.00 seconds into the target video, <Picture 1> (from [Shot 1]) is fully referenced\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"The camera pushes in with small amplitude at slow speed toward the bull's head as it completes its raised step and continues strolling gently forward-right\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"Animate a grand stone bull ... as it strolls gently through a sunlit, magical forest\"\n        }\n      ],\n      \"rationale\": \"Chronology is clear: the video begins with the image state, then progresses with the bull completing its step and continuing forward. The camera motion is slow and continuous, matching the bull’s pace. No overlapping or infeasible timestamps or state resets are described. The duration (7s) is not contradicted by the prompt’s pacing.\"\n    },\n    {\n      \"criterion\": \"SPC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"eye-level slightly low-angle close-up frames the massive stone bull exactly as shown in <Picture 1>\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"camera pushes in with small amplitude at slow speed toward the bull's head as it continues strolling gently forward-right\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"composition: bull positioned slightly off-center to the left, with sunlight entering from top-right, creating strong diagonal light rays\"\n        }\n      ],\n      \"rationale\": \"Location (magical forest), screen direction (forward-right motion), and camera trajectory (push-in toward head) are consistent. The bull’s movement direction (forward-right) aligns with the camera’s push-in, and the composition remains stable. No unexplained position swaps or infeasible trajectories are described.\"\n    },\n    {\n      \"criterion\": \"PL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"its hooves pressing softly into the flowered ground and disturbing a few petals and loose dust\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"crystal horns shimmer and refract the sunbeams, casting a soft pulsing glow onto nearby flowers\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"heavy stone hooves press into soft earth with low, muffled thuds, scattering petals and fine dust\"\n        }\n      ],\n      \"rationale\": \"Physics are consistent with the fantasy setting: stone bull moves with heavy, deliberate steps; hooves disturb ground and petals; crystal horns refract light plausibly. No violations of gravity, contact, or object permanence. The fantasy elements (glowing horns, floating particles) are internally consistent and not contradicted.\"\n    },\n    {\n      \"criterion\": \"AVS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"minor\",\n      \"issue\": \"The enhanced prompt includes a detailed soundscape and non-diegetic music description, which are not present in the original prompt. While not contradictory, these additions are not required by the original instruction and may be considered elaboration beyond the scope.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"The ambiance is enchanting, filled with golden particles drifting through the air, crafting a tranquil and captivating moment in nature.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"overall_soundscape: A tranquil forest ambience with soft birdsong and a gentle breeze through leaves. Heavy stone hooves press into soft earth with low, muffled thuds, scattering petals and fine dust, while faint crystalline chimes shimmer from the glowing horns.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"non_diegetic_music: N/A\"\n        }\n      ],\n      \"rationale\": \"The soundscape and effects are semantically aligned with the visual events (hooves, chimes from horns, birdsong). However, the original prompt does not mention audio, so the addition of detailed sound design is an elaboration. Since it does not contradict or misalign with the visuals, the issue is minor. The absence of music (N/A) is consistent with the original prompt’s focus on visual ambiance.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt maintains strong internal consistency with the original instruction, preserving subject identity, appearance, environment, and motion logic. Minor issues include slight elaboration beyond the original prompt (e.g., specific camera motion, petal drift, and sound details) that are not contradicted but not strictly required. No contradictions, attribute drift, or infeasible sequences are present. The prompt’s temporal and spatial logic is coherent, and all elements align with the original image and description.",
+  "usage": {
+    "completion_tokens": 1712,
+    "prompt_tokens": 2481,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 4193
+  }
+}

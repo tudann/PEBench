@@ -1,0 +1,115 @@
+{
+  "candidate_hash": "388468de2543694666ae3a146809668d2d4689a719148fdf29ba0a922af9f664",
+  "case_key": "i2v:247",
+  "created_at": "2026-11-13T07:59:27+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "SAC",
+      "evidence": [
+        {
+          "quote": "先写成只有一个主角，紧接着又写成这个主角同时变成五个外貌不同的人，并且互相对话。...改成白棚里另一位年龄和性别都相反的陌生人。",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "A studio portrait of a young woman with long black hair, wearing a beige tank top, standing in front of a green screen...",
+          "source": "evidence_facts"
+        }
+      ],
+      "issue": "Subject identity, count, and appearance are inconsistent: starts with one subject, then becomes five different people simultaneously, with no explanation or transition. Also, the subject is replaced with a stranger of opposite age and gender in a white studio, contradicting the original subject from image_1.",
+      "rationale": "The prompt explicitly contradicts subject identity and count: from one to five, then to a different person entirely. This violates subject stability and is a major internal inconsistency.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANL",
+      "evidence": [
+        {
+          "quote": "中途插进一段无关的宫廷选妃。...这个主角同时变成五个外貌不同的人，并且互相对话。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Actions are incoherent and causally disconnected: the prompt describes a dialogue between five people, but no prior setup or context for their interaction. The 'courtship selection' scene is unrelated and inserted without narrative logic.",
+      "rationale": "The actions described (dialogue among five people, courtship scene) lack causal progression or binding to any prior state. The insertion of unrelated events breaks procedural coherence.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "TSC",
+      "evidence": [
+        {
+          "quote": "时间倒过来：先给结尾，再跳到一个对不上的开头。...总时长写成2秒，同时又要求每个分镜各自持续19秒。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Chronology is reversed and infeasible: the prompt demands to 'start with the ending, then jump to a mismatched beginning'. Duration is contradictory: total 2 seconds with each shot lasting 19 seconds, which is impossible.",
+      "rationale": "Reversing chronology without a coherent transition and assigning impossible durations (19s per shot in a 2s video) creates a fundamental temporal contradiction.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SPC",
+      "evidence": [
+        {
+          "quote": "写成机位锁死，又写成镜头一直在晃。...改成白棚里另一位年龄和性别都相反的陌生人。",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "green screen backdrop, metal truss structure with overhead lights",
+          "source": "evidence_facts"
+        }
+      ],
+      "issue": "Location and camera motion are inconsistent: the prompt alternates between 'locked camera' and 'shaky camera', and changes from a green screen studio to a white studio without spatial continuity.",
+      "rationale": "The prompt contradicts itself on camera motion and location, creating an impossible spatial and compositional state transition.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "PL",
+      "evidence": [
+        {
+          "quote": "同一段写成正午暴晒，又写成深夜无光；...这个主角同时变成五个外貌不同的人",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Physics and object permanence are violated: a single person cannot simultaneously become five different people without explanation. The scene changes from day to night without transition, defying real-world continuity.",
+      "rationale": "The prompt describes impossible physical transformations and state changes without any narrative or logical justification, violating basic physical consistency.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "AVS",
+      "evidence": [
+        {
+          "quote": "没有人出镜，也没有对白，只剩远处车流。...这个主角同时变成五个外貌不同的人，并且互相对话。",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "语速偏慢，吐字清晰沉稳，开篇轻柔，说到“野心”时语气微扬坚定，结尾放缓放柔",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "No dialogue or audio is present, yet the prompt describes a complex dialogue between five people and a courtship scene, creating a mismatch between visual and audio content. The original prompt's speech cues are discarded without replacement.",
+      "rationale": "The prompt removes all audio elements but then introduces complex dialogue, creating a semantic misalignment between the visual (no people, no speech) and the implied audio (dialogue, courtship).",
+      "severity": "major"
+    }
+  ],
+  "dimension": "IC",
+  "dimension_score": 0,
+  "evidence_cache_key": "b516858762366c2097e9b495db0cbd7afd6238c2b0a71d4bf3d3a81f6d097e29",
+  "judge_cache_key": "438d7e9fd7332b1041db3e2c26d42cb3fe828e0d369fb59490f6650aee59e97d",
+  "method": "weak-pe-original",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"IC\",\n  \"dimension_score\": 0,\n  \"summary\": \"Enhanced prompt contains severe internal inconsistencies across all criteria: subject identity and count are contradictory (one to five people), actions and chronology are reversed and incoherent, scene and lighting are mutually exclusive (day vs night), camera motion is conflicting (locked vs shaky), and duration is logically impossible (2s total with 19s per shot). The prompt deliberately violates every aspect of internal consistency, rendering the request infeasible and inconsistent.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"SAC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Subject identity, count, and appearance are inconsistent: starts with one subject, then becomes five different people simultaneously, with no explanation or transition. Also, the subject is replaced with a stranger of opposite age and gender in a white studio, contradicting the original subject from image_1.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"先写成只有一个主角，紧接着又写成这个主角同时变成五个外貌不同的人，并且互相对话。...改成白棚里另一位年龄和性别都相反的陌生人。\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"A studio portrait of a young woman with long black hair, wearing a beige tank top, standing in front of a green screen...\"\n        }\n      ],\n      \"rationale\": \"The prompt explicitly contradicts subject identity and count: from one to five, then to a different person entirely. This violates subject stability and is a major internal inconsistency.\"\n    },\n    {\n      \"criterion\": \"ANL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Actions are incoherent and causally disconnected: the prompt describes a dialogue between five people, but no prior setup or context for their interaction. The 'courtship selection' scene is unrelated and inserted without narrative logic.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"中途插进一段无关的宫廷选妃。...这个主角同时变成五个外貌不同的人，并且互相对话。\"\n        }\n      ],\n      \"rationale\": \"The actions described (dialogue among five people, courtship scene) lack causal progression or binding to any prior state. The insertion of unrelated events breaks procedural coherence.\"\n    },\n    {\n      \"criterion\": \"TSC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Chronology is reversed and infeasible: the prompt demands to 'start with the ending, then jump to a mismatched beginning'. Duration is contradictory: total 2 seconds with each shot lasting 19 seconds, which is impossible.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"时间倒过来：先给结尾，再跳到一个对不上的开头。...总时长写成2秒，同时又要求每个分镜各自持续19秒。\"\n        }\n      ],\n      \"rationale\": \"Reversing chronology without a coherent transition and assigning impossible durations (19s per shot in a 2s video) creates a fundamental temporal contradiction.\"\n    },\n    {\n      \"criterion\": \"SPC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Location and camera motion are inconsistent: the prompt alternates between 'locked camera' and 'shaky camera', and changes from a green screen studio to a white studio without spatial continuity.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"写成机位锁死，又写成镜头一直在晃。...改成白棚里另一位年龄和性别都相反的陌生人。\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"green screen backdrop, metal truss structure with overhead lights\"\n        }\n      ],\n      \"rationale\": \"The prompt contradicts itself on camera motion and location, creating an impossible spatial and compositional state transition.\"\n    },\n    {\n      \"criterion\": \"PL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Physics and object permanence are violated: a single person cannot simultaneously become five different people without explanation. The scene changes from day to night without transition, defying real-world continuity.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"同一段写成正午暴晒，又写成深夜无光；...这个主角同时变成五个外貌不同的人\"\n        }\n      ],\n      \"rationale\": \"The prompt describes impossible physical transformations and state changes without any narrative or logical justification, violating basic physical consistency.\"\n    },\n    {\n      \"criterion\": \"AVS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"No dialogue or audio is present, yet the prompt describes a complex dialogue between five people and a courtship scene, creating a mismatch between visual and audio content. The original prompt's speech cues are discarded without replacement.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"没有人出镜，也没有对白，只剩远处车流。...这个主角同时变成五个外貌不同的人，并且互相对话。\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"语速偏慢，吐字清晰沉稳，开篇轻柔，说到“野心”时语气微扬坚定，结尾放缓放柔\"\n        }\n      ],\n      \"rationale\": \"The prompt removes all audio elements but then introduces complex dialogue, creating a semantic misalignment between the visual (no people, no speech) and the implied audio (dialogue, courtship).\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "Enhanced prompt contains severe internal inconsistencies across all criteria: subject identity and count are contradictory (one to five people), actions and chronology are reversed and incoherent, scene and lighting are mutually exclusive (day vs night), camera motion is conflicting (locked vs shaky), and duration is logically impossible (2s total with 19s per shot). The prompt deliberately violates every aspect of internal consistency, rendering the request infeasible and inconsistent.",
+  "usage": {
+    "completion_tokens": 1281,
+    "prompt_tokens": 2312,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 3593
+  }
+}

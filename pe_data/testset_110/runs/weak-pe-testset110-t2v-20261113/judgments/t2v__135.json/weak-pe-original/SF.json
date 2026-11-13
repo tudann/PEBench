@@ -1,0 +1,166 @@
+{
+  "candidate_hash": "c6e89f086d1d3d3758366a70997c8528bbb2e7cdda110cff1199fbf67a9a4d63",
+  "case_key": "t2v:135",
+  "created_at": "2026-11-13T07:36:45+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "GSF",
+      "evidence": [
+        {
+          "quote": "Cinematic light in rich amber hues, tense yet uplifting mood.",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Replace the whole video with a looping snowy landscape with no characters and no plot.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original prompt specifies a cinematic historical narrative with rich amber lighting and a tense yet uplifting mood. The enhanced prompt replaces this with a looping snowy landscape, removing genre, aesthetic, and visual style entirely.",
+      "rationale": "The original genre and aesthetic are explicitly defined and are replaced with a completely different visual and thematic context, violating the core semantic fidelity requirement.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SAP",
+      "evidence": [
+        {
+          "quote": "a teenage herdsman called Eli",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "First state that there is one protagonist, then state that this same protagonist appears simultaneously as five different-looking people who talk to each other.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original prompt specifies a single protagonist, Eli, a teenage herdsman. The enhanced prompt first states there is one protagonist, then contradicts this by stating the same protagonist appears as five different-looking people, which is a direct contradiction of identity and count.",
+      "rationale": "The subject identity and count are explicitly altered in a way that contradicts the original instruction, making this a major violation.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANF",
+      "evidence": [
+        {
+          "quote": "Eli whirls the sling in a clean circular motion, and one pebble cuts across the air in slow motion, hitting the warrior squarely between the brows. The armored giant reels backward, then crashes onto the earth...",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Reverse the timeline: show the ending first, then cut to a beginning that does not match. Cut away in the middle to a palace audition.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original prompt describes a clear sequence of actions: Eli standing firm, whirling the sling, hitting the warrior, and the warrior falling. The enhanced prompt reverses the timeline, shows an ending first, then a mismatched beginning, and cuts to an unrelated palace audition, completely disrupting the narrative intent and event order.",
+      "rationale": "The narrative structure is fundamentally altered and contradicts the original event chain, which is a major violation of narrative fidelity.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "DLI",
+      "evidence": [
+        {
+          "quote": "The dry, dusty battleground remains still, broken only by a faint breeze and the far-off whispers of the waiting troops.",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "The original prompt does not include any dialogue, narration, or lyrics, so there is no content to preserve or violate.",
+      "rationale": "Since no dialogue or narration is specified in the original prompt, this criterion is not violated.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ARP",
+      "evidence": [
+        {
+          "quote": "broken only by a faint breeze and the far-off whispers of the waiting troops.",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "The original prompt does not specify any speech, music, or sound effects beyond ambient descriptions (e.g., 'faint breeze', 'whispers'), which are not explicitly constrained. The enhanced prompt does not introduce any sound constraints that contradict the original, so no violation occurs.",
+      "rationale": "No explicit audio constraints are present in the original prompt, so no violation is detected.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CCP",
+      "evidence": [
+        {
+          "quote": "The camera gradually pulls back, exposing a massive warrior in the distance...",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Drop the requested identity, count, action order, setting, and any explicit camera instruction. ... Describe that same moment as ... a locked camera and a camera that never stops shaking.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original prompt specifies a gradual camera pull-back. The enhanced prompt explicitly drops all camera instructions and introduces contradictory constraints: 'a locked camera and a camera that never stops shaking' for the same moment, which is infeasible and violates the original intent.",
+      "rationale": "The original camera movement is replaced with contradictory and impossible instructions, violating the camera constraint fidelity.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "LCF",
+      "evidence": [
+        {
+          "quote": "Cinematic light in rich amber hues",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Describe that same moment as harsh noon sun and as a lightless night...",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original prompt specifies 'cinematic light in rich amber hues'. The enhanced prompt replaces this with a snowy landscape and then contradicts itself by describing the same moment as 'harsh noon sun' and 'lightless night', which are incompatible lighting conditions.",
+      "rationale": "The lighting conditions are directly contradicted and made logically inconsistent, violating the lighting and color fidelity requirement.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SSP",
+      "evidence": [
+        {
+          "quote": "Medium shot of a teenage herdsman called Eli standing firm in a bright open plain...",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Replace the whole video with a looping snowy landscape... Cut away in the middle to a palace audition.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original prompt specifies a 'bright open plain' as the setting. The enhanced prompt replaces it with a 'looping snowy landscape' and then cuts to a 'palace audition', which is a completely different and unrelated setting, violating the spatial and environmental fidelity.",
+      "rationale": "The setting is entirely replaced with incompatible and unrelated environments, which is a major violation.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "OTI",
+      "evidence": [
+        {
+          "quote": "Medium shot of a teenage herdsman called Eli standing firm in a bright open plain...",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "The original prompt does not include any visible titles, signs, subtitles, or interface text, so there is no content to preserve or violate.",
+      "rationale": "No visible text elements are specified in the original prompt, so this criterion is not violated.",
+      "severity": "none"
+    }
+  ],
+  "dimension": "SF",
+  "dimension_score": 0,
+  "evidence_cache_key": "467e28c5c01f5c188301addc24fad0686923cb4552dcef49f123bd333e0445bf",
+  "judge_cache_key": "a0ca24571ad14d7ab7be626329bd736d7e7015f9ebc418227c8be391591d0377",
+  "method": "weak-pe-original",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"SF\",\n  \"dimension_score\": 0,\n  \"summary\": \"The enhanced prompt completely contradicts and replaces the original instruction, violating all semantic fidelity criteria. It discards the requested genre, subject, actions, setting, camera work, lighting, and duration, introducing incompatible and logically infeasible elements such as contradictory timelines, impossible shot durations, and conflicting environmental conditions. The prompt is not a faithful elaboration but a deliberate subversion of the original request.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"GSF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original prompt specifies a cinematic historical narrative with rich amber lighting and a tense yet uplifting mood. The enhanced prompt replaces this with a looping snowy landscape, removing genre, aesthetic, and visual style entirely.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"Cinematic light in rich amber hues, tense yet uplifting mood.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Replace the whole video with a looping snowy landscape with no characters and no plot.\"\n        }\n      ],\n      \"rationale\": \"The original genre and aesthetic are explicitly defined and are replaced with a completely different visual and thematic context, violating the core semantic fidelity requirement.\"\n    },\n    {\n      \"criterion\": \"SAP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original prompt specifies a single protagonist, Eli, a teenage herdsman. The enhanced prompt first states there is one protagonist, then contradicts this by stating the same protagonist appears as five different-looking people, which is a direct contradiction of identity and count.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"a teenage herdsman called Eli\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"First state that there is one protagonist, then state that this same protagonist appears simultaneously as five different-looking people who talk to each other.\"\n        }\n      ],\n      \"rationale\": \"The subject identity and count are explicitly altered in a way that contradicts the original instruction, making this a major violation.\"\n    },\n    {\n      \"criterion\": \"ANF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original prompt describes a clear sequence of actions: Eli standing firm, whirling the sling, hitting the warrior, and the warrior falling. The enhanced prompt reverses the timeline, shows an ending first, then a mismatched beginning, and cuts to an unrelated palace audition, completely disrupting the narrative intent and event order.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"Eli whirls the sling in a clean circular motion, and one pebble cuts across the air in slow motion, hitting the warrior squarely between the brows. The armored giant reels backward, then crashes onto the earth...\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Reverse the timeline: show the ending first, then cut to a beginning that does not match. Cut away in the middle to a palace audition.\"\n        }\n      ],\n      \"rationale\": \"The narrative structure is fundamentally altered and contradicts the original event chain, which is a major violation of narrative fidelity.\"\n    },\n    {\n      \"criterion\": \"DLI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"The original prompt does not include any dialogue, narration, or lyrics, so there is no content to preserve or violate.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"The dry, dusty battleground remains still, broken only by a faint breeze and the far-off whispers of the waiting troops.\"\n        }\n      ],\n      \"rationale\": \"Since no dialogue or narration is specified in the original prompt, this criterion is not violated.\"\n    },\n    {\n      \"criterion\": \"ARP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"The original prompt does not specify any speech, music, or sound effects beyond ambient descriptions (e.g., 'faint breeze', 'whispers'), which are not explicitly constrained. The enhanced prompt does not introduce any sound constraints that contradict the original, so no violation occurs.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"broken only by a faint breeze and the far-off whispers of the waiting troops.\"\n        }\n      ],\n      \"rationale\": \"No explicit audio constraints are present in the original prompt, so no violation is detected.\"\n    },\n    {\n      \"criterion\": \"CCP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original prompt specifies a gradual camera pull-back. The enhanced prompt explicitly drops all camera instructions and introduces contradictory constraints: 'a locked camera and a camera that never stops shaking' for the same moment, which is infeasible and violates the original intent.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"The camera gradually pulls back, exposing a massive warrior in the distance...\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Drop the requested identity, count, action order, setting, and any explicit camera instruction. ... Describe that same moment as ... a locked camera and a camera that never stops shaking.\"\n        }\n      ],\n      \"rationale\": \"The original camera movement is replaced with contradictory and impossible instructions, violating the camera constraint fidelity.\"\n    },\n    {\n      \"criterion\": \"LCF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original prompt specifies 'cinematic light in rich amber hues'. The enhanced prompt replaces this with a snowy landscape and then contradicts itself by describing the same moment as 'harsh noon sun' and 'lightless night', which are incompatible lighting conditions.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"Cinematic light in rich amber hues\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Describe that same moment as harsh noon sun and as a lightless night...\"\n        }\n      ],\n      \"rationale\": \"The lighting conditions are directly contradicted and made logically inconsistent, violating the lighting and color fidelity requirement.\"\n    },\n    {\n      \"criterion\": \"SSP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original prompt specifies a 'bright open plain' as the setting. The enhanced prompt replaces it with a 'looping snowy landscape' and then cuts to a 'palace audition', which is a completely different and unrelated setting, violating the spatial and environmental fidelity.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"Medium shot of a teenage herdsman called Eli standing firm in a bright open plain...\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Replace the whole video with a looping snowy landscape... Cut away in the middle to a palace audition.\"\n        }\n      ],\n      \"rationale\": \"The setting is entirely replaced with incompatible and unrelated environments, which is a major violation.\"\n    },\n    {\n      \"criterion\": \"OTI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"The original prompt does not include any visible titles, signs, subtitles, or interface text, so there is no content to preserve or violate.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"Medium shot of a teenage herdsman called Eli standing firm in a bright open plain...\"\n        }\n      ],\n      \"rationale\": \"No visible text elements are specified in the original prompt, so this criterion is not violated.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt completely contradicts and replaces the original instruction, violating all semantic fidelity criteria. It discards the requested genre, subject, actions, setting, camera work, lighting, and duration, introducing incompatible and logically infeasible elements such as contradictory timelines, impossible shot durations, and conflicting environmental conditions. The prompt is not a faithful elaboration but a deliberate subversion of the original request.",
+  "usage": {
+    "completion_tokens": 1718,
+    "prompt_tokens": 1172,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 2890
+  }
+}

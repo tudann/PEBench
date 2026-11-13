@@ -1,0 +1,139 @@
+{
+  "candidate_hash": "d6fcc72a4ec12510b2b1342caf4511602e2badbd6ca75ab59e1dbcd235300da4",
+  "case_key": "i2v:014",
+  "created_at": "2026-11-13T07:16:02+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "SAC",
+      "evidence": [
+        {
+          "quote": "患者紧握的双手缓缓、轻柔地在15秒内松开并打开",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "the hands hold the clasped pose with only subtle micro-movements — a faint breathing-induced sway and a slight tightening then easing of the grip. Then, slowly and deliberately, the fingers begin to unlace one by one",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "hands clasped tightly, fingers interlocked, resting on lap",
+          "source": "evidence_facts"
+        }
+      ],
+      "issue": "",
+      "rationale": "Subject identity (patient) and appearance (clenched hands, gray sweater, dark blue jeans) are consistently maintained. The hands remain the sole subject, with no duplication or attribute drift. Clothing and props (sweater cuff, denim) are accurately referenced and persist throughout the described motion. The prompt correctly preserves the initial state and transitions to the final open-hand state without introducing new or inconsistent attributes.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANL",
+      "evidence": [
+        {
+          "quote": "缓缓、轻柔地在15秒内松开并打开——这是一个微妙而深思熟虑的释放、投降和信任的手势",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "slowly and deliberately, the fingers begin to unlace one by one: the top hand's fingers straighten and slide free, the thumbs uncross, and both palms rotate gently open and apart in a continuous, tender gesture of release, surrender, and trust",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "hands clasped tightly, fingers interlocked",
+          "source": "evidence_facts"
+        }
+      ],
+      "issue": "",
+      "rationale": "The action sequence is coherent and causally plausible: from tightly clasped hands to gradual unclenching, with micro-movements preceding the main gesture. The description of 'fingers unlace one by one' and 'palms rotate gently open' forms a continuous, physically feasible progression. The emotional intent (release, surrender, trust) is preserved and aligned with the physical motion. No dangling or incompatible actions are present.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "TSC",
+      "evidence": [
+        {
+          "quote": "For the first few seconds, the hands hold the clasped pose with only subtle micro-movements... Then, slowly and deliberately, the fingers begin to unlace one by one... By the final seconds, the open hands come to rest",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "在15秒内松开并打开",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "The prompt describes 'first few seconds' of micro-movements and then the main unclenching, but does not precisely allocate the 15-second duration to each phase, leaving timing slightly ambiguous.",
+      "rationale": "The overall duration (15 seconds) is respected, and the sequence is temporally ordered: initial stillness → micro-movements → unclenching → final rest. However, the prompt does not specify exact timing for each phase (e.g., 3s micro-movements, 10s unclenching, 2s rest), which introduces minor ambiguity. This does not break internal consistency but slightly weakens precision.",
+      "severity": "minor"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SPC",
+      "evidence": [
+        {
+          "quote": "static, locked-off close-up shot, slightly above eye level, frames the adult's clasped hands exactly as shown in <Picture 1>",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "slightly low angle, looking up at hands",
+          "source": "evidence_facts"
+        },
+        {
+          "quote": "相机保持静止和稳定",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "The camera remains static and stable throughout, as required. The subject (hands) remains in the same relative position (center-left, near lap) with no unexplained movement or repositioning. The shot scale (close-up) and framing are consistent with the source image. The slight discrepancy in angle description ('slightly above eye level' vs. 'slightly low angle') is minor and does not affect spatial coherence.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "PL",
+      "evidence": [
+        {
+          "quote": "fingers begin to unlace one by one: the top hand's fingers straighten and slide free, the thumbs uncross, and both palms rotate gently open and apart",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "hands clasped tightly, fingers interlocked",
+          "source": "evidence_facts"
+        }
+      ],
+      "issue": "",
+      "rationale": "The described motion (fingers unclenching, palms rotating open) is physically plausible and consistent with human anatomy. There is no violation of gravity, object permanence, or bodily feasibility. The slow, deliberate motion aligns with the emotional tone and is consistent with real-world biomechanics.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "AVS",
+      "evidence": [
+        {
+          "quote": "A quiet indoor room tone with a faint, distant ambient hum. Soft fabric sounds accompany the slow movement of the sweater sleeves and hands, with subtle, gentle friction of skin as the fingers gradually unlace and the palms open.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "严格禁止音乐、旋律、背景音乐、配乐、歌唱、声乐哼唱，及任何与音乐轨道的对口型",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "The soundscape is described as ambient room tone and fabric/skin friction, which aligns with the visual action (slow hand movement) and the prohibition of music or vocal elements. There is no mention of dialogue or lyrics, and no misalignment between sound and visual events is indicated. The audio description is consistent with the visual narrative.",
+      "severity": "none"
+    }
+  ],
+  "dimension": "IC",
+  "dimension_score": 95,
+  "evidence_cache_key": "778a9f7f46787e51bcff1cf977041acb5efeab8a3adb10a6edcfb9d8212b8832",
+  "judge_cache_key": "438d7e9fd7332b1041db3e2c26d42cb3fe828e0d369fb59490f6650aee59e97d",
+  "method": "glm53_20261112_120702",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"IC\",\n  \"dimension_score\": 95,\n  \"summary\": \"The enhanced prompt maintains strong internal consistency with the original instruction, preserving subject identity, action progression, lighting, camera stability, and environmental constraints. Minor issues include slight ambiguity in the exact timing of micro-movements and a minor deviation in camera angle description (prompt says 'slightly above eye level' while evidence suggests 'slightly low angle, looking up'), but these do not materially affect coherence. No contradictions or omissions of core requirements are present.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"SAC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"患者紧握的双手缓缓、轻柔地在15秒内松开并打开\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"the hands hold the clasped pose with only subtle micro-movements — a faint breathing-induced sway and a slight tightening then easing of the grip. Then, slowly and deliberately, the fingers begin to unlace one by one\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"hands clasped tightly, fingers interlocked, resting on lap\"\n        }\n      ],\n      \"rationale\": \"Subject identity (patient) and appearance (clenched hands, gray sweater, dark blue jeans) are consistently maintained. The hands remain the sole subject, with no duplication or attribute drift. Clothing and props (sweater cuff, denim) are accurately referenced and persist throughout the described motion. The prompt correctly preserves the initial state and transitions to the final open-hand state without introducing new or inconsistent attributes.\"\n    },\n    {\n      \"criterion\": \"ANL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"缓缓、轻柔地在15秒内松开并打开——这是一个微妙而深思熟虑的释放、投降和信任的手势\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"slowly and deliberately, the fingers begin to unlace one by one: the top hand's fingers straighten and slide free, the thumbs uncross, and both palms rotate gently open and apart in a continuous, tender gesture of release, surrender, and trust\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"hands clasped tightly, fingers interlocked\"\n        }\n      ],\n      \"rationale\": \"The action sequence is coherent and causally plausible: from tightly clasped hands to gradual unclenching, with micro-movements preceding the main gesture. The description of 'fingers unlace one by one' and 'palms rotate gently open' forms a continuous, physically feasible progression. The emotional intent (release, surrender, trust) is preserved and aligned with the physical motion. No dangling or incompatible actions are present.\"\n    },\n    {\n      \"criterion\": \"TSC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"minor\",\n      \"issue\": \"The prompt describes 'first few seconds' of micro-movements and then the main unclenching, but does not precisely allocate the 15-second duration to each phase, leaving timing slightly ambiguous.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"For the first few seconds, the hands hold the clasped pose with only subtle micro-movements... Then, slowly and deliberately, the fingers begin to unlace one by one... By the final seconds, the open hands come to rest\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"在15秒内松开并打开\"\n        }\n      ],\n      \"rationale\": \"The overall duration (15 seconds) is respected, and the sequence is temporally ordered: initial stillness → micro-movements → unclenching → final rest. However, the prompt does not specify exact timing for each phase (e.g., 3s micro-movements, 10s unclenching, 2s rest), which introduces minor ambiguity. This does not break internal consistency but slightly weakens precision.\"\n    },\n    {\n      \"criterion\": \"SPC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"static, locked-off close-up shot, slightly above eye level, frames the adult's clasped hands exactly as shown in <Picture 1>\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"slightly low angle, looking up at hands\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"相机保持静止和稳定\"\n        }\n      ],\n      \"rationale\": \"The camera remains static and stable throughout, as required. The subject (hands) remains in the same relative position (center-left, near lap) with no unexplained movement or repositioning. The shot scale (close-up) and framing are consistent with the source image. The slight discrepancy in angle description ('slightly above eye level' vs. 'slightly low angle') is minor and does not affect spatial coherence.\"\n    },\n    {\n      \"criterion\": \"PL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"fingers begin to unlace one by one: the top hand's fingers straighten and slide free, the thumbs uncross, and both palms rotate gently open and apart\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"hands clasped tightly, fingers interlocked\"\n        }\n      ],\n      \"rationale\": \"The described motion (fingers unclenching, palms rotating open) is physically plausible and consistent with human anatomy. There is no violation of gravity, object permanence, or bodily feasibility. The slow, deliberate motion aligns with the emotional tone and is consistent with real-world biomechanics.\"\n    },\n    {\n      \"criterion\": \"AVS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"A quiet indoor room tone with a faint, distant ambient hum. Soft fabric sounds accompany the slow movement of the sweater sleeves and hands, with subtle, gentle friction of skin as the fingers gradually unlace and the palms open.\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"严格禁止音乐、旋律、背景音乐、配乐、歌唱、声乐哼唱，及任何与音乐轨道的对口型\"\n        }\n      ],\n      \"rationale\": \"The soundscape is described as ambient room tone and fabric/skin friction, which aligns with the visual action (slow hand movement) and the prohibition of music or vocal elements. There is no mention of dialogue or lyrics, and no misalignment between sound and visual events is indicated. The audio description is consistent with the visual narrative.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt maintains strong internal consistency with the original instruction, preserving subject identity, action progression, lighting, camera stability, and environmental constraints. Minor issues include slight ambiguity in the exact timing of micro-movements and a minor deviation in camera angle description (prompt says 'slightly above eye level' while evidence suggests 'slightly low angle, looking up'), but these do not materially affect coherence. No contradictions or omissions of core requirements are present.",
+  "usage": {
+    "completion_tokens": 1592,
+    "prompt_tokens": 2561,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 4153
+  }
+}

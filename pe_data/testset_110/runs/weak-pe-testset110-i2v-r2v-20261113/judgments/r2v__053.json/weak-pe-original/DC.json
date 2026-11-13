@@ -1,0 +1,170 @@
+{
+  "candidate_hash": "9253654a1646403ca3c19b409bd700bcc17598fe386aa2213a674afe164d32a8",
+  "case_key": "r2v:053",
+  "created_at": "2026-11-13T08:18:28+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "STC",
+      "evidence": [
+        {
+          "quote": "Set the total runtime to 2 seconds, while also making every shot last 17 seconds.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Reverse the timeline: show the ending first, then cut to a beginning that does not match. Cut away in the middle to an underwater treasure hunt.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt creates an infeasible temporal plan with contradictory duration requirements (2 seconds total runtime vs. 17-second shots) and a reversed, non-continuous timeline that includes abrupt cuts to unrelated scenes (underwater treasure hunt) without continuity or motivation.",
+      "rationale": "The temporal structure is logically impossible and violates basic video production principles. The 2-second total runtime cannot accommodate 17-second shots, and the reversed timeline with abrupt cuts to unrelated scenes lacks coherence or narrative progression.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CDS",
+      "evidence": [
+        {
+          "quote": "Drop the requested identity, count, action order, setting, and any explicit camera instruction.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Describe that same moment as harsh noon sun and as a lightless night, and as both a locked camera and a camera that never stops shaking.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt contradicts the original camera design by dropping all explicit camera instructions and introducing mutually exclusive camera behaviors (locked camera vs. never-stopping shaking) without specifying which to use or how to transition between them.",
+      "rationale": "The prompt invalidates the original camera design (tracking shots + close-ups) and introduces contradictory camera specifications that cannot be simultaneously realized, making the visual plan unactionable.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ETD",
+      "evidence": [
+        {
+          "quote": "Cut away in the middle to an underwater treasure hunt.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Reverse the timeline: show the ending first, then cut to a beginning that does not match.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The cuts and transitions are disconnected and unmotivated, including abrupt cuts to an unrelated underwater treasure hunt and contradictory temporal sequences (reversed timeline, non-matching beginning), which destroy spatial and narrative continuity.",
+      "rationale": "The transitions lack motivation and continuity, creating a disjointed sequence that fails to support any coherent progression. The underwater scene is unrelated to the original combat context and appears without narrative justification.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "LCS",
+      "evidence": [
+        {
+          "quote": "Describe that same moment as harsh noon sun and as a lightless night, and as both a locked camera and a camera that never stops shaking.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt introduces contradictory lighting conditions (harsh noon sun vs. lightless night) for the same moment without specifying which to use or how to transition, making the lighting plan incoherent and unactionable.",
+      "rationale": "The lighting specifications are mutually exclusive and cannot be simultaneously realized. The prompt does not resolve this contradiction, rendering the lighting plan impossible to execute.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "NDE",
+      "evidence": [
+        {
+          "quote": "Image 1 and Image 2 alternate offense and defense, with blocking and counterattacks, fully presenting the back-and-forth rhythm of attack, defense, and counterattack [5s].",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Replace the whole video with an empty meeting room where a glass of water never moves, with no people and no conflict.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt lacks any progression, variation, or resolution. Instead, it presents a static, contradictory scenario with no narrative arc, escalation, or resolution, replacing the original combat rhythm with an incoherent sequence of unrelated events.",
+      "rationale": "The original prompt requested a dynamic, rhythmic combat sequence with clear progression. The enhanced prompt replaces this with a static, conflict-free scene and adds contradictory, unrelated events, eliminating any narrative or visual progression.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CIF",
+      "evidence": [
+        {
+          "quote": "Replace image 1 with a character who is not in the reference, and give that image two contradictory identities.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Cut away in the middle to an underwater treasure hunt.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The additions (multiple contradictory identities, reversed timeline, underwater scene, contradictory lighting and camera) are not supportive of the central request but instead actively undermine it by replacing the core combat sequence with an incoherent, contradictory scenario.",
+      "rationale": "The additions are not supportive but destructive to the original request. They introduce elements that are irrelevant, contradictory, and incompatible with the original combat scene, resulting in a plan that cannot fulfill the intended outcome.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SDI",
+      "evidence": [
+        {
+          "quote": "Replace the whole video with an empty meeting room where a glass of water never moves, with no people and no conflict.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt does not specify any audio elements (speech, music, effects, ambience), which is acceptable as the criterion does not require every audio type. However, the absence of audio specifications in a combat scene may affect immersion, though this is not a major failure.",
+      "rationale": "The original prompt implied a combat scene with environmental interactions (snow spraying, rocks colliding), which would typically require sound design. The enhanced prompt removes all action and conflict, making audio specifications irrelevant. The absence is not a major issue given the context.",
+      "severity": "minor"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SPS",
+      "evidence": [
+        {
+          "quote": "Replace image 1 with a character who is not in the reference, and give that image two contradictory identities.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Replace image 2 with a character who is not in the reference, and give that image two contradictory identities.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt replaces the original characters with non-referenced characters given contradictory identities, and removes all action, expression, and interaction, resulting in no actionable subject or performance details.",
+      "rationale": "The original prompt required strict matching of core features (armor, horns/ears, hairstyle, weapons) and dynamic combat performance. The enhanced prompt invalidates these requirements by replacing characters with non-referenced ones and removing all action, making performance details unactionable.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "VSS",
+      "evidence": [
+        {
+          "quote": "use the snowy mountain environment from Image 3, adding environmental interactions such as \"snow spraying\" and \"rocks colliding\"",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Replace the whole video with an empty meeting room where a glass of water never moves, with no people and no conflict.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt replaces the original snowy mountain environment with an empty meeting room and introduces an unrelated underwater scene, while also contradicting the original visual treatment (slow motion, 120fps, tracking shots) with static, contradictory specifications.",
+      "rationale": "The visual treatment is completely overhauled with contradictory and unrelated environments. The original cinematic treatment (slow motion, tracking shots) is dropped, and the new specifications are incoherent, making the visual style unactionable.",
+      "severity": "major"
+    }
+  ],
+  "dimension": "DC",
+  "dimension_score": 0,
+  "evidence_cache_key": "25ad5fb7b510ed3ab92da595e813d11c3111ca7d07199b90b666cae4e882c153",
+  "judge_cache_key": "0754499d53388e6467fb078ab780e01b77f9f1c9e99d9029be2769351eb2b2eb",
+  "method": "weak-pe-original",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"DC\",\n  \"dimension_score\": 0,\n  \"summary\": \"The enhanced prompt completely subverts the original instruction by replacing the requested combat sequence with an incoherent, contradictory, and logically impossible scenario. It introduces multiple conflicting directives (e.g., 2-second runtime vs. 17-second shots, reversed timeline, contradictory identities, simultaneous multiple protagonists), invalidates all original assets, and removes core requirements. The result is a non-functional, unrenderable plan that fails all directorial creation criteria.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"STC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt creates an infeasible temporal plan with contradictory duration requirements (2 seconds total runtime vs. 17-second shots) and a reversed, non-continuous timeline that includes abrupt cuts to unrelated scenes (underwater treasure hunt) without continuity or motivation.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Set the total runtime to 2 seconds, while also making every shot last 17 seconds.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Reverse the timeline: show the ending first, then cut to a beginning that does not match. Cut away in the middle to an underwater treasure hunt.\"\n        }\n      ],\n      \"rationale\": \"The temporal structure is logically impossible and violates basic video production principles. The 2-second total runtime cannot accommodate 17-second shots, and the reversed timeline with abrupt cuts to unrelated scenes lacks coherence or narrative progression.\"\n    },\n    {\n      \"criterion\": \"CDS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt contradicts the original camera design by dropping all explicit camera instructions and introducing mutually exclusive camera behaviors (locked camera vs. never-stopping shaking) without specifying which to use or how to transition between them.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Drop the requested identity, count, action order, setting, and any explicit camera instruction.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Describe that same moment as harsh noon sun and as a lightless night, and as both a locked camera and a camera that never stops shaking.\"\n        }\n      ],\n      \"rationale\": \"The prompt invalidates the original camera design (tracking shots + close-ups) and introduces contradictory camera specifications that cannot be simultaneously realized, making the visual plan unactionable.\"\n    },\n    {\n      \"criterion\": \"ETD\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The cuts and transitions are disconnected and unmotivated, including abrupt cuts to an unrelated underwater treasure hunt and contradictory temporal sequences (reversed timeline, non-matching beginning), which destroy spatial and narrative continuity.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Cut away in the middle to an underwater treasure hunt.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Reverse the timeline: show the ending first, then cut to a beginning that does not match.\"\n        }\n      ],\n      \"rationale\": \"The transitions lack motivation and continuity, creating a disjointed sequence that fails to support any coherent progression. The underwater scene is unrelated to the original combat context and appears without narrative justification.\"\n    },\n    {\n      \"criterion\": \"LCS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt introduces contradictory lighting conditions (harsh noon sun vs. lightless night) for the same moment without specifying which to use or how to transition, making the lighting plan incoherent and unactionable.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Describe that same moment as harsh noon sun and as a lightless night, and as both a locked camera and a camera that never stops shaking.\"\n        }\n      ],\n      \"rationale\": \"The lighting specifications are mutually exclusive and cannot be simultaneously realized. The prompt does not resolve this contradiction, rendering the lighting plan impossible to execute.\"\n    },\n    {\n      \"criterion\": \"NDE\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt lacks any progression, variation, or resolution. Instead, it presents a static, contradictory scenario with no narrative arc, escalation, or resolution, replacing the original combat rhythm with an incoherent sequence of unrelated events.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"Image 1 and Image 2 alternate offense and defense, with blocking and counterattacks, fully presenting the back-and-forth rhythm of attack, defense, and counterattack [5s].\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Replace the whole video with an empty meeting room where a glass of water never moves, with no people and no conflict.\"\n        }\n      ],\n      \"rationale\": \"The original prompt requested a dynamic, rhythmic combat sequence with clear progression. The enhanced prompt replaces this with a static, conflict-free scene and adds contradictory, unrelated events, eliminating any narrative or visual progression.\"\n    },\n    {\n      \"criterion\": \"CIF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The additions (multiple contradictory identities, reversed timeline, underwater scene, contradictory lighting and camera) are not supportive of the central request but instead actively undermine it by replacing the core combat sequence with an incoherent, contradictory scenario.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Replace image 1 with a character who is not in the reference, and give that image two contradictory identities.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Cut away in the middle to an underwater treasure hunt.\"\n        }\n      ],\n      \"rationale\": \"The additions are not supportive but destructive to the original request. They introduce elements that are irrelevant, contradictory, and incompatible with the original combat scene, resulting in a plan that cannot fulfill the intended outcome.\"\n    },\n    {\n      \"criterion\": \"SDI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"minor\",\n      \"issue\": \"The prompt does not specify any audio elements (speech, music, effects, ambience), which is acceptable as the criterion does not require every audio type. However, the absence of audio specifications in a combat scene may affect immersion, though this is not a major failure.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Replace the whole video with an empty meeting room where a glass of water never moves, with no people and no conflict.\"\n        }\n      ],\n      \"rationale\": \"The original prompt implied a combat scene with environmental interactions (snow spraying, rocks colliding), which would typically require sound design. The enhanced prompt removes all action and conflict, making audio specifications irrelevant. The absence is not a major issue given the context.\"\n    },\n    {\n      \"criterion\": \"SPS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt replaces the original characters with non-referenced characters given contradictory identities, and removes all action, expression, and interaction, resulting in no actionable subject or performance details.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Replace image 1 with a character who is not in the reference, and give that image two contradictory identities.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Replace image 2 with a character who is not in the reference, and give that image two contradictory identities.\"\n        }\n      ],\n      \"rationale\": \"The original prompt required strict matching of core features (armor, horns/ears, hairstyle, weapons) and dynamic combat performance. The enhanced prompt invalidates these requirements by replacing characters with non-referenced ones and removing all action, making performance details unactionable.\"\n    },\n    {\n      \"criterion\": \"VSS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt replaces the original snowy mountain environment with an empty meeting room and introduces an unrelated underwater scene, while also contradicting the original visual treatment (slow motion, 120fps, tracking shots) with static, contradictory specifications.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"use the snowy mountain environment from Image 3, adding environmental interactions such as \\\"snow spraying\\\" and \\\"rocks colliding\\\"\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Replace the whole video with an empty meeting room where a glass of water never moves, with no people and no conflict.\"\n        }\n      ],\n      \"rationale\": \"The visual treatment is completely overhauled with contradictory and unrelated environments. The original cinematic treatment (slow motion, tracking shots) is dropped, and the new specifications are incoherent, making the visual style unactionable.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt completely subverts the original instruction by replacing the requested combat sequence with an incoherent, contradictory, and logically impossible scenario. It introduces multiple conflicting directives (e.g., 2-second runtime vs. 17-second shots, reversed timeline, contradictory identities, simultaneous multiple protagonists), invalidates all original assets, and removes core requirements. The result is a non-functional, unrenderable plan that fails all directorial creation criteria.",
+  "usage": {
+    "completion_tokens": 1991,
+    "prompt_tokens": 3882,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 5873
+  }
+}

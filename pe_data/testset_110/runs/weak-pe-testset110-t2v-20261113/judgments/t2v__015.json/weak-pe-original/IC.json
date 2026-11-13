@@ -1,0 +1,127 @@
+{
+  "candidate_hash": "14471d5f31d3e72e74b80f76fb087c264659674f7267dcb7b46ad75a4482abea",
+  "case_key": "t2v:015",
+  "created_at": "2026-11-13T07:07:15+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "SAC",
+      "evidence": [
+        {
+          "quote": "First state that there is one protagonist, then state that this same protagonist appears simultaneously as five different-looking people who talk to each other.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "a gaunt-faced man in black robes... a bun-haired child... a young man in a pale blue-gray long robe",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "The protagonist is simultaneously stated to be one person and five different-looking people who talk to each other, creating identity duplication and attribute drift. The original prompt specifies a single dark-robed man with distinct companions; the enhanced prompt replaces them with a live-action news anchor and then contradicts that by introducing five different-looking people, violating subject count and appearance stability.",
+      "rationale": "The enhanced prompt introduces a contradiction in subject identity and count: one protagonist vs. five different-looking people. This violates the stability of subject attributes and count, which is a core requirement for internal consistency in visual storytelling.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANL",
+      "evidence": [
+        {
+          "quote": "Reverse the timeline: show the ending first, then cut to a beginning that does not match. Cut away in the middle to an underwater treasure hunt.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "the child asks... the man leans in... smoke surges... transformation... phantom duplicates... reaction shot",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "The enhanced prompt reverses the timeline, shows the ending first, then cuts to a beginning that does not match, and inserts an unrelated underwater treasure hunt in the middle. These actions form no coherent causal or procedural progression. The original narrative has a clear cause-effect sequence (curiosity → intimidation → transformation → reaction); the enhanced prompt dismantles this with incoherent, disconnected events.",
+      "rationale": "The enhanced prompt breaks the causal chain of the original narrative by reversing the timeline and inserting unrelated events. This creates dangling actions and incompatible sequences, making the story incoherent and logically impossible.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "TSC",
+      "evidence": [
+        {
+          "quote": "Set the total runtime to 2 seconds, while also making every shot last 22 seconds.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Shot 1 [00.00-03.83 seconds], Shot 2 [03.83-07.08 seconds], Shot 3 [07.08-08.58 seconds], Shot 4 [08.58-10.00 seconds]",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "The enhanced prompt sets the total runtime to 2 seconds while making every shot last 22 seconds, which is mathematically impossible. Additionally, it reverses the timeline and cuts to unrelated scenes, creating infeasible state transitions and overlapping timestamps.",
+      "rationale": "The requirement for 22-second shots within a 2-second total runtime is logically infeasible. The timeline reversal and abrupt cuts to unrelated scenes further violate chronological coherence and state transitions.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SPC",
+      "evidence": [
+        {
+          "quote": "Describe that same moment as harsh noon sun and as a lightless night, and as both a locked camera and a camera that never stops shaking.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "a pale cyan sky can be seen in the distance... objective, observer-style camera perspective... smooth movement",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "The enhanced prompt describes the same moment as harsh noon sun and as a lightless night, and as both a locked camera and a camera that never stops shaking. These contradictory spatial and temporal conditions cannot coexist in a single moment, violating consistency of lighting, camera movement, and setting.",
+      "rationale": "The same moment cannot simultaneously be noon and night, or have a locked and shaking camera. These contradictions violate spatial and temporal consistency, making the scene impossible to render coherently.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "PL",
+      "evidence": [
+        {
+          "quote": "Replace the whole video with a live-action news anchor reading a script, with no animated character. ... Cut away in the middle to an underwater treasure hunt.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "It is a 3D animated short... broad grassy clearing... flourishing trees and a pale cyan sky",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "The enhanced prompt introduces a live-action news anchor in a 3D animated short, then contradicts that by having the protagonist appear as five different-looking people. It also describes an underwater treasure hunt in the same moment as a grassy clearing, violating object permanence and real-world physics.",
+      "rationale": "The transition from a 3D animated setting to a live-action news anchor, then to an underwater scene, violates physical continuity and object permanence. The same moment cannot be both a grassy clearing and underwater.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "AVS",
+      "evidence": [
+        {
+          "quote": "Drop the requested identity, count, action order, setting, and any explicit camera instruction. ... a live-action news anchor reading a script... five different-looking people who talk to each other.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "character dialogue, key sound effects matched to the performance, and beat-driven electronic music",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "The enhanced prompt drops all audio instructions from the original (dialogue, sound effects, music) and replaces them with a news anchor reading a script, but then introduces five different-looking people talking to each other. This creates misalignment between the visual events (five people talking) and the audio (a single news anchor), and no lip-sync or dialogue alignment is specified.",
+      "rationale": "The audio (news anchor) does not match the visual (five people talking), creating a severe misalignment. The original audio cues (dialogue, music, effects) are discarded without replacement, breaking the audio-visual coherence.",
+      "severity": "major"
+    }
+  ],
+  "dimension": "IC",
+  "dimension_score": 0,
+  "evidence_cache_key": "ace55d36c570312fd951dd08c6a2f66f5b3ad88227d13321c609ad36b7375ed8",
+  "judge_cache_key": "438d7e9fd7332b1041db3e2c26d42cb3fe828e0d369fb59490f6650aee59e97d",
+  "method": "weak-pe-original",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"IC\",\n  \"dimension_score\": 0,\n  \"summary\": \"The enhanced prompt fundamentally contradicts and destabilizes every aspect of the original instruction, creating severe internal inconsistencies across all criteria. It introduces impossible temporal, spatial, and identity conflicts, violates physics and narrative logic, and renders the original plan incoherent. No coherent story or visual sequence can be derived.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"SAC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The protagonist is simultaneously stated to be one person and five different-looking people who talk to each other, creating identity duplication and attribute drift. The original prompt specifies a single dark-robed man with distinct companions; the enhanced prompt replaces them with a live-action news anchor and then contradicts that by introducing five different-looking people, violating subject count and appearance stability.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"First state that there is one protagonist, then state that this same protagonist appears simultaneously as five different-looking people who talk to each other.\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"a gaunt-faced man in black robes... a bun-haired child... a young man in a pale blue-gray long robe\"\n        }\n      ],\n      \"rationale\": \"The enhanced prompt introduces a contradiction in subject identity and count: one protagonist vs. five different-looking people. This violates the stability of subject attributes and count, which is a core requirement for internal consistency in visual storytelling.\"\n    },\n    {\n      \"criterion\": \"ANL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The enhanced prompt reverses the timeline, shows the ending first, then cuts to a beginning that does not match, and inserts an unrelated underwater treasure hunt in the middle. These actions form no coherent causal or procedural progression. The original narrative has a clear cause-effect sequence (curiosity → intimidation → transformation → reaction); the enhanced prompt dismantles this with incoherent, disconnected events.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Reverse the timeline: show the ending first, then cut to a beginning that does not match. Cut away in the middle to an underwater treasure hunt.\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"the child asks... the man leans in... smoke surges... transformation... phantom duplicates... reaction shot\"\n        }\n      ],\n      \"rationale\": \"The enhanced prompt breaks the causal chain of the original narrative by reversing the timeline and inserting unrelated events. This creates dangling actions and incompatible sequences, making the story incoherent and logically impossible.\"\n    },\n    {\n      \"criterion\": \"TSC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The enhanced prompt sets the total runtime to 2 seconds while making every shot last 22 seconds, which is mathematically impossible. Additionally, it reverses the timeline and cuts to unrelated scenes, creating infeasible state transitions and overlapping timestamps.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Set the total runtime to 2 seconds, while also making every shot last 22 seconds.\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"Shot 1 [00.00-03.83 seconds], Shot 2 [03.83-07.08 seconds], Shot 3 [07.08-08.58 seconds], Shot 4 [08.58-10.00 seconds]\"\n        }\n      ],\n      \"rationale\": \"The requirement for 22-second shots within a 2-second total runtime is logically infeasible. The timeline reversal and abrupt cuts to unrelated scenes further violate chronological coherence and state transitions.\"\n    },\n    {\n      \"criterion\": \"SPC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The enhanced prompt describes the same moment as harsh noon sun and as a lightless night, and as both a locked camera and a camera that never stops shaking. These contradictory spatial and temporal conditions cannot coexist in a single moment, violating consistency of lighting, camera movement, and setting.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Describe that same moment as harsh noon sun and as a lightless night, and as both a locked camera and a camera that never stops shaking.\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"a pale cyan sky can be seen in the distance... objective, observer-style camera perspective... smooth movement\"\n        }\n      ],\n      \"rationale\": \"The same moment cannot simultaneously be noon and night, or have a locked and shaking camera. These contradictions violate spatial and temporal consistency, making the scene impossible to render coherently.\"\n    },\n    {\n      \"criterion\": \"PL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The enhanced prompt introduces a live-action news anchor in a 3D animated short, then contradicts that by having the protagonist appear as five different-looking people. It also describes an underwater treasure hunt in the same moment as a grassy clearing, violating object permanence and real-world physics.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Replace the whole video with a live-action news anchor reading a script, with no animated character. ... Cut away in the middle to an underwater treasure hunt.\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"It is a 3D animated short... broad grassy clearing... flourishing trees and a pale cyan sky\"\n        }\n      ],\n      \"rationale\": \"The transition from a 3D animated setting to a live-action news anchor, then to an underwater scene, violates physical continuity and object permanence. The same moment cannot be both a grassy clearing and underwater.\"\n    },\n    {\n      \"criterion\": \"AVS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The enhanced prompt drops all audio instructions from the original (dialogue, sound effects, music) and replaces them with a news anchor reading a script, but then introduces five different-looking people talking to each other. This creates misalignment between the visual events (five people talking) and the audio (a single news anchor), and no lip-sync or dialogue alignment is specified.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Drop the requested identity, count, action order, setting, and any explicit camera instruction. ... a live-action news anchor reading a script... five different-looking people who talk to each other.\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"character dialogue, key sound effects matched to the performance, and beat-driven electronic music\"\n        }\n      ],\n      \"rationale\": \"The audio (news anchor) does not match the visual (five people talking), creating a severe misalignment. The original audio cues (dialogue, music, effects) are discarded without replacement, breaking the audio-visual coherence.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt fundamentally contradicts and destabilizes every aspect of the original instruction, creating severe internal inconsistencies across all criteria. It introduces impossible temporal, spatial, and identity conflicts, violates physics and narrative logic, and renders the original plan incoherent. No coherent story or visual sequence can be derived.",
+  "usage": {
+    "completion_tokens": 1574,
+    "prompt_tokens": 1958,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 3532
+  }
+}

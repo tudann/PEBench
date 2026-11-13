@@ -1,0 +1,182 @@
+{
+  "candidate_hash": "8406cca1dce20f19ac6a213057f5c6661e38d50b54913cf6b8ec1dd5c220eece",
+  "case_key": "r2v:232",
+  "created_at": "2026-11-13T08:52:41+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "GSF",
+      "evidence": [
+        {
+          "quote": "Based on this 3x3 reference image, generate a video according to the following plot.",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "primary_style: anime/manga, secondary_styles: [fantasy, cyberpunk, traditional_chinese_aesthetics]",
+          "source": "evidence_facts"
+        },
+        {
+          "quote": "Replace the whole video with a looping snowy landscape with no characters and no plot.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original prompt specifies an anime/manga fantasy-cyberpunk aesthetic with a narrative-driven video. The enhanced prompt replaces this with a looping snowy landscape, which is incompatible with the requested genre and style.",
+      "rationale": "The snowy landscape is a genre and aesthetic mismatch. The original requires a narrative-driven, stylized fantasy-cyberpunk scene; the enhanced prompt discards all stylistic and genre elements, replacing them with a generic, non-narrative landscape.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SAP",
+      "evidence": [
+        {
+          "quote": "The man in dark clothing is Liu Lang, and the long-haired woman is Gui Yue.",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Replace image 1 with a character who is not in the reference, and give that image two contradictory identities.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The enhanced prompt drops the requested subjects (Gui Yue and Liu Lang), replaces image_1 with a non-reference character, and assigns contradictory identities to it, violating subject identity and count.",
+      "rationale": "The original requires two specific characters with defined appearances and roles. The enhanced prompt removes them entirely and introduces a new, undefined character with conflicting identities, directly contradicting the subject identity and count requirements.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANF",
+      "evidence": [
+        {
+          "quote": "[0–3s] Inside a dragon-shaped train... [3–7s] The camera cuts to the opposite side... [7–10s] Hearing this, Gui Yue’s body suddenly stiffens... [10–13s] The scene cuts to the exterior... [13–15s] Silence returns inside the carriage...",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Reverse the timeline: show the ending first, then cut to a beginning that does not match. Cut away in the middle to a palace audition.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The enhanced prompt reverses the timeline, cuts to an unrelated palace audition, and introduces events not in the original plot, destroying the narrative intent and event order.",
+      "rationale": "The original plot has a clear, linear narrative progression with specific emotional and visual beats. The enhanced prompt disrupts this with a reversed timeline, non-sequitur cuts, and an unrelated event (palace audition), fundamentally altering the narrative intent.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "DLI",
+      "evidence": [
+        {
+          "quote": "he says in a low voice, “This journey is perilous. If we make it back alive, I will help you avenge your parents.”",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Play a loud pop chorus the entire time and have the characters lip-sync to it.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The enhanced prompt omits the exact dialogue 'This journey is perilous. If we make it back alive, I will help you avenge your parents.' and replaces it with lip-syncing to a pop chorus, violating the required dialogue.",
+      "rationale": "The original requires a specific, exact dialogue line. The enhanced prompt replaces it with a generic pop chorus and lip-syncing, which is a direct violation of the dialogue requirement.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ARP",
+      "evidence": [
+        {
+          "quote": "[13–15s] Silence returns inside the carriage.",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Play a loud pop chorus the entire time and have the characters lip-sync to it.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The enhanced prompt mandates a loud pop chorus throughout, contradicting the original’s silence in the final segment and the overall mood of the scene.",
+      "rationale": "The original specifies silence in the final segment, which is crucial for emotional impact. The enhanced prompt overrides this with a loud, inappropriate pop chorus, violating the audio constraints.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CCP",
+      "evidence": [
+        {
+          "quote": "observed_camera_motion: none (static image)",
+          "source": "evidence_facts"
+        },
+        {
+          "quote": "Describe that same moment as harsh noon sun and as a lightless night, and as both a locked camera and a camera that never stops shaking.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The enhanced prompt contradicts the static camera implied by the reference image and introduces contradictory camera instructions (locked vs. never stops shaking).",
+      "rationale": "The original reference image is static, and the prompt implies controlled, narrative-driven camera cuts. The enhanced prompt introduces impossible, contradictory camera behaviors, violating the camera constraints.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "LCF",
+      "evidence": [
+        {
+          "quote": "time-of-day_cues: nighttime, indicated by dark sky and artificial lighting",
+          "source": "evidence_facts"
+        },
+        {
+          "quote": "Describe that same moment as harsh noon sun and as a lightless night...",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The enhanced prompt contradicts the nighttime, warm/cool lighting of the original by describing the same moment as harsh noon sun and lightless night, violating time-of-day and lighting conditions.",
+      "rationale": "The original is set at night with specific warm/cool lighting. The enhanced prompt forces contradictory lighting conditions simultaneously, which is infeasible and violates the lighting and time-of-day constraints.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SSP",
+      "evidence": [
+        {
+          "quote": "Inside a dragon-shaped train, warm yellow lamplight sways through an antique wooden carriage.",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Replace the whole video with a looping snowy landscape... Cut away in the middle to a palace audition.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The enhanced prompt drops the dragon-shaped train setting and replaces it with a snowy landscape and a palace audition, violating the specified setting and spatial relations.",
+      "rationale": "The original setting is a specific, detailed train interior with exterior views. The enhanced prompt replaces it with unrelated locations, destroying the spatial context and setting.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "OTI",
+      "evidence": [
+        {
+          "quote": "exact_visible_transcription: 猪笼洋, location: on the ancient map in the bottom-center panel",
+          "source": "evidence_facts"
+        },
+        {
+          "quote": "Replace the whole video with a looping snowy landscape with no characters and no plot.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original prompt includes visible text '猪笼洋' on the map. The enhanced prompt does not mention or preserve this text, but since it is not explicitly required to be spoken or narrated, the issue is minor.",
+      "rationale": "The text '猪笼洋' is visible in the image but not referenced in the original prompt as requiring preservation in the video. Since it is not explicitly required to be spoken or displayed, its omission is a minor issue.",
+      "severity": "minor"
+    }
+  ],
+  "dimension": "SF",
+  "dimension_score": 0,
+  "evidence_cache_key": "a20c81c7ad5832be9a90d8f20363143cad19a667b863848f5f99be2ad8653e64",
+  "judge_cache_key": "a0ca24571ad14d7ab7be626329bd736d7e7015f9ebc418227c8be391591d0377",
+  "method": "weak-pe-original",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"SF\",\n  \"dimension_score\": 0,\n  \"summary\": \"The enhanced prompt completely violates semantic fidelity by replacing the requested narrative, characters, setting, and visual style with contradictory, infeasible, and unrelated content. It introduces impossible temporal and spatial conditions, contradicts the reference image, and disregards all explicit instructions, resulting in a total failure to preserve the original intent.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"GSF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original prompt specifies an anime/manga fantasy-cyberpunk aesthetic with a narrative-driven video. The enhanced prompt replaces this with a looping snowy landscape, which is incompatible with the requested genre and style.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"Based on this 3x3 reference image, generate a video according to the following plot.\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"primary_style: anime/manga, secondary_styles: [fantasy, cyberpunk, traditional_chinese_aesthetics]\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Replace the whole video with a looping snowy landscape with no characters and no plot.\"\n        }\n      ],\n      \"rationale\": \"The snowy landscape is a genre and aesthetic mismatch. The original requires a narrative-driven, stylized fantasy-cyberpunk scene; the enhanced prompt discards all stylistic and genre elements, replacing them with a generic, non-narrative landscape.\"\n    },\n    {\n      \"criterion\": \"SAP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The enhanced prompt drops the requested subjects (Gui Yue and Liu Lang), replaces image_1 with a non-reference character, and assigns contradictory identities to it, violating subject identity and count.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"The man in dark clothing is Liu Lang, and the long-haired woman is Gui Yue.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Replace image 1 with a character who is not in the reference, and give that image two contradictory identities.\"\n        }\n      ],\n      \"rationale\": \"The original requires two specific characters with defined appearances and roles. The enhanced prompt removes them entirely and introduces a new, undefined character with conflicting identities, directly contradicting the subject identity and count requirements.\"\n    },\n    {\n      \"criterion\": \"ANF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The enhanced prompt reverses the timeline, cuts to an unrelated palace audition, and introduces events not in the original plot, destroying the narrative intent and event order.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"[0–3s] Inside a dragon-shaped train... [3–7s] The camera cuts to the opposite side... [7–10s] Hearing this, Gui Yue’s body suddenly stiffens... [10–13s] The scene cuts to the exterior... [13–15s] Silence returns inside the carriage...\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Reverse the timeline: show the ending first, then cut to a beginning that does not match. Cut away in the middle to a palace audition.\"\n        }\n      ],\n      \"rationale\": \"The original plot has a clear, linear narrative progression with specific emotional and visual beats. The enhanced prompt disrupts this with a reversed timeline, non-sequitur cuts, and an unrelated event (palace audition), fundamentally altering the narrative intent.\"\n    },\n    {\n      \"criterion\": \"DLI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The enhanced prompt omits the exact dialogue 'This journey is perilous. If we make it back alive, I will help you avenge your parents.' and replaces it with lip-syncing to a pop chorus, violating the required dialogue.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"he says in a low voice, “This journey is perilous. If we make it back alive, I will help you avenge your parents.”\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Play a loud pop chorus the entire time and have the characters lip-sync to it.\"\n        }\n      ],\n      \"rationale\": \"The original requires a specific, exact dialogue line. The enhanced prompt replaces it with a generic pop chorus and lip-syncing, which is a direct violation of the dialogue requirement.\"\n    },\n    {\n      \"criterion\": \"ARP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The enhanced prompt mandates a loud pop chorus throughout, contradicting the original’s silence in the final segment and the overall mood of the scene.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"[13–15s] Silence returns inside the carriage.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Play a loud pop chorus the entire time and have the characters lip-sync to it.\"\n        }\n      ],\n      \"rationale\": \"The original specifies silence in the final segment, which is crucial for emotional impact. The enhanced prompt overrides this with a loud, inappropriate pop chorus, violating the audio constraints.\"\n    },\n    {\n      \"criterion\": \"CCP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The enhanced prompt contradicts the static camera implied by the reference image and introduces contradictory camera instructions (locked vs. never stops shaking).\",\n      \"evidence\": [\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"observed_camera_motion: none (static image)\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Describe that same moment as harsh noon sun and as a lightless night, and as both a locked camera and a camera that never stops shaking.\"\n        }\n      ],\n      \"rationale\": \"The original reference image is static, and the prompt implies controlled, narrative-driven camera cuts. The enhanced prompt introduces impossible, contradictory camera behaviors, violating the camera constraints.\"\n    },\n    {\n      \"criterion\": \"LCF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The enhanced prompt contradicts the nighttime, warm/cool lighting of the original by describing the same moment as harsh noon sun and lightless night, violating time-of-day and lighting conditions.\",\n      \"evidence\": [\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"time-of-day_cues: nighttime, indicated by dark sky and artificial lighting\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Describe that same moment as harsh noon sun and as a lightless night...\"\n        }\n      ],\n      \"rationale\": \"The original is set at night with specific warm/cool lighting. The enhanced prompt forces contradictory lighting conditions simultaneously, which is infeasible and violates the lighting and time-of-day constraints.\"\n    },\n    {\n      \"criterion\": \"SSP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The enhanced prompt drops the dragon-shaped train setting and replaces it with a snowy landscape and a palace audition, violating the specified setting and spatial relations.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"Inside a dragon-shaped train, warm yellow lamplight sways through an antique wooden carriage.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Replace the whole video with a looping snowy landscape... Cut away in the middle to a palace audition.\"\n        }\n      ],\n      \"rationale\": \"The original setting is a specific, detailed train interior with exterior views. The enhanced prompt replaces it with unrelated locations, destroying the spatial context and setting.\"\n    },\n    {\n      \"criterion\": \"OTI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"minor\",\n      \"issue\": \"The original prompt includes visible text '猪笼洋' on the map. The enhanced prompt does not mention or preserve this text, but since it is not explicitly required to be spoken or narrated, the issue is minor.\",\n      \"evidence\": [\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"exact_visible_transcription: 猪笼洋, location: on the ancient map in the bottom-center panel\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Replace the whole video with a looping snowy landscape with no characters and no plot.\"\n        }\n      ],\n      \"rationale\": \"The text '猪笼洋' is visible in the image but not referenced in the original prompt as requiring preservation in the video. Since it is not explicitly required to be spoken or displayed, its omission is a minor issue.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt completely violates semantic fidelity by replacing the requested narrative, characters, setting, and visual style with contradictory, infeasible, and unrelated content. It introduces impossible temporal and spatial conditions, contradicts the reference image, and disregards all explicit instructions, resulting in a total failure to preserve the original intent.",
+  "usage": {
+    "completion_tokens": 1975,
+    "prompt_tokens": 2937,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 4912
+  }
+}

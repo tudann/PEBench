@@ -1,0 +1,127 @@
+{
+  "candidate_hash": "9245a85a29d9732d78518036e1aad1a52994e15d9288684bac89b15782497f39",
+  "case_key": "r2v:011",
+  "created_at": "2026-11-13T08:23:00+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "SAC",
+      "evidence": [
+        {
+          "quote": "<Subject 1> is the young Chinese woman from <Picture 1>, with long flowing black hair, fair skin, red lips, and grey-blue eyes, wearing a pale cyan sheer hanfu-style robe with silver-grey cloud embroidery on the sleeves and shoulders, a white inner collar, and a white ribbon sash tied at the waist.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "The pale cyan gauze canopy with cloud embroidery in image_2 matches the robe worn by the girl in image_1, suggesting a thematic and stylistic continuity.",
+          "source": "evidence_facts"
+        }
+      ],
+      "issue": "",
+      "rationale": "Subject 1’s identity, appearance, clothing, and props are consistently defined and preserved across all shots. The canopy (Subject 2) and room (Subject 3) are also stable. No renaming, duplication, or attribute drift occurs. The reference images support the visual consistency of the embroidery and color scheme.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANL",
+      "evidence": [
+        {
+          "quote": "She lies with eyes closed, slowly wakes and gazes around, then softly whispers \"Hiss...\" in a close-up.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Shot 1 [0–3 seconds]: ...her eyes tightly closed; ...faint breathing can be heard. Shot 2 [4–6 seconds]: ...slowly opening her eyes and looking around... Shot 3 [7–10 seconds]: ...softly says, “Hiss...”",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "The actions form a coherent causal progression: waking (eyes closing → opening) → contemplation (gazing around) → emotional expression (whispering). Each action is plausible and binds to the subject’s state. No dangling or incompatible events are present.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "TSC",
+      "evidence": [
+        {
+          "quote": "[Shot 1] ...Cut at ~3s. [Shot 2] At 00:04.000, the shot cuts to a medium shot... Cut at ~6s. [Shot 3] At 00:07.000, the shot cuts to an intimate close-up... holds to 10s.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Shot 1 [0–3 seconds]... Shot 2 [4–6 seconds]... Shot 3 [7–10 seconds]",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "Chronology is strictly maintained with clear, non-overlapping timestamps. State transitions are logical: eyes closed → eyes open → whispering. No unexplained resets or infeasible timing conflicts.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SPC",
+      "evidence": [
+        {
+          "quote": "The camera holds nearly static with a very subtle slow drift. ...The camera performs a slow, small push-in. ...held nearly static with minimal movement.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "composition: diagonal lines from canopy and table legs; visual focus on canopy and furniture",
+          "source": "evidence_facts"
+        }
+      ],
+      "issue": "",
+      "rationale": "Camera movements are consistent and plausible. Subject 1 remains on the bed under the canopy throughout. The room’s spatial layout (lattice windows, table, chair) is preserved. No unexplained position swaps or impossible trajectories.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "PL",
+      "evidence": [
+        {
+          "quote": "The room is utterly quiet except for her faint, gentle breathing and a barely audible rustle of gauze.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "natural sunlight from left, entering through latticed windows, casting diagonal shadows",
+          "source": "evidence_facts"
+        }
+      ],
+      "issue": "",
+      "rationale": "Physics are consistent: gravity holds the canopy and furniture; fabric drapes plausibly; light direction matches the window placement. No object permanence or bodily feasibility issues. The whispering is a plausible human action.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "AVS",
+      "evidence": [
+        {
+          "quote": "she softly whispers, her voice weak yet charged with emotional tension, <d>[Chinese] Hiss...</d>",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "softly says, “Hiss...”",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "The whisper 'Hiss...' is described as Chinese, but no phonetic or transliterated form is provided, which may lead to misalignment in audio production or lip-sync.",
+      "rationale": "The dialogue is temporally aligned with the close-up shot and the subject’s emotional state. However, the lack of phonetic transcription for 'Hiss...' in Chinese creates ambiguity for audio implementation, potentially affecting lip-sync or beat-sync accuracy. This is a minor issue as it does not contradict the visual or narrative flow.",
+      "severity": "minor"
+    }
+  ],
+  "dimension": "IC",
+  "dimension_score": 95,
+  "evidence_cache_key": "b34825e5de25fb4381ebcec3bae39c35892e892515684ae5e7248f906cd1051f",
+  "judge_cache_key": "438d7e9fd7332b1041db3e2c26d42cb3fe828e0d369fb59490f6650aee59e97d",
+  "method": "glm53_20261112_120702",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"IC\",\n  \"dimension_score\": 95,\n  \"summary\": \"The enhanced prompt maintains strong internal consistency across subject identity, actions, chronology, and environment. Subject 1’s appearance, clothing, and emotional progression are preserved across all three shots. The environment (Subject 3) and canopy (Subject 2) remain consistent with the reference images. Actions form a coherent progression: closed eyes → slow eye-opening → whispering. Chronology is strictly followed with clear shot transitions. Minor issue: the whisper in Shot 3 is described as 'Hiss...' in Chinese, but no transcription or phonetic rendering is provided, which may cause ambiguity in audio alignment. No physics or spatial inconsistencies are present.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"SAC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"<Subject 1> is the young Chinese woman from <Picture 1>, with long flowing black hair, fair skin, red lips, and grey-blue eyes, wearing a pale cyan sheer hanfu-style robe with silver-grey cloud embroidery on the sleeves and shoulders, a white inner collar, and a white ribbon sash tied at the waist.\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"The pale cyan gauze canopy with cloud embroidery in image_2 matches the robe worn by the girl in image_1, suggesting a thematic and stylistic continuity.\"\n        }\n      ],\n      \"rationale\": \"Subject 1’s identity, appearance, clothing, and props are consistently defined and preserved across all shots. The canopy (Subject 2) and room (Subject 3) are also stable. No renaming, duplication, or attribute drift occurs. The reference images support the visual consistency of the embroidery and color scheme.\"\n    },\n    {\n      \"criterion\": \"ANL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"She lies with eyes closed, slowly wakes and gazes around, then softly whispers \\\"Hiss...\\\" in a close-up.\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"Shot 1 [0–3 seconds]: ...her eyes tightly closed; ...faint breathing can be heard. Shot 2 [4–6 seconds]: ...slowly opening her eyes and looking around... Shot 3 [7–10 seconds]: ...softly says, “Hiss...”\"\n        }\n      ],\n      \"rationale\": \"The actions form a coherent causal progression: waking (eyes closing → opening) → contemplation (gazing around) → emotional expression (whispering). Each action is plausible and binds to the subject’s state. No dangling or incompatible events are present.\"\n    },\n    {\n      \"criterion\": \"TSC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"[Shot 1] ...Cut at ~3s. [Shot 2] At 00:04.000, the shot cuts to a medium shot... Cut at ~6s. [Shot 3] At 00:07.000, the shot cuts to an intimate close-up... holds to 10s.\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"Shot 1 [0–3 seconds]... Shot 2 [4–6 seconds]... Shot 3 [7–10 seconds]\"\n        }\n      ],\n      \"rationale\": \"Chronology is strictly maintained with clear, non-overlapping timestamps. State transitions are logical: eyes closed → eyes open → whispering. No unexplained resets or infeasible timing conflicts.\"\n    },\n    {\n      \"criterion\": \"SPC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"The camera holds nearly static with a very subtle slow drift. ...The camera performs a slow, small push-in. ...held nearly static with minimal movement.\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"composition: diagonal lines from canopy and table legs; visual focus on canopy and furniture\"\n        }\n      ],\n      \"rationale\": \"Camera movements are consistent and plausible. Subject 1 remains on the bed under the canopy throughout. The room’s spatial layout (lattice windows, table, chair) is preserved. No unexplained position swaps or impossible trajectories.\"\n    },\n    {\n      \"criterion\": \"PL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"The room is utterly quiet except for her faint, gentle breathing and a barely audible rustle of gauze.\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"natural sunlight from left, entering through latticed windows, casting diagonal shadows\"\n        }\n      ],\n      \"rationale\": \"Physics are consistent: gravity holds the canopy and furniture; fabric drapes plausibly; light direction matches the window placement. No object permanence or bodily feasibility issues. The whispering is a plausible human action.\"\n    },\n    {\n      \"criterion\": \"AVS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"minor\",\n      \"issue\": \"The whisper 'Hiss...' is described as Chinese, but no phonetic or transliterated form is provided, which may lead to misalignment in audio production or lip-sync.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"she softly whispers, her voice weak yet charged with emotional tension, <d>[Chinese] Hiss...</d>\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"softly says, “Hiss...”\"\n        }\n      ],\n      \"rationale\": \"The dialogue is temporally aligned with the close-up shot and the subject’s emotional state. However, the lack of phonetic transcription for 'Hiss...' in Chinese creates ambiguity for audio implementation, potentially affecting lip-sync or beat-sync accuracy. This is a minor issue as it does not contradict the visual or narrative flow.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt maintains strong internal consistency across subject identity, actions, chronology, and environment. Subject 1’s appearance, clothing, and emotional progression are preserved across all three shots. The environment (Subject 3) and canopy (Subject 2) remain consistent with the reference images. Actions form a coherent progression: closed eyes → slow eye-opening → whispering. Chronology is strictly followed with clear shot transitions. Minor issue: the whisper in Shot 3 is described as 'Hiss...' in Chinese, but no transcription or phonetic rendering is provided, which may cause ambiguity in audio alignment. No physics or spatial inconsistencies are present.",
+  "usage": {
+    "completion_tokens": 1424,
+    "prompt_tokens": 4105,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 5529
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "candidate_hash": "4b4d35700cee6e3b9c507af9e179c8717e2cf6c3c8df0a34d1c23ffd5054c529",
+  "case_key": "t2v:165",
+  "created_at": "2026-11-13T07:58:16+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "SAC",
+      "evidence": [
+        {
+          "quote": "Jet engine afterburner trail producing a man-made polar light display.",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "A military jet streaks across the upper frame... The afterburner ignites, throwing a brilliant blue-white cone of flame. The exhaust trail expands and twists behind the aircraft, ionizing the thin upper atmosphere — the plume shimmers, shifting from orange-white at its core to luminous green and violet at its edges, mimicking an aurora.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "Subject identity (jet, afterburner trail) is preserved. Appearance evolves plausibly from engine glow to ionized, aurora-like plume. No unexplained renaming, duplication, or attribute drift. The description of the plume mimicking an aurora is a stylistic enhancement, not an identity shift.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANL",
+      "evidence": [
+        {
+          "quote": "Jet engine afterburner trail producing a man-made polar light display.",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "The afterburner ignites, throwing a brilliant blue-white cone of flame. The exhaust trail expands and twists behind the aircraft, ionizing the thin upper atmosphere — the plume shimmers, shifting from orange-white at its core to luminous green and violet at its edges, mimicking an aurora.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "Actions form a coherent causal chain: afterburner ignition → exhaust trail → ionization → light dispersion. The progression is plausible and causally linked. No dangling or incompatible events.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "TSC",
+      "evidence": [
+        {
+          "quote": "The camera pushes in with small amplitude at slow speed toward the glowing trail as it spreads into a vast, rippling curtain of man-made polar light... as the jet vanishes into the distance.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "Chronology is clear: jet flies → afterburner ignites → trail expands → jet recedes → light spreads. The camera movement is synchronized with the event progression. No overlapping or infeasible timestamps. State transitions (e.g., trail expanding, jet vanishing) are logically ordered.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SPC",
+      "evidence": [
+        {
+          "quote": "a locked wide shot frames a dark, snow-covered arctic landscape... The camera pushes in with small amplitude at slow speed toward the glowing trail...",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "Location (arctic landscape) and screen direction are consistent. The camera movement (push-in) is plausible and connects adjacent states (wide shot → closer view of trail). No unexplained position swaps or impossible trajectories.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "PL",
+      "evidence": [
+        {
+          "quote": "The exhaust trail expands and twists behind the aircraft, ionizing the thin upper atmosphere — the plume shimmers, shifting from orange-white at its core to luminous green and violet at its edges, mimicking an aurora.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The description of the afterburner trail ionizing the upper atmosphere and producing aurora-like light is a significant physical exaggeration, though presented as a cinematic effect. Realistically, jet exhaust does not produce aurora-like phenomena; however, within the context of a stylized, cinematic rendering, this is a deliberate artistic choice rather than a physics violation.",
+      "rationale": "While real-world physics would not support such a phenomenon, the prompt explicitly frames it as a 'man-made polar light display' and uses cinematic language ('mimicking an aurora'). This is a deliberate fantasy element, consistent with the task category 'Physical Laws' interpreted as a creative exploration. The effect is internally consistent within its own logic.",
+      "severity": "minor"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "AVS",
+      "evidence": [
+        {
+          "quote": "overall_soundscape: A deep, distant jet-engine roar reverberates across the frozen silence, gradually fading as the aircraft recedes. A faint low atmospheric hum persists beneath the wind sweeping over the snow.\n\nnon_diegetic_music: Sustained low synth pads at a slow tempo, slowly swelling with shimmering high overtones that mirror the expanding light, then gently fading out.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "The soundscape aligns temporally and semantically with the visual events: engine roar fades as jet recedes; music swells with light expansion and fades with it. No misaligned lip-sync or beat-sync issues (none present). The music mirrors the visual effect, enhancing coherence.",
+      "severity": "none"
+    }
+  ],
+  "dimension": "IC",
+  "dimension_score": 95,
+  "evidence_cache_key": "f0d4a72568e73596cc322d54fba09e80e67c06868c5a9c005d476ccf1b001442",
+  "judge_cache_key": "438d7e9fd7332b1041db3e2c26d42cb3fe828e0d369fb59490f6650aee59e97d",
+  "method": "glm53_20261112_120702",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"IC\",\n  \"dimension_score\": 95,\n  \"summary\": \"The enhanced prompt maintains strong internal consistency with the original instruction, elaborating on the visual, auditory, and atmospheric elements without introducing contradictions or inconsistencies. Subject identity (jet, afterburner trail, aurora-like display) remains stable. Actions progress coherently from jet flight to afterburner ignition and light dispersion. Chronology is plausible, with the jet receding and the light expanding over time. Spatial relationships are consistent with a wide shot and camera push-in. Physics are respected within the context of a cinematic, plausible exaggeration (ionized atmosphere, aurora-like light). Audio-visual sync is coherent. Minor issue: the prompt describes a 'man-made polar light' that is visually rendered as an aurora, which may stretch realism slightly, but is acceptable as a cinematic effect.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"SAC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"Jet engine afterburner trail producing a man-made polar light display.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"A military jet streaks across the upper frame... The afterburner ignites, throwing a brilliant blue-white cone of flame. The exhaust trail expands and twists behind the aircraft, ionizing the thin upper atmosphere — the plume shimmers, shifting from orange-white at its core to luminous green and violet at its edges, mimicking an aurora.\"\n        }\n      ],\n      \"rationale\": \"Subject identity (jet, afterburner trail) is preserved. Appearance evolves plausibly from engine glow to ionized, aurora-like plume. No unexplained renaming, duplication, or attribute drift. The description of the plume mimicking an aurora is a stylistic enhancement, not an identity shift.\"\n    },\n    {\n      \"criterion\": \"ANL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"Jet engine afterburner trail producing a man-made polar light display.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"The afterburner ignites, throwing a brilliant blue-white cone of flame. The exhaust trail expands and twists behind the aircraft, ionizing the thin upper atmosphere — the plume shimmers, shifting from orange-white at its core to luminous green and violet at its edges, mimicking an aurora.\"\n        }\n      ],\n      \"rationale\": \"Actions form a coherent causal chain: afterburner ignition → exhaust trail → ionization → light dispersion. The progression is plausible and causally linked. No dangling or incompatible events.\"\n    },\n    {\n      \"criterion\": \"TSC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"The camera pushes in with small amplitude at slow speed toward the glowing trail as it spreads into a vast, rippling curtain of man-made polar light... as the jet vanishes into the distance.\"\n        }\n      ],\n      \"rationale\": \"Chronology is clear: jet flies → afterburner ignites → trail expands → jet recedes → light spreads. The camera movement is synchronized with the event progression. No overlapping or infeasible timestamps. State transitions (e.g., trail expanding, jet vanishing) are logically ordered.\"\n    },\n    {\n      \"criterion\": \"SPC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"a locked wide shot frames a dark, snow-covered arctic landscape... The camera pushes in with small amplitude at slow speed toward the glowing trail...\"\n        }\n      ],\n      \"rationale\": \"Location (arctic landscape) and screen direction are consistent. The camera movement (push-in) is plausible and connects adjacent states (wide shot → closer view of trail). No unexplained position swaps or impossible trajectories.\"\n    },\n    {\n      \"criterion\": \"PL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"minor\",\n      \"issue\": \"The description of the afterburner trail ionizing the upper atmosphere and producing aurora-like light is a significant physical exaggeration, though presented as a cinematic effect. Realistically, jet exhaust does not produce aurora-like phenomena; however, within the context of a stylized, cinematic rendering, this is a deliberate artistic choice rather than a physics violation.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"The exhaust trail expands and twists behind the aircraft, ionizing the thin upper atmosphere — the plume shimmers, shifting from orange-white at its core to luminous green and violet at its edges, mimicking an aurora.\"\n        }\n      ],\n      \"rationale\": \"While real-world physics would not support such a phenomenon, the prompt explicitly frames it as a 'man-made polar light display' and uses cinematic language ('mimicking an aurora'). This is a deliberate fantasy element, consistent with the task category 'Physical Laws' interpreted as a creative exploration. The effect is internally consistent within its own logic.\"\n    },\n    {\n      \"criterion\": \"AVS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"overall_soundscape: A deep, distant jet-engine roar reverberates across the frozen silence, gradually fading as the aircraft recedes. A faint low atmospheric hum persists beneath the wind sweeping over the snow.\\n\\nnon_diegetic_music: Sustained low synth pads at a slow tempo, slowly swelling with shimmering high overtones that mirror the expanding light, then gently fading out.\"\n        }\n      ],\n      \"rationale\": \"The soundscape aligns temporally and semantically with the visual events: engine roar fades as jet recedes; music swells with light expansion and fades with it. No misaligned lip-sync or beat-sync issues (none present). The music mirrors the visual effect, enhancing coherence.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt maintains strong internal consistency with the original instruction, elaborating on the visual, auditory, and atmospheric elements without introducing contradictions or inconsistencies. Subject identity (jet, afterburner trail, aurora-like display) remains stable. Actions progress coherently from jet flight to afterburner ignition and light dispersion. Chronology is plausible, with the jet receding and the light expanding over time. Spatial relationships are consistent with a wide shot and camera push-in. Physics are respected within the context of a cinematic, plausible exaggeration (ionized atmosphere, aurora-like light). Audio-visual sync is coherent. Minor issue: the prompt describes a 'man-made polar light' that is visually rendered as an aurora, which may stretch realism slightly, but is acceptable as a cinematic effect.",
+  "usage": {
+    "completion_tokens": 1380,
+    "prompt_tokens": 1023,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 2403
+  }
+}

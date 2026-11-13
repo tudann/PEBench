@@ -1,0 +1,131 @@
+{
+  "candidate_hash": "571ea09f84eeda07038a710d5d5a319a9d5f30093627dbb9f9a31f2a3dbc3c84",
+  "case_key": "i2v:178",
+  "created_at": "2026-11-13T08:04:18+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "SAC",
+      "evidence": [
+        {
+          "quote": "Show the scene of an American cooking in this kitchen.",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "an American adult in a plain casual t-shirt enters from the left and steps up to the range.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "No human subject is visible, so the prompt's request to 'show the scene of an American cooking' is not visually represented.",
+          "source": "evidence_facts"
+        }
+      ],
+      "issue": "The enhanced prompt introduces an American adult in a casual t-shirt, which is not present in the original image. While this is a reasonable addition to fulfill the 'show the scene of an American cooking' instruction, it constitutes a new subject not in the original asset, creating a minor identity addition rather than drift or contradiction.",
+      "rationale": "The original image contains no human subject, so the addition of an American adult is a necessary creative extension to fulfill the prompt. It does not contradict existing attributes but introduces a new subject. Since the prompt explicitly asks for a cooking scene, this addition is justified and does not cause attribute drift or identity conflict. The clothing and appearance are generic and consistent with the instruction, so the issue is minor.",
+      "severity": "minor"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANL",
+      "evidence": [
+        {
+          "quote": "They grip the wok handle and stir the food with the spatula in steady, calm motions, briefly lifting the stockpot lid for a quick check before replacing it.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "The image is a static render; no motion or temporal changes are present.",
+          "source": "evidence_facts"
+        }
+      ],
+      "issue": "The cooking actions (stirring, lifting lid) are coherent and form a plausible procedural sequence. The person interacts with the wok and stockpot in a natural way, with no dangling or incompatible events. The actions are causally linked to the cooking context and do not contradict the static state of the original image.",
+      "rationale": "The actions described are simple, realistic, and consistent with cooking in a kitchen. There is no contradiction in the sequence or binding between subject and action. The actions are introduced as a narrative extension of the static image, and they are logically coherent. No causal issues or procedural gaps are present.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "TSC",
+      "evidence": [
+        {
+          "quote": "at 0.00 seconds into the target video, <Picture 1> (from [Shot 1]) is fully referenced.\n\n...Around 0.5 seconds, an American adult in a plain casual t-shirt enters from the left...",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Generate single shot.",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "The timeline is clearly defined: 0.00 seconds starts with the image, 0.5 seconds introduces the person, and the rest of the 6-second duration shows continuous cooking. There are no overlapping or infeasible timestamps, and the state transitions (person entering, cooking) are plausible and sequential.",
+      "rationale": "The temporal structure is clear and linear. The 0.5-second entry of the person is a reasonable delay after the initial static frame, and the subsequent actions unfold without contradiction. The 6-second duration is fully accounted for with no resets or unexplained state changes. The timeline is internally consistent.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SPC",
+      "evidence": [
+        {
+          "quote": "The camera holds a static shot with a very slight slow push-in toward the stove and hood. Around 0.5 seconds, an American adult in a plain casual t-shirt enters from the left and steps up to the range.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "dishwasher_1 is located to the left of oven_1",
+          "source": "evidence_facts"
+        }
+      ],
+      "issue": "The spatial layout matches the original image: range hood above stove, dishwasher to the left, cabinets on sides. The person enters from the left, which is consistent with the open space in the image. The camera’s slight push-in is plausible and does not disrupt spatial relationships. No unexplained position swaps or impossible trajectories are described.",
+      "rationale": "The spatial relationships from the original image are preserved. The person’s entrance from the left is consistent with the open space in the lower-left quadrant (where the dishwasher is located). The camera motion is minimal and does not alter the spatial logic. All movements are plausible within the kitchen layout.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "PL",
+      "evidence": [
+        {
+          "quote": "The range hood stays firmly wall-mounted and stationary, its display glowing subtly to show it is running. No smoke, steam, or fumes appear at any point; the flame remains a steady blue.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "No need to produce smoke and fumes.",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "The physics of the scene are consistent: the range hood remains wall-mounted, the flame is steady blue, no smoke or fumes are produced as instructed, and the person’s movements (lifting lid, stirring) are physically plausible. The sound design (hum, scrape, hiss) aligns with the physical actions.",
+      "rationale": "The prompt correctly adheres to the instruction to avoid smoke/fumes. The flame is described as steady blue, which is physically accurate for a gas stove. The person’s actions are within human capability. The soundscape is consistent with the physical events. No violations of real-world physics are present.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "AVS",
+      "evidence": [
+        {
+          "quote": "overall_soundscape: A soft low hum of the range hood fan runs continuously beneath the quiet kitchen ambience. The gentle rhythmic scrape of the spatula against the wok, the faint hiss of the blue gas flame, and the soft clink of the stockpot lid being lifted and set back down.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "non_diegetic_music: N/A",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The soundscape (hood hum, spatula scrape, lid clink) aligns temporally and semantically with the visual actions. The non-diegetic music is marked as N/A, which is appropriate for a live-action kitchen scene. There is no indication of misaligned dialogue or music.",
+      "rationale": "The sounds described are directly tied to the visual actions: the spatula scraping occurs during stirring, the lid clink occurs when lifted and replaced, and the hood hum is continuous. There is no mismatch between audio and visual events. The absence of non-diegetic music is appropriate for a realistic kitchen scene.",
+      "severity": "none"
+    }
+  ],
+  "dimension": "IC",
+  "dimension_score": 85,
+  "evidence_cache_key": "0ead8e35231f17965fa8d3094d1e030789fe2c01bdeb6a48a4c52efe6aba2d21",
+  "judge_cache_key": "438d7e9fd7332b1041db3e2c26d42cb3fe828e0d369fb59490f6650aee59e97d",
+  "method": "glm53_20261112_120702",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"IC\",\n  \"dimension_score\": 85,\n  \"summary\": \"The enhanced prompt maintains strong internal consistency with the original image and instruction, preserving key spatial, visual, and procedural elements. However, minor inconsistencies arise in subject identity (American adult not specified in image), and the prompt introduces a cooking action not present in the static image. The absence of smoke/fumes is correctly honored, and the range hood remains wall-mounted as instructed. The camera motion and sound design are plausible extensions. No major contradictions or attribute drifts are present, but the addition of a human subject and cooking action introduces a slight deviation from the original static render, which is not a failure but a creative interpretation.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"SAC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"minor\",\n      \"issue\": \"The enhanced prompt introduces an American adult in a casual t-shirt, which is not present in the original image. While this is a reasonable addition to fulfill the 'show the scene of an American cooking' instruction, it constitutes a new subject not in the original asset, creating a minor identity addition rather than drift or contradiction.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"Show the scene of an American cooking in this kitchen.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"an American adult in a plain casual t-shirt enters from the left and steps up to the range.\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"No human subject is visible, so the prompt's request to 'show the scene of an American cooking' is not visually represented.\"\n        }\n      ],\n      \"rationale\": \"The original image contains no human subject, so the addition of an American adult is a necessary creative extension to fulfill the prompt. It does not contradict existing attributes but introduces a new subject. Since the prompt explicitly asks for a cooking scene, this addition is justified and does not cause attribute drift or identity conflict. The clothing and appearance are generic and consistent with the instruction, so the issue is minor.\"\n    },\n    {\n      \"criterion\": \"ANL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"The cooking actions (stirring, lifting lid) are coherent and form a plausible procedural sequence. The person interacts with the wok and stockpot in a natural way, with no dangling or incompatible events. The actions are causally linked to the cooking context and do not contradict the static state of the original image.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"They grip the wok handle and stir the food with the spatula in steady, calm motions, briefly lifting the stockpot lid for a quick check before replacing it.\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"The image is a static render; no motion or temporal changes are present.\"\n        }\n      ],\n      \"rationale\": \"The actions described are simple, realistic, and consistent with cooking in a kitchen. There is no contradiction in the sequence or binding between subject and action. The actions are introduced as a narrative extension of the static image, and they are logically coherent. No causal issues or procedural gaps are present.\"\n    },\n    {\n      \"criterion\": \"TSC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"The timeline is clearly defined: 0.00 seconds starts with the image, 0.5 seconds introduces the person, and the rest of the 6-second duration shows continuous cooking. There are no overlapping or infeasible timestamps, and the state transitions (person entering, cooking) are plausible and sequential.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"at 0.00 seconds into the target video, <Picture 1> (from [Shot 1]) is fully referenced.\\n\\n...Around 0.5 seconds, an American adult in a plain casual t-shirt enters from the left...\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"Generate single shot.\"\n        }\n      ],\n      \"rationale\": \"The temporal structure is clear and linear. The 0.5-second entry of the person is a reasonable delay after the initial static frame, and the subsequent actions unfold without contradiction. The 6-second duration is fully accounted for with no resets or unexplained state changes. The timeline is internally consistent.\"\n    },\n    {\n      \"criterion\": \"SPC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"The spatial layout matches the original image: range hood above stove, dishwasher to the left, cabinets on sides. The person enters from the left, which is consistent with the open space in the image. The camera’s slight push-in is plausible and does not disrupt spatial relationships. No unexplained position swaps or impossible trajectories are described.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"The camera holds a static shot with a very slight slow push-in toward the stove and hood. Around 0.5 seconds, an American adult in a plain casual t-shirt enters from the left and steps up to the range.\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"dishwasher_1 is located to the left of oven_1\"\n        }\n      ],\n      \"rationale\": \"The spatial relationships from the original image are preserved. The person’s entrance from the left is consistent with the open space in the lower-left quadrant (where the dishwasher is located). The camera motion is minimal and does not alter the spatial logic. All movements are plausible within the kitchen layout.\"\n    },\n    {\n      \"criterion\": \"PL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"The physics of the scene are consistent: the range hood remains wall-mounted, the flame is steady blue, no smoke or fumes are produced as instructed, and the person’s movements (lifting lid, stirring) are physically plausible. The sound design (hum, scrape, hiss) aligns with the physical actions.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"The range hood stays firmly wall-mounted and stationary, its display glowing subtly to show it is running. No smoke, steam, or fumes appear at any point; the flame remains a steady blue.\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"No need to produce smoke and fumes.\"\n        }\n      ],\n      \"rationale\": \"The prompt correctly adheres to the instruction to avoid smoke/fumes. The flame is described as steady blue, which is physically accurate for a gas stove. The person’s actions are within human capability. The soundscape is consistent with the physical events. No violations of real-world physics are present.\"\n    },\n    {\n      \"criterion\": \"AVS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"The soundscape (hood hum, spatula scrape, lid clink) aligns temporally and semantically with the visual actions. The non-diegetic music is marked as N/A, which is appropriate for a live-action kitchen scene. There is no indication of misaligned dialogue or music.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"overall_soundscape: A soft low hum of the range hood fan runs continuously beneath the quiet kitchen ambience. The gentle rhythmic scrape of the spatula against the wok, the faint hiss of the blue gas flame, and the soft clink of the stockpot lid being lifted and set back down.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"non_diegetic_music: N/A\"\n        }\n      ],\n      \"rationale\": \"The sounds described are directly tied to the visual actions: the spatula scraping occurs during stirring, the lid clink occurs when lifted and replaced, and the hood hum is continuous. There is no mismatch between audio and visual events. The absence of non-diegetic music is appropriate for a realistic kitchen scene.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt maintains strong internal consistency with the original image and instruction, preserving key spatial, visual, and procedural elements. However, minor inconsistencies arise in subject identity (American adult not specified in image), and the prompt introduces a cooking action not present in the static image. The absence of smoke/fumes is correctly honored, and the range hood remains wall-mounted as instructed. The camera motion and sound design are plausible extensions. No major contradictions or attribute drifts are present, but the addition of a human subject and cooking action introduces a slight deviation from the original static render, which is not a failure but a creative interpretation.",
+  "usage": {
+    "completion_tokens": 1782,
+    "prompt_tokens": 2860,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 4642
+  }
+}

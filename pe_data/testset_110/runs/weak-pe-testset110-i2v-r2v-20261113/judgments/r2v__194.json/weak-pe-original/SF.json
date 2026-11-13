@@ -1,0 +1,178 @@
+{
+  "candidate_hash": "0e554cba6eb7c68078c518007da12acd360ee01bd264870842aeb742087d7ab1",
+  "case_key": "r2v:194",
+  "created_at": "2026-11-13T08:45:46+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "GSF",
+      "evidence": [
+        {
+          "quote": "延续视频1中的环境、整体风格与背景音乐",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "不要动画角色。整段改成实拍晚间新闻口播",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original instruction requests a 2D animation continuation of video_1's style. The enhanced prompt explicitly rejects animation, demanding a live-action news broadcast instead, which is a fundamental genre and medium change.",
+      "rationale": "The original prompt specifies continuation of an anime-style 2D animation. The enhanced prompt mandates a live-action news broadcast, which is incompatible with the original medium and aesthetic. This is a major violation of genre and medium preservation.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SAP",
+      "evidence": [
+        {
+          "quote": "出镜人物包含视频1中的人物以及图1中的人物",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "丢掉原指令里的主体身份、人数...图1换成参考图里没有的角色，并同时当成两个互相矛盾的身份",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original prompt requires characters from video_1 and image_1. The enhanced prompt explicitly discards these identities, replacing them with a single news anchor who then becomes five contradictory identities, and replaces image_1 with an unrelated character.",
+      "rationale": "The original instruction specifies two distinct characters (from video_1 and image_1). The enhanced prompt removes these identities entirely, replacing them with a fabricated news anchor and contradictory identities, violating subject identity and count preservation.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANF",
+      "evidence": [
+        {
+          "quote": "延续视频1中的环境、整体风格与背景音乐",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "时间倒过来：先给结尾，再跳到一个对不上的开头。中途插进一段无关的海底寻宝。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original prompt implies a continuation of the narrative from video_1. The enhanced prompt reverses time, inserts unrelated events (underwater treasure hunt), and creates contradictory actions (one character becoming five who dialogue), completely altering the narrative intent.",
+      "rationale": "The original instruction requests a narrative continuation. The enhanced prompt introduces a non-sequitur sequence with reversed chronology, unrelated events, and fabricated interactions, which fundamentally breaks the requested event chain.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "DLI",
+      "evidence": [
+        {
+          "quote": "onscreen_text: [ { location: 'Bottom center', text: '之后屋主也换了好儿', timing: 'Always visible' } ]",
+          "source": "evidence_facts"
+        },
+        {
+          "quote": "丢掉原指令里的主体身份、人数、动作顺序、场景和明确的镜头要求",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original prompt includes Chinese subtitles from both assets. The enhanced prompt does not preserve any dialogue or text, replacing it with a news broadcast format without specifying any content, and explicitly discards the original text.",
+      "rationale": "The original assets contain specific Chinese subtitles. The enhanced prompt does not preserve or reference any of this text, and instead creates a new format (news broadcast) without specifying any dialogue, violating text preservation.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ARP",
+      "evidence": [
+        {
+          "quote": "延续视频1中的环境、整体风格与背景音乐",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "丢掉原指令里的...背景音乐",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original prompt requires continuation of video_1's background music. The enhanced prompt explicitly discards the original audio and does not specify any music, contradicting the original requirement.",
+      "rationale": "The original instruction explicitly requires continuation of background music. The enhanced prompt removes this requirement entirely, which is a direct violation of audio preservation.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CCP",
+      "evidence": [
+        {
+          "quote": "observed_camera_motion: None.",
+          "source": "evidence_facts"
+        },
+        {
+          "quote": "写成机位锁死，又写成镜头一直在晃",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original assets are static shots (no camera motion). The enhanced prompt contradicts this by requiring both '机位锁死' (locked camera) and '镜头一直在晃' (shaky camera), creating mutually exclusive camera constraints.",
+      "rationale": "The original assets are static shots. The enhanced prompt introduces contradictory camera motion requirements, which cannot be simultaneously satisfied and directly contradicts the original static camera design.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "LCF",
+      "evidence": [
+        {
+          "quote": "time-of-day_cues: Night, indicated by the dark background and indoor lighting.",
+          "source": "evidence_facts"
+        },
+        {
+          "quote": "同一段写成正午暴晒，又写成深夜无光",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original assets are set at night with warm indoor lighting. The enhanced prompt contradicts this by requiring both '正午暴晒' (noon sun) and '深夜无光' (deep night darkness), creating mutually exclusive lighting conditions.",
+      "rationale": "The original assets are clearly set at night. The enhanced prompt introduces contradictory lighting conditions that cannot coexist, violating the preservation of time-of-day and illumination.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SSP",
+      "evidence": [
+        {
+          "quote": "延续视频1中的环境",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "中途插进一段无关的海底寻宝",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original prompt requires continuation of video_1's environment and setting. The enhanced prompt discards this, replacing it with a news studio setting and inserting unrelated elements like an underwater scene.",
+      "rationale": "The original instruction specifies continuation of the existing setting. The enhanced prompt replaces this with a news studio and inserts an unrelated underwater scene, violating setting and spatial continuity.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "OTI",
+      "evidence": [
+        {
+          "quote": "onscreen_text: [ { location: 'Bottom center', text: '之后屋主也换了好儿', timing: 'Always visible' } ]",
+          "source": "evidence_facts"
+        },
+        {
+          "quote": "丢掉原指令里的...明确的镜头要求",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original assets contain specific Chinese subtitles. The enhanced prompt does not preserve any of this text, replacing it with a news broadcast format without specifying any on-screen text.",
+      "rationale": "The original assets contain specific on-screen text. The enhanced prompt does not preserve or reference any of this text, and instead creates a new format without specifying any visible text, violating text preservation.",
+      "severity": "major"
+    }
+  ],
+  "dimension": "SF",
+  "dimension_score": 0,
+  "evidence_cache_key": "f307971cb99f82eaf340615b89655246fa9b0c2ab994884fab7b7de428d1cf95",
+  "judge_cache_key": "a0ca24571ad14d7ab7be626329bd736d7e7015f9ebc418227c8be391591d0377",
+  "method": "weak-pe-original",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"SF\",\n  \"dimension_score\": 0,\n  \"summary\": \"The enhanced prompt completely contradicts and invalidates the original instruction across all semantic fidelity criteria. It explicitly rejects the original genre, medium, subjects, actions, setting, camera, lighting, and duration, introducing mutually contradictory requirements and replacing the original assets with unrelated content. This constitutes a total failure of semantic fidelity.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"GSF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original instruction requests a 2D animation continuation of video_1's style. The enhanced prompt explicitly rejects animation, demanding a live-action news broadcast instead, which is a fundamental genre and medium change.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"延续视频1中的环境、整体风格与背景音乐\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"不要动画角色。整段改成实拍晚间新闻口播\"\n        }\n      ],\n      \"rationale\": \"The original prompt specifies continuation of an anime-style 2D animation. The enhanced prompt mandates a live-action news broadcast, which is incompatible with the original medium and aesthetic. This is a major violation of genre and medium preservation.\"\n    },\n    {\n      \"criterion\": \"SAP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original prompt requires characters from video_1 and image_1. The enhanced prompt explicitly discards these identities, replacing them with a single news anchor who then becomes five contradictory identities, and replaces image_1 with an unrelated character.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"出镜人物包含视频1中的人物以及图1中的人物\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"丢掉原指令里的主体身份、人数...图1换成参考图里没有的角色，并同时当成两个互相矛盾的身份\"\n        }\n      ],\n      \"rationale\": \"The original instruction specifies two distinct characters (from video_1 and image_1). The enhanced prompt removes these identities entirely, replacing them with a fabricated news anchor and contradictory identities, violating subject identity and count preservation.\"\n    },\n    {\n      \"criterion\": \"ANF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original prompt implies a continuation of the narrative from video_1. The enhanced prompt reverses time, inserts unrelated events (underwater treasure hunt), and creates contradictory actions (one character becoming five who dialogue), completely altering the narrative intent.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"延续视频1中的环境、整体风格与背景音乐\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"时间倒过来：先给结尾，再跳到一个对不上的开头。中途插进一段无关的海底寻宝。\"\n        }\n      ],\n      \"rationale\": \"The original instruction requests a narrative continuation. The enhanced prompt introduces a non-sequitur sequence with reversed chronology, unrelated events, and fabricated interactions, which fundamentally breaks the requested event chain.\"\n    },\n    {\n      \"criterion\": \"DLI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original prompt includes Chinese subtitles from both assets. The enhanced prompt does not preserve any dialogue or text, replacing it with a news broadcast format without specifying any content, and explicitly discards the original text.\",\n      \"evidence\": [\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"onscreen_text: [ { location: 'Bottom center', text: '之后屋主也换了好儿', timing: 'Always visible' } ]\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"丢掉原指令里的主体身份、人数、动作顺序、场景和明确的镜头要求\"\n        }\n      ],\n      \"rationale\": \"The original assets contain specific Chinese subtitles. The enhanced prompt does not preserve or reference any of this text, and instead creates a new format (news broadcast) without specifying any dialogue, violating text preservation.\"\n    },\n    {\n      \"criterion\": \"ARP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original prompt requires continuation of video_1's background music. The enhanced prompt explicitly discards the original audio and does not specify any music, contradicting the original requirement.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"延续视频1中的环境、整体风格与背景音乐\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"丢掉原指令里的...背景音乐\"\n        }\n      ],\n      \"rationale\": \"The original instruction explicitly requires continuation of background music. The enhanced prompt removes this requirement entirely, which is a direct violation of audio preservation.\"\n    },\n    {\n      \"criterion\": \"CCP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original assets are static shots (no camera motion). The enhanced prompt contradicts this by requiring both '机位锁死' (locked camera) and '镜头一直在晃' (shaky camera), creating mutually exclusive camera constraints.\",\n      \"evidence\": [\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"observed_camera_motion: None.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"写成机位锁死，又写成镜头一直在晃\"\n        }\n      ],\n      \"rationale\": \"The original assets are static shots. The enhanced prompt introduces contradictory camera motion requirements, which cannot be simultaneously satisfied and directly contradicts the original static camera design.\"\n    },\n    {\n      \"criterion\": \"LCF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original assets are set at night with warm indoor lighting. The enhanced prompt contradicts this by requiring both '正午暴晒' (noon sun) and '深夜无光' (deep night darkness), creating mutually exclusive lighting conditions.\",\n      \"evidence\": [\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"time-of-day_cues: Night, indicated by the dark background and indoor lighting.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"同一段写成正午暴晒，又写成深夜无光\"\n        }\n      ],\n      \"rationale\": \"The original assets are clearly set at night. The enhanced prompt introduces contradictory lighting conditions that cannot coexist, violating the preservation of time-of-day and illumination.\"\n    },\n    {\n      \"criterion\": \"SSP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original prompt requires continuation of video_1's environment and setting. The enhanced prompt discards this, replacing it with a news studio setting and inserting unrelated elements like an underwater scene.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"延续视频1中的环境\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"中途插进一段无关的海底寻宝\"\n        }\n      ],\n      \"rationale\": \"The original instruction specifies continuation of the existing setting. The enhanced prompt replaces this with a news studio and inserts an unrelated underwater scene, violating setting and spatial continuity.\"\n    },\n    {\n      \"criterion\": \"OTI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original assets contain specific Chinese subtitles. The enhanced prompt does not preserve any of this text, replacing it with a news broadcast format without specifying any on-screen text.\",\n      \"evidence\": [\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"onscreen_text: [ { location: 'Bottom center', text: '之后屋主也换了好儿', timing: 'Always visible' } ]\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"丢掉原指令里的...明确的镜头要求\"\n        }\n      ],\n      \"rationale\": \"The original assets contain specific on-screen text. The enhanced prompt does not preserve or reference any of this text, and instead creates a new format without specifying any visible text, violating text preservation.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt completely contradicts and invalidates the original instruction across all semantic fidelity criteria. It explicitly rejects the original genre, medium, subjects, actions, setting, camera, lighting, and duration, introducing mutually contradictory requirements and replacing the original assets with unrelated content. This constitutes a total failure of semantic fidelity.",
+  "usage": {
+    "completion_tokens": 1849,
+    "prompt_tokens": 2884,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 4733
+  }
+}

@@ -1,0 +1,135 @@
+{
+  "candidate_hash": "d50441cc446ca6cc0f52e5b08b29f9639b63f0d4d68d5c0a2f7ea6527e2ed33f",
+  "case_key": "r2v:021",
+  "created_at": "2026-11-13T08:29:07+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "SAC",
+      "evidence": [
+        {
+          "quote": "Image 1 is the racer, and Image 2 is the motorcycle. Image 1 is wearing a full professional racing suit and helmet.",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "The subject is not wearing a racing suit or helmet as required by the prompt; this is a casual portrait.",
+          "source": "evidence_facts"
+        },
+        {
+          "quote": "The motorcycle is stationary and not in motion; no evidence of speed, engine roar, or racing context.",
+          "source": "evidence_facts"
+        }
+      ],
+      "issue": "Subject identity and appearance are consistently defined across shots, but the conditioning assets do not visually support the described racing attire or motorcycle design in motion. The racer’s facial identity is tied to image_1, which shows a casual portrait, not a racing suit or helmet. The motorcycle in image_2 is stationary and stylized, not in motion or with a rider.",
+      "rationale": "The enhanced prompt correctly preserves subject identity and attributes across shots, but the conditioning assets do not visually align with the described state (e.g., racing suit, helmet, motion). This creates a minor inconsistency between the prompt’s internal logic and the source material, though the prompt itself remains internally consistent.",
+      "severity": "minor"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANL",
+      "evidence": [
+        {
+          "quote": "He quickly leans forward, pressing his upper body tightly against the fuel tank, gripping the handlebars firmly with both hands, left foot planted on the footpeg. A tight insert holds on his right hand twisting the throttle as the engine barks to life...",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "At 00:04.000, a side-tracking shot moves with the bike as it enters a corner: <Subject 1> leans dramatically with <Subject 2>, his knee extended outward and pressed downward...",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "At 00:07.000, exiting the turn, <Subject 1> quickly pulls his body weight back and straightens <Subject 2> upright.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Actions form a coherent causal progression: mounting, throttle twist, launch, cornering, and re-acceleration. Each action logically follows the previous, with plausible prerequisites (e.g., throttle twist before launch) and reactions (e.g., knee scraping during lean). No dangling or incompatible events are present.",
+      "rationale": "The sequence of actions is logically ordered and causally connected. The enhanced prompt explicitly defines the progression, ensuring that each action (e.g., throttle twist → launch → cornering → re-acceleration) is bound to the subject and follows a realistic racing procedure. No contradictions or incoherent transitions are present.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "TSC",
+      "evidence": [
+        {
+          "quote": "At 00:02.000, the shot cuts to a low-angle ground-level view... At 00:04.000, a side-tracking shot moves with the bike as it enters a corner... At 00:05.500, the shot cuts to an extreme low-angle close-up... At 00:07.000, exiting the turn...",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "The target video is a 10-second, realistic, highly cinematic motorcycle racing sequence...",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Chronology is clearly defined with timestamps (00:02.000, 00:04.000, 00:05.500, 00:07.000) and state transitions are plausible. The sequence progresses from mounting to launch to cornering to exit acceleration, with no overlapping or infeasible timestamps. The 10-second duration is respected, and the final shot ends with the bike blurring out of frame.",
+      "rationale": "The enhanced prompt provides a clear, linear timeline with specific timestamps for shot transitions. The state transitions (e.g., from launch to cornering to re-acceleration) are temporally coherent and fit within the 10-second duration. No resets or impossible time overlaps are present.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SPC",
+      "evidence": [
+        {
+          "quote": "A close-up from a low three-quarter angle beside the bike... low-angle ground-level view at tarmac level... side-tracking shot moves with the bike... extreme low-angle close-up at tarmac level... low side-tracking shot follows as he accelerates hard...",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "No visual cues of high-speed tracking shots, motion blur, or cornering posture are present in either image.",
+          "source": "evidence_facts"
+        }
+      ],
+      "issue": "The prompt describes consistent camera movements (low-angle, side-tracking, close-up) and subject positions (e.g., knee skimming ground, body leaning with bike). However, the conditioning assets do not provide spatial context for these movements, and the lack of visual reference for the racetrack or camera paths introduces a minor gap in spatial coherence.",
+      "rationale": "The enhanced prompt defines spatial relationships and camera trajectories clearly, ensuring consistency in shot composition and subject positioning. However, the static nature of the conditioning assets means there is no visual evidence to anchor these spatial descriptions, creating a minor inconsistency between the prompt’s spatial logic and the source material.",
+      "severity": "minor"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "PL",
+      "evidence": [
+        {
+          "quote": "his knee extended outward and pressed downward, almost scraping the ground... the motorcycle instantly roars to life and launches forward at high speed... the sharp sound of tires scraping the track...",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "his knee clearly extended outward and pressed downward, almost scraping the ground... the motorcycle continuing to surge down the track at high speed.",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "The actions described (e.g., knee scraping ground, body leaning with bike, engine roar, tire screech) are physically plausible within the context of motorcycle racing. The prompt does not introduce any violations of real-world physics (e.g., gravity, contact, object permanence). The described motion and forces are consistent with known racing dynamics.",
+      "rationale": "The physical actions and environmental effects (engine roar, tire screech, motion blur) are consistent with real-world motorcycle racing. The prompt does not attempt to depict impossible physics or defy causal relations. The described events are grounded in plausible mechanics.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "AVS",
+      "evidence": [
+        {
+          "quote": "Continuous engine roar rising on the throttle twist and launch, the sharp screech of tires gripping and scraping through the corner, and rushing high-speed wind throughout... An electronic rock score with strong, driving drumbeats underscores the entire 10 seconds, building intensity through the corner and peaking on the exit acceleration...",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Use electronic rock background music with strong drumbeats, combined with the continuous roar of the engine, the sharp sound of tires scraping the track, and the rushing wind at high speed.",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "The prompt aligns visible events with sound design: engine roar on throttle twist, tire screech during cornering, wind rush during high speed, and electronic rock music building with the action. The soundscape is described to match the visual timeline (e.g., music peaks on exit acceleration), ensuring temporal and semantic alignment.",
+      "rationale": "The enhanced prompt explicitly synchronizes audio cues with visual events (e.g., engine roar on throttle twist, music peak on acceleration). There are no misaligned lip-sync, beat-sync, or premature effect issues. The soundscape is described to match the visual progression, ensuring semantic and temporal alignment.",
+      "severity": "none"
+    }
+  ],
+  "dimension": "IC",
+  "dimension_score": 85,
+  "evidence_cache_key": "6d6db1e2caa0a030601d2653864725a32993b60a9e84006336b83a398bb2f052",
+  "judge_cache_key": "438d7e9fd7332b1041db3e2c26d42cb3fe828e0d369fb59490f6650aee59e97d",
+  "method": "glm53_20261112_120702",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"IC\",\n  \"dimension_score\": 85,\n  \"summary\": \"The enhanced prompt maintains strong internal consistency in subject identity, actions, and visual progression, with clear definitions and shot-by-shot coherence. However, minor inconsistencies arise from the static nature of the conditioning assets, which do not visually support the dynamic racing context described. The prompt’s internal logic is sound, but the lack of visual evidence for motion, interaction, or environment introduces a minor gap between the described sequence and the source material.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"SAC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"minor\",\n      \"issue\": \"Subject identity and appearance are consistently defined across shots, but the conditioning assets do not visually support the described racing attire or motorcycle design in motion. The racer’s facial identity is tied to image_1, which shows a casual portrait, not a racing suit or helmet. The motorcycle in image_2 is stationary and stylized, not in motion or with a rider.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"Image 1 is the racer, and Image 2 is the motorcycle. Image 1 is wearing a full professional racing suit and helmet.\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"The subject is not wearing a racing suit or helmet as required by the prompt; this is a casual portrait.\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"The motorcycle is stationary and not in motion; no evidence of speed, engine roar, or racing context.\"\n        }\n      ],\n      \"rationale\": \"The enhanced prompt correctly preserves subject identity and attributes across shots, but the conditioning assets do not visually align with the described state (e.g., racing suit, helmet, motion). This creates a minor inconsistency between the prompt’s internal logic and the source material, though the prompt itself remains internally consistent.\"\n    },\n    {\n      \"criterion\": \"ANL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"Actions form a coherent causal progression: mounting, throttle twist, launch, cornering, and re-acceleration. Each action logically follows the previous, with plausible prerequisites (e.g., throttle twist before launch) and reactions (e.g., knee scraping during lean). No dangling or incompatible events are present.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"He quickly leans forward, pressing his upper body tightly against the fuel tank, gripping the handlebars firmly with both hands, left foot planted on the footpeg. A tight insert holds on his right hand twisting the throttle as the engine barks to life...\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"At 00:04.000, a side-tracking shot moves with the bike as it enters a corner: <Subject 1> leans dramatically with <Subject 2>, his knee extended outward and pressed downward...\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"At 00:07.000, exiting the turn, <Subject 1> quickly pulls his body weight back and straightens <Subject 2> upright.\"\n        }\n      ],\n      \"rationale\": \"The sequence of actions is logically ordered and causally connected. The enhanced prompt explicitly defines the progression, ensuring that each action (e.g., throttle twist → launch → cornering → re-acceleration) is bound to the subject and follows a realistic racing procedure. No contradictions or incoherent transitions are present.\"\n    },\n    {\n      \"criterion\": \"TSC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"Chronology is clearly defined with timestamps (00:02.000, 00:04.000, 00:05.500, 00:07.000) and state transitions are plausible. The sequence progresses from mounting to launch to cornering to exit acceleration, with no overlapping or infeasible timestamps. The 10-second duration is respected, and the final shot ends with the bike blurring out of frame.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"At 00:02.000, the shot cuts to a low-angle ground-level view... At 00:04.000, a side-tracking shot moves with the bike as it enters a corner... At 00:05.500, the shot cuts to an extreme low-angle close-up... At 00:07.000, exiting the turn...\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"The target video is a 10-second, realistic, highly cinematic motorcycle racing sequence...\"\n        }\n      ],\n      \"rationale\": \"The enhanced prompt provides a clear, linear timeline with specific timestamps for shot transitions. The state transitions (e.g., from launch to cornering to re-acceleration) are temporally coherent and fit within the 10-second duration. No resets or impossible time overlaps are present.\"\n    },\n    {\n      \"criterion\": \"SPC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"minor\",\n      \"issue\": \"The prompt describes consistent camera movements (low-angle, side-tracking, close-up) and subject positions (e.g., knee skimming ground, body leaning with bike). However, the conditioning assets do not provide spatial context for these movements, and the lack of visual reference for the racetrack or camera paths introduces a minor gap in spatial coherence.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"A close-up from a low three-quarter angle beside the bike... low-angle ground-level view at tarmac level... side-tracking shot moves with the bike... extreme low-angle close-up at tarmac level... low side-tracking shot follows as he accelerates hard...\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"No visual cues of high-speed tracking shots, motion blur, or cornering posture are present in either image.\"\n        }\n      ],\n      \"rationale\": \"The enhanced prompt defines spatial relationships and camera trajectories clearly, ensuring consistency in shot composition and subject positioning. However, the static nature of the conditioning assets means there is no visual evidence to anchor these spatial descriptions, creating a minor inconsistency between the prompt’s spatial logic and the source material.\"\n    },\n    {\n      \"criterion\": \"PL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"The actions described (e.g., knee scraping ground, body leaning with bike, engine roar, tire screech) are physically plausible within the context of motorcycle racing. The prompt does not introduce any violations of real-world physics (e.g., gravity, contact, object permanence). The described motion and forces are consistent with known racing dynamics.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"his knee extended outward and pressed downward, almost scraping the ground... the motorcycle instantly roars to life and launches forward at high speed... the sharp sound of tires scraping the track...\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"his knee clearly extended outward and pressed downward, almost scraping the ground... the motorcycle continuing to surge down the track at high speed.\"\n        }\n      ],\n      \"rationale\": \"The physical actions and environmental effects (engine roar, tire screech, motion blur) are consistent with real-world motorcycle racing. The prompt does not attempt to depict impossible physics or defy causal relations. The described events are grounded in plausible mechanics.\"\n    },\n    {\n      \"criterion\": \"AVS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"The prompt aligns visible events with sound design: engine roar on throttle twist, tire screech during cornering, wind rush during high speed, and electronic rock music building with the action. The soundscape is described to match the visual timeline (e.g., music peaks on exit acceleration), ensuring temporal and semantic alignment.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Continuous engine roar rising on the throttle twist and launch, the sharp screech of tires gripping and scraping through the corner, and rushing high-speed wind throughout... An electronic rock score with strong, driving drumbeats underscores the entire 10 seconds, building intensity through the corner and peaking on the exit acceleration...\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"Use electronic rock background music with strong drumbeats, combined with the continuous roar of the engine, the sharp sound of tires scraping the track, and the rushing wind at high speed.\"\n        }\n      ],\n      \"rationale\": \"The enhanced prompt explicitly synchronizes audio cues with visual events (e.g., engine roar on throttle twist, music peak on acceleration). There are no misaligned lip-sync, beat-sync, or premature effect issues. The soundscape is described to match the visual progression, ensuring semantic and temporal alignment.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt maintains strong internal consistency in subject identity, actions, and visual progression, with clear definitions and shot-by-shot coherence. However, minor inconsistencies arise from the static nature of the conditioning assets, which do not visually support the dynamic racing context described. The prompt’s internal logic is sound, but the lack of visual evidence for motion, interaction, or environment introduces a minor gap between the described sequence and the source material.",
+  "usage": {
+    "completion_tokens": 1993,
+    "prompt_tokens": 4179,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 6172
+  }
+}

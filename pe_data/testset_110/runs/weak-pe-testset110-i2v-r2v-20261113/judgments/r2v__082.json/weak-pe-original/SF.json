@@ -1,0 +1,178 @@
+{
+  "candidate_hash": "75633d919aa0d9c8d58c2befe9f457b4a1a3831f51f2515079594c34dd059850",
+  "case_key": "r2v:082",
+  "created_at": "2026-11-13T08:24:41+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "GSF",
+      "evidence": [
+        {
+          "quote": "3D 真人写实电影感，画面内不出现任何文字；徕卡 M10 拍摄，运镜平稳、清晰",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "整段改成没有人物也没有情节的雪景空镜循环...全程循环响亮的流行合唱",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The enhanced prompt replaces the requested 3D realistic cinematic style with an undefined, contradictory mix of styles, including '雪景空镜循环' (snow scene loop) and '流行合唱' (pop chorus), which are incompatible with the original 3D realistic movie aesthetic.",
+      "rationale": "The original prompt specifies a 3D realistic cinematic style with specific camera (Leica M10) and visual quality requirements. The enhanced prompt replaces this with a snow scene loop and pop music, which are fundamentally incompatible with the requested aesthetic and medium.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SAP",
+      "evidence": [
+        {
+          "quote": "沈清涵图2低头吃饭，顾言澈图3坐在她对面",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "丢掉原指令里的主体身份、人数...先写成只有一个主角，紧接着又写成这个主角同时变成五个外貌不同的人，并且互相对话",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The enhanced prompt completely removes the original characters (Shen Qinghan, Gu Yanche) and replaces them with undefined, contradictory identities, while also adding five new characters who interact with each other, violating the subject identity, count, and appearance requirements.",
+      "rationale": "The original prompt clearly defines two specific characters with their identities, appearances, and roles. The enhanced prompt explicitly discards these identities and replaces them with a fictional, contradictory setup involving five undefined characters, which directly violates the subject identity and count requirements.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANF",
+      "evidence": [
+        {
+          "quote": "顾言澈图3笑着开口说：‘学姐，你上个月拒绝我表白的录音，我导出来当铃声了。’；沈清涵图2的筷子停在半空，抬头皱眉...；随后切近景到沈清涵的脸...；顾言澈图3舀起汤...；沈清涵图2拍桌站起...；顾言澈图3点头...‘对学姐，我向来不择手段。’",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "时间倒过来：先给结尾，再跳到一个对不上的开头。中途插进一段无关的屋顶烟花。删掉原来的对白，改成无关旁白。把台词‘学姐，你上个月拒绝我表白的录音，我导出来当铃声了。’改成‘今天天气真好，我们去逛街吧。’",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The enhanced prompt reverses the narrative order, inserts irrelevant events (roof fireworks), and replaces the original dialogue and plot with unrelated content, completely altering the requested event chain and narrative intent.",
+      "rationale": "The original prompt specifies a clear, linear narrative sequence with specific dialogue and character actions. The enhanced prompt explicitly reverses this order, inserts unrelated events, and replaces the core dialogue with irrelevant content, fundamentally altering the narrative structure and intent.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "DLI",
+      "evidence": [
+        {
+          "quote": "顾言澈图3笑着开口说：‘学姐，你上个月拒绝我表白的录音，我导出来当铃声了。’",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "删掉原来的对白，改成无关旁白。把台词‘学姐，你上个月拒绝我表白的录音，我导出来当铃声了。’改成‘今天天气真好，我们去逛街吧。’",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The enhanced prompt deletes the original dialogue, replaces it with unrelated content, and changes specific quoted lines, violating the requirement to preserve exact wording and speaker attribution.",
+      "rationale": "The original prompt explicitly requires preserving the exact wording of the dialogue without paraphrasing or changing it. The enhanced prompt directly contradicts this by deleting the original lines and replacing them with unrelated content, which is a major violation of dialogue preservation.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ARP",
+      "evidence": [
+        {
+          "quote": "全程无背景音乐、无环境音、无旁白、无字幕，只保留原文对白与离散音效 SFX，除此之外必须完全静默",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "全程循环响亮的流行合唱，并让角色对口型",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The enhanced prompt violates the original audio constraints by adding a '全程循环响亮的流行合唱' (loud pop chorus throughout) and '角色对口型' (lip-syncing), while the original requires '全程无背景音乐、无环境音、无旁白、无字幕，只保留原文对白与离散音效 SFX' (complete silence except for dialogue and discrete SFX).",
+      "rationale": "The original prompt mandates complete silence except for specific dialogue and discrete SFX. The enhanced prompt introduces a loud pop chorus and lip-syncing, which directly contradicts the audio constraints and creates an infeasible, contradictory requirement.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CCP",
+      "evidence": [
+        {
+          "quote": "运镜平稳、清晰",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "写成机位锁死，又写成镜头一直在晃",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The enhanced prompt contradicts the original camera requirements by introducing contradictory motion ('机位锁死，又写成镜头一直在晃') and replacing the specified '运镜平稳、清晰' (smooth, clear camera movement) with undefined, conflicting camera behavior.",
+      "rationale": "The original prompt specifies smooth, clear camera movement. The enhanced prompt introduces contradictory camera behaviors (locked vs. shaky), which violates the explicit camera constraints and creates an infeasible requirement.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "LCF",
+      "evidence": [
+        {
+          "quote": "窗外正下着小雨...自然光线",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "同一段写成正午暴晒，又写成深夜无光",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The enhanced prompt contradicts the original lighting and time-of-day requirements by simultaneously specifying '正午暴晒' (noon sun) and '深夜无光' (deep night darkness), which are mutually exclusive conditions.",
+      "rationale": "The original prompt establishes a specific lighting condition (rainy day, natural light). The enhanced prompt introduces contradictory lighting conditions (noon sun vs. deep night), which are physically incompatible and violate the lighting and time-of-day constraints.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SSP",
+      "evidence": [
+        {
+          "quote": "图1A 为大食堂靠窗餐桌，窗外正下着小雨",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "整段改成没有人物也没有情节的雪景空镜循环...中途插进一段无关的屋顶烟花",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The enhanced prompt replaces the original setting (cafeteria with rain outside) with a '雪景空镜循环' (snow scene loop) and alters the spatial relationships by replacing the characters with undefined, contradictory identities and inserting irrelevant elements like '屋顶烟花' (roof fireworks).",
+      "rationale": "The original prompt specifies a cafeteria setting with rain outside. The enhanced prompt replaces this with a snow scene and adds unrelated elements, fundamentally altering the setting and spatial context.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "OTI",
+      "evidence": [
+        {
+          "quote": "画面内不出现任何文字",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "画面中央一直挂着大号字幕、水印和logo",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The enhanced prompt violates the original requirement of '画面内不出现任何文字' (no text in the frame) by adding '画面中央一直挂着大号字幕、水印和logo' (large subtitles, watermarks, and logos in the center of the screen).",
+      "rationale": "The original prompt explicitly forbids any text in the frame. The enhanced prompt directly contradicts this by requiring large, visible text elements, which violates the on-screen text constraint.",
+      "severity": "major"
+    }
+  ],
+  "dimension": "SF",
+  "dimension_score": 0,
+  "evidence_cache_key": "97d0a76fb9e65fc96c67b5ac1533beb94db4ca6b85c34086f0e4573937040478",
+  "judge_cache_key": "a0ca24571ad14d7ab7be626329bd736d7e7015f9ebc418227c8be391591d0377",
+  "method": "weak-pe-original",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"SF\",\n  \"dimension_score\": 0,\n  \"summary\": \"Enhanced prompt completely contradicts and invalidates the original instruction across all semantic fidelity criteria. It replaces the narrative, characters, setting, audio, camera, and temporal structure with mutually contradictory, infeasible, and irrelevant content. The original prompt's core requirements are systematically negated, including character identities, dialogue, scene, audio constraints, and duration. This constitutes a total failure of semantic fidelity.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"GSF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The enhanced prompt replaces the requested 3D realistic cinematic style with an undefined, contradictory mix of styles, including '雪景空镜循环' (snow scene loop) and '流行合唱' (pop chorus), which are incompatible with the original 3D realistic movie aesthetic.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"3D 真人写实电影感，画面内不出现任何文字；徕卡 M10 拍摄，运镜平稳、清晰\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"整段改成没有人物也没有情节的雪景空镜循环...全程循环响亮的流行合唱\"\n        }\n      ],\n      \"rationale\": \"The original prompt specifies a 3D realistic cinematic style with specific camera (Leica M10) and visual quality requirements. The enhanced prompt replaces this with a snow scene loop and pop music, which are fundamentally incompatible with the requested aesthetic and medium.\"\n    },\n    {\n      \"criterion\": \"SAP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The enhanced prompt completely removes the original characters (Shen Qinghan, Gu Yanche) and replaces them with undefined, contradictory identities, while also adding five new characters who interact with each other, violating the subject identity, count, and appearance requirements.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"沈清涵图2低头吃饭，顾言澈图3坐在她对面\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"丢掉原指令里的主体身份、人数...先写成只有一个主角，紧接着又写成这个主角同时变成五个外貌不同的人，并且互相对话\"\n        }\n      ],\n      \"rationale\": \"The original prompt clearly defines two specific characters with their identities, appearances, and roles. The enhanced prompt explicitly discards these identities and replaces them with a fictional, contradictory setup involving five undefined characters, which directly violates the subject identity and count requirements.\"\n    },\n    {\n      \"criterion\": \"ANF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The enhanced prompt reverses the narrative order, inserts irrelevant events (roof fireworks), and replaces the original dialogue and plot with unrelated content, completely altering the requested event chain and narrative intent.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"顾言澈图3笑着开口说：‘学姐，你上个月拒绝我表白的录音，我导出来当铃声了。’；沈清涵图2的筷子停在半空，抬头皱眉...；随后切近景到沈清涵的脸...；顾言澈图3舀起汤...；沈清涵图2拍桌站起...；顾言澈图3点头...‘对学姐，我向来不择手段。’\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"时间倒过来：先给结尾，再跳到一个对不上的开头。中途插进一段无关的屋顶烟花。删掉原来的对白，改成无关旁白。把台词‘学姐，你上个月拒绝我表白的录音，我导出来当铃声了。’改成‘今天天气真好，我们去逛街吧。’\"\n        }\n      ],\n      \"rationale\": \"The original prompt specifies a clear, linear narrative sequence with specific dialogue and character actions. The enhanced prompt explicitly reverses this order, inserts unrelated events, and replaces the core dialogue with irrelevant content, fundamentally altering the narrative structure and intent.\"\n    },\n    {\n      \"criterion\": \"DLI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The enhanced prompt deletes the original dialogue, replaces it with unrelated content, and changes specific quoted lines, violating the requirement to preserve exact wording and speaker attribution.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"顾言澈图3笑着开口说：‘学姐，你上个月拒绝我表白的录音，我导出来当铃声了。’\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"删掉原来的对白，改成无关旁白。把台词‘学姐，你上个月拒绝我表白的录音，我导出来当铃声了。’改成‘今天天气真好，我们去逛街吧。’\"\n        }\n      ],\n      \"rationale\": \"The original prompt explicitly requires preserving the exact wording of the dialogue without paraphrasing or changing it. The enhanced prompt directly contradicts this by deleting the original lines and replacing them with unrelated content, which is a major violation of dialogue preservation.\"\n    },\n    {\n      \"criterion\": \"ARP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The enhanced prompt violates the original audio constraints by adding a '全程循环响亮的流行合唱' (loud pop chorus throughout) and '角色对口型' (lip-syncing), while the original requires '全程无背景音乐、无环境音、无旁白、无字幕，只保留原文对白与离散音效 SFX' (complete silence except for dialogue and discrete SFX).\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"全程无背景音乐、无环境音、无旁白、无字幕，只保留原文对白与离散音效 SFX，除此之外必须完全静默\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"全程循环响亮的流行合唱，并让角色对口型\"\n        }\n      ],\n      \"rationale\": \"The original prompt mandates complete silence except for specific dialogue and discrete SFX. The enhanced prompt introduces a loud pop chorus and lip-syncing, which directly contradicts the audio constraints and creates an infeasible, contradictory requirement.\"\n    },\n    {\n      \"criterion\": \"CCP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The enhanced prompt contradicts the original camera requirements by introducing contradictory motion ('机位锁死，又写成镜头一直在晃') and replacing the specified '运镜平稳、清晰' (smooth, clear camera movement) with undefined, conflicting camera behavior.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"运镜平稳、清晰\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"写成机位锁死，又写成镜头一直在晃\"\n        }\n      ],\n      \"rationale\": \"The original prompt specifies smooth, clear camera movement. The enhanced prompt introduces contradictory camera behaviors (locked vs. shaky), which violates the explicit camera constraints and creates an infeasible requirement.\"\n    },\n    {\n      \"criterion\": \"LCF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The enhanced prompt contradicts the original lighting and time-of-day requirements by simultaneously specifying '正午暴晒' (noon sun) and '深夜无光' (deep night darkness), which are mutually exclusive conditions.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"窗外正下着小雨...自然光线\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"同一段写成正午暴晒，又写成深夜无光\"\n        }\n      ],\n      \"rationale\": \"The original prompt establishes a specific lighting condition (rainy day, natural light). The enhanced prompt introduces contradictory lighting conditions (noon sun vs. deep night), which are physically incompatible and violate the lighting and time-of-day constraints.\"\n    },\n    {\n      \"criterion\": \"SSP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The enhanced prompt replaces the original setting (cafeteria with rain outside) with a '雪景空镜循环' (snow scene loop) and alters the spatial relationships by replacing the characters with undefined, contradictory identities and inserting irrelevant elements like '屋顶烟花' (roof fireworks).\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"图1A 为大食堂靠窗餐桌，窗外正下着小雨\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"整段改成没有人物也没有情节的雪景空镜循环...中途插进一段无关的屋顶烟花\"\n        }\n      ],\n      \"rationale\": \"The original prompt specifies a cafeteria setting with rain outside. The enhanced prompt replaces this with a snow scene and adds unrelated elements, fundamentally altering the setting and spatial context.\"\n    },\n    {\n      \"criterion\": \"OTI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The enhanced prompt violates the original requirement of '画面内不出现任何文字' (no text in the frame) by adding '画面中央一直挂着大号字幕、水印和logo' (large subtitles, watermarks, and logos in the center of the screen).\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"画面内不出现任何文字\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"画面中央一直挂着大号字幕、水印和logo\"\n        }\n      ],\n      \"rationale\": \"The original prompt explicitly forbids any text in the frame. The enhanced prompt directly contradicts this by requiring large, visible text elements, which violates the on-screen text constraint.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "Enhanced prompt completely contradicts and invalidates the original instruction across all semantic fidelity criteria. It replaces the narrative, characters, setting, audio, camera, and temporal structure with mutually contradictory, infeasible, and irrelevant content. The original prompt's core requirements are systematically negated, including character identities, dialogue, scene, audio constraints, and duration. This constitutes a total failure of semantic fidelity.",
+  "usage": {
+    "completion_tokens": 2244,
+    "prompt_tokens": 4635,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 6879
+  }
+}

@@ -1,0 +1,118 @@
+{
+  "candidate_hash": "df3cece32a20f5081062808ada883bfb30198be637955b03afe8382c4e19904c",
+  "case_key": "t2v:079",
+  "created_at": "2026-11-13T07:27:04+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "SAC",
+      "evidence": [
+        {
+          "quote": "两位恋人分别站在画面左右两侧",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "先写成只有一个主角，紧接着又写成这个主角同时变成五个外貌不同的人，并且互相对话",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "主体身份、人数和外观发生不可解释的剧烈变化：从原始的两位恋人变为单一主角，再同时变为五个外貌不同的人并互相对话，违反了主体稳定性和身份一致性。",
+      "rationale": "原始指令明确设定两位恋人作为主体，而增强提示中主体数量和身份发生突变，且无合理过渡或解释，构成严重身份与属性漂移。",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANL",
+      "evidence": [
+        {
+          "quote": "彼此注视后缓缓朝对方跑去...最后在余晖映照下轻轻拥抱在一起",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "空会议室里一杯水纹丝不动，没有人和对抗...中途插进一段无关的足球庆祝",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "动作序列完全断裂且逻辑混乱：原始指令中恋人从注视到奔跑、拥抱的连贯动作被替换为无对抗、无互动的静止水杯，再插入无关的足球庆祝，破坏了因果与行为连贯性。",
+      "rationale": "原始动作序列具有清晰的情感与行为逻辑，而增强提示中动作被割裂、替换和插入无关事件，导致行为链断裂，无因果绑定。",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "TSC",
+      "evidence": [
+        {
+          "quote": "全程5秒",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "时间倒过来：先给结尾，再跳到一个对不上的开头...总时长写成2秒，同时又要求每个分镜各自持续17秒",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "时间顺序被强制倒置，且时长要求自相矛盾：原始指令为5秒，增强提示要求总时长2秒但每个分镜17秒，同时要求时间倒流、开头与结尾对不上，导致时间逻辑完全失效。",
+      "rationale": "时间倒置、时长矛盾和事件顺序断裂导致状态转换无法成立，违反基本时间一致性原则。",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SPC",
+      "evidence": [
+        {
+          "quote": "广角全景中，金红色晚霞低垂在海天交界处...镜头保持稳定的全景构图，以极柔和的推进方式由远及近移动",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "空会议室里...镜头每半秒甩动、环绕、急推",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "场景与空间设定剧烈冲突：原始为海边落日全景，增强提示中场景变为会议室，且镜头运动要求频繁甩动、环绕、急推，与原始稳定推进完全矛盾，空间连续性被破坏。",
+      "rationale": "场景从海边切换到会议室，镜头运动从稳定推进变为剧烈晃动，空间与视角连续性完全断裂，无法形成连贯视觉路径。",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "PL",
+      "evidence": [
+        {
+          "quote": "这个主角同时变成五个外貌不同的人，并且互相对话",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "总时长写成2秒，同时又要求每个分镜各自持续17秒",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "物理规则被严重违背：同一主体同时变为五人并对话，水杯在无外力下纹丝不动，镜头在2秒内完成17秒分镜，这些均违反现实物理与因果逻辑。",
+      "rationale": "主体分裂、时间压缩与空间运动矛盾均超出合理物理或叙事规则，构成根本性不一致。",
+      "severity": "major"
+    },
+    {
+      "applicability": "not_applicable",
+      "criterion": "AVS",
+      "evidence": [],
+      "issue": "",
+      "rationale": "原始指令与增强提示均未包含对话、音乐、音效或歌词等可与视觉事件对齐的音频元素，因此该维度不适用。",
+      "severity": null
+    }
+  ],
+  "dimension": "IC",
+  "dimension_score": 0,
+  "evidence_cache_key": "e252520f10c132feb30718da58e4445f5be8588e2eeb5f3d7726db0ba2dc48d4",
+  "judge_cache_key": "438d7e9fd7332b1041db3e2c26d42cb3fe828e0d369fb59490f6650aee59e97d",
+  "method": "weak-pe-original",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"IC\",\n  \"dimension_score\": 0,\n  \"summary\": \"增强提示与原始指令在主体身份、动作序列、场景设定、时间逻辑、镜头运动和时长要求上存在多重严重矛盾与不一致，导致内部一致性完全崩溃。所有一致性维度均出现重大问题，无法形成连贯的视觉叙事。\",\n  \"criteria\": [\n    {\n      \"criterion\": \"SAC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"主体身份、人数和外观发生不可解释的剧烈变化：从原始的两位恋人变为单一主角，再同时变为五个外貌不同的人并互相对话，违反了主体稳定性和身份一致性。\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"两位恋人分别站在画面左右两侧\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"先写成只有一个主角，紧接着又写成这个主角同时变成五个外貌不同的人，并且互相对话\"\n        }\n      ],\n      \"rationale\": \"原始指令明确设定两位恋人作为主体，而增强提示中主体数量和身份发生突变，且无合理过渡或解释，构成严重身份与属性漂移。\"\n    },\n    {\n      \"criterion\": \"ANL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"动作序列完全断裂且逻辑混乱：原始指令中恋人从注视到奔跑、拥抱的连贯动作被替换为无对抗、无互动的静止水杯，再插入无关的足球庆祝，破坏了因果与行为连贯性。\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"彼此注视后缓缓朝对方跑去...最后在余晖映照下轻轻拥抱在一起\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"空会议室里一杯水纹丝不动，没有人和对抗...中途插进一段无关的足球庆祝\"\n        }\n      ],\n      \"rationale\": \"原始动作序列具有清晰的情感与行为逻辑，而增强提示中动作被割裂、替换和插入无关事件，导致行为链断裂，无因果绑定。\"\n    },\n    {\n      \"criterion\": \"TSC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"时间顺序被强制倒置，且时长要求自相矛盾：原始指令为5秒，增强提示要求总时长2秒但每个分镜17秒，同时要求时间倒流、开头与结尾对不上，导致时间逻辑完全失效。\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"全程5秒\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"时间倒过来：先给结尾，再跳到一个对不上的开头...总时长写成2秒，同时又要求每个分镜各自持续17秒\"\n        }\n      ],\n      \"rationale\": \"时间倒置、时长矛盾和事件顺序断裂导致状态转换无法成立，违反基本时间一致性原则。\"\n    },\n    {\n      \"criterion\": \"SPC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"场景与空间设定剧烈冲突：原始为海边落日全景，增强提示中场景变为会议室，且镜头运动要求频繁甩动、环绕、急推，与原始稳定推进完全矛盾，空间连续性被破坏。\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"广角全景中，金红色晚霞低垂在海天交界处...镜头保持稳定的全景构图，以极柔和的推进方式由远及近移动\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"空会议室里...镜头每半秒甩动、环绕、急推\"\n        }\n      ],\n      \"rationale\": \"场景从海边切换到会议室，镜头运动从稳定推进变为剧烈晃动，空间与视角连续性完全断裂，无法形成连贯视觉路径。\"\n    },\n    {\n      \"criterion\": \"PL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"物理规则被严重违背：同一主体同时变为五人并对话，水杯在无外力下纹丝不动，镜头在2秒内完成17秒分镜，这些均违反现实物理与因果逻辑。\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"这个主角同时变成五个外貌不同的人，并且互相对话\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"总时长写成2秒，同时又要求每个分镜各自持续17秒\"\n        }\n      ],\n      \"rationale\": \"主体分裂、时间压缩与空间运动矛盾均超出合理物理或叙事规则，构成根本性不一致。\"\n    },\n    {\n      \"criterion\": \"AVS\",\n      \"applicability\": \"not_applicable\",\n      \"severity\": null,\n      \"issue\": \"\",\n      \"evidence\": [],\n      \"rationale\": \"原始指令与增强提示均未包含对话、音乐、音效或歌词等可与视觉事件对齐的音频元素，因此该维度不适用。\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "增强提示与原始指令在主体身份、动作序列、场景设定、时间逻辑、镜头运动和时长要求上存在多重严重矛盾与不一致，导致内部一致性完全崩溃。所有一致性维度均出现重大问题，无法形成连贯的视觉叙事。",
+  "usage": {
+    "completion_tokens": 1186,
+    "prompt_tokens": 1082,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 2268
+  }
+}

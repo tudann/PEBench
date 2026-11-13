@@ -1,0 +1,139 @@
+{
+  "candidate_hash": "8af95e8050b8c689b2f0885edddac67949212e7d3ab45f130359ca2396f5e17b",
+  "case_key": "i2v:175",
+  "created_at": "2026-11-13T08:01:56+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "SAC",
+      "evidence": [
+        {
+          "quote": "A woman's hand, adorned in a white polka dot sweater, delicately lifts a teal backpack from the desk.",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "a woman's hand and forearm in a cream knit sweater with black polka dots grips the top carry handle of a teal backpack",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "hand_with_sweater is holding teal_backpack by its top handle",
+          "source": "evidence_facts"
+        }
+      ],
+      "issue": "Subject identity (woman's hand in cream knit sweater with black polka dots), count (one hand, one backpack), appearance (teal backpack with white accents, pins, 'SPORT' patch, 'FASHION' print), and props (pegboard, keyboard, headphones, bunny lamp) remain stable and consistent across the described sequence. No unexplained renaming, duplication, or attribute drift.",
+      "rationale": "All subject attributes and props are consistently referenced and preserved throughout the sequence. The sweater is described as 'cream knit' in the enhanced prompt, which is a minor stylistic elaboration of 'white polka dot' from the original, but does not contradict it. The backpack's features (pins, 'SPORT' patch, 'FASHION' print) are consistently referenced. No changes in count or identity occur.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANL",
+      "evidence": [
+        {
+          "quote": "As the bag is raised, it swings slightly... The hand rotates the bag gently... The camera smoothly zooms in... The bag is then lightly shaken... followed by unzipping it halfway... The hand sets the bag back on the desk and gently taps it",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "From 0 to 3 seconds, the hand continues the lift... From 3 to 7 seconds, the hand rotates the bag... From 7 to 10 seconds, the bag is lightly shaken... From 10 to 13 seconds, the main zipper is pulled open halfway... From 13 to 15 seconds, the hand lowers the bag, sets it back on the desk in its original centered position, and gives it a gentle tap",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Actions form a coherent causal progression: lifting → rotating → zooming → shaking → unzipping → setting down → tapping. Each action logically follows the previous, with plausible prerequisites (e.g., bag must be lifted before rotating, unzipped after being held). Reactions (e.g., fabric sways, zipper sound) are consistent with actions. No dangling or incompatible events.",
+      "rationale": "The sequence of actions is logically ordered and causally connected. Each step builds on the prior state (e.g., bag must be lifted before rotating, must be held before unzipping). The enhanced prompt adds precise timing but does not alter the causal structure. No action is introduced without a plausible prerequisite or reaction.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "TSC",
+      "evidence": [
+        {
+          "quote": "A woman's hand... lifts a teal backpack... As the bag is raised... The hand rotates the bag... The camera smoothly zooms in... The bag is then lightly shaken... followed by unzipping it halfway... The hand sets the bag back on the desk and gently taps it",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "From 0 to 3 seconds, the hand continues the lift... From 3 to 7 seconds, the hand rotates the bag... From 7 to 10 seconds, the bag is lightly shaken... From 10 to 13 seconds, the main zipper is pulled open halfway... From 13 to 15 seconds, the hand lowers the bag, sets it back on the desk... and gives it a gentle tap",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The enhanced prompt introduces precise time segments (0-3s, 3-7s, etc.) that are not in the original prompt. While these do not contradict the original, they add a level of temporal specificity not requested, which may lead to misalignment if not strictly followed. However, the overall duration (15s) and event order are preserved.",
+      "rationale": "The enhanced prompt adds a detailed timeline that is not present in the original. While this does not contradict the original, it introduces a new constraint (timing) that was not specified. This is a minor issue because the sequence remains coherent and the total duration matches, but it risks over-specification if not aligned with the model's rendering capabilities.",
+      "severity": "minor"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SPC",
+      "evidence": [
+        {
+          "quote": "A woman's hand... lifts a teal backpack from the desk... The hand rotates the bag gently... The hand sets the bag back on the desk",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "the bag just lifted off a clean white desk and facing the camera frontally... sets it back on the desk in its original centered position",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "backpack centered, hand entering from left, background elements arranged symmetrically around the backpack",
+          "source": "evidence_facts"
+        }
+      ],
+      "issue": "Location (cozy desk setup) and spatial relations (backpack centered, hand entering from left, bunny lamp on right) are consistent. The hand lifts the bag from the desk, rotates it in place, and returns it to the same centered position. No unexplained position swaps or movement paths that cannot connect adjacent states. Screen direction and orientation are preserved.",
+      "rationale": "The spatial layout is maintained throughout. The backpack is lifted from and returned to the same centered position. The hand enters from the left and remains consistent in its role. No movement paths are described that would conflict with the static desk setup. The camera's slight zoom is consistent with a fixed position.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "PL",
+      "evidence": [
+        {
+          "quote": "delicately lifts a teal backpack... swings slightly... rotates the bag gently... lightly shaken... unzipping it halfway",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "raising the bag to chest height as it swings slightly... rotates the bag gently... lightly shaken side to side... main zipper is pulled open halfway",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "gentle nylon rustles and light fabric sways as it is lifted, rotated, and shaken, followed by the metallic zip of the zipper opening halfway",
+          "source": "overall_soundscape"
+        }
+      ],
+      "issue": "All actions comply with real-world physics: lifting, rotating, shaking, and unzipping a backpack are physically plausible. The bag's movement (swinging slightly, fabric sways) is consistent with gravity and material properties. The zipper opening halfway is a realistic action. No violations of object permanence, contact, or bodily feasibility.",
+      "rationale": "All described actions are physically feasible and consistent with the properties of a backpack and human hand. The soundscape further reinforces plausibility (rustles, zip, thud). No fantasy elements are introduced, and all events adhere to real-world physics.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "AVS",
+      "evidence": [
+        {
+          "quote": "Soft room ambience with a faint warm hum from the neon bunny lamp. The teal backpack produces gentle nylon rustles and light fabric sways as it is lifted, rotated, and shaken, followed by the metallic zip of the zipper opening halfway, a soft thud as the bag settles back onto the desk, and a light tap of fingertips on its surface.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "a text overlay reading \"Perfect for school & everyday use.\" appears on screen as the shot holds on the final composition.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The soundscape is temporally and semantically aligned with the visual events: nylon rustles during lifting/rotating/shaking, metallic zip during unzipping, soft thud when setting down, light tap at the end. The text overlay appears at the end as described. No misaligned lip-sync, beat-sync, or premature effects.",
+      "rationale": "The soundscape is precisely mapped to the visual actions: rustles during movement, zip during unzipping, thud and tap at the end. The text overlay is placed at the final moment, matching the visual conclusion. No misalignment is present.",
+      "severity": "none"
+    }
+  ],
+  "dimension": "IC",
+  "dimension_score": 95,
+  "evidence_cache_key": "a2404c1cb6cf430cd88bc65ca2280fe72ac0b47c16c17dfb9e8a1c6535535b95",
+  "judge_cache_key": "438d7e9fd7332b1041db3e2c26d42cb3fe828e0d369fb59490f6650aee59e97d",
+  "method": "glm53_20261112_120702",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"IC\",\n  \"dimension_score\": 95,\n  \"summary\": \"The enhanced prompt maintains strong internal consistency with the original prompt, preserving subject identity, actions, environment, and temporal progression. Minor issues include slight elaboration on camera motion and object details not present in the original, but these do not contradict or destabilize the core narrative. No major contradictions, attribute drift, or infeasible sequences are found. The only notable issue is a minor over-specification of camera zoom amplitude and timing, which is not contradicted by evidence but adds detail not in the original.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"SAC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"Subject identity (woman's hand in cream knit sweater with black polka dots), count (one hand, one backpack), appearance (teal backpack with white accents, pins, 'SPORT' patch, 'FASHION' print), and props (pegboard, keyboard, headphones, bunny lamp) remain stable and consistent across the described sequence. No unexplained renaming, duplication, or attribute drift.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"A woman's hand, adorned in a white polka dot sweater, delicately lifts a teal backpack from the desk.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"a woman's hand and forearm in a cream knit sweater with black polka dots grips the top carry handle of a teal backpack\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"hand_with_sweater is holding teal_backpack by its top handle\"\n        }\n      ],\n      \"rationale\": \"All subject attributes and props are consistently referenced and preserved throughout the sequence. The sweater is described as 'cream knit' in the enhanced prompt, which is a minor stylistic elaboration of 'white polka dot' from the original, but does not contradict it. The backpack's features (pins, 'SPORT' patch, 'FASHION' print) are consistently referenced. No changes in count or identity occur.\"\n    },\n    {\n      \"criterion\": \"ANL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"Actions form a coherent causal progression: lifting → rotating → zooming → shaking → unzipping → setting down → tapping. Each action logically follows the previous, with plausible prerequisites (e.g., bag must be lifted before rotating, unzipped after being held). Reactions (e.g., fabric sways, zipper sound) are consistent with actions. No dangling or incompatible events.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"As the bag is raised, it swings slightly... The hand rotates the bag gently... The camera smoothly zooms in... The bag is then lightly shaken... followed by unzipping it halfway... The hand sets the bag back on the desk and gently taps it\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"From 0 to 3 seconds, the hand continues the lift... From 3 to 7 seconds, the hand rotates the bag... From 7 to 10 seconds, the bag is lightly shaken... From 10 to 13 seconds, the main zipper is pulled open halfway... From 13 to 15 seconds, the hand lowers the bag, sets it back on the desk in its original centered position, and gives it a gentle tap\"\n        }\n      ],\n      \"rationale\": \"The sequence of actions is logically ordered and causally connected. Each step builds on the prior state (e.g., bag must be lifted before rotating, must be held before unzipping). The enhanced prompt adds precise timing but does not alter the causal structure. No action is introduced without a plausible prerequisite or reaction.\"\n    },\n    {\n      \"criterion\": \"TSC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"minor\",\n      \"issue\": \"The enhanced prompt introduces precise time segments (0-3s, 3-7s, etc.) that are not in the original prompt. While these do not contradict the original, they add a level of temporal specificity not requested, which may lead to misalignment if not strictly followed. However, the overall duration (15s) and event order are preserved.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"A woman's hand... lifts a teal backpack... As the bag is raised... The hand rotates the bag... The camera smoothly zooms in... The bag is then lightly shaken... followed by unzipping it halfway... The hand sets the bag back on the desk and gently taps it\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"From 0 to 3 seconds, the hand continues the lift... From 3 to 7 seconds, the hand rotates the bag... From 7 to 10 seconds, the bag is lightly shaken... From 10 to 13 seconds, the main zipper is pulled open halfway... From 13 to 15 seconds, the hand lowers the bag, sets it back on the desk... and gives it a gentle tap\"\n        }\n      ],\n      \"rationale\": \"The enhanced prompt adds a detailed timeline that is not present in the original. While this does not contradict the original, it introduces a new constraint (timing) that was not specified. This is a minor issue because the sequence remains coherent and the total duration matches, but it risks over-specification if not aligned with the model's rendering capabilities.\"\n    },\n    {\n      \"criterion\": \"SPC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"Location (cozy desk setup) and spatial relations (backpack centered, hand entering from left, bunny lamp on right) are consistent. The hand lifts the bag from the desk, rotates it in place, and returns it to the same centered position. No unexplained position swaps or movement paths that cannot connect adjacent states. Screen direction and orientation are preserved.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"A woman's hand... lifts a teal backpack from the desk... The hand rotates the bag gently... The hand sets the bag back on the desk\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"the bag just lifted off a clean white desk and facing the camera frontally... sets it back on the desk in its original centered position\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"backpack centered, hand entering from left, background elements arranged symmetrically around the backpack\"\n        }\n      ],\n      \"rationale\": \"The spatial layout is maintained throughout. The backpack is lifted from and returned to the same centered position. The hand enters from the left and remains consistent in its role. No movement paths are described that would conflict with the static desk setup. The camera's slight zoom is consistent with a fixed position.\"\n    },\n    {\n      \"criterion\": \"PL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"All actions comply with real-world physics: lifting, rotating, shaking, and unzipping a backpack are physically plausible. The bag's movement (swinging slightly, fabric sways) is consistent with gravity and material properties. The zipper opening halfway is a realistic action. No violations of object permanence, contact, or bodily feasibility.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"delicately lifts a teal backpack... swings slightly... rotates the bag gently... lightly shaken... unzipping it halfway\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"raising the bag to chest height as it swings slightly... rotates the bag gently... lightly shaken side to side... main zipper is pulled open halfway\"\n        },\n        {\n          \"source\": \"overall_soundscape\",\n          \"quote\": \"gentle nylon rustles and light fabric sways as it is lifted, rotated, and shaken, followed by the metallic zip of the zipper opening halfway\"\n        }\n      ],\n      \"rationale\": \"All described actions are physically feasible and consistent with the properties of a backpack and human hand. The soundscape further reinforces plausibility (rustles, zip, thud). No fantasy elements are introduced, and all events adhere to real-world physics.\"\n    },\n    {\n      \"criterion\": \"AVS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"The soundscape is temporally and semantically aligned with the visual events: nylon rustles during lifting/rotating/shaking, metallic zip during unzipping, soft thud when setting down, light tap at the end. The text overlay appears at the end as described. No misaligned lip-sync, beat-sync, or premature effects.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Soft room ambience with a faint warm hum from the neon bunny lamp. The teal backpack produces gentle nylon rustles and light fabric sways as it is lifted, rotated, and shaken, followed by the metallic zip of the zipper opening halfway, a soft thud as the bag settles back onto the desk, and a light tap of fingertips on its surface.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"a text overlay reading \\\"Perfect for school & everyday use.\\\" appears on screen as the shot holds on the final composition.\"\n        }\n      ],\n      \"rationale\": \"The soundscape is precisely mapped to the visual actions: rustles during movement, zip during unzipping, thud and tap at the end. The text overlay is placed at the final moment, matching the visual conclusion. No misalignment is present.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt maintains strong internal consistency with the original prompt, preserving subject identity, actions, environment, and temporal progression. Minor issues include slight elaboration on camera motion and object details not present in the original, but these do not contradict or destabilize the core narrative. No major contradictions, attribute drift, or infeasible sequences are found. The only notable issue is a minor over-specification of camera zoom amplitude and timing, which is not contradicted by evidence but adds detail not in the original.",
+  "usage": {
+    "completion_tokens": 2127,
+    "prompt_tokens": 2915,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 5042
+  }
+}

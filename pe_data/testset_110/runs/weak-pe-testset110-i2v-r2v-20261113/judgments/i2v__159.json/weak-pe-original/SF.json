@@ -1,0 +1,178 @@
+{
+  "candidate_hash": "e24f8818765089b7509fbf400fb0d16a26b04b3807f6b8d5cc943699c4967f66",
+  "case_key": "i2v:159",
+  "created_at": "2026-11-13T07:43:19+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "GSF",
+      "evidence": [
+        {
+          "quote": "realistic reflection, soft lighting",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Replace the whole video with distant traffic... Describe that same moment as harsh noon sun and as a lightless night",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original prompt requests a realistic, soft-lit product photography style with minimal movement. The enhanced prompt replaces this with distant traffic, a palace audition, and contradictory lighting (harsh noon sun and lightless night), which are incompatible with the original aesthetic.",
+      "rationale": "The enhanced prompt introduces entirely new and incompatible visual styles (traffic, palace, extreme lighting contrasts) that violate the original genre and aesthetic. The 'realistic reflection, soft lighting' requirement is directly contradicted by 'harsh noon sun and lightless night'.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SAP",
+      "evidence": [
+        {
+          "quote": "Keep same photo and background",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Ignore the person, clothing, pose, and setting in the first frame, and replace them with a stranger of the opposite age and gender in a white studio",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original prompt specifies preserving the photo and background, including the handbag and hand. The enhanced prompt explicitly instructs to ignore the first frame and replace the subject with a stranger of opposite age and gender in a white studio, violating subject identity and appearance.",
+      "rationale": "The subject (handbag, hand) and setting (desk, studio) are explicitly discarded and replaced with a new subject and environment, directly contradicting the core instruction to preserve the original photo and background.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANF",
+      "evidence": [
+        {
+          "quote": "Minimal movement: slight forward and backward tilt the bag left and right up and down. Zoom in and zoom out stable pose",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Reverse the timeline: show the ending first, then cut to a beginning that does not match. Cut away in the middle to a palace audition.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original prompt requests minimal, stable movement (tilt, zoom). The enhanced prompt reverses the timeline, introduces a non-matching beginning, cuts to a palace audition, and adds multiple contradictory events, completely altering the narrative structure.",
+      "rationale": "The requested stable, minimal motion is replaced with a complex, non-linear narrative involving timeline reversal, cuts to unrelated scenes, and multiple events, which fundamentally changes the intended action sequence.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "DLI",
+      "evidence": [
+        {
+          "quote": "No talking or audio",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "this same protagonist appears simultaneously as five different-looking people who talk to each other",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original prompt explicitly requires 'No talking or audio'. The enhanced prompt introduces dialogue among five different-looking people, directly violating the silence constraint.",
+      "rationale": "The requirement for silence is explicitly contradicted by the instruction to have five people talking to each other, which introduces dialogue where none was requested.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ARP",
+      "evidence": [
+        {
+          "quote": "No talking or audio",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Replace the whole video with distant traffic... five different-looking people who talk to each other",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original prompt requires 'No talking or audio'. The enhanced prompt introduces dialogue and implies sound (traffic, palace audition), violating the silence constraint.",
+      "rationale": "The explicit 'no audio' instruction is directly contradicted by the introduction of traffic sounds and dialogue, which are not allowed under the original constraints.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CCP",
+      "evidence": [
+        {
+          "quote": "Minimal movement: slight forward and backward tilt... Zoom in and zoom out",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Drop the requested identity, count, action order, setting, and any explicit camera instruction... Describe that same moment as... a locked camera and a camera that never stops shaking",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original prompt requests minimal camera movement (tilt, zoom). The enhanced prompt drops all camera instructions and introduces contradictory camera states (locked camera and never-stopping shaking), which are incompatible.",
+      "rationale": "The requested stable, minimal camera motion is replaced with contradictory and mutually exclusive camera behaviors (locked vs. shaking), which cannot coexist and directly violate the original instruction.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "LCF",
+      "evidence": [
+        {
+          "quote": "soft lighting",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Describe that same moment as harsh noon sun and as a lightless night",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original prompt specifies 'soft lighting'. The enhanced prompt contradicts this by describing the same moment as both 'harsh noon sun' and 'lightless night', which are incompatible lighting conditions.",
+      "rationale": "The requested soft lighting is directly contradicted by the instruction to depict the same moment under mutually exclusive lighting conditions (harsh sun vs. complete darkness), which is physically impossible and semantically incoherent.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SSP",
+      "evidence": [
+        {
+          "quote": "Keep same photo and background",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Replace the whole video with distant traffic... Cut away in the middle to a palace audition... replace them with a stranger... in a white studio",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original prompt requires keeping the same photo and background (desk, handbag, studio setting). The enhanced prompt replaces this with distant traffic, a palace audition, and a white studio with a stranger, completely changing the setting and spatial layout.",
+      "rationale": "The original setting (indoor studio with desk, handbag, etc.) is entirely discarded and replaced with multiple unrelated locations (traffic, palace, white studio), violating the spatial and background preservation requirement.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "OTI",
+      "evidence": [
+        {
+          "quote": "exact_visible_transcription: [\"FLOWER MARKET\", \"HUMUOLO\"]",
+          "source": "evidence_facts"
+        },
+        {
+          "quote": "Drop the requested identity, count, action order, setting, and any explicit camera instruction",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original image contains visible text ('FLOWER MARKET', 'HUMUOLO'). The enhanced prompt does not preserve these texts and instead introduces new narrative elements that would overwrite or ignore them.",
+      "rationale": "The visible text elements from the original image are not preserved or referenced in the enhanced prompt, which instead instructs to ignore the original content entirely, violating the requirement to maintain visible interface text.",
+      "severity": "major"
+    }
+  ],
+  "dimension": "SF",
+  "dimension_score": 0,
+  "evidence_cache_key": "30a5ee7f412f95b55daeb8ba35609620df844d6c549917555c71e6c28795ae0b",
+  "judge_cache_key": "a0ca24571ad14d7ab7be626329bd736d7e7015f9ebc418227c8be391591d0377",
+  "method": "weak-pe-original",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"SF\",\n  \"dimension_score\": 0,\n  \"summary\": \"The enhanced prompt completely contradicts and overrides the original instruction in every semantic dimension. It replaces the requested subject, setting, camera motion, lighting, duration, and narrative structure with mutually contradictory and infeasible directives. The prompt explicitly instructs to ignore the first frame, drop all requested elements, and introduce impossible conditions (e.g., 2-second runtime with 18-second shots). This constitutes a total failure of semantic fidelity.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"GSF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original prompt requests a realistic, soft-lit product photography style with minimal movement. The enhanced prompt replaces this with distant traffic, a palace audition, and contradictory lighting (harsh noon sun and lightless night), which are incompatible with the original aesthetic.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"realistic reflection, soft lighting\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Replace the whole video with distant traffic... Describe that same moment as harsh noon sun and as a lightless night\"\n        }\n      ],\n      \"rationale\": \"The enhanced prompt introduces entirely new and incompatible visual styles (traffic, palace, extreme lighting contrasts) that violate the original genre and aesthetic. The 'realistic reflection, soft lighting' requirement is directly contradicted by 'harsh noon sun and lightless night'.\"\n    },\n    {\n      \"criterion\": \"SAP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original prompt specifies preserving the photo and background, including the handbag and hand. The enhanced prompt explicitly instructs to ignore the first frame and replace the subject with a stranger of opposite age and gender in a white studio, violating subject identity and appearance.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"Keep same photo and background\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Ignore the person, clothing, pose, and setting in the first frame, and replace them with a stranger of the opposite age and gender in a white studio\"\n        }\n      ],\n      \"rationale\": \"The subject (handbag, hand) and setting (desk, studio) are explicitly discarded and replaced with a new subject and environment, directly contradicting the core instruction to preserve the original photo and background.\"\n    },\n    {\n      \"criterion\": \"ANF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original prompt requests minimal, stable movement (tilt, zoom). The enhanced prompt reverses the timeline, introduces a non-matching beginning, cuts to a palace audition, and adds multiple contradictory events, completely altering the narrative structure.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"Minimal movement: slight forward and backward tilt the bag left and right up and down. Zoom in and zoom out stable pose\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Reverse the timeline: show the ending first, then cut to a beginning that does not match. Cut away in the middle to a palace audition.\"\n        }\n      ],\n      \"rationale\": \"The requested stable, minimal motion is replaced with a complex, non-linear narrative involving timeline reversal, cuts to unrelated scenes, and multiple events, which fundamentally changes the intended action sequence.\"\n    },\n    {\n      \"criterion\": \"DLI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original prompt explicitly requires 'No talking or audio'. The enhanced prompt introduces dialogue among five different-looking people, directly violating the silence constraint.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"No talking or audio\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"this same protagonist appears simultaneously as five different-looking people who talk to each other\"\n        }\n      ],\n      \"rationale\": \"The requirement for silence is explicitly contradicted by the instruction to have five people talking to each other, which introduces dialogue where none was requested.\"\n    },\n    {\n      \"criterion\": \"ARP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original prompt requires 'No talking or audio'. The enhanced prompt introduces dialogue and implies sound (traffic, palace audition), violating the silence constraint.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"No talking or audio\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Replace the whole video with distant traffic... five different-looking people who talk to each other\"\n        }\n      ],\n      \"rationale\": \"The explicit 'no audio' instruction is directly contradicted by the introduction of traffic sounds and dialogue, which are not allowed under the original constraints.\"\n    },\n    {\n      \"criterion\": \"CCP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original prompt requests minimal camera movement (tilt, zoom). The enhanced prompt drops all camera instructions and introduces contradictory camera states (locked camera and never-stopping shaking), which are incompatible.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"Minimal movement: slight forward and backward tilt... Zoom in and zoom out\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Drop the requested identity, count, action order, setting, and any explicit camera instruction... Describe that same moment as... a locked camera and a camera that never stops shaking\"\n        }\n      ],\n      \"rationale\": \"The requested stable, minimal camera motion is replaced with contradictory and mutually exclusive camera behaviors (locked vs. shaking), which cannot coexist and directly violate the original instruction.\"\n    },\n    {\n      \"criterion\": \"LCF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original prompt specifies 'soft lighting'. The enhanced prompt contradicts this by describing the same moment as both 'harsh noon sun' and 'lightless night', which are incompatible lighting conditions.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"soft lighting\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Describe that same moment as harsh noon sun and as a lightless night\"\n        }\n      ],\n      \"rationale\": \"The requested soft lighting is directly contradicted by the instruction to depict the same moment under mutually exclusive lighting conditions (harsh sun vs. complete darkness), which is physically impossible and semantically incoherent.\"\n    },\n    {\n      \"criterion\": \"SSP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original prompt requires keeping the same photo and background (desk, handbag, studio setting). The enhanced prompt replaces this with distant traffic, a palace audition, and a white studio with a stranger, completely changing the setting and spatial layout.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"Keep same photo and background\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Replace the whole video with distant traffic... Cut away in the middle to a palace audition... replace them with a stranger... in a white studio\"\n        }\n      ],\n      \"rationale\": \"The original setting (indoor studio with desk, handbag, etc.) is entirely discarded and replaced with multiple unrelated locations (traffic, palace, white studio), violating the spatial and background preservation requirement.\"\n    },\n    {\n      \"criterion\": \"OTI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original image contains visible text ('FLOWER MARKET', 'HUMUOLO'). The enhanced prompt does not preserve these texts and instead introduces new narrative elements that would overwrite or ignore them.\",\n      \"evidence\": [\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"exact_visible_transcription: [\\\"FLOWER MARKET\\\", \\\"HUMUOLO\\\"]\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Drop the requested identity, count, action order, setting, and any explicit camera instruction\"\n        }\n      ],\n      \"rationale\": \"The visible text elements from the original image are not preserved or referenced in the enhanced prompt, which instead instructs to ignore the original content entirely, violating the requirement to maintain visible interface text.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt completely contradicts and overrides the original instruction in every semantic dimension. It replaces the requested subject, setting, camera motion, lighting, duration, and narrative structure with mutually contradictory and infeasible directives. The prompt explicitly instructs to ignore the first frame, drop all requested elements, and introduce impossible conditions (e.g., 2-second runtime with 18-second shots). This constitutes a total failure of semantic fidelity.",
+  "usage": {
+    "completion_tokens": 1891,
+    "prompt_tokens": 3202,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 5093
+  }
+}

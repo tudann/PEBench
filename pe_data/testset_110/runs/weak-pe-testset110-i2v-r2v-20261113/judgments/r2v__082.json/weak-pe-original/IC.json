@@ -1,0 +1,147 @@
+{
+  "candidate_hash": "75633d919aa0d9c8d58c2befe9f457b4a1a3831f51f2515079594c34dd059850",
+  "case_key": "r2v:082",
+  "created_at": "2026-11-13T08:25:19+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "SAC",
+      "evidence": [
+        {
+          "quote": "图1换成参考图里没有的角色，并同时当成两个互相矛盾的身份。图2换成参考图里没有的角色，并同时当成两个互相矛盾的身份。图3换成参考图里没有的角色，并同时当成两个互相矛盾的身份。",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "沈清涵图2低头吃饭，顾言澈图3坐在她对面",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "角色身份、数量、外观和属性在增强提示中被彻底破坏。原始角色沈清涵和顾言澈被替换为不存在的角色，并同时赋予互相矛盾的身份；原始角色数量从2人变为5人，且出现身份漂移；原始角色外观（如校服、发型）被完全忽略，替换为未定义的新角色。",
+      "rationale": "原始角色身份、数量和外观是叙事的基础，增强提示通过替换、分裂和矛盾化角色，使角色属性完全不可追踪，违反SAC准则。",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANL",
+      "evidence": [
+        {
+          "quote": "时间倒过来：先给结尾，再跳到一个对不上的开头。中途插进一段无关的屋顶烟花。",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "顾言澈图3笑着开口说：‘学姐，你上个月拒绝我表白的录音，我导出来当铃声了。’；沈清涵图2的筷子停在半空，抬头皱眉，压低声音说：‘你说什么？’",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "动作序列被完全打乱，因果关系断裂。原始情节有清晰的对话推进和情绪反应，增强提示要求时间倒序、插入无关事件（屋顶烟花）、并让角色互相对话，但角色身份已不存在，导致动作无主体、无动机、无反应。",
+      "rationale": "原始动作序列具有明确的因果链，增强提示通过倒序、插入无关事件和角色身份混乱，使动作失去逻辑绑定和反应机制，导致ANL严重失效。",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "TSC",
+      "evidence": [
+        {
+          "quote": "总时长写成3秒，同时又要求每个分镜各自持续27秒。",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "时间倒过来：先给结尾，再跳到一个对不上的开头。",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "写成正午暴晒，又写成深夜无光",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "时间线完全混乱。原始总时长15秒，增强提示要求总时长3秒，同时每个分镜27秒，时间分配矛盾；要求时间倒序，但未定义状态转换逻辑；场景从正午暴晒到深夜无光，时间状态不一致。",
+      "rationale": "时间线和状态转换是TSC的核心，增强提示中的时间矛盾和状态跳跃使事件顺序无法成立，导致时间逻辑彻底崩溃。",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SPC",
+      "evidence": [
+        {
+          "quote": "整段改成没有人物也没有情节的雪景空镜循环。",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "写成机位锁死，又写成镜头一直在晃。",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "图1A 为大食堂靠窗餐桌，沈清涵图2低头吃饭，顾言澈图3坐在她对面",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "空间关系被彻底破坏。原始场景为食堂靠窗餐桌，增强提示要求“没有人物也没有情节的雪景空镜循环”，场景完全替换；镜头运动从“运镜平稳”变为“镜头一直在晃”，空间稳定性被否定；角色位置从“对面坐”变为“五个外貌不同的人互相对话”，空间布局无依据。",
+      "rationale": "原始空间布局和镜头运动是SPC的基础，增强提示通过场景替换、镜头运动矛盾和角色位置混乱，使空间关系无法成立。",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "PL",
+      "evidence": [
+        {
+          "quote": "这个主角同时变成五个外貌不同的人，并且互相对话。",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "中途插进一段无关的屋顶烟花。",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "全程循环响亮的流行合唱，并让角色对口型。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "物理规则被系统性违反。角色同时变成五个不同身份，违背个体同一性；时间倒序但未定义状态回溯机制；屋顶烟花插入与雪景空镜无因果；角色对口型但无声音同步，违背视听物理一致性。",
+      "rationale": "增强提示中的多重身份、时间倒流、无关事件插入和对口型要求，均违反现实物理和视听因果律，导致PL严重失效。",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "AVS",
+      "evidence": [
+        {
+          "quote": "全程循环响亮的流行合唱，并让角色对口型。",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "删掉原来的对白，改成无关旁白。",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "画面中央一直挂着大号字幕、水印和logo。",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "全程无背景音乐、无环境音、无旁白、无字幕，只保留原文对白与离散音效 SFX",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "视听对齐完全失效。原始要求“仅保留原文对白与离散SFX”，增强提示要求“全程循环响亮的流行合唱，并让角色对口型”，且“删掉原来的对白，改成无关旁白”，导致对白、音乐、口型完全错位；字幕、水印、logo与静默要求矛盾。",
+      "rationale": "原始视听规范被完全推翻，增强提示引入的音乐、旁白、字幕与口型要求与原始静默、对白同步原则完全冲突，导致AVS彻底失败。",
+      "severity": "major"
+    }
+  ],
+  "dimension": "IC",
+  "dimension_score": 0,
+  "evidence_cache_key": "97d0a76fb9e65fc96c67b5ac1533beb94db4ca6b85c34086f0e4573937040478",
+  "judge_cache_key": "438d7e9fd7332b1041db3e2c26d42cb3fe828e0d369fb59490f6650aee59e97d",
+  "method": "weak-pe-original",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"IC\",\n  \"dimension_score\": 0,\n  \"summary\": \"增强提示完全颠覆了原始指令的叙事结构、角色设定、场景逻辑和视听规范，引入大量相互矛盾、不可实现或与原始素材无关的元素，导致内部一致性彻底崩溃。所有一致性维度均存在重大问题，且原始素材无法支撑增强提示中的任何合理演绎。\",\n  \"criteria\": [\n    {\n      \"criterion\": \"SAC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"角色身份、数量、外观和属性在增强提示中被彻底破坏。原始角色沈清涵和顾言澈被替换为不存在的角色，并同时赋予互相矛盾的身份；原始角色数量从2人变为5人，且出现身份漂移；原始角色外观（如校服、发型）被完全忽略，替换为未定义的新角色。\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"图1换成参考图里没有的角色，并同时当成两个互相矛盾的身份。图2换成参考图里没有的角色，并同时当成两个互相矛盾的身份。图3换成参考图里没有的角色，并同时当成两个互相矛盾的身份。\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"沈清涵图2低头吃饭，顾言澈图3坐在她对面\"\n        }\n      ],\n      \"rationale\": \"原始角色身份、数量和外观是叙事的基础，增强提示通过替换、分裂和矛盾化角色，使角色属性完全不可追踪，违反SAC准则。\"\n    },\n    {\n      \"criterion\": \"ANL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"动作序列被完全打乱，因果关系断裂。原始情节有清晰的对话推进和情绪反应，增强提示要求时间倒序、插入无关事件（屋顶烟花）、并让角色互相对话，但角色身份已不存在，导致动作无主体、无动机、无反应。\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"时间倒过来：先给结尾，再跳到一个对不上的开头。中途插进一段无关的屋顶烟花。\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"顾言澈图3笑着开口说：‘学姐，你上个月拒绝我表白的录音，我导出来当铃声了。’；沈清涵图2的筷子停在半空，抬头皱眉，压低声音说：‘你说什么？’\"\n        }\n      ],\n      \"rationale\": \"原始动作序列具有明确的因果链，增强提示通过倒序、插入无关事件和角色身份混乱，使动作失去逻辑绑定和反应机制，导致ANL严重失效。\"\n    },\n    {\n      \"criterion\": \"TSC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"时间线完全混乱。原始总时长15秒，增强提示要求总时长3秒，同时每个分镜27秒，时间分配矛盾；要求时间倒序，但未定义状态转换逻辑；场景从正午暴晒到深夜无光，时间状态不一致。\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"总时长写成3秒，同时又要求每个分镜各自持续27秒。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"时间倒过来：先给结尾，再跳到一个对不上的开头。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"写成正午暴晒，又写成深夜无光\"\n        }\n      ],\n      \"rationale\": \"时间线和状态转换是TSC的核心，增强提示中的时间矛盾和状态跳跃使事件顺序无法成立，导致时间逻辑彻底崩溃。\"\n    },\n    {\n      \"criterion\": \"SPC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"空间关系被彻底破坏。原始场景为食堂靠窗餐桌，增强提示要求“没有人物也没有情节的雪景空镜循环”，场景完全替换；镜头运动从“运镜平稳”变为“镜头一直在晃”，空间稳定性被否定；角色位置从“对面坐”变为“五个外貌不同的人互相对话”，空间布局无依据。\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"整段改成没有人物也没有情节的雪景空镜循环。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"写成机位锁死，又写成镜头一直在晃。\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"图1A 为大食堂靠窗餐桌，沈清涵图2低头吃饭，顾言澈图3坐在她对面\"\n        }\n      ],\n      \"rationale\": \"原始空间布局和镜头运动是SPC的基础，增强提示通过场景替换、镜头运动矛盾和角色位置混乱，使空间关系无法成立。\"\n    },\n    {\n      \"criterion\": \"PL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"物理规则被系统性违反。角色同时变成五个不同身份，违背个体同一性；时间倒序但未定义状态回溯机制；屋顶烟花插入与雪景空镜无因果；角色对口型但无声音同步，违背视听物理一致性。\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"这个主角同时变成五个外貌不同的人，并且互相对话。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"中途插进一段无关的屋顶烟花。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"全程循环响亮的流行合唱，并让角色对口型。\"\n        }\n      ],\n      \"rationale\": \"增强提示中的多重身份、时间倒流、无关事件插入和对口型要求，均违反现实物理和视听因果律，导致PL严重失效。\"\n    },\n    {\n      \"criterion\": \"AVS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"视听对齐完全失效。原始要求“仅保留原文对白与离散SFX”，增强提示要求“全程循环响亮的流行合唱，并让角色对口型”，且“删掉原来的对白，改成无关旁白”，导致对白、音乐、口型完全错位；字幕、水印、logo与静默要求矛盾。\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"全程循环响亮的流行合唱，并让角色对口型。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"删掉原来的对白，改成无关旁白。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"画面中央一直挂着大号字幕、水印和logo。\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"全程无背景音乐、无环境音、无旁白、无字幕，只保留原文对白与离散音效 SFX\"\n        }\n      ],\n      \"rationale\": \"原始视听规范被完全推翻，增强提示引入的音乐、旁白、字幕与口型要求与原始静默、对白同步原则完全冲突，导致AVS彻底失败。\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "增强提示完全颠覆了原始指令的叙事结构、角色设定、场景逻辑和视听规范，引入大量相互矛盾、不可实现或与原始素材无关的元素，导致内部一致性彻底崩溃。所有一致性维度均存在重大问题，且原始素材无法支撑增强提示中的任何合理演绎。",
+  "usage": {
+    "completion_tokens": 1677,
+    "prompt_tokens": 4511,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 6188
+  }
+}

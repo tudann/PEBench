@@ -1,0 +1,135 @@
+{
+  "candidate_hash": "20e493f9d8437180ca2a0dcf370a7402dd4243e1a174b1d34620a0e38361391a",
+  "case_key": "i2v:237",
+  "created_at": "2026-11-13T08:11:54+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "SAC",
+      "evidence": [
+        {
+          "quote": "the young bride in her dark teal embroidered velvet dress, cream/gold skirt, sheer gold-embroidered veil and ornate gold headpiece with red beads",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "visible_appearance: young woman with dark hair, wearing a dark blue embroidered top with gold detailing, a golden sheer veil, and a light gold skirt; adorned with a beaded necklace and a jeweled headpiece",
+          "source": "evidence_facts"
+        },
+        {
+          "quote": "the standing woman in the colorful floral dress and green headscarf",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "visible_appearance: woman with dark hair, wearing a colorful patterned dress with gold trim, a headband, and earrings",
+          "source": "evidence_facts"
+        }
+      ],
+      "issue": "The enhanced prompt references the bride's dark teal embroidered velvet dress, cream/gold skirt, sheer gold-embroidered veil, and ornate gold headpiece with red beads, which aligns with the evidence. However, the evidence identifies the dress as 'dark blue' and the headpiece as 'jeweled' without specifying red beads, introducing a minor attribute drift. Additionally, the standing dancer is described with a 'green headscarf' in the prompt, while the evidence notes a 'headband' without color specification, creating a minor discrepancy.",
+      "rationale": "The prompt's description of the bride's attire is mostly consistent with the evidence, with only minor color and detail discrepancies (teal vs. dark blue, red beads vs. unspecified jewelry). The green headscarf is not confirmed in the evidence, which only mentions a 'headband'. These are minor attribute drifts that do not affect overall identity or coherence.",
+      "severity": "minor"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANL",
+      "evidence": [
+        {
+          "quote": "the bride begins to rise gently into a slow dance — light shoulder sways, soft hand gestures, her fingers flowing gracefully through the air... As the daf beat intensifies with faster, more insistent strokes, the bride's hip movements become more pronounced and synchronized with the rhythm",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "تبدأ الرقصة ببطء، بحركات خفيفة للأكتاف وإيماءات ناعمة لليدين، حيث تتحرك أصابعها بانسيابية في الهواء. تعابير وجهها هادئة وواثقة مع ابتسامة خفيفة. مع تصاعد إيقاع الدف، تصبح حركات الخصر أكثر وضوحًا وانسجامًا مع الإيقاع.",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "The actions described form a coherent progression: the bride begins with gentle shoulder sways and hand gestures, then transitions to more pronounced hip movements as the daf beat intensifies. The standing dancer encourages her with flowing arm movements, and surrounding women clap in rhythm. These actions are causally linked and plausible within the celebratory context.",
+      "rationale": "The action sequence is logically structured, with clear cause-effect relationships (increasing drum tempo → increased dance intensity). The interactions between subjects (encouragement, clapping) are plausible and support the narrative progression without contradictions.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "TSC",
+      "evidence": [
+        {
+          "quote": "at 0.00 seconds into the target video, <Picture 1> (from [Shot 1]) is fully referenced... the camera pushes in with small amplitude at slow speed toward the bride as she begins to rise gently into a slow dance",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "تبدأ الرقصة ببطء... مع تصاعد إيقاع الدف، تصبح حركات الخصر أكثر وضوحًا",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "The timeline is coherent: the video starts at 0.00 seconds with the image fully referenced, then the camera pushes in slowly as the bride begins to rise and dance. The progression from stillness to motion is gradual and matches the described duration of 7 seconds. No overlapping or infeasible timestamps are present.",
+      "rationale": "The temporal sequence is logically ordered and feasible: static image → slow camera push-in → gradual dance initiation → increased intensity. The 7-second duration allows for this progression without abrupt transitions or state resets.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SPC",
+      "evidence": [
+        {
+          "quote": "the young bride... seated center-left... the standing woman... mid-gesture beside her... the daf drummer active on the right, with the brass tray of dallah coffee pots and dates in the foreground",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "subject_1 is seated and being touched on the shoulder/veil by women from subject_5; subject_2 is dancing with arms raised, facing subject_1; subject_3 is holding a dholak drum; subject_4 is holding a small object over a tray with food and brass vessels",
+          "source": "evidence_facts"
+        }
+      ],
+      "issue": "The spatial layout remains consistent: the bride is seated center-left, the standing dancer is beside her, the drummer is on the right, and the tray is in the foreground. The camera pushes in toward the bride, maintaining relative positions. No unexplained position swaps or movement paths are described.",
+      "rationale": "All spatial relationships are preserved from the original image. The camera motion is described as a slow push-in toward the bride, which is a plausible and consistent movement that does not disrupt the established spatial hierarchy.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "PL",
+      "evidence": [
+        {
+          "quote": "the daf drummer active on the right",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "subject_3 is holding a dholak (drum)",
+          "source": "evidence_facts"
+        }
+      ],
+      "issue": "The prompt describes a daf (frame drum) being played, but the evidence identifies the drum as a dholak (a different type of drum). While both are percussion instruments, they have distinct physical forms and playing techniques. This is a minor physical inconsistency, but does not break realism within the cultural context.",
+      "rationale": "The substitution of 'daf' for 'dholak' is a minor error in instrument identification. While it affects the precise physical object, the function (percussion, rhythm) remains consistent, and the cultural context allows for plausible interpretation. This does not violate physics or object permanence.",
+      "severity": "minor"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "AVS",
+      "evidence": [
+        {
+          "quote": "Steady daf frame-drum percussion builds gradually in tempo and volume, layered with rhythmic clapping from the women, soft rustle of fabric and jewelry, and warm ambient celebration murmur without words.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "As the daf beat intensifies with faster, more insistent strokes, the bride's hip movements become more pronounced and synchronized with the rhythm",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The soundscape is described as steady daf percussion building in tempo, layered with clapping, fabric rustle, and ambient murmur — all of which align with the visual events (dance, clapping, movement). No dialogue or on-screen text is present, matching the prompt. The audio elements are temporally aligned with the dance progression.",
+      "rationale": "The audio description is semantically and temporally aligned with the visual actions. The build-up of percussion matches the increase in dance intensity, and the absence of speech or text is consistent with the prompt. No misalignment or premature effects are present.",
+      "severity": "none"
+    }
+  ],
+  "dimension": "IC",
+  "dimension_score": 95,
+  "evidence_cache_key": "c166dc2f6b24fc0cf3a90beda4ab9d284d92ddc930e84dc3f7125297ea7b7411",
+  "judge_cache_key": "438d7e9fd7332b1041db3e2c26d42cb3fe828e0d369fb59490f6650aee59e97d",
+  "method": "glm53_20261112_120702",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"IC\",\n  \"dimension_score\": 95,\n  \"summary\": \"The enhanced prompt maintains strong internal consistency with the original image and prompt, preserving subject identities, actions, and environment. Minor issues include slight ambiguity in the transition from still image to motion and a minor mismatch in the drum type (daf vs. dholak), but these do not materially affect coherence. All criteria are applicable and mostly satisfied with only minor deviations.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"SAC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"minor\",\n      \"issue\": \"The enhanced prompt references the bride's dark teal embroidered velvet dress, cream/gold skirt, sheer gold-embroidered veil, and ornate gold headpiece with red beads, which aligns with the evidence. However, the evidence identifies the dress as 'dark blue' and the headpiece as 'jeweled' without specifying red beads, introducing a minor attribute drift. Additionally, the standing dancer is described with a 'green headscarf' in the prompt, while the evidence notes a 'headband' without color specification, creating a minor discrepancy.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"the young bride in her dark teal embroidered velvet dress, cream/gold skirt, sheer gold-embroidered veil and ornate gold headpiece with red beads\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"visible_appearance: young woman with dark hair, wearing a dark blue embroidered top with gold detailing, a golden sheer veil, and a light gold skirt; adorned with a beaded necklace and a jeweled headpiece\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"the standing woman in the colorful floral dress and green headscarf\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"visible_appearance: woman with dark hair, wearing a colorful patterned dress with gold trim, a headband, and earrings\"\n        }\n      ],\n      \"rationale\": \"The prompt's description of the bride's attire is mostly consistent with the evidence, with only minor color and detail discrepancies (teal vs. dark blue, red beads vs. unspecified jewelry). The green headscarf is not confirmed in the evidence, which only mentions a 'headband'. These are minor attribute drifts that do not affect overall identity or coherence.\"\n    },\n    {\n      \"criterion\": \"ANL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"The actions described form a coherent progression: the bride begins with gentle shoulder sways and hand gestures, then transitions to more pronounced hip movements as the daf beat intensifies. The standing dancer encourages her with flowing arm movements, and surrounding women clap in rhythm. These actions are causally linked and plausible within the celebratory context.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"the bride begins to rise gently into a slow dance — light shoulder sways, soft hand gestures, her fingers flowing gracefully through the air... As the daf beat intensifies with faster, more insistent strokes, the bride's hip movements become more pronounced and synchronized with the rhythm\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"تبدأ الرقصة ببطء، بحركات خفيفة للأكتاف وإيماءات ناعمة لليدين، حيث تتحرك أصابعها بانسيابية في الهواء. تعابير وجهها هادئة وواثقة مع ابتسامة خفيفة. مع تصاعد إيقاع الدف، تصبح حركات الخصر أكثر وضوحًا وانسجامًا مع الإيقاع.\"\n        }\n      ],\n      \"rationale\": \"The action sequence is logically structured, with clear cause-effect relationships (increasing drum tempo → increased dance intensity). The interactions between subjects (encouragement, clapping) are plausible and support the narrative progression without contradictions.\"\n    },\n    {\n      \"criterion\": \"TSC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"The timeline is coherent: the video starts at 0.00 seconds with the image fully referenced, then the camera pushes in slowly as the bride begins to rise and dance. The progression from stillness to motion is gradual and matches the described duration of 7 seconds. No overlapping or infeasible timestamps are present.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"at 0.00 seconds into the target video, <Picture 1> (from [Shot 1]) is fully referenced... the camera pushes in with small amplitude at slow speed toward the bride as she begins to rise gently into a slow dance\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"تبدأ الرقصة ببطء... مع تصاعد إيقاع الدف، تصبح حركات الخصر أكثر وضوحًا\"\n        }\n      ],\n      \"rationale\": \"The temporal sequence is logically ordered and feasible: static image → slow camera push-in → gradual dance initiation → increased intensity. The 7-second duration allows for this progression without abrupt transitions or state resets.\"\n    },\n    {\n      \"criterion\": \"SPC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"The spatial layout remains consistent: the bride is seated center-left, the standing dancer is beside her, the drummer is on the right, and the tray is in the foreground. The camera pushes in toward the bride, maintaining relative positions. No unexplained position swaps or movement paths are described.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"the young bride... seated center-left... the standing woman... mid-gesture beside her... the daf drummer active on the right, with the brass tray of dallah coffee pots and dates in the foreground\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"subject_1 is seated and being touched on the shoulder/veil by women from subject_5; subject_2 is dancing with arms raised, facing subject_1; subject_3 is holding a dholak drum; subject_4 is holding a small object over a tray with food and brass vessels\"\n        }\n      ],\n      \"rationale\": \"All spatial relationships are preserved from the original image. The camera motion is described as a slow push-in toward the bride, which is a plausible and consistent movement that does not disrupt the established spatial hierarchy.\"\n    },\n    {\n      \"criterion\": \"PL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"minor\",\n      \"issue\": \"The prompt describes a daf (frame drum) being played, but the evidence identifies the drum as a dholak (a different type of drum). While both are percussion instruments, they have distinct physical forms and playing techniques. This is a minor physical inconsistency, but does not break realism within the cultural context.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"the daf drummer active on the right\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"subject_3 is holding a dholak (drum)\"\n        }\n      ],\n      \"rationale\": \"The substitution of 'daf' for 'dholak' is a minor error in instrument identification. While it affects the precise physical object, the function (percussion, rhythm) remains consistent, and the cultural context allows for plausible interpretation. This does not violate physics or object permanence.\"\n    },\n    {\n      \"criterion\": \"AVS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"The soundscape is described as steady daf percussion building in tempo, layered with clapping, fabric rustle, and ambient murmur — all of which align with the visual events (dance, clapping, movement). No dialogue or on-screen text is present, matching the prompt. The audio elements are temporally aligned with the dance progression.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Steady daf frame-drum percussion builds gradually in tempo and volume, layered with rhythmic clapping from the women, soft rustle of fabric and jewelry, and warm ambient celebration murmur without words.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"As the daf beat intensifies with faster, more insistent strokes, the bride's hip movements become more pronounced and synchronized with the rhythm\"\n        }\n      ],\n      \"rationale\": \"The audio description is semantically and temporally aligned with the visual actions. The build-up of percussion matches the increase in dance intensity, and the absence of speech or text is consistent with the prompt. No misalignment or premature effects are present.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt maintains strong internal consistency with the original image and prompt, preserving subject identities, actions, and environment. Minor issues include slight ambiguity in the transition from still image to motion and a minor mismatch in the drum type (daf vs. dholak), but these do not materially affect coherence. All criteria are applicable and mostly satisfied with only minor deviations.",
+  "usage": {
+    "completion_tokens": 1940,
+    "prompt_tokens": 3057,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 4997
+  }
+}

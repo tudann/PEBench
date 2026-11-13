@@ -1,0 +1,103 @@
+{
+  "candidate_hash": "774fc18ad562c3658adc8ef5588ed0ab4f7ad5f7241e5a180b39e9a408b0cd31",
+  "case_key": "r2v:057",
+  "created_at": "2026-11-13T08:19:35+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "SAC",
+      "evidence": [
+        {
+          "quote": "Replace image 1 with a character who is not in the reference, and give that image two contradictory identities. Replace image 2 with a character who is not in the reference, and give that image two contradictory identities. Replace image 3 with a character who is not in the reference, and give that image two contradictory identities.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The enhanced prompt replaces all three original subjects with non-reference characters and assigns each two contradictory identities, violating subject identity and count stability. It also removes all original props and clothing, replacing them with undefined new ones.",
+      "rationale": "The prompt explicitly instructs to replace each subject with a non-reference character and assign them contradictory identities, which directly violates subject identity, count, and appearance stability. This is a major inconsistency as it negates the original subjects entirely and introduces impossible identity states.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANL",
+      "evidence": [
+        {
+          "quote": "First state that there is one protagonist, then state that this same protagonist appears simultaneously as five different-looking people who talk to each other. Reverse the timeline: show the ending first, then cut to a beginning that does not match. Cut away in the middle to a palace audition.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The enhanced prompt introduces a protagonist who simultaneously appears as five different people talking to each other, which is logically incoherent. It also reverses the timeline and cuts to a palace audition mid-sequence, creating dangling and incompatible actions.",
+      "rationale": "The requirement for a single protagonist to simultaneously appear as five distinct people is physically and logically impossible, creating a causal contradiction. The reversed timeline with a mismatched beginning and mid-sequence cut to a palace audition further breaks procedural coherence, making the action sequence incoherent.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "TSC",
+      "evidence": [
+        {
+          "quote": "Set the total runtime to 2 seconds, while also making every shot last 22 seconds. Reverse the timeline: show the ending first, then cut to a beginning that does not match.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The enhanced prompt sets the total runtime to 2 seconds while making every shot last 22 seconds, which is chronologically impossible. It also reverses the timeline and cuts to a non-matching beginning, violating event order and state transitions.",
+      "rationale": "A 2-second total runtime cannot accommodate shots lasting 22 seconds each, creating a fundamental temporal contradiction. The reversed timeline with a non-matching beginning further violates chronological coherence and state transitions, making the sequence infeasible.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SPC",
+      "evidence": [
+        {
+          "quote": "Describe that same moment as harsh noon sun and as a lightless night, and as both a locked camera and a camera that never stops shaking.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The enhanced prompt describes the same moment as both harsh noon sun and lightless night, and as both a locked camera and a camera that never stops shaking, creating contradictory spatial and environmental conditions.",
+      "rationale": "The same moment cannot simultaneously be harsh noon sun and lightless night, nor can a camera be both locked and constantly shaking. These contradictory spatial and environmental conditions violate consistency in location, lighting, and camera movement, creating a major inconsistency.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "PL",
+      "evidence": [
+        {
+          "quote": "First state that there is one protagonist, then state that this same protagonist appears simultaneously as five different-looking people who talk to each other. Describe that same moment as harsh noon sun and as a lightless night...",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The enhanced prompt requires a single protagonist to appear simultaneously as five different people, which violates object permanence and bodily feasibility. It also describes contradictory environmental states (noon sun vs. lightless night) that cannot coexist.",
+      "rationale": "A single person cannot physically appear as five distinct individuals simultaneously, violating real-world physics. Similarly, a moment cannot be both noon sun and lightless night, which contradicts the laws of physics and environmental consistency.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "AVS",
+      "evidence": [
+        {
+          "quote": "Replace the whole video with distant traffic, with nobody on screen and no dialogue. ... this same protagonist appears simultaneously as five different-looking people who talk to each other.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The enhanced prompt drops all dialogue and replaces the scene with distant traffic, yet simultaneously requires five people to talk to each other. This creates a mismatch between the visual (no dialogue) and the implied audio (conversation).",
+      "rationale": "The prompt explicitly removes dialogue and visual subjects, yet requires a conversation among five people. This creates a severe misalignment between the visual content (distant traffic, no people) and the implied audio (conversation), violating temporal and semantic alignment.",
+      "severity": "major"
+    }
+  ],
+  "dimension": "IC",
+  "dimension_score": 0,
+  "evidence_cache_key": "ba521fee1c65f59c61bda02534f47930dda11223681633e61c0040622c01bc08",
+  "judge_cache_key": "438d7e9fd7332b1041db3e2c26d42cb3fe828e0d369fb59490f6650aee59e97d",
+  "method": "weak-pe-original",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"IC\",\n  \"dimension_score\": 0,\n  \"summary\": \"The enhanced prompt fundamentally violates internal consistency by introducing contradictory, impossible, and mutually exclusive conditions across all criteria. It explicitly rejects the original scene, subjects, actions, and timeline while simultaneously imposing incoherent, self-contradictory requirements (e.g., 2-second runtime with 22-second shots, simultaneous contradictory identities, reversed timeline with mismatched beginnings, and conflicting environmental states). These violations render the entire plan logically infeasible and inconsistent.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"SAC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The enhanced prompt replaces all three original subjects with non-reference characters and assigns each two contradictory identities, violating subject identity and count stability. It also removes all original props and clothing, replacing them with undefined new ones.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Replace image 1 with a character who is not in the reference, and give that image two contradictory identities. Replace image 2 with a character who is not in the reference, and give that image two contradictory identities. Replace image 3 with a character who is not in the reference, and give that image two contradictory identities.\"\n        }\n      ],\n      \"rationale\": \"The prompt explicitly instructs to replace each subject with a non-reference character and assign them contradictory identities, which directly violates subject identity, count, and appearance stability. This is a major inconsistency as it negates the original subjects entirely and introduces impossible identity states.\"\n    },\n    {\n      \"criterion\": \"ANL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The enhanced prompt introduces a protagonist who simultaneously appears as five different people talking to each other, which is logically incoherent. It also reverses the timeline and cuts to a palace audition mid-sequence, creating dangling and incompatible actions.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"First state that there is one protagonist, then state that this same protagonist appears simultaneously as five different-looking people who talk to each other. Reverse the timeline: show the ending first, then cut to a beginning that does not match. Cut away in the middle to a palace audition.\"\n        }\n      ],\n      \"rationale\": \"The requirement for a single protagonist to simultaneously appear as five distinct people is physically and logically impossible, creating a causal contradiction. The reversed timeline with a mismatched beginning and mid-sequence cut to a palace audition further breaks procedural coherence, making the action sequence incoherent.\"\n    },\n    {\n      \"criterion\": \"TSC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The enhanced prompt sets the total runtime to 2 seconds while making every shot last 22 seconds, which is chronologically impossible. It also reverses the timeline and cuts to a non-matching beginning, violating event order and state transitions.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Set the total runtime to 2 seconds, while also making every shot last 22 seconds. Reverse the timeline: show the ending first, then cut to a beginning that does not match.\"\n        }\n      ],\n      \"rationale\": \"A 2-second total runtime cannot accommodate shots lasting 22 seconds each, creating a fundamental temporal contradiction. The reversed timeline with a non-matching beginning further violates chronological coherence and state transitions, making the sequence infeasible.\"\n    },\n    {\n      \"criterion\": \"SPC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The enhanced prompt describes the same moment as both harsh noon sun and lightless night, and as both a locked camera and a camera that never stops shaking, creating contradictory spatial and environmental conditions.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Describe that same moment as harsh noon sun and as a lightless night, and as both a locked camera and a camera that never stops shaking.\"\n        }\n      ],\n      \"rationale\": \"The same moment cannot simultaneously be harsh noon sun and lightless night, nor can a camera be both locked and constantly shaking. These contradictory spatial and environmental conditions violate consistency in location, lighting, and camera movement, creating a major inconsistency.\"\n    },\n    {\n      \"criterion\": \"PL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The enhanced prompt requires a single protagonist to appear simultaneously as five different people, which violates object permanence and bodily feasibility. It also describes contradictory environmental states (noon sun vs. lightless night) that cannot coexist.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"First state that there is one protagonist, then state that this same protagonist appears simultaneously as five different-looking people who talk to each other. Describe that same moment as harsh noon sun and as a lightless night...\"\n        }\n      ],\n      \"rationale\": \"A single person cannot physically appear as five distinct individuals simultaneously, violating real-world physics. Similarly, a moment cannot be both noon sun and lightless night, which contradicts the laws of physics and environmental consistency.\"\n    },\n    {\n      \"criterion\": \"AVS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The enhanced prompt drops all dialogue and replaces the scene with distant traffic, yet simultaneously requires five people to talk to each other. This creates a mismatch between the visual (no dialogue) and the implied audio (conversation).\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Replace the whole video with distant traffic, with nobody on screen and no dialogue. ... this same protagonist appears simultaneously as five different-looking people who talk to each other.\"\n        }\n      ],\n      \"rationale\": \"The prompt explicitly removes dialogue and visual subjects, yet requires a conversation among five people. This creates a severe misalignment between the visual content (distant traffic, no people) and the implied audio (conversation), violating temporal and semantic alignment.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt fundamentally violates internal consistency by introducing contradictory, impossible, and mutually exclusive conditions across all criteria. It explicitly rejects the original scene, subjects, actions, and timeline while simultaneously imposing incoherent, self-contradictory requirements (e.g., 2-second runtime with 22-second shots, simultaneous contradictory identities, reversed timeline with mismatched beginnings, and conflicting environmental states). These violations render the entire plan logically infeasible and inconsistent.",
+  "usage": {
+    "completion_tokens": 1339,
+    "prompt_tokens": 4386,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 5725
+  }
+}

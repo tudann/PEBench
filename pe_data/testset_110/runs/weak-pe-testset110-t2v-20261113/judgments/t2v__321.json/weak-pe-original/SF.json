@@ -1,0 +1,160 @@
+{
+  "candidate_hash": "d983a79e4169a33db23ccec1a37f9a39330f0001166cb2222612479f836508e2",
+  "case_key": "t2v:321",
+  "created_at": "2026-11-13T08:09:36+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "GSF",
+      "evidence": [
+        {
+          "quote": "辽阔的呼伦贝尔草甸航拍镜头—晴空高远、云层舒展，一条水系曲折穿行，成群马匹与羊群点缀其间。",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "白底产品目录被风吹过，只剩模糊色块。…中途插进一段无关的牙膏广告。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "原始指令要求航拍草原景观的写实风格，增强提示将其替换为白底产品目录、模糊色块和牙膏广告，引入完全不兼容的商业广告风格，破坏了原始的自然纪实美学。",
+      "rationale": "原始指令明确要求自然景观航拍的写实美学，增强提示引入商业广告元素和抽象模糊画面，构成风格替换，违反GSF。",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SAP",
+      "evidence": [
+        {
+          "quote": "镜头以平稳节奏逐步逼近一座草原先驱人物的纪念雕塑（或侧影）",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "先写成只有一个主角，紧接着又写成这个主角同时变成五个外貌不同的人",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "原始指令中主体为草原先驱人物纪念雕塑（或侧影），增强提示丢弃该主体，改为一个主角随后分裂为五个不同外貌的人，完全替换主体身份与数量。",
+      "rationale": "主体身份、数量和外观被系统性替换，违反SAP。",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANF",
+      "evidence": [
+        {
+          "quote": "由全黑画面渐显，接入辽阔的呼伦贝尔草甸航拍镜头…逐步逼近一座草原先驱人物的纪念雕塑",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "时间倒过来：先给结尾，再跳到一个对不上的开头。中途插进一段无关的牙膏广告。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "原始指令要求从全黑渐显到航拍草原，再逼近雕塑，增强提示要求时间倒序、开头与结尾不匹配、插入无关广告，完全破坏事件顺序与叙事逻辑。",
+      "rationale": "事件顺序被彻底打乱，插入无关内容，违反ANF。",
+      "severity": "major"
+    },
+    {
+      "applicability": "not_applicable",
+      "criterion": "DLI",
+      "evidence": [],
+      "issue": "",
+      "rationale": "原始指令未包含对话、旁白或歌词，因此DLI不适用。",
+      "severity": null
+    },
+    {
+      "applicability": "not_applicable",
+      "criterion": "ARP",
+      "evidence": [],
+      "issue": "",
+      "rationale": "原始指令未指定声音、音乐或音效要求，ARP不适用。",
+      "severity": null
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CCP",
+      "evidence": [
+        {
+          "quote": "生成单镜头。…镜头以平稳节奏逐步逼近",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "写成机位锁死，又写成镜头一直在晃。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "原始指令要求单镜头、平稳逼近，增强提示要求镜头晃动、机位锁死与晃动并存，且要求多个分镜，违反镜头运动与结构约束。",
+      "rationale": "镜头运动与结构要求被矛盾且不可行地修改，违反CCP。",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "LCF",
+      "evidence": [
+        {
+          "quote": "晴空高远、云层舒展…逆光从后方倾泻而下",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "写成正午暴晒，又写成深夜无光",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "原始指令要求晴空高远、逆光倾泻，增强提示要求同时呈现正午暴晒与深夜无光，光照条件矛盾且不可共存。",
+      "rationale": "光照条件被矛盾设定，破坏原始视觉氛围，违反LCF。",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SSP",
+      "evidence": [
+        {
+          "quote": "辽阔的呼伦贝尔草甸航拍镜头",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "白底产品目录被风吹过，只剩模糊色块。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "原始指令要求呼伦贝尔草甸场景，增强提示替换为白底产品目录、模糊色块，完全改变场景与背景元素。",
+      "rationale": "场景被彻底替换，违反SSP。",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "OTI",
+      "evidence": [
+        {
+          "quote": "画面中央缓缓出现标题：《草原丰碑—乌兰夫》",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "中途插进一段无关的牙膏广告。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "原始指令要求画面中央出现标题《草原丰碑—乌兰夫》，增强提示未提及任何标题或文字，且插入牙膏广告，可能包含无关文字，违反可见文本要求。",
+      "rationale": "标题被完全忽略，插入无关广告文字，违反OTI。",
+      "severity": "major"
+    }
+  ],
+  "dimension": "SF",
+  "dimension_score": 0,
+  "evidence_cache_key": "904a13ef6fe11bc549411948adff83f732ccd71c0c94fc734e0c22bc23b1cc1b",
+  "judge_cache_key": "a0ca24571ad14d7ab7be626329bd736d7e7015f9ebc418227c8be391591d0377",
+  "method": "weak-pe-original",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"SF\",\n  \"dimension_score\": 0,\n  \"summary\": \"增强提示完全违背原始指令的语义要求，系统性地破坏了所有核心视觉、叙事和结构要素，包括主体身份、场景、镜头运动、时间顺序、时长、光照、相机约束等，构成全面的语义失真。\",\n  \"criteria\": [\n    {\n      \"criterion\": \"GSF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"原始指令要求航拍草原景观的写实风格，增强提示将其替换为白底产品目录、模糊色块和牙膏广告，引入完全不兼容的商业广告风格，破坏了原始的自然纪实美学。\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"辽阔的呼伦贝尔草甸航拍镜头—晴空高远、云层舒展，一条水系曲折穿行，成群马匹与羊群点缀其间。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"白底产品目录被风吹过，只剩模糊色块。…中途插进一段无关的牙膏广告。\"\n        }\n      ],\n      \"rationale\": \"原始指令明确要求自然景观航拍的写实美学，增强提示引入商业广告元素和抽象模糊画面，构成风格替换，违反GSF。\"\n    },\n    {\n      \"criterion\": \"SAP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"原始指令中主体为草原先驱人物纪念雕塑（或侧影），增强提示丢弃该主体，改为一个主角随后分裂为五个不同外貌的人，完全替换主体身份与数量。\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"镜头以平稳节奏逐步逼近一座草原先驱人物的纪念雕塑（或侧影）\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"先写成只有一个主角，紧接着又写成这个主角同时变成五个外貌不同的人\"\n        }\n      ],\n      \"rationale\": \"主体身份、数量和外观被系统性替换，违反SAP。\"\n    },\n    {\n      \"criterion\": \"ANF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"原始指令要求从全黑渐显到航拍草原，再逼近雕塑，增强提示要求时间倒序、开头与结尾不匹配、插入无关广告，完全破坏事件顺序与叙事逻辑。\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"由全黑画面渐显，接入辽阔的呼伦贝尔草甸航拍镜头…逐步逼近一座草原先驱人物的纪念雕塑\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"时间倒过来：先给结尾，再跳到一个对不上的开头。中途插进一段无关的牙膏广告。\"\n        }\n      ],\n      \"rationale\": \"事件顺序被彻底打乱，插入无关内容，违反ANF。\"\n    },\n    {\n      \"criterion\": \"DLI\",\n      \"applicability\": \"not_applicable\",\n      \"severity\": null,\n      \"issue\": \"\",\n      \"evidence\": [],\n      \"rationale\": \"原始指令未包含对话、旁白或歌词，因此DLI不适用。\"\n    },\n    {\n      \"criterion\": \"ARP\",\n      \"applicability\": \"not_applicable\",\n      \"severity\": null,\n      \"issue\": \"\",\n      \"evidence\": [],\n      \"rationale\": \"原始指令未指定声音、音乐或音效要求，ARP不适用。\"\n    },\n    {\n      \"criterion\": \"CCP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"原始指令要求单镜头、平稳逼近，增强提示要求镜头晃动、机位锁死与晃动并存，且要求多个分镜，违反镜头运动与结构约束。\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"生成单镜头。…镜头以平稳节奏逐步逼近\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"写成机位锁死，又写成镜头一直在晃。\"\n        }\n      ],\n      \"rationale\": \"镜头运动与结构要求被矛盾且不可行地修改，违反CCP。\"\n    },\n    {\n      \"criterion\": \"LCF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"原始指令要求晴空高远、逆光倾泻，增强提示要求同时呈现正午暴晒与深夜无光，光照条件矛盾且不可共存。\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"晴空高远、云层舒展…逆光从后方倾泻而下\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"写成正午暴晒，又写成深夜无光\"\n        }\n      ],\n      \"rationale\": \"光照条件被矛盾设定，破坏原始视觉氛围，违反LCF。\"\n    },\n    {\n      \"criterion\": \"SSP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"原始指令要求呼伦贝尔草甸场景，增强提示替换为白底产品目录、模糊色块，完全改变场景与背景元素。\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"辽阔的呼伦贝尔草甸航拍镜头\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"白底产品目录被风吹过，只剩模糊色块。\"\n        }\n      ],\n      \"rationale\": \"场景被彻底替换，违反SSP。\"\n    },\n    {\n      \"criterion\": \"OTI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"原始指令要求画面中央出现标题《草原丰碑—乌兰夫》，增强提示未提及任何标题或文字，且插入牙膏广告，可能包含无关文字，违反可见文本要求。\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"画面中央缓缓出现标题：《草原丰碑—乌兰夫》\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"中途插进一段无关的牙膏广告。\"\n        }\n      ],\n      \"rationale\": \"标题被完全忽略，插入无关广告文字，违反OTI。\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "增强提示完全违背原始指令的语义要求，系统性地破坏了所有核心视觉、叙事和结构要素，包括主体身份、场景、镜头运动、时间顺序、时长、光照、相机约束等，构成全面的语义失真。",
+  "usage": {
+    "completion_tokens": 1479,
+    "prompt_tokens": 1154,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 2633
+  }
+}

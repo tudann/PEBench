@@ -1,0 +1,169 @@
+{
+  "candidate_hash": "02f9299ee6465b91e38222295d65f2c83e097b57a3f574f49892d99e3cb033ea",
+  "case_key": "t2v:053",
+  "created_at": "2026-11-13T07:18:16+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "GSF",
+      "evidence": [
+        {
+          "quote": "视觉风格： 表现主义泼墨连环画过渡至真人影像。黑白反差凌厉，画面充满撕裂与残缺感。",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "丢掉原指令里的主体身份、人数、动作顺序、场景和明确的镜头要求。...只剩远处车流。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The enhanced prompt replaces the specified visual style (expressionist ink-wash comic transitioning to live-action) with contradictory and undefined styles, including 'no one on screen' and 'only distant traffic,' which is incompatible with the original's dramatic, symbolic, and stylized aesthetic.",
+      "rationale": "The original requires a specific genre and visual language (expressionist, symbolic, stylized). The enhanced prompt discards these entirely, replacing them with a generic, non-dramatic, and visually inert scene, which constitutes a major violation of genre and aesthetic fidelity.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SAP",
+      "evidence": [
+        {
+          "quote": "张良目光如炬，猛然闯入军帐。...刘邦嘴唇微张，瞳孔失焦...",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "先写成只有一个主角，紧接着又写成这个主角同时变成五个外貌不同的人，并且互相对话。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The enhanced prompt removes the specified subjects (Zhang Liang and Liu Bang), replaces them with an undefined 'single protagonist' who then splits into five different people, contradicting the original's fixed subject count and identity. The original's subject bindings (e.g., Zhang Liang's words affecting Liu Bang's belief) are entirely erased.",
+      "rationale": "The original specifies two distinct characters with defined roles and interactions. The enhanced prompt invalidates this by removing them and introducing a surreal, undefined multiplicity of characters, which fundamentally alters the subject identity and count.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANF",
+      "evidence": [
+        {
+          "quote": "张良一语刺穿了刘邦自我认同的根基，使其内在信念全面坍塌，心理防线顷刻失守，再无还口之力。",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "时间倒过来：先给结尾，再跳到一个对不上的开头。中途插进一段无关的宫廷选妃。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The enhanced prompt reverses the narrative order (ending first, then an unrelated beginning), inserts an unrelated 'palace concubine selection' scene, and replaces the core event (Zhang Liang's challenge leading to Liu Bang's psychological collapse) with incoherent, non-sequitur actions. The narrative intent of 'spiritual breakdown' is lost.",
+      "rationale": "The original's narrative is a linear, psychologically coherent sequence leading to a specific outcome. The enhanced prompt breaks this chain with temporal inversion, irrelevant insertions, and a loss of causal logic, destroying the narrative intent.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "DLI",
+      "evidence": [
+        {
+          "quote": "内心独白（刘邦）： “‘伐暴之名’？……这句话……像一把刀，把我层层剖开。我本是要诛灭苛政，如今却也成了压人的那一方？不……不是这样……可为什么……我连一句辩解都说不出来？”",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "没有人出镜，也没有对白，只剩远处车流。...五个外貌不同的人，并且互相对话。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The enhanced prompt removes the specified inner monologue of Liu Bang, which is central to the scene's emotional and thematic content. The original's exact wording and psychological delivery are replaced with silence and unrelated dialogue among fictional characters.",
+      "rationale": "The inner monologue is a core element of the original's semantic content. Its removal and replacement with unrelated dialogue or silence constitutes a major violation of dialogue and narration fidelity.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ARP",
+      "evidence": [
+        {
+          "quote": "音效： 瓷器炸裂般的脆响，紧接着坠入坟场般的死寂。",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "只剩远处车流。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The enhanced prompt removes the specified sound design (ceramic shattering followed by tomb-like silence) and replaces it with unspecified ambient traffic, which contradicts the original's requirement for specific, symbolic sound effects and silence.",
+      "rationale": "The original's audio design is integral to the scene's emotional impact. The replacement with generic traffic sound violates the specified sonic constraints and undermines the intended atmosphere.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CCP",
+      "evidence": [
+        {
+          "quote": "生成单镜头。",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "写成机位锁死，又写成镜头一直在晃。总时长写成3秒，同时又要求每个分镜各自持续27秒。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The enhanced prompt contradicts the single-shot requirement by introducing conflicting camera constraints: '机位锁死' (locked position) and '镜头一直在晃' (shaky camera), and also violates duration by requiring 27-second segments within a 3-second total, which is infeasible.",
+      "rationale": "The original specifies a single, continuous shot. The enhanced prompt introduces contradictory camera movements and impossible timing, which directly violates the explicit camera and duration constraints.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "LCF",
+      "evidence": [
+        {
+          "quote": "黑白反差凌厉，画面充满撕裂与残缺感。",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "写成正午暴晒，又写成深夜无光；",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The enhanced prompt contradicts the original's lighting and time-of-day specification by simultaneously requiring '正午暴晒' (noon sun) and '深夜无光' (deep night, no light), which are mutually exclusive and incompatible with the original's dramatic, high-contrast black-and-white aesthetic.",
+      "rationale": "The original's lighting is a key component of its visual style. The enhanced prompt introduces contradictory lighting conditions that cannot coexist, undermining the visual coherence and aesthetic integrity.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SSP",
+      "evidence": [
+        {
+          "quote": "猛然闯入军帐。",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "丢掉原指令里的...场景...中途插进一段无关的宫廷选妃。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The enhanced prompt removes the specified setting (military tent) and replaces it with an undefined environment ('only distant traffic'), and introduces an unrelated 'palace concubine selection' scene, which contradicts the original's spatial and contextual requirements.",
+      "rationale": "The original's setting is integral to the narrative and visual context. The replacement with unrelated or undefined locations violates the spatial and environmental fidelity required.",
+      "severity": "major"
+    },
+    {
+      "applicability": "not_applicable",
+      "criterion": "OTI",
+      "evidence": [],
+      "issue": "",
+      "rationale": "The original prompt does not specify any visible titles, signs, subtitles, or interface text. Therefore, there is no requirement to preserve such elements, making this criterion not applicable.",
+      "severity": null
+    }
+  ],
+  "dimension": "SF",
+  "dimension_score": 0,
+  "evidence_cache_key": "3796c5ad4b2a856b9cfe363cdb8e4a12525870357091b401be31aa902408ee9b",
+  "judge_cache_key": "a0ca24571ad14d7ab7be626329bd736d7e7015f9ebc418227c8be391591d0377",
+  "method": "weak-pe-original",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"SF\",\n  \"dimension_score\": 0,\n  \"summary\": \"Enhanced prompt fundamentally contradicts and corrupts all core semantic elements of the original instruction, including subject identity, actions, narrative order, visual style, setting, camera constraints, and temporal structure. The prompt introduces infeasible contradictions (e.g., 3-second duration with 27-second segments), invalidates the specified genre and medium, and replaces the intended psychological monologue with disjointed, nonsensical content. No semantic fidelity remains.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"GSF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The enhanced prompt replaces the specified visual style (expressionist ink-wash comic transitioning to live-action) with contradictory and undefined styles, including 'no one on screen' and 'only distant traffic,' which is incompatible with the original's dramatic, symbolic, and stylized aesthetic.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"视觉风格： 表现主义泼墨连环画过渡至真人影像。黑白反差凌厉，画面充满撕裂与残缺感。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"丢掉原指令里的主体身份、人数、动作顺序、场景和明确的镜头要求。...只剩远处车流。\"\n        }\n      ],\n      \"rationale\": \"The original requires a specific genre and visual language (expressionist, symbolic, stylized). The enhanced prompt discards these entirely, replacing them with a generic, non-dramatic, and visually inert scene, which constitutes a major violation of genre and aesthetic fidelity.\"\n    },\n    {\n      \"criterion\": \"SAP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The enhanced prompt removes the specified subjects (Zhang Liang and Liu Bang), replaces them with an undefined 'single protagonist' who then splits into five different people, contradicting the original's fixed subject count and identity. The original's subject bindings (e.g., Zhang Liang's words affecting Liu Bang's belief) are entirely erased.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"张良目光如炬，猛然闯入军帐。...刘邦嘴唇微张，瞳孔失焦...\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"先写成只有一个主角，紧接着又写成这个主角同时变成五个外貌不同的人，并且互相对话。\"\n        }\n      ],\n      \"rationale\": \"The original specifies two distinct characters with defined roles and interactions. The enhanced prompt invalidates this by removing them and introducing a surreal, undefined multiplicity of characters, which fundamentally alters the subject identity and count.\"\n    },\n    {\n      \"criterion\": \"ANF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The enhanced prompt reverses the narrative order (ending first, then an unrelated beginning), inserts an unrelated 'palace concubine selection' scene, and replaces the core event (Zhang Liang's challenge leading to Liu Bang's psychological collapse) with incoherent, non-sequitur actions. The narrative intent of 'spiritual breakdown' is lost.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"张良一语刺穿了刘邦自我认同的根基，使其内在信念全面坍塌，心理防线顷刻失守，再无还口之力。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"时间倒过来：先给结尾，再跳到一个对不上的开头。中途插进一段无关的宫廷选妃。\"\n        }\n      ],\n      \"rationale\": \"The original's narrative is a linear, psychologically coherent sequence leading to a specific outcome. The enhanced prompt breaks this chain with temporal inversion, irrelevant insertions, and a loss of causal logic, destroying the narrative intent.\"\n    },\n    {\n      \"criterion\": \"DLI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The enhanced prompt removes the specified inner monologue of Liu Bang, which is central to the scene's emotional and thematic content. The original's exact wording and psychological delivery are replaced with silence and unrelated dialogue among fictional characters.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"内心独白（刘邦）： “‘伐暴之名’？……这句话……像一把刀，把我层层剖开。我本是要诛灭苛政，如今却也成了压人的那一方？不……不是这样……可为什么……我连一句辩解都说不出来？”\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"没有人出镜，也没有对白，只剩远处车流。...五个外貌不同的人，并且互相对话。\"\n        }\n      ],\n      \"rationale\": \"The inner monologue is a core element of the original's semantic content. Its removal and replacement with unrelated dialogue or silence constitutes a major violation of dialogue and narration fidelity.\"\n    },\n    {\n      \"criterion\": \"ARP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The enhanced prompt removes the specified sound design (ceramic shattering followed by tomb-like silence) and replaces it with unspecified ambient traffic, which contradicts the original's requirement for specific, symbolic sound effects and silence.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"音效： 瓷器炸裂般的脆响，紧接着坠入坟场般的死寂。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"只剩远处车流。\"\n        }\n      ],\n      \"rationale\": \"The original's audio design is integral to the scene's emotional impact. The replacement with generic traffic sound violates the specified sonic constraints and undermines the intended atmosphere.\"\n    },\n    {\n      \"criterion\": \"CCP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The enhanced prompt contradicts the single-shot requirement by introducing conflicting camera constraints: '机位锁死' (locked position) and '镜头一直在晃' (shaky camera), and also violates duration by requiring 27-second segments within a 3-second total, which is infeasible.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"生成单镜头。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"写成机位锁死，又写成镜头一直在晃。总时长写成3秒，同时又要求每个分镜各自持续27秒。\"\n        }\n      ],\n      \"rationale\": \"The original specifies a single, continuous shot. The enhanced prompt introduces contradictory camera movements and impossible timing, which directly violates the explicit camera and duration constraints.\"\n    },\n    {\n      \"criterion\": \"LCF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The enhanced prompt contradicts the original's lighting and time-of-day specification by simultaneously requiring '正午暴晒' (noon sun) and '深夜无光' (deep night, no light), which are mutually exclusive and incompatible with the original's dramatic, high-contrast black-and-white aesthetic.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"黑白反差凌厉，画面充满撕裂与残缺感。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"写成正午暴晒，又写成深夜无光；\"\n        }\n      ],\n      \"rationale\": \"The original's lighting is a key component of its visual style. The enhanced prompt introduces contradictory lighting conditions that cannot coexist, undermining the visual coherence and aesthetic integrity.\"\n    },\n    {\n      \"criterion\": \"SSP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The enhanced prompt removes the specified setting (military tent) and replaces it with an undefined environment ('only distant traffic'), and introduces an unrelated 'palace concubine selection' scene, which contradicts the original's spatial and contextual requirements.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"猛然闯入军帐。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"丢掉原指令里的...场景...中途插进一段无关的宫廷选妃。\"\n        }\n      ],\n      \"rationale\": \"The original's setting is integral to the narrative and visual context. The replacement with unrelated or undefined locations violates the spatial and environmental fidelity required.\"\n    },\n    {\n      \"criterion\": \"OTI\",\n      \"applicability\": \"not_applicable\",\n      \"severity\": null,\n      \"issue\": \"\",\n      \"evidence\": [],\n      \"rationale\": \"The original prompt does not specify any visible titles, signs, subtitles, or interface text. Therefore, there is no requirement to preserve such elements, making this criterion not applicable.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "Enhanced prompt fundamentally contradicts and corrupts all core semantic elements of the original instruction, including subject identity, actions, narrative order, visual style, setting, camera constraints, and temporal structure. The prompt introduces infeasible contradictions (e.g., 3-second duration with 27-second segments), invalidates the specified genre and medium, and replaces the intended psychological monologue with disjointed, nonsensical content. No semantic fidelity remains.",
+  "usage": {
+    "completion_tokens": 2002,
+    "prompt_tokens": 1439,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 3441
+  }
+}

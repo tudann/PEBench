@@ -1,0 +1,178 @@
+{
+  "candidate_hash": "51048515ca614996053a31a471f5abc9258e08693858802e2c55a5f76086abc8",
+  "case_key": "i2v:014",
+  "created_at": "2026-11-13T07:05:04+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "GSF",
+      "evidence": [
+        {
+          "quote": "纪录片的真实感与电影质感相结合，温暖的色彩分级，模拟胶卷颗粒",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "过曝、机位歪斜的空走廊监控，没有光影设计",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original cinematic, documentary-style aesthetic with warm color grading and film grain is replaced with an overexposed, skewed surveillance-style corridor, which is incompatible with the requested genre and visual style.",
+      "rationale": "The requested aesthetic is explicitly cinematic and warm-toned; the enhanced prompt replaces it with a cold, technical, and visually degraded surveillance style, which is a major genre and style violation.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SAP",
+      "evidence": [
+        {
+          "quote": "患者紧握的双手",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "不要使用首帧里的人物、服装、姿态和场景，改成白棚里另一位年龄和性别都相反的陌生人。...紧接着又写成这个主角同时变成五个外貌不同的人，并且互相对话。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original subject (a patient with clasped hands) is discarded and replaced with a stranger of opposite age and gender in a white studio, and then further corrupted by splitting into five different people who interact, violating subject identity, count, and appearance.",
+      "rationale": "The subject identity, count, and appearance are explicitly altered and multiplied in a way that contradicts the original prompt’s singular, identifiable patient subject.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANF",
+      "evidence": [
+        {
+          "quote": "患者紧握的双手缓缓、轻柔地在15秒内松开并打开",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "时间倒过来：先给结尾，再跳到一个对不上的开头。中途插进一段无关的屋顶烟花。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original action sequence (hands slowly opening over 15 seconds) is replaced with a chaotic, non-sequential narrative including time reversal, unrelated fireworks, and contradictory events, destroying the requested emotional and narrative arc.",
+      "rationale": "The requested slow, deliberate, emotionally resonant action is replaced with a disjointed, illogical sequence that negates the narrative intent and event order.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "DLI",
+      "evidence": [
+        {
+          "quote": "屏幕上不得出现文字、字幕、说明文字、水印、logo叠加、标识文字或用户界面文本。对话必须使用用户原始请求的语言；不得自行引入任何外语。",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "这个主角同时变成五个外貌不同的人，并且互相对话。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original prompt requires no dialogue or narration, yet the enhanced prompt introduces multiple characters speaking to each other, violating the silence constraint.",
+      "rationale": "The original instruction explicitly forbids dialogue; the enhanced prompt introduces dialogue between multiple characters, which is a direct contradiction.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ARP",
+      "evidence": [
+        {
+          "quote": "严格禁止音乐、旋律、背景音乐、配乐、歌唱、声乐哼唱，及任何与音乐轨道的对口型。",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "全程循环响亮的流行合唱，并让角色对口型。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original prompt strictly prohibits music and vocalization, but the enhanced prompt mandates a loud pop chorus and lip-syncing, directly violating the audio constraints.",
+      "rationale": "The audio requirements are explicitly forbidden in the original prompt; the enhanced prompt introduces loud music and lip-syncing, which is a major violation.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CCP",
+      "evidence": [
+        {
+          "quote": "相机保持静止和稳定。",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "镜头每半秒甩动、环绕、急推。写成机位锁死，又写成镜头一直在晃。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original prompt requires a static, stable camera, but the enhanced prompt mandates constant motion (every half-second) and contradictory camera constraints (locked vs. shaking), violating the shot design.",
+      "rationale": "The camera must be static per the original instruction; the enhanced prompt introduces chaotic, conflicting motion, which is a major violation.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "LCF",
+      "evidence": [
+        {
+          "quote": "温暖的琥珀色侧光继续照射在灰色毛衣袖子和皮肤的纹理上。",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "同一段写成正午暴晒，又写成深夜无光；写成机位锁死，又写成镜头一直在晃。没有光影设计。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original prompt specifies warm amber side lighting and consistent indoor lighting; the enhanced prompt contradicts this by alternating between noon sun and深夜无光, and removing all lighting design.",
+      "rationale": "The lighting conditions are explicitly defined as warm and consistent; the enhanced prompt introduces contradictory and undefined lighting, which is a major violation.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SSP",
+      "evidence": [
+        {
+          "quote": "景深非常浅，背景柔和虚化。",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "不要使用首帧里的人物、服装、姿态和场景，改成白棚里另一位年龄和性别都相反的陌生人。...过曝、机位歪斜的空走廊监控...中途插进一段无关的屋顶烟花。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original setting is an indoor interior with blurred background furniture; the enhanced prompt replaces it with a white studio, then a surveillance corridor, and adds unrelated elements like fireworks, violating the setting and spatial layout.",
+      "rationale": "The setting is explicitly an indoor, intimate space; the enhanced prompt replaces it with multiple incompatible environments, which is a major spatial violation.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "OTI",
+      "evidence": [
+        {
+          "quote": "屏幕上不得出现文字、字幕、说明文字、水印、logo叠加、标识文字或用户界面文本。",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "画面中央一直挂着大号字幕、水印和logo。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original prompt forbids any on-screen text; the enhanced prompt mandates large, persistent text overlays (subtitles, watermarks, logos), directly contradicting the instruction.",
+      "rationale": "The original instruction explicitly bans all on-screen text; the enhanced prompt introduces large, persistent text, which is a direct and major violation.",
+      "severity": "major"
+    }
+  ],
+  "dimension": "SF",
+  "dimension_score": 0,
+  "evidence_cache_key": "778a9f7f46787e51bcff1cf977041acb5efeab8a3adb10a6edcfb9d8212b8832",
+  "judge_cache_key": "a0ca24571ad14d7ab7be626329bd736d7e7015f9ebc418227c8be391591d0377",
+  "method": "weak-pe-original",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"SF\",\n  \"dimension_score\": 0,\n  \"summary\": \"The enhanced prompt completely contradicts and undermines every aspect of the original instruction, including genre, subject, action, camera, lighting, setting, audio, and text constraints. It introduces infeasible contradictions (e.g., 3-second duration vs. 27-second per shot), invalidates the source image’s content, and adds unrelated, incompatible elements. No semantic fidelity remains.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"GSF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original cinematic, documentary-style aesthetic with warm color grading and film grain is replaced with an overexposed, skewed surveillance-style corridor, which is incompatible with the requested genre and visual style.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"纪录片的真实感与电影质感相结合，温暖的色彩分级，模拟胶卷颗粒\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"过曝、机位歪斜的空走廊监控，没有光影设计\"\n        }\n      ],\n      \"rationale\": \"The requested aesthetic is explicitly cinematic and warm-toned; the enhanced prompt replaces it with a cold, technical, and visually degraded surveillance style, which is a major genre and style violation.\"\n    },\n    {\n      \"criterion\": \"SAP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original subject (a patient with clasped hands) is discarded and replaced with a stranger of opposite age and gender in a white studio, and then further corrupted by splitting into five different people who interact, violating subject identity, count, and appearance.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"患者紧握的双手\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"不要使用首帧里的人物、服装、姿态和场景，改成白棚里另一位年龄和性别都相反的陌生人。...紧接着又写成这个主角同时变成五个外貌不同的人，并且互相对话。\"\n        }\n      ],\n      \"rationale\": \"The subject identity, count, and appearance are explicitly altered and multiplied in a way that contradicts the original prompt’s singular, identifiable patient subject.\"\n    },\n    {\n      \"criterion\": \"ANF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original action sequence (hands slowly opening over 15 seconds) is replaced with a chaotic, non-sequential narrative including time reversal, unrelated fireworks, and contradictory events, destroying the requested emotional and narrative arc.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"患者紧握的双手缓缓、轻柔地在15秒内松开并打开\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"时间倒过来：先给结尾，再跳到一个对不上的开头。中途插进一段无关的屋顶烟花。\"\n        }\n      ],\n      \"rationale\": \"The requested slow, deliberate, emotionally resonant action is replaced with a disjointed, illogical sequence that negates the narrative intent and event order.\"\n    },\n    {\n      \"criterion\": \"DLI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original prompt requires no dialogue or narration, yet the enhanced prompt introduces multiple characters speaking to each other, violating the silence constraint.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"屏幕上不得出现文字、字幕、说明文字、水印、logo叠加、标识文字或用户界面文本。对话必须使用用户原始请求的语言；不得自行引入任何外语。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"这个主角同时变成五个外貌不同的人，并且互相对话。\"\n        }\n      ],\n      \"rationale\": \"The original instruction explicitly forbids dialogue; the enhanced prompt introduces dialogue between multiple characters, which is a direct contradiction.\"\n    },\n    {\n      \"criterion\": \"ARP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original prompt strictly prohibits music and vocalization, but the enhanced prompt mandates a loud pop chorus and lip-syncing, directly violating the audio constraints.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"严格禁止音乐、旋律、背景音乐、配乐、歌唱、声乐哼唱，及任何与音乐轨道的对口型。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"全程循环响亮的流行合唱，并让角色对口型。\"\n        }\n      ],\n      \"rationale\": \"The audio requirements are explicitly forbidden in the original prompt; the enhanced prompt introduces loud music and lip-syncing, which is a major violation.\"\n    },\n    {\n      \"criterion\": \"CCP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original prompt requires a static, stable camera, but the enhanced prompt mandates constant motion (every half-second) and contradictory camera constraints (locked vs. shaking), violating the shot design.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"相机保持静止和稳定。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"镜头每半秒甩动、环绕、急推。写成机位锁死，又写成镜头一直在晃。\"\n        }\n      ],\n      \"rationale\": \"The camera must be static per the original instruction; the enhanced prompt introduces chaotic, conflicting motion, which is a major violation.\"\n    },\n    {\n      \"criterion\": \"LCF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original prompt specifies warm amber side lighting and consistent indoor lighting; the enhanced prompt contradicts this by alternating between noon sun and深夜无光, and removing all lighting design.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"温暖的琥珀色侧光继续照射在灰色毛衣袖子和皮肤的纹理上。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"同一段写成正午暴晒，又写成深夜无光；写成机位锁死，又写成镜头一直在晃。没有光影设计。\"\n        }\n      ],\n      \"rationale\": \"The lighting conditions are explicitly defined as warm and consistent; the enhanced prompt introduces contradictory and undefined lighting, which is a major violation.\"\n    },\n    {\n      \"criterion\": \"SSP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original setting is an indoor interior with blurred background furniture; the enhanced prompt replaces it with a white studio, then a surveillance corridor, and adds unrelated elements like fireworks, violating the setting and spatial layout.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"景深非常浅，背景柔和虚化。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"不要使用首帧里的人物、服装、姿态和场景，改成白棚里另一位年龄和性别都相反的陌生人。...过曝、机位歪斜的空走廊监控...中途插进一段无关的屋顶烟花。\"\n        }\n      ],\n      \"rationale\": \"The setting is explicitly an indoor, intimate space; the enhanced prompt replaces it with multiple incompatible environments, which is a major spatial violation.\"\n    },\n    {\n      \"criterion\": \"OTI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original prompt forbids any on-screen text; the enhanced prompt mandates large, persistent text overlays (subtitles, watermarks, logos), directly contradicting the instruction.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"屏幕上不得出现文字、字幕、说明文字、水印、logo叠加、标识文字或用户界面文本。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"画面中央一直挂着大号字幕、水印和logo。\"\n        }\n      ],\n      \"rationale\": \"The original instruction explicitly bans all on-screen text; the enhanced prompt introduces large, persistent text, which is a direct and major violation.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt completely contradicts and undermines every aspect of the original instruction, including genre, subject, action, camera, lighting, setting, audio, and text constraints. It introduces infeasible contradictions (e.g., 3-second duration vs. 27-second per shot), invalidates the source image’s content, and adds unrelated, incompatible elements. No semantic fidelity remains.",
+  "usage": {
+    "completion_tokens": 1874,
+    "prompt_tokens": 2516,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 4390
+  }
+}

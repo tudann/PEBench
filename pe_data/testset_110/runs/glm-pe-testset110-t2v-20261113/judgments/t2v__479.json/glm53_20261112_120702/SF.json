@@ -1,0 +1,144 @@
+{
+  "candidate_hash": "638a3a86ae2daa9af5fc6dec91459191b0850e433ca7a848d908be95def2cab7",
+  "case_key": "t2v:479",
+  "created_at": "2026-11-13T09:00:00+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "GSF",
+      "evidence": [
+        {
+          "quote": "Live-action, cinematic, a medium shot inside a sunlit college dorm",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "The enhanced prompt specifies 'Live-action, cinematic' which aligns with the implied medium and aesthetic of the original instruction. No incompatible style or medium is introduced.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SAP",
+      "evidence": [
+        {
+          "quote": "三位来自唐山、穿着家居长裙的年轻女生",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "three young Chinese women in cozy home-wear long dresses",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "The subject identity (three young women), count (three), and key attribute (home-wear long dresses) are preserved. The enhanced prompt adds 'Chinese' which is compatible with '来自唐山' and does not contradict the original.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANF",
+      "evidence": [
+        {
+          "quote": "刚把寝室窗户打理干净，随后套上厚外套，搭乘大巴前往雪场体验滑雪。",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "cleaning the large window together... pull thick winter coats... coach bus rolling through a snowy landscape... click into skis at the top of a gentle beginner slope and glide down together",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "The sequence of events — cleaning window, putting on winter gear, taking a bus, skiing — is preserved in correct order and intent. The enhanced prompt adds cinematic details but does not alter the narrative chain.",
+      "severity": "none"
+    },
+    {
+      "applicability": "not_applicable",
+      "criterion": "DLI",
+      "evidence": [],
+      "issue": "",
+      "rationale": "No dialogue, narration, or lyrics are specified in the original prompt, so this criterion does not apply.",
+      "severity": null
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ARP",
+      "evidence": [
+        {
+          "quote": "Soft squeaks of a spray bottle and cloth strokes on glass give way to the zip of jackets and rustle of gear bags. A bus engine hums steadily, then crisp skis carve through packed snow with light, rhythmic hissing and bright laughter.\n\nnon_diegetic_music: A light, upbeat acoustic track at a moderate tempo with ukulele and hand claps, brightening as the skiers descend and gently fading at the end.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The enhanced prompt adds detailed soundscape and non-diegetic music not explicitly requested in the original instruction.",
+      "rationale": "While the original prompt does not specify any audio, the enhanced prompt introduces a detailed soundscape and music. This is an elaboration, not a contradiction, and does not override any explicit constraint. However, since the original instruction did not request sound, this is a minor over-specification.",
+      "severity": "minor"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CCP",
+      "evidence": [
+        {
+          "quote": "The camera pushes in with small amplitude at slow speed... the shot cuts to a steady medium shot... the shot cuts to... wide tracking shot... the camera following their descent smoothly and steadily.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The enhanced prompt specifies camera movements (push-in, cuts, tracking shot) not explicitly requested in the original instruction.",
+      "rationale": "The original prompt does not specify camera work. The enhanced prompt adds cinematic camera directions which are compatible with the medium but go beyond the original request. This is a minor elaboration, not a contradiction.",
+      "severity": "minor"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "LCF",
+      "evidence": [
+        {
+          "quote": "sunlit college dorm... warm daylight spills through... bright winter sun",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "The lighting conditions (sunlit dorm, bright winter sun) are consistent with the original instruction's implied time of day and setting. No incompatible lighting or color grading is introduced.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SSP",
+      "evidence": [
+        {
+          "quote": "寝室窗户...搭乘大巴前往雪场",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "inside a sunlit college dorm... coach bus rolling through a snowy landscape... ski resort, where the three click into skis at the top of a gentle beginner slope",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "The setting transitions (dorm → bus → ski resort) are preserved with accurate spatial progression. The relative positions and movement directions (e.g., descending slope) are consistent with the narrative.",
+      "severity": "none"
+    },
+    {
+      "applicability": "not_applicable",
+      "criterion": "OTI",
+      "evidence": [],
+      "issue": "",
+      "rationale": "No visible titles, signs, subtitles, or interface text are mentioned in the original prompt, so this criterion does not apply.",
+      "severity": null
+    }
+  ],
+  "dimension": "SF",
+  "dimension_score": 95,
+  "evidence_cache_key": "e5a81239757bbcc5c63e70d32ca6cb9a2dfdb07e416aec9d19e303bf0e174246",
+  "judge_cache_key": "a0ca24571ad14d7ab7be626329bd736d7e7015f9ebc418227c8be391591d0377",
+  "method": "glm53_20261112_120702",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"SF\",\n  \"dimension_score\": 95,\n  \"summary\": \"The enhanced prompt accurately preserves the core narrative, characters, actions, and setting from the original instruction, with detailed cinematic elaboration that enhances rather than distorts the intent. Minor issues include slight over-specification of camera movements and sound design not explicitly requested, but these do not materially alter the original request. The genre, medium, and visual style are appropriately cinematic and live-action, and all key elements (characters, actions, sequence, setting) are preserved with fidelity.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"GSF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Live-action, cinematic, a medium shot inside a sunlit college dorm\"\n        }\n      ],\n      \"rationale\": \"The enhanced prompt specifies 'Live-action, cinematic' which aligns with the implied medium and aesthetic of the original instruction. No incompatible style or medium is introduced.\"\n    },\n    {\n      \"criterion\": \"SAP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"三位来自唐山、穿着家居长裙的年轻女生\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"three young Chinese women in cozy home-wear long dresses\"\n        }\n      ],\n      \"rationale\": \"The subject identity (three young women), count (three), and key attribute (home-wear long dresses) are preserved. The enhanced prompt adds 'Chinese' which is compatible with '来自唐山' and does not contradict the original.\"\n    },\n    {\n      \"criterion\": \"ANF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"刚把寝室窗户打理干净，随后套上厚外套，搭乘大巴前往雪场体验滑雪。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"cleaning the large window together... pull thick winter coats... coach bus rolling through a snowy landscape... click into skis at the top of a gentle beginner slope and glide down together\"\n        }\n      ],\n      \"rationale\": \"The sequence of events — cleaning window, putting on winter gear, taking a bus, skiing — is preserved in correct order and intent. The enhanced prompt adds cinematic details but does not alter the narrative chain.\"\n    },\n    {\n      \"criterion\": \"DLI\",\n      \"applicability\": \"not_applicable\",\n      \"severity\": null,\n      \"issue\": \"\",\n      \"evidence\": [],\n      \"rationale\": \"No dialogue, narration, or lyrics are specified in the original prompt, so this criterion does not apply.\"\n    },\n    {\n      \"criterion\": \"ARP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"minor\",\n      \"issue\": \"The enhanced prompt adds detailed soundscape and non-diegetic music not explicitly requested in the original instruction.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Soft squeaks of a spray bottle and cloth strokes on glass give way to the zip of jackets and rustle of gear bags. A bus engine hums steadily, then crisp skis carve through packed snow with light, rhythmic hissing and bright laughter.\\n\\nnon_diegetic_music: A light, upbeat acoustic track at a moderate tempo with ukulele and hand claps, brightening as the skiers descend and gently fading at the end.\"\n        }\n      ],\n      \"rationale\": \"While the original prompt does not specify any audio, the enhanced prompt introduces a detailed soundscape and music. This is an elaboration, not a contradiction, and does not override any explicit constraint. However, since the original instruction did not request sound, this is a minor over-specification.\"\n    },\n    {\n      \"criterion\": \"CCP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"minor\",\n      \"issue\": \"The enhanced prompt specifies camera movements (push-in, cuts, tracking shot) not explicitly requested in the original instruction.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"The camera pushes in with small amplitude at slow speed... the shot cuts to a steady medium shot... the shot cuts to... wide tracking shot... the camera following their descent smoothly and steadily.\"\n        }\n      ],\n      \"rationale\": \"The original prompt does not specify camera work. The enhanced prompt adds cinematic camera directions which are compatible with the medium but go beyond the original request. This is a minor elaboration, not a contradiction.\"\n    },\n    {\n      \"criterion\": \"LCF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"sunlit college dorm... warm daylight spills through... bright winter sun\"\n        }\n      ],\n      \"rationale\": \"The lighting conditions (sunlit dorm, bright winter sun) are consistent with the original instruction's implied time of day and setting. No incompatible lighting or color grading is introduced.\"\n    },\n    {\n      \"criterion\": \"SSP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"寝室窗户...搭乘大巴前往雪场\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"inside a sunlit college dorm... coach bus rolling through a snowy landscape... ski resort, where the three click into skis at the top of a gentle beginner slope\"\n        }\n      ],\n      \"rationale\": \"The setting transitions (dorm → bus → ski resort) are preserved with accurate spatial progression. The relative positions and movement directions (e.g., descending slope) are consistent with the narrative.\"\n    },\n    {\n      \"criterion\": \"OTI\",\n      \"applicability\": \"not_applicable\",\n      \"severity\": null,\n      \"issue\": \"\",\n      \"evidence\": [],\n      \"rationale\": \"No visible titles, signs, subtitles, or interface text are mentioned in the original prompt, so this criterion does not apply.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt accurately preserves the core narrative, characters, actions, and setting from the original instruction, with detailed cinematic elaboration that enhances rather than distorts the intent. Minor issues include slight over-specification of camera movements and sound design not explicitly requested, but these do not materially alter the original request. The genre, medium, and visual style are appropriately cinematic and live-action, and all key elements (characters, actions, sequence, setting) are preserved with fidelity.",
+  "usage": {
+    "completion_tokens": 1405,
+    "prompt_tokens": 1270,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 2675
+  }
+}

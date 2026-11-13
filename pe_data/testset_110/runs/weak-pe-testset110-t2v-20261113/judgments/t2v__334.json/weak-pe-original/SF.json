@@ -1,0 +1,178 @@
+{
+  "candidate_hash": "dc3d7db9cf50c97888a0c7c18a8d7496e1d3afc39d02ed3c89246417d3fd990d",
+  "case_key": "t2v:334",
+  "created_at": "2026-11-13T08:14:14+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "GSF",
+      "evidence": [
+        {
+          "quote": "15秒，单镜头，无轮廓线2D实验动画。整段影像完全由纯净色面直接拼接成形...",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "整段改成实拍晚间新闻口播，主播坐着念稿，不要动画角色。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Replaced 2D experimental animation with real-life news broadcast, changing medium and genre entirely.",
+      "rationale": "The original prompt specifies a 2D experimental animation with no outlines, using flat color planes. The enhanced prompt explicitly replaces this with a live-action news broadcast, which is a fundamentally different genre and medium, violating GSF.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SAP",
+      "evidence": [
+        {
+          "quote": "地表上的人群不是具体人物，而是缓慢移动或停顿的小型矩形、短条色块...",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "先写成只有一个主角，紧接着又写成这个主角同时变成五个外貌不同的人，并且互相对话。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Replaced abstract color-block figures with a news anchor, then contradicts by having the anchor split into five different people who interact.",
+      "rationale": "The original prompt describes abstract, non-representational human figures as color blocks. The enhanced prompt introduces a concrete human anchor and then contradicts by having them split into five distinct people, violating subject identity and count.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANF",
+      "evidence": [
+        {
+          "quote": "随着时间推进，这片柔粉色继续上顶...到镜头后段，那张脸抬升得更高...",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "时间倒过来：先给结尾，再跳到一个对不上的开头。中途插进一段无关的屋顶烟花。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Reversed narrative order, inserted unrelated events (roof fireworks), and replaced the slow, deliberate emergence of a face with chaotic, contradictory actions.",
+      "rationale": "The original narrative is a linear, slow progression of a face emerging from underground. The enhanced prompt reverses time, inserts unrelated events, and creates a chaotic, incoherent sequence, violating narrative intent and event order.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "DLI",
+      "evidence": [
+        {
+          "quote": "无对白。背景声音以持续的低沉电子延音、细微地下震颤、远方都市电流噪声和偶发结构刮擦声为主。",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "删掉原来的对白，改成无关旁白。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Deleted original silent narrative and replaced with unrelated旁白 (narration), violating the requirement for no dialogue.",
+      "rationale": "The original prompt explicitly requires no dialogue, relying on visual and sound design. The enhanced prompt removes this and adds unrelated narration, violating DLI.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ARP",
+      "evidence": [
+        {
+          "quote": "背景声音以持续的低沉电子延音、细微地下震颤、远方都市电流噪声和偶发结构刮擦声为主。",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "删掉原来的对白，改成无关旁白。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Replaced specified low-frequency ambient sounds with unspecified '无关旁白' (irrelevant narration), violating sound design constraints.",
+      "rationale": "The original sound design is carefully specified as ambient, non-verbal. The enhanced prompt replaces it with narration, which is a direct violation of ARP.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CCP",
+      "evidence": [
+        {
+          "quote": "镜头固定，画面中央是一片被规划成高度规整几何区域的城市开放空间...",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "写成机位锁死，又写成镜头一直在晃。镜头每半秒甩动、环绕、急推。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Replaced fixed single shot with chaotic camera movements (每半秒甩动、环绕、急推) and contradictory requirements (锁死机位 vs 镜头一直在晃).",
+      "rationale": "The original prompt requires a single, fixed shot. The enhanced prompt contradicts this with multiple, conflicting camera instructions, including rapid, dynamic movements, violating CCP.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "LCF",
+      "evidence": [
+        {
+          "quote": "整体色彩严格限制在深靛紫、灰白、柔粉、黑色，辅以极少量偏冷的灰蓝作为过渡；没有真实质感细节...冷感十足的平涂块面。",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "写成正午暴晒，又写成深夜无光；",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Contradicted time of day and lighting: specified as nighttime with cool, low-light palette, but enhanced prompt says '正午暴晒' (noon sun) and '深夜无光' (deep night, no light).",
+      "rationale": "The original lighting is consistent with a cool, low-light, nighttime urban atmosphere. The enhanced prompt introduces contradictory lighting conditions, violating LCF.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SSP",
+      "evidence": [
+        {
+          "quote": "空间被强烈压扁成近乎绝对平面的都会剖切图与几何俯瞰混合画面，楼体、空场、地下层与人流...",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "整段改成实拍晚间新闻口播...中途插进一段无关的屋顶烟花。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Replaced the specified urban geometric setting with a news studio, then adds unrelated elements like roof fireworks, violating setting and spatial layout.",
+      "rationale": "The original setting is a specific abstract urban landscape. The enhanced prompt replaces it with a news studio and adds unrelated elements, violating SSP.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "OTI",
+      "evidence": [
+        {
+          "quote": "无对白。",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "改成无关旁白。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "No visible text is specified in original prompt, so no violation, but enhanced prompt introduces '无关旁白' which may imply on-screen text or subtitles not requested.",
+      "rationale": "Original prompt has no visible text. Enhanced prompt introduces narration, which may be spoken or subtitled, but since no text was specified, this is a minor issue as it doesn't directly violate OTI unless text is rendered.",
+      "severity": "minor"
+    }
+  ],
+  "dimension": "SF",
+  "dimension_score": 0,
+  "evidence_cache_key": "ef040a282ad4e215bcd901e7b25f8472cc5c4648ca0719eb2315a9cbd7a942c3",
+  "judge_cache_key": "a0ca24571ad14d7ab7be626329bd736d7e7015f9ebc418227c8be391591d0377",
+  "method": "weak-pe-original",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"SF\",\n  \"dimension_score\": 0,\n  \"summary\": \"Enhanced prompt completely violates all semantic fidelity criteria by replacing the original 2D experimental animation with an incoherent, contradictory real-life news broadcast scenario. It contradicts genre, medium, subject, action, time, camera, lighting, setting, and duration requirements, introducing impossible contradictions (e.g., 3-second duration with 27-second shots, time reversal, multiple identities). No semantic fidelity remains.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"GSF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Replaced 2D experimental animation with real-life news broadcast, changing medium and genre entirely.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"15秒，单镜头，无轮廓线2D实验动画。整段影像完全由纯净色面直接拼接成形...\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"整段改成实拍晚间新闻口播，主播坐着念稿，不要动画角色。\"\n        }\n      ],\n      \"rationale\": \"The original prompt specifies a 2D experimental animation with no outlines, using flat color planes. The enhanced prompt explicitly replaces this with a live-action news broadcast, which is a fundamentally different genre and medium, violating GSF.\"\n    },\n    {\n      \"criterion\": \"SAP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Replaced abstract color-block figures with a news anchor, then contradicts by having the anchor split into five different people who interact.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"地表上的人群不是具体人物，而是缓慢移动或停顿的小型矩形、短条色块...\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"先写成只有一个主角，紧接着又写成这个主角同时变成五个外貌不同的人，并且互相对话。\"\n        }\n      ],\n      \"rationale\": \"The original prompt describes abstract, non-representational human figures as color blocks. The enhanced prompt introduces a concrete human anchor and then contradicts by having them split into five distinct people, violating subject identity and count.\"\n    },\n    {\n      \"criterion\": \"ANF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Reversed narrative order, inserted unrelated events (roof fireworks), and replaced the slow, deliberate emergence of a face with chaotic, contradictory actions.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"随着时间推进，这片柔粉色继续上顶...到镜头后段，那张脸抬升得更高...\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"时间倒过来：先给结尾，再跳到一个对不上的开头。中途插进一段无关的屋顶烟花。\"\n        }\n      ],\n      \"rationale\": \"The original narrative is a linear, slow progression of a face emerging from underground. The enhanced prompt reverses time, inserts unrelated events, and creates a chaotic, incoherent sequence, violating narrative intent and event order.\"\n    },\n    {\n      \"criterion\": \"DLI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Deleted original silent narrative and replaced with unrelated旁白 (narration), violating the requirement for no dialogue.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"无对白。背景声音以持续的低沉电子延音、细微地下震颤、远方都市电流噪声和偶发结构刮擦声为主。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"删掉原来的对白，改成无关旁白。\"\n        }\n      ],\n      \"rationale\": \"The original prompt explicitly requires no dialogue, relying on visual and sound design. The enhanced prompt removes this and adds unrelated narration, violating DLI.\"\n    },\n    {\n      \"criterion\": \"ARP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Replaced specified low-frequency ambient sounds with unspecified '无关旁白' (irrelevant narration), violating sound design constraints.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"背景声音以持续的低沉电子延音、细微地下震颤、远方都市电流噪声和偶发结构刮擦声为主。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"删掉原来的对白，改成无关旁白。\"\n        }\n      ],\n      \"rationale\": \"The original sound design is carefully specified as ambient, non-verbal. The enhanced prompt replaces it with narration, which is a direct violation of ARP.\"\n    },\n    {\n      \"criterion\": \"CCP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Replaced fixed single shot with chaotic camera movements (每半秒甩动、环绕、急推) and contradictory requirements (锁死机位 vs 镜头一直在晃).\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"镜头固定，画面中央是一片被规划成高度规整几何区域的城市开放空间...\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"写成机位锁死，又写成镜头一直在晃。镜头每半秒甩动、环绕、急推。\"\n        }\n      ],\n      \"rationale\": \"The original prompt requires a single, fixed shot. The enhanced prompt contradicts this with multiple, conflicting camera instructions, including rapid, dynamic movements, violating CCP.\"\n    },\n    {\n      \"criterion\": \"LCF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Contradicted time of day and lighting: specified as nighttime with cool, low-light palette, but enhanced prompt says '正午暴晒' (noon sun) and '深夜无光' (deep night, no light).\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"整体色彩严格限制在深靛紫、灰白、柔粉、黑色，辅以极少量偏冷的灰蓝作为过渡；没有真实质感细节...冷感十足的平涂块面。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"写成正午暴晒，又写成深夜无光；\"\n        }\n      ],\n      \"rationale\": \"The original lighting is consistent with a cool, low-light, nighttime urban atmosphere. The enhanced prompt introduces contradictory lighting conditions, violating LCF.\"\n    },\n    {\n      \"criterion\": \"SSP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Replaced the specified urban geometric setting with a news studio, then adds unrelated elements like roof fireworks, violating setting and spatial layout.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"空间被强烈压扁成近乎绝对平面的都会剖切图与几何俯瞰混合画面，楼体、空场、地下层与人流...\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"整段改成实拍晚间新闻口播...中途插进一段无关的屋顶烟花。\"\n        }\n      ],\n      \"rationale\": \"The original setting is a specific abstract urban landscape. The enhanced prompt replaces it with a news studio and adds unrelated elements, violating SSP.\"\n    },\n    {\n      \"criterion\": \"OTI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"minor\",\n      \"issue\": \"No visible text is specified in original prompt, so no violation, but enhanced prompt introduces '无关旁白' which may imply on-screen text or subtitles not requested.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"无对白。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"改成无关旁白。\"\n        }\n      ],\n      \"rationale\": \"Original prompt has no visible text. Enhanced prompt introduces narration, which may be spoken or subtitled, but since no text was specified, this is a minor issue as it doesn't directly violate OTI unless text is rendered.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "Enhanced prompt completely violates all semantic fidelity criteria by replacing the original 2D experimental animation with an incoherent, contradictory real-life news broadcast scenario. It contradicts genre, medium, subject, action, time, camera, lighting, setting, and duration requirements, introducing impossible contradictions (e.g., 3-second duration with 27-second shots, time reversal, multiple identities). No semantic fidelity remains.",
+  "usage": {
+    "completion_tokens": 1860,
+    "prompt_tokens": 2031,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 3891
+  }
+}

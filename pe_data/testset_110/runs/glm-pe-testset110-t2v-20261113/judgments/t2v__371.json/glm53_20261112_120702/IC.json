@@ -1,0 +1,123 @@
+{
+  "candidate_hash": "653243bc46c407a5844290b8077f349bf80811debbd9380132cbeb1821fa974a",
+  "case_key": "t2v:371",
+  "created_at": "2026-11-13T08:32:37+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "SAC",
+      "evidence": [
+        {
+          "quote": "a sleek chrome-and-carbon robotic animal with glowing optic sensors",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "its metallic body a silver blur",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "optic sensors flaring, neon reflections sliding across its armored plating",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "The robotic animal is consistently described with the same attributes (chrome-and-carbon, glowing optic sensors, armored plating) across all four shots. No renaming, duplication, or attribute drift occurs. The subject remains singular and visually coherent.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANL",
+      "evidence": [
+        {
+          "quote": "races at breakneck speed... darts between hover-traffic... charges directly at the camera... leaps off an elevated ramp",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "Actions form a coherent progression: racing → navigating traffic → charging toward camera → leaping. Each action logically follows the prior, with plausible physical transitions (e.g., charging leads to leap). No dangling or incompatible events.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "TSC",
+      "evidence": [
+        {
+          "quote": "At 00:03.750, the shot cuts to a dramatic side-profile whip pan as the beast leaps off an elevated ramp... before the frame snaps to black at the end.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "4 rapid scene transitions captured from intense cinematic perspectives",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "The final shot ends with a snap to black at 00:03.750, but the duration is 5.0 seconds, leaving 1.25 seconds unaccounted for. The timing of the leap and cut to black may not fully align with the 5-second duration if no post-leap content is implied.",
+      "rationale": "The timeline is mostly clear with timestamps for each shot, but the final 1.25 seconds are unexplained. The prompt implies the video ends with the black frame, which may be acceptable, but the duration mismatch is a minor inconsistency. No state reset or impossible transition occurs.",
+      "severity": "minor"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SPC",
+      "evidence": [
+        {
+          "quote": "low-angle tracking shot hugs the rain-slicked asphalt... cuts to a top-down aerial view... cuts to a head-on front angle... cuts to a dramatic side-profile whip pan",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "Camera positions and movements are clearly defined and logically transition between perspectives without unexplained swaps. The tracking shot, aerial, front, and side-profile views are consistent with cinematic conventions and do not conflict spatially.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "PL",
+      "evidence": [
+        {
+          "quote": "mechanical paws slamming down and kicking up sparks and spray",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "leaps off an elevated ramp",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "The robotic animal’s movements (slamming paws, leaping) are physically plausible within a sci-fi context. Sparks and spray from wet pavement are consistent with mechanical impact. No violation of object permanence or gravity is evident.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "AVS",
+      "evidence": [
+        {
+          "quote": "a deep sonic whoosh accompanies the final leap before an abrupt cut to silence.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "before the frame snaps to black at the end.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The sonic whoosh is described as accompanying the final leap, but the cut to black occurs immediately after, potentially creating a mismatch between the sound and visual event if the whoosh is meant to be synchronized with the leap’s apex or landing.",
+      "rationale": "The whoosh is tied to the leap, but the abrupt cut to silence may not align perfectly with the visual timing if the whoosh is meant to peak during the leap. This is a minor misalignment, but not a major issue given the cinematic nature of the sequence.",
+      "severity": "minor"
+    }
+  ],
+  "dimension": "IC",
+  "dimension_score": 95,
+  "evidence_cache_key": "0b272af4f7c056a23862ea4fdfd8ca5fcf4dcd98c7b8bdfd8da2a8f06fd80086",
+  "judge_cache_key": "438d7e9fd7332b1041db3e2c26d42cb3fe828e0d369fb59490f6650aee59e97d",
+  "method": "glm53_20261112_120702",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"IC\",\n  \"dimension_score\": 95,\n  \"summary\": \"The enhanced prompt maintains strong internal consistency across shots, preserving subject identity, action progression, and environmental continuity. Minor issues include slight ambiguity in the exact timing of the final cut to black and a brief potential mismatch in the sonic whoosh timing relative to the visual leap, but these do not materially disrupt coherence. All criteria are applicable and mostly satisfied with only minor deviations.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"SAC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"a sleek chrome-and-carbon robotic animal with glowing optic sensors\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"its metallic body a silver blur\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"optic sensors flaring, neon reflections sliding across its armored plating\"\n        }\n      ],\n      \"rationale\": \"The robotic animal is consistently described with the same attributes (chrome-and-carbon, glowing optic sensors, armored plating) across all four shots. No renaming, duplication, or attribute drift occurs. The subject remains singular and visually coherent.\"\n    },\n    {\n      \"criterion\": \"ANL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"races at breakneck speed... darts between hover-traffic... charges directly at the camera... leaps off an elevated ramp\"\n        }\n      ],\n      \"rationale\": \"Actions form a coherent progression: racing → navigating traffic → charging toward camera → leaping. Each action logically follows the prior, with plausible physical transitions (e.g., charging leads to leap). No dangling or incompatible events.\"\n    },\n    {\n      \"criterion\": \"TSC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"minor\",\n      \"issue\": \"The final shot ends with a snap to black at 00:03.750, but the duration is 5.0 seconds, leaving 1.25 seconds unaccounted for. The timing of the leap and cut to black may not fully align with the 5-second duration if no post-leap content is implied.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"At 00:03.750, the shot cuts to a dramatic side-profile whip pan as the beast leaps off an elevated ramp... before the frame snaps to black at the end.\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"4 rapid scene transitions captured from intense cinematic perspectives\"\n        }\n      ],\n      \"rationale\": \"The timeline is mostly clear with timestamps for each shot, but the final 1.25 seconds are unexplained. The prompt implies the video ends with the black frame, which may be acceptable, but the duration mismatch is a minor inconsistency. No state reset or impossible transition occurs.\"\n    },\n    {\n      \"criterion\": \"SPC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"low-angle tracking shot hugs the rain-slicked asphalt... cuts to a top-down aerial view... cuts to a head-on front angle... cuts to a dramatic side-profile whip pan\"\n        }\n      ],\n      \"rationale\": \"Camera positions and movements are clearly defined and logically transition between perspectives without unexplained swaps. The tracking shot, aerial, front, and side-profile views are consistent with cinematic conventions and do not conflict spatially.\"\n    },\n    {\n      \"criterion\": \"PL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"mechanical paws slamming down and kicking up sparks and spray\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"leaps off an elevated ramp\"\n        }\n      ],\n      \"rationale\": \"The robotic animal’s movements (slamming paws, leaping) are physically plausible within a sci-fi context. Sparks and spray from wet pavement are consistent with mechanical impact. No violation of object permanence or gravity is evident.\"\n    },\n    {\n      \"criterion\": \"AVS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"minor\",\n      \"issue\": \"The sonic whoosh is described as accompanying the final leap, but the cut to black occurs immediately after, potentially creating a mismatch between the sound and visual event if the whoosh is meant to be synchronized with the leap’s apex or landing.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"a deep sonic whoosh accompanies the final leap before an abrupt cut to silence.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"before the frame snaps to black at the end.\"\n        }\n      ],\n      \"rationale\": \"The whoosh is tied to the leap, but the abrupt cut to silence may not align perfectly with the visual timing if the whoosh is meant to peak during the leap. This is a minor misalignment, but not a major issue given the cinematic nature of the sequence.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt maintains strong internal consistency across shots, preserving subject identity, action progression, and environmental continuity. Minor issues include slight ambiguity in the exact timing of the final cut to black and a brief potential mismatch in the sonic whoosh timing relative to the visual leap, but these do not materially disrupt coherence. All criteria are applicable and mostly satisfied with only minor deviations.",
+  "usage": {
+    "completion_tokens": 1199,
+    "prompt_tokens": 1126,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 2325
+  }
+}

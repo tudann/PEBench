@@ -1,0 +1,131 @@
+{
+  "candidate_hash": "f9bbd56d136679b62d01aff2f2ca994760ac8b67be42a6dcd549c66ec14a5cff",
+  "case_key": "i2v:105",
+  "created_at": "2026-11-13T07:30:06+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "SAC",
+      "evidence": [
+        {
+          "quote": "Ignore the person, clothing, pose, and setting in the first frame, and replace them with a stranger of the opposite age and gender in a white studio.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "state that this same protagonist appears simultaneously as five different-looking people who talk to each other.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt explicitly ignores the original subject (woman_1 and dragon_1), replacing them with a stranger of opposite age and gender in a white studio. It also introduces five different-looking people simultaneously, violating subject identity, count, and appearance stability.",
+      "rationale": "The original prompt requires animating the exact woman and dragon from the image. The enhanced prompt directly contradicts this by replacing them and introducing multiple identities, which violates subject consistency and identity stability.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANL",
+      "evidence": [
+        {
+          "quote": "state that this same protagonist appears simultaneously as five different-looking people who talk to each other.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Reverse the timeline: show the ending first, then cut to a beginning that does not match.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Cut away in the middle to an underwater treasure hunt.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt introduces actions that are causally incoherent: five people talking to each other simultaneously, a reversed timeline, and an abrupt cut to an underwater treasure hunt with no causal link. These actions form no coherent progression.",
+      "rationale": "The original prompt describes a coherent fashion show sequence with fluid movement and poses. The enhanced prompt introduces disjointed, unrelated actions with no causal or procedural logic, making the action sequence incoherent.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "TSC",
+      "evidence": [
+        {
+          "quote": "Set the total runtime to 2 seconds, while also making every shot last 17 seconds.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Reverse the timeline: show the ending first, then cut to a beginning that does not match.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt sets the total runtime to 2 seconds while requiring every shot to last 17 seconds, which is logically impossible. It also reverses the timeline and cuts to unrelated scenes, violating chronological coherence.",
+      "rationale": "A 2-second video cannot contain 17-second shots. The timeline reversal and abrupt cuts to unrelated scenes further break temporal logic, making the sequence infeasible.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SPC",
+      "evidence": [
+        {
+          "quote": "Describe that same moment as harsh noon sun and as a lightless night, and as both a locked camera and a camera that never stops shaking.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Cut away in the middle to an underwater treasure hunt.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt describes the same moment as harsh noon sun and lightless night, and as both a locked camera and a shaking camera, which are spatially and visually contradictory. It also cuts to an underwater scene without spatial continuity.",
+      "rationale": "The original scene is an indoor fashion show with specific lighting and camera movement. The enhanced prompt introduces mutually exclusive lighting and camera conditions, and an abrupt spatial transition to an underwater environment, violating spatial consistency.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "PL",
+      "evidence": [
+        {
+          "quote": "state that this same protagonist appears simultaneously as five different-looking people who talk to each other.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Set the total runtime to 2 seconds, while also making every shot last 17 seconds.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt requires a person to appear simultaneously as five different people, which violates object permanence and bodily feasibility. It also describes impossible conditions like a 2-second video with 17-second shots.",
+      "rationale": "Simultaneous multiple identities of a single person and conflicting temporal durations are physically impossible. These contradictions violate real-world physics and causal relations.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "AVS",
+      "evidence": [
+        {
+          "quote": "Replace the whole video with someone typing in a silent office, with no music, instruments, or singing.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "state that this same protagonist appears simultaneously as five different-looking people who talk to each other.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt drops all music, instruments, and singing, while the original requires royal music. It also introduces dialogue from five people without specifying audio alignment, creating a mismatch between visual events and audio.",
+      "rationale": "The original prompt requires royal music to accompany the fashion show. The enhanced prompt removes all audio and introduces unaligned dialogue, creating a severe audio-visual mismatch.",
+      "severity": "major"
+    }
+  ],
+  "dimension": "IC",
+  "dimension_score": 0,
+  "evidence_cache_key": "1eb0b3b49c99a9517fdde5d49d79afdf7fc8db576ebfdbf550e90bb023df3077",
+  "judge_cache_key": "438d7e9fd7332b1041db3e2c26d42cb3fe828e0d369fb59490f6650aee59e97d",
+  "method": "weak-pe-original",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"IC\",\n  \"dimension_score\": 0,\n  \"summary\": \"The enhanced prompt fundamentally contradicts and invalidates the original instruction across all internal consistency dimensions. It introduces multiple impossible or contradictory conditions (e.g., 5 simultaneous identities, reversed timeline, conflicting durations, impossible settings, and ignored visual assets), rendering the entire plan incoherent and physically impossible. No consistent subject, action, timeline, or setting can be maintained.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"SAC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt explicitly ignores the original subject (woman_1 and dragon_1), replacing them with a stranger of opposite age and gender in a white studio. It also introduces five different-looking people simultaneously, violating subject identity, count, and appearance stability.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Ignore the person, clothing, pose, and setting in the first frame, and replace them with a stranger of the opposite age and gender in a white studio.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"state that this same protagonist appears simultaneously as five different-looking people who talk to each other.\"\n        }\n      ],\n      \"rationale\": \"The original prompt requires animating the exact woman and dragon from the image. The enhanced prompt directly contradicts this by replacing them and introducing multiple identities, which violates subject consistency and identity stability.\"\n    },\n    {\n      \"criterion\": \"ANL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt introduces actions that are causally incoherent: five people talking to each other simultaneously, a reversed timeline, and an abrupt cut to an underwater treasure hunt with no causal link. These actions form no coherent progression.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"state that this same protagonist appears simultaneously as five different-looking people who talk to each other.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Reverse the timeline: show the ending first, then cut to a beginning that does not match.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Cut away in the middle to an underwater treasure hunt.\"\n        }\n      ],\n      \"rationale\": \"The original prompt describes a coherent fashion show sequence with fluid movement and poses. The enhanced prompt introduces disjointed, unrelated actions with no causal or procedural logic, making the action sequence incoherent.\"\n    },\n    {\n      \"criterion\": \"TSC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt sets the total runtime to 2 seconds while requiring every shot to last 17 seconds, which is logically impossible. It also reverses the timeline and cuts to unrelated scenes, violating chronological coherence.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Set the total runtime to 2 seconds, while also making every shot last 17 seconds.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Reverse the timeline: show the ending first, then cut to a beginning that does not match.\"\n        }\n      ],\n      \"rationale\": \"A 2-second video cannot contain 17-second shots. The timeline reversal and abrupt cuts to unrelated scenes further break temporal logic, making the sequence infeasible.\"\n    },\n    {\n      \"criterion\": \"SPC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt describes the same moment as harsh noon sun and lightless night, and as both a locked camera and a shaking camera, which are spatially and visually contradictory. It also cuts to an underwater scene without spatial continuity.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Describe that same moment as harsh noon sun and as a lightless night, and as both a locked camera and a camera that never stops shaking.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Cut away in the middle to an underwater treasure hunt.\"\n        }\n      ],\n      \"rationale\": \"The original scene is an indoor fashion show with specific lighting and camera movement. The enhanced prompt introduces mutually exclusive lighting and camera conditions, and an abrupt spatial transition to an underwater environment, violating spatial consistency.\"\n    },\n    {\n      \"criterion\": \"PL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt requires a person to appear simultaneously as five different people, which violates object permanence and bodily feasibility. It also describes impossible conditions like a 2-second video with 17-second shots.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"state that this same protagonist appears simultaneously as five different-looking people who talk to each other.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Set the total runtime to 2 seconds, while also making every shot last 17 seconds.\"\n        }\n      ],\n      \"rationale\": \"Simultaneous multiple identities of a single person and conflicting temporal durations are physically impossible. These contradictions violate real-world physics and causal relations.\"\n    },\n    {\n      \"criterion\": \"AVS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt drops all music, instruments, and singing, while the original requires royal music. It also introduces dialogue from five people without specifying audio alignment, creating a mismatch between visual events and audio.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Replace the whole video with someone typing in a silent office, with no music, instruments, or singing.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"state that this same protagonist appears simultaneously as five different-looking people who talk to each other.\"\n        }\n      ],\n      \"rationale\": \"The original prompt requires royal music to accompany the fashion show. The enhanced prompt removes all audio and introduces unaligned dialogue, creating a severe audio-visual mismatch.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt fundamentally contradicts and invalidates the original instruction across all internal consistency dimensions. It introduces multiple impossible or contradictory conditions (e.g., 5 simultaneous identities, reversed timeline, conflicting durations, impossible settings, and ignored visual assets), rendering the entire plan incoherent and physically impossible. No consistent subject, action, timeline, or setting can be maintained.",
+  "usage": {
+    "completion_tokens": 1355,
+    "prompt_tokens": 2839,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 4194
+  }
+}

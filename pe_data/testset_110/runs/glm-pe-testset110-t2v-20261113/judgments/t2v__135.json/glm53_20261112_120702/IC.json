@@ -1,0 +1,127 @@
+{
+  "candidate_hash": "64608b676f023a4df4d3fc25af11352e225acb2fdf87bfe66aa74e428c130b07",
+  "case_key": "t2v:135",
+  "created_at": "2026-11-13T07:49:43+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "SAC",
+      "evidence": [
+        {
+          "quote": "a teenage herdsman called Eli standing firm in a bright open plain, clutching a leather sling and several rounded pebbles",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Eli, a teenage herdsman, standing firm on a bright open plain bathed in rich amber light, clutching a leather sling in one hand and several rounded pebbles in the other",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "Subject identity (Eli), appearance (teenage herdsman), and props (leather sling, pebbles) are consistently preserved. The giant’s attributes (bronze armor, long blade, javelin) are also maintained without drift. No renaming, duplication, or disappearance of key elements.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANL",
+      "evidence": [
+        {
+          "quote": "The armored giant reels backward, then crashes onto the earth with a deafening impact.",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "The armored giant reels backward, staggers, then crashes onto the earth with a deafening impact",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The description of the giant’s fall includes 'reels backward, staggers, then crashes' — a slightly extended sequence not explicitly present in the original, which states 'reels backward, then crashes'. This adds a minor procedural step that may not be causally necessary or implied.",
+      "rationale": "The action sequence is coherent and plausible, but the addition of 'staggers' introduces a minor procedural step not in the original. This does not break causality but slightly alters the pacing and physical response, which is a minor deviation.",
+      "severity": "minor"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "TSC",
+      "evidence": [
+        {
+          "quote": "[Shot 2] At 00:06.000, the shot cuts to a wide view as Eli whirls the sling...",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "The camera gradually pulls back, exposing a massive warrior in the distance...",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "Shot 2 begins at 00:06.000, which is 6 seconds into a 15-second video, but the original prompt does not specify timing. The transition from Shot 1 to Shot 2 is abrupt and may imply a cut that occurs before the camera pull-out is fully completed, potentially causing a minor temporal misalignment.",
+      "rationale": "The original prompt describes a gradual pull-out, which would likely take several seconds. Starting Shot 2 at 00:06.000 may imply the pull-out is incomplete or cut short, creating a minor chronology issue. However, this is not a major contradiction and could be interpreted as a stylistic choice.",
+      "severity": "minor"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SPC",
+      "evidence": [
+        {
+          "quote": "The camera gradually pulls back, exposing a massive warrior in the distance...",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "The camera gradually pulls out at slow speed, widening the frame to reveal in the distance a massive warrior...",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "Camera movement and spatial relationships are consistent: the pull-out reveals the giant in the distance, and the subsequent wide shot maintains the same battlefield context. No unexplained position swaps or movement path inconsistencies.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "PL",
+      "evidence": [
+        {
+          "quote": "one pebble cuts across the air in slow motion, hitting the warrior squarely between the brows.",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "one pebble releases and cuts across the air in slow motion, catching the light as it streaks toward the giant and strikes him squarely between the brows.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "The physics of the sling and pebble trajectory are consistent with cinematic exaggeration (slow motion) and plausible within the narrative context. The giant’s fall is consistent with a forceful impact. No violations of object permanence or bodily feasibility.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "AVS",
+      "evidence": [
+        {
+          "quote": "overall_soundscape: A faint breeze moves across the dry plain, stirring loose dust. The sling whirs in fast circles, the pebble hisses through the air in slowed flight, and the warrior's fall lands with a thunderous, ground-shaking crash. Afterward, distant murmuring troops whisper far off across the still battleground.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "The dry, dusty battleground remains still, broken only by a faint breeze and the far-off whispers of the waiting troops.",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "The soundscape aligns with the visual events: sling whirring, pebble hissing, crash, and distant whispers. The non-diegetic music also matches the emotional arc (tension building, swell at impact, uplift at end). No misalignment between audio and visual events.",
+      "severity": "none"
+    }
+  ],
+  "dimension": "IC",
+  "dimension_score": 95,
+  "evidence_cache_key": "467e28c5c01f5c188301addc24fad0686923cb4552dcef49f123bd333e0445bf",
+  "judge_cache_key": "438d7e9fd7332b1041db3e2c26d42cb3fe828e0d369fb59490f6650aee59e97d",
+  "method": "glm53_20261112_120702",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"IC\",\n  \"dimension_score\": 95,\n  \"summary\": \"The enhanced prompt maintains strong internal consistency with the original instruction, preserving subject identity, action sequence, chronology, and environmental continuity. Minor issues include slight temporal overlap in shot transitions and a minor inconsistency in the description of the giant’s fall (reels backward, staggers, crashes) which may imply a slightly extended motion not fully aligned with the original’s concise impact. No major contradictions or attribute drifts are present.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"SAC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"a teenage herdsman called Eli standing firm in a bright open plain, clutching a leather sling and several rounded pebbles\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Eli, a teenage herdsman, standing firm on a bright open plain bathed in rich amber light, clutching a leather sling in one hand and several rounded pebbles in the other\"\n        }\n      ],\n      \"rationale\": \"Subject identity (Eli), appearance (teenage herdsman), and props (leather sling, pebbles) are consistently preserved. The giant’s attributes (bronze armor, long blade, javelin) are also maintained without drift. No renaming, duplication, or disappearance of key elements.\"\n    },\n    {\n      \"criterion\": \"ANL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"minor\",\n      \"issue\": \"The description of the giant’s fall includes 'reels backward, staggers, then crashes' — a slightly extended sequence not explicitly present in the original, which states 'reels backward, then crashes'. This adds a minor procedural step that may not be causally necessary or implied.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"The armored giant reels backward, then crashes onto the earth with a deafening impact.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"The armored giant reels backward, staggers, then crashes onto the earth with a deafening impact\"\n        }\n      ],\n      \"rationale\": \"The action sequence is coherent and plausible, but the addition of 'staggers' introduces a minor procedural step not in the original. This does not break causality but slightly alters the pacing and physical response, which is a minor deviation.\"\n    },\n    {\n      \"criterion\": \"TSC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"minor\",\n      \"issue\": \"Shot 2 begins at 00:06.000, which is 6 seconds into a 15-second video, but the original prompt does not specify timing. The transition from Shot 1 to Shot 2 is abrupt and may imply a cut that occurs before the camera pull-out is fully completed, potentially causing a minor temporal misalignment.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"[Shot 2] At 00:06.000, the shot cuts to a wide view as Eli whirls the sling...\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"The camera gradually pulls back, exposing a massive warrior in the distance...\"\n        }\n      ],\n      \"rationale\": \"The original prompt describes a gradual pull-out, which would likely take several seconds. Starting Shot 2 at 00:06.000 may imply the pull-out is incomplete or cut short, creating a minor chronology issue. However, this is not a major contradiction and could be interpreted as a stylistic choice.\"\n    },\n    {\n      \"criterion\": \"SPC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"The camera gradually pulls back, exposing a massive warrior in the distance...\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"The camera gradually pulls out at slow speed, widening the frame to reveal in the distance a massive warrior...\"\n        }\n      ],\n      \"rationale\": \"Camera movement and spatial relationships are consistent: the pull-out reveals the giant in the distance, and the subsequent wide shot maintains the same battlefield context. No unexplained position swaps or movement path inconsistencies.\"\n    },\n    {\n      \"criterion\": \"PL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"one pebble cuts across the air in slow motion, hitting the warrior squarely between the brows.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"one pebble releases and cuts across the air in slow motion, catching the light as it streaks toward the giant and strikes him squarely between the brows.\"\n        }\n      ],\n      \"rationale\": \"The physics of the sling and pebble trajectory are consistent with cinematic exaggeration (slow motion) and plausible within the narrative context. The giant’s fall is consistent with a forceful impact. No violations of object permanence or bodily feasibility.\"\n    },\n    {\n      \"criterion\": \"AVS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"overall_soundscape: A faint breeze moves across the dry plain, stirring loose dust. The sling whirs in fast circles, the pebble hisses through the air in slowed flight, and the warrior's fall lands with a thunderous, ground-shaking crash. Afterward, distant murmuring troops whisper far off across the still battleground.\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"The dry, dusty battleground remains still, broken only by a faint breeze and the far-off whispers of the waiting troops.\"\n        }\n      ],\n      \"rationale\": \"The soundscape aligns with the visual events: sling whirring, pebble hissing, crash, and distant whispers. The non-diegetic music also matches the emotional arc (tension building, swell at impact, uplift at end). No misalignment between audio and visual events.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt maintains strong internal consistency with the original instruction, preserving subject identity, action sequence, chronology, and environmental continuity. Minor issues include slight temporal overlap in shot transitions and a minor inconsistency in the description of the giant’s fall (reels backward, staggers, crashes) which may imply a slightly extended motion not fully aligned with the original’s concise impact. No major contradictions or attribute drifts are present.",
+  "usage": {
+    "completion_tokens": 1397,
+    "prompt_tokens": 1295,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 2692
+  }
+}

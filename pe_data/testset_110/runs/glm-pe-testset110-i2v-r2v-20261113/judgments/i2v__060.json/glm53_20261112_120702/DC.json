@@ -1,0 +1,182 @@
+{
+  "candidate_hash": "bd9b4b8ccb9171aeeb6c38afbb40cb8bf3acf0c58d476e0f9805850a736fce60",
+  "case_key": "i2v:060",
+  "created_at": "2026-11-13T07:27:58+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "STC",
+      "evidence": [
+        {
+          "quote": "0-3 seconds: Hold on the empty bedroom exactly as in the first frame... 3-7 seconds: A middle-aged East Asian woman... enters... 7-11 seconds: She turns toward the rear windows... 11-15 seconds: She returns to the dresser mirror... exits calmly toward the right doorway.",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "At 0.00 seconds into the target video, <Picture 1> (from [Shot 1]) is fully referenced... At around 3 seconds... At around 7 seconds... At around 11 seconds... As she leaves, the camera settles back into the exact first-frame composition...",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "The enhanced prompt organizes the 15-second video into four clear temporal segments with precise timing cues and event boundaries. It maintains a logical progression of actions (entering, tidying, adjusting shutters/bike, checking mirror, exiting) with consistent shot framing and camera behavior. The timing is slightly flexible ('around 3 seconds') but remains within the original instruction’s structure. The sequence is feasible and well-ordered.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CDS",
+      "evidence": [
+        {
+          "quote": "smooth handheld unit following her at eye level with a slight natural shake when she moves; when she is off-screen, hold near the original first-frame framing. Photorealistic live-action look, ARRI Alexa 35mm character... shallow depth of field...",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "The camera holds near the first-frame framing with only a subtle handheld micro-sway at slow speed... The handheld unit follows her at eye level with a slight natural shake... shallow depth of field, and restrained warm color grading...",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "The prompt specifies actionable camera parameters: eye-level framing, handheld micro-sway/natural shake, shallow depth of field, ARRI Alexa 35mm character, and consistent composition. It also describes lens characteristics (film grain, motion blur) and camera movement (following subject, returning to original framing). These are directly actionable for video generation.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ETD",
+      "evidence": [
+        {
+          "quote": "Hold on the empty bedroom... then she enters... turns toward the rear windows... returns to the dresser mirror... exits calmly toward the right doorway.",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "The camera holds... follows her... settles back into the exact first-frame composition...",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "Cuts and transitions are implied through continuous camera movement and framing changes that follow the subject’s motion. The camera remains on the same shot throughout, with only subtle movement to track the woman. There are no abrupt or disconnected cuts; transitions are motivated by the subject’s movement and maintain spatial continuity. The ending returns to the original composition, reinforcing narrative closure.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "LCS",
+      "evidence": [
+        {
+          "quote": "Soft daylight filters through the partially open shutters. Dust motes drift in the warm air... cinematic but restrained color grading matching the warm indoor daylight of the reference bedroom...",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Soft daylight filters through the shutter slats; dust motes drift in the warm air... restrained warm color grading matching the reference bedroom's daylight...",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "color_temperature: warm, slightly yellowish indoor lighting with cooler daylight from windows... light_sources_and_direction_effect: recessed ceiling light... natural daylight filtering through partially open shutters from rear windows",
+          "source": "evidence_facts"
+        }
+      ],
+      "issue": "",
+      "rationale": "The prompt specifies light source (recessed ceiling light and natural daylight), direction (from rear windows), quality (soft, diffused), color temperature (warm, slightly yellowish), and grading (restrained warm). These are consistent with the evidence from the image and are actionable for lighting design.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "NDE",
+      "evidence": [
+        {
+          "quote": "A middle-aged East Asian woman... enters... places the blanket... smooths a pillow... adjusts one shutter slat... wipes the handlebar... checks the bike seat... checks her collar and hair... exits calmly...",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "enters... lays the blanket... smooths a pillow... tilts one plantation-shutter slat... wipes the exercise bike's handlebar... checks the seat height... picks up a small bottle... sets it back... exits calmly...",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "The prompt provides a clear progression of domestic actions that escalate from entering to tidying, then to minor adjustments, and finally to a brief self-check before exiting. The actions are varied, realistic, and build a coherent narrative arc without repetition or static restatement. The sequence culminates in the room returning to stillness, providing resolution.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CIF",
+      "evidence": [
+        {
+          "quote": "0-3 seconds: Hold on the empty bedroom exactly as in the first frame.",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "At around 3 seconds, a middle-aged East Asian woman... enters...",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Slight over-specification in timing and camera motion details (e.g., 'around 3 seconds' vs. 'exactly 3 seconds') and minor redundancy in describing the same actions in both original and enhanced prompts. However, these do not distract from the central request.",
+      "rationale": "The enhanced prompt adds minor elaborations (e.g., 'subtle handheld micro-sway', 'natural motion blur') that are compatible with the original request and support realism. There is no irrelevant padding or decorative detail. The only issue is slight redundancy in timing phrasing, which is a minor stylistic choice and does not affect the core content.",
+      "severity": "minor"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SDI",
+      "evidence": [
+        {
+          "quote": "Soft room tone with faint outdoor daylight ambience and the gentle rustle of fabric... shutter slat makes a light wooden click... cloth squeaks faintly... small bottles clink softly... quiet slippered footsteps...",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Soft room tone with faint outdoor daylight ambience and the gentle rustle of fabric... The shutter slat makes a light wooden click... a cloth squeaks faintly... small bottles clink softly... quiet slippered footsteps...",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "The prompt integrates audio elements (room tone, fabric rustle, clicks, squeaks, clinks, footsteps) that are tied to visual actions and timing. These are specified by source (environment, character, object), intensity (faint, soft), and progression (beginning to end). The audio supports the visual narrative without requiring every type (e.g., music is N/A).",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SPS",
+      "evidence": [
+        {
+          "quote": "middle-aged East Asian woman in modest daytime home clothes (light blouse, high-waisted trousers, soft indoor slippers)... ordinary posture, fully clothed, no lingerie... relaxed and focused on tidying... natural motion blur on limbs and fabric, realistic physics and weight, subtle breathing and micro-expressions, authentic skin texture...",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "middle-aged East Asian woman in a light blouse, high-waisted trousers, and soft indoor slippers... her expression relaxed and focused on tidying, with natural motion blur on her limbs and fabric, realistic weight, authentic skin texture, and natural eye catchlights.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "The prompt specifies subject appearance (age, ethnicity, clothing), pose, expression, movement (calm pace, smoothing pillow, wiping handlebar), interaction with objects, and performance details (motion blur, weight, skin texture, catchlights). These are generation-relevant and support the requested non-sexualized, realistic portrayal.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "VSS",
+      "evidence": [
+        {
+          "quote": "Photorealistic live-action look, ARRI Alexa 35mm character, natural motion blur... shallow depth of field, hyper-detailed, no artifacts, no deformation, perfect anatomy and proportions... environment, lighting direction, furniture arrangement... must remain consistent...",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Photorealistic live-action, cinematic with an ARRI Alexa 35mm character, gentle film grain, shallow depth of field, and restrained warm color grading... hyper-detailed, no artifacts, no deformation, perfect anatomy and proportions.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "The prompt specifies medium (photorealistic live-action), rendering language (ARRI Alexa 35mm, film grain, motion blur), production design (consistent furniture, lighting, materials), and visual treatment (cinematic, warm grading, shallow depth of field). These are actionable and consistent with the reference image.",
+      "severity": "none"
+    }
+  ],
+  "dimension": "DC",
+  "dimension_score": 95,
+  "evidence_cache_key": "086406f3564d0433edda258dda82a8bb43dbc8462502cc84751c4a8b27f7a950",
+  "judge_cache_key": "0754499d53388e6467fb078ab780e01b77f9f1c9e99d9029be2769351eb2b2eb",
+  "method": "glm53_20261112_120702",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"DC\",\n  \"dimension_score\": 95,\n  \"summary\": \"The enhanced prompt provides a highly detailed, temporally structured, and visually specific plan for a 15-second video sequence that closely adheres to the original instruction. It accurately references the provided image, maintains consistent spatial and lighting conditions, and specifies camera movement, subject actions, and audio elements with precision. Minor issues include slight over-specification in some areas (e.g., exact timing of actions) and a minor deviation in camera motion description (‘micro-sway’ vs. ‘natural shake’), but these do not materially affect the feasibility or intent. The prompt effectively supports the requested domestic scene with realistic, non-sexualized performance and cinematic production values.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"STC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"0-3 seconds: Hold on the empty bedroom exactly as in the first frame... 3-7 seconds: A middle-aged East Asian woman... enters... 7-11 seconds: She turns toward the rear windows... 11-15 seconds: She returns to the dresser mirror... exits calmly toward the right doorway.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"At 0.00 seconds into the target video, <Picture 1> (from [Shot 1]) is fully referenced... At around 3 seconds... At around 7 seconds... At around 11 seconds... As she leaves, the camera settles back into the exact first-frame composition...\"\n        }\n      ],\n      \"rationale\": \"The enhanced prompt organizes the 15-second video into four clear temporal segments with precise timing cues and event boundaries. It maintains a logical progression of actions (entering, tidying, adjusting shutters/bike, checking mirror, exiting) with consistent shot framing and camera behavior. The timing is slightly flexible ('around 3 seconds') but remains within the original instruction’s structure. The sequence is feasible and well-ordered.\"\n    },\n    {\n      \"criterion\": \"CDS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"smooth handheld unit following her at eye level with a slight natural shake when she moves; when she is off-screen, hold near the original first-frame framing. Photorealistic live-action look, ARRI Alexa 35mm character... shallow depth of field...\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"The camera holds near the first-frame framing with only a subtle handheld micro-sway at slow speed... The handheld unit follows her at eye level with a slight natural shake... shallow depth of field, and restrained warm color grading...\"\n        }\n      ],\n      \"rationale\": \"The prompt specifies actionable camera parameters: eye-level framing, handheld micro-sway/natural shake, shallow depth of field, ARRI Alexa 35mm character, and consistent composition. It also describes lens characteristics (film grain, motion blur) and camera movement (following subject, returning to original framing). These are directly actionable for video generation.\"\n    },\n    {\n      \"criterion\": \"ETD\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"Hold on the empty bedroom... then she enters... turns toward the rear windows... returns to the dresser mirror... exits calmly toward the right doorway.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"The camera holds... follows her... settles back into the exact first-frame composition...\"\n        }\n      ],\n      \"rationale\": \"Cuts and transitions are implied through continuous camera movement and framing changes that follow the subject’s motion. The camera remains on the same shot throughout, with only subtle movement to track the woman. There are no abrupt or disconnected cuts; transitions are motivated by the subject’s movement and maintain spatial continuity. The ending returns to the original composition, reinforcing narrative closure.\"\n    },\n    {\n      \"criterion\": \"LCS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"Soft daylight filters through the partially open shutters. Dust motes drift in the warm air... cinematic but restrained color grading matching the warm indoor daylight of the reference bedroom...\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Soft daylight filters through the shutter slats; dust motes drift in the warm air... restrained warm color grading matching the reference bedroom's daylight...\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"color_temperature: warm, slightly yellowish indoor lighting with cooler daylight from windows... light_sources_and_direction_effect: recessed ceiling light... natural daylight filtering through partially open shutters from rear windows\"\n        }\n      ],\n      \"rationale\": \"The prompt specifies light source (recessed ceiling light and natural daylight), direction (from rear windows), quality (soft, diffused), color temperature (warm, slightly yellowish), and grading (restrained warm). These are consistent with the evidence from the image and are actionable for lighting design.\"\n    },\n    {\n      \"criterion\": \"NDE\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"A middle-aged East Asian woman... enters... places the blanket... smooths a pillow... adjusts one shutter slat... wipes the handlebar... checks the bike seat... checks her collar and hair... exits calmly...\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"enters... lays the blanket... smooths a pillow... tilts one plantation-shutter slat... wipes the exercise bike's handlebar... checks the seat height... picks up a small bottle... sets it back... exits calmly...\"\n        }\n      ],\n      \"rationale\": \"The prompt provides a clear progression of domestic actions that escalate from entering to tidying, then to minor adjustments, and finally to a brief self-check before exiting. The actions are varied, realistic, and build a coherent narrative arc without repetition or static restatement. The sequence culminates in the room returning to stillness, providing resolution.\"\n    },\n    {\n      \"criterion\": \"CIF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"minor\",\n      \"issue\": \"Slight over-specification in timing and camera motion details (e.g., 'around 3 seconds' vs. 'exactly 3 seconds') and minor redundancy in describing the same actions in both original and enhanced prompts. However, these do not distract from the central request.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"0-3 seconds: Hold on the empty bedroom exactly as in the first frame.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"At around 3 seconds, a middle-aged East Asian woman... enters...\"\n        }\n      ],\n      \"rationale\": \"The enhanced prompt adds minor elaborations (e.g., 'subtle handheld micro-sway', 'natural motion blur') that are compatible with the original request and support realism. There is no irrelevant padding or decorative detail. The only issue is slight redundancy in timing phrasing, which is a minor stylistic choice and does not affect the core content.\"\n    },\n    {\n      \"criterion\": \"SDI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"Soft room tone with faint outdoor daylight ambience and the gentle rustle of fabric... shutter slat makes a light wooden click... cloth squeaks faintly... small bottles clink softly... quiet slippered footsteps...\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Soft room tone with faint outdoor daylight ambience and the gentle rustle of fabric... The shutter slat makes a light wooden click... a cloth squeaks faintly... small bottles clink softly... quiet slippered footsteps...\"\n        }\n      ],\n      \"rationale\": \"The prompt integrates audio elements (room tone, fabric rustle, clicks, squeaks, clinks, footsteps) that are tied to visual actions and timing. These are specified by source (environment, character, object), intensity (faint, soft), and progression (beginning to end). The audio supports the visual narrative without requiring every type (e.g., music is N/A).\"\n    },\n    {\n      \"criterion\": \"SPS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"middle-aged East Asian woman in modest daytime home clothes (light blouse, high-waisted trousers, soft indoor slippers)... ordinary posture, fully clothed, no lingerie... relaxed and focused on tidying... natural motion blur on limbs and fabric, realistic physics and weight, subtle breathing and micro-expressions, authentic skin texture...\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"middle-aged East Asian woman in a light blouse, high-waisted trousers, and soft indoor slippers... her expression relaxed and focused on tidying, with natural motion blur on her limbs and fabric, realistic weight, authentic skin texture, and natural eye catchlights.\"\n        }\n      ],\n      \"rationale\": \"The prompt specifies subject appearance (age, ethnicity, clothing), pose, expression, movement (calm pace, smoothing pillow, wiping handlebar), interaction with objects, and performance details (motion blur, weight, skin texture, catchlights). These are generation-relevant and support the requested non-sexualized, realistic portrayal.\"\n    },\n    {\n      \"criterion\": \"VSS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"Photorealistic live-action look, ARRI Alexa 35mm character, natural motion blur... shallow depth of field, hyper-detailed, no artifacts, no deformation, perfect anatomy and proportions... environment, lighting direction, furniture arrangement... must remain consistent...\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Photorealistic live-action, cinematic with an ARRI Alexa 35mm character, gentle film grain, shallow depth of field, and restrained warm color grading... hyper-detailed, no artifacts, no deformation, perfect anatomy and proportions.\"\n        }\n      ],\n      \"rationale\": \"The prompt specifies medium (photorealistic live-action), rendering language (ARRI Alexa 35mm, film grain, motion blur), production design (consistent furniture, lighting, materials), and visual treatment (cinematic, warm grading, shallow depth of field). These are actionable and consistent with the reference image.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt provides a highly detailed, temporally structured, and visually specific plan for a 15-second video sequence that closely adheres to the original instruction. It accurately references the provided image, maintains consistent spatial and lighting conditions, and specifies camera movement, subject actions, and audio elements with precision. Minor issues include slight over-specification in some areas (e.g., exact timing of actions) and a minor deviation in camera motion description (‘micro-sway’ vs. ‘natural shake’), but these do not materially affect the feasibility or intent. The prompt effectively supports the requested domestic scene with realistic, non-sexualized performance and cinematic production values.",
+  "usage": {
+    "completion_tokens": 2430,
+    "prompt_tokens": 3925,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 6355
+  }
+}

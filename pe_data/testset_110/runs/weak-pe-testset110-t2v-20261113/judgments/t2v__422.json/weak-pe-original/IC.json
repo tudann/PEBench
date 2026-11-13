@@ -1,0 +1,107 @@
+{
+  "candidate_hash": "ee5f9f503d60b05832a11ce102dafce73f850a78dfc9bed42dcf2c7de0bef172",
+  "case_key": "t2v:422",
+  "created_at": "2026-11-13T08:27:32+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "SAC",
+      "evidence": [
+        {
+          "quote": "First state that there is one protagonist, then state that this same protagonist appears simultaneously as five different-looking people who talk to each other.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt states there is one protagonist, then immediately contradicts this by requiring the same protagonist to appear simultaneously as five different-looking people who talk to each other, violating subject identity and count consistency.",
+      "rationale": "Subject identity and count must remain stable across shots. The instruction to have one protagonist split into five distinct appearances simultaneously creates a fundamental contradiction in identity and count, which is a major internal consistency failure.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANL",
+      "evidence": [
+        {
+          "quote": "Reverse the timeline: show the ending first, then cut to a beginning that does not match. Cut away in the middle to a toothpaste commercial.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt requires reversing the timeline (showing the ending first, then a non-matching beginning) and cutting away to a toothpaste commercial mid-sequence, creating a causal and procedural incoherence with no plausible binding or resolution between events.",
+      "rationale": "Actions must form a coherent causal or procedural progression. The described sequence is logically incoherent: reversing the timeline without establishing a causal link, and inserting an unrelated commercial mid-sequence, breaks all procedural and narrative logic, constituting a major issue.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "TSC",
+      "evidence": [
+        {
+          "quote": "Set the total runtime to 2 seconds, while also making every shot last 22 seconds.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt sets the total runtime to 2 seconds while also requiring every shot to last 22 seconds, which is mathematically impossible and creates a direct contradiction in duration allocation.",
+      "rationale": "Chronology and duration must be logically consistent. A total runtime of 2 seconds cannot accommodate any shot lasting 22 seconds, making this a fundamental, unresolvable contradiction in time allocation — a major internal consistency failure.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SPC",
+      "evidence": [
+        {
+          "quote": "Describe that same moment as harsh noon sun and as a lightless night, and as both a locked camera and a camera that never stops shaking.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt describes the same moment as both harsh noon sun and lightless night, and as both a locked camera and a camera that never stops shaking, creating impossible spatial and temporal conditions that cannot coexist.",
+      "rationale": "Location, lighting, and camera movement must be consistent within a given moment. Describing the same moment with mutually exclusive lighting (noon vs. night) and camera states (locked vs. shaking) violates spatial and temporal consistency, resulting in a major internal contradiction.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "PL",
+      "evidence": [
+        {
+          "quote": "this same protagonist appears simultaneously as five different-looking people who talk to each other.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt requires a single protagonist to appear simultaneously as five different-looking people, which violates object permanence and bodily feasibility under real-world physics.",
+      "rationale": "Physics requires that a single entity cannot occupy multiple distinct physical forms simultaneously without a clear fictional or narrative justification. The prompt provides no such framework, making this a major violation of physical consistency.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "AVS",
+      "evidence": [
+        {
+          "quote": "Replace the whole video with someone typing in a silent office, with no music, instruments, or singing.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "paired with the retro disco pop track “Cruel Summer.” The image first cuts into an old American town street... performing large, rhythmic dance movements, including hip twists, hip pushes, and waist sways. ... crisp, clean beat-matched rhythm.",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "The prompt drops all music, instruments, and singing, yet the original prompt specifies a retro disco pop track 'Cruel Summer' with beat-matched rhythm and dance. The enhanced prompt does not align the visual events with any audio, creating a semantic misalignment.",
+      "rationale": "Visual events must align with audio cues. The original prompt requires dance movements synchronized to a beat-matched rhythm, but the enhanced prompt removes all audio, making any beat-sync or dialogue alignment impossible. This creates a major misalignment between visual and auditory elements.",
+      "severity": "major"
+    }
+  ],
+  "dimension": "IC",
+  "dimension_score": 0,
+  "evidence_cache_key": "dc55dbe0a578ad6d1c0d7b89a552adef74f98ea510c943757da036c7367be018",
+  "judge_cache_key": "438d7e9fd7332b1041db3e2c26d42cb3fe828e0d369fb59490f6650aee59e97d",
+  "method": "weak-pe-original",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"IC\",\n  \"dimension_score\": 0,\n  \"summary\": \"The enhanced prompt is internally inconsistent across all criteria. It contains contradictory requirements regarding subject identity, action sequence, timeline, setting, camera movement, and duration, rendering the entire plan incoherent and unfeasible. Multiple criteria are violated with major severity due to direct contradictions and impossible conditions.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"SAC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt states there is one protagonist, then immediately contradicts this by requiring the same protagonist to appear simultaneously as five different-looking people who talk to each other, violating subject identity and count consistency.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"First state that there is one protagonist, then state that this same protagonist appears simultaneously as five different-looking people who talk to each other.\"\n        }\n      ],\n      \"rationale\": \"Subject identity and count must remain stable across shots. The instruction to have one protagonist split into five distinct appearances simultaneously creates a fundamental contradiction in identity and count, which is a major internal consistency failure.\"\n    },\n    {\n      \"criterion\": \"ANL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt requires reversing the timeline (showing the ending first, then a non-matching beginning) and cutting away to a toothpaste commercial mid-sequence, creating a causal and procedural incoherence with no plausible binding or resolution between events.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Reverse the timeline: show the ending first, then cut to a beginning that does not match. Cut away in the middle to a toothpaste commercial.\"\n        }\n      ],\n      \"rationale\": \"Actions must form a coherent causal or procedural progression. The described sequence is logically incoherent: reversing the timeline without establishing a causal link, and inserting an unrelated commercial mid-sequence, breaks all procedural and narrative logic, constituting a major issue.\"\n    },\n    {\n      \"criterion\": \"TSC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt sets the total runtime to 2 seconds while also requiring every shot to last 22 seconds, which is mathematically impossible and creates a direct contradiction in duration allocation.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Set the total runtime to 2 seconds, while also making every shot last 22 seconds.\"\n        }\n      ],\n      \"rationale\": \"Chronology and duration must be logically consistent. A total runtime of 2 seconds cannot accommodate any shot lasting 22 seconds, making this a fundamental, unresolvable contradiction in time allocation — a major internal consistency failure.\"\n    },\n    {\n      \"criterion\": \"SPC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt describes the same moment as both harsh noon sun and lightless night, and as both a locked camera and a camera that never stops shaking, creating impossible spatial and temporal conditions that cannot coexist.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Describe that same moment as harsh noon sun and as a lightless night, and as both a locked camera and a camera that never stops shaking.\"\n        }\n      ],\n      \"rationale\": \"Location, lighting, and camera movement must be consistent within a given moment. Describing the same moment with mutually exclusive lighting (noon vs. night) and camera states (locked vs. shaking) violates spatial and temporal consistency, resulting in a major internal contradiction.\"\n    },\n    {\n      \"criterion\": \"PL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt requires a single protagonist to appear simultaneously as five different-looking people, which violates object permanence and bodily feasibility under real-world physics.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"this same protagonist appears simultaneously as five different-looking people who talk to each other.\"\n        }\n      ],\n      \"rationale\": \"Physics requires that a single entity cannot occupy multiple distinct physical forms simultaneously without a clear fictional or narrative justification. The prompt provides no such framework, making this a major violation of physical consistency.\"\n    },\n    {\n      \"criterion\": \"AVS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt drops all music, instruments, and singing, yet the original prompt specifies a retro disco pop track 'Cruel Summer' with beat-matched rhythm and dance. The enhanced prompt does not align the visual events with any audio, creating a semantic misalignment.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Replace the whole video with someone typing in a silent office, with no music, instruments, or singing.\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"paired with the retro disco pop track “Cruel Summer.” The image first cuts into an old American town street... performing large, rhythmic dance movements, including hip twists, hip pushes, and waist sways. ... crisp, clean beat-matched rhythm.\"\n        }\n      ],\n      \"rationale\": \"Visual events must align with audio cues. The original prompt requires dance movements synchronized to a beat-matched rhythm, but the enhanced prompt removes all audio, making any beat-sync or dialogue alignment impossible. This creates a major misalignment between visual and auditory elements.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt is internally inconsistent across all criteria. It contains contradictory requirements regarding subject identity, action sequence, timeline, setting, camera movement, and duration, rendering the entire plan incoherent and unfeasible. Multiple criteria are violated with major severity due to direct contradictions and impossible conditions.",
+  "usage": {
+    "completion_tokens": 1224,
+    "prompt_tokens": 1266,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 2490
+  }
+}

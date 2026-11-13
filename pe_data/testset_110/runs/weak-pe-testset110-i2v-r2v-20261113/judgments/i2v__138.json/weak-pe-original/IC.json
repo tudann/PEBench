@@ -1,0 +1,103 @@
+{
+  "candidate_hash": "454415089fd4a2554c5413a803bdabcbaedc1905b104d0a22def41572437ec5e",
+  "case_key": "i2v:138",
+  "created_at": "2026-11-13T07:35:42+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "SAC",
+      "evidence": [
+        {
+          "quote": "先写成只有一个主角，紧接着又写成这个主角同时变成五个外貌不同的人，并且互相对话。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Subject identity, count, and appearance are unstable and contradictory. The prompt starts with one subject, then requires that subject to simultaneously become five different people, with no explanation or coherence. This violates subject stability and introduces unexplained duplication and identity shifts.",
+      "rationale": "The requirement for a single subject to become five distinct individuals in the same sequence is a direct contradiction of subject identity and count stability. This is a major internal inconsistency as it creates an impossible scenario with no coherent subject continuity.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANL",
+      "evidence": [
+        {
+          "quote": "整段改成实拍晚间新闻口播，主播坐着念稿，不要动画角色。...紧接着又写成这个主角同时变成五个外貌不同的人，并且互相对话。中途插进一段无关的屋顶烟花。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Actions are incoherent and causally disconnected. The prompt demands a news anchor reading a script, then immediately introduces five people talking to each other, with no causal link. The insertion of unrelated rooftop fireworks further breaks procedural logic.",
+      "rationale": "The sequence of events lacks any causal or procedural progression. The transition from a single news anchor to five people conversing, with an unrelated fireworks segment, creates dangling and incompatible actions. This is a major failure in action coherence.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "TSC",
+      "evidence": [
+        {
+          "quote": "时间倒过来：先给结尾，再跳到一个对不上的开头。...总时长写成3秒，同时又要求每个分镜各自持续27秒。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Chronology is reversed and durations are contradictory. The prompt requires the sequence to start with the ending, then jump to a mismatched beginning. It also demands a total duration of 3 seconds while requiring each shot to last 27 seconds, which is logically impossible.",
+      "rationale": "The temporal structure is self-contradictory. A 3-second total duration cannot accommodate 27-second shots. Additionally, reversing time order without a coherent transition creates an infeasible state progression. This is a major inconsistency in temporal logic.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SPC",
+      "evidence": [
+        {
+          "quote": "写成机位锁死，又写成镜头一直在晃。镜头每半秒甩动、环绕、急推。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Spatial consistency is violated through conflicting camera motion and scene changes. The prompt demands a locked camera position while simultaneously requiring constant shaking, spinning, and rapid zooms every half second, which is physically impossible.",
+      "rationale": "The requirement for a static camera and constant dynamic motion is mutually exclusive. This creates an impossible spatial trajectory and camera behavior, violating the principle of consistent spatial relationships and motion.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "PL",
+      "evidence": [
+        {
+          "quote": "同一段写成正午暴晒，又写成深夜无光；...先写成只有一个主角，紧接着又写成这个主角同时变成五个外貌不同的人",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Physics is violated through impossible transformations and environmental contradictions. The prompt requires the same subject to become five different people simultaneously, and also demands conflicting lighting conditions (noon sun vs. midnight darkness) within the same scene.",
+      "rationale": "The simultaneous existence of five distinct people from one subject violates object permanence and bodily feasibility. The conflicting lighting conditions (day vs. night) in the same scene also defy real-world physics, creating a major inconsistency.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "AVS",
+      "evidence": [
+        {
+          "quote": "整段改成实拍晚间新闻口播，主播坐着念稿...紧接着又写成这个主角同时变成五个外貌不同的人，并且互相对话。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Audio-visual synchronization is impossible due to contradictory content. The prompt requires a news anchor reading a script, but then introduces five people talking to each other, with no indication of who speaks when or how dialogue aligns with visuals.",
+      "rationale": "The transition from a single speaker to five simultaneous speakers without any dialogue assignment or timing structure creates an incoherent audio-visual relationship. This is a major failure in temporal and semantic alignment.",
+      "severity": "major"
+    }
+  ],
+  "dimension": "IC",
+  "dimension_score": 0,
+  "evidence_cache_key": "5abfb653c647e19f6fbb9120e0317052857a87d203af5dce817939cfdf3864f0",
+  "judge_cache_key": "438d7e9fd7332b1041db3e2c26d42cb3fe828e0d369fb59490f6650aee59e97d",
+  "method": "weak-pe-original",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"IC\",\n  \"dimension_score\": 0,\n  \"summary\": \"Enhanced prompt fundamentally violates internal consistency by introducing contradictory, infeasible, and mutually exclusive elements across all criteria. It explicitly rejects the original subject, setting, and timeline while simultaneously creating impossible scenarios (e.g., one person becoming five, time reversal, conflicting durations, physics-defying camera motion). The prompt is self-contradictory and incoherent, rendering the entire sequence logically and physically impossible.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"SAC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Subject identity, count, and appearance are unstable and contradictory. The prompt starts with one subject, then requires that subject to simultaneously become five different people, with no explanation or coherence. This violates subject stability and introduces unexplained duplication and identity shifts.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"先写成只有一个主角，紧接着又写成这个主角同时变成五个外貌不同的人，并且互相对话。\"\n        }\n      ],\n      \"rationale\": \"The requirement for a single subject to become five distinct individuals in the same sequence is a direct contradiction of subject identity and count stability. This is a major internal inconsistency as it creates an impossible scenario with no coherent subject continuity.\"\n    },\n    {\n      \"criterion\": \"ANL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Actions are incoherent and causally disconnected. The prompt demands a news anchor reading a script, then immediately introduces five people talking to each other, with no causal link. The insertion of unrelated rooftop fireworks further breaks procedural logic.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"整段改成实拍晚间新闻口播，主播坐着念稿，不要动画角色。...紧接着又写成这个主角同时变成五个外貌不同的人，并且互相对话。中途插进一段无关的屋顶烟花。\"\n        }\n      ],\n      \"rationale\": \"The sequence of events lacks any causal or procedural progression. The transition from a single news anchor to five people conversing, with an unrelated fireworks segment, creates dangling and incompatible actions. This is a major failure in action coherence.\"\n    },\n    {\n      \"criterion\": \"TSC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Chronology is reversed and durations are contradictory. The prompt requires the sequence to start with the ending, then jump to a mismatched beginning. It also demands a total duration of 3 seconds while requiring each shot to last 27 seconds, which is logically impossible.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"时间倒过来：先给结尾，再跳到一个对不上的开头。...总时长写成3秒，同时又要求每个分镜各自持续27秒。\"\n        }\n      ],\n      \"rationale\": \"The temporal structure is self-contradictory. A 3-second total duration cannot accommodate 27-second shots. Additionally, reversing time order without a coherent transition creates an infeasible state progression. This is a major inconsistency in temporal logic.\"\n    },\n    {\n      \"criterion\": \"SPC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Spatial consistency is violated through conflicting camera motion and scene changes. The prompt demands a locked camera position while simultaneously requiring constant shaking, spinning, and rapid zooms every half second, which is physically impossible.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"写成机位锁死，又写成镜头一直在晃。镜头每半秒甩动、环绕、急推。\"\n        }\n      ],\n      \"rationale\": \"The requirement for a static camera and constant dynamic motion is mutually exclusive. This creates an impossible spatial trajectory and camera behavior, violating the principle of consistent spatial relationships and motion.\"\n    },\n    {\n      \"criterion\": \"PL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Physics is violated through impossible transformations and environmental contradictions. The prompt requires the same subject to become five different people simultaneously, and also demands conflicting lighting conditions (noon sun vs. midnight darkness) within the same scene.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"同一段写成正午暴晒，又写成深夜无光；...先写成只有一个主角，紧接着又写成这个主角同时变成五个外貌不同的人\"\n        }\n      ],\n      \"rationale\": \"The simultaneous existence of five distinct people from one subject violates object permanence and bodily feasibility. The conflicting lighting conditions (day vs. night) in the same scene also defy real-world physics, creating a major inconsistency.\"\n    },\n    {\n      \"criterion\": \"AVS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Audio-visual synchronization is impossible due to contradictory content. The prompt requires a news anchor reading a script, but then introduces five people talking to each other, with no indication of who speaks when or how dialogue aligns with visuals.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"整段改成实拍晚间新闻口播，主播坐着念稿...紧接着又写成这个主角同时变成五个外貌不同的人，并且互相对话。\"\n        }\n      ],\n      \"rationale\": \"The transition from a single speaker to five simultaneous speakers without any dialogue assignment or timing structure creates an incoherent audio-visual relationship. This is a major failure in temporal and semantic alignment.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "Enhanced prompt fundamentally violates internal consistency by introducing contradictory, infeasible, and mutually exclusive elements across all criteria. It explicitly rejects the original subject, setting, and timeline while simultaneously creating impossible scenarios (e.g., one person becoming five, time reversal, conflicting durations, physics-defying camera motion). The prompt is self-contradictory and incoherent, rendering the entire sequence logically and physically impossible.",
+  "usage": {
+    "completion_tokens": 1257,
+    "prompt_tokens": 3179,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 4436
+  }
+}

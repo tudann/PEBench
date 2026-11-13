@@ -1,0 +1,123 @@
+{
+  "candidate_hash": "2bb63a4c871f66c04f87a135744b7375fc2ffd6b0b10b9c36d50e4dd6549bc2e",
+  "case_key": "i2v:086",
+  "created_at": "2026-11-13T07:30:54+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "SAC",
+      "evidence": [
+        {
+          "quote": "a high three-quarter aerial view opens on the large pillow-top mattress shown in <Picture 1>, floating tilted at a slight diagonal among a dense sea of cumulus clouds, its quilted white top with soft blue swirl patterns, navy blue ribbed side panels, and cream mesh border band fully preserved.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "stable_subject_id: 'mattress_1', visible_appearance: {color: 'white top with blue and gray accents', material: 'fabric-like upholstery', texture: 'tufted quilted top, ribbed blue side panels, patterned trim'}",
+          "source": "evidence_facts"
+        }
+      ],
+      "issue": "Subject identity (mattress), appearance (quilted white top, blue swirls, navy ribbed sides, cream mesh band), and props (none) remain consistent across the described shots. No unexplained renaming, duplication, or attribute drift.",
+      "rationale": "The mattress is consistently described with the same visual attributes throughout the sequence. The prompt preserves the subject’s identity and appearance without introducing contradictions or changes.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANL",
+      "evidence": [
+        {
+          "quote": "seamlessly getting bigger, king size mattress to a queen size to a baby-size mattress",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "At around 2.5 seconds, the mattress contracts seamlessly to queen size... At around 4.5 seconds, it shrinks again in one smooth morph to baby size",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The action sequence is coherent and causal: the mattress morphs from king to queen to baby size in a smooth, continuous manner. However, the original prompt says 'getting bigger', while the enhanced prompt describes 'contracts' and 'shrinks', which is a directional mismatch. This is a minor issue as the overall transformation sequence is still logically consistent.",
+      "rationale": "The sequence of actions is logically ordered and physically plausible within the fantasy context. The only issue is the reversal of the transformation direction (shrinking vs. growing), which is a minor inconsistency but does not break the overall coherence.",
+      "severity": "minor"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "TSC",
+      "evidence": [
+        {
+          "quote": "At around 2.5 seconds, the mattress contracts seamlessly to queen size... At around 4.5 seconds, it shrinks again in one smooth morph to baby size... Toward the end, the baby-size mattress settles gently onto the clouds",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "short video... seamlessly getting bigger... king size to queen to baby-size",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "Chronology is clear: 0.00s (start), ~2.5s (queen size), ~4.5s (baby size), end (settling). Duration is 7 seconds, and transitions are timed with plausible pacing. No overlapping or infeasible timestamps or state resets.",
+      "rationale": "The timeline is logically structured with clear temporal markers. The transitions are smooth and occur within the 7-second duration without contradictions or impossible state changes.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SPC",
+      "evidence": [
+        {
+          "quote": "The camera pushes in with small amplitude at slow speed as the mattress bobs subtly, weightless, and clouds drift slowly past... drifting slightly upward and forward as it lightens... settles gently onto the clouds",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "scene_type: 'cloudscape', foreground/midground/background: {background: 'voluminous clouds extending to horizon', midground: 'mattress itself'}",
+          "source": "evidence_facts"
+        }
+      ],
+      "issue": "Location (cloudscape), screen direction (camera push-in), and relative position (mattress centered, floating) are consistent. The mattress drifts subtly and settles gently, maintaining plausible movement paths. No unexplained position swaps or impossible trajectories.",
+      "rationale": "The spatial relationships and movement are consistent and plausible within the dreamlike, weightless environment. The camera motion and subject trajectory are coherent.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "PL",
+      "evidence": [
+        {
+          "quote": "floating tilted at a slight diagonal among a dense sea of cumulus clouds... weightless, and clouds drift slowly past... seamless morph... soft puff of cloud mist swirls around it",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "seamlessly getting bigger... floating in the clouds",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "The physics are consistent with the fantasy context: weightless floating, seamless morphing, and cloud interactions are plausible within a cinematic, dreamlike world. No violations of object permanence or bodily feasibility.",
+      "rationale": "The transformations and environment are treated as fantasy elements, and the prompt adheres to internal logic without introducing physical contradictions.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "AVS",
+      "evidence": [
+        {
+          "quote": "overall_soundscape: A soft, airy wind drifts across the cloudscape with a faint low atmospheric hum. Gentle whooshes of displaced air accompany each size-shifting morph, and a delicate misty swirl sound rises softly as the mattress settles.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The soundscape (soft wind, atmospheric hum, whooshes during morphs, misty swirl) aligns temporally and semantically with the visual events. No misaligned dialogue, music, or effects are described.",
+      "rationale": "The audio description is synchronized with the visual events (morphs, settling) and enhances the cinematic atmosphere without introducing misalignments.",
+      "severity": "none"
+    }
+  ],
+  "dimension": "IC",
+  "dimension_score": 85,
+  "evidence_cache_key": "9f438107f85679b6fd8ba2a0c339d984c2385a746d2c1249a8d30ad6f3f36ad6",
+  "judge_cache_key": "438d7e9fd7332b1041db3e2c26d42cb3fe828e0d369fb59490f6650aee59e97d",
+  "method": "glm53_20261112_120702",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"IC\",\n  \"dimension_score\": 85,\n  \"summary\": \"The enhanced prompt maintains internal consistency with the original instruction, preserving the subject (mattress), its transformations (king → queen → baby size), and the cinematic style (3D, anamorphic lens, shallow depth of field). The sequence is coherent and physically plausible within the fantasy context. Minor issues include a slight mismatch in transformation direction (original prompt says 'getting bigger', enhanced says 'contracts' and 'shrinks') and a missing explicit mention of the initial king size in the visual description, though it is implied. No major contradictions or attribute drifts are present.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"SAC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"Subject identity (mattress), appearance (quilted white top, blue swirls, navy ribbed sides, cream mesh band), and props (none) remain consistent across the described shots. No unexplained renaming, duplication, or attribute drift.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"a high three-quarter aerial view opens on the large pillow-top mattress shown in <Picture 1>, floating tilted at a slight diagonal among a dense sea of cumulus clouds, its quilted white top with soft blue swirl patterns, navy blue ribbed side panels, and cream mesh border band fully preserved.\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"stable_subject_id: 'mattress_1', visible_appearance: {color: 'white top with blue and gray accents', material: 'fabric-like upholstery', texture: 'tufted quilted top, ribbed blue side panels, patterned trim'}\"\n        }\n      ],\n      \"rationale\": \"The mattress is consistently described with the same visual attributes throughout the sequence. The prompt preserves the subject’s identity and appearance without introducing contradictions or changes.\"\n    },\n    {\n      \"criterion\": \"ANL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"minor\",\n      \"issue\": \"The action sequence is coherent and causal: the mattress morphs from king to queen to baby size in a smooth, continuous manner. However, the original prompt says 'getting bigger', while the enhanced prompt describes 'contracts' and 'shrinks', which is a directional mismatch. This is a minor issue as the overall transformation sequence is still logically consistent.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"seamlessly getting bigger, king size mattress to a queen size to a baby-size mattress\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"At around 2.5 seconds, the mattress contracts seamlessly to queen size... At around 4.5 seconds, it shrinks again in one smooth morph to baby size\"\n        }\n      ],\n      \"rationale\": \"The sequence of actions is logically ordered and physically plausible within the fantasy context. The only issue is the reversal of the transformation direction (shrinking vs. growing), which is a minor inconsistency but does not break the overall coherence.\"\n    },\n    {\n      \"criterion\": \"TSC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"Chronology is clear: 0.00s (start), ~2.5s (queen size), ~4.5s (baby size), end (settling). Duration is 7 seconds, and transitions are timed with plausible pacing. No overlapping or infeasible timestamps or state resets.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"At around 2.5 seconds, the mattress contracts seamlessly to queen size... At around 4.5 seconds, it shrinks again in one smooth morph to baby size... Toward the end, the baby-size mattress settles gently onto the clouds\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"short video... seamlessly getting bigger... king size to queen to baby-size\"\n        }\n      ],\n      \"rationale\": \"The timeline is logically structured with clear temporal markers. The transitions are smooth and occur within the 7-second duration without contradictions or impossible state changes.\"\n    },\n    {\n      \"criterion\": \"SPC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"Location (cloudscape), screen direction (camera push-in), and relative position (mattress centered, floating) are consistent. The mattress drifts subtly and settles gently, maintaining plausible movement paths. No unexplained position swaps or impossible trajectories.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"The camera pushes in with small amplitude at slow speed as the mattress bobs subtly, weightless, and clouds drift slowly past... drifting slightly upward and forward as it lightens... settles gently onto the clouds\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"scene_type: 'cloudscape', foreground/midground/background: {background: 'voluminous clouds extending to horizon', midground: 'mattress itself'}\"\n        }\n      ],\n      \"rationale\": \"The spatial relationships and movement are consistent and plausible within the dreamlike, weightless environment. The camera motion and subject trajectory are coherent.\"\n    },\n    {\n      \"criterion\": \"PL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"The physics are consistent with the fantasy context: weightless floating, seamless morphing, and cloud interactions are plausible within a cinematic, dreamlike world. No violations of object permanence or bodily feasibility.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"floating tilted at a slight diagonal among a dense sea of cumulus clouds... weightless, and clouds drift slowly past... seamless morph... soft puff of cloud mist swirls around it\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"seamlessly getting bigger... floating in the clouds\"\n        }\n      ],\n      \"rationale\": \"The transformations and environment are treated as fantasy elements, and the prompt adheres to internal logic without introducing physical contradictions.\"\n    },\n    {\n      \"criterion\": \"AVS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"The soundscape (soft wind, atmospheric hum, whooshes during morphs, misty swirl) aligns temporally and semantically with the visual events. No misaligned dialogue, music, or effects are described.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"overall_soundscape: A soft, airy wind drifts across the cloudscape with a faint low atmospheric hum. Gentle whooshes of displaced air accompany each size-shifting morph, and a delicate misty swirl sound rises softly as the mattress settles.\"\n        }\n      ],\n      \"rationale\": \"The audio description is synchronized with the visual events (morphs, settling) and enhances the cinematic atmosphere without introducing misalignments.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt maintains internal consistency with the original instruction, preserving the subject (mattress), its transformations (king → queen → baby size), and the cinematic style (3D, anamorphic lens, shallow depth of field). The sequence is coherent and physically plausible within the fantasy context. Minor issues include a slight mismatch in transformation direction (original prompt says 'getting bigger', enhanced says 'contracts' and 'shrinks') and a missing explicit mention of the initial king size in the visual description, though it is implied. No major contradictions or attribute drifts are present.",
+  "usage": {
+    "completion_tokens": 1546,
+    "prompt_tokens": 2211,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 3757
+  }
+}

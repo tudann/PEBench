@@ -1,0 +1,127 @@
+{
+  "candidate_hash": "0e554cba6eb7c68078c518007da12acd360ee01bd264870842aeb742087d7ab1",
+  "case_key": "r2v:194",
+  "created_at": "2026-11-13T08:46:14+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "SAC",
+      "evidence": [
+        {
+          "quote": "先写成只有一个主角，紧接着又写成这个主角同时变成五个外貌不同的人，并且互相对话。",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "图1换成参考图里没有的角色，并同时当成两个互相矛盾的身份。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Subject identity and count are contradictory: starts with one protagonist, then becomes five distinct people simultaneously. The same subject is assigned two conflicting identities (from image_1 and video_1) while also being replaced by a non-existent character. Appearance and roles are unstable.",
+      "rationale": "The prompt explicitly contradicts subject identity and count. A single subject cannot simultaneously be five distinct people with different appearances. Assigning conflicting identities to the same subject violates identity stability. This is a major inconsistency.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANL",
+      "evidence": [
+        {
+          "quote": "整段改成实拍晚间新闻口播，主播坐着念稿，不要动画角色。...紧接着又写成这个主角同时变成五个外貌不同的人，并且互相对话。",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "中途插进一段无关的海底寻宝。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Actions are incoherent and causally disconnected: transitions from a news anchor reading a script to five people dialoguing without plausible progression. An unrelated 'underwater treasure hunt' is inserted mid-sequence with no causal link. The actions lack binding to subjects or logical sequence.",
+      "rationale": "The action sequence is logically broken: a news anchor cannot seamlessly become five people dialoguing without a causal transition. Inserting an unrelated event (underwater treasure hunt) disrupts procedural coherence. This creates a major incoherence in action progression.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "TSC",
+      "evidence": [
+        {
+          "quote": "时间倒过来：先给结尾，再跳到一个对不上的开头。",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "总时长写成2秒，同时又要求每个分镜各自持续25秒。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Chronology is reversed and infeasible: the prompt requires starting with the ending, then jumping to a mismatched beginning. Duration is contradictory: total duration is set to 2 seconds while each shot must last 25 seconds, which is impossible.",
+      "rationale": "Reversing chronology with a mismatched beginning creates an infeasible timeline. The duration contradiction (2s total vs. 25s per shot) is mathematically impossible and violates temporal consistency. This is a major issue.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SPC",
+      "evidence": [
+        {
+          "quote": "写成机位锁死，又写成镜头一直在晃。",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "把视频1当成静止海报，丢掉其中的动作、声音和背景。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Spatial continuity is violated: the prompt alternates between a locked camera and constant camera movement, which cannot coexist in the same sequence. The environment is also inconsistently described (static poster vs. dynamic video).",
+      "rationale": "A locked camera cannot simultaneously be constantly moving. Treating a video as a static poster contradicts its dynamic nature. These conflicting spatial and compositional requirements create a major inconsistency.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "PL",
+      "evidence": [
+        {
+          "quote": "这个主角同时变成五个外貌不同的人",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "图1换成参考图里没有的角色，并同时当成两个互相矛盾的身份。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Physics and object permanence are violated: a single person cannot simultaneously be five different people. The same subject is assigned two contradictory identities, which defies real-world logic and character consistency.",
+      "rationale": "The prompt requires a single subject to exist as multiple distinct identities simultaneously, which violates the principle of identity and object permanence. This is a fundamental physics violation in the context of real-world or consistent fictional logic.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "AVS",
+      "evidence": [
+        {
+          "quote": "主播坐着念稿...紧接着又写成这个主角同时变成五个外貌不同的人，并且互相对话。",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "中途插进一段无关的海底寻宝。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Temporal and semantic alignment is broken: the prompt requires a news anchor (visual) to be accompanied by dialogue among five people (audio), which cannot be synchronized. The unrelated 'underwater treasure hunt' has no audio-visual alignment with the main sequence.",
+      "rationale": "The visual of a single news anchor cannot align with the audio of five people dialoguing. The inserted treasure hunt has no semantic or temporal connection to the main sequence, breaking alignment. This is a major issue.",
+      "severity": "major"
+    }
+  ],
+  "dimension": "IC",
+  "dimension_score": 0,
+  "evidence_cache_key": "f307971cb99f82eaf340615b89655246fa9b0c2ab994884fab7b7de428d1cf95",
+  "judge_cache_key": "438d7e9fd7332b1041db3e2c26d42cb3fe828e0d369fb59490f6650aee59e97d",
+  "method": "weak-pe-original",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"IC\",\n  \"dimension_score\": 0,\n  \"summary\": \"Enhanced prompt contains severe internal inconsistencies across all criteria: subject identity and count are contradictory (one to five people), actions are incoherent (news anchor to dialogue among five people), chronology is reversed and infeasible (ending before beginning), spatial continuity is violated (static vs. moving camera), physics is ignored (same person as multiple identities), and temporal alignment is broken (2s total vs. 25s per shot). The prompt deliberately introduces contradictions and impossibilities, making it fundamentally inconsistent.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"SAC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Subject identity and count are contradictory: starts with one protagonist, then becomes five distinct people simultaneously. The same subject is assigned two conflicting identities (from image_1 and video_1) while also being replaced by a non-existent character. Appearance and roles are unstable.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"先写成只有一个主角，紧接着又写成这个主角同时变成五个外貌不同的人，并且互相对话。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"图1换成参考图里没有的角色，并同时当成两个互相矛盾的身份。\"\n        }\n      ],\n      \"rationale\": \"The prompt explicitly contradicts subject identity and count. A single subject cannot simultaneously be five distinct people with different appearances. Assigning conflicting identities to the same subject violates identity stability. This is a major inconsistency.\"\n    },\n    {\n      \"criterion\": \"ANL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Actions are incoherent and causally disconnected: transitions from a news anchor reading a script to five people dialoguing without plausible progression. An unrelated 'underwater treasure hunt' is inserted mid-sequence with no causal link. The actions lack binding to subjects or logical sequence.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"整段改成实拍晚间新闻口播，主播坐着念稿，不要动画角色。...紧接着又写成这个主角同时变成五个外貌不同的人，并且互相对话。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"中途插进一段无关的海底寻宝。\"\n        }\n      ],\n      \"rationale\": \"The action sequence is logically broken: a news anchor cannot seamlessly become five people dialoguing without a causal transition. Inserting an unrelated event (underwater treasure hunt) disrupts procedural coherence. This creates a major incoherence in action progression.\"\n    },\n    {\n      \"criterion\": \"TSC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Chronology is reversed and infeasible: the prompt requires starting with the ending, then jumping to a mismatched beginning. Duration is contradictory: total duration is set to 2 seconds while each shot must last 25 seconds, which is impossible.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"时间倒过来：先给结尾，再跳到一个对不上的开头。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"总时长写成2秒，同时又要求每个分镜各自持续25秒。\"\n        }\n      ],\n      \"rationale\": \"Reversing chronology with a mismatched beginning creates an infeasible timeline. The duration contradiction (2s total vs. 25s per shot) is mathematically impossible and violates temporal consistency. This is a major issue.\"\n    },\n    {\n      \"criterion\": \"SPC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Spatial continuity is violated: the prompt alternates between a locked camera and constant camera movement, which cannot coexist in the same sequence. The environment is also inconsistently described (static poster vs. dynamic video).\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"写成机位锁死，又写成镜头一直在晃。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"把视频1当成静止海报，丢掉其中的动作、声音和背景。\"\n        }\n      ],\n      \"rationale\": \"A locked camera cannot simultaneously be constantly moving. Treating a video as a static poster contradicts its dynamic nature. These conflicting spatial and compositional requirements create a major inconsistency.\"\n    },\n    {\n      \"criterion\": \"PL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Physics and object permanence are violated: a single person cannot simultaneously be five different people. The same subject is assigned two contradictory identities, which defies real-world logic and character consistency.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"这个主角同时变成五个外貌不同的人\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"图1换成参考图里没有的角色，并同时当成两个互相矛盾的身份。\"\n        }\n      ],\n      \"rationale\": \"The prompt requires a single subject to exist as multiple distinct identities simultaneously, which violates the principle of identity and object permanence. This is a fundamental physics violation in the context of real-world or consistent fictional logic.\"\n    },\n    {\n      \"criterion\": \"AVS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Temporal and semantic alignment is broken: the prompt requires a news anchor (visual) to be accompanied by dialogue among five people (audio), which cannot be synchronized. The unrelated 'underwater treasure hunt' has no audio-visual alignment with the main sequence.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"主播坐着念稿...紧接着又写成这个主角同时变成五个外貌不同的人，并且互相对话。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"中途插进一段无关的海底寻宝。\"\n        }\n      ],\n      \"rationale\": \"The visual of a single news anchor cannot align with the audio of five people dialoguing. The inserted treasure hunt has no semantic or temporal connection to the main sequence, breaking alignment. This is a major issue.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "Enhanced prompt contains severe internal inconsistencies across all criteria: subject identity and count are contradictory (one to five people), actions are incoherent (news anchor to dialogue among five people), chronology is reversed and infeasible (ending before beginning), spatial continuity is violated (static vs. moving camera), physics is ignored (same person as multiple identities), and temporal alignment is broken (2s total vs. 25s per shot). The prompt deliberately introduces contradictions and impossibilities, making it fundamentally inconsistent.",
+  "usage": {
+    "completion_tokens": 1419,
+    "prompt_tokens": 2760,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 4179
+  }
+}

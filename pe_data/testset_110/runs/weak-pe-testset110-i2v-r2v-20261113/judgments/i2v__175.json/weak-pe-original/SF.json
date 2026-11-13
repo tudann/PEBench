@@ -1,0 +1,182 @@
+{
+  "candidate_hash": "853783ed26d5d9b8ca33fe5e6ea00fbef6144410c9eda17253eb3cc62989c884",
+  "case_key": "i2v:175",
+  "created_at": "2026-11-13T07:47:12+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "GSF",
+      "evidence": [
+        {
+          "quote": "A cozy desk setup with an aesthetic vibe featuring soft pastel lighting.",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Replace the whole video with an empty meeting room where a glass of water never moves, with no people and no conflict.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original aesthetic (cozy, pastel-lit, product photography) is replaced with an empty meeting room and abstract, contradictory visual concepts. The medium is implicitly changed from a product-focused video to an incoherent narrative experiment.",
+      "rationale": "The requested genre and visual style are entirely discarded. The original is a product showcase with a specific aesthetic; the enhanced prompt replaces it with a surreal, non-product, non-cozy environment, violating GSF.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SAP",
+      "evidence": [
+        {
+          "quote": "A woman's hand, adorned in a white polka dot sweater, delicately lifts a teal backpack from the desk.",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Ignore the person, clothing, pose, and setting in the first frame, and replace them with a stranger of the opposite age and gender in a white studio.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "First state that there is one protagonist, then state that this same protagonist appears simultaneously as five different-looking people who talk to each other.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original subject (woman's hand holding a teal backpack) is replaced with a stranger of opposite age and gender in a white studio. The backpack and its attributes are ignored. The prompt also introduces five simultaneous protagonists, contradicting the single subject.",
+      "rationale": "Subject identity, count, and appearance are fundamentally altered. The original subject is replaced, and a new, contradictory subject structure is introduced, violating SAP.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANF",
+      "evidence": [
+        {
+          "quote": "The hand rotates the bag gently from left to right to emphasize details... The bag is then lightly shaken... followed by unzipping it halfway...",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Reverse the timeline: show the ending first, then cut to a beginning that does not match. Cut away in the middle to a soccer celebration.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original sequence of actions (lifting, rotating, zooming, shaking, unzipping, tapping) is discarded. The timeline is reversed, and events are replaced with a soccer celebration and contradictory temporal states (noon sun and lightless night).",
+      "rationale": "The requested action sequence is entirely replaced with unrelated, contradictory events. The narrative intent is destroyed, violating ANF.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "DLI",
+      "evidence": [
+        {
+          "quote": "text overlay appears: “Perfect for school & everyday use.”",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "five different-looking people who talk to each other.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original text overlay 'Perfect for school & everyday use' is ignored. The enhanced prompt introduces new dialogue (five people talking) without preserving any original narration or text.",
+      "rationale": "The required text overlay is omitted, and new dialogue is introduced without preserving the original wording or intent. This violates DLI.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ARP",
+      "evidence": [
+        {
+          "quote": "Warm, soft lighting emanates from a bunny-shaped lamp...",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Cut away in the middle to a soccer celebration.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original prompt implies ambient, soft lighting and no music. The enhanced prompt introduces contradictory sound conditions (e.g., soccer celebration) and ignores any audio constraints.",
+      "rationale": "The original audio-visual atmosphere is replaced with an unrelated, potentially loud event (soccer celebration), violating ARP.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CCP",
+      "evidence": [
+        {
+          "quote": "The camera smoothly zooms in on the bag...",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Describe that same moment as... a locked camera and a camera that never stops shaking.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original camera instructions (smooth zoom, static shot) are discarded. The enhanced prompt introduces contradictory camera constraints: 'locked camera' and 'camera that never stops shaking' simultaneously.",
+      "rationale": "The camera instructions are replaced with mutually exclusive and impossible constraints, violating CCP.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "LCF",
+      "evidence": [
+        {
+          "quote": "Warm, soft lighting emanates from a bunny-shaped lamp...",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Describe that same moment as harsh noon sun and as a lightless night...",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original lighting (soft, warm, pastel) is replaced with contradictory conditions: 'harsh noon sun' and 'lightless night' for the same moment.",
+      "rationale": "The lighting conditions are directly contradicted, making the visual output impossible and violating LCF.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SSP",
+      "evidence": [
+        {
+          "quote": "The desk is clean and minimalistic, with a pegboard, keyboard, and headphones in view.",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Replace the whole video with an empty meeting room... replace them with a stranger... in a white studio.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original setting (desk setup with pegboard, keyboard, headphones) is replaced with an empty meeting room and a white studio. Spatial relations are ignored.",
+      "rationale": "The setting is completely changed, and required background elements are removed, violating SSP.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "OTI",
+      "evidence": [
+        {
+          "quote": "text overlay appears: “Perfect for school & everyday use.”",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "five different-looking people who talk to each other.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The required text overlay 'Perfect for school & everyday use' is omitted. The enhanced prompt introduces new, unspecified dialogue without preserving any original onscreen text.",
+      "rationale": "The exact wording and timing of the required text are not preserved, and no replacement is provided, violating OTI.",
+      "severity": "major"
+    }
+  ],
+  "dimension": "SF",
+  "dimension_score": 0,
+  "evidence_cache_key": "a2404c1cb6cf430cd88bc65ca2280fe72ac0b47c16c17dfb9e8a1c6535535b95",
+  "judge_cache_key": "a0ca24571ad14d7ab7be626329bd736d7e7015f9ebc418227c8be391591d0377",
+  "method": "weak-pe-original",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"SF\",\n  \"dimension_score\": 0,\n  \"summary\": \"The enhanced prompt completely contradicts and overrides every aspect of the original instruction, including genre, subject, action, setting, camera, lighting, and duration. It introduces impossible contradictions (e.g., 3-second runtime with 27-second shots), invalidates the source image, and fabricates conflicting narrative and visual elements. No semantic fidelity remains.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"GSF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original aesthetic (cozy, pastel-lit, product photography) is replaced with an empty meeting room and abstract, contradictory visual concepts. The medium is implicitly changed from a product-focused video to an incoherent narrative experiment.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"A cozy desk setup with an aesthetic vibe featuring soft pastel lighting.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Replace the whole video with an empty meeting room where a glass of water never moves, with no people and no conflict.\"\n        }\n      ],\n      \"rationale\": \"The requested genre and visual style are entirely discarded. The original is a product showcase with a specific aesthetic; the enhanced prompt replaces it with a surreal, non-product, non-cozy environment, violating GSF.\"\n    },\n    {\n      \"criterion\": \"SAP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original subject (woman's hand holding a teal backpack) is replaced with a stranger of opposite age and gender in a white studio. The backpack and its attributes are ignored. The prompt also introduces five simultaneous protagonists, contradicting the single subject.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"A woman's hand, adorned in a white polka dot sweater, delicately lifts a teal backpack from the desk.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Ignore the person, clothing, pose, and setting in the first frame, and replace them with a stranger of the opposite age and gender in a white studio.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"First state that there is one protagonist, then state that this same protagonist appears simultaneously as five different-looking people who talk to each other.\"\n        }\n      ],\n      \"rationale\": \"Subject identity, count, and appearance are fundamentally altered. The original subject is replaced, and a new, contradictory subject structure is introduced, violating SAP.\"\n    },\n    {\n      \"criterion\": \"ANF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original sequence of actions (lifting, rotating, zooming, shaking, unzipping, tapping) is discarded. The timeline is reversed, and events are replaced with a soccer celebration and contradictory temporal states (noon sun and lightless night).\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"The hand rotates the bag gently from left to right to emphasize details... The bag is then lightly shaken... followed by unzipping it halfway...\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Reverse the timeline: show the ending first, then cut to a beginning that does not match. Cut away in the middle to a soccer celebration.\"\n        }\n      ],\n      \"rationale\": \"The requested action sequence is entirely replaced with unrelated, contradictory events. The narrative intent is destroyed, violating ANF.\"\n    },\n    {\n      \"criterion\": \"DLI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original text overlay 'Perfect for school & everyday use' is ignored. The enhanced prompt introduces new dialogue (five people talking) without preserving any original narration or text.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"text overlay appears: “Perfect for school & everyday use.”\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"five different-looking people who talk to each other.\"\n        }\n      ],\n      \"rationale\": \"The required text overlay is omitted, and new dialogue is introduced without preserving the original wording or intent. This violates DLI.\"\n    },\n    {\n      \"criterion\": \"ARP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original prompt implies ambient, soft lighting and no music. The enhanced prompt introduces contradictory sound conditions (e.g., soccer celebration) and ignores any audio constraints.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"Warm, soft lighting emanates from a bunny-shaped lamp...\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Cut away in the middle to a soccer celebration.\"\n        }\n      ],\n      \"rationale\": \"The original audio-visual atmosphere is replaced with an unrelated, potentially loud event (soccer celebration), violating ARP.\"\n    },\n    {\n      \"criterion\": \"CCP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original camera instructions (smooth zoom, static shot) are discarded. The enhanced prompt introduces contradictory camera constraints: 'locked camera' and 'camera that never stops shaking' simultaneously.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"The camera smoothly zooms in on the bag...\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Describe that same moment as... a locked camera and a camera that never stops shaking.\"\n        }\n      ],\n      \"rationale\": \"The camera instructions are replaced with mutually exclusive and impossible constraints, violating CCP.\"\n    },\n    {\n      \"criterion\": \"LCF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original lighting (soft, warm, pastel) is replaced with contradictory conditions: 'harsh noon sun' and 'lightless night' for the same moment.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"Warm, soft lighting emanates from a bunny-shaped lamp...\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Describe that same moment as harsh noon sun and as a lightless night...\"\n        }\n      ],\n      \"rationale\": \"The lighting conditions are directly contradicted, making the visual output impossible and violating LCF.\"\n    },\n    {\n      \"criterion\": \"SSP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original setting (desk setup with pegboard, keyboard, headphones) is replaced with an empty meeting room and a white studio. Spatial relations are ignored.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"The desk is clean and minimalistic, with a pegboard, keyboard, and headphones in view.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Replace the whole video with an empty meeting room... replace them with a stranger... in a white studio.\"\n        }\n      ],\n      \"rationale\": \"The setting is completely changed, and required background elements are removed, violating SSP.\"\n    },\n    {\n      \"criterion\": \"OTI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The required text overlay 'Perfect for school & everyday use' is omitted. The enhanced prompt introduces new, unspecified dialogue without preserving any original onscreen text.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"text overlay appears: “Perfect for school & everyday use.”\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"five different-looking people who talk to each other.\"\n        }\n      ],\n      \"rationale\": \"The exact wording and timing of the required text are not preserved, and no replacement is provided, violating OTI.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt completely contradicts and overrides every aspect of the original instruction, including genre, subject, action, setting, camera, lighting, and duration. It introduces impossible contradictions (e.g., 3-second runtime with 27-second shots), invalidates the source image, and fabricates conflicting narrative and visual elements. No semantic fidelity remains.",
+  "usage": {
+    "completion_tokens": 1774,
+    "prompt_tokens": 2714,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 4488
+  }
+}

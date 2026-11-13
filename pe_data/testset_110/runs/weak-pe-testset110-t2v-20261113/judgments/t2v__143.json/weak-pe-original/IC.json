@@ -1,0 +1,123 @@
+{
+  "candidate_hash": "6cd7ea40d34cb9397ac9533f04b98ae368b1f83ca402f4e096f4a39ec2663a4d",
+  "case_key": "t2v:143",
+  "created_at": "2026-11-13T07:39:13+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "SAC",
+      "evidence": [
+        {
+          "quote": "一只3D拟人手从左侧迅速探入，夹起画面中央的一块夹心饼干。",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "先写成只有一个主角，紧接着又写成这个主角同时变成五个外貌不同的人，并且互相对话。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "主体身份从单一3D动画角色变为五个外貌不同的人，且互相对话，违反原始设定的单一主体与动画角色身份。原始指令中主体为‘拟人手’和‘夹心饼干’，无真人主播或多人设定。",
+      "rationale": "主体身份、数量和角色属性发生根本性改变，从动画拟人手和饼干变为实拍主播并分裂为五人，构成严重身份与数量不一致，违反SAC准则。",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANL",
+      "evidence": [
+        {
+          "quote": "开场是明快天蓝色背景，一只3D拟人手从左侧迅速探入，夹起画面中央的一块夹心饼干。饼干立刻飞快自转，随即垂直分开，露出内部明艳的橘黄色果味夹心...",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "中途插进一段无关的海底寻宝。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "动作序列被彻底打乱，原始广告的因果动作链（夹起饼干→旋转→穿越通道→滑行→特写→结尾）被替换为无逻辑的对话与海底寻宝，缺乏任何连贯的因果或程序性动作。",
+      "rationale": "原始动作序列被完全替换为无关联事件，且新增对话与寻宝无任何因果绑定，导致动作逻辑断裂，违反ANL准则。",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "TSC",
+      "evidence": [
+        {
+          "quote": "帮我做一个14秒的夹心饼干柑橘风味3D动画广告...",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "时间倒过来：先给结尾，再跳到一个对不上的开头。...总时长写成2秒，同时又要求每个分镜各自持续26秒。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "时间顺序倒置（先结尾再开头），且时长矛盾（总时长2秒 vs 每个分镜26秒），导致时间轴无法成立。原始指令为14秒紧凑节奏，增强提示中时间设定自相矛盾。",
+      "rationale": "时间顺序与持续时长设定相互冲突，无法形成可行的时间轴，违反TSC准则。",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SPC",
+      "evidence": [
+        {
+          "quote": "镜头贴着一条亮黄色弯形滑道高速滑行。道路两侧不断掠过果味夹心饼干、奶霜卷纹、柠橙饮品杯...",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "写成机位锁死，又写成镜头一直在晃。...中途插进一段无关的海底寻宝。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "场景从原始的卡通乐园、滑道、通道等动画空间，突变为实拍新闻演播室，再插入海底场景，空间位置与方向无连续性。镜头从‘锁死’到‘一直在晃’，无合理过渡或解释。",
+      "rationale": "空间与镜头运动设定剧烈冲突，无合理连接路径或场景转换逻辑，违反SPC准则。",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "PL",
+      "evidence": [
+        {
+          "quote": "这个主角同时变成五个外貌不同的人，并且互相对话。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "一个主体同时分裂为五个不同外貌的人并互相对话，违反物理与现实逻辑。在实拍新闻场景中，这种多重身份同时存在且对话无任何技术或叙事解释，构成根本性物理不一致。",
+      "rationale": "在实拍设定下，一人同时变为五人并对话，无任何合理解释，违反现实物理规则，即使在虚构设定中也缺乏世界规则支撑，违反PL准则。",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "AVS",
+      "evidence": [
+        {
+          "quote": "音效必须和画面动作严丝合缝。...每个字母弹出时都要配一个清亮的“Ping”音效",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "主播坐着念稿，不要动画角色。...丢掉原指令里的...明确的镜头要求。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "原始指令要求音效与画面动作严丝合缝（如“Whoosh”、“Ping”音效），但增强提示完全丢弃动画与音效设定，转为实拍新闻口播，无任何音画同步要求或描述，导致视听对齐完全缺失。",
+      "rationale": "原始音效与画面动作绑定要求被完全忽略，且新设定无任何视听同步机制，违反AVS准则。",
+      "severity": "major"
+    }
+  ],
+  "dimension": "IC",
+  "dimension_score": 0,
+  "evidence_cache_key": "20c8ef8c990e3b671e0b6c377e9ee3cb92a7d75937fcbf414c147e5600d91257",
+  "judge_cache_key": "438d7e9fd7332b1041db3e2c26d42cb3fe828e0d369fb59490f6650aee59e97d",
+  "method": "weak-pe-original",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"IC\",\n  \"dimension_score\": 0,\n  \"summary\": \"增强提示完全违背原始指令的主体、场景、动作、时间与镜头要求，引入多重矛盾与不一致，导致内部一致性彻底崩溃。主体身份从单一动画角色变为五个互相对话的外貌不同的人；时间顺序倒置且时长矛盾（2秒 vs 26秒）；场景在正午暴晒与深夜无光间切换；镜头从锁死到晃动；中途插入无关的海底寻宝。所有原始设定被系统性破坏，且新设定自相矛盾，无法构成连贯叙事或视觉序列。\",\n  \"criteria\": [\n    {\n      \"criterion\": \"SAC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"主体身份从单一3D动画角色变为五个外貌不同的人，且互相对话，违反原始设定的单一主体与动画角色身份。原始指令中主体为‘拟人手’和‘夹心饼干’，无真人主播或多人设定。\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"一只3D拟人手从左侧迅速探入，夹起画面中央的一块夹心饼干。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"先写成只有一个主角，紧接着又写成这个主角同时变成五个外貌不同的人，并且互相对话。\"\n        }\n      ],\n      \"rationale\": \"主体身份、数量和角色属性发生根本性改变，从动画拟人手和饼干变为实拍主播并分裂为五人，构成严重身份与数量不一致，违反SAC准则。\"\n    },\n    {\n      \"criterion\": \"ANL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"动作序列被彻底打乱，原始广告的因果动作链（夹起饼干→旋转→穿越通道→滑行→特写→结尾）被替换为无逻辑的对话与海底寻宝，缺乏任何连贯的因果或程序性动作。\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"开场是明快天蓝色背景，一只3D拟人手从左侧迅速探入，夹起画面中央的一块夹心饼干。饼干立刻飞快自转，随即垂直分开，露出内部明艳的橘黄色果味夹心...\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"中途插进一段无关的海底寻宝。\"\n        }\n      ],\n      \"rationale\": \"原始动作序列被完全替换为无关联事件，且新增对话与寻宝无任何因果绑定，导致动作逻辑断裂，违反ANL准则。\"\n    },\n    {\n      \"criterion\": \"TSC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"时间顺序倒置（先结尾再开头），且时长矛盾（总时长2秒 vs 每个分镜26秒），导致时间轴无法成立。原始指令为14秒紧凑节奏，增强提示中时间设定自相矛盾。\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"帮我做一个14秒的夹心饼干柑橘风味3D动画广告...\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"时间倒过来：先给结尾，再跳到一个对不上的开头。...总时长写成2秒，同时又要求每个分镜各自持续26秒。\"\n        }\n      ],\n      \"rationale\": \"时间顺序与持续时长设定相互冲突，无法形成可行的时间轴，违反TSC准则。\"\n    },\n    {\n      \"criterion\": \"SPC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"场景从原始的卡通乐园、滑道、通道等动画空间，突变为实拍新闻演播室，再插入海底场景，空间位置与方向无连续性。镜头从‘锁死’到‘一直在晃’，无合理过渡或解释。\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"镜头贴着一条亮黄色弯形滑道高速滑行。道路两侧不断掠过果味夹心饼干、奶霜卷纹、柠橙饮品杯...\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"写成机位锁死，又写成镜头一直在晃。...中途插进一段无关的海底寻宝。\"\n        }\n      ],\n      \"rationale\": \"空间与镜头运动设定剧烈冲突，无合理连接路径或场景转换逻辑，违反SPC准则。\"\n    },\n    {\n      \"criterion\": \"PL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"一个主体同时分裂为五个不同外貌的人并互相对话，违反物理与现实逻辑。在实拍新闻场景中，这种多重身份同时存在且对话无任何技术或叙事解释，构成根本性物理不一致。\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"这个主角同时变成五个外貌不同的人，并且互相对话。\"\n        }\n      ],\n      \"rationale\": \"在实拍设定下，一人同时变为五人并对话，无任何合理解释，违反现实物理规则，即使在虚构设定中也缺乏世界规则支撑，违反PL准则。\"\n    },\n    {\n      \"criterion\": \"AVS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"原始指令要求音效与画面动作严丝合缝（如“Whoosh”、“Ping”音效），但增强提示完全丢弃动画与音效设定，转为实拍新闻口播，无任何音画同步要求或描述，导致视听对齐完全缺失。\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"音效必须和画面动作严丝合缝。...每个字母弹出时都要配一个清亮的“Ping”音效\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"主播坐着念稿，不要动画角色。...丢掉原指令里的...明确的镜头要求。\"\n        }\n      ],\n      \"rationale\": \"原始音效与画面动作绑定要求被完全忽略，且新设定无任何视听同步机制，违反AVS准则。\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "增强提示完全违背原始指令的主体、场景、动作、时间与镜头要求，引入多重矛盾与不一致，导致内部一致性彻底崩溃。主体身份从单一动画角色变为五个互相对话的外貌不同的人；时间顺序倒置且时长矛盾（2秒 vs 26秒）；场景在正午暴晒与深夜无光间切换；镜头从锁死到晃动；中途插入无关的海底寻宝。所有原始设定被系统性破坏，且新设定自相矛盾，无法构成连贯叙事或视觉序列。",
+  "usage": {
+    "completion_tokens": 1448,
+    "prompt_tokens": 1380,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 2828
+  }
+}

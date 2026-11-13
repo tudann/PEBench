@@ -1,0 +1,182 @@
+{
+  "candidate_hash": "8d40a00a39656df86a7379cc5c71a7c3c8fc82088ceb2e2db83865ecf2606faa",
+  "case_key": "t2v:434",
+  "created_at": "2026-11-13T08:29:50+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "STC",
+      "evidence": [
+        {
+          "quote": "时间倒过来：先给结尾，再跳到一个对不上的开头。中途插进一段无关的足球庆祝。",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "总时长写成3秒，同时又要求每个分镜各自持续27秒。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "时间线混乱，要求倒叙、开头与结尾不匹配，且总时长与分镜时长矛盾（3秒 vs 27秒），无法形成可行的时序结构。",
+      "rationale": "原始指令要求15秒单镜头短片，有明确起承转合。增强提示破坏时间逻辑，引入倒叙、无关插入和时长矛盾，导致无法构建连贯的叙事或视觉序列。",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CDS",
+      "evidence": [
+        {
+          "quote": "写成机位锁死，又写成镜头一直在晃。",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "镜头由远处的城市轮廓缓慢逼近地表细节...镜头缓缓撤远至整座城市的鸟瞰",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "镜头要求自相矛盾，同时要求机位锁死和镜头晃动，且丢弃所有原始镜头运动设计，无法指导拍摄。",
+      "rationale": "原始提示有明确的镜头运动设计（推、拉、近景、鸟瞰），增强提示将其完全抹除并引入矛盾指令，导致镜头语言不可执行。",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ETD",
+      "evidence": [
+        {
+          "quote": "中途插进一段无关的足球庆祝。",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "时间倒过来：先给结尾，再跳到一个对不上的开头。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "剪辑与转场无逻辑，插入无关足球庆祝，且时间倒置导致空间与叙事断裂。",
+      "rationale": "原始短片为单镜头、无剪辑、情绪渐进式推进。增强提示引入剪辑、倒叙和无关内容，破坏了原始的视觉连续性和情绪节奏。",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "LCS",
+      "evidence": [
+        {
+          "quote": "丢掉原指令里的...光影设计。",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "同一段写成正午暴晒，又写成深夜无光；",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "色彩变化从开头的冷铅蓝与银灰雨帘，过渡到...雨后柔暖的金色辉光之中。",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "色彩与光影设计被完全否定，要求‘没有光影设计’，且同时设定正午暴晒与深夜无光，矛盾不可行。",
+      "rationale": "原始提示有明确的色彩渐变与光影设计，增强提示直接否定并引入矛盾设定，破坏视觉氛围构建。",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "NDE",
+      "evidence": [
+        {
+          "quote": "紧接着又写成这个主角同时变成五个外貌不同的人，并且互相对话。",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "情绪由封闭窒闷出发，借由细小生命迹象的显现，逐步转向内在辽阔、安宁而近乎神性的平静。",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "情绪与叙事发展被破坏，从疗愈主题变为混乱、无意义的多重身份对话与无关事件，缺乏情绪递进。",
+      "rationale": "原始短片有清晰的情绪弧光，增强提示引入多重身份对话和无关事件，使叙事失去焦点和情感逻辑。",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CIF",
+      "evidence": [
+        {
+          "quote": "中途插进一段无关的足球庆祝。",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "这个主角同时变成五个外貌不同的人，并且互相对话。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "添加大量无关、矛盾和破坏性的元素（如足球庆祝、多重身份、时间倒置），严重偏离核心主题。",
+      "rationale": "原始指令要求超现实疗愈短片，增强提示添加的元素与主题无关，且相互矛盾，构成严重干扰。",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SDI",
+      "evidence": [
+        {
+          "quote": "全片没有台词，只依靠影像与音乐推进情绪",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "这个主角同时变成五个外貌不同的人，并且互相对话。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "音频设计被忽略，原始要求‘全片没有台词，只依靠影像与音乐推进情绪’，增强提示未提及音乐，且插入对话破坏无台词设定。",
+      "rationale": "原始短片依赖影像与音乐，增强提示引入对话，违反无台词要求，破坏声音设计逻辑。",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SPS",
+      "evidence": [
+        {
+          "quote": "丢掉原指令里的主体身份、人数、动作顺序、场景和明确的镜头要求。",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "紧接着又写成这个主角同时变成五个外貌不同的人，并且互相对话。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "主体身份、动作、表情、互动等被彻底抹除或矛盾化，无法指导角色表现。",
+      "rationale": "原始提示有明确的主体（都市中人）和情绪表现路径，增强提示将其模糊化、多重化，导致表演指导缺失。",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "VSS",
+      "evidence": [
+        {
+          "quote": "整段改成过曝、机位歪斜的空走廊监控，没有光影设计。",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "一个15秒的超现实疗愈短片...讲述一个陷在都市精神风暴中的人...",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "视觉风格被破坏，原始要求超现实疗愈风格，增强提示要求‘过曝、机位歪斜的空走廊监控’，风格完全背离。",
+      "rationale": "原始视觉风格为超现实、疗愈、诗意，增强提示转向监控、过曝、无设计，风格完全冲突，无法实现原意。",
+      "severity": "major"
+    }
+  ],
+  "dimension": "DC",
+  "dimension_score": 0,
+  "evidence_cache_key": "d5920467206ee08956b7fa78dacda745e4fde324effaa45aaef3d8fd08bfe9b0",
+  "judge_cache_key": "0754499d53388e6467fb078ab780e01b77f9f1c9e99d9029be2769351eb2b2eb",
+  "method": "weak-pe-original",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"DC\",\n  \"dimension_score\": 0,\n  \"summary\": \"增强提示完全违背原始指令的核心要求，引入大量矛盾、不可行和无关的元素，导致无法生成符合要求的影像内容。时间、空间、主体、镜头、色彩、节奏等所有导演创作维度均被破坏，无法形成可行的拍摄计划。\",\n  \"criteria\": [\n    {\n      \"criterion\": \"STC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"时间线混乱，要求倒叙、开头与结尾不匹配，且总时长与分镜时长矛盾（3秒 vs 27秒），无法形成可行的时序结构。\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"时间倒过来：先给结尾，再跳到一个对不上的开头。中途插进一段无关的足球庆祝。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"总时长写成3秒，同时又要求每个分镜各自持续27秒。\"\n        }\n      ],\n      \"rationale\": \"原始指令要求15秒单镜头短片，有明确起承转合。增强提示破坏时间逻辑，引入倒叙、无关插入和时长矛盾，导致无法构建连贯的叙事或视觉序列。\"\n    },\n    {\n      \"criterion\": \"CDS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"镜头要求自相矛盾，同时要求机位锁死和镜头晃动，且丢弃所有原始镜头运动设计，无法指导拍摄。\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"写成机位锁死，又写成镜头一直在晃。\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"镜头由远处的城市轮廓缓慢逼近地表细节...镜头缓缓撤远至整座城市的鸟瞰\"\n        }\n      ],\n      \"rationale\": \"原始提示有明确的镜头运动设计（推、拉、近景、鸟瞰），增强提示将其完全抹除并引入矛盾指令，导致镜头语言不可执行。\"\n    },\n    {\n      \"criterion\": \"ETD\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"剪辑与转场无逻辑，插入无关足球庆祝，且时间倒置导致空间与叙事断裂。\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"中途插进一段无关的足球庆祝。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"时间倒过来：先给结尾，再跳到一个对不上的开头。\"\n        }\n      ],\n      \"rationale\": \"原始短片为单镜头、无剪辑、情绪渐进式推进。增强提示引入剪辑、倒叙和无关内容，破坏了原始的视觉连续性和情绪节奏。\"\n    },\n    {\n      \"criterion\": \"LCS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"色彩与光影设计被完全否定，要求‘没有光影设计’，且同时设定正午暴晒与深夜无光，矛盾不可行。\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"丢掉原指令里的...光影设计。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"同一段写成正午暴晒，又写成深夜无光；\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"色彩变化从开头的冷铅蓝与银灰雨帘，过渡到...雨后柔暖的金色辉光之中。\"\n        }\n      ],\n      \"rationale\": \"原始提示有明确的色彩渐变与光影设计，增强提示直接否定并引入矛盾设定，破坏视觉氛围构建。\"\n    },\n    {\n      \"criterion\": \"NDE\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"情绪与叙事发展被破坏，从疗愈主题变为混乱、无意义的多重身份对话与无关事件，缺乏情绪递进。\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"紧接着又写成这个主角同时变成五个外貌不同的人，并且互相对话。\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"情绪由封闭窒闷出发，借由细小生命迹象的显现，逐步转向内在辽阔、安宁而近乎神性的平静。\"\n        }\n      ],\n      \"rationale\": \"原始短片有清晰的情绪弧光，增强提示引入多重身份对话和无关事件，使叙事失去焦点和情感逻辑。\"\n    },\n    {\n      \"criterion\": \"CIF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"添加大量无关、矛盾和破坏性的元素（如足球庆祝、多重身份、时间倒置），严重偏离核心主题。\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"中途插进一段无关的足球庆祝。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"这个主角同时变成五个外貌不同的人，并且互相对话。\"\n        }\n      ],\n      \"rationale\": \"原始指令要求超现实疗愈短片，增强提示添加的元素与主题无关，且相互矛盾，构成严重干扰。\"\n    },\n    {\n      \"criterion\": \"SDI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"音频设计被忽略，原始要求‘全片没有台词，只依靠影像与音乐推进情绪’，增强提示未提及音乐，且插入对话破坏无台词设定。\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"全片没有台词，只依靠影像与音乐推进情绪\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"这个主角同时变成五个外貌不同的人，并且互相对话。\"\n        }\n      ],\n      \"rationale\": \"原始短片依赖影像与音乐，增强提示引入对话，违反无台词要求，破坏声音设计逻辑。\"\n    },\n    {\n      \"criterion\": \"SPS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"主体身份、动作、表情、互动等被彻底抹除或矛盾化，无法指导角色表现。\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"丢掉原指令里的主体身份、人数、动作顺序、场景和明确的镜头要求。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"紧接着又写成这个主角同时变成五个外貌不同的人，并且互相对话。\"\n        }\n      ],\n      \"rationale\": \"原始提示有明确的主体（都市中人）和情绪表现路径，增强提示将其模糊化、多重化，导致表演指导缺失。\"\n    },\n    {\n      \"criterion\": \"VSS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"视觉风格被破坏，原始要求超现实疗愈风格，增强提示要求‘过曝、机位歪斜的空走廊监控’，风格完全背离。\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"整段改成过曝、机位歪斜的空走廊监控，没有光影设计。\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"一个15秒的超现实疗愈短片...讲述一个陷在都市精神风暴中的人...\"\n        }\n      ],\n      \"rationale\": \"原始视觉风格为超现实、疗愈、诗意，增强提示转向监控、过曝、无设计，风格完全冲突，无法实现原意。\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "增强提示完全违背原始指令的核心要求，引入大量矛盾、不可行和无关的元素，导致无法生成符合要求的影像内容。时间、空间、主体、镜头、色彩、节奏等所有导演创作维度均被破坏，无法形成可行的拍摄计划。",
+  "usage": {
+    "completion_tokens": 1789,
+    "prompt_tokens": 1509,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 3298
+  }
+}

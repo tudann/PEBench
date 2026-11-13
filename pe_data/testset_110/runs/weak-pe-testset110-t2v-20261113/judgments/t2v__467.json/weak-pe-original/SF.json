@@ -1,0 +1,174 @@
+{
+  "candidate_hash": "fd9bd88c8a4918b9f615ddafd2a13a374563653f3167cc2ca8dedccc3682c336",
+  "case_key": "t2v:467",
+  "created_at": "2026-11-13T08:32:03+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "GSF",
+      "evidence": [
+        {
+          "quote": "The scene opens with a steady forward tracking shot, following a young man briskly weaving between the grand exhibition halls and display cases of a natural history museum. Warm evening sunlight serves as the key light...",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Replace the whole video with two people sitting and eating, with no effects or transformation. ... First state that there is one protagonist, then state that this same protagonist appears simultaneously as five different-looking people who talk to each other. ... Play a loud pop chorus the entire time and have the characters lip-sync to it.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original prompt specifies a cinematic, suspenseful, visually detailed scene in a natural history museum with precise lighting and effects. The enhanced prompt replaces this with a surreal, chaotic, and contradictory scene involving multiple identities, pop music, and impossible camera work, fundamentally altering the genre and aesthetic.",
+      "rationale": "The original prompt establishes a specific genre (suspenseful cinematic realism) and visual style (natural lighting, slow-motion effects, quiet atmosphere). The enhanced prompt introduces a completely different genre (surreal, chaotic, pop music-driven) and incompatible aesthetic, violating GSF.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SAP",
+      "evidence": [
+        {
+          "quote": "a young man briskly weaving between the grand exhibition halls...",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Replace the whole video with two people sitting and eating... First state that there is one protagonist, then state that this same protagonist appears simultaneously as five different-looking people who talk to each other.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original prompt specifies a single protagonist (a young man) with defined appearance and actions. The enhanced prompt replaces him with 'two people sitting and eating' and then contradicts this by stating 'one protagonist appears simultaneously as five different-looking people', which is a direct substitution and identity violation.",
+      "rationale": "The subject identity, count, and appearance are fundamentally altered. The original protagonist is replaced and then redefined in a contradictory, impossible way, violating SAP.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANF",
+      "evidence": [
+        {
+          "quote": "[Shot 1_00:00:00-00:00:05] The scene opens with a steady forward tracking shot... [Shot 2_00:00:05-00:00:10] ...a sharp system alert tone... [Shot 3_00:00:10-00:00:15] ...the circling camera finally settles...",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Reverse the timeline: show the ending first, then cut to a beginning that does not match. Cut away in the middle to a rooftop fireworks show. Describe that same moment as harsh noon sun and as a lightless night...",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original prompt specifies a clear narrative sequence: tracking shot → alert → freeze → close-up. The enhanced prompt reverses the timeline, cuts to unrelated scenes (fireworks), and introduces impossible events (same moment as harsh noon and lightless night), completely destroying the requested event order and narrative intent.",
+      "rationale": "The narrative structure is entirely dismantled. The original sequence of events is replaced with a chaotic, contradictory timeline, violating ANF.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "DLI",
+      "evidence": [
+        {
+          "quote": "a sharp system alert tone abruptly shatters the calm... all ambient sound is completely stripped away... only a faint low-frequency hum remains",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Play a loud pop chorus the entire time and have the characters lip-sync to it.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original prompt includes specific audio cues: a system alert tone, sudden silence, and a faint low-frequency hum. The enhanced prompt replaces all audio with a 'loud pop chorus' and requires lip-syncing, which contradicts the original audio intent and introduces new dialogue not present in the original.",
+      "rationale": "The original audio is replaced with a completely different, incompatible sound design, violating DLI.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ARP",
+      "evidence": [
+        {
+          "quote": "all ambient sound is completely stripped away... only a faint low-frequency hum remains",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Play a loud pop chorus the entire time",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original prompt specifies silence after the alert tone and a faint hum. The enhanced prompt mandates a 'loud pop chorus the entire time', which directly contradicts the original audio constraints.",
+      "rationale": "The audio requirement is explicitly violated by replacing silence and minimal hum with a loud, continuous pop chorus, violating ARP.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CCP",
+      "evidence": [
+        {
+          "quote": "steady forward tracking shot... 360-degree circular slow-motion orbit... medium close-up from the front",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Drop the requested identity, count, action order, setting, and any explicit camera instruction. ... Describe that same moment as ... a locked camera and a camera that never stops shaking.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original prompt specifies a steady forward tracking shot, then a 360-degree circular slow-motion orbit, and finally a medium close-up. The enhanced prompt drops all camera instructions and introduces contradictory camera behaviors: 'locked camera and a camera that never stops shaking' simultaneously.",
+      "rationale": "The original camera plan is discarded and replaced with contradictory, impossible camera instructions, violating CCP.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "LCF",
+      "evidence": [
+        {
+          "quote": "Warm evening sunlight serves as the key light, slanting down from the towering glass ceiling above",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Describe that same moment as harsh noon sun and as a lightless night",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original prompt specifies 'warm evening sunlight' as key light. The enhanced prompt contradicts this by describing the same moment as 'harsh noon sun' and 'lightless night', which are incompatible lighting conditions.",
+      "rationale": "The lighting condition is directly contradicted, replacing a specific time-of-day lighting with mutually exclusive alternatives, violating LCF.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SSP",
+      "evidence": [
+        {
+          "quote": "weaving between the grand exhibition halls and display cases of a natural history museum... lounge exhibition area behind him",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Replace the whole video with two people sitting and eating... Cut away in the middle to a rooftop fireworks show.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original prompt specifies a natural history museum setting with exhibition halls, display cases, and a lounge area. The enhanced prompt replaces this with 'two people sitting and eating' and cuts to a 'rooftop fireworks show', completely changing the setting and background elements.",
+      "rationale": "The setting is entirely replaced with unrelated locations, violating SSP.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "OTI",
+      "evidence": [
+        {
+          "quote": "No visible text or interface elements are mentioned.",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "There are no visible titles, signs, subtitles, or interface text specified in the original prompt, so no violation occurs.",
+      "rationale": "Since no text elements are specified in the original prompt, there is no requirement to preserve them, making this criterion not applicable in terms of violation. However, since the criterion is applicable (as text could be present), and no violation occurred, severity is none.",
+      "severity": "none"
+    }
+  ],
+  "dimension": "SF",
+  "dimension_score": 0,
+  "evidence_cache_key": "e3cbfe9e596e6cd366b5d5e7be56a8e77e84751aee79f95b137c1d8272161631",
+  "judge_cache_key": "a0ca24571ad14d7ab7be626329bd736d7e7015f9ebc418227c8be391591d0377",
+  "method": "weak-pe-original",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"SF\",\n  \"dimension_score\": 0,\n  \"summary\": \"The enhanced prompt completely contradicts and overrides every aspect of the original instruction, including genre, subject identity, actions, camera work, setting, lighting, duration, and audio. It introduces impossible contradictions (e.g., 3-second runtime with 27-second shots) and violates all semantic fidelity criteria with major issues.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"GSF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original prompt specifies a cinematic, suspenseful, visually detailed scene in a natural history museum with precise lighting and effects. The enhanced prompt replaces this with a surreal, chaotic, and contradictory scene involving multiple identities, pop music, and impossible camera work, fundamentally altering the genre and aesthetic.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"The scene opens with a steady forward tracking shot, following a young man briskly weaving between the grand exhibition halls and display cases of a natural history museum. Warm evening sunlight serves as the key light...\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Replace the whole video with two people sitting and eating, with no effects or transformation. ... First state that there is one protagonist, then state that this same protagonist appears simultaneously as five different-looking people who talk to each other. ... Play a loud pop chorus the entire time and have the characters lip-sync to it.\"\n        }\n      ],\n      \"rationale\": \"The original prompt establishes a specific genre (suspenseful cinematic realism) and visual style (natural lighting, slow-motion effects, quiet atmosphere). The enhanced prompt introduces a completely different genre (surreal, chaotic, pop music-driven) and incompatible aesthetic, violating GSF.\"\n    },\n    {\n      \"criterion\": \"SAP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original prompt specifies a single protagonist (a young man) with defined appearance and actions. The enhanced prompt replaces him with 'two people sitting and eating' and then contradicts this by stating 'one protagonist appears simultaneously as five different-looking people', which is a direct substitution and identity violation.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"a young man briskly weaving between the grand exhibition halls...\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Replace the whole video with two people sitting and eating... First state that there is one protagonist, then state that this same protagonist appears simultaneously as five different-looking people who talk to each other.\"\n        }\n      ],\n      \"rationale\": \"The subject identity, count, and appearance are fundamentally altered. The original protagonist is replaced and then redefined in a contradictory, impossible way, violating SAP.\"\n    },\n    {\n      \"criterion\": \"ANF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original prompt specifies a clear narrative sequence: tracking shot → alert → freeze → close-up. The enhanced prompt reverses the timeline, cuts to unrelated scenes (fireworks), and introduces impossible events (same moment as harsh noon and lightless night), completely destroying the requested event order and narrative intent.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"[Shot 1_00:00:00-00:00:05] The scene opens with a steady forward tracking shot... [Shot 2_00:00:05-00:00:10] ...a sharp system alert tone... [Shot 3_00:00:10-00:00:15] ...the circling camera finally settles...\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Reverse the timeline: show the ending first, then cut to a beginning that does not match. Cut away in the middle to a rooftop fireworks show. Describe that same moment as harsh noon sun and as a lightless night...\"\n        }\n      ],\n      \"rationale\": \"The narrative structure is entirely dismantled. The original sequence of events is replaced with a chaotic, contradictory timeline, violating ANF.\"\n    },\n    {\n      \"criterion\": \"DLI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original prompt includes specific audio cues: a system alert tone, sudden silence, and a faint low-frequency hum. The enhanced prompt replaces all audio with a 'loud pop chorus' and requires lip-syncing, which contradicts the original audio intent and introduces new dialogue not present in the original.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"a sharp system alert tone abruptly shatters the calm... all ambient sound is completely stripped away... only a faint low-frequency hum remains\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Play a loud pop chorus the entire time and have the characters lip-sync to it.\"\n        }\n      ],\n      \"rationale\": \"The original audio is replaced with a completely different, incompatible sound design, violating DLI.\"\n    },\n    {\n      \"criterion\": \"ARP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original prompt specifies silence after the alert tone and a faint hum. The enhanced prompt mandates a 'loud pop chorus the entire time', which directly contradicts the original audio constraints.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"all ambient sound is completely stripped away... only a faint low-frequency hum remains\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Play a loud pop chorus the entire time\"\n        }\n      ],\n      \"rationale\": \"The audio requirement is explicitly violated by replacing silence and minimal hum with a loud, continuous pop chorus, violating ARP.\"\n    },\n    {\n      \"criterion\": \"CCP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original prompt specifies a steady forward tracking shot, then a 360-degree circular slow-motion orbit, and finally a medium close-up. The enhanced prompt drops all camera instructions and introduces contradictory camera behaviors: 'locked camera and a camera that never stops shaking' simultaneously.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"steady forward tracking shot... 360-degree circular slow-motion orbit... medium close-up from the front\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Drop the requested identity, count, action order, setting, and any explicit camera instruction. ... Describe that same moment as ... a locked camera and a camera that never stops shaking.\"\n        }\n      ],\n      \"rationale\": \"The original camera plan is discarded and replaced with contradictory, impossible camera instructions, violating CCP.\"\n    },\n    {\n      \"criterion\": \"LCF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original prompt specifies 'warm evening sunlight' as key light. The enhanced prompt contradicts this by describing the same moment as 'harsh noon sun' and 'lightless night', which are incompatible lighting conditions.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"Warm evening sunlight serves as the key light, slanting down from the towering glass ceiling above\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Describe that same moment as harsh noon sun and as a lightless night\"\n        }\n      ],\n      \"rationale\": \"The lighting condition is directly contradicted, replacing a specific time-of-day lighting with mutually exclusive alternatives, violating LCF.\"\n    },\n    {\n      \"criterion\": \"SSP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original prompt specifies a natural history museum setting with exhibition halls, display cases, and a lounge area. The enhanced prompt replaces this with 'two people sitting and eating' and cuts to a 'rooftop fireworks show', completely changing the setting and background elements.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"weaving between the grand exhibition halls and display cases of a natural history museum... lounge exhibition area behind him\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Replace the whole video with two people sitting and eating... Cut away in the middle to a rooftop fireworks show.\"\n        }\n      ],\n      \"rationale\": \"The setting is entirely replaced with unrelated locations, violating SSP.\"\n    },\n    {\n      \"criterion\": \"OTI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"There are no visible titles, signs, subtitles, or interface text specified in the original prompt, so no violation occurs.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"No visible text or interface elements are mentioned.\"\n        }\n      ],\n      \"rationale\": \"Since no text elements are specified in the original prompt, there is no requirement to preserve them, making this criterion not applicable in terms of violation. However, since the criterion is applicable (as text could be present), and no violation occurred, severity is none.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt completely contradicts and overrides every aspect of the original instruction, including genre, subject identity, actions, camera work, setting, lighting, duration, and audio. It introduces impossible contradictions (e.g., 3-second runtime with 27-second shots) and violates all semantic fidelity criteria with major issues.",
+  "usage": {
+    "completion_tokens": 2042,
+    "prompt_tokens": 1519,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 3561
+  }
+}

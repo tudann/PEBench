@@ -1,0 +1,142 @@
+{
+  "candidate_hash": "254fed39058374d16bd2c67ee44067865deaac055515b02724342153315a96f0",
+  "case_key": "t2v:182",
+  "created_at": "2026-11-13T07:48:37+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "STC",
+      "evidence": [
+        {
+          "quote": "总时长写成3秒，同时又要求每个分镜各自持续27秒。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt specifies contradictory temporal structure: it demands a 3-second total duration while requiring each shot to last 27 seconds, and also mandates a reversed timeline (ending first, then an unrelated beginning). This creates an impossible temporal plan with no feasible shot boundaries or duration allocation.",
+      "rationale": "A 3-second total duration cannot accommodate 27-second shots. Reversing the timeline without coherent continuity or motivation further breaks temporal logic. This violates the requirement for a feasible temporal plan.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CDS",
+      "evidence": [
+        {
+          "quote": "写成机位锁死，又写成镜头一直在晃。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt contradicts itself on camera specifications: it demands '机位锁死' (locked camera) and '镜头一直在晃' (shaky camera) simultaneously, which are mutually exclusive. No actionable framing, angle, or movement is consistently specified.",
+      "rationale": "Camera specifications must be coherent and actionable. The simultaneous demand for locked and shaky shots is physically impossible and renders the visual plan infeasible.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ETD",
+      "evidence": [
+        {
+          "quote": "中途插进一段无关的足球庆祝。时间倒过来：先给结尾，再跳到一个对不上的开头。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt introduces disconnected and unmotivated transitions: jumping from a snow scene to a football celebration, then reversing time with an unrelated beginning. These cuts lack spatial, temporal, or narrative continuity.",
+      "rationale": "Transitions must support progression. Inserting unrelated content and reversing time without continuity breaks narrative and spatial coherence, making the edit sequence incoherent.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "LCS",
+      "evidence": [
+        {
+          "quote": "写成正午暴晒，又写成深夜无光；",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt contradicts lighting conditions: it demands '正午暴晒' (midday sun) and '深夜无光' (deep night, no light) simultaneously, which are mutually exclusive and impossible to render coherently.",
+      "rationale": "Lighting specifications must be consistent. The simultaneous demand for full daylight and complete darkness is physically impossible and undermines the visual treatment.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "NDE",
+      "evidence": [
+        {
+          "quote": "整段改成没有人物也没有情节的雪景空镜循环。...中途插进一段无关的足球庆祝。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt lacks any progression, variation, or resolution. It cycles through contradictory states (snow to football, 3s to 27s, day to night) without narrative arc or escalation, resulting in static, unmotivated repetition.",
+      "rationale": "Without progression or variation, the content becomes a disjointed loop of conflicting elements, failing to build toward any resolution or meaningful development.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CIF",
+      "evidence": [
+        {
+          "quote": "紧接着又写成这个主角同时变成五个外貌不同的人，并且互相对话。中途插进一段无关的足球庆祝。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt adds irrelevant and contradictory elements (football celebration, five simultaneous characters, time reversal) that distract from and contradict the original request, which was a coherent narrative scene. These additions are not supportive but disruptive.",
+      "rationale": "The additions are not only irrelevant but actively undermine the original narrative intent, creating a chaotic and incoherent output.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SDI",
+      "evidence": [
+        {
+          "quote": "整段改成没有人物也没有情节的雪景空镜循环。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "No audio elements (speech, music, effects) are specified, which is acceptable for a visual-only prompt. However, the prompt’s chaotic structure would make any audio integration extremely difficult if attempted.",
+      "rationale": "Since the prompt removes characters and dialogue, audio specification is not required. However, the structural chaos would complicate any potential audio design.",
+      "severity": "minor"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SPS",
+      "evidence": [
+        {
+          "quote": "紧接着又写成这个主角同时变成五个外貌不同的人，并且互相对话。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt contradicts subject and performance details: it removes the original character (林岚) and replaces her with five simultaneous, dialoguing versions of herself, which is impossible to render coherently. No consistent appearance, gesture, or expression is specified.",
+      "rationale": "The transformation into five simultaneous characters with dialogue is physically and narratively infeasible, violating the requirement for coherent subject and performance detail.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "VSS",
+      "evidence": [
+        {
+          "quote": "整段改成没有人物也没有情节的雪景空镜循环。...写成正午暴晒，又写成深夜无光；",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt contradicts visual treatment: it demands a '雪景空镜循环' (snow scene loop) while simultaneously requiring '灼热荒原' (scorching desert) elements from the original prompt, and also demands both '正午暴晒' and '深夜无光'. No consistent medium, texture, or rendering language is specified.",
+      "rationale": "The visual treatment is inconsistent and contradictory. A snow scene cannot coexist with a desert under both midday sun and deep night, making the rendering impossible.",
+      "severity": "major"
+    }
+  ],
+  "dimension": "DC",
+  "dimension_score": 0,
+  "evidence_cache_key": "b6e57d3aaf1aca113d4f3c6d65bc3763ae76a63bf4faa3043d15a7c6fe9200b4",
+  "judge_cache_key": "0754499d53388e6467fb078ab780e01b77f9f1c9e99d9029be2769351eb2b2eb",
+  "method": "weak-pe-original",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"DC\",\n  \"dimension_score\": 0,\n  \"summary\": \"Enhanced prompt contains multiple contradictory, infeasible, and logically inconsistent directives that render the temporal plan, visual specifications, and narrative structure unworkable. It violates core criteria for directorial creation by introducing conflicting durations, impossible character transformations, illogical transitions, and contradictory environmental and camera conditions.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"STC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt specifies contradictory temporal structure: it demands a 3-second total duration while requiring each shot to last 27 seconds, and also mandates a reversed timeline (ending first, then an unrelated beginning). This creates an impossible temporal plan with no feasible shot boundaries or duration allocation.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"总时长写成3秒，同时又要求每个分镜各自持续27秒。\"\n        }\n      ],\n      \"rationale\": \"A 3-second total duration cannot accommodate 27-second shots. Reversing the timeline without coherent continuity or motivation further breaks temporal logic. This violates the requirement for a feasible temporal plan.\"\n    },\n    {\n      \"criterion\": \"CDS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt contradicts itself on camera specifications: it demands '机位锁死' (locked camera) and '镜头一直在晃' (shaky camera) simultaneously, which are mutually exclusive. No actionable framing, angle, or movement is consistently specified.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"写成机位锁死，又写成镜头一直在晃。\"\n        }\n      ],\n      \"rationale\": \"Camera specifications must be coherent and actionable. The simultaneous demand for locked and shaky shots is physically impossible and renders the visual plan infeasible.\"\n    },\n    {\n      \"criterion\": \"ETD\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt introduces disconnected and unmotivated transitions: jumping from a snow scene to a football celebration, then reversing time with an unrelated beginning. These cuts lack spatial, temporal, or narrative continuity.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"中途插进一段无关的足球庆祝。时间倒过来：先给结尾，再跳到一个对不上的开头。\"\n        }\n      ],\n      \"rationale\": \"Transitions must support progression. Inserting unrelated content and reversing time without continuity breaks narrative and spatial coherence, making the edit sequence incoherent.\"\n    },\n    {\n      \"criterion\": \"LCS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt contradicts lighting conditions: it demands '正午暴晒' (midday sun) and '深夜无光' (deep night, no light) simultaneously, which are mutually exclusive and impossible to render coherently.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"写成正午暴晒，又写成深夜无光；\"\n        }\n      ],\n      \"rationale\": \"Lighting specifications must be consistent. The simultaneous demand for full daylight and complete darkness is physically impossible and undermines the visual treatment.\"\n    },\n    {\n      \"criterion\": \"NDE\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt lacks any progression, variation, or resolution. It cycles through contradictory states (snow to football, 3s to 27s, day to night) without narrative arc or escalation, resulting in static, unmotivated repetition.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"整段改成没有人物也没有情节的雪景空镜循环。...中途插进一段无关的足球庆祝。\"\n        }\n      ],\n      \"rationale\": \"Without progression or variation, the content becomes a disjointed loop of conflicting elements, failing to build toward any resolution or meaningful development.\"\n    },\n    {\n      \"criterion\": \"CIF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt adds irrelevant and contradictory elements (football celebration, five simultaneous characters, time reversal) that distract from and contradict the original request, which was a coherent narrative scene. These additions are not supportive but disruptive.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"紧接着又写成这个主角同时变成五个外貌不同的人，并且互相对话。中途插进一段无关的足球庆祝。\"\n        }\n      ],\n      \"rationale\": \"The additions are not only irrelevant but actively undermine the original narrative intent, creating a chaotic and incoherent output.\"\n    },\n    {\n      \"criterion\": \"SDI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"minor\",\n      \"issue\": \"No audio elements (speech, music, effects) are specified, which is acceptable for a visual-only prompt. However, the prompt’s chaotic structure would make any audio integration extremely difficult if attempted.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"整段改成没有人物也没有情节的雪景空镜循环。\"\n        }\n      ],\n      \"rationale\": \"Since the prompt removes characters and dialogue, audio specification is not required. However, the structural chaos would complicate any potential audio design.\"\n    },\n    {\n      \"criterion\": \"SPS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt contradicts subject and performance details: it removes the original character (林岚) and replaces her with five simultaneous, dialoguing versions of herself, which is impossible to render coherently. No consistent appearance, gesture, or expression is specified.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"紧接着又写成这个主角同时变成五个外貌不同的人，并且互相对话。\"\n        }\n      ],\n      \"rationale\": \"The transformation into five simultaneous characters with dialogue is physically and narratively infeasible, violating the requirement for coherent subject and performance detail.\"\n    },\n    {\n      \"criterion\": \"VSS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt contradicts visual treatment: it demands a '雪景空镜循环' (snow scene loop) while simultaneously requiring '灼热荒原' (scorching desert) elements from the original prompt, and also demands both '正午暴晒' and '深夜无光'. No consistent medium, texture, or rendering language is specified.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"整段改成没有人物也没有情节的雪景空镜循环。...写成正午暴晒，又写成深夜无光；\"\n        }\n      ],\n      \"rationale\": \"The visual treatment is inconsistent and contradictory. A snow scene cannot coexist with a desert under both midday sun and deep night, making the rendering impossible.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "Enhanced prompt contains multiple contradictory, infeasible, and logically inconsistent directives that render the temporal plan, visual specifications, and narrative structure unworkable. It violates core criteria for directorial creation by introducing conflicting durations, impossible character transformations, illogical transitions, and contradictory environmental and camera conditions.",
+  "usage": {
+    "completion_tokens": 1589,
+    "prompt_tokens": 1012,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 2601
+  }
+}

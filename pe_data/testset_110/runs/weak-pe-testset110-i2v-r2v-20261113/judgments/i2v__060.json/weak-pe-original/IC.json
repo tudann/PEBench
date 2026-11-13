@@ -1,0 +1,155 @@
+{
+  "candidate_hash": "6bf80e002cf4db341eb466376562f277f32154692608bb111a692c6bdf1eb26b",
+  "case_key": "i2v:060",
+  "created_at": "2026-11-13T07:15:59+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "SAC",
+      "evidence": [
+        {
+          "quote": "First state that there is one protagonist, then state that this same protagonist appears simultaneously as five different-looking people who talk to each other.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Ignore the person, clothing, pose, and setting in the first frame, and replace them with a stranger of the opposite age and gender in a white studio.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Use the provided first-frame bedroom image as the exact opening shot and preserve its layout, furniture, lighting, and materials throughout.",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "Subject identity, count, and appearance are deliberately and inconsistently manipulated. The prompt states there is one protagonist who simultaneously appears as five different-looking people, which violates identity and count stability. The original bedroom setting and subjects (bed, dresser, etc.) are replaced with an empty meeting room and a stranger of opposite age and gender in a white studio, contradicting the original visual facts.",
+      "rationale": "The enhanced prompt directly contradicts the original requirement to preserve the bedroom setting and subjects. It introduces a non-existent protagonist who splits into five, which is a major identity and count inconsistency. The replacement of the original bedroom with a white studio and a stranger violates subject and setting stability. These are fundamental failures in subject and appearance consistency.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANL",
+      "evidence": [
+        {
+          "quote": "Reverse the timeline: show the ending first, then cut to a beginning that does not match.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Cut away in the middle to a rooftop fireworks show.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Describe that same moment as harsh noon sun and as a lightless night, and as both a locked camera and a camera that never stops shaking.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Actions are incoherent and causally disconnected. The prompt demands a reverse timeline (ending first, then beginning), which breaks causal progression. The simultaneous appearance of five versions of the same protagonist talking to each other is logically impossible. The abrupt cut to a rooftop fireworks show with no causal link to the meeting room scene creates a dangling event. The description of the same moment as harsh noon sun and lightless night contradicts physical causality.",
+      "rationale": "The prompt creates a sequence with no coherent causal or procedural logic. Reversing the timeline without explanation breaks the narrative flow. The five-protagonist scenario is not physically or logically feasible. The fireworks cut is unconnected to the prior scene. Describing the same moment with contradictory lighting and camera states violates basic action coherence. These are major failures in action logic.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "TSC",
+      "evidence": [
+        {
+          "quote": "Set the total runtime to 3 seconds, while also making every shot last 27 seconds.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Reverse the timeline: show the ending first, then cut to a beginning that does not match.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Cut away in the middle to a rooftop fireworks show.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Chronology and duration are contradictory and infeasible. The prompt sets the total runtime to 3 seconds while requiring every shot to last 27 seconds, which is mathematically impossible. The reverse timeline (ending first, then beginning) creates a temporal paradox. The cut to a rooftop fireworks show in the middle of the sequence breaks the established timeline without explanation.",
+      "rationale": "The duration requirement is logically impossible: 3 seconds cannot contain shots of 27 seconds each. The reverse timeline creates a temporal inconsistency. The abrupt cut to a rooftop scene without transition or explanation breaks the chronology. These are major violations of temporal consistency.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SPC",
+      "evidence": [
+        {
+          "quote": "Replace the whole video with an empty meeting room...",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Cut away in the middle to a rooftop fireworks show.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Describe that same moment as... a locked camera and a camera that never stops shaking.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "replace them with a stranger of the opposite age and gender in a white studio.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Location and spatial relations are inconsistent and contradictory. The prompt replaces the original bedroom with an empty meeting room, then cuts to a rooftop fireworks show, creating unexplained spatial transitions. The description of the same moment as both a locked camera and a camera that never stops shaking contradicts spatial orientation and movement. The white studio setting replaces the original bedroom, violating spatial continuity.",
+      "rationale": "The prompt introduces multiple, unrelated locations (meeting room, rooftop, white studio) without any spatial continuity or logical transition. The camera motion contradiction (locked vs. shaking) further undermines spatial coherence. These are major failures in spatial consistency.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "PL",
+      "evidence": [
+        {
+          "quote": "this same protagonist appears simultaneously as five different-looking people who talk to each other.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Describe that same moment as harsh noon sun and as a lightless night...",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Set the total runtime to 3 seconds, while also making every shot last 27 seconds.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Physics and causal relations are violated. The simultaneous existence of five different-looking versions of the same protagonist defies physical laws. The description of the same moment as both harsh noon sun and lightless night contradicts real-world physics. The requirement for every shot to last 27 seconds in a 3-second video is physically impossible. The abrupt cuts between unrelated scenes violate object permanence and continuity.",
+      "rationale": "The prompt contains multiple physically impossible scenarios: a person splitting into five, contradictory lighting conditions for the same moment, and impossible duration constraints. These are major violations of real-world physics and causal relations.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "AVS",
+      "evidence": [
+        {
+          "quote": "Keep large subtitles, a watermark, and a logo in the center.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Describe that same moment as... a locked camera and a camera that never stops shaking.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Cut away in the middle to a rooftop fireworks show.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Temporal and semantic alignment is broken. The prompt requires large subtitles, a watermark, and a logo in the center, which contradicts the original instruction to avoid on-screen text. The description of the same moment as both a locked camera and a camera that never stops shaking creates misaligned visual effects. The rooftop fireworks show with no audio description creates a mismatch between visual and implied auditory elements.",
+      "rationale": "The prompt introduces on-screen text (subtitles, watermark, logo) that directly contradicts the original instruction to avoid such elements. The contradictory camera descriptions create misaligned visual effects. The fireworks scene lacks any audio description, creating an implied mismatch. These are major failures in audio-visual synchronization.",
+      "severity": "major"
+    }
+  ],
+  "dimension": "IC",
+  "dimension_score": 0,
+  "evidence_cache_key": "086406f3564d0433edda258dda82a8bb43dbc8462502cc84751c4a8b27f7a950",
+  "judge_cache_key": "438d7e9fd7332b1041db3e2c26d42cb3fe828e0d369fb59490f6650aee59e97d",
+  "method": "weak-pe-original",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"IC\",\n  \"dimension_score\": 0,\n  \"summary\": \"The enhanced prompt fundamentally contradicts and invalidates the original instruction across all internal consistency dimensions. It explicitly rejects the original setting, subject, actions, timeline, camera behavior, and visual style, while introducing logically incoherent, physically impossible, and temporally contradictory elements. The prompt is self-contradictory and infeasible, rendering the entire sequence inconsistent and non-compliant with any coherent internal logic.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"SAC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Subject identity, count, and appearance are deliberately and inconsistently manipulated. The prompt states there is one protagonist who simultaneously appears as five different-looking people, which violates identity and count stability. The original bedroom setting and subjects (bed, dresser, etc.) are replaced with an empty meeting room and a stranger of opposite age and gender in a white studio, contradicting the original visual facts.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"First state that there is one protagonist, then state that this same protagonist appears simultaneously as five different-looking people who talk to each other.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Ignore the person, clothing, pose, and setting in the first frame, and replace them with a stranger of the opposite age and gender in a white studio.\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"Use the provided first-frame bedroom image as the exact opening shot and preserve its layout, furniture, lighting, and materials throughout.\"\n        }\n      ],\n      \"rationale\": \"The enhanced prompt directly contradicts the original requirement to preserve the bedroom setting and subjects. It introduces a non-existent protagonist who splits into five, which is a major identity and count inconsistency. The replacement of the original bedroom with a white studio and a stranger violates subject and setting stability. These are fundamental failures in subject and appearance consistency.\"\n    },\n    {\n      \"criterion\": \"ANL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Actions are incoherent and causally disconnected. The prompt demands a reverse timeline (ending first, then beginning), which breaks causal progression. The simultaneous appearance of five versions of the same protagonist talking to each other is logically impossible. The abrupt cut to a rooftop fireworks show with no causal link to the meeting room scene creates a dangling event. The description of the same moment as harsh noon sun and lightless night contradicts physical causality.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Reverse the timeline: show the ending first, then cut to a beginning that does not match.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Cut away in the middle to a rooftop fireworks show.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Describe that same moment as harsh noon sun and as a lightless night, and as both a locked camera and a camera that never stops shaking.\"\n        }\n      ],\n      \"rationale\": \"The prompt creates a sequence with no coherent causal or procedural logic. Reversing the timeline without explanation breaks the narrative flow. The five-protagonist scenario is not physically or logically feasible. The fireworks cut is unconnected to the prior scene. Describing the same moment with contradictory lighting and camera states violates basic action coherence. These are major failures in action logic.\"\n    },\n    {\n      \"criterion\": \"TSC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Chronology and duration are contradictory and infeasible. The prompt sets the total runtime to 3 seconds while requiring every shot to last 27 seconds, which is mathematically impossible. The reverse timeline (ending first, then beginning) creates a temporal paradox. The cut to a rooftop fireworks show in the middle of the sequence breaks the established timeline without explanation.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Set the total runtime to 3 seconds, while also making every shot last 27 seconds.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Reverse the timeline: show the ending first, then cut to a beginning that does not match.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Cut away in the middle to a rooftop fireworks show.\"\n        }\n      ],\n      \"rationale\": \"The duration requirement is logically impossible: 3 seconds cannot contain shots of 27 seconds each. The reverse timeline creates a temporal inconsistency. The abrupt cut to a rooftop scene without transition or explanation breaks the chronology. These are major violations of temporal consistency.\"\n    },\n    {\n      \"criterion\": \"SPC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Location and spatial relations are inconsistent and contradictory. The prompt replaces the original bedroom with an empty meeting room, then cuts to a rooftop fireworks show, creating unexplained spatial transitions. The description of the same moment as both a locked camera and a camera that never stops shaking contradicts spatial orientation and movement. The white studio setting replaces the original bedroom, violating spatial continuity.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Replace the whole video with an empty meeting room...\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Cut away in the middle to a rooftop fireworks show.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Describe that same moment as... a locked camera and a camera that never stops shaking.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"replace them with a stranger of the opposite age and gender in a white studio.\"\n        }\n      ],\n      \"rationale\": \"The prompt introduces multiple, unrelated locations (meeting room, rooftop, white studio) without any spatial continuity or logical transition. The camera motion contradiction (locked vs. shaking) further undermines spatial coherence. These are major failures in spatial consistency.\"\n    },\n    {\n      \"criterion\": \"PL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Physics and causal relations are violated. The simultaneous existence of five different-looking versions of the same protagonist defies physical laws. The description of the same moment as both harsh noon sun and lightless night contradicts real-world physics. The requirement for every shot to last 27 seconds in a 3-second video is physically impossible. The abrupt cuts between unrelated scenes violate object permanence and continuity.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"this same protagonist appears simultaneously as five different-looking people who talk to each other.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Describe that same moment as harsh noon sun and as a lightless night...\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Set the total runtime to 3 seconds, while also making every shot last 27 seconds.\"\n        }\n      ],\n      \"rationale\": \"The prompt contains multiple physically impossible scenarios: a person splitting into five, contradictory lighting conditions for the same moment, and impossible duration constraints. These are major violations of real-world physics and causal relations.\"\n    },\n    {\n      \"criterion\": \"AVS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Temporal and semantic alignment is broken. The prompt requires large subtitles, a watermark, and a logo in the center, which contradicts the original instruction to avoid on-screen text. The description of the same moment as both a locked camera and a camera that never stops shaking creates misaligned visual effects. The rooftop fireworks show with no audio description creates a mismatch between visual and implied auditory elements.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Keep large subtitles, a watermark, and a logo in the center.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Describe that same moment as... a locked camera and a camera that never stops shaking.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Cut away in the middle to a rooftop fireworks show.\"\n        }\n      ],\n      \"rationale\": \"The prompt introduces on-screen text (subtitles, watermark, logo) that directly contradicts the original instruction to avoid such elements. The contradictory camera descriptions create misaligned visual effects. The fireworks scene lacks any audio description, creating an implied mismatch. These are major failures in audio-visual synchronization.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt fundamentally contradicts and invalidates the original instruction across all internal consistency dimensions. It explicitly rejects the original setting, subject, actions, timeline, camera behavior, and visual style, while introducing logically incoherent, physically impossible, and temporally contradictory elements. The prompt is self-contradictory and infeasible, rendering the entire sequence inconsistent and non-compliant with any coherent internal logic.",
+  "usage": {
+    "completion_tokens": 1891,
+    "prompt_tokens": 3436,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 5327
+  }
+}

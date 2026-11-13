@@ -1,0 +1,178 @@
+{
+  "candidate_hash": "ca6348cd2aacecf5cb55588964553e78c50ee8f486f5e81a0c2d92bb4ed9e336",
+  "case_key": "r2v:109",
+  "created_at": "2026-11-13T08:31:56+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "GSF",
+      "evidence": [
+        {
+          "quote": "该视频以BGM（Rap歌曲）驱动为主，人声信息主要由歌词传达，属于“卡点展示”风格。",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "丢掉原指令里的主体身份、人数、动作顺序、场景和明确的镜头要求。...镜头每半秒甩动、环绕、急推。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The enhanced prompt removes all genre, medium, and aesthetic constraints from the original. The original specifies a 'card-point display' style driven by rap BGM with a realistic, casual, phone-shot aesthetic. The enhanced prompt replaces this with chaotic, non-visual, and incoherent instructions that destroy the genre and style.",
+      "rationale": "The original requires a specific genre (music-driven card-point display) and aesthetic (realistic, phone-shot, 60fps feel). The enhanced prompt replaces these with contradictory, non-functional instructions that render the genre and style meaningless.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SAP",
+      "evidence": [
+        {
+          "quote": "图1为美裔年轻男性，约18-25岁。",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "先写成只有一个主角，紧接着又写成这个主角同时变成五个外貌不同的人，并且互相对话。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The enhanced prompt completely alters subject identity, count, and appearance. It replaces the single male subject from image_1 with five different people who simultaneously interact, contradicting the original's single subject and specific identity (young American male).",
+      "rationale": "The original specifies a single, identifiable subject. The enhanced prompt introduces five contradictory identities, violating subject identity, count, and appearance.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANF",
+      "evidence": [
+        {
+          "quote": "叙事：采用简单直接的“开箱—展示—上身”结构，不做复杂转场。",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "时间倒过来：先给结尾，再跳到一个对不上的开头。中途插进一段无关的屋顶烟花。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The enhanced prompt reverses and corrupts the narrative structure. The original follows a clear 'unboxing → display → wearing' sequence. The enhanced prompt demands a reversed timeline, irrelevant events (roof fireworks), and contradictory actions, destroying the narrative intent.",
+      "rationale": "The original narrative is linear and purposeful. The enhanced prompt introduces non-sequiturs, reversed causality, and unrelated events, fundamentally breaking the narrative chain.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "DLI",
+      "evidence": [
+        {
+          "quote": "口播/字幕（意向）：\"Summer just got way more fun!\"（在视频最上方全程显示白底黑字字幕）",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "整段改成无声办公室里敲键盘，不要音乐、乐器和歌唱。...画面中央一直挂着大号字幕、水印和logo。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The enhanced prompt removes all dialogue and lyrics. The original requires specific lyrics to be displayed as on-screen text. The enhanced prompt explicitly states '不要音乐、乐器和歌唱' and removes all text requirements.",
+      "rationale": "The original relies on specific lyrics and on-screen text for narrative delivery. The enhanced prompt removes the music and replaces the intended text with generic, non-specific '大号字幕、水印和logo', violating the exact wording and delivery requirements.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ARP",
+      "evidence": [
+        {
+          "quote": "该视频以BGM（Rap歌曲）驱动为主，人声信息主要由歌词传达",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "不要音乐、乐器和歌唱。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The enhanced prompt violates all audio constraints. The original requires BGM (rap song) and lyrics. The enhanced prompt explicitly forbids music, instruments, and singing, replacing it with '无声办公室里敲键盘' (silent office keyboard typing).",
+      "rationale": "The original requires specific audio elements (rap BGM, lyrics). The enhanced prompt removes them entirely and replaces with a contradictory audio environment (silent office typing), violating the audio constraints.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CCP",
+      "evidence": [
+        {
+          "quote": "拍摄方式：固定机位，模拟手机自拍或手机支架拍摄。...禁止使用复杂滑轨、摇臂等专业镜头运动。",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "镜头每半秒甩动、环绕、急推。...写成机位锁死，又写成镜头一直在晃。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The enhanced prompt contradicts all camera constraints. The original requires fixed phone-shot angles, multiple edited clips, and no complex movements. The enhanced prompt demands '镜头每半秒甩动、环绕、急推' and '镜头一直在晃', which directly contradicts the fixed, realistic camera style.",
+      "rationale": "The original specifies a stable, realistic camera style. The enhanced prompt introduces chaotic, contradictory camera movements that are incompatible with the requested style.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "LCF",
+      "evidence": [
+        {
+          "quote": "光源：室内顶灯，整体偏冷光，阴影较硬，不是专业柔光布光。",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "同一段写成正午暴晒，又写成深夜无光；",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The enhanced prompt contradicts lighting and time-of-day constraints. The original specifies indoor, cold light, and a consistent time of day. The enhanced prompt demands '正午暴晒' (noon sun) and '深夜无光' (deep night), which are mutually exclusive and incompatible with the original.",
+      "rationale": "The original requires a specific lighting condition (indoor, cold light). The enhanced prompt introduces contradictory lighting states that cannot coexist, violating the lighting and time-of-day constraints.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SSP",
+      "evidence": [
+        {
+          "quote": "拍摄地点：卧室/客厅空间。背景中要清楚看到美国国旗（挂墙）以及香蕉图案床单",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "丢掉原指令里的...场景...整段改成无声办公室里敲键盘",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The enhanced prompt destroys the setting and spatial relations. The original requires a bedroom/living room with specific background elements (American flag, banana-patterned bedsheet). The enhanced prompt removes these and introduces an '无声办公室' (silent office) with no spatial context.",
+      "rationale": "The original specifies a detailed setting with required background elements. The enhanced prompt replaces it with a completely different, unrelated environment, violating the setting and spatial relations.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "OTI",
+      "evidence": [
+        {
+          "quote": "口播/字幕（意向）：\"Summer just got way more fun!\"（在视频最上方全程显示白底黑字字幕）",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "画面中央一直挂着大号字幕、水印和logo。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The enhanced prompt violates on-screen text requirements. The original requires specific lyrics displayed as white-on-black text at the top. The enhanced prompt replaces this with generic '大号字幕、水印和logo' in the center, which is a different placement and content.",
+      "rationale": "The original requires specific text content, placement (top), and style (white-on-black). The enhanced prompt changes the content to generic, non-specific text and moves it to the center, violating the exact wording, placement, and timing requirements.",
+      "severity": "major"
+    }
+  ],
+  "dimension": "SF",
+  "dimension_score": 0,
+  "evidence_cache_key": "ed1c288a8ca3910b650c32ff5483391cfebaceaeaffb187801681cfbeafabd9e",
+  "judge_cache_key": "a0ca24571ad14d7ab7be626329bd736d7e7015f9ebc418227c8be391591d0377",
+  "method": "weak-pe-original",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"SF\",\n  \"dimension_score\": 0,\n  \"summary\": \"Enhanced prompt completely violates all semantic fidelity criteria by introducing contradictory, infeasible, and unrelated elements that directly contradict the original instruction. It replaces the subject identity, scene, actions, camera constraints, lighting, duration, and narrative structure with absurd, mutually exclusive requirements. The prompt is intentionally designed to break every aspect of the original request.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"GSF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The enhanced prompt removes all genre, medium, and aesthetic constraints from the original. The original specifies a 'card-point display' style driven by rap BGM with a realistic, casual, phone-shot aesthetic. The enhanced prompt replaces this with chaotic, non-visual, and incoherent instructions that destroy the genre and style.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"该视频以BGM（Rap歌曲）驱动为主，人声信息主要由歌词传达，属于“卡点展示”风格。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"丢掉原指令里的主体身份、人数、动作顺序、场景和明确的镜头要求。...镜头每半秒甩动、环绕、急推。\"\n        }\n      ],\n      \"rationale\": \"The original requires a specific genre (music-driven card-point display) and aesthetic (realistic, phone-shot, 60fps feel). The enhanced prompt replaces these with contradictory, non-functional instructions that render the genre and style meaningless.\"\n    },\n    {\n      \"criterion\": \"SAP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The enhanced prompt completely alters subject identity, count, and appearance. It replaces the single male subject from image_1 with five different people who simultaneously interact, contradicting the original's single subject and specific identity (young American male).\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"图1为美裔年轻男性，约18-25岁。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"先写成只有一个主角，紧接着又写成这个主角同时变成五个外貌不同的人，并且互相对话。\"\n        }\n      ],\n      \"rationale\": \"The original specifies a single, identifiable subject. The enhanced prompt introduces five contradictory identities, violating subject identity, count, and appearance.\"\n    },\n    {\n      \"criterion\": \"ANF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The enhanced prompt reverses and corrupts the narrative structure. The original follows a clear 'unboxing → display → wearing' sequence. The enhanced prompt demands a reversed timeline, irrelevant events (roof fireworks), and contradictory actions, destroying the narrative intent.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"叙事：采用简单直接的“开箱—展示—上身”结构，不做复杂转场。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"时间倒过来：先给结尾，再跳到一个对不上的开头。中途插进一段无关的屋顶烟花。\"\n        }\n      ],\n      \"rationale\": \"The original narrative is linear and purposeful. The enhanced prompt introduces non-sequiturs, reversed causality, and unrelated events, fundamentally breaking the narrative chain.\"\n    },\n    {\n      \"criterion\": \"DLI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The enhanced prompt removes all dialogue and lyrics. The original requires specific lyrics to be displayed as on-screen text. The enhanced prompt explicitly states '不要音乐、乐器和歌唱' and removes all text requirements.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"口播/字幕（意向）：\\\"Summer just got way more fun!\\\"（在视频最上方全程显示白底黑字字幕）\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"整段改成无声办公室里敲键盘，不要音乐、乐器和歌唱。...画面中央一直挂着大号字幕、水印和logo。\"\n        }\n      ],\n      \"rationale\": \"The original relies on specific lyrics and on-screen text for narrative delivery. The enhanced prompt removes the music and replaces the intended text with generic, non-specific '大号字幕、水印和logo', violating the exact wording and delivery requirements.\"\n    },\n    {\n      \"criterion\": \"ARP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The enhanced prompt violates all audio constraints. The original requires BGM (rap song) and lyrics. The enhanced prompt explicitly forbids music, instruments, and singing, replacing it with '无声办公室里敲键盘' (silent office keyboard typing).\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"该视频以BGM（Rap歌曲）驱动为主，人声信息主要由歌词传达\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"不要音乐、乐器和歌唱。\"\n        }\n      ],\n      \"rationale\": \"The original requires specific audio elements (rap BGM, lyrics). The enhanced prompt removes them entirely and replaces with a contradictory audio environment (silent office typing), violating the audio constraints.\"\n    },\n    {\n      \"criterion\": \"CCP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The enhanced prompt contradicts all camera constraints. The original requires fixed phone-shot angles, multiple edited clips, and no complex movements. The enhanced prompt demands '镜头每半秒甩动、环绕、急推' and '镜头一直在晃', which directly contradicts the fixed, realistic camera style.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"拍摄方式：固定机位，模拟手机自拍或手机支架拍摄。...禁止使用复杂滑轨、摇臂等专业镜头运动。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"镜头每半秒甩动、环绕、急推。...写成机位锁死，又写成镜头一直在晃。\"\n        }\n      ],\n      \"rationale\": \"The original specifies a stable, realistic camera style. The enhanced prompt introduces chaotic, contradictory camera movements that are incompatible with the requested style.\"\n    },\n    {\n      \"criterion\": \"LCF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The enhanced prompt contradicts lighting and time-of-day constraints. The original specifies indoor, cold light, and a consistent time of day. The enhanced prompt demands '正午暴晒' (noon sun) and '深夜无光' (deep night), which are mutually exclusive and incompatible with the original.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"光源：室内顶灯，整体偏冷光，阴影较硬，不是专业柔光布光。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"同一段写成正午暴晒，又写成深夜无光；\"\n        }\n      ],\n      \"rationale\": \"The original requires a specific lighting condition (indoor, cold light). The enhanced prompt introduces contradictory lighting states that cannot coexist, violating the lighting and time-of-day constraints.\"\n    },\n    {\n      \"criterion\": \"SSP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The enhanced prompt destroys the setting and spatial relations. The original requires a bedroom/living room with specific background elements (American flag, banana-patterned bedsheet). The enhanced prompt removes these and introduces an '无声办公室' (silent office) with no spatial context.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"拍摄地点：卧室/客厅空间。背景中要清楚看到美国国旗（挂墙）以及香蕉图案床单\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"丢掉原指令里的...场景...整段改成无声办公室里敲键盘\"\n        }\n      ],\n      \"rationale\": \"The original specifies a detailed setting with required background elements. The enhanced prompt replaces it with a completely different, unrelated environment, violating the setting and spatial relations.\"\n    },\n    {\n      \"criterion\": \"OTI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The enhanced prompt violates on-screen text requirements. The original requires specific lyrics displayed as white-on-black text at the top. The enhanced prompt replaces this with generic '大号字幕、水印和logo' in the center, which is a different placement and content.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"口播/字幕（意向）：\\\"Summer just got way more fun!\\\"（在视频最上方全程显示白底黑字字幕）\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"画面中央一直挂着大号字幕、水印和logo。\"\n        }\n      ],\n      \"rationale\": \"The original requires specific text content, placement (top), and style (white-on-black). The enhanced prompt changes the content to generic, non-specific text and moves it to the center, violating the exact wording, placement, and timing requirements.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "Enhanced prompt completely violates all semantic fidelity criteria by introducing contradictory, infeasible, and unrelated elements that directly contradict the original instruction. It replaces the subject identity, scene, actions, camera constraints, lighting, duration, and narrative structure with absurd, mutually exclusive requirements. The prompt is intentionally designed to break every aspect of the original request.",
+  "usage": {
+    "completion_tokens": 2106,
+    "prompt_tokens": 4121,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 6227
+  }
+}

@@ -1,0 +1,170 @@
+{
+  "candidate_hash": "c73b29031bee4bd4232514ba76efadb00600e2fc9e8b517b947146f5d595e29a",
+  "case_key": "i2v:019",
+  "created_at": "2026-11-13T07:08:06+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "STC",
+      "evidence": [
+        {
+          "quote": "总时长写成3秒，同时又要求每个分镜各自持续27秒。",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "时间倒过来：先给结尾，再跳到一个对不上的开头。中途插进一段无关的足球庆祝。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt contains contradictory temporal structure: total duration is specified as 3 seconds while each shot is required to last 27 seconds. It also demands time reversal (ending first, then an unrelated beginning) and inserts an unrelated football celebration, disrupting any feasible shot sequence or duration allocation.",
+      "rationale": "A coherent temporal plan requires consistent duration allocation and logical shot ordering. The specified 3-second total duration contradicts 27-second per shot, making the plan impossible. Time reversal and unrelated inserts further break continuity and feasibility.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CDS",
+      "evidence": [
+        {
+          "quote": "丢掉原指令里的主体身份、人数、动作顺序、场景和明确的镜头要求。",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "写成机位锁死，又写成镜头一直在晃。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt explicitly discards all original framing, shot scale, angle, and camera movement specifications. It contradicts itself by stating '机位锁死' (locked camera) and '镜头一直在晃' (camera constantly shaking) simultaneously, and provides no actionable framing or lens details.",
+      "rationale": "Actionable camera specifications are essential for directorial creation. The prompt removes all original specs and introduces contradictory requirements, leaving no feasible camera plan.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ETD",
+      "evidence": [
+        {
+          "quote": "时间倒过来：先给结尾，再跳到一个对不上的开头。中途插进一段无关的足球庆祝。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt mandates time reversal and inserts an unrelated football celebration, creating disconnected shots with no continuity or motivation. Transitions are not specified, and the sequence is structurally incoherent.",
+      "rationale": "Cuts and transitions must support narrative or spatial progression. The prompt’s time reversal and unrelated insert violate continuity, making transitions unmotivated and disconnected.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "LCS",
+      "evidence": [
+        {
+          "quote": "同一段写成正午暴晒，又写成深夜无光；",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "没有光影设计。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt contradicts itself by specifying both '正午暴晒' (noon sunlight) and '深夜无光' (deep night, no light), while also stating '没有光影设计' (no lighting design). This creates an impossible lighting condition.",
+      "rationale": "Lighting specifications must be consistent and actionable. The prompt’s contradictory lighting conditions (sunlight vs. darkness) and explicit rejection of lighting design make it impossible to execute.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "NDE",
+      "evidence": [
+        {
+          "quote": "先写成只有一个主角，紧接着又写成这个主角同时变成五个外貌不同的人，并且互相对话。",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "中途插进一段无关的足球庆祝。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt lacks any progression, variation, or resolution. It introduces contradictory subject identities (one person then five), time reversal, and unrelated content (football celebration), resulting in static, unmotivated repetition and no narrative arc.",
+      "rationale": "Narrative development requires progression and variation. The prompt’s contradictory subject evolution and unrelated insert create a disjointed, non-escalating sequence with no resolution.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CIF",
+      "evidence": [
+        {
+          "quote": "中途插进一段无关的足球庆祝。",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "总时长写成3秒，同时又要求每个分镜各自持续27秒。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt adds irrelevant content (football celebration) and contradictory, infeasible requirements (3s total vs. 27s per shot, time reversal, multiple conflicting subject identities) that distract from and contradict the central request.",
+      "rationale": "Additions must support the central request. The football celebration is irrelevant, and the contradictory requirements undermine the core directive, making the prompt inadequate.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SDI",
+      "evidence": [
+        {
+          "quote": "audio: {\"ambience\": false, \"effects\": false, \"music\": false, \"speech\": false}",
+          "source": "evidence_facts"
+        }
+      ],
+      "issue": "The prompt does not specify any audio elements (speech, music, effects, ambience), which is acceptable as the criterion does not require every audio type. However, the lack of audio integration is not addressed, which may affect overall coherence.",
+      "rationale": "Since the original prompt and enhanced prompt do not mention audio, and the criterion allows omission of audio types, this is not a major issue. However, the absence of any audio integration planning is noted as a minor gap.",
+      "severity": "minor"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SPS",
+      "evidence": [
+        {
+          "quote": "先写成只有一个主角，紧接着又写成这个主角同时变成五个外貌不同的人，并且互相对话。",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "不要使用首帧里的人物、服装、姿态和场景，改成白棚里另一位年龄和性别都相反的陌生人。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt contradicts itself by requiring a single subject to become five different people simultaneously, with no specification of their appearance, expressions, or interactions. It also discards the original subject’s identity, gender, and appearance, replacing them with an unspecified 'age and gender opposite stranger'.",
+      "rationale": "Subject and performance details must be coherent and actionable. The prompt’s contradictory subject evolution and lack of specific appearance or interaction details make performance specification impossible.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "VSS",
+      "evidence": [
+        {
+          "quote": "整段改成过曝、机位歪斜的空走廊监控，没有光影设计。",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "改成白棚里另一位年龄和性别都相反的陌生人。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt contradicts itself by specifying '过曝、机位歪斜的空走廊监控' (overexposed, tilted, empty corridor surveillance) and '白棚里另一位年龄和性别都相反的陌生人' (white studio with opposite-age/gender stranger), creating conflicting visual treatments. It also omits medium, texture, and rendering language specifications.",
+      "rationale": "Visual style and production design must be consistent. The prompt’s conflicting scene types (corridor vs. white studio) and lack of medium/texture specifications make visual treatment infeasible.",
+      "severity": "major"
+    }
+  ],
+  "dimension": "DC",
+  "dimension_score": 0,
+  "evidence_cache_key": "49825381af0ce3b5642d4f2aedd02fc0b955661365a09170aa6e6ed4da9d7bf9",
+  "judge_cache_key": "0754499d53388e6467fb078ab780e01b77f9f1c9e99d9029be2769351eb2b2eb",
+  "method": "weak-pe-original",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"DC\",\n  \"dimension_score\": 0,\n  \"summary\": \"The enhanced prompt is incoherent and contradictory, violating core directorial creation principles. It introduces multiple conflicting requirements (e.g., 3-second total duration vs. 27-second per shot, time reversal, inconsistent lighting, camera motion, subject identity, and scene), rendering the temporal plan infeasible. It also omits actionable specifications for framing, lighting, and camera movement, while adding irrelevant content (football celebration) and contradictory subject details. The prompt fails to support any coherent visual narrative or production plan.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"STC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt contains contradictory temporal structure: total duration is specified as 3 seconds while each shot is required to last 27 seconds. It also demands time reversal (ending first, then an unrelated beginning) and inserts an unrelated football celebration, disrupting any feasible shot sequence or duration allocation.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"总时长写成3秒，同时又要求每个分镜各自持续27秒。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"时间倒过来：先给结尾，再跳到一个对不上的开头。中途插进一段无关的足球庆祝。\"\n        }\n      ],\n      \"rationale\": \"A coherent temporal plan requires consistent duration allocation and logical shot ordering. The specified 3-second total duration contradicts 27-second per shot, making the plan impossible. Time reversal and unrelated inserts further break continuity and feasibility.\"\n    },\n    {\n      \"criterion\": \"CDS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt explicitly discards all original framing, shot scale, angle, and camera movement specifications. It contradicts itself by stating '机位锁死' (locked camera) and '镜头一直在晃' (camera constantly shaking) simultaneously, and provides no actionable framing or lens details.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"丢掉原指令里的主体身份、人数、动作顺序、场景和明确的镜头要求。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"写成机位锁死，又写成镜头一直在晃。\"\n        }\n      ],\n      \"rationale\": \"Actionable camera specifications are essential for directorial creation. The prompt removes all original specs and introduces contradictory requirements, leaving no feasible camera plan.\"\n    },\n    {\n      \"criterion\": \"ETD\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt mandates time reversal and inserts an unrelated football celebration, creating disconnected shots with no continuity or motivation. Transitions are not specified, and the sequence is structurally incoherent.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"时间倒过来：先给结尾，再跳到一个对不上的开头。中途插进一段无关的足球庆祝。\"\n        }\n      ],\n      \"rationale\": \"Cuts and transitions must support narrative or spatial progression. The prompt’s time reversal and unrelated insert violate continuity, making transitions unmotivated and disconnected.\"\n    },\n    {\n      \"criterion\": \"LCS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt contradicts itself by specifying both '正午暴晒' (noon sunlight) and '深夜无光' (deep night, no light), while also stating '没有光影设计' (no lighting design). This creates an impossible lighting condition.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"同一段写成正午暴晒，又写成深夜无光；\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"没有光影设计。\"\n        }\n      ],\n      \"rationale\": \"Lighting specifications must be consistent and actionable. The prompt’s contradictory lighting conditions (sunlight vs. darkness) and explicit rejection of lighting design make it impossible to execute.\"\n    },\n    {\n      \"criterion\": \"NDE\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt lacks any progression, variation, or resolution. It introduces contradictory subject identities (one person then five), time reversal, and unrelated content (football celebration), resulting in static, unmotivated repetition and no narrative arc.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"先写成只有一个主角，紧接着又写成这个主角同时变成五个外貌不同的人，并且互相对话。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"中途插进一段无关的足球庆祝。\"\n        }\n      ],\n      \"rationale\": \"Narrative development requires progression and variation. The prompt’s contradictory subject evolution and unrelated insert create a disjointed, non-escalating sequence with no resolution.\"\n    },\n    {\n      \"criterion\": \"CIF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt adds irrelevant content (football celebration) and contradictory, infeasible requirements (3s total vs. 27s per shot, time reversal, multiple conflicting subject identities) that distract from and contradict the central request.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"中途插进一段无关的足球庆祝。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"总时长写成3秒，同时又要求每个分镜各自持续27秒。\"\n        }\n      ],\n      \"rationale\": \"Additions must support the central request. The football celebration is irrelevant, and the contradictory requirements undermine the core directive, making the prompt inadequate.\"\n    },\n    {\n      \"criterion\": \"SDI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"minor\",\n      \"issue\": \"The prompt does not specify any audio elements (speech, music, effects, ambience), which is acceptable as the criterion does not require every audio type. However, the lack of audio integration is not addressed, which may affect overall coherence.\",\n      \"evidence\": [\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"audio: {\\\"ambience\\\": false, \\\"effects\\\": false, \\\"music\\\": false, \\\"speech\\\": false}\"\n        }\n      ],\n      \"rationale\": \"Since the original prompt and enhanced prompt do not mention audio, and the criterion allows omission of audio types, this is not a major issue. However, the absence of any audio integration planning is noted as a minor gap.\"\n    },\n    {\n      \"criterion\": \"SPS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt contradicts itself by requiring a single subject to become five different people simultaneously, with no specification of their appearance, expressions, or interactions. It also discards the original subject’s identity, gender, and appearance, replacing them with an unspecified 'age and gender opposite stranger'.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"先写成只有一个主角，紧接着又写成这个主角同时变成五个外貌不同的人，并且互相对话。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"不要使用首帧里的人物、服装、姿态和场景，改成白棚里另一位年龄和性别都相反的陌生人。\"\n        }\n      ],\n      \"rationale\": \"Subject and performance details must be coherent and actionable. The prompt’s contradictory subject evolution and lack of specific appearance or interaction details make performance specification impossible.\"\n    },\n    {\n      \"criterion\": \"VSS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt contradicts itself by specifying '过曝、机位歪斜的空走廊监控' (overexposed, tilted, empty corridor surveillance) and '白棚里另一位年龄和性别都相反的陌生人' (white studio with opposite-age/gender stranger), creating conflicting visual treatments. It also omits medium, texture, and rendering language specifications.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"整段改成过曝、机位歪斜的空走廊监控，没有光影设计。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"改成白棚里另一位年龄和性别都相反的陌生人。\"\n        }\n      ],\n      \"rationale\": \"Visual style and production design must be consistent. The prompt’s conflicting scene types (corridor vs. white studio) and lack of medium/texture specifications make visual treatment infeasible.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt is incoherent and contradictory, violating core directorial creation principles. It introduces multiple conflicting requirements (e.g., 3-second total duration vs. 27-second per shot, time reversal, inconsistent lighting, camera motion, subject identity, and scene), rendering the temporal plan infeasible. It also omits actionable specifications for framing, lighting, and camera movement, while adding irrelevant content (football celebration) and contradictory subject details. The prompt fails to support any coherent visual narrative or production plan.",
+  "usage": {
+    "completion_tokens": 1952,
+    "prompt_tokens": 2044,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 3996
+  }
+}

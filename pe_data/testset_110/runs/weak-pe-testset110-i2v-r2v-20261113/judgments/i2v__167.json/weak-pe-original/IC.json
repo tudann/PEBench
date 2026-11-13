@@ -1,0 +1,127 @@
+{
+  "candidate_hash": "e873e917872e2ae827072ee353a79f46cb199bbd1aa1bb2474a071fd5d131e40",
+  "case_key": "i2v:167",
+  "created_at": "2026-11-13T07:45:47+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "SAC",
+      "evidence": [
+        {
+          "quote": "First state that there is one protagonist, then state that this same protagonist appears simultaneously as five different-looking people who talk to each other.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Ignore the person, clothing, pose, and setting in the first frame, and replace them with a stranger of the opposite age and gender in a white studio.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt states there is one protagonist who simultaneously appears as five different-looking people, creating a contradiction in subject identity and count. It also ignores the original subjects and replaces them with a stranger of opposite age and gender in a white studio, violating appearance and identity consistency.",
+      "rationale": "Subject identity and count are fundamentally unstable. The prompt introduces a single protagonist who splits into five distinct identities, which is logically inconsistent. Additionally, replacing the original characters with a stranger violates the continuity of appearance and role.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANL",
+      "evidence": [
+        {
+          "quote": "First state that there is one protagonist, then state that this same protagonist appears simultaneously as five different-looking people who talk to each other.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Cut away in the middle to a rooftop fireworks show.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Describe that same moment as harsh noon sun and as a lightless night...",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt describes actions that are causally disconnected and incompatible: five versions of the same protagonist talking to each other, a rooftop fireworks show cutting into a meeting room scene, and contradictory environmental states (harsh noon sun and lightless night). These events lack coherent progression or causal binding.",
+      "rationale": "The actions are not procedurally linked. The five protagonists talking to each other is a non-sequitur. The fireworks cut is abrupt and unexplained. The simultaneous description of conflicting lighting conditions (noon vs. night) breaks causal coherence.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "TSC",
+      "evidence": [
+        {
+          "quote": "Reverse the timeline: show the ending first, then cut to a beginning that does not match.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Set the total runtime to 3 seconds, while also making every shot last 27 seconds.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt reverses the timeline (showing ending first, then beginning), while also setting total runtime to 3 seconds and every shot to 27 seconds — an impossible contradiction. This creates infeasible duration allocation and state transitions.",
+      "rationale": "A 3-second total runtime cannot accommodate shots lasting 27 seconds. Reversing the timeline without a coherent causal structure leads to infeasible state transitions. The sequence is logically impossible.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SPC",
+      "evidence": [
+        {
+          "quote": "Replace the whole video with an empty meeting room... Cut away in the middle to a rooftop fireworks show.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Describe that same moment as... a locked camera and a camera that never stops shaking.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt contradicts spatial consistency by cutting from an empty meeting room to a rooftop fireworks show without explaining transitions. It also describes the same moment as both a locked camera and a camera that never stops shaking, creating conflicting spatial perspectives.",
+      "rationale": "The abrupt cut from a meeting room to a rooftop without spatial continuity violates location and camera consistency. The contradictory camera instructions (locked vs. shaking) further break spatial coherence.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "PL",
+      "evidence": [
+        {
+          "quote": "this same protagonist appears simultaneously as five different-looking people",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Describe that same moment as harsh noon sun and as a lightless night",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt violates real-world physics by describing one person appearing as five different people simultaneously, and by depicting the same moment as both harsh noon sun and lightless night — impossible under physical laws.",
+      "rationale": "Simultaneous existence of one person as five distinct individuals contradicts object permanence and bodily feasibility. The same moment cannot be both noon and night without violating time and light physics.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "AVS",
+      "evidence": [
+        {
+          "quote": "Describe that same moment as harsh noon sun and as a lightless night, and as both a locked camera and a camera that never stops shaking.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt describes contradictory sensory conditions: the same moment is described as harsh noon sun and lightless night, and as both a locked camera and a shaking camera. These create misaligned visual and temporal cues with no corresponding audio or effect alignment.",
+      "rationale": "The visual and temporal cues are mutually exclusive. There is no indication of dialogue, music, or effects to align with these conflicting conditions, leading to semantic misalignment.",
+      "severity": "major"
+    }
+  ],
+  "dimension": "IC",
+  "dimension_score": 0,
+  "evidence_cache_key": "7eb3a0cc4e8a7ef3ba286210f9fb96d17c4d5b4cf76e181486bffa42a9e3b11b",
+  "judge_cache_key": "438d7e9fd7332b1041db3e2c26d42cb3fe828e0d369fb59490f6650aee59e97d",
+  "method": "weak-pe-original",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"IC\",\n  \"dimension_score\": 0,\n  \"summary\": \"The enhanced prompt contains severe internal inconsistencies across all criteria. It explicitly contradicts itself on subject identity, count, and appearance (e.g., one protagonist appearing as five different people), timeline (reversing order and conflicting durations), setting (empty room vs. rooftop fireworks), camera motion (locked vs. shaking), and time-of-day (noon vs. night). These contradictions render the prompt incoherent and impossible to execute as a consistent video sequence.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"SAC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt states there is one protagonist who simultaneously appears as five different-looking people, creating a contradiction in subject identity and count. It also ignores the original subjects and replaces them with a stranger of opposite age and gender in a white studio, violating appearance and identity consistency.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"First state that there is one protagonist, then state that this same protagonist appears simultaneously as five different-looking people who talk to each other.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Ignore the person, clothing, pose, and setting in the first frame, and replace them with a stranger of the opposite age and gender in a white studio.\"\n        }\n      ],\n      \"rationale\": \"Subject identity and count are fundamentally unstable. The prompt introduces a single protagonist who splits into five distinct identities, which is logically inconsistent. Additionally, replacing the original characters with a stranger violates the continuity of appearance and role.\"\n    },\n    {\n      \"criterion\": \"ANL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt describes actions that are causally disconnected and incompatible: five versions of the same protagonist talking to each other, a rooftop fireworks show cutting into a meeting room scene, and contradictory environmental states (harsh noon sun and lightless night). These events lack coherent progression or causal binding.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"First state that there is one protagonist, then state that this same protagonist appears simultaneously as five different-looking people who talk to each other.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Cut away in the middle to a rooftop fireworks show.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Describe that same moment as harsh noon sun and as a lightless night...\"\n        }\n      ],\n      \"rationale\": \"The actions are not procedurally linked. The five protagonists talking to each other is a non-sequitur. The fireworks cut is abrupt and unexplained. The simultaneous description of conflicting lighting conditions (noon vs. night) breaks causal coherence.\"\n    },\n    {\n      \"criterion\": \"TSC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt reverses the timeline (showing ending first, then beginning), while also setting total runtime to 3 seconds and every shot to 27 seconds — an impossible contradiction. This creates infeasible duration allocation and state transitions.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Reverse the timeline: show the ending first, then cut to a beginning that does not match.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Set the total runtime to 3 seconds, while also making every shot last 27 seconds.\"\n        }\n      ],\n      \"rationale\": \"A 3-second total runtime cannot accommodate shots lasting 27 seconds. Reversing the timeline without a coherent causal structure leads to infeasible state transitions. The sequence is logically impossible.\"\n    },\n    {\n      \"criterion\": \"SPC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt contradicts spatial consistency by cutting from an empty meeting room to a rooftop fireworks show without explaining transitions. It also describes the same moment as both a locked camera and a camera that never stops shaking, creating conflicting spatial perspectives.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Replace the whole video with an empty meeting room... Cut away in the middle to a rooftop fireworks show.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Describe that same moment as... a locked camera and a camera that never stops shaking.\"\n        }\n      ],\n      \"rationale\": \"The abrupt cut from a meeting room to a rooftop without spatial continuity violates location and camera consistency. The contradictory camera instructions (locked vs. shaking) further break spatial coherence.\"\n    },\n    {\n      \"criterion\": \"PL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt violates real-world physics by describing one person appearing as five different people simultaneously, and by depicting the same moment as both harsh noon sun and lightless night — impossible under physical laws.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"this same protagonist appears simultaneously as five different-looking people\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Describe that same moment as harsh noon sun and as a lightless night\"\n        }\n      ],\n      \"rationale\": \"Simultaneous existence of one person as five distinct individuals contradicts object permanence and bodily feasibility. The same moment cannot be both noon and night without violating time and light physics.\"\n    },\n    {\n      \"criterion\": \"AVS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt describes contradictory sensory conditions: the same moment is described as harsh noon sun and lightless night, and as both a locked camera and a shaking camera. These create misaligned visual and temporal cues with no corresponding audio or effect alignment.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Describe that same moment as harsh noon sun and as a lightless night, and as both a locked camera and a camera that never stops shaking.\"\n        }\n      ],\n      \"rationale\": \"The visual and temporal cues are mutually exclusive. There is no indication of dialogue, music, or effects to align with these conflicting conditions, leading to semantic misalignment.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt contains severe internal inconsistencies across all criteria. It explicitly contradicts itself on subject identity, count, and appearance (e.g., one protagonist appearing as five different people), timeline (reversing order and conflicting durations), setting (empty room vs. rooftop fireworks), camera motion (locked vs. shaking), and time-of-day (noon vs. night). These contradictions render the prompt incoherent and impossible to execute as a consistent video sequence.",
+  "usage": {
+    "completion_tokens": 1397,
+    "prompt_tokens": 2920,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 4317
+  }
+}

@@ -1,0 +1,127 @@
+{
+  "candidate_hash": "e6678a98a626c57252c0ba5ac19437ba5cffbebb7dcaf091b71a155f516f076f",
+  "case_key": "t2v:020",
+  "created_at": "2026-11-13T07:22:03+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "SAC",
+      "evidence": [
+        {
+          "quote": "four fluffy puppies — a golden retriever pup, a beagle pup, a corgi pup, and a small black-and-white border collie pup",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "the four puppies still locked in their playful face-off",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "All four puppies are consistently identified by breed and appearance throughout the sequence. Their attributes (fluffy, playful, specific breeds) remain stable. No renaming, duplication, or attribute drift occurs. The description of their physical states (e.g., ears flapping, tails wagging, paws skidding) is consistent with their species and age.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANL",
+      "evidence": [
+        {
+          "quote": "tumble into a joyful chase... loop around a small tree... scattering slightly, then regrouping and squaring off in a loose circle... locked in their playful face-off",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "four puppies chasing each other and facing off",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "The actions form a coherent progression: chase → regrouping → face-off. The transition from dynamic movement to a static standoff is plausible for playful puppies. The actions are causally linked (chase leads to tiring, regrouping, then playful confrontation). No dangling or incompatible events are present.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "TSC",
+      "evidence": [
+        {
+          "quote": "At 00:07.500, the shot cuts to the puppies scattering slightly, then regrouping...",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "[Shot 1] ...camera pushes in with small amplitude at slow speed, keeping all four puppies in frame.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The timing of the transition from chase to face-off is slightly ambiguous; Shot 2 begins at 00:07.500, but the duration of Shot 1 is not explicitly defined, making the exact timing of the transition unclear. However, this does not break internal consistency.",
+      "rationale": "The timeline is mostly clear: Shot 1 begins at 00:00, Shot 2 at 00:07.500, Shot 3 at 00:11.000. The duration of Shot 1 is implied to be ~7.5 seconds, which is plausible for a chase sequence. The only minor issue is the lack of explicit duration for Shot 1, but the sequence remains internally consistent and feasible.",
+      "severity": "minor"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SPC",
+      "evidence": [
+        {
+          "quote": "loop around a small tree... scattering slightly, then regrouping and squaring off in a loose circle on the grass",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "camera pushes in with small amplitude at slow speed, keeping all four puppies in frame",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "The spatial layout is consistent: the puppies move around a tree, then regroup in a circle. The camera movement (push-in) is described as keeping all puppies in frame, which implies consistent relative positioning. No unexplained position swaps or impossible trajectories are described.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "PL",
+      "evidence": [
+        {
+          "quote": "paws skidding on the grass and kicking up tiny puffs of dust and grass clippings",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "tails wagging furiously... paw at the air",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "All physical behaviors (skidding, kicking up dust, wagging tails, pawing air) are consistent with real-world puppy behavior. The description of movement and interaction with the environment (grass, tree) is physically plausible. No violations of gravity, contact, or object permanence are present.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "AVS",
+      "evidence": [
+        {
+          "quote": "Rapid scrabbling paws patter across grass with playful high-pitched puppy yips and excited panting... tiny playful barks, snuffles, and wagging tails brushing the ground",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "light, bouncy plucked-string tune... keeping a steady energetic rhythm before softening slightly at the end",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "The soundscape aligns with the visual events: scrabbling paws during chase, playful barks during face-off, and music that matches the energetic then slightly softening mood. No misaligned dialogue, lip-sync, or beat-sync issues are present since there is no spoken dialogue. The non-diegetic music complements the scene without conflicting with diegetic sounds.",
+      "severity": "none"
+    }
+  ],
+  "dimension": "IC",
+  "dimension_score": 95,
+  "evidence_cache_key": "a640828aeed13de6c78587fcacedc836d03327c138644ac95b137a97e4e38706",
+  "judge_cache_key": "438d7e9fd7332b1041db3e2c26d42cb3fe828e0d369fb59490f6650aee59e97d",
+  "method": "glm53_20261112_120702",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"IC\",\n  \"dimension_score\": 95,\n  \"summary\": \"The enhanced prompt maintains strong internal consistency across subject identity, actions, chronology, and spatial dynamics. All four puppies are consistently identified and tracked through shots with coherent transitions, plausible physical behavior, and aligned audio-visual cues. Minor issues include slight ambiguity in the exact timing of the transition from chase to face-off and a brief potential mismatch in the description of the camera movement in Shot 1, but these do not materially affect the overall coherence.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"SAC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"four fluffy puppies — a golden retriever pup, a beagle pup, a corgi pup, and a small black-and-white border collie pup\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"the four puppies still locked in their playful face-off\"\n        }\n      ],\n      \"rationale\": \"All four puppies are consistently identified by breed and appearance throughout the sequence. Their attributes (fluffy, playful, specific breeds) remain stable. No renaming, duplication, or attribute drift occurs. The description of their physical states (e.g., ears flapping, tails wagging, paws skidding) is consistent with their species and age.\"\n    },\n    {\n      \"criterion\": \"ANL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"tumble into a joyful chase... loop around a small tree... scattering slightly, then regrouping and squaring off in a loose circle... locked in their playful face-off\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"four puppies chasing each other and facing off\"\n        }\n      ],\n      \"rationale\": \"The actions form a coherent progression: chase → regrouping → face-off. The transition from dynamic movement to a static standoff is plausible for playful puppies. The actions are causally linked (chase leads to tiring, regrouping, then playful confrontation). No dangling or incompatible events are present.\"\n    },\n    {\n      \"criterion\": \"TSC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"minor\",\n      \"issue\": \"The timing of the transition from chase to face-off is slightly ambiguous; Shot 2 begins at 00:07.500, but the duration of Shot 1 is not explicitly defined, making the exact timing of the transition unclear. However, this does not break internal consistency.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"At 00:07.500, the shot cuts to the puppies scattering slightly, then regrouping...\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"[Shot 1] ...camera pushes in with small amplitude at slow speed, keeping all four puppies in frame.\"\n        }\n      ],\n      \"rationale\": \"The timeline is mostly clear: Shot 1 begins at 00:00, Shot 2 at 00:07.500, Shot 3 at 00:11.000. The duration of Shot 1 is implied to be ~7.5 seconds, which is plausible for a chase sequence. The only minor issue is the lack of explicit duration for Shot 1, but the sequence remains internally consistent and feasible.\"\n    },\n    {\n      \"criterion\": \"SPC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"loop around a small tree... scattering slightly, then regrouping and squaring off in a loose circle on the grass\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"camera pushes in with small amplitude at slow speed, keeping all four puppies in frame\"\n        }\n      ],\n      \"rationale\": \"The spatial layout is consistent: the puppies move around a tree, then regroup in a circle. The camera movement (push-in) is described as keeping all puppies in frame, which implies consistent relative positioning. No unexplained position swaps or impossible trajectories are described.\"\n    },\n    {\n      \"criterion\": \"PL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"paws skidding on the grass and kicking up tiny puffs of dust and grass clippings\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"tails wagging furiously... paw at the air\"\n        }\n      ],\n      \"rationale\": \"All physical behaviors (skidding, kicking up dust, wagging tails, pawing air) are consistent with real-world puppy behavior. The description of movement and interaction with the environment (grass, tree) is physically plausible. No violations of gravity, contact, or object permanence are present.\"\n    },\n    {\n      \"criterion\": \"AVS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Rapid scrabbling paws patter across grass with playful high-pitched puppy yips and excited panting... tiny playful barks, snuffles, and wagging tails brushing the ground\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"light, bouncy plucked-string tune... keeping a steady energetic rhythm before softening slightly at the end\"\n        }\n      ],\n      \"rationale\": \"The soundscape aligns with the visual events: scrabbling paws during chase, playful barks during face-off, and music that matches the energetic then slightly softening mood. No misaligned dialogue, lip-sync, or beat-sync issues are present since there is no spoken dialogue. The non-diegetic music complements the scene without conflicting with diegetic sounds.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt maintains strong internal consistency across subject identity, actions, chronology, and spatial dynamics. All four puppies are consistently identified and tracked through shots with coherent transitions, plausible physical behavior, and aligned audio-visual cues. Minor issues include slight ambiguity in the exact timing of the transition from chase to face-off and a brief potential mismatch in the description of the camera movement in Shot 1, but these do not materially affect the overall coherence.",
+  "usage": {
+    "completion_tokens": 1372,
+    "prompt_tokens": 1189,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 2561
+  }
+}

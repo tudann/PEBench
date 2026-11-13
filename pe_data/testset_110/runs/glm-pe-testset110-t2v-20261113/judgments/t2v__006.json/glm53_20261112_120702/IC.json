@@ -1,0 +1,119 @@
+{
+  "candidate_hash": "d85036797ba46b799c8591b7633b6ec38fc3a0d23e1814976f913b5877720ebf",
+  "case_key": "t2v:006",
+  "created_at": "2026-11-13T07:18:26+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "SAC",
+      "evidence": [
+        {
+          "quote": "elegant woman in splendid traditional Chinese attire with flowing embroidered silk sleeves and delicate hair ornaments",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Elegant Performer in Splendid Attire",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "Subject identity, attire, and props (ruan, water-sleeve gestures) are consistently maintained across all shots. No unexplained changes in appearance, clothing, or props occur. The woman remains the sole subject throughout.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANL",
+      "evidence": [
+        {
+          "quote": "She tilts her head upward toward the myriad phenomena of the sky and begins an operatic vocalise... [Shot 2] At 00:04.000, the camera cuts to a closer framing: she holds a ruan, hands in front, plucking it gently",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Ah—ah—ah\nThis morning, facing the myriad phenomena\nSong and dance are born here\n...With hands in front, plucking the ruan against the evening glow",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "The transition from vocalise to playing the ruan lacks explicit description of how the ruan is acquired or positioned, creating a minor causal gap.",
+      "rationale": "The action sequence is mostly coherent: vocalise → ruan playing → wistful reflection. However, the prompt does not describe how the ruan is introduced or picked up, which creates a minor causal gap. The action is plausible but lacks a smooth transition in physical interaction.",
+      "severity": "minor"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "TSC",
+      "evidence": [
+        {
+          "quote": "[Shot 2] At 00:04.000... [Shot 3] At 00:09.000",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Ah—ah—ah\nThis morning, facing the myriad phenomena\nSong and dance are born here",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "The timing of Shot 2 at 00:04.000 and Shot 3 at 00:09.000 implies a 5-second gap, but the original prompt does not specify duration for the first shot, making the timing assumption slightly arbitrary.",
+      "rationale": "The enhanced prompt assigns specific timestamps, which is acceptable, but the original prompt does not specify shot durations. The 5-second gap between shots is plausible but not strictly derived from the original, introducing a minor temporal assumption.",
+      "severity": "minor"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SPC",
+      "evidence": [
+        {
+          "quote": "medium-wide shot frames... standing beneath a blossoming tree... camera pushes in... cuts to a closer framing... cuts to a low-angle framing that begins a slow arc around her",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "Camera movements are logically connected: push-in → cut to closer framing → cut to low-angle arc. The subject remains in the same location (beneath the tree), and the spatial relationships are consistent. No unexplained position swaps or impossible trajectories.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "PL",
+      "evidence": [
+        {
+          "quote": "pale petals drift down around her... fallen petals scatter across the ground... silk sleeves whisper through the air",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "All physical behaviors (petals drifting, silk sleeves moving, ruan being plucked) are consistent with real-world physics. No violations of gravity, contact, or object permanence are present. The setting is grounded in naturalistic realism.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "AVS",
+      "evidence": [
+        {
+          "quote": "She sings: <d>[Chinese] 啊——啊——啊</d>... She sings: <d>[Chinese] 尘世间，可愿与我共饮一杯</d>... She sings: <d>[Chinese] 尘世树下，这曲绝唱又为谁而唱</d>",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "A soft breeze moves through the blossoming tree with a faint rustle of drifting petals. Gentle plucked notes of the ruan ring out warmly, and silk sleeves whisper through the air as she dances.",
+          "source": "overall_soundscape"
+        }
+      ],
+      "issue": "",
+      "rationale": "Dialogue and music are temporally and semantically aligned with the visual actions. The vocal lines match the described singing, and the soundscape complements the visual events (petals rustling, ruan plucking, silk movement). No misalignment or premature effects are present.",
+      "severity": "none"
+    }
+  ],
+  "dimension": "IC",
+  "dimension_score": 85,
+  "evidence_cache_key": "0cffb540c6e5ca9648686d2817cfb1ecbcf60420fe2f92681993cf6777bbcb30",
+  "judge_cache_key": "438d7e9fd7332b1041db3e2c26d42cb3fe828e0d369fb59490f6650aee59e97d",
+  "method": "glm53_20261112_120702",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"IC\",\n  \"dimension_score\": 85,\n  \"summary\": \"The enhanced prompt maintains strong internal consistency in subject identity, actions, and setting, with coherent progression across shots. Minor issues include slight ambiguity in the transition from singing to playing the ruan without explicit hand movement description, and a minor temporal gap between the first and second shots. No major contradictions or attribute drifts are present.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"SAC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"elegant woman in splendid traditional Chinese attire with flowing embroidered silk sleeves and delicate hair ornaments\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"Elegant Performer in Splendid Attire\"\n        }\n      ],\n      \"rationale\": \"Subject identity, attire, and props (ruan, water-sleeve gestures) are consistently maintained across all shots. No unexplained changes in appearance, clothing, or props occur. The woman remains the sole subject throughout.\"\n    },\n    {\n      \"criterion\": \"ANL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"minor\",\n      \"issue\": \"The transition from vocalise to playing the ruan lacks explicit description of how the ruan is acquired or positioned, creating a minor causal gap.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"She tilts her head upward toward the myriad phenomena of the sky and begins an operatic vocalise... [Shot 2] At 00:04.000, the camera cuts to a closer framing: she holds a ruan, hands in front, plucking it gently\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"Ah—ah—ah\\nThis morning, facing the myriad phenomena\\nSong and dance are born here\\n...With hands in front, plucking the ruan against the evening glow\"\n        }\n      ],\n      \"rationale\": \"The action sequence is mostly coherent: vocalise → ruan playing → wistful reflection. However, the prompt does not describe how the ruan is introduced or picked up, which creates a minor causal gap. The action is plausible but lacks a smooth transition in physical interaction.\"\n    },\n    {\n      \"criterion\": \"TSC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"minor\",\n      \"issue\": \"The timing of Shot 2 at 00:04.000 and Shot 3 at 00:09.000 implies a 5-second gap, but the original prompt does not specify duration for the first shot, making the timing assumption slightly arbitrary.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"[Shot 2] At 00:04.000... [Shot 3] At 00:09.000\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"Ah—ah—ah\\nThis morning, facing the myriad phenomena\\nSong and dance are born here\"\n        }\n      ],\n      \"rationale\": \"The enhanced prompt assigns specific timestamps, which is acceptable, but the original prompt does not specify shot durations. The 5-second gap between shots is plausible but not strictly derived from the original, introducing a minor temporal assumption.\"\n    },\n    {\n      \"criterion\": \"SPC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"medium-wide shot frames... standing beneath a blossoming tree... camera pushes in... cuts to a closer framing... cuts to a low-angle framing that begins a slow arc around her\"\n        }\n      ],\n      \"rationale\": \"Camera movements are logically connected: push-in → cut to closer framing → cut to low-angle arc. The subject remains in the same location (beneath the tree), and the spatial relationships are consistent. No unexplained position swaps or impossible trajectories.\"\n    },\n    {\n      \"criterion\": \"PL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"pale petals drift down around her... fallen petals scatter across the ground... silk sleeves whisper through the air\"\n        }\n      ],\n      \"rationale\": \"All physical behaviors (petals drifting, silk sleeves moving, ruan being plucked) are consistent with real-world physics. No violations of gravity, contact, or object permanence are present. The setting is grounded in naturalistic realism.\"\n    },\n    {\n      \"criterion\": \"AVS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"She sings: <d>[Chinese] 啊——啊——啊</d>... She sings: <d>[Chinese] 尘世间，可愿与我共饮一杯</d>... She sings: <d>[Chinese] 尘世树下，这曲绝唱又为谁而唱</d>\"\n        },\n        {\n          \"source\": \"overall_soundscape\",\n          \"quote\": \"A soft breeze moves through the blossoming tree with a faint rustle of drifting petals. Gentle plucked notes of the ruan ring out warmly, and silk sleeves whisper through the air as she dances.\"\n        }\n      ],\n      \"rationale\": \"Dialogue and music are temporally and semantically aligned with the visual actions. The vocal lines match the described singing, and the soundscape complements the visual events (petals rustling, ruan plucking, silk movement). No misalignment or premature effects are present.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt maintains strong internal consistency in subject identity, actions, and setting, with coherent progression across shots. Minor issues include slight ambiguity in the transition from singing to playing the ruan without explicit hand movement description, and a minor temporal gap between the first and second shots. No major contradictions or attribute drifts are present.",
+  "usage": {
+    "completion_tokens": 1299,
+    "prompt_tokens": 1315,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 2614
+  }
+}

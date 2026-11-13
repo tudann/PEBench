@@ -1,0 +1,170 @@
+{
+  "candidate_hash": "9245a85a29d9732d78518036e1aad1a52994e15d9288684bac89b15782497f39",
+  "case_key": "r2v:011",
+  "created_at": "2026-11-13T08:23:38+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "STC",
+      "evidence": [
+        {
+          "quote": "Shot 1 [0–3 seconds]: a close-up shows the girl... Shot 2 [4–6 seconds]: a medium shot cuts to the girl... Shot 3 [7–10 seconds]: a close-up focuses on the face...",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "[Shot 1] ... Cut at ~3s. [Shot 2] At 00:04.000, the shot cuts to a medium shot: ... Cut at ~6s. [Shot 3] At 00:07.000, the shot cuts to an intimate close-up ... holds to 10s.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "The enhanced prompt maintains the original shot structure and timing with precise temporal boundaries and transitions. Each shot is allocated appropriate duration, and the sequence is logically ordered to support narrative progression from sleep to awakening to emotional expression. The timing notation is slightly inconsistent (00:04.000 vs. 4s), but this is a minor formatting issue that does not affect the plan's feasibility.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CDS",
+      "evidence": [
+        {
+          "quote": "[Shot 1] A close-up opens on <Subject 1>... the camera holds nearly static with a very subtle slow drift. [Shot 2] ... the camera performs a slow, small push-in. [Shot 3] ... the shot cuts to an intimate close-up of <Subject 1>'s face, held nearly static...",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "close-up, medium shot, intimate close-up; camera motion: static, slow drift, slow push-in",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "The prompt specifies actionable camera parameters for each shot: shot scale (close-up, medium, close-up), angle (frontal, eye-level), viewpoint (static with subtle movement), and camera movement (slow drift, small push-in). These are consistent with the original instruction and provide clear direction for visual execution.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ETD",
+      "evidence": [
+        {
+          "quote": "Cut at ~3s. At 00:04.000, the shot cuts to a medium shot... Cut at ~6s. At 00:07.000, the shot cuts to an intimate close-up...",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "Cuts are clearly timed and motivated by narrative progression: from sleep to awakening to emotional expression. The transitions are clean and support the quiet, contemplative mood without unnecessary effects. There is no repetition or disconnected editing.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "LCS",
+      "evidence": [
+        {
+          "quote": "strong warm-cool light-and-shadow contrast, ultra-detailed visuals, rich translucent fabric draping... warm sunlight streaming through wooden lattice windows... light rims her face against cool shade",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "light_sources_and_direction: natural sunlight from left, entering through latticed windows, casting diagonal shadows; color_temperature: warm, golden hour",
+          "source": "evidence_facts"
+        }
+      ],
+      "issue": "",
+      "rationale": "The prompt specifies light source (sunlight through lattice windows), direction (left), quality (natural, warm), contrast (warm-cool), and visual effects (rim lighting, shadow play). These are consistent with the reference image and support the requested photorealistic style.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "NDE",
+      "evidence": [
+        {
+          "quote": "subtle emotional changes of the girl... slowly opening her eyes... softly says, “Hiss...,” her voice weak yet charged with emotional tension",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "eyes tightly closed... slowly opens her grey-blue eyes... whispers, her voice weak yet charged with emotional tension",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "The prompt shows clear progression: from stillness and sleep (Shot 1) to awakening and contemplation (Shot 2) to emotional expression (Shot 3). The variation in movement, gaze, and vocal delivery supports narrative escalation without repetition.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CIF",
+      "evidence": [
+        {
+          "quote": "subject_definitions: <Subject 1> is the young Chinese woman from <Picture 1>, with long flowing black hair... wearing a pale cyan sheer hanfu... detailed_description: <Subject 1>, the young woman from <Picture 1> with long flowing black hair... wearing the pale cyan sheer hanfu...",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Slight redundancy in description of subject appearance and environment across multiple sections (subject_definitions, detailed_description, retention_analysis), but no distracting or irrelevant content.",
+      "rationale": "The prompt includes some repeated details for clarity and consistency, especially in defining subject appearance and environment. While this is slightly redundant, it does not distract from the central narrative and supports accurate visual generation. No decorative or irrelevant padding is present.",
+      "severity": "minor"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SDI",
+      "evidence": [
+        {
+          "quote": "faint, gentle breathing from <Subject 1> continues through Shots 1 and 2, a barely audible rustle of gauze fabric... quiet sunlit room tone underlies the whole video",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "only faint breathing can be heard... her voice weak yet charged with emotional tension",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "Audio is specified as diegetic and minimal, matching the quiet, intimate mood. The prompt details source (breathing, rustle, room tone), character (Subject 1), intensity (faint, barely audible), and progression (continues through shots, fades at end). No non-diegetic music is required or included.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SPS",
+      "evidence": [
+        {
+          "quote": "eyes tightly closed, her hair spread softly across the bedding... slowly opens her grey-blue eyes and gazes around... lips part slightly, brows faintly drawn, softly whispers... voice weak yet charged with emotional tension",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "her eyes tightly closed... slowly opening her eyes and looking around... softly says, “Hiss...,” her voice weak yet charged with emotional tension",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "The prompt specifies detailed performance: facial expression (eyes closed, brows drawn), movement (slow opening of eyes, stirring), gesture (lips parting), vocal delivery (whisper, weak yet charged), and gaze (gazes around). These are consistent with the original instruction and support emotional progression.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "VSS",
+      "evidence": [
+        {
+          "quote": "3D Chinese anime photorealistic photography style, ultra-detailed visuals, rich translucent draping, strong light-and-shadow contrast",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "primary_style: 3D Chinese anime, realism: photorealistic, secondary_styles: [studio portrait, fashion photography, interior photography]",
+          "source": "evidence_facts"
+        }
+      ],
+      "issue": "",
+      "rationale": "The prompt specifies medium (3D anime photorealistic photography), texture (ultra-detailed, translucent draping), rendering language (strong contrast, light play), and production design (traditional Chinese room, canopy, hanfu). These are consistent with the reference images and the original instruction.",
+      "severity": "none"
+    }
+  ],
+  "dimension": "DC",
+  "dimension_score": 95,
+  "evidence_cache_key": "b34825e5de25fb4381ebcec3bae39c35892e892515684ae5e7248f906cd1051f",
+  "judge_cache_key": "0754499d53388e6467fb078ab780e01b77f9f1c9e99d9029be2769351eb2b2eb",
+  "method": "glm53_20261112_120702",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"DC\",\n  \"dimension_score\": 95,\n  \"summary\": \"The enhanced prompt provides a highly detailed, coherent, and actionable directorial plan that fully satisfies the original instruction. It organizes the 10-second video into three precisely timed shots with clear temporal boundaries, camera specifications, lighting, and character performance. The prompt integrates the two reference images effectively, preserving visual continuity and style. Minor issues include slight redundancy in description and a minor inconsistency in the timing notation (00:04.000 vs. 4s), but these do not affect feasibility or clarity. Audio is appropriately specified as diegetic and minimal, matching the quiet, intimate mood. The prompt avoids irrelevant padding and supports the central narrative of emotional awakening with progression and variation.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"STC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"Shot 1 [0–3 seconds]: a close-up shows the girl... Shot 2 [4–6 seconds]: a medium shot cuts to the girl... Shot 3 [7–10 seconds]: a close-up focuses on the face...\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"[Shot 1] ... Cut at ~3s. [Shot 2] At 00:04.000, the shot cuts to a medium shot: ... Cut at ~6s. [Shot 3] At 00:07.000, the shot cuts to an intimate close-up ... holds to 10s.\"\n        }\n      ],\n      \"rationale\": \"The enhanced prompt maintains the original shot structure and timing with precise temporal boundaries and transitions. Each shot is allocated appropriate duration, and the sequence is logically ordered to support narrative progression from sleep to awakening to emotional expression. The timing notation is slightly inconsistent (00:04.000 vs. 4s), but this is a minor formatting issue that does not affect the plan's feasibility.\"\n    },\n    {\n      \"criterion\": \"CDS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"[Shot 1] A close-up opens on <Subject 1>... the camera holds nearly static with a very subtle slow drift. [Shot 2] ... the camera performs a slow, small push-in. [Shot 3] ... the shot cuts to an intimate close-up of <Subject 1>'s face, held nearly static...\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"close-up, medium shot, intimate close-up; camera motion: static, slow drift, slow push-in\"\n        }\n      ],\n      \"rationale\": \"The prompt specifies actionable camera parameters for each shot: shot scale (close-up, medium, close-up), angle (frontal, eye-level), viewpoint (static with subtle movement), and camera movement (slow drift, small push-in). These are consistent with the original instruction and provide clear direction for visual execution.\"\n    },\n    {\n      \"criterion\": \"ETD\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Cut at ~3s. At 00:04.000, the shot cuts to a medium shot... Cut at ~6s. At 00:07.000, the shot cuts to an intimate close-up...\"\n        }\n      ],\n      \"rationale\": \"Cuts are clearly timed and motivated by narrative progression: from sleep to awakening to emotional expression. The transitions are clean and support the quiet, contemplative mood without unnecessary effects. There is no repetition or disconnected editing.\"\n    },\n    {\n      \"criterion\": \"LCS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"strong warm-cool light-and-shadow contrast, ultra-detailed visuals, rich translucent fabric draping... warm sunlight streaming through wooden lattice windows... light rims her face against cool shade\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"light_sources_and_direction: natural sunlight from left, entering through latticed windows, casting diagonal shadows; color_temperature: warm, golden hour\"\n        }\n      ],\n      \"rationale\": \"The prompt specifies light source (sunlight through lattice windows), direction (left), quality (natural, warm), contrast (warm-cool), and visual effects (rim lighting, shadow play). These are consistent with the reference image and support the requested photorealistic style.\"\n    },\n    {\n      \"criterion\": \"NDE\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"subtle emotional changes of the girl... slowly opening her eyes... softly says, “Hiss...,” her voice weak yet charged with emotional tension\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"eyes tightly closed... slowly opens her grey-blue eyes... whispers, her voice weak yet charged with emotional tension\"\n        }\n      ],\n      \"rationale\": \"The prompt shows clear progression: from stillness and sleep (Shot 1) to awakening and contemplation (Shot 2) to emotional expression (Shot 3). The variation in movement, gaze, and vocal delivery supports narrative escalation without repetition.\"\n    },\n    {\n      \"criterion\": \"CIF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"minor\",\n      \"issue\": \"Slight redundancy in description of subject appearance and environment across multiple sections (subject_definitions, detailed_description, retention_analysis), but no distracting or irrelevant content.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"subject_definitions: <Subject 1> is the young Chinese woman from <Picture 1>, with long flowing black hair... wearing a pale cyan sheer hanfu... detailed_description: <Subject 1>, the young woman from <Picture 1> with long flowing black hair... wearing the pale cyan sheer hanfu...\"\n        }\n      ],\n      \"rationale\": \"The prompt includes some repeated details for clarity and consistency, especially in defining subject appearance and environment. While this is slightly redundant, it does not distract from the central narrative and supports accurate visual generation. No decorative or irrelevant padding is present.\"\n    },\n    {\n      \"criterion\": \"SDI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"faint, gentle breathing from <Subject 1> continues through Shots 1 and 2, a barely audible rustle of gauze fabric... quiet sunlit room tone underlies the whole video\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"only faint breathing can be heard... her voice weak yet charged with emotional tension\"\n        }\n      ],\n      \"rationale\": \"Audio is specified as diegetic and minimal, matching the quiet, intimate mood. The prompt details source (breathing, rustle, room tone), character (Subject 1), intensity (faint, barely audible), and progression (continues through shots, fades at end). No non-diegetic music is required or included.\"\n    },\n    {\n      \"criterion\": \"SPS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"eyes tightly closed, her hair spread softly across the bedding... slowly opens her grey-blue eyes and gazes around... lips part slightly, brows faintly drawn, softly whispers... voice weak yet charged with emotional tension\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"her eyes tightly closed... slowly opening her eyes and looking around... softly says, “Hiss...,” her voice weak yet charged with emotional tension\"\n        }\n      ],\n      \"rationale\": \"The prompt specifies detailed performance: facial expression (eyes closed, brows drawn), movement (slow opening of eyes, stirring), gesture (lips parting), vocal delivery (whisper, weak yet charged), and gaze (gazes around). These are consistent with the original instruction and support emotional progression.\"\n    },\n    {\n      \"criterion\": \"VSS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"3D Chinese anime photorealistic photography style, ultra-detailed visuals, rich translucent draping, strong light-and-shadow contrast\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"primary_style: 3D Chinese anime, realism: photorealistic, secondary_styles: [studio portrait, fashion photography, interior photography]\"\n        }\n      ],\n      \"rationale\": \"The prompt specifies medium (3D anime photorealistic photography), texture (ultra-detailed, translucent draping), rendering language (strong contrast, light play), and production design (traditional Chinese room, canopy, hanfu). These are consistent with the reference images and the original instruction.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt provides a highly detailed, coherent, and actionable directorial plan that fully satisfies the original instruction. It organizes the 10-second video into three precisely timed shots with clear temporal boundaries, camera specifications, lighting, and character performance. The prompt integrates the two reference images effectively, preserving visual continuity and style. Minor issues include slight redundancy in description and a minor inconsistency in the timing notation (00:04.000 vs. 4s), but these do not affect feasibility or clarity. Audio is appropriately specified as diegetic and minimal, matching the quiet, intimate mood. The prompt avoids irrelevant padding and supports the central narrative of emotional awakening with progression and variation.",
+  "usage": {
+    "completion_tokens": 2087,
+    "prompt_tokens": 4131,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 6218
+  }
+}

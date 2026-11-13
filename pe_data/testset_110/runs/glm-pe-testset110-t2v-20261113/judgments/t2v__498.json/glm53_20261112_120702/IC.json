@@ -1,0 +1,110 @@
+{
+  "candidate_hash": "a2a502c7caf141f50ad88c747bf4d922dc88559492b28f1eb933931b29df9023",
+  "case_key": "t2v:498",
+  "created_at": "2026-11-13T08:49:48+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "SAC",
+      "evidence": [
+        {
+          "quote": "two formidable combatants stand opposed—one wreathed in searing violet electricity, the other emanating a sinister scarlet haze.",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "one wreathed in searing violet electricity, arcs crackling across his frame, the other emanating a sinister scarlet haze that coils around her like living smoke.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The fighters are described with consistent attributes (violet electricity, scarlet haze) across all shots, but the enhanced prompt repeats their appearance details in multiple shots, which is redundant but not contradictory.",
+      "rationale": "Subject identity and persistent attributes (color, energy type, gendered pronouns) are preserved. The slight elaboration in the enhanced prompt does not alter core identity. Redundancy is minor and does not affect consistency.",
+      "severity": "minor"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANL",
+      "evidence": [
+        {
+          "quote": "Their fierce gazes meet for a beat, then both disappear instantly. They crash together high above the ruins...",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "both vanish instantly. [Shot 2] At 00:04.000, the shot cuts to the empty sky above the ruins as the two fighters crash together high overhead...",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Actions form a coherent causal progression: initial standoff → disappearance → aerial combat → energy beam clash → aftermath. Each action logically follows from the prior, with plausible combat dynamics and energy interactions.",
+      "rationale": "The sequence of events is causally linked and plausible within the combat context. No dangling actions or incompatible events are present.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "TSC",
+      "evidence": [
+        {
+          "quote": "Their fierce gazes lock for a single beat, then both vanish instantly. [Shot 2] At 00:04.000, the shot cuts to the empty sky above the ruins...",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The enhanced prompt introduces precise timestamps (00:04.000, 00:08.000, 00:12.000) that align with the 15-second duration, but the transition from Shot 1 to Shot 2 is described as instantaneous disappearance followed by a cut to the sky at 00:04.000, which may imply a 4-second gap without visual content — a minor temporal ambiguity.",
+      "rationale": "The timeline is mostly consistent, but the 4-second gap between disappearance and aerial combat is not visually explained. However, this does not break internal logic — it’s a stylistic choice that could be interpreted as a rapid cut or time compression. Not a major issue.",
+      "severity": "minor"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SPC",
+      "evidence": [
+        {
+          "quote": "The camera pushes in... toward the heart of the wreckage... then both vanish instantly. [Shot 2] At 00:04.000, the shot cuts to the empty sky above the ruins...",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Spatial relationships are consistent: the fighters start on the ground, vanish, then appear in the sky for combat. The camera movements (push-in, cuts, tracking) are described in a way that maintains spatial coherence. No impossible position swaps or trajectory breaks.",
+      "rationale": "The transition from ground to sky is narratively justified by the 'vanish' action, and the camera cuts maintain spatial logic. No contradictions in screen direction or relative positioning.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "PL",
+      "evidence": [
+        {
+          "quote": "The earth quakes while violent gusts hurl rubble into the air.",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "The earth quakes beneath them while violent gusts hurl rubble into the air.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The physics of the scene are consistent with a high-fantasy combat setting: energy manipulation, teleportation, and massive explosions are plausible within the established fictional rules. Gravity and object permanence are respected in the aftermath (smoldering ruins, drifting embers).",
+      "rationale": "The scene operates under a consistent fictional physics framework. No violations of internal logic (e.g., objects appearing/disappearing without cause, impossible movements).",
+      "severity": "none"
+    },
+    {
+      "applicability": "not_applicable",
+      "criterion": "AVS",
+      "evidence": [],
+      "issue": "",
+      "rationale": "The prompt does not include dialogue, lyrics, or specific sound effects tied to visual events (e.g., lip-sync or beat-sync actions). The soundscape and music are described as non-diegetic and ambient, so no alignment issues can be assessed.",
+      "severity": null
+    }
+  ],
+  "dimension": "IC",
+  "dimension_score": 95,
+  "evidence_cache_key": "099c0ea00de3ca073f2c2bf752a3cec59eb509c74a76abde22235b7bc17773c3",
+  "judge_cache_key": "438d7e9fd7332b1041db3e2c26d42cb3fe828e0d369fb59490f6650aee59e97d",
+  "method": "glm53_20261112_120702",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"IC\",\n  \"dimension_score\": 95,\n  \"summary\": \"The enhanced prompt maintains strong internal consistency with the original instruction, preserving subject identity, action progression, chronology, and spatial logic. Minor issues include slight redundancy in describing the fighters’ appearances and a minor temporal ambiguity in the transition between shots, but no major contradictions or attribute drift. The overall narrative arc is coherent and visually plausible.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"SAC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"minor\",\n      \"issue\": \"The fighters are described with consistent attributes (violet electricity, scarlet haze) across all shots, but the enhanced prompt repeats their appearance details in multiple shots, which is redundant but not contradictory.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"two formidable combatants stand opposed—one wreathed in searing violet electricity, the other emanating a sinister scarlet haze.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"one wreathed in searing violet electricity, arcs crackling across his frame, the other emanating a sinister scarlet haze that coils around her like living smoke.\"\n        }\n      ],\n      \"rationale\": \"Subject identity and persistent attributes (color, energy type, gendered pronouns) are preserved. The slight elaboration in the enhanced prompt does not alter core identity. Redundancy is minor and does not affect consistency.\"\n    },\n    {\n      \"criterion\": \"ANL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"Actions form a coherent causal progression: initial standoff → disappearance → aerial combat → energy beam clash → aftermath. Each action logically follows from the prior, with plausible combat dynamics and energy interactions.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"Their fierce gazes meet for a beat, then both disappear instantly. They crash together high above the ruins...\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"both vanish instantly. [Shot 2] At 00:04.000, the shot cuts to the empty sky above the ruins as the two fighters crash together high overhead...\"\n        }\n      ],\n      \"rationale\": \"The sequence of events is causally linked and plausible within the combat context. No dangling actions or incompatible events are present.\"\n    },\n    {\n      \"criterion\": \"TSC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"minor\",\n      \"issue\": \"The enhanced prompt introduces precise timestamps (00:04.000, 00:08.000, 00:12.000) that align with the 15-second duration, but the transition from Shot 1 to Shot 2 is described as instantaneous disappearance followed by a cut to the sky at 00:04.000, which may imply a 4-second gap without visual content — a minor temporal ambiguity.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Their fierce gazes lock for a single beat, then both vanish instantly. [Shot 2] At 00:04.000, the shot cuts to the empty sky above the ruins...\"\n        }\n      ],\n      \"rationale\": \"The timeline is mostly consistent, but the 4-second gap between disappearance and aerial combat is not visually explained. However, this does not break internal logic — it’s a stylistic choice that could be interpreted as a rapid cut or time compression. Not a major issue.\"\n    },\n    {\n      \"criterion\": \"SPC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"Spatial relationships are consistent: the fighters start on the ground, vanish, then appear in the sky for combat. The camera movements (push-in, cuts, tracking) are described in a way that maintains spatial coherence. No impossible position swaps or trajectory breaks.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"The camera pushes in... toward the heart of the wreckage... then both vanish instantly. [Shot 2] At 00:04.000, the shot cuts to the empty sky above the ruins...\"\n        }\n      ],\n      \"rationale\": \"The transition from ground to sky is narratively justified by the 'vanish' action, and the camera cuts maintain spatial logic. No contradictions in screen direction or relative positioning.\"\n    },\n    {\n      \"criterion\": \"PL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"The physics of the scene are consistent with a high-fantasy combat setting: energy manipulation, teleportation, and massive explosions are plausible within the established fictional rules. Gravity and object permanence are respected in the aftermath (smoldering ruins, drifting embers).\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"The earth quakes while violent gusts hurl rubble into the air.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"The earth quakes beneath them while violent gusts hurl rubble into the air.\"\n        }\n      ],\n      \"rationale\": \"The scene operates under a consistent fictional physics framework. No violations of internal logic (e.g., objects appearing/disappearing without cause, impossible movements).\"\n    },\n    {\n      \"criterion\": \"AVS\",\n      \"applicability\": \"not_applicable\",\n      \"severity\": null,\n      \"issue\": \"\",\n      \"evidence\": [],\n      \"rationale\": \"The prompt does not include dialogue, lyrics, or specific sound effects tied to visual events (e.g., lip-sync or beat-sync actions). The soundscape and music are described as non-diegetic and ambient, so no alignment issues can be assessed.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt maintains strong internal consistency with the original instruction, preserving subject identity, action progression, chronology, and spatial logic. Minor issues include slight redundancy in describing the fighters’ appearances and a minor temporal ambiguity in the transition between shots, but no major contradictions or attribute drift. The overall narrative arc is coherent and visually plausible.",
+  "usage": {
+    "completion_tokens": 1287,
+    "prompt_tokens": 1466,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 2753
+  }
+}

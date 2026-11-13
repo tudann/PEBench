@@ -1,0 +1,135 @@
+{
+  "candidate_hash": "532cb73f79b242b65ce3f0b5d32465fc14022c0d91856ca2c165ea6fe3d6db80",
+  "case_key": "t2v:200",
+  "created_at": "2026-11-13T08:13:46+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "SAC",
+      "evidence": [
+        {
+          "quote": "A lifelike spiritual orator standing behind a carved lectern, dressed in a light kufi and flowing traditional robe",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "a lifelike spiritual orator standing behind an ornately carved wooden lectern, wearing a light kufi cap and a flowing traditional robe",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "Subject identity, clothing, and props (lectern, microphones) are consistently preserved across all shots. The orator’s appearance remains unchanged, and no unexplained attribute drift or duplication occurs. The description of the robe as 'flowing' and 'draping naturally' is consistent with the original prompt’s 'flowing traditional robe'.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANL",
+      "evidence": [
+        {
+          "quote": "He makes subtle, graceful hand gestures as he speaks — a gentle open palm, then a soft downward motion",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "His hand settles calmly on the lectern",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The hand gestures described in Shot 2 (gentle open palm, soft downward motion) are not explicitly referenced in Shot 3, where the hand settles on the lectern. While this is a plausible progression, the lack of explicit continuity in gesture description creates a minor gap in procedural coherence.",
+      "rationale": "The action sequence is generally coherent: speaking → gesturing → resting hand. The transition from gesturing to resting is plausible, but the absence of a clear causal or temporal link between the specific gestures and the final hand position introduces a minor discontinuity. However, this does not break the overall action logic.",
+      "severity": "minor"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "TSC",
+      "evidence": [
+        {
+          "quote": "At 00:05.000, the camera cuts to a closer framing",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "At 00:10.000, the camera cuts back to the medium shot",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "The timeline is clearly marked with timestamps (00:05.000 and 00:10.000) and the sequence of shots (medium → close → medium) is logically ordered. The duration (15 seconds) is respected, with the final shot lasting until the end. No overlapping or infeasible state transitions are present.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SPC",
+      "evidence": [
+        {
+          "quote": "The camera pushes in with small amplitude at slow speed",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "the camera cuts to a closer framing",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "the camera cuts back to the medium shot",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "Camera movements are described consistently: push-in, cut to closer framing, cut back to medium. There is no unexplained position swap or trajectory conflict. The spatial relationships (lectern, orator, audience) remain stable, and screen direction is preserved through cuts.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "PL",
+      "evidence": [
+        {
+          "quote": "cinematic visual tone, polished professional video aesthetic",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Golden ambient light washes across his face and the carved details of the lectern",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "All physical elements (lighting, fabric movement, hand placement, microphone positioning) are consistent with real-world physics. The description of the robe’s drape and the subtle hand movements are plausible. No violations of gravity, contact, or object permanence are present.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "AVS",
+      "evidence": [
+        {
+          "quote": "the orator, with a calm, resonant, measured voice (S1), says: <d>[English] Brothers and sisters, peace be upon you all.</d>",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "He continues with quiet conviction, saying: <d>[English] Let us walk this path together, with patience and faith.</d>",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Soft room ambience with a faint murmur from the out-of-focus congregation, gentle rustle of flowing robe fabric, and the subtle shift of a hand resting on the wooden lectern.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "Dialogue is clearly attributed to the orator and temporally aligned with the visual shots. The soundscape (ambience, fabric rustle, hand shift) matches the visual events. Non-diegetic music is described as fading out near the end, which aligns with the final shot. No misaligned lip-sync or premature effects are indicated.",
+      "severity": "none"
+    }
+  ],
+  "dimension": "IC",
+  "dimension_score": 95,
+  "evidence_cache_key": "af2f6e6d58fc2ecdb18efa9148b70f8c59388c242d7052414b8c3c0ff3d7ffa4",
+  "judge_cache_key": "438d7e9fd7332b1041db3e2c26d42cb3fe828e0d369fb59490f6650aee59e97d",
+  "method": "glm53_20261112_120702",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"IC\",\n  \"dimension_score\": 95,\n  \"summary\": \"The enhanced prompt maintains strong internal consistency with the original instruction, preserving subject identity, actions, environment, and visual tone across shots. Minor issues include slight temporal ambiguity in shot transitions and a small inconsistency in the description of hand gestures between shots, but no major contradictions or attribute drift. The overall narrative and visual progression are coherent and plausible.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"SAC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"A lifelike spiritual orator standing behind a carved lectern, dressed in a light kufi and flowing traditional robe\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"a lifelike spiritual orator standing behind an ornately carved wooden lectern, wearing a light kufi cap and a flowing traditional robe\"\n        }\n      ],\n      \"rationale\": \"Subject identity, clothing, and props (lectern, microphones) are consistently preserved across all shots. The orator’s appearance remains unchanged, and no unexplained attribute drift or duplication occurs. The description of the robe as 'flowing' and 'draping naturally' is consistent with the original prompt’s 'flowing traditional robe'.\"\n    },\n    {\n      \"criterion\": \"ANL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"minor\",\n      \"issue\": \"The hand gestures described in Shot 2 (gentle open palm, soft downward motion) are not explicitly referenced in Shot 3, where the hand settles on the lectern. While this is a plausible progression, the lack of explicit continuity in gesture description creates a minor gap in procedural coherence.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"He makes subtle, graceful hand gestures as he speaks — a gentle open palm, then a soft downward motion\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"His hand settles calmly on the lectern\"\n        }\n      ],\n      \"rationale\": \"The action sequence is generally coherent: speaking → gesturing → resting hand. The transition from gesturing to resting is plausible, but the absence of a clear causal or temporal link between the specific gestures and the final hand position introduces a minor discontinuity. However, this does not break the overall action logic.\"\n    },\n    {\n      \"criterion\": \"TSC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"At 00:05.000, the camera cuts to a closer framing\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"At 00:10.000, the camera cuts back to the medium shot\"\n        }\n      ],\n      \"rationale\": \"The timeline is clearly marked with timestamps (00:05.000 and 00:10.000) and the sequence of shots (medium → close → medium) is logically ordered. The duration (15 seconds) is respected, with the final shot lasting until the end. No overlapping or infeasible state transitions are present.\"\n    },\n    {\n      \"criterion\": \"SPC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"The camera pushes in with small amplitude at slow speed\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"the camera cuts to a closer framing\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"the camera cuts back to the medium shot\"\n        }\n      ],\n      \"rationale\": \"Camera movements are described consistently: push-in, cut to closer framing, cut back to medium. There is no unexplained position swap or trajectory conflict. The spatial relationships (lectern, orator, audience) remain stable, and screen direction is preserved through cuts.\"\n    },\n    {\n      \"criterion\": \"PL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"cinematic visual tone, polished professional video aesthetic\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Golden ambient light washes across his face and the carved details of the lectern\"\n        }\n      ],\n      \"rationale\": \"All physical elements (lighting, fabric movement, hand placement, microphone positioning) are consistent with real-world physics. The description of the robe’s drape and the subtle hand movements are plausible. No violations of gravity, contact, or object permanence are present.\"\n    },\n    {\n      \"criterion\": \"AVS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"the orator, with a calm, resonant, measured voice (S1), says: <d>[English] Brothers and sisters, peace be upon you all.</d>\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"He continues with quiet conviction, saying: <d>[English] Let us walk this path together, with patience and faith.</d>\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Soft room ambience with a faint murmur from the out-of-focus congregation, gentle rustle of flowing robe fabric, and the subtle shift of a hand resting on the wooden lectern.\"\n        }\n      ],\n      \"rationale\": \"Dialogue is clearly attributed to the orator and temporally aligned with the visual shots. The soundscape (ambience, fabric rustle, hand shift) matches the visual events. Non-diegetic music is described as fading out near the end, which aligns with the final shot. No misaligned lip-sync or premature effects are indicated.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt maintains strong internal consistency with the original instruction, preserving subject identity, actions, environment, and visual tone across shots. Minor issues include slight temporal ambiguity in shot transitions and a small inconsistency in the description of hand gestures between shots, but no major contradictions or attribute drift. The overall narrative and visual progression are coherent and plausible.",
+  "usage": {
+    "completion_tokens": 1364,
+    "prompt_tokens": 1205,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 2569
+  }
+}

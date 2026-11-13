@@ -1,0 +1,170 @@
+{
+  "candidate_hash": "4dc0799cf78228ae4d0eca81071e7404a607b9fdc1c0a37acb1ae065de10f049",
+  "case_key": "t2v:282",
+  "created_at": "2026-11-13T08:04:27+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "STC",
+      "evidence": [
+        {
+          "quote": "Set the total runtime to 3 seconds, while also making every shot last 27 seconds.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Reverse the timeline: show the ending first, then cut to a beginning that does not match.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt contains contradictory temporal specifications: total runtime set to 3 seconds while every shot is required to last 27 seconds, making the timeline infeasible. Additionally, it demands a reversed timeline (ending first, then beginning) without coherent shot boundaries or duration allocation, and introduces an abrupt cut to a palace audition without continuity.",
+      "rationale": "A feasible temporal plan requires consistent duration allocation and logical shot sequencing. The 3s vs. 27s contradiction and reversed, disconnected timeline violate this, rendering the plan impossible.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CDS",
+      "evidence": [
+        {
+          "quote": "Describe that same moment as harsh noon sun and as a lightless night, and as both a locked camera and a camera that never stops shaking.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt contradicts itself on camera specifications: it demands both a locked camera and a camera that never stops shaking for the same moment, which is physically impossible. It also drops all explicit camera instructions from the original, leaving no actionable framing or movement details.",
+      "rationale": "Camera specifications must be consistent and actionable. The simultaneous requirement for a locked and shaking camera is contradictory and unfeasible, failing to provide a coherent visual plan.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ETD",
+      "evidence": [
+        {
+          "quote": "Cut away in the middle to a palace audition.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Reverse the timeline: show the ending first, then cut to a beginning that does not match.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt mandates a cut to a palace audition in the middle without any narrative or spatial motivation, and requires a reversed timeline with a mismatched beginning, creating disconnected and unmotivated transitions that break continuity.",
+      "rationale": "Transitions must support narrative, spatial, or rhythmic progression. The abrupt, unmotivated cuts and reversed timeline without continuity violate this principle.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "LCS",
+      "evidence": [
+        {
+          "quote": "Describe that same moment as harsh noon sun and as a lightless night...",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt demands that the same moment be described as both 'harsh noon sun' and 'lightless night', which are mutually exclusive lighting conditions, creating an impossible and contradictory visual specification.",
+      "rationale": "Lighting specifications must be consistent and physically plausible. The contradiction between noon sun and lightless night for the same moment renders the lighting plan incoherent.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "NDE",
+      "evidence": [
+        {
+          "quote": "Replace the whole video with someone typing in a silent office, with no music, instruments, or singing.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "First state that there is one protagonist, then state that this same protagonist appears simultaneously as five different-looking people who talk to each other.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt replaces the requested singing clip with a disjointed, non-musical sequence involving typing, multiple identities, and a palace audition, with no progression, variation, or resolution. The content is static and unmotivated, failing to support the original task of generating a singing clip.",
+      "rationale": "The requested content form is a 15-second singing clip with a clear progression (intro, chorus, outro). The enhanced prompt abandons this entirely for an unrelated, static, and contradictory sequence, failing to provide any narrative or emotional progression.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CIF",
+      "evidence": [
+        {
+          "quote": "Replace the whole video with someone typing in a silent office, with no music, instruments, or singing.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Cut away in the middle to a palace audition.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The additions (typing, multiple identities, palace audition, contradictory lighting and camera) are irrelevant to the original task of generating a singing clip and distract from the intended result. They constitute decorative, repetitive padding that undermines the core request.",
+      "rationale": "Additions must support the central request. These additions are unrelated, contradictory, and serve no purpose in generating a singing clip, thus failing the criterion.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SDI",
+      "evidence": [
+        {
+          "quote": "with no music, instruments, or singing.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "A soft female voice sings once: 'The night of Hohhot, so deep, so deep / Even the stars did not notice, I did not notice /...'",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "The prompt drops all audio content (music, singing, instruments) and replaces it with silence, while also omitting any specification for speech, music, effects, or ambience. This contradicts the original request for a singing clip with specific vocal and instrumental elements.",
+      "rationale": "The original task requires specific audio elements (vocal, instrumental). The enhanced prompt removes all of them, failing to integrate any audio content appropriately.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SPS",
+      "evidence": [
+        {
+          "quote": "Replace the whole video with someone typing in a silent office...",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "A soft female voice sings once...",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "The prompt omits all subject and performance details required for the singing clip (vocal timbre, expression, gesture, movement, etc.) and replaces them with a typing action and multiple identities that are not specified in terms of appearance, pose, or interaction.",
+      "rationale": "Subject and performance details are essential for a singing clip. The enhanced prompt removes all such details, replacing them with vague, unspecified actions that do not support the original task.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "VSS",
+      "evidence": [
+        {
+          "quote": "Describe that same moment as harsh noon sun and as a lightless night, and as both a locked camera and a camera that never stops shaking.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "cool desolate night-wilderness mood",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "The prompt drops all visual treatment specifications from the original (e.g., 'cool desolate night-wilderness mood') and replaces them with contradictory and unspecified visual conditions (harsh noon sun, lightless night, locked vs. shaking camera), leaving no coherent medium, texture, or rendering language.",
+      "rationale": "Visual treatment must be actionable and consistent. The contradictory and unspecified conditions in the enhanced prompt fail to provide a coherent visual style or production design.",
+      "severity": "major"
+    }
+  ],
+  "dimension": "DC",
+  "dimension_score": 0,
+  "evidence_cache_key": "d3703f2eeae6bcfe67d5d4f67af684e4acb138dc1bc847108c8dab22a722c5eb",
+  "judge_cache_key": "0754499d53388e6467fb078ab780e01b77f9f1c9e99d9029be2769351eb2b2eb",
+  "method": "weak-pe-original",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"DC\",\n  \"dimension_score\": 0,\n  \"summary\": \"The enhanced prompt fundamentally contradicts and invalidates the original instruction by replacing the requested singing clip with an unrelated, incoherent, and logically impossible sequence. It introduces contradictory temporal, spatial, and production specifications (e.g., 3-second runtime vs. 27-second shots, reversed timeline, simultaneous multiple identities, conflicting lighting and camera conditions) that render the prompt unfeasible for any coherent video generation. The prompt also omits all required musical and vocal content, violating the core task. No actionable or coherent directorial plan is present.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"STC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt contains contradictory temporal specifications: total runtime set to 3 seconds while every shot is required to last 27 seconds, making the timeline infeasible. Additionally, it demands a reversed timeline (ending first, then beginning) without coherent shot boundaries or duration allocation, and introduces an abrupt cut to a palace audition without continuity.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Set the total runtime to 3 seconds, while also making every shot last 27 seconds.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Reverse the timeline: show the ending first, then cut to a beginning that does not match.\"\n        }\n      ],\n      \"rationale\": \"A feasible temporal plan requires consistent duration allocation and logical shot sequencing. The 3s vs. 27s contradiction and reversed, disconnected timeline violate this, rendering the plan impossible.\"\n    },\n    {\n      \"criterion\": \"CDS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt contradicts itself on camera specifications: it demands both a locked camera and a camera that never stops shaking for the same moment, which is physically impossible. It also drops all explicit camera instructions from the original, leaving no actionable framing or movement details.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Describe that same moment as harsh noon sun and as a lightless night, and as both a locked camera and a camera that never stops shaking.\"\n        }\n      ],\n      \"rationale\": \"Camera specifications must be consistent and actionable. The simultaneous requirement for a locked and shaking camera is contradictory and unfeasible, failing to provide a coherent visual plan.\"\n    },\n    {\n      \"criterion\": \"ETD\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt mandates a cut to a palace audition in the middle without any narrative or spatial motivation, and requires a reversed timeline with a mismatched beginning, creating disconnected and unmotivated transitions that break continuity.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Cut away in the middle to a palace audition.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Reverse the timeline: show the ending first, then cut to a beginning that does not match.\"\n        }\n      ],\n      \"rationale\": \"Transitions must support narrative, spatial, or rhythmic progression. The abrupt, unmotivated cuts and reversed timeline without continuity violate this principle.\"\n    },\n    {\n      \"criterion\": \"LCS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt demands that the same moment be described as both 'harsh noon sun' and 'lightless night', which are mutually exclusive lighting conditions, creating an impossible and contradictory visual specification.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Describe that same moment as harsh noon sun and as a lightless night...\"\n        }\n      ],\n      \"rationale\": \"Lighting specifications must be consistent and physically plausible. The contradiction between noon sun and lightless night for the same moment renders the lighting plan incoherent.\"\n    },\n    {\n      \"criterion\": \"NDE\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt replaces the requested singing clip with a disjointed, non-musical sequence involving typing, multiple identities, and a palace audition, with no progression, variation, or resolution. The content is static and unmotivated, failing to support the original task of generating a singing clip.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Replace the whole video with someone typing in a silent office, with no music, instruments, or singing.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"First state that there is one protagonist, then state that this same protagonist appears simultaneously as five different-looking people who talk to each other.\"\n        }\n      ],\n      \"rationale\": \"The requested content form is a 15-second singing clip with a clear progression (intro, chorus, outro). The enhanced prompt abandons this entirely for an unrelated, static, and contradictory sequence, failing to provide any narrative or emotional progression.\"\n    },\n    {\n      \"criterion\": \"CIF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The additions (typing, multiple identities, palace audition, contradictory lighting and camera) are irrelevant to the original task of generating a singing clip and distract from the intended result. They constitute decorative, repetitive padding that undermines the core request.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Replace the whole video with someone typing in a silent office, with no music, instruments, or singing.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Cut away in the middle to a palace audition.\"\n        }\n      ],\n      \"rationale\": \"Additions must support the central request. These additions are unrelated, contradictory, and serve no purpose in generating a singing clip, thus failing the criterion.\"\n    },\n    {\n      \"criterion\": \"SDI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt drops all audio content (music, singing, instruments) and replaces it with silence, while also omitting any specification for speech, music, effects, or ambience. This contradicts the original request for a singing clip with specific vocal and instrumental elements.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"with no music, instruments, or singing.\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"A soft female voice sings once: 'The night of Hohhot, so deep, so deep / Even the stars did not notice, I did not notice /...'\"\n        }\n      ],\n      \"rationale\": \"The original task requires specific audio elements (vocal, instrumental). The enhanced prompt removes all of them, failing to integrate any audio content appropriately.\"\n    },\n    {\n      \"criterion\": \"SPS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt omits all subject and performance details required for the singing clip (vocal timbre, expression, gesture, movement, etc.) and replaces them with a typing action and multiple identities that are not specified in terms of appearance, pose, or interaction.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Replace the whole video with someone typing in a silent office...\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"A soft female voice sings once...\"\n        }\n      ],\n      \"rationale\": \"Subject and performance details are essential for a singing clip. The enhanced prompt removes all such details, replacing them with vague, unspecified actions that do not support the original task.\"\n    },\n    {\n      \"criterion\": \"VSS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt drops all visual treatment specifications from the original (e.g., 'cool desolate night-wilderness mood') and replaces them with contradictory and unspecified visual conditions (harsh noon sun, lightless night, locked vs. shaking camera), leaving no coherent medium, texture, or rendering language.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Describe that same moment as harsh noon sun and as a lightless night, and as both a locked camera and a camera that never stops shaking.\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"cool desolate night-wilderness mood\"\n        }\n      ],\n      \"rationale\": \"Visual treatment must be actionable and consistent. The contradictory and unspecified conditions in the enhanced prompt fail to provide a coherent visual style or production design.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt fundamentally contradicts and invalidates the original instruction by replacing the requested singing clip with an unrelated, incoherent, and logically impossible sequence. It introduces contradictory temporal, spatial, and production specifications (e.g., 3-second runtime vs. 27-second shots, reversed timeline, simultaneous multiple identities, conflicting lighting and camera conditions) that render the prompt unfeasible for any coherent video generation. The prompt also omits all required musical and vocal content, violating the core task. No actionable or coherent directorial plan is present.",
+  "usage": {
+    "completion_tokens": 1924,
+    "prompt_tokens": 1160,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 3084
+  }
+}

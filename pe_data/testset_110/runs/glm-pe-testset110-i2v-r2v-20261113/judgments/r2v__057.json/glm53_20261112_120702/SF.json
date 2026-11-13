@@ -1,0 +1,194 @@
+{
+  "candidate_hash": "9cf062e73b7560deabd1b0a3c66a4fb1a47f6b6cf4147ad53147cbda8b42eb6a",
+  "case_key": "r2v:057",
+  "created_at": "2026-11-13T08:34:22+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "GSF",
+      "evidence": [
+        {
+          "quote": "The background features warm-toned ring fill lights and light gray acoustic panels.",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "The prompt describes a podcast studio with warm-toned ring lights and gray acoustic panels, but the image shows a futuristic space-themed studio with cool blue/purple lighting and no visible acoustic panels or ring lights.",
+          "source": "evidence_facts"
+        },
+        {
+          "quote": "cinematic 3D animated style, with natural key light interwoven with warm ambient fill and a slight depth-of-field blur softening the background.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The enhanced prompt replaces the requested warm-toned, realistic podcast studio with a cool, space-themed, futuristic environment derived from the images, which contradicts the original aesthetic and lighting description.",
+      "rationale": "While the enhanced prompt attempts to preserve warm lighting, the visual environment described in the images (cool blue/purple, space-themed) is incompatible with the original warm-toned podcast studio. This is a major aesthetic substitution that alters the genre and visual style.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SAP",
+      "evidence": [
+        {
+          "quote": "Image 1, Image 2, and Image 3, three hosts, sit side by side at a white long table...",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "<Subject 1> is the left-seat host from <Picture 1>: a 3D Pixar-style animated girl with brown hair in a top bun, large silver-and-purple headphones, and a white futuristic suit...",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "The images show animated characters, while the prompt implies human hosts.",
+          "source": "evidence_facts"
+        }
+      ],
+      "issue": "The enhanced prompt correctly maps each subject to their respective image and preserves their core appearance (hair, suit, headphones), but adds interpretive details (e.g., 'Pixar-style', 'chubby boy') not present in the original prompt, which may affect identity fidelity.",
+      "rationale": "The core identity (host, position, key attributes) is preserved, but the addition of 'Pixar-style' and 'animated' introduces a stylistic interpretation not in the original, which may affect the intended realism. This is a minor issue as it does not alter the subject’s role or binding.",
+      "severity": "minor"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANF",
+      "evidence": [
+        {
+          "quote": "Image 1 adjusts their glasses... Image 2 slaps the table and laughs... Image 3 sets down the coffee cup... All three simultaneously look at the camera...",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "<Subject 1> adjusts her glasses... <Subject 2> slaps the table laughing... <Subject 3> sets down his coffee cup... all three simultaneously turn to look at the camera... and the frame briefly freezes.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The enhanced prompt preserves the requested actions, dialogue sequence, and narrative intent: Image 1 adjusts glasses and speaks, Image 2 slaps table and laughs, Image 3 sets down cup and speaks, followed by a synchronized look at the camera and freeze frame.",
+      "rationale": "The event order, actions, and outcomes are preserved exactly as requested. No substitutions or omissions are present.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "DLI",
+      "evidence": [
+        {
+          "quote": "\"AI can't replace my boss, because AI can't make me work overtime and still not pay me.\"",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "<d>[English] AI can't replace my boss, because AI can't make me work overtime and still not pay me.</d>",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The enhanced prompt preserves the exact wording, language, and speaker attribution of the dialogue, including the three lines and their delivery context.",
+      "rationale": "All dialogue is quoted verbatim with correct speaker attribution. No paraphrasing or translation is present.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ARP",
+      "evidence": [
+        {
+          "quote": "Diegetic sounds include the sharp table slap... the soft clink of the coffee cup... and <Subject 2>'s loud laugh... non_diegetic_music: N/A",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The enhanced prompt correctly specifies diegetic sounds (table slap, coffee cup clink, laugh) and room tone, and explicitly states 'N/A' for non-diegetic music, preserving the requested silence constraint.",
+      "rationale": "The soundscape is preserved as requested: no music, only specified diegetic sounds and room tone. No violations are present.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CCP",
+      "evidence": [
+        {
+          "quote": "Locked-off shot, medium shot.",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "single locked-off medium shot... No camera movement and no cuts for the full 10 seconds.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The enhanced prompt preserves the locked-off medium shot, no cuts, and static camera for the full 10 seconds, matching the original instruction.",
+      "rationale": "Camera constraints are fully preserved: shot scale, angle, movement, and duration are identical to the original.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "LCF",
+      "evidence": [
+        {
+          "quote": "Cinematic, natural light interwoven with warm ambient lighting...",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "The prompt describes a podcast studio with warm-toned ring lights... but the image shows... cool blue/purple lighting...",
+          "source": "evidence_facts"
+        },
+        {
+          "quote": "natural key light interwoven with warm ambient fill",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The enhanced prompt attempts to preserve warm ambient lighting but is forced to describe a cool, blue/purple-lit environment based on the images, contradicting the original lighting and color temperature requirements.",
+      "rationale": "The lighting description in the enhanced prompt is inconsistent with the visual evidence from the images, which show cool tones. This creates a major contradiction in the requested illumination and color palette.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SSP",
+      "evidence": [
+        {
+          "quote": "On the table are coffee cups and mini green plants. The background features warm-toned ring fill lights and light gray acoustic panels.",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "The prompt mentions coffee cups and mini green plants on the table, which are absent in all images.",
+          "source": "evidence_facts"
+        },
+        {
+          "quote": "long white table with coffee cups and mini green plants, three blue foam broadcast microphones... warm-toned ring fill lights, and light gray acoustic panels",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The enhanced prompt omits key background elements (coffee cups, mini green plants, acoustic panels) and replaces the requested podcast studio layout with a space-themed environment, altering the setting and spatial relations.",
+      "rationale": "While the enhanced prompt lists these elements, the images do not contain them, and the environment is fundamentally different. This is a major spatial and setting mismatch.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "OTI",
+      "evidence": [
+        {
+          "quote": "The background features warm-toned ring fill lights and light gray acoustic panels.",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "exact_visible_transcription: 'FM 88.6'",
+          "source": "evidence_facts"
+        },
+        {
+          "quote": "glowing 'FM 88.6' displays",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The enhanced prompt preserves the visible text 'FM 88.6' on the console displays, matching the original prompt’s description and the evidence from the images.",
+      "rationale": "The onscreen text is preserved in wording, placement, and timing. No substitutions or omissions are present.",
+      "severity": "none"
+    }
+  ],
+  "dimension": "SF",
+  "dimension_score": 75,
+  "evidence_cache_key": "ba521fee1c65f59c61bda02534f47930dda11223681633e61c0040622c01bc08",
+  "judge_cache_key": "a0ca24571ad14d7ab7be626329bd736d7e7015f9ebc418227c8be391591d0377",
+  "method": "glm53_20261112_120702",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"SF\",\n  \"dimension_score\": 75,\n  \"summary\": \"The enhanced prompt largely preserves the core semantic intent of the original prompt, including subject identities, actions, dialogue, and setting. However, it introduces significant discrepancies in the visual environment (replacing the described warm-toned podcast studio with a cool, space-themed studio from the images) and omits key background elements (coffee cups, plants, acoustic panels). The prompt also adds interpretive details (e.g., 'Pixar-style', 'comedy podcast bit') not in the original, and while it correctly maps subjects to images, it does not resolve the visual mismatch between the requested and provided assets. The camera and lighting are preserved in spirit, but the environment’s aesthetic is fundamentally altered.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"GSF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The enhanced prompt replaces the requested warm-toned, realistic podcast studio with a cool, space-themed, futuristic environment derived from the images, which contradicts the original aesthetic and lighting description.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"The background features warm-toned ring fill lights and light gray acoustic panels.\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"The prompt describes a podcast studio with warm-toned ring lights and gray acoustic panels, but the image shows a futuristic space-themed studio with cool blue/purple lighting and no visible acoustic panels or ring lights.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"cinematic 3D animated style, with natural key light interwoven with warm ambient fill and a slight depth-of-field blur softening the background.\"\n        }\n      ],\n      \"rationale\": \"While the enhanced prompt attempts to preserve warm lighting, the visual environment described in the images (cool blue/purple, space-themed) is incompatible with the original warm-toned podcast studio. This is a major aesthetic substitution that alters the genre and visual style.\"\n    },\n    {\n      \"criterion\": \"SAP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"minor\",\n      \"issue\": \"The enhanced prompt correctly maps each subject to their respective image and preserves their core appearance (hair, suit, headphones), but adds interpretive details (e.g., 'Pixar-style', 'chubby boy') not present in the original prompt, which may affect identity fidelity.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"Image 1, Image 2, and Image 3, three hosts, sit side by side at a white long table...\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"<Subject 1> is the left-seat host from <Picture 1>: a 3D Pixar-style animated girl with brown hair in a top bun, large silver-and-purple headphones, and a white futuristic suit...\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"The images show animated characters, while the prompt implies human hosts.\"\n        }\n      ],\n      \"rationale\": \"The core identity (host, position, key attributes) is preserved, but the addition of 'Pixar-style' and 'animated' introduces a stylistic interpretation not in the original, which may affect the intended realism. This is a minor issue as it does not alter the subject’s role or binding.\"\n    },\n    {\n      \"criterion\": \"ANF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"The enhanced prompt preserves the requested actions, dialogue sequence, and narrative intent: Image 1 adjusts glasses and speaks, Image 2 slaps table and laughs, Image 3 sets down cup and speaks, followed by a synchronized look at the camera and freeze frame.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"Image 1 adjusts their glasses... Image 2 slaps the table and laughs... Image 3 sets down the coffee cup... All three simultaneously look at the camera...\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"<Subject 1> adjusts her glasses... <Subject 2> slaps the table laughing... <Subject 3> sets down his coffee cup... all three simultaneously turn to look at the camera... and the frame briefly freezes.\"\n        }\n      ],\n      \"rationale\": \"The event order, actions, and outcomes are preserved exactly as requested. No substitutions or omissions are present.\"\n    },\n    {\n      \"criterion\": \"DLI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"The enhanced prompt preserves the exact wording, language, and speaker attribution of the dialogue, including the three lines and their delivery context.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"\\\"AI can't replace my boss, because AI can't make me work overtime and still not pay me.\\\"\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"<d>[English] AI can't replace my boss, because AI can't make me work overtime and still not pay me.</d>\"\n        }\n      ],\n      \"rationale\": \"All dialogue is quoted verbatim with correct speaker attribution. No paraphrasing or translation is present.\"\n    },\n    {\n      \"criterion\": \"ARP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"The enhanced prompt correctly specifies diegetic sounds (table slap, coffee cup clink, laugh) and room tone, and explicitly states 'N/A' for non-diegetic music, preserving the requested silence constraint.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Diegetic sounds include the sharp table slap... the soft clink of the coffee cup... and <Subject 2>'s loud laugh... non_diegetic_music: N/A\"\n        }\n      ],\n      \"rationale\": \"The soundscape is preserved as requested: no music, only specified diegetic sounds and room tone. No violations are present.\"\n    },\n    {\n      \"criterion\": \"CCP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"The enhanced prompt preserves the locked-off medium shot, no cuts, and static camera for the full 10 seconds, matching the original instruction.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"Locked-off shot, medium shot.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"single locked-off medium shot... No camera movement and no cuts for the full 10 seconds.\"\n        }\n      ],\n      \"rationale\": \"Camera constraints are fully preserved: shot scale, angle, movement, and duration are identical to the original.\"\n    },\n    {\n      \"criterion\": \"LCF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The enhanced prompt attempts to preserve warm ambient lighting but is forced to describe a cool, blue/purple-lit environment based on the images, contradicting the original lighting and color temperature requirements.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"Cinematic, natural light interwoven with warm ambient lighting...\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"The prompt describes a podcast studio with warm-toned ring lights... but the image shows... cool blue/purple lighting...\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"natural key light interwoven with warm ambient fill\"\n        }\n      ],\n      \"rationale\": \"The lighting description in the enhanced prompt is inconsistent with the visual evidence from the images, which show cool tones. This creates a major contradiction in the requested illumination and color palette.\"\n    },\n    {\n      \"criterion\": \"SSP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The enhanced prompt omits key background elements (coffee cups, mini green plants, acoustic panels) and replaces the requested podcast studio layout with a space-themed environment, altering the setting and spatial relations.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"On the table are coffee cups and mini green plants. The background features warm-toned ring fill lights and light gray acoustic panels.\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"The prompt mentions coffee cups and mini green plants on the table, which are absent in all images.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"long white table with coffee cups and mini green plants, three blue foam broadcast microphones... warm-toned ring fill lights, and light gray acoustic panels\"\n        }\n      ],\n      \"rationale\": \"While the enhanced prompt lists these elements, the images do not contain them, and the environment is fundamentally different. This is a major spatial and setting mismatch.\"\n    },\n    {\n      \"criterion\": \"OTI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"The enhanced prompt preserves the visible text 'FM 88.6' on the console displays, matching the original prompt’s description and the evidence from the images.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"The background features warm-toned ring fill lights and light gray acoustic panels.\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"exact_visible_transcription: 'FM 88.6'\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"glowing 'FM 88.6' displays\"\n        }\n      ],\n      \"rationale\": \"The onscreen text is preserved in wording, placement, and timing. No substitutions or omissions are present.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt largely preserves the core semantic intent of the original prompt, including subject identities, actions, dialogue, and setting. However, it introduces significant discrepancies in the visual environment (replacing the described warm-toned podcast studio with a cool, space-themed studio from the images) and omits key background elements (coffee cups, plants, acoustic panels). The prompt also adds interpretive details (e.g., 'Pixar-style', 'comedy podcast bit') not in the original, and while it correctly maps subjects to images, it does not resolve the visual mismatch between the requested and provided assets. The camera and lighting are preserved in spirit, but the environment’s aesthetic is fundamentally altered.",
+  "usage": {
+    "completion_tokens": 2170,
+    "prompt_tokens": 5457,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 7627
+  }
+}

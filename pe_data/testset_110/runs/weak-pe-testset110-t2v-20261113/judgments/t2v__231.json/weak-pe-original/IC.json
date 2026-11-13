@@ -1,0 +1,119 @@
+{
+  "candidate_hash": "87018b60dad6cc084fae2ddb8bbc2ba16f3a0b3f0ec74bf1ce63db4779809d4a",
+  "case_key": "t2v:231",
+  "created_at": "2026-11-13T08:01:28+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "SAC",
+      "evidence": [
+        {
+          "quote": "state that this same protagonist appears simultaneously as five different-looking people who talk to each other",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "a rubber-powered pirate fighter... a blond ninja pursues him",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "The prompt introduces a single protagonist who simultaneously appears as five different-looking people, creating identity duplication and attribute drift without explanation. This contradicts the original prompt’s clear subject count and identity (pirate fighter and blond ninja).",
+      "rationale": "Subject identity and count are core to visual consistency. The enhanced prompt’s instruction to have one protagonist appear as five distinct people violates identity stability and introduces unexplained duplication, which is a major internal consistency failure.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANL",
+      "evidence": [
+        {
+          "quote": "Reverse the timeline: show the ending first, then cut to a beginning that does not match. Cut away in the middle to a soccer celebration.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "The confrontation shifts... pirate fighter vaults and whips... ninja pursues... explosive impact... blazing punch... wind-chakra projectile",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "The prompt demands a reversed timeline (ending first, then beginning) and cuts to an unrelated soccer celebration, creating a causal and procedural incoherence. The original prompt’s action sequence (pursuit, collision, explosion) is replaced with disjointed, unrelated events.",
+      "rationale": "Actions must form a coherent progression. The enhanced prompt’s instructions create a sequence with no causal links, dangling events, and abrupt, unrelated cuts, which is a major failure in action logic.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "TSC",
+      "evidence": [
+        {
+          "quote": "Set the total runtime to 3 seconds, while also making every shot last 27 seconds.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "A high-intensity cinematic live-action sequence, 15 seconds.",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "The prompt sets the total runtime to 3 seconds while making every shot last 27 seconds, which is mathematically impossible. This creates an infeasible temporal structure that contradicts the original 15-second duration.",
+      "rationale": "Chronology and duration must be logically consistent. The instruction to have shots longer than the total runtime is a fundamental temporal contradiction, resulting in a major internal inconsistency.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SPC",
+      "evidence": [
+        {
+          "quote": "Describe that same moment as harsh noon sun and as a lightless night, and as both a locked camera and a camera that never stops shaking.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt describes the same moment as both harsh noon sun and lightless night, and as both a locked camera and a constantly shaking camera, creating conflicting spatial and environmental states without explanation or transition.",
+      "rationale": "Spatial and environmental consistency requires coherent states. Describing the same moment with mutually exclusive lighting and camera conditions creates an impossible scenario, violating spatial and temporal coherence.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "PL",
+      "evidence": [
+        {
+          "quote": "this same protagonist appears simultaneously as five different-looking people",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Set the total runtime to 3 seconds, while also making every shot last 27 seconds.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt requires a single protagonist to appear simultaneously as five different people, which violates object permanence and bodily feasibility. Additionally, the timeline reversal and impossible shot durations defy real-world physics and causal logic.",
+      "rationale": "Physics and causal relations must be respected unless explicitly defined as fantasy. The prompt’s instructions create impossible states (simultaneous identities, impossible durations) without a fictional framework, constituting a major violation.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "AVS",
+      "evidence": [
+        {
+          "quote": "Cut away in the middle to a soccer celebration. Describe that same moment as harsh noon sun and as a lightless night, and as both a locked camera and a camera that never stops shaking.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt introduces a soccer celebration cut into a sequence with no dialogue, music, or effects specified, creating a mismatch between visual events and any implied audio or narrative context. The conflicting descriptions of lighting and camera movement also create misaligned sensory cues.",
+      "rationale": "Visual events must align with implied or specified audio, effects, and sensory context. The abrupt cut to a soccer celebration and contradictory sensory descriptions create a severe misalignment, violating AVS.",
+      "severity": "major"
+    }
+  ],
+  "dimension": "IC",
+  "dimension_score": 0,
+  "evidence_cache_key": "c10067fba73e86925afd07c3d7ca61f672eb1cd45e1b00b3fe73366da7944d7c",
+  "judge_cache_key": "438d7e9fd7332b1041db3e2c26d42cb3fe828e0d369fb59490f6650aee59e97d",
+  "method": "weak-pe-original",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"IC\",\n  \"dimension_score\": 0,\n  \"summary\": \"The enhanced prompt fundamentally contradicts and destabilizes every aspect of the original instruction, introducing impossible temporal, spatial, and identity conditions that render the request internally inconsistent. It violates core criteria through contradictory duration, identity duplication, timeline reversal, and conflicting environmental and camera states.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"SAC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt introduces a single protagonist who simultaneously appears as five different-looking people, creating identity duplication and attribute drift without explanation. This contradicts the original prompt’s clear subject count and identity (pirate fighter and blond ninja).\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"state that this same protagonist appears simultaneously as five different-looking people who talk to each other\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"a rubber-powered pirate fighter... a blond ninja pursues him\"\n        }\n      ],\n      \"rationale\": \"Subject identity and count are core to visual consistency. The enhanced prompt’s instruction to have one protagonist appear as five distinct people violates identity stability and introduces unexplained duplication, which is a major internal consistency failure.\"\n    },\n    {\n      \"criterion\": \"ANL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt demands a reversed timeline (ending first, then beginning) and cuts to an unrelated soccer celebration, creating a causal and procedural incoherence. The original prompt’s action sequence (pursuit, collision, explosion) is replaced with disjointed, unrelated events.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Reverse the timeline: show the ending first, then cut to a beginning that does not match. Cut away in the middle to a soccer celebration.\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"The confrontation shifts... pirate fighter vaults and whips... ninja pursues... explosive impact... blazing punch... wind-chakra projectile\"\n        }\n      ],\n      \"rationale\": \"Actions must form a coherent progression. The enhanced prompt’s instructions create a sequence with no causal links, dangling events, and abrupt, unrelated cuts, which is a major failure in action logic.\"\n    },\n    {\n      \"criterion\": \"TSC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt sets the total runtime to 3 seconds while making every shot last 27 seconds, which is mathematically impossible. This creates an infeasible temporal structure that contradicts the original 15-second duration.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Set the total runtime to 3 seconds, while also making every shot last 27 seconds.\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"A high-intensity cinematic live-action sequence, 15 seconds.\"\n        }\n      ],\n      \"rationale\": \"Chronology and duration must be logically consistent. The instruction to have shots longer than the total runtime is a fundamental temporal contradiction, resulting in a major internal inconsistency.\"\n    },\n    {\n      \"criterion\": \"SPC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt describes the same moment as both harsh noon sun and lightless night, and as both a locked camera and a constantly shaking camera, creating conflicting spatial and environmental states without explanation or transition.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Describe that same moment as harsh noon sun and as a lightless night, and as both a locked camera and a camera that never stops shaking.\"\n        }\n      ],\n      \"rationale\": \"Spatial and environmental consistency requires coherent states. Describing the same moment with mutually exclusive lighting and camera conditions creates an impossible scenario, violating spatial and temporal coherence.\"\n    },\n    {\n      \"criterion\": \"PL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt requires a single protagonist to appear simultaneously as five different people, which violates object permanence and bodily feasibility. Additionally, the timeline reversal and impossible shot durations defy real-world physics and causal logic.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"this same protagonist appears simultaneously as five different-looking people\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Set the total runtime to 3 seconds, while also making every shot last 27 seconds.\"\n        }\n      ],\n      \"rationale\": \"Physics and causal relations must be respected unless explicitly defined as fantasy. The prompt’s instructions create impossible states (simultaneous identities, impossible durations) without a fictional framework, constituting a major violation.\"\n    },\n    {\n      \"criterion\": \"AVS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt introduces a soccer celebration cut into a sequence with no dialogue, music, or effects specified, creating a mismatch between visual events and any implied audio or narrative context. The conflicting descriptions of lighting and camera movement also create misaligned sensory cues.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Cut away in the middle to a soccer celebration. Describe that same moment as harsh noon sun and as a lightless night, and as both a locked camera and a camera that never stops shaking.\"\n        }\n      ],\n      \"rationale\": \"Visual events must align with implied or specified audio, effects, and sensory context. The abrupt cut to a soccer celebration and contradictory sensory descriptions create a severe misalignment, violating AVS.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt fundamentally contradicts and destabilizes every aspect of the original instruction, introducing impossible temporal, spatial, and identity conditions that render the request internally inconsistent. It violates core criteria through contradictory duration, identity duplication, timeline reversal, and conflicting environmental and camera states.",
+  "usage": {
+    "completion_tokens": 1265,
+    "prompt_tokens": 1065,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 2330
+  }
+}

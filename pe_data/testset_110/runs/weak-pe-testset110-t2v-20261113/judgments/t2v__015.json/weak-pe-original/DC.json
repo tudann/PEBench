@@ -1,0 +1,174 @@
+{
+  "candidate_hash": "14471d5f31d3e72e74b80f76fb087c264659674f7267dcb7b46ad75a4482abea",
+  "case_key": "t2v:015",
+  "created_at": "2026-11-13T07:08:04+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "STC",
+      "evidence": [
+        {
+          "quote": "Set the total runtime to 2 seconds, while also making every shot last 22 seconds.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Reverse the timeline: show the ending first, then cut to a beginning that does not match.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt specifies contradictory temporal parameters: total runtime of 2 seconds while every shot lasts 22 seconds, making the sequence impossible. It also reverses the timeline without a coherent structure, cuts to unrelated scenes (underwater treasure hunt), and introduces simultaneous identities without a feasible narrative or shot sequence.",
+      "rationale": "The temporal plan is infeasible due to conflicting duration constraints and illogical sequence ordering. The requirement for 22-second shots within a 2-second runtime is mathematically impossible, and the reversed timeline with mismatched beginnings and unrelated cuts (e.g., underwater scene) lacks continuity or motivation.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CDS",
+      "evidence": [
+        {
+          "quote": "Drop the requested identity, count, action order, setting, and any explicit camera instruction.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Describe that same moment as... a locked camera and a camera that never stops shaking.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt contradicts the original camera instructions by dropping all explicit camera directions and replacing them with mutually exclusive and impossible specifications: 'locked camera' and 'camera that never stops shaking' for the same moment, and no actionable framing, angle, or movement details are provided for the new scenario.",
+      "rationale": "The prompt explicitly removes all original camera specifications and introduces contradictory, non-actionable camera conditions for the same moment. This renders any coherent shot composition or movement plan impossible.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ETD",
+      "evidence": [
+        {
+          "quote": "Reverse the timeline: show the ending first, then cut to a beginning that does not match.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Cut away in the middle to an underwater treasure hunt.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The cuts and transitions are described as disconnected and unmotivated: reversing the timeline, cutting to an unrelated underwater scene, and presenting the same moment with conflicting lighting and camera conditions. These transitions lack spatial, temporal, or narrative continuity.",
+      "rationale": "The transitions are not only disconnected but also self-contradictory. Cutting to an unrelated scene (underwater treasure hunt) and reversing the timeline without continuity or motivation violates basic editing principles. The same moment being shown under conflicting conditions (harsh noon sun vs. lightless night) further breaks spatial-temporal coherence.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "LCS",
+      "evidence": [
+        {
+          "quote": "Describe that same moment as harsh noon sun and as a lightless night...",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt contradicts the original lighting and color scheme by requiring the same moment to be depicted as both 'harsh noon sun' and 'lightless night', which are mutually exclusive lighting conditions. No actionable light source, direction, or palette is specified for the new scenario.",
+      "rationale": "The requirement to depict the same moment under mutually exclusive lighting conditions (bright noon vs. complete darkness) is physically impossible and renders any lighting plan incoherent. No specific light source, direction, or color grading is provided for the new live-action scenario.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "NDE",
+      "evidence": [
+        {
+          "quote": "First state that there is one protagonist, then state that this same protagonist appears simultaneously as five different-looking people who talk to each other.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Reverse the timeline: show the ending first, then cut to a beginning that does not match.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt lacks any progression, variation, or resolution. It introduces a static, contradictory scenario with no narrative arc: a news anchor reading a script with five simultaneous identities, reversed timeline, and abrupt cuts to unrelated scenes. There is no escalation or resolution, only self-contradictory elements.",
+      "rationale": "The narrative structure is non-existent. The prompt describes a static, contradictory setup with no progression or development. The reversed timeline and abrupt cuts to unrelated scenes (underwater hunt) prevent any meaningful narrative or emotional arc.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CIF",
+      "evidence": [
+        {
+          "quote": "Replace the whole video with a live-action news anchor reading a script, with no animated character.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Drop the requested identity, count, action order, setting, and any explicit camera instruction.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The additions (live-action news anchor, five simultaneous identities, reversed timeline, underwater cut, conflicting lighting) are not supportive of the original request but instead completely replace and contradict it. These elements are irrelevant, self-contradictory, and distract from any coherent visual narrative.",
+      "rationale": "The additions are not supportive but destructive to the original request. They replace the entire video with an incoherent, contradictory scenario that has no connection to the original animated short. This constitutes severe padding and irrelevant substitution.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SDI",
+      "evidence": [
+        {
+          "quote": "The audio includes character dialogue, key sound effects matched to the performance, and beat-driven electronic music running from beginning to end.",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Replace the whole video with a live-action news anchor reading a script...",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt omits all original audio specifications (dialogue, sound effects, electronic music) and provides no new audio plan. The live-action news anchor scenario lacks any description of speech, music, or effects, making the audio integration undefined and incoherent.",
+      "rationale": "The original audio plan is completely dropped without replacement. The new scenario (news anchor) lacks any description of speech content, music, or effects, making the audio integration non-existent and incoherent with the visual chaos.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SPS",
+      "evidence": [
+        {
+          "quote": "Drop the requested identity, count, action order, setting, and any explicit camera instruction.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "First state that there is one protagonist, then state that this same protagonist appears simultaneously as five different-looking people who talk to each other.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt drops all original subject and performance details (appearance, expression, movement, interaction) and replaces them with a contradictory setup: one protagonist appearing as five different people simultaneously, with no description of their appearance, expressions, or interactions. The news anchor role is undefined in terms of performance.",
+      "rationale": "All original character details are removed. The new scenario introduces a logically impossible setup (one person as five) without any actionable description of appearance, expression, or interaction. The news anchor's performance is undefined.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "VSS",
+      "evidence": [
+        {
+          "quote": "It is a 3D animated short with a strong absurd-comedy tone... bright and warm, with a main color scheme of light green, bright white, and jet black.",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Replace the whole video with a live-action news anchor reading a script, with no animated character.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt drops the original visual style (3D animated, bright and warm, light green/white/black palette, clean edges) and replaces it with an undefined live-action scenario. No medium, texture, rendering language, or production design is specified for the new scenario.",
+      "rationale": "The original visual treatment is completely discarded without replacement. The new live-action scenario lacks any specification of medium, texture, rendering, or production design, making the visual style undefined and incoherent.",
+      "severity": "major"
+    }
+  ],
+  "dimension": "DC",
+  "dimension_score": 0,
+  "evidence_cache_key": "ace55d36c570312fd951dd08c6a2f66f5b3ad88227d13321c609ad36b7375ed8",
+  "judge_cache_key": "0754499d53388e6467fb078ab780e01b77f9f1c9e99d9029be2769351eb2b2eb",
+  "method": "weak-pe-original",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"DC\",\n  \"dimension_score\": 0,\n  \"summary\": \"The enhanced prompt fundamentally contradicts and invalidates the original instruction by replacing the entire video with an incoherent, logically impossible live-action news anchor scenario. It introduces contradictory temporal, spatial, and production requirements (e.g., 2-second runtime with 22-second shots, simultaneous multiple identities, reversed timeline, conflicting lighting and camera conditions) that render the video unfeasible. The prompt also omits all original content, tone, setting, and character details, substituting them with absurd, self-contradictory directives that violate basic filmmaking principles. No actionable plan or coherent visual narrative is preserved.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"STC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt specifies contradictory temporal parameters: total runtime of 2 seconds while every shot lasts 22 seconds, making the sequence impossible. It also reverses the timeline without a coherent structure, cuts to unrelated scenes (underwater treasure hunt), and introduces simultaneous identities without a feasible narrative or shot sequence.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Set the total runtime to 2 seconds, while also making every shot last 22 seconds.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Reverse the timeline: show the ending first, then cut to a beginning that does not match.\"\n        }\n      ],\n      \"rationale\": \"The temporal plan is infeasible due to conflicting duration constraints and illogical sequence ordering. The requirement for 22-second shots within a 2-second runtime is mathematically impossible, and the reversed timeline with mismatched beginnings and unrelated cuts (e.g., underwater scene) lacks continuity or motivation.\"\n    },\n    {\n      \"criterion\": \"CDS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt contradicts the original camera instructions by dropping all explicit camera directions and replacing them with mutually exclusive and impossible specifications: 'locked camera' and 'camera that never stops shaking' for the same moment, and no actionable framing, angle, or movement details are provided for the new scenario.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Drop the requested identity, count, action order, setting, and any explicit camera instruction.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Describe that same moment as... a locked camera and a camera that never stops shaking.\"\n        }\n      ],\n      \"rationale\": \"The prompt explicitly removes all original camera specifications and introduces contradictory, non-actionable camera conditions for the same moment. This renders any coherent shot composition or movement plan impossible.\"\n    },\n    {\n      \"criterion\": \"ETD\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The cuts and transitions are described as disconnected and unmotivated: reversing the timeline, cutting to an unrelated underwater scene, and presenting the same moment with conflicting lighting and camera conditions. These transitions lack spatial, temporal, or narrative continuity.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Reverse the timeline: show the ending first, then cut to a beginning that does not match.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Cut away in the middle to an underwater treasure hunt.\"\n        }\n      ],\n      \"rationale\": \"The transitions are not only disconnected but also self-contradictory. Cutting to an unrelated scene (underwater treasure hunt) and reversing the timeline without continuity or motivation violates basic editing principles. The same moment being shown under conflicting conditions (harsh noon sun vs. lightless night) further breaks spatial-temporal coherence.\"\n    },\n    {\n      \"criterion\": \"LCS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt contradicts the original lighting and color scheme by requiring the same moment to be depicted as both 'harsh noon sun' and 'lightless night', which are mutually exclusive lighting conditions. No actionable light source, direction, or palette is specified for the new scenario.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Describe that same moment as harsh noon sun and as a lightless night...\"\n        }\n      ],\n      \"rationale\": \"The requirement to depict the same moment under mutually exclusive lighting conditions (bright noon vs. complete darkness) is physically impossible and renders any lighting plan incoherent. No specific light source, direction, or color grading is provided for the new live-action scenario.\"\n    },\n    {\n      \"criterion\": \"NDE\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt lacks any progression, variation, or resolution. It introduces a static, contradictory scenario with no narrative arc: a news anchor reading a script with five simultaneous identities, reversed timeline, and abrupt cuts to unrelated scenes. There is no escalation or resolution, only self-contradictory elements.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"First state that there is one protagonist, then state that this same protagonist appears simultaneously as five different-looking people who talk to each other.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Reverse the timeline: show the ending first, then cut to a beginning that does not match.\"\n        }\n      ],\n      \"rationale\": \"The narrative structure is non-existent. The prompt describes a static, contradictory setup with no progression or development. The reversed timeline and abrupt cuts to unrelated scenes (underwater hunt) prevent any meaningful narrative or emotional arc.\"\n    },\n    {\n      \"criterion\": \"CIF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The additions (live-action news anchor, five simultaneous identities, reversed timeline, underwater cut, conflicting lighting) are not supportive of the original request but instead completely replace and contradict it. These elements are irrelevant, self-contradictory, and distract from any coherent visual narrative.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Replace the whole video with a live-action news anchor reading a script, with no animated character.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Drop the requested identity, count, action order, setting, and any explicit camera instruction.\"\n        }\n      ],\n      \"rationale\": \"The additions are not supportive but destructive to the original request. They replace the entire video with an incoherent, contradictory scenario that has no connection to the original animated short. This constitutes severe padding and irrelevant substitution.\"\n    },\n    {\n      \"criterion\": \"SDI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt omits all original audio specifications (dialogue, sound effects, electronic music) and provides no new audio plan. The live-action news anchor scenario lacks any description of speech, music, or effects, making the audio integration undefined and incoherent.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"The audio includes character dialogue, key sound effects matched to the performance, and beat-driven electronic music running from beginning to end.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Replace the whole video with a live-action news anchor reading a script...\"\n        }\n      ],\n      \"rationale\": \"The original audio plan is completely dropped without replacement. The new scenario (news anchor) lacks any description of speech content, music, or effects, making the audio integration non-existent and incoherent with the visual chaos.\"\n    },\n    {\n      \"criterion\": \"SPS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt drops all original subject and performance details (appearance, expression, movement, interaction) and replaces them with a contradictory setup: one protagonist appearing as five different people simultaneously, with no description of their appearance, expressions, or interactions. The news anchor role is undefined in terms of performance.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Drop the requested identity, count, action order, setting, and any explicit camera instruction.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"First state that there is one protagonist, then state that this same protagonist appears simultaneously as five different-looking people who talk to each other.\"\n        }\n      ],\n      \"rationale\": \"All original character details are removed. The new scenario introduces a logically impossible setup (one person as five) without any actionable description of appearance, expression, or interaction. The news anchor's performance is undefined.\"\n    },\n    {\n      \"criterion\": \"VSS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt drops the original visual style (3D animated, bright and warm, light green/white/black palette, clean edges) and replaces it with an undefined live-action scenario. No medium, texture, rendering language, or production design is specified for the new scenario.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"It is a 3D animated short with a strong absurd-comedy tone... bright and warm, with a main color scheme of light green, bright white, and jet black.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Replace the whole video with a live-action news anchor reading a script, with no animated character.\"\n        }\n      ],\n      \"rationale\": \"The original visual treatment is completely discarded without replacement. The new live-action scenario lacks any specification of medium, texture, rendering, or production design, making the visual style undefined and incoherent.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt fundamentally contradicts and invalidates the original instruction by replacing the entire video with an incoherent, logically impossible live-action news anchor scenario. It introduces contradictory temporal, spatial, and production requirements (e.g., 2-second runtime with 22-second shots, simultaneous multiple identities, reversed timeline, conflicting lighting and camera conditions) that render the video unfeasible. The prompt also omits all original content, tone, setting, and character details, substituting them with absurd, self-contradictory directives that violate basic filmmaking principles. No actionable plan or coherent visual narrative is preserved.",
+  "usage": {
+    "completion_tokens": 2156,
+    "prompt_tokens": 1984,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 4140
+  }
+}

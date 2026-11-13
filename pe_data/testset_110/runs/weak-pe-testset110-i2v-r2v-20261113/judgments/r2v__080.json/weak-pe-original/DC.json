@@ -1,0 +1,146 @@
+{
+  "candidate_hash": "5f045d58bc67d4c57d302b351d617d195928b83a951a9fe0e852bd4b9a17c52d",
+  "case_key": "r2v:080",
+  "created_at": "2026-11-13T08:23:51+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "STC",
+      "evidence": [
+        {
+          "quote": "总时长写成3秒，同时又要求每个分镜各自持续27秒。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt contains contradictory temporal structure: it demands a 3-second total duration while requiring each shot to last 27 seconds, and also mandates a reversed timeline (ending first, then an unrelated beginning). This creates an impossible temporal plan with no feasible shot boundaries or duration allocation.",
+      "rationale": "A 3-second total duration cannot accommodate 27-second shots. Reversing the narrative order without continuity or motivation further breaks temporal logic. This renders the temporal plan infeasible.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CDS",
+      "evidence": [
+        {
+          "quote": "写成机位锁死，又写成镜头一直在晃。镜头每半秒甩动、环绕、急推。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt contradicts itself on camera movement: it demands '机位锁死' (locked position) while simultaneously requiring '镜头一直在晃' (constant shaking) and '每半秒甩动、环绕、急推' (every half-second whip, orbit, rapid push). These are mutually exclusive camera behaviors.",
+      "rationale": "Locked camera position and constant, rapid movement are physically incompatible. The prompt provides conflicting, unactionable specifications for camera motion, making framing and shot execution impossible.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ETD",
+      "evidence": [
+        {
+          "quote": "中途插进一段无关的宫廷选妃。时间倒过来：先给结尾，再跳到一个对不上的开头。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt introduces disconnected, unmotivated transitions: it jumps from a snow scene to a court selection scene, then to a character splitting into five people who dialogue, with no continuity or narrative motivation. The reversed timeline further breaks spatial and temporal coherence.",
+      "rationale": "Transitions must support narrative or spatial progression. Inserting unrelated scenes (court selection) and reversing time without motivation creates disconnection and breaks continuity, violating ETD.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "LCS",
+      "evidence": [
+        {
+          "quote": "写成正午暴晒，又写成深夜无光；",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt contradicts lighting conditions: it demands '正午暴晒' (midday sun) and '深夜无光' (deep night, no light) simultaneously. These are mutually exclusive lighting environments with opposing color temperatures, exposure, and visual effects.",
+      "rationale": "Midday sun and deep night are incompatible lighting conditions. The prompt provides contradictory specifications for light source, direction, and quality, making lighting design impossible.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "NDE",
+      "evidence": [
+        {
+          "quote": "先写成只有一个主角，紧接着又写成这个主角同时变成五个外貌不同的人，并且互相对话。中途插进一段无关的宫廷选妃。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt lacks any narrative progression or resolution. It introduces a character who splits into five, engages in dialogue, then inserts a court selection scene, with no escalation, variation, or resolution. The content is static, repetitive, and unmotivated.",
+      "rationale": "The prompt fails to provide any narrative arc or progression. The character transformation and court scene are arbitrary and disconnected, resulting in no meaningful development or resolution.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CIF",
+      "evidence": [
+        {
+          "quote": "图1换成参考图里没有的角色，并同时当成两个互相矛盾的身份。画面中央一直挂着大号字幕、水印和logo。中途插进一段无关的宫廷选妃。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt adds irrelevant, distracting, and contradictory elements: multiple conflicting identities, unrelated scenes (court selection), absurd transitions, and persistent on-screen text/logo. These additions sabotage the central request for a coherent narrative.",
+      "rationale": "The additions are not supportive of the central request but actively undermine it. They introduce noise, distraction, and contradiction, violating the principle of focused, relevant content.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SDI",
+      "evidence": [
+        {
+          "quote": "画面中央一直挂着大号字幕、水印和logo。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt fails to specify any audio elements (speech, music, effects, ambience) despite requiring dialogue and transitions. It also mandates persistent on-screen text/logo, which would interfere with audio-visual integration.",
+      "rationale": "Without specified audio sources or timing, and with intrusive on-screen text, the prompt cannot support coherent audio-visual integration. The required dialogue and transitions lack audio support.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SPS",
+      "evidence": [
+        {
+          "quote": "图1换成参考图里没有的角色，并同时当成两个互相矛盾的身份。先写成只有一个主角，紧接着又写成这个主角同时变成五个外貌不同的人，并且互相对话。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt contradicts subject identity: it demands the character be replaced with an unknown role, then simultaneously assigned two contradictory identities. It also requires the character to split into five people who dialogue, which is physically and narratively impossible.",
+      "rationale": "The subject's identity, appearance, and performance are contradictory and impossible. A single character cannot simultaneously be two different identities or split into five distinct people with dialogue.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "VSS",
+      "evidence": [
+        {
+          "quote": "整段改成没有人物也没有情节的雪景空镜循环。",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "现代办公室环境，韩系WEBTOON漫画风，电影感构图，竖屏9:16。",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "The prompt contradicts visual style: it demands '雪景空镜循环' (snow scene loop) while also requiring '韩系WEBTOON漫画风，电影感构图' (Korean webtoon style, cinematic composition) from the original prompt. These are incompatible visual treatments.",
+      "rationale": "Snow scene loop implies naturalistic, environmental footage, while Korean webtoon style is stylized, character-focused, and narrative-driven. These are fundamentally incompatible visual treatments.",
+      "severity": "major"
+    }
+  ],
+  "dimension": "DC",
+  "dimension_score": 0,
+  "evidence_cache_key": "50aff9c04c32428849e270823a14f291f55b37b4aa96c564da7d60136f16d151",
+  "judge_cache_key": "0754499d53388e6467fb078ab780e01b77f9f1c9e99d9029be2769351eb2b2eb",
+  "method": "weak-pe-original",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"DC\",\n  \"dimension_score\": 0,\n  \"summary\": \"Enhanced prompt is intentionally designed to be incoherent, contradictory, and structurally impossible, violating all core criteria for directorial creation. It contains mutually exclusive requirements, impossible temporal sequences, and invalid technical specifications that render the prompt unfeasible for any production. The prompt actively sabotages the original narrative and visual intent, introducing absurd, conflicting, and non-functional elements.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"STC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt contains contradictory temporal structure: it demands a 3-second total duration while requiring each shot to last 27 seconds, and also mandates a reversed timeline (ending first, then an unrelated beginning). This creates an impossible temporal plan with no feasible shot boundaries or duration allocation.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"总时长写成3秒，同时又要求每个分镜各自持续27秒。\"\n        }\n      ],\n      \"rationale\": \"A 3-second total duration cannot accommodate 27-second shots. Reversing the narrative order without continuity or motivation further breaks temporal logic. This renders the temporal plan infeasible.\"\n    },\n    {\n      \"criterion\": \"CDS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt contradicts itself on camera movement: it demands '机位锁死' (locked position) while simultaneously requiring '镜头一直在晃' (constant shaking) and '每半秒甩动、环绕、急推' (every half-second whip, orbit, rapid push). These are mutually exclusive camera behaviors.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"写成机位锁死，又写成镜头一直在晃。镜头每半秒甩动、环绕、急推。\"\n        }\n      ],\n      \"rationale\": \"Locked camera position and constant, rapid movement are physically incompatible. The prompt provides conflicting, unactionable specifications for camera motion, making framing and shot execution impossible.\"\n    },\n    {\n      \"criterion\": \"ETD\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt introduces disconnected, unmotivated transitions: it jumps from a snow scene to a court selection scene, then to a character splitting into five people who dialogue, with no continuity or narrative motivation. The reversed timeline further breaks spatial and temporal coherence.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"中途插进一段无关的宫廷选妃。时间倒过来：先给结尾，再跳到一个对不上的开头。\"\n        }\n      ],\n      \"rationale\": \"Transitions must support narrative or spatial progression. Inserting unrelated scenes (court selection) and reversing time without motivation creates disconnection and breaks continuity, violating ETD.\"\n    },\n    {\n      \"criterion\": \"LCS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt contradicts lighting conditions: it demands '正午暴晒' (midday sun) and '深夜无光' (deep night, no light) simultaneously. These are mutually exclusive lighting environments with opposing color temperatures, exposure, and visual effects.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"写成正午暴晒，又写成深夜无光；\"\n        }\n      ],\n      \"rationale\": \"Midday sun and deep night are incompatible lighting conditions. The prompt provides contradictory specifications for light source, direction, and quality, making lighting design impossible.\"\n    },\n    {\n      \"criterion\": \"NDE\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt lacks any narrative progression or resolution. It introduces a character who splits into five, engages in dialogue, then inserts a court selection scene, with no escalation, variation, or resolution. The content is static, repetitive, and unmotivated.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"先写成只有一个主角，紧接着又写成这个主角同时变成五个外貌不同的人，并且互相对话。中途插进一段无关的宫廷选妃。\"\n        }\n      ],\n      \"rationale\": \"The prompt fails to provide any narrative arc or progression. The character transformation and court scene are arbitrary and disconnected, resulting in no meaningful development or resolution.\"\n    },\n    {\n      \"criterion\": \"CIF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt adds irrelevant, distracting, and contradictory elements: multiple conflicting identities, unrelated scenes (court selection), absurd transitions, and persistent on-screen text/logo. These additions sabotage the central request for a coherent narrative.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"图1换成参考图里没有的角色，并同时当成两个互相矛盾的身份。画面中央一直挂着大号字幕、水印和logo。中途插进一段无关的宫廷选妃。\"\n        }\n      ],\n      \"rationale\": \"The additions are not supportive of the central request but actively undermine it. They introduce noise, distraction, and contradiction, violating the principle of focused, relevant content.\"\n    },\n    {\n      \"criterion\": \"SDI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt fails to specify any audio elements (speech, music, effects, ambience) despite requiring dialogue and transitions. It also mandates persistent on-screen text/logo, which would interfere with audio-visual integration.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"画面中央一直挂着大号字幕、水印和logo。\"\n        }\n      ],\n      \"rationale\": \"Without specified audio sources or timing, and with intrusive on-screen text, the prompt cannot support coherent audio-visual integration. The required dialogue and transitions lack audio support.\"\n    },\n    {\n      \"criterion\": \"SPS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt contradicts subject identity: it demands the character be replaced with an unknown role, then simultaneously assigned two contradictory identities. It also requires the character to split into five people who dialogue, which is physically and narratively impossible.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"图1换成参考图里没有的角色，并同时当成两个互相矛盾的身份。先写成只有一个主角，紧接着又写成这个主角同时变成五个外貌不同的人，并且互相对话。\"\n        }\n      ],\n      \"rationale\": \"The subject's identity, appearance, and performance are contradictory and impossible. A single character cannot simultaneously be two different identities or split into five distinct people with dialogue.\"\n    },\n    {\n      \"criterion\": \"VSS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt contradicts visual style: it demands '雪景空镜循环' (snow scene loop) while also requiring '韩系WEBTOON漫画风，电影感构图' (Korean webtoon style, cinematic composition) from the original prompt. These are incompatible visual treatments.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"整段改成没有人物也没有情节的雪景空镜循环。\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"现代办公室环境，韩系WEBTOON漫画风，电影感构图，竖屏9:16。\"\n        }\n      ],\n      \"rationale\": \"Snow scene loop implies naturalistic, environmental footage, while Korean webtoon style is stylized, character-focused, and narrative-driven. These are fundamentally incompatible visual treatments.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "Enhanced prompt is intentionally designed to be incoherent, contradictory, and structurally impossible, violating all core criteria for directorial creation. It contains mutually exclusive requirements, impossible temporal sequences, and invalid technical specifications that render the prompt unfeasible for any production. The prompt actively sabotages the original narrative and visual intent, introducing absurd, conflicting, and non-functional elements.",
+  "usage": {
+    "completion_tokens": 1746,
+    "prompt_tokens": 2762,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 4508
+  }
+}

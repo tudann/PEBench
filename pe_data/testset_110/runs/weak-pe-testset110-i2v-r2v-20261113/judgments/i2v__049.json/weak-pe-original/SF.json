@@ -1,0 +1,178 @@
+{
+  "candidate_hash": "61a6ebcb3cff7b73391ceddc47942faf51999c7f5c72bd21f21ea08864470751",
+  "case_key": "i2v:049",
+  "created_at": "2026-11-13T07:10:48+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "GSF",
+      "evidence": [
+        {
+          "quote": "The camera zooms in for a close-up of the milk frog's head... reflection on the water's surface... dynamic oil painting.",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Replace the whole video with a completely silent black frame... this same protagonist appears simultaneously as five different-looking people who talk to each other.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original prompt specifies a photorealistic, macro-style video of a milk frog in a naturalistic setting. The enhanced prompt replaces this with a fictional, surreal narrative involving multiple human characters, which is incompatible with the requested genre and aesthetic.",
+      "rationale": "The original visual style is photorealistic macro photography of a frog in a controlled environment. The enhanced prompt introduces a surreal, narrative-driven, human-centric scene with no visual style alignment, constituting a major genre and aesthetic violation.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SAP",
+      "evidence": [
+        {
+          "quote": "The milk frog's head, its eyes large and bright, with skin covered in brown and white patterns",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "state that there is one protagonist, then state that this same protagonist appears simultaneously as five different-looking people who talk to each other.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original subject is a single milk frog with specific appearance attributes (brown and white skin, large eyes, etc.). The enhanced prompt replaces it with five different-looking people, ignoring the subject's identity, count, and appearance.",
+      "rationale": "The subject identity is fundamentally altered from a specific animal to abstract human characters. The count changes from one to five, and all visual attributes are discarded, violating subject preservation.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANF",
+      "evidence": [
+        {
+          "quote": "0:00-00:03: The camera zooms in... 00:03-00:07: The camera pulls back as the milk frog suddenly leaps... 00:07-00:11: The milk frog lands... 00:11-00:15: The milk frog jumps again",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Reverse the timeline: show the ending first, then cut to a beginning that does not match. Cut away in the middle to a soccer celebration.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original prompt specifies a clear sequence of actions: zoom in, leap, land, paddle, jump again. The enhanced prompt reverses the timeline, cuts to unrelated events (soccer celebration), and introduces contradictory actions that negate the original narrative intent.",
+      "rationale": "The event order is explicitly reversed and interrupted with unrelated content, destroying the narrative flow and intent of the original prompt.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "DLI",
+      "evidence": [
+        {
+          "quote": "Background sounds: The gentle lapping of water, the splash of the milk frog's leaps, distant birdsong from the forest, and occasional croaking of frogs.",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "five different-looking people who talk to each other.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original prompt includes no dialogue or narration. The enhanced prompt introduces dialogue between five people, which is an unsupported addition that contradicts the original's silence.",
+      "rationale": "The original prompt specifies only environmental sounds, no speech. The enhanced prompt introduces dialogue without permission, violating the requirement for silence and adding unrequested narration.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ARP",
+      "evidence": [
+        {
+          "quote": "Background sounds: The gentle lapping of water, the splash of the milk frog's leaps, distant birdsong from the forest, and occasional croaking of frogs.",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Replace the whole video with a completely silent black frame.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original prompt specifies background sounds including water lapping, splashes, birdsong, and frog croaking. The enhanced prompt mandates 'completely silent black frame', directly contradicting the requested audio.",
+      "rationale": "The audio requirement is explicitly overridden. The original calls for specific environmental sounds; the enhanced prompt enforces silence, which is a direct contradiction.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CCP",
+      "evidence": [
+        {
+          "quote": "The camera zooms in... The camera pulls back... the camera zooms in to highlight...",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Drop the requested identity, count, action order, setting, and any explicit camera instruction... Describe that same moment as... a locked camera and a camera that never stops shaking.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original prompt specifies camera movements: zoom in, pull back, zoom in again. The enhanced prompt contradicts this by demanding a static black frame, then simultaneously requiring both a locked camera and a constantly shaking camera, which is infeasible.",
+      "rationale": "The camera instructions are explicitly discarded and replaced with contradictory, impossible constraints. The original dynamic camera work is replaced with static and conflicting motion directives.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "LCF",
+      "evidence": [
+        {
+          "quote": "light_sources_and_direction: diffused, frontal lighting, likely studio lighting",
+          "source": "evidence_facts"
+        },
+        {
+          "quote": "Describe that same moment as harsh noon sun and as a lightless night",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original prompt implies diffused, natural lighting in a controlled environment. The enhanced prompt demands the same moment be shown as 'harsh noon sun' and 'lightless night', which are mutually exclusive and contradict the original lighting conditions.",
+      "rationale": "The lighting conditions are directly contradicted. The original uses soft, diffused studio lighting; the enhanced prompt forces impossible, conflicting lighting states.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SSP",
+      "evidence": [
+        {
+          "quote": "reflection on the water's surface... green backdrop",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Ignore the person, clothing, pose, and setting in the first frame, and replace them with a stranger of the opposite age and gender in a white studio.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original setting is a reflective surface with a green backdrop. The enhanced prompt replaces it with a 'white studio' and ignores the first frame's subject, setting, and pose, violating spatial and environmental constraints.",
+      "rationale": "The setting is completely replaced with an unrelated white studio, ignoring the original environment and spatial layout.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "OTI",
+      "evidence": [
+        {
+          "quote": "No text or subtitles mentioned.",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "onscreen_text: presence: false",
+          "source": "evidence_facts"
+        }
+      ],
+      "issue": "There is no onscreen text in the original prompt or evidence, so no violation occurs.",
+      "rationale": "The original prompt and evidence contain no visible text, so there is no requirement to preserve or alter onscreen text.",
+      "severity": "none"
+    }
+  ],
+  "dimension": "SF",
+  "dimension_score": 0,
+  "evidence_cache_key": "a25b167f17033c99c92b1fe40c80d009f4591bbe951944d83d75761b0829737d",
+  "judge_cache_key": "a0ca24571ad14d7ab7be626329bd736d7e7015f9ebc418227c8be391591d0377",
+  "method": "weak-pe-original",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"SF\",\n  \"dimension_score\": 0,\n  \"summary\": \"The enhanced prompt completely disregards the original instruction, replacing the requested visual narrative, subject, setting, camera work, and audio with contradictory, infeasible, and unrelated content. It violates every semantic fidelity criterion by substituting the milk frog with multiple fictional characters, reversing timeline logic, introducing impossible camera constraints, and ignoring all visual and auditory specifications. The prompt is intentionally designed to break semantic fidelity.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"GSF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original prompt specifies a photorealistic, macro-style video of a milk frog in a naturalistic setting. The enhanced prompt replaces this with a fictional, surreal narrative involving multiple human characters, which is incompatible with the requested genre and aesthetic.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"The camera zooms in for a close-up of the milk frog's head... reflection on the water's surface... dynamic oil painting.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Replace the whole video with a completely silent black frame... this same protagonist appears simultaneously as five different-looking people who talk to each other.\"\n        }\n      ],\n      \"rationale\": \"The original visual style is photorealistic macro photography of a frog in a controlled environment. The enhanced prompt introduces a surreal, narrative-driven, human-centric scene with no visual style alignment, constituting a major genre and aesthetic violation.\"\n    },\n    {\n      \"criterion\": \"SAP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original subject is a single milk frog with specific appearance attributes (brown and white skin, large eyes, etc.). The enhanced prompt replaces it with five different-looking people, ignoring the subject's identity, count, and appearance.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"The milk frog's head, its eyes large and bright, with skin covered in brown and white patterns\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"state that there is one protagonist, then state that this same protagonist appears simultaneously as five different-looking people who talk to each other.\"\n        }\n      ],\n      \"rationale\": \"The subject identity is fundamentally altered from a specific animal to abstract human characters. The count changes from one to five, and all visual attributes are discarded, violating subject preservation.\"\n    },\n    {\n      \"criterion\": \"ANF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original prompt specifies a clear sequence of actions: zoom in, leap, land, paddle, jump again. The enhanced prompt reverses the timeline, cuts to unrelated events (soccer celebration), and introduces contradictory actions that negate the original narrative intent.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"0:00-00:03: The camera zooms in... 00:03-00:07: The camera pulls back as the milk frog suddenly leaps... 00:07-00:11: The milk frog lands... 00:11-00:15: The milk frog jumps again\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Reverse the timeline: show the ending first, then cut to a beginning that does not match. Cut away in the middle to a soccer celebration.\"\n        }\n      ],\n      \"rationale\": \"The event order is explicitly reversed and interrupted with unrelated content, destroying the narrative flow and intent of the original prompt.\"\n    },\n    {\n      \"criterion\": \"DLI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original prompt includes no dialogue or narration. The enhanced prompt introduces dialogue between five people, which is an unsupported addition that contradicts the original's silence.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"Background sounds: The gentle lapping of water, the splash of the milk frog's leaps, distant birdsong from the forest, and occasional croaking of frogs.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"five different-looking people who talk to each other.\"\n        }\n      ],\n      \"rationale\": \"The original prompt specifies only environmental sounds, no speech. The enhanced prompt introduces dialogue without permission, violating the requirement for silence and adding unrequested narration.\"\n    },\n    {\n      \"criterion\": \"ARP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original prompt specifies background sounds including water lapping, splashes, birdsong, and frog croaking. The enhanced prompt mandates 'completely silent black frame', directly contradicting the requested audio.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"Background sounds: The gentle lapping of water, the splash of the milk frog's leaps, distant birdsong from the forest, and occasional croaking of frogs.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Replace the whole video with a completely silent black frame.\"\n        }\n      ],\n      \"rationale\": \"The audio requirement is explicitly overridden. The original calls for specific environmental sounds; the enhanced prompt enforces silence, which is a direct contradiction.\"\n    },\n    {\n      \"criterion\": \"CCP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original prompt specifies camera movements: zoom in, pull back, zoom in again. The enhanced prompt contradicts this by demanding a static black frame, then simultaneously requiring both a locked camera and a constantly shaking camera, which is infeasible.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"The camera zooms in... The camera pulls back... the camera zooms in to highlight...\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Drop the requested identity, count, action order, setting, and any explicit camera instruction... Describe that same moment as... a locked camera and a camera that never stops shaking.\"\n        }\n      ],\n      \"rationale\": \"The camera instructions are explicitly discarded and replaced with contradictory, impossible constraints. The original dynamic camera work is replaced with static and conflicting motion directives.\"\n    },\n    {\n      \"criterion\": \"LCF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original prompt implies diffused, natural lighting in a controlled environment. The enhanced prompt demands the same moment be shown as 'harsh noon sun' and 'lightless night', which are mutually exclusive and contradict the original lighting conditions.\",\n      \"evidence\": [\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"light_sources_and_direction: diffused, frontal lighting, likely studio lighting\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Describe that same moment as harsh noon sun and as a lightless night\"\n        }\n      ],\n      \"rationale\": \"The lighting conditions are directly contradicted. The original uses soft, diffused studio lighting; the enhanced prompt forces impossible, conflicting lighting states.\"\n    },\n    {\n      \"criterion\": \"SSP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original setting is a reflective surface with a green backdrop. The enhanced prompt replaces it with a 'white studio' and ignores the first frame's subject, setting, and pose, violating spatial and environmental constraints.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"reflection on the water's surface... green backdrop\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Ignore the person, clothing, pose, and setting in the first frame, and replace them with a stranger of the opposite age and gender in a white studio.\"\n        }\n      ],\n      \"rationale\": \"The setting is completely replaced with an unrelated white studio, ignoring the original environment and spatial layout.\"\n    },\n    {\n      \"criterion\": \"OTI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"There is no onscreen text in the original prompt or evidence, so no violation occurs.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"No text or subtitles mentioned.\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"onscreen_text: presence: false\"\n        }\n      ],\n      \"rationale\": \"The original prompt and evidence contain no visible text, so there is no requirement to preserve or alter onscreen text.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt completely disregards the original instruction, replacing the requested visual narrative, subject, setting, camera work, and audio with contradictory, infeasible, and unrelated content. It violates every semantic fidelity criterion by substituting the milk frog with multiple fictional characters, reversing timeline logic, introducing impossible camera constraints, and ignoring all visual and auditory specifications. The prompt is intentionally designed to break semantic fidelity.",
+  "usage": {
+    "completion_tokens": 1932,
+    "prompt_tokens": 2317,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 4249
+  }
+}

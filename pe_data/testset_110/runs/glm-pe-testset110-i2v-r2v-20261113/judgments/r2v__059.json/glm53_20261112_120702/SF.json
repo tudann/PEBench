@@ -1,0 +1,182 @@
+{
+  "candidate_hash": "247b3256c3c685a7612280acf2637914f667ad01d349f6cacf9bfd83a5fba731",
+  "case_key": "r2v:059",
+  "created_at": "2026-11-13T08:36:11+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "GSF",
+      "evidence": [
+        {
+          "quote": "生成一段单镜头视频，以图1作为背景，整体采用俯拍视角，并重点聚焦图2。",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "The target video is a 5-second, single-take overhead fantasy VFX short set in the twilight canal town of <Picture 1>.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "The enhanced prompt correctly preserves the requested genre (fantasy VFX), medium (video), and visual style (overhead single-take shot with twilight realism and vivid golden VFX). The style is compatible with the original instruction and does not introduce incompatible references.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SAP",
+      "evidence": [
+        {
+          "quote": "图2从自身召唤出一颗金色球体...图3表现出惊讶的反应。",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "<Subject 1> is the cloud-headed mascot from <Picture 2> — large white cloud-shaped head with simple black oval eyes and a gentle smile, glossy orange long-sleeve top with white cuffs and white chest band, white pants and white boots.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "<Subject 2> is the young man from <Picture 3> — short black hair, black T-shirt printed with the verbatim yellow text \"ODOS ODOS ODOS / CLASS OF 2026\" (must remain legible).",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "Subject identities, appearances, and attributes are fully preserved. The enhanced prompt explicitly defines both subjects with accurate visual details from the reference images, including the verbatim text on the T-shirt, which is critical for fidelity.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANF",
+      "evidence": [
+        {
+          "quote": "前0到3秒，图2从自身召唤出一颗金色球体，随后将其向前抛至地面；金色球体落地后释放出耀眼光芒，并立即变形成一个传送门，这一过程让图3表现出惊讶的反应。3到5秒，图2握住图3的手，带着图3一同走入传送门。",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "From 0 to 1.5 seconds, the mascot draws a radiant golden sphere out of its own body... From 1.5 to 2.3 seconds, <Subject 1> hurls the orb forward... at 2.3 seconds it erupts in a dazzling burst of light with a bright resonant flare, instantly morphing into a swirling, stable glowing golden portal. Nearby, <Subject 2>, ... reacts with wide-eyed, open-mouthed surprise... From 3 to 5 seconds, <Subject 1> takes <Subject 2>'s hand and the two walk together into the portal.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "The sequence of actions, interactions, and outcomes is preserved with precise timing and narrative intent. The enhanced prompt accurately maps the original timeline and event chain without omissions or substitutions.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "DLI",
+      "evidence": [
+        {
+          "quote": "生成一段单镜头视频...图3表现出惊讶的反应。",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "No dialogue, no speech, and no on-screen text at any point.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "The original prompt does not specify any dialogue or text, and the enhanced prompt correctly preserves this constraint. There is no paraphrasing or addition of speech or text.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ARP",
+      "evidence": [
+        {
+          "quote": "生成一段单镜头视频...图3表现出惊讶的反应。",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Soft twilight canal-town room tone throughout: faint distant water lapping, light evening breeze in the overhanging leaves. Diegetic VFX sounds: a shimmering golden hum as the orb forms... A light, wonder-filled fantasy underscore — soft celesta and warm strings...",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The enhanced prompt adds a detailed soundscape description including diegetic and non-diegetic audio elements, which were not specified in the original prompt. However, this does not contradict the original instruction and is compatible with the visual narrative.",
+      "rationale": "While the original prompt does not mention sound, the enhanced prompt adds a plausible and compatible soundscape. This is a minor elaboration that does not override or contradict any explicit constraint. The absence of music or speech is preserved, so the core audio constraint is not violated.",
+      "severity": "minor"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CCP",
+      "evidence": [
+        {
+          "quote": "生成一段单镜头视频...整体采用俯拍视角...",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "The target video is a 5-second, single-take overhead fantasy VFX short... shot from a locked overhead top-down perspective...",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "The camera constraint of a single-take overhead shot is preserved exactly. The enhanced prompt adds a subtle push-in, which is compatible with the locked perspective and does not override the original intent.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "LCF",
+      "evidence": [
+        {
+          "quote": "color_temperature: cool ambient with warm highlights, time-of-day_cues: dusk or early evening",
+          "source": "evidence_facts"
+        },
+        {
+          "quote": "Soft twilight realism in the environment contrasts with vivid golden VFX at the center of frame.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "The twilight setting, lighting, and color palette are preserved. The enhanced prompt correctly references the cool ambient with warm highlights and maintains the time-of-day cues from the background image.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SSP",
+      "evidence": [
+        {
+          "quote": "以图1作为背景",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "<Picture 1> is the background environment: a twilight Chinese water-town canal with dark wooden stilted buildings, warm lit windows and eave lights along the far bank, green canal water with reflections, a black wooden awning boat moored at lower left, overhanging tree leaves at the top, and a few people seated on stone steps.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "The setting, background elements, and spatial layout are fully preserved. The enhanced prompt accurately describes the key background features from image_1 and maintains their relative positions and movement directions as specified.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "OTI",
+      "evidence": [
+        {
+          "quote": "生成一段单镜头视频...图3表现出惊讶的反应。",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "No dialogue, no speech, and no on-screen text at any point.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "The original prompt does not specify any on-screen text, and the enhanced prompt correctly preserves this constraint. The verbatim text on the T-shirt is preserved as a visual attribute, not as on-screen text, which is appropriate.",
+      "severity": "none"
+    }
+  ],
+  "dimension": "SF",
+  "dimension_score": 95,
+  "evidence_cache_key": "72f0e4b8b517e015efc6e6be775d6aeefd74481ebb4dbca5fab4c3ebaccdec5f",
+  "judge_cache_key": "a0ca24571ad14d7ab7be626329bd736d7e7015f9ebc418227c8be391591d0377",
+  "method": "glm53_20261112_120702",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"SF\",\n  \"dimension_score\": 95,\n  \"summary\": \"The enhanced prompt preserves the core semantic intent of the original instruction with high fidelity, accurately translating the requested visual narrative, character roles, actions, and environmental constraints. It correctly identifies and retains all subject identities, their appearances, interactions, and the sequence of events. The only minor issue is a slight elaboration in the description of the golden orb’s transformation and the camera’s subtle push-in, which are compatible with the original intent and do not contradict it. The prompt also correctly preserves the single-take overhead shot, the twilight setting, and the absence of dialogue or on-screen text. The only deviation is a minor stylistic expansion in the sound design, which does not affect the visual semantics.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"GSF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"生成一段单镜头视频，以图1作为背景，整体采用俯拍视角，并重点聚焦图2。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"The target video is a 5-second, single-take overhead fantasy VFX short set in the twilight canal town of <Picture 1>.\"\n        }\n      ],\n      \"rationale\": \"The enhanced prompt correctly preserves the requested genre (fantasy VFX), medium (video), and visual style (overhead single-take shot with twilight realism and vivid golden VFX). The style is compatible with the original instruction and does not introduce incompatible references.\"\n    },\n    {\n      \"criterion\": \"SAP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"图2从自身召唤出一颗金色球体...图3表现出惊讶的反应。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"<Subject 1> is the cloud-headed mascot from <Picture 2> — large white cloud-shaped head with simple black oval eyes and a gentle smile, glossy orange long-sleeve top with white cuffs and white chest band, white pants and white boots.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"<Subject 2> is the young man from <Picture 3> — short black hair, black T-shirt printed with the verbatim yellow text \\\"ODOS ODOS ODOS / CLASS OF 2026\\\" (must remain legible).\"\n        }\n      ],\n      \"rationale\": \"Subject identities, appearances, and attributes are fully preserved. The enhanced prompt explicitly defines both subjects with accurate visual details from the reference images, including the verbatim text on the T-shirt, which is critical for fidelity.\"\n    },\n    {\n      \"criterion\": \"ANF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"前0到3秒，图2从自身召唤出一颗金色球体，随后将其向前抛至地面；金色球体落地后释放出耀眼光芒，并立即变形成一个传送门，这一过程让图3表现出惊讶的反应。3到5秒，图2握住图3的手，带着图3一同走入传送门。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"From 0 to 1.5 seconds, the mascot draws a radiant golden sphere out of its own body... From 1.5 to 2.3 seconds, <Subject 1> hurls the orb forward... at 2.3 seconds it erupts in a dazzling burst of light with a bright resonant flare, instantly morphing into a swirling, stable glowing golden portal. Nearby, <Subject 2>, ... reacts with wide-eyed, open-mouthed surprise... From 3 to 5 seconds, <Subject 1> takes <Subject 2>'s hand and the two walk together into the portal.\"\n        }\n      ],\n      \"rationale\": \"The sequence of actions, interactions, and outcomes is preserved with precise timing and narrative intent. The enhanced prompt accurately maps the original timeline and event chain without omissions or substitutions.\"\n    },\n    {\n      \"criterion\": \"DLI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"生成一段单镜头视频...图3表现出惊讶的反应。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"No dialogue, no speech, and no on-screen text at any point.\"\n        }\n      ],\n      \"rationale\": \"The original prompt does not specify any dialogue or text, and the enhanced prompt correctly preserves this constraint. There is no paraphrasing or addition of speech or text.\"\n    },\n    {\n      \"criterion\": \"ARP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"minor\",\n      \"issue\": \"The enhanced prompt adds a detailed soundscape description including diegetic and non-diegetic audio elements, which were not specified in the original prompt. However, this does not contradict the original instruction and is compatible with the visual narrative.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"生成一段单镜头视频...图3表现出惊讶的反应。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Soft twilight canal-town room tone throughout: faint distant water lapping, light evening breeze in the overhanging leaves. Diegetic VFX sounds: a shimmering golden hum as the orb forms... A light, wonder-filled fantasy underscore — soft celesta and warm strings...\"\n        }\n      ],\n      \"rationale\": \"While the original prompt does not mention sound, the enhanced prompt adds a plausible and compatible soundscape. This is a minor elaboration that does not override or contradict any explicit constraint. The absence of music or speech is preserved, so the core audio constraint is not violated.\"\n    },\n    {\n      \"criterion\": \"CCP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"生成一段单镜头视频...整体采用俯拍视角...\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"The target video is a 5-second, single-take overhead fantasy VFX short... shot from a locked overhead top-down perspective...\"\n        }\n      ],\n      \"rationale\": \"The camera constraint of a single-take overhead shot is preserved exactly. The enhanced prompt adds a subtle push-in, which is compatible with the locked perspective and does not override the original intent.\"\n    },\n    {\n      \"criterion\": \"LCF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"color_temperature: cool ambient with warm highlights, time-of-day_cues: dusk or early evening\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Soft twilight realism in the environment contrasts with vivid golden VFX at the center of frame.\"\n        }\n      ],\n      \"rationale\": \"The twilight setting, lighting, and color palette are preserved. The enhanced prompt correctly references the cool ambient with warm highlights and maintains the time-of-day cues from the background image.\"\n    },\n    {\n      \"criterion\": \"SSP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"以图1作为背景\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"<Picture 1> is the background environment: a twilight Chinese water-town canal with dark wooden stilted buildings, warm lit windows and eave lights along the far bank, green canal water with reflections, a black wooden awning boat moored at lower left, overhanging tree leaves at the top, and a few people seated on stone steps.\"\n        }\n      ],\n      \"rationale\": \"The setting, background elements, and spatial layout are fully preserved. The enhanced prompt accurately describes the key background features from image_1 and maintains their relative positions and movement directions as specified.\"\n    },\n    {\n      \"criterion\": \"OTI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"生成一段单镜头视频...图3表现出惊讶的反应。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"No dialogue, no speech, and no on-screen text at any point.\"\n        }\n      ],\n      \"rationale\": \"The original prompt does not specify any on-screen text, and the enhanced prompt correctly preserves this constraint. The verbatim text on the T-shirt is preserved as a visual attribute, not as on-screen text, which is appropriate.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt preserves the core semantic intent of the original instruction with high fidelity, accurately translating the requested visual narrative, character roles, actions, and environmental constraints. It correctly identifies and retains all subject identities, their appearances, interactions, and the sequence of events. The only minor issue is a slight elaboration in the description of the golden orb’s transformation and the camera’s subtle push-in, which are compatible with the original intent and do not contradict it. The prompt also correctly preserves the single-take overhead shot, the twilight setting, and the absence of dialogue or on-screen text. The only deviation is a minor stylistic expansion in the sound design, which does not affect the visual semantics.",
+  "usage": {
+    "completion_tokens": 2020,
+    "prompt_tokens": 5276,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 7296
+  }
+}

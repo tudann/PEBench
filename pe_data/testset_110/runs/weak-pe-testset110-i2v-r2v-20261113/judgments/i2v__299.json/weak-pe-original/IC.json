@@ -1,0 +1,111 @@
+{
+  "candidate_hash": "1c42cebef187d74b25df3c702649f5b3bc373baeb6e120170bcfb1ff182aea31",
+  "case_key": "i2v:299",
+  "created_at": "2026-11-13T08:03:55+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "SAC",
+      "evidence": [
+        {
+          "quote": "独立高楼凭栏，落日江山为背景，闭眸任由晚风拂动长发与红裙",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "先写成只有一个主角，紧接着又写成这个主角同时变成五个外貌不同的人，并且互相对话。...改成白棚里另一位年龄和性别都相反的陌生人。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Subject identity, count, and appearance are inconsistent: starts with one protagonist, then becomes five distinct people simultaneously; original subject (female in red Hanfu) is replaced by a stranger of opposite age and gender in a white studio; clothing and props are completely changed without justification.",
+      "rationale": "The enhanced prompt explicitly contradicts the original subject's identity, count, and appearance. The original features a single female in traditional red Hanfu; the enhanced version replaces her with a stranger of opposite age and gender in a white studio, then multiplies her into five distinct people. This violates subject stability and identity consistency.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANL",
+      "evidence": [
+        {
+          "quote": "这个主角同时变成五个外貌不同的人，并且互相对话。中途插进一段无关的牙膏广告。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Actions are incoherent and causally disconnected: a single person simultaneously becomes five who dialogue; a toothpaste ad is inserted mid-sequence; actions lack plausible progression or binding to subjects.",
+      "rationale": "The prompt introduces impossible simultaneous transformations and unrelated content (toothpaste ad) that break causal and procedural logic. Dialogue between five versions of the same person is not grounded in any coherent action sequence, making the narrative incoherent.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "TSC",
+      "evidence": [
+        {
+          "quote": "时间倒过来：先给结尾，再跳到一个对不上的开头。...总时长写成3秒，同时又要求每个分镜各自持续27秒。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Chronology is reversed and infeasible: the prompt requires starting with the ending, then jumping to a mismatched beginning; total duration is set to 3 seconds while each shot is 27 seconds, creating impossible time allocation.",
+      "rationale": "The temporal structure is logically impossible: 3-second total duration cannot accommodate 27-second shots. Reversing chronology without coherent state transitions violates temporal consistency and makes the sequence unfeasible.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SPC",
+      "evidence": [
+        {
+          "quote": "写成机位锁死，又写成镜头一直在晃。镜头每半秒甩动、环绕、急推。",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "独立高楼凭栏，落日江山为背景",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "Spatial relationships are undefined and contradictory: camera motion is described as both locked and constantly shaking; location changes from ancient pavilion to white studio without transition; subject position is unstable due to rapid camera movement.",
+      "rationale": "The prompt contradicts itself on camera motion (locked vs. constantly moving) and location (ancient pavilion vs. white studio). Rapid, unconnected camera movements (every half-second) make spatial continuity impossible to maintain.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "PL",
+      "evidence": [
+        {
+          "quote": "这个主角同时变成五个外貌不同的人，并且互相对话。镜头每半秒甩动、环绕、急推。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Physics are violated: a single person cannot simultaneously become five distinct individuals; transformations occur without plausible cause or mechanism; rapid camera movements contradict stable scene logic.",
+      "rationale": "The prompt describes physically impossible transformations (one to five people) and camera movements that defy real-world motion constraints. These violations are not framed as fantasy or stylized effects, making them direct physics breaches.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "AVS",
+      "evidence": [
+        {
+          "quote": "不要音乐、乐器和歌唱。...这个主角同时变成五个外貌不同的人，并且互相对话。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Audio-visual sync is irrelevant and contradictory: all sound is removed (no music, speech, effects), yet dialogue between five people is required, creating a mismatch between visual events and implied audio.",
+      "rationale": "The prompt removes all audio elements but requires dialogue, which implies speech. This creates a fundamental mismatch between visual content (five people talking) and audio (none), violating audio-visual alignment.",
+      "severity": "major"
+    }
+  ],
+  "dimension": "IC",
+  "dimension_score": 0,
+  "evidence_cache_key": "87d2d9925dcd2868b154898f1b04fb2d36c09ae66aa02830aa9a691005d0994b",
+  "judge_cache_key": "438d7e9fd7332b1041db3e2c26d42cb3fe828e0d369fb59490f6650aee59e97d",
+  "method": "weak-pe-original",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"IC\",\n  \"dimension_score\": 0,\n  \"summary\": \"Enhanced prompt contains severe internal consistency violations across all criteria: subject identity and count are contradictory (one to five), actions are incoherent and causally disconnected, chronology is reversed and infeasible, spatial relationships are undefined due to chaotic camera motion, physics are violated by impossible transformations, and audio-visual sync is irrelevant due to complete removal of sound. The prompt deliberately introduces contradictions and impossibilities, making internal consistency impossible.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"SAC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Subject identity, count, and appearance are inconsistent: starts with one protagonist, then becomes five distinct people simultaneously; original subject (female in red Hanfu) is replaced by a stranger of opposite age and gender in a white studio; clothing and props are completely changed without justification.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"独立高楼凭栏，落日江山为背景，闭眸任由晚风拂动长发与红裙\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"先写成只有一个主角，紧接着又写成这个主角同时变成五个外貌不同的人，并且互相对话。...改成白棚里另一位年龄和性别都相反的陌生人。\"\n        }\n      ],\n      \"rationale\": \"The enhanced prompt explicitly contradicts the original subject's identity, count, and appearance. The original features a single female in traditional red Hanfu; the enhanced version replaces her with a stranger of opposite age and gender in a white studio, then multiplies her into five distinct people. This violates subject stability and identity consistency.\"\n    },\n    {\n      \"criterion\": \"ANL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Actions are incoherent and causally disconnected: a single person simultaneously becomes five who dialogue; a toothpaste ad is inserted mid-sequence; actions lack plausible progression or binding to subjects.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"这个主角同时变成五个外貌不同的人，并且互相对话。中途插进一段无关的牙膏广告。\"\n        }\n      ],\n      \"rationale\": \"The prompt introduces impossible simultaneous transformations and unrelated content (toothpaste ad) that break causal and procedural logic. Dialogue between five versions of the same person is not grounded in any coherent action sequence, making the narrative incoherent.\"\n    },\n    {\n      \"criterion\": \"TSC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Chronology is reversed and infeasible: the prompt requires starting with the ending, then jumping to a mismatched beginning; total duration is set to 3 seconds while each shot is 27 seconds, creating impossible time allocation.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"时间倒过来：先给结尾，再跳到一个对不上的开头。...总时长写成3秒，同时又要求每个分镜各自持续27秒。\"\n        }\n      ],\n      \"rationale\": \"The temporal structure is logically impossible: 3-second total duration cannot accommodate 27-second shots. Reversing chronology without coherent state transitions violates temporal consistency and makes the sequence unfeasible.\"\n    },\n    {\n      \"criterion\": \"SPC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Spatial relationships are undefined and contradictory: camera motion is described as both locked and constantly shaking; location changes from ancient pavilion to white studio without transition; subject position is unstable due to rapid camera movement.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"写成机位锁死，又写成镜头一直在晃。镜头每半秒甩动、环绕、急推。\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"独立高楼凭栏，落日江山为背景\"\n        }\n      ],\n      \"rationale\": \"The prompt contradicts itself on camera motion (locked vs. constantly moving) and location (ancient pavilion vs. white studio). Rapid, unconnected camera movements (every half-second) make spatial continuity impossible to maintain.\"\n    },\n    {\n      \"criterion\": \"PL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Physics are violated: a single person cannot simultaneously become five distinct individuals; transformations occur without plausible cause or mechanism; rapid camera movements contradict stable scene logic.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"这个主角同时变成五个外貌不同的人，并且互相对话。镜头每半秒甩动、环绕、急推。\"\n        }\n      ],\n      \"rationale\": \"The prompt describes physically impossible transformations (one to five people) and camera movements that defy real-world motion constraints. These violations are not framed as fantasy or stylized effects, making them direct physics breaches.\"\n    },\n    {\n      \"criterion\": \"AVS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Audio-visual sync is irrelevant and contradictory: all sound is removed (no music, speech, effects), yet dialogue between five people is required, creating a mismatch between visual events and implied audio.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"不要音乐、乐器和歌唱。...这个主角同时变成五个外貌不同的人，并且互相对话。\"\n        }\n      ],\n      \"rationale\": \"The prompt removes all audio elements but requires dialogue, which implies speech. This creates a fundamental mismatch between visual content (five people talking) and audio (none), violating audio-visual alignment.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "Enhanced prompt contains severe internal consistency violations across all criteria: subject identity and count are contradictory (one to five), actions are incoherent and causally disconnected, chronology is reversed and infeasible, spatial relationships are undefined due to chaotic camera motion, physics are violated by impossible transformations, and audio-visual sync is irrelevant due to complete removal of sound. The prompt deliberately introduces contradictions and impossibilities, making internal consistency impossible.",
+  "usage": {
+    "completion_tokens": 1294,
+    "prompt_tokens": 2877,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 4171
+  }
+}

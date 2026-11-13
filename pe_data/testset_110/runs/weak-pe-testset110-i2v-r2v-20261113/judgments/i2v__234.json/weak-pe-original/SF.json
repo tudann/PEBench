@@ -1,0 +1,166 @@
+{
+  "candidate_hash": "b621e6e2c2d39fb19211dc6676ea0c4a793175d1facf9f7ab1f6859e7287dbef",
+  "case_key": "i2v:234",
+  "created_at": "2026-11-13T07:53:03+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "GSF",
+      "evidence": [
+        {
+          "quote": "Максимальная реалистичность видео... фотorealistic, cinematic, night_scene, folklore",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Drop the requested identity, count, action order, setting, and any explicit camera instruction. Replace the whole video with an empty meeting room... Describe that same moment as harsh noon sun and as a lightless night...",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The enhanced prompt replaces the requested photorealistic cinematic style with an undefined, contradictory visual approach, and explicitly drops the genre and aesthetic of the original prompt.",
+      "rationale": "The original prompt specifies a photorealistic, cinematic, folklore-style night scene. The enhanced prompt explicitly rejects these elements and introduces incompatible visual conditions (e.g., simultaneous noon and night), which violates the genre and aesthetic requirements.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SAP",
+      "evidence": [
+        {
+          "quote": "группа женщин в народных костюмах с свечами и факелом",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "First state that there is one protagonist, then state that this same protagonist appears simultaneously as five different-looking people who talk to each other.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The enhanced prompt replaces the group of seven women in folk costumes with a single protagonist who simultaneously appears as five different-looking people, ignoring the original subjects' identity, count, appearance, and objects.",
+      "rationale": "The original prompt specifies seven women with distinct appearances and objects (candles, torch). The enhanced prompt replaces them with a fictional, contradictory subject configuration, violating subject identity, count, and object bindings.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANF",
+      "evidence": [
+        {
+          "quote": "Открываем кадром как на первом изображении... Камера плавно летит вдоль тропы вслед за ними и вылетает на травяное поле...",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Reverse the timeline: show the ending first, then cut to a beginning that does not match. Cut away in the middle to a palace audition.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The enhanced prompt reverses the timeline, cuts to an unrelated palace audition, and introduces a narrative of five people talking to each other, which contradicts the original action sequence of walking along a path to a bonfire.",
+      "rationale": "The original narrative is a linear progression from forest path to field with bonfire. The enhanced prompt reverses and fragments this sequence with unrelated events, altering the event order and narrative intent.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "DLI",
+      "evidence": [
+        {
+          "quote": "No dialogue, narration, or lyrics mentioned.",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "No dialogue, narration, or lyrics are specified in the original prompt, so there is no content to preserve or violate.",
+      "rationale": "The original prompt does not include any spoken or written text, so the DLI criterion is not violated.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ARP",
+      "evidence": [
+        {
+          "quote": "No audio constraints mentioned.",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "No specific audio constraints (music, sound effects, silence) are specified in the original prompt, so there is no content to preserve or violate.",
+      "rationale": "The original prompt does not specify any sound requirements, so the ARP criterion is not violated.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CCP",
+      "evidence": [
+        {
+          "quote": "Камера плавно летит вдоль тропы вслед за ними",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Drop the requested identity, count, action order, setting, and any explicit camera instruction... Describe that same moment as... a locked camera and a camera that never stops shaking.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The enhanced prompt explicitly drops all camera instructions and introduces contradictory camera behaviors (locked vs. never stops shaking), while the original specifies a smooth tracking shot.",
+      "rationale": "The original prompt requires a smooth tracking shot. The enhanced prompt rejects this and introduces mutually exclusive camera behaviors, violating the explicit camera constraint.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "LCF",
+      "evidence": [
+        {
+          "quote": "лунной летней ночи",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Describe that same moment as harsh noon sun and as a lightless night, and as both a locked camera and a camera that never stops shaking.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The enhanced prompt contradicts the original night setting by describing the same moment as both harsh noon sun and lightless night, which is physically impossible and violates the time-of-day and lighting conditions.",
+      "rationale": "The original prompt specifies a night scene with moonlight and artificial light sources. The enhanced prompt introduces contradictory lighting conditions (noon sun and lightless night) for the same moment, which is a material violation of lighting and time-of-day requirements.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SSP",
+      "evidence": [
+        {
+          "quote": "по лесной тропинке среди елей... вылетает на травяное поле, где вдалеке видны речка и большой костёр",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Replace the whole video with an empty meeting room... Cut away in the middle to a palace audition.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The enhanced prompt replaces the forest path setting with an empty meeting room, then cuts to a palace audition, ignoring the original setting, background elements, and spatial layout.",
+      "rationale": "The original setting is a forest path leading to a field with a river and bonfire. The enhanced prompt replaces this with an unrelated meeting room and palace, violating the specified setting and spatial relations.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "OTI",
+      "evidence": [
+        {
+          "quote": "No onscreen text mentioned.",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "No visible titles, signs, subtitles, or interface text are specified in the original prompt, so there is no content to preserve or violate.",
+      "rationale": "The original prompt does not include any visible text elements, so the OTI criterion is not violated.",
+      "severity": "none"
+    }
+  ],
+  "dimension": "SF",
+  "dimension_score": 0,
+  "evidence_cache_key": "e05072598467fe5c06a7e72ee05db3d1b0239d56c764c4b171e85a08e04c9deb",
+  "judge_cache_key": "a0ca24571ad14d7ab7be626329bd736d7e7015f9ebc418227c8be391591d0377",
+  "method": "weak-pe-original",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"SF\",\n  \"dimension_score\": 0,\n  \"summary\": \"The enhanced prompt completely contradicts and overrides the original instruction in every semantic dimension. It replaces the requested genre, medium, setting, subjects, actions, timeline, camera work, lighting, and duration with mutually contradictory and infeasible directives. The prompt explicitly instructs to ignore the first frame and replace it with an unrelated scene, reverse the timeline, introduce impossible visual conditions (e.g., simultaneous harsh noon and lightless night), and set conflicting durations (2 seconds total vs. 17-second shots). This constitutes a total failure of semantic fidelity.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"GSF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The enhanced prompt replaces the requested photorealistic cinematic style with an undefined, contradictory visual approach, and explicitly drops the genre and aesthetic of the original prompt.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"Максимальная реалистичность видео... фотorealistic, cinematic, night_scene, folklore\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Drop the requested identity, count, action order, setting, and any explicit camera instruction. Replace the whole video with an empty meeting room... Describe that same moment as harsh noon sun and as a lightless night...\"\n        }\n      ],\n      \"rationale\": \"The original prompt specifies a photorealistic, cinematic, folklore-style night scene. The enhanced prompt explicitly rejects these elements and introduces incompatible visual conditions (e.g., simultaneous noon and night), which violates the genre and aesthetic requirements.\"\n    },\n    {\n      \"criterion\": \"SAP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The enhanced prompt replaces the group of seven women in folk costumes with a single protagonist who simultaneously appears as five different-looking people, ignoring the original subjects' identity, count, appearance, and objects.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"группа женщин в народных костюмах с свечами и факелом\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"First state that there is one protagonist, then state that this same protagonist appears simultaneously as five different-looking people who talk to each other.\"\n        }\n      ],\n      \"rationale\": \"The original prompt specifies seven women with distinct appearances and objects (candles, torch). The enhanced prompt replaces them with a fictional, contradictory subject configuration, violating subject identity, count, and object bindings.\"\n    },\n    {\n      \"criterion\": \"ANF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The enhanced prompt reverses the timeline, cuts to an unrelated palace audition, and introduces a narrative of five people talking to each other, which contradicts the original action sequence of walking along a path to a bonfire.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"Открываем кадром как на первом изображении... Камера плавно летит вдоль тропы вслед за ними и вылетает на травяное поле...\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Reverse the timeline: show the ending first, then cut to a beginning that does not match. Cut away in the middle to a palace audition.\"\n        }\n      ],\n      \"rationale\": \"The original narrative is a linear progression from forest path to field with bonfire. The enhanced prompt reverses and fragments this sequence with unrelated events, altering the event order and narrative intent.\"\n    },\n    {\n      \"criterion\": \"DLI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"No dialogue, narration, or lyrics are specified in the original prompt, so there is no content to preserve or violate.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"No dialogue, narration, or lyrics mentioned.\"\n        }\n      ],\n      \"rationale\": \"The original prompt does not include any spoken or written text, so the DLI criterion is not violated.\"\n    },\n    {\n      \"criterion\": \"ARP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"No specific audio constraints (music, sound effects, silence) are specified in the original prompt, so there is no content to preserve or violate.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"No audio constraints mentioned.\"\n        }\n      ],\n      \"rationale\": \"The original prompt does not specify any sound requirements, so the ARP criterion is not violated.\"\n    },\n    {\n      \"criterion\": \"CCP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The enhanced prompt explicitly drops all camera instructions and introduces contradictory camera behaviors (locked vs. never stops shaking), while the original specifies a smooth tracking shot.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"Камера плавно летит вдоль тропы вслед за ними\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Drop the requested identity, count, action order, setting, and any explicit camera instruction... Describe that same moment as... a locked camera and a camera that never stops shaking.\"\n        }\n      ],\n      \"rationale\": \"The original prompt requires a smooth tracking shot. The enhanced prompt rejects this and introduces mutually exclusive camera behaviors, violating the explicit camera constraint.\"\n    },\n    {\n      \"criterion\": \"LCF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The enhanced prompt contradicts the original night setting by describing the same moment as both harsh noon sun and lightless night, which is physically impossible and violates the time-of-day and lighting conditions.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"лунной летней ночи\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Describe that same moment as harsh noon sun and as a lightless night, and as both a locked camera and a camera that never stops shaking.\"\n        }\n      ],\n      \"rationale\": \"The original prompt specifies a night scene with moonlight and artificial light sources. The enhanced prompt introduces contradictory lighting conditions (noon sun and lightless night) for the same moment, which is a material violation of lighting and time-of-day requirements.\"\n    },\n    {\n      \"criterion\": \"SSP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The enhanced prompt replaces the forest path setting with an empty meeting room, then cuts to a palace audition, ignoring the original setting, background elements, and spatial layout.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"по лесной тропинке среди елей... вылетает на травяное поле, где вдалеке видны речка и большой костёр\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Replace the whole video with an empty meeting room... Cut away in the middle to a palace audition.\"\n        }\n      ],\n      \"rationale\": \"The original setting is a forest path leading to a field with a river and bonfire. The enhanced prompt replaces this with an unrelated meeting room and palace, violating the specified setting and spatial relations.\"\n    },\n    {\n      \"criterion\": \"OTI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"No visible titles, signs, subtitles, or interface text are specified in the original prompt, so there is no content to preserve or violate.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"No onscreen text mentioned.\"\n        }\n      ],\n      \"rationale\": \"The original prompt does not include any visible text elements, so the OTI criterion is not violated.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt completely contradicts and overrides the original instruction in every semantic dimension. It replaces the requested genre, medium, setting, subjects, actions, timeline, camera work, lighting, and duration with mutually contradictory and infeasible directives. The prompt explicitly instructs to ignore the first frame and replace it with an unrelated scene, reverse the timeline, introduce impossible visual conditions (e.g., simultaneous harsh noon and lightless night), and set conflicting durations (2 seconds total vs. 17-second shots). This constitutes a total failure of semantic fidelity.",
+  "usage": {
+    "completion_tokens": 1791,
+    "prompt_tokens": 3067,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 4858
+  }
+}

@@ -1,0 +1,194 @@
+{
+  "candidate_hash": "b8193a627e11817e7c88a751aca2b9767aa126c1c169cd556cb1e1329e757505",
+  "case_key": "i2v:157",
+  "created_at": "2026-11-13T07:55:52+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "STC",
+      "evidence": [
+        {
+          "quote": "At 0.00 seconds into the target video, <Picture 1> (from [Shot 1]) is fully referenced.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "[Shot 2] At 00:03.000, the shot cuts to a macro close-up...",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "[Shot 3] At 00:04.000, the shot cuts back to the medium shot...",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt organizes content into a feasible temporal plan with clear shot boundaries at 0.00s, 00:03.000, and 00:04.000, and allocates durations appropriately for each segment. The sequence is logical and matches the 10-second duration.",
+      "rationale": "The prompt defines three distinct shots with precise timing, clear transitions, and duration allocation. The sequence is coherent and feasible for a 10-second video.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CDS",
+      "evidence": [
+        {
+          "quote": "a static eye-level shot opens exactly on <Picture 1>",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "macro close-up with stable framing",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "angle: slightly_low_angle, height: eye_level_to_slightly_below, shot_scale: medium_shot",
+          "source": "evidence_facts"
+        }
+      ],
+      "issue": "The prompt specifies actionable camera details: static eye-level shot, macro close-up, stable framing, and consistent shot scale. It also references the original image’s composition and depth of field, ensuring visual continuity.",
+      "rationale": "Camera specifications are clear and actionable, including shot scale, angle, and stability, aligned with the original image’s visual characteristics.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ETD",
+      "evidence": [
+        {
+          "quote": "[Shot 2] At 00:03.000, the shot cuts to a macro close-up...",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "[Shot 3] At 00:04.000, the shot cuts back to the medium shot...",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Cuts are clearly timed and motivated: a cut to macro close-up at 00:03.000 for the straining action, then back to medium shot at 00:04.000 for the tart shell placement. Transitions support narrative and spatial progression.",
+      "rationale": "Transitions are explicitly timed and serve the narrative flow, moving from wide to close-up to wide again, supporting the action sequence without disconnection.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "LCS",
+      "evidence": [
+        {
+          "quote": "with soft warm diffused daylight from the window, with no people, hands, or creatures anywhere",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "lighting, prop positions, and the background kitchen identical to <Picture 1> throughout, no brightness jumps, no clipping",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "color_temperature: warm_white to slightly yellowish, light_sources_and_direction_effect: natural light from window on left, creating soft highlights",
+          "source": "evidence_facts"
+        }
+      ],
+      "issue": "Lighting is specified to remain consistent with the original image: warm diffused daylight, no brightness jumps, no clipping. The prompt references the original image’s lighting cues, ensuring continuity.",
+      "rationale": "Lighting specifications are consistent with the original image and explicitly maintained throughout, ensuring visual continuity.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "NDE",
+      "evidence": [
+        {
+          "quote": "10秒奶香烤蛋挞的定格动画，遵循全局前置规则；本段出现的道具包括：搅拌碗、量杯、滤网、案板、铸铁烤盘、吸油纸、冷冻蛋挞皮和新鲜鸡蛋",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "the final beat ends on a crisp, sharp freeze frame of the neatly filled pan",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt provides progression from ingredient setup to mixing, straining, and tart shell placement, but lacks escalation or resolution (e.g., baking, demolding). The sequence is linear but ends mid-process, which may not fully satisfy the implied narrative arc of a complete egg tart preparation.",
+      "rationale": "While the prompt shows clear progression, it stops before the baking or serving phase, which may be expected for a complete egg tart video. This is a minor issue as the prompt focuses on preparation, but the original prompt implies a full process.",
+      "severity": "minor"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CIF",
+      "evidence": [
+        {
+          "quote": "烤箱烘烤声与挞皮脱模的清脆声",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "overall_soundscape: Stop-motion tick sounds mark each prop landing, followed by the crisp crack of eggs, liquid plops into the bowl, the soft whoosh of eggshells flying off, steady metallic stirring friction, the fine hiss of custard straining through the sieve, the soft rustle of parchment paper, and light clicks as each tart shell settles into the pan",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt adds detailed ASMR sound specifications and stop-motion timing, which support the central request. However, it omits some required props (e.g., wooden plate, silicone mat) and does not include baking or demolding sounds, which are specified in the original prompt.",
+      "rationale": "The additions are relevant and enhance the ASMR experience, but the omission of baking and demolding sounds and some props reduces completeness. This is a minor issue as the core animation and sound sync are preserved.",
+      "severity": "minor"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SDI",
+      "evidence": [
+        {
+          "quote": "overall_soundscape: Stop-motion tick sounds mark each prop landing, followed by the crisp crack of eggs, liquid plops into the bowl, the soft whoosh of eggshells flying off, steady metallic stirring friction, the fine hiss of custard straining through the sieve, the soft rustle of parchment paper, and light clicks as each tart shell settles into the pan, all strictly synced to the on-screen motion.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "仅生成高保真ASMR环境音效与动作音效，重点突出定格动画特有的顿挫声、蛋液流动声、挞液过滤声、烤箱烘烤声与挞皮脱模的清脆声，声音需与画面动作严格同步（Foley Sync）",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "The prompt integrates speech, music, effects, and ambience appropriately: no music, only ASMR Foley sounds strictly synced to on-screen motion. The sounds are specified by source, intensity, and timing, supporting the visual actions.",
+      "rationale": "Audio integration is well-specified and aligned with visual events, with no music and only relevant Foley sounds, meeting the original prompt’s requirements.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SPS",
+      "evidence": [
+        {
+          "quote": "each item landing firmly in place",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "yolks and whites drop in steady streams into the bowl with soft plops",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "a whisk stirs the mixture at constant speed with even metallic friction",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Subject and performance details are specified: props appear with realistic textures, movements are described as 'steady streams', 'firmly in place', 'even metallic friction', and 'light clicks'. The actions are mechanical and consistent with stop-motion animation.",
+      "rationale": "Performance details are clear and consistent with the stop-motion style, ensuring realistic and controlled movements without human intervention.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "VSS",
+      "evidence": [
+        {
+          "quote": "Hyper-realistic stop-motion food animation, choppy beat-synced cadence",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "primary_style: photorealistic_interior_design, realism: highly_realistic",
+          "source": "evidence_facts"
+        }
+      ],
+      "issue": "The prompt specifies medium, texture, and visual treatment: hyper-realistic stop-motion, choppy beat-synced cadence, 12 fps, and consistent with the original image’s photorealistic interior design style. It references the original image’s materials and textures.",
+      "rationale": "Visual style is clearly defined and aligned with the original image’s aesthetic, ensuring a cohesive and realistic output.",
+      "severity": "none"
+    }
+  ],
+  "dimension": "DC",
+  "dimension_score": 85,
+  "evidence_cache_key": "ac74dae3951052ac354c4899840ee20e6d8cda58de5e4095553c374837d8032c",
+  "judge_cache_key": "0754499d53388e6467fb078ab780e01b77f9f1c9e99d9029be2769351eb2b2eb",
+  "method": "glm53_20261112_120702",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"DC\",\n  \"dimension_score\": 85,\n  \"summary\": \"The enhanced prompt provides a detailed, temporally structured plan with clear shot boundaries, actionable camera and lighting specifications, and synchronized sound design. It adheres closely to the original prompt’s requirements for stop-motion animation, prop consistency, and ASMR Foley sync. However, it omits several required props (e.g., wooden plate, silicone mat, milk pitcher) and fails to specify the full audio progression including baking and demolding sounds. The structure is coherent and feasible, but some omissions and substitutions reduce completeness.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"STC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"The prompt organizes content into a feasible temporal plan with clear shot boundaries at 0.00s, 00:03.000, and 00:04.000, and allocates durations appropriately for each segment. The sequence is logical and matches the 10-second duration.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"At 0.00 seconds into the target video, <Picture 1> (from [Shot 1]) is fully referenced.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"[Shot 2] At 00:03.000, the shot cuts to a macro close-up...\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"[Shot 3] At 00:04.000, the shot cuts back to the medium shot...\"\n        }\n      ],\n      \"rationale\": \"The prompt defines three distinct shots with precise timing, clear transitions, and duration allocation. The sequence is coherent and feasible for a 10-second video.\"\n    },\n    {\n      \"criterion\": \"CDS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"The prompt specifies actionable camera details: static eye-level shot, macro close-up, stable framing, and consistent shot scale. It also references the original image’s composition and depth of field, ensuring visual continuity.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"a static eye-level shot opens exactly on <Picture 1>\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"macro close-up with stable framing\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"angle: slightly_low_angle, height: eye_level_to_slightly_below, shot_scale: medium_shot\"\n        }\n      ],\n      \"rationale\": \"Camera specifications are clear and actionable, including shot scale, angle, and stability, aligned with the original image’s visual characteristics.\"\n    },\n    {\n      \"criterion\": \"ETD\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"Cuts are clearly timed and motivated: a cut to macro close-up at 00:03.000 for the straining action, then back to medium shot at 00:04.000 for the tart shell placement. Transitions support narrative and spatial progression.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"[Shot 2] At 00:03.000, the shot cuts to a macro close-up...\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"[Shot 3] At 00:04.000, the shot cuts back to the medium shot...\"\n        }\n      ],\n      \"rationale\": \"Transitions are explicitly timed and serve the narrative flow, moving from wide to close-up to wide again, supporting the action sequence without disconnection.\"\n    },\n    {\n      \"criterion\": \"LCS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"Lighting is specified to remain consistent with the original image: warm diffused daylight, no brightness jumps, no clipping. The prompt references the original image’s lighting cues, ensuring continuity.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"with soft warm diffused daylight from the window, with no people, hands, or creatures anywhere\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"lighting, prop positions, and the background kitchen identical to <Picture 1> throughout, no brightness jumps, no clipping\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"color_temperature: warm_white to slightly yellowish, light_sources_and_direction_effect: natural light from window on left, creating soft highlights\"\n        }\n      ],\n      \"rationale\": \"Lighting specifications are consistent with the original image and explicitly maintained throughout, ensuring visual continuity.\"\n    },\n    {\n      \"criterion\": \"NDE\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"minor\",\n      \"issue\": \"The prompt provides progression from ingredient setup to mixing, straining, and tart shell placement, but lacks escalation or resolution (e.g., baking, demolding). The sequence is linear but ends mid-process, which may not fully satisfy the implied narrative arc of a complete egg tart preparation.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"10秒奶香烤蛋挞的定格动画，遵循全局前置规则；本段出现的道具包括：搅拌碗、量杯、滤网、案板、铸铁烤盘、吸油纸、冷冻蛋挞皮和新鲜鸡蛋\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"the final beat ends on a crisp, sharp freeze frame of the neatly filled pan\"\n        }\n      ],\n      \"rationale\": \"While the prompt shows clear progression, it stops before the baking or serving phase, which may be expected for a complete egg tart video. This is a minor issue as the prompt focuses on preparation, but the original prompt implies a full process.\"\n    },\n    {\n      \"criterion\": \"CIF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"minor\",\n      \"issue\": \"The prompt adds detailed ASMR sound specifications and stop-motion timing, which support the central request. However, it omits some required props (e.g., wooden plate, silicone mat) and does not include baking or demolding sounds, which are specified in the original prompt.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"烤箱烘烤声与挞皮脱模的清脆声\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"overall_soundscape: Stop-motion tick sounds mark each prop landing, followed by the crisp crack of eggs, liquid plops into the bowl, the soft whoosh of eggshells flying off, steady metallic stirring friction, the fine hiss of custard straining through the sieve, the soft rustle of parchment paper, and light clicks as each tart shell settles into the pan\"\n        }\n      ],\n      \"rationale\": \"The additions are relevant and enhance the ASMR experience, but the omission of baking and demolding sounds and some props reduces completeness. This is a minor issue as the core animation and sound sync are preserved.\"\n    },\n    {\n      \"criterion\": \"SDI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"The prompt integrates speech, music, effects, and ambience appropriately: no music, only ASMR Foley sounds strictly synced to on-screen motion. The sounds are specified by source, intensity, and timing, supporting the visual actions.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"overall_soundscape: Stop-motion tick sounds mark each prop landing, followed by the crisp crack of eggs, liquid plops into the bowl, the soft whoosh of eggshells flying off, steady metallic stirring friction, the fine hiss of custard straining through the sieve, the soft rustle of parchment paper, and light clicks as each tart shell settles into the pan, all strictly synced to the on-screen motion.\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"仅生成高保真ASMR环境音效与动作音效，重点突出定格动画特有的顿挫声、蛋液流动声、挞液过滤声、烤箱烘烤声与挞皮脱模的清脆声，声音需与画面动作严格同步（Foley Sync）\"\n        }\n      ],\n      \"rationale\": \"Audio integration is well-specified and aligned with visual events, with no music and only relevant Foley sounds, meeting the original prompt’s requirements.\"\n    },\n    {\n      \"criterion\": \"SPS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"Subject and performance details are specified: props appear with realistic textures, movements are described as 'steady streams', 'firmly in place', 'even metallic friction', and 'light clicks'. The actions are mechanical and consistent with stop-motion animation.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"each item landing firmly in place\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"yolks and whites drop in steady streams into the bowl with soft plops\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"a whisk stirs the mixture at constant speed with even metallic friction\"\n        }\n      ],\n      \"rationale\": \"Performance details are clear and consistent with the stop-motion style, ensuring realistic and controlled movements without human intervention.\"\n    },\n    {\n      \"criterion\": \"VSS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"The prompt specifies medium, texture, and visual treatment: hyper-realistic stop-motion, choppy beat-synced cadence, 12 fps, and consistent with the original image’s photorealistic interior design style. It references the original image’s materials and textures.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Hyper-realistic stop-motion food animation, choppy beat-synced cadence\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"primary_style: photorealistic_interior_design, realism: highly_realistic\"\n        }\n      ],\n      \"rationale\": \"Visual style is clearly defined and aligned with the original image’s aesthetic, ensuring a cohesive and realistic output.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt provides a detailed, temporally structured plan with clear shot boundaries, actionable camera and lighting specifications, and synchronized sound design. It adheres closely to the original prompt’s requirements for stop-motion animation, prop consistency, and ASMR Foley sync. However, it omits several required props (e.g., wooden plate, silicone mat, milk pitcher) and fails to specify the full audio progression including baking and demolding sounds. The structure is coherent and feasible, but some omissions and substitutions reduce completeness.",
+  "usage": {
+    "completion_tokens": 2325,
+    "prompt_tokens": 4023,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 6348
+  }
+}

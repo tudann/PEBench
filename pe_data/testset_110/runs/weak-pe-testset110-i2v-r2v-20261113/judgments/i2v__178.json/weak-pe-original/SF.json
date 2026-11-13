@@ -1,0 +1,174 @@
+{
+  "candidate_hash": "7584ce077b37fff1570afbce6c6f2034965e9ab50e658db1c150e36845dd340c",
+  "case_key": "i2v:178",
+  "created_at": "2026-11-13T07:49:00+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "GSF",
+      "evidence": [
+        {
+          "quote": "Generate single shot. Based on this product image, create a background of a kitchen.",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Replace the whole video with someone typing in a silent office",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original prompt requests a product photography style kitchen scene; the enhanced prompt replaces it with an office typing scene, which is a different genre and medium.",
+      "rationale": "The original instruction specifies a kitchen scene based on a product image in a realistic, clean product photography style. The enhanced prompt replaces this with an office typing scene, which is a different genre, setting, and visual style, violating the requested aesthetic and medium.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SAP",
+      "evidence": [
+        {
+          "quote": "This range hood is installed against the wall.",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "First state that there is one protagonist, then state that this same protagonist appears simultaneously as five different-looking people who talk to each other.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original prompt implies a single kitchen scene with appliances as subjects; the enhanced prompt introduces a protagonist who appears as five different people, replacing the original subjects entirely.",
+      "rationale": "The original prompt focuses on kitchen appliances as the subject matter. The enhanced prompt replaces them with a human protagonist appearing in multiple forms, which is a complete substitution of subject identity and count, violating SAP.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANF",
+      "evidence": [
+        {
+          "quote": "Show the scene of an American cooking in this kitchen.",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Reverse the timeline: show the ending first, then cut to a beginning that does not match. Cut away in the middle to a toothpaste commercial.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original prompt requests a cooking scene; the enhanced prompt replaces it with typing, reverses the timeline, cuts to a toothpaste commercial, and adds unrelated events.",
+      "rationale": "The original narrative intent is a cooking scene in a kitchen. The enhanced prompt replaces this with typing, reverses the timeline, inserts a commercial, and adds events that contradict the original action sequence, violating ANF.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "DLI",
+      "evidence": [
+        {
+          "quote": "Show the scene of an American cooking in this kitchen.",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "No dialogue, narration, or lyrics are specified in the original prompt, so there is no requirement to preserve or alter them.",
+      "rationale": "The original prompt does not include any dialogue, narration, or lyrics. Therefore, there is no content to preserve or alter, making this criterion not applicable in terms of violation.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ARP",
+      "evidence": [
+        {
+          "quote": "Show the scene of an American cooking in this kitchen.",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Replace the whole video with someone typing in a silent office, with no music, instruments, or singing.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Singing",
+          "source": "task_type"
+        }
+      ],
+      "issue": "The original prompt does not specify audio constraints, but the enhanced prompt explicitly adds 'no music, instruments, or singing' and 'silent office', which contradicts the task type 'Singing'.",
+      "rationale": "The task type is 'Singing', implying audio content is expected. The enhanced prompt explicitly removes all music and singing, which contradicts the task requirement, violating ARP.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CCP",
+      "evidence": [
+        {
+          "quote": "Generate single shot.",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Describe that same moment as... a camera that never stops shaking. Set the total runtime to 2 seconds, while also making every shot last 18 seconds.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original prompt requests a single shot; the enhanced prompt contradicts this by introducing multiple shots, camera shaking, and conflicting shot durations.",
+      "rationale": "The original instruction specifies a single shot. The enhanced prompt introduces multiple shots, camera movement, and contradictory timing (2s total vs. 18s per shot), which overrides the explicit camera constraint, violating CCP.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "LCF",
+      "evidence": [
+        {
+          "quote": "create a background of a kitchen.",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Describe that same moment as harsh noon sun and as a lightless night",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original prompt implies indoor kitchen lighting; the enhanced prompt contradicts this by describing the same moment as 'harsh noon sun' and 'lightless night'.",
+      "rationale": "The original kitchen scene implies consistent indoor lighting. The enhanced prompt introduces conflicting lighting conditions (noon sun vs. lightless night) for the same moment, which is a material contradiction, violating LCF.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SSP",
+      "evidence": [
+        {
+          "quote": "create a background of a kitchen.",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Replace the whole video with someone typing in a silent office... Cut away in the middle to a toothpaste commercial.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original prompt specifies a kitchen setting; the enhanced prompt replaces it with an office, then cuts to a toothpaste commercial, and ignores the first frame's content.",
+      "rationale": "The original setting is a kitchen. The enhanced prompt replaces it with an office and a commercial, which are different settings, and ignores the spatial layout of the first frame, violating SSP.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "OTI",
+      "evidence": [
+        {
+          "quote": "Show the scene of an American cooking in this kitchen.",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "The original prompt does not specify any visible text to preserve; the enhanced prompt does not introduce any new text requirements.",
+      "rationale": "There is no explicit requirement to preserve or alter on-screen text in the original prompt. The enhanced prompt does not mention any text, so no violation occurs.",
+      "severity": "none"
+    }
+  ],
+  "dimension": "SF",
+  "dimension_score": 0,
+  "evidence_cache_key": "0ead8e35231f17965fa8d3094d1e030789fe2c01bdeb6a48a4c52efe6aba2d21",
+  "judge_cache_key": "a0ca24571ad14d7ab7be626329bd736d7e7015f9ebc418227c8be391591d0377",
+  "method": "weak-pe-original",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"SF\",\n  \"dimension_score\": 0,\n  \"summary\": \"The enhanced prompt completely disregards the original instruction, replacing the requested kitchen scene with an unrelated office typing scenario, altering subject identity, count, actions, setting, camera constraints, and timeline. It introduces contradictory requirements (e.g., 2-second runtime vs. 18-second shots), invalidates the first frame, and adds unrelated content like a toothpaste commercial and conflicting lighting conditions. All core semantic fidelity criteria are violated.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"GSF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original prompt requests a product photography style kitchen scene; the enhanced prompt replaces it with an office typing scene, which is a different genre and medium.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"Generate single shot. Based on this product image, create a background of a kitchen.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Replace the whole video with someone typing in a silent office\"\n        }\n      ],\n      \"rationale\": \"The original instruction specifies a kitchen scene based on a product image in a realistic, clean product photography style. The enhanced prompt replaces this with an office typing scene, which is a different genre, setting, and visual style, violating the requested aesthetic and medium.\"\n    },\n    {\n      \"criterion\": \"SAP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original prompt implies a single kitchen scene with appliances as subjects; the enhanced prompt introduces a protagonist who appears as five different people, replacing the original subjects entirely.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"This range hood is installed against the wall.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"First state that there is one protagonist, then state that this same protagonist appears simultaneously as five different-looking people who talk to each other.\"\n        }\n      ],\n      \"rationale\": \"The original prompt focuses on kitchen appliances as the subject matter. The enhanced prompt replaces them with a human protagonist appearing in multiple forms, which is a complete substitution of subject identity and count, violating SAP.\"\n    },\n    {\n      \"criterion\": \"ANF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original prompt requests a cooking scene; the enhanced prompt replaces it with typing, reverses the timeline, cuts to a toothpaste commercial, and adds unrelated events.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"Show the scene of an American cooking in this kitchen.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Reverse the timeline: show the ending first, then cut to a beginning that does not match. Cut away in the middle to a toothpaste commercial.\"\n        }\n      ],\n      \"rationale\": \"The original narrative intent is a cooking scene in a kitchen. The enhanced prompt replaces this with typing, reverses the timeline, inserts a commercial, and adds events that contradict the original action sequence, violating ANF.\"\n    },\n    {\n      \"criterion\": \"DLI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"No dialogue, narration, or lyrics are specified in the original prompt, so there is no requirement to preserve or alter them.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"Show the scene of an American cooking in this kitchen.\"\n        }\n      ],\n      \"rationale\": \"The original prompt does not include any dialogue, narration, or lyrics. Therefore, there is no content to preserve or alter, making this criterion not applicable in terms of violation.\"\n    },\n    {\n      \"criterion\": \"ARP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original prompt does not specify audio constraints, but the enhanced prompt explicitly adds 'no music, instruments, or singing' and 'silent office', which contradicts the task type 'Singing'.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"Show the scene of an American cooking in this kitchen.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Replace the whole video with someone typing in a silent office, with no music, instruments, or singing.\"\n        },\n        {\n          \"source\": \"task_type\",\n          \"quote\": \"Singing\"\n        }\n      ],\n      \"rationale\": \"The task type is 'Singing', implying audio content is expected. The enhanced prompt explicitly removes all music and singing, which contradicts the task requirement, violating ARP.\"\n    },\n    {\n      \"criterion\": \"CCP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original prompt requests a single shot; the enhanced prompt contradicts this by introducing multiple shots, camera shaking, and conflicting shot durations.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"Generate single shot.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Describe that same moment as... a camera that never stops shaking. Set the total runtime to 2 seconds, while also making every shot last 18 seconds.\"\n        }\n      ],\n      \"rationale\": \"The original instruction specifies a single shot. The enhanced prompt introduces multiple shots, camera movement, and contradictory timing (2s total vs. 18s per shot), which overrides the explicit camera constraint, violating CCP.\"\n    },\n    {\n      \"criterion\": \"LCF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original prompt implies indoor kitchen lighting; the enhanced prompt contradicts this by describing the same moment as 'harsh noon sun' and 'lightless night'.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"create a background of a kitchen.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Describe that same moment as harsh noon sun and as a lightless night\"\n        }\n      ],\n      \"rationale\": \"The original kitchen scene implies consistent indoor lighting. The enhanced prompt introduces conflicting lighting conditions (noon sun vs. lightless night) for the same moment, which is a material contradiction, violating LCF.\"\n    },\n    {\n      \"criterion\": \"SSP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original prompt specifies a kitchen setting; the enhanced prompt replaces it with an office, then cuts to a toothpaste commercial, and ignores the first frame's content.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"create a background of a kitchen.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Replace the whole video with someone typing in a silent office... Cut away in the middle to a toothpaste commercial.\"\n        }\n      ],\n      \"rationale\": \"The original setting is a kitchen. The enhanced prompt replaces it with an office and a commercial, which are different settings, and ignores the spatial layout of the first frame, violating SSP.\"\n    },\n    {\n      \"criterion\": \"OTI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"The original prompt does not specify any visible text to preserve; the enhanced prompt does not introduce any new text requirements.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"Show the scene of an American cooking in this kitchen.\"\n        }\n      ],\n      \"rationale\": \"There is no explicit requirement to preserve or alter on-screen text in the original prompt. The enhanced prompt does not mention any text, so no violation occurs.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt completely disregards the original instruction, replacing the requested kitchen scene with an unrelated office typing scenario, altering subject identity, count, actions, setting, camera constraints, and timeline. It introduces contradictory requirements (e.g., 2-second runtime vs. 18-second shots), invalidates the first frame, and adds unrelated content like a toothpaste commercial and conflicting lighting conditions. All core semantic fidelity criteria are violated.",
+  "usage": {
+    "completion_tokens": 1735,
+    "prompt_tokens": 2782,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 4517
+  }
+}

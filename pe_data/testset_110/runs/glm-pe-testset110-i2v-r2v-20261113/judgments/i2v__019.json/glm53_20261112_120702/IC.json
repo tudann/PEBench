@@ -1,0 +1,135 @@
+{
+  "candidate_hash": "06fc307c7efcbe05f4409efef81759b194e5ddb5dc74e6814ba914c31b3cb409",
+  "case_key": "i2v:019",
+  "created_at": "2026-11-13T07:18:14+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "SAC",
+      "evidence": [
+        {
+          "quote": "男孩不断眨眼，反复左右查看，他的影像时而出现双影和三影。",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "a young boy's face fills the frame, centered and symmetrical, wearing thin round wire-frame glasses, eyes wide open and mouth open in a shocked expression",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "stable_subject_id: subject_1, category: human, current_pose/state: static frontal pose, mouth open as if surprised or shouting",
+          "source": "evidence_facts"
+        }
+      ],
+      "issue": "Subject identity (boy), appearance (wireframe face, glasses), and expression (shocked) remain consistent. No unexplained changes or duplications occur.",
+      "rationale": "The subject’s identity, appearance, and attributes are consistently described across all sources. The wireframe aesthetic and glasses are preserved, and no new props or clothing are introduced. The description of the boy’s expression as 'shocked' aligns with the original prompt’s implied emotion.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANL",
+      "evidence": [
+        {
+          "quote": "男孩不断眨眼，反复左右查看，他的影像时而出现双影和三影。所有动作中都创造运动模糊。",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "The boy blinks rapidly and repeatedly... Between blinks he turns his head slightly left, then right... his image intermittently splits into double and triple ghosted copies... The background glitch streaks and scan lines intensify and flicker in sync with each ghosting moment.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Actions (blinking, head turns, ghosting) form a coherent progression with plausible causal links: head movement triggers motion blur and ghosting, which in turn sync with background glitches. No dangling or incompatible events.",
+      "rationale": "The sequence of actions is logically connected: blinking and head turns are described as causing motion blur and ghosting, which are then synchronized with background effects. This creates a causal chain consistent with digital glitch aesthetics. No action is unexplained or disconnected.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "TSC",
+      "evidence": [
+        {
+          "quote": "The camera stays locked in place with a continuous small in-place vibration and jitter for the full duration — no panning, no zooming.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "男孩不断眨眼，反复左右查看，他的影像时而出现双影和三影。",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "The prompt specifies continuous actions over 15 seconds without explicit temporal segmentation or state transitions, but the description implies a continuous loop of blinking and head turns. No timestamp conflicts or resets are present, but the lack of explicit timing for each event may lead to ambiguity in execution.",
+      "rationale": "The prompt describes ongoing actions without breaking them into discrete phases or assigning specific durations to each event (e.g., blink frequency, head turn timing). While this is acceptable for a continuous loop, it introduces minor ambiguity in how the 15-second duration is allocated. However, no infeasible or conflicting timestamps are present.",
+      "severity": "minor"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SPC",
+      "evidence": [
+        {
+          "quote": "The face remains centered in close-up throughout; no new subjects, props, text, or speech appear.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "The camera stays locked in place with a continuous small in-place vibration and jitter for the full duration — no panning, no zooming.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "composition: centered subject with symmetrical framing, shot_scale: close-up",
+          "source": "evidence_facts"
+        }
+      ],
+      "issue": "The subject remains centered in a close-up throughout, with no unexplained position swaps. Head turns are described with motion blur trailing, consistent with in-place movement. Camera remains static with only in-place vibration, preserving screen direction and relative position.",
+      "rationale": "The subject’s position is consistently described as centered and symmetrical. Head movements are lateral and in-place, with motion blur trailing, which is spatially coherent. The camera remains fixed, preserving screen direction and spatial relationships. No entrances, exits, or position swaps occur.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "PL",
+      "evidence": [
+        {
+          "quote": "a visible wireframe mesh overlay against a dark smoky grayscale background crossed by horizontal scan lines and RGB chromatic-aberration glitch streaks",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "primary_style: cyberpunk_wireframe, secondary_styles: [glitch_art, digital_distortion]",
+          "source": "evidence_facts"
+        }
+      ],
+      "issue": "The digital glitch aesthetic (wireframe, chromatic aberration, ghosting) is consistent with non-physical, stylized rules. Motion blur and ghosting are plausible within this fictional framework. No real-world physics violations (e.g., gravity, contact) are present.",
+      "rationale": "The described effects (ghosting, motion blur, scan lines) are consistent with digital distortion and glitch art, which operate under fictional rules. The wireframe rendering and non-physical artifacts are not bound by real-world physics, and their behavior is internally consistent within the aesthetic.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "AVS",
+      "evidence": [
+        {
+          "quote": "A low digital hum and faint static crackle underlie the whole clip, punctuated by soft glitchy electronic flickers that spike in sync with the ghosting moments. No speech or human vocal sounds occur.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "audio: {ambience: false, effects: false, music: false, speech: false}",
+          "source": "evidence_facts"
+        }
+      ],
+      "issue": "No dialogue, music, or speech is present in the prompt or evidence. The soundscape (digital hum, glitch flickers) is non-diegetic and synchronized with visual effects (ghosting), maintaining temporal alignment.",
+      "rationale": "The audio description is minimal and non-diegetic, with effects synchronized to visual events (ghosting). Since no speech or music is present, there is no risk of misalignment. The described soundscape is consistent with the visual style and timing.",
+      "severity": "none"
+    }
+  ],
+  "dimension": "IC",
+  "dimension_score": 85,
+  "evidence_cache_key": "49825381af0ce3b5642d4f2aedd02fc0b955661365a09170aa6e6ed4da9d7bf9",
+  "judge_cache_key": "438d7e9fd7332b1041db3e2c26d42cb3fe828e0d369fb59490f6650aee59e97d",
+  "method": "glm53_20261112_120702",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"IC\",\n  \"dimension_score\": 85,\n  \"summary\": \"The enhanced prompt maintains internal consistency with the original instruction, preserving the core actions (blinking, head turns, ghosting effects, camera shake) and visual style (wireframe, glitch effects). However, it introduces additional details (e.g., specific color artifacts, precise timing of effects) not present in the original, which may slightly over-specify or diverge from the minimal instruction. No contradictions or attribute drift are present, but the elaboration risks over-interpreting the static image’s potential motion. The prompt remains coherent and plausible within its digital glitch aesthetic.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"SAC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"Subject identity (boy), appearance (wireframe face, glasses), and expression (shocked) remain consistent. No unexplained changes or duplications occur.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"男孩不断眨眼，反复左右查看，他的影像时而出现双影和三影。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"a young boy's face fills the frame, centered and symmetrical, wearing thin round wire-frame glasses, eyes wide open and mouth open in a shocked expression\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"stable_subject_id: subject_1, category: human, current_pose/state: static frontal pose, mouth open as if surprised or shouting\"\n        }\n      ],\n      \"rationale\": \"The subject’s identity, appearance, and attributes are consistently described across all sources. The wireframe aesthetic and glasses are preserved, and no new props or clothing are introduced. The description of the boy’s expression as 'shocked' aligns with the original prompt’s implied emotion.\"\n    },\n    {\n      \"criterion\": \"ANL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"Actions (blinking, head turns, ghosting) form a coherent progression with plausible causal links: head movement triggers motion blur and ghosting, which in turn sync with background glitches. No dangling or incompatible events.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"男孩不断眨眼，反复左右查看，他的影像时而出现双影和三影。所有动作中都创造运动模糊。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"The boy blinks rapidly and repeatedly... Between blinks he turns his head slightly left, then right... his image intermittently splits into double and triple ghosted copies... The background glitch streaks and scan lines intensify and flicker in sync with each ghosting moment.\"\n        }\n      ],\n      \"rationale\": \"The sequence of actions is logically connected: blinking and head turns are described as causing motion blur and ghosting, which are then synchronized with background effects. This creates a causal chain consistent with digital glitch aesthetics. No action is unexplained or disconnected.\"\n    },\n    {\n      \"criterion\": \"TSC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"minor\",\n      \"issue\": \"The prompt specifies continuous actions over 15 seconds without explicit temporal segmentation or state transitions, but the description implies a continuous loop of blinking and head turns. No timestamp conflicts or resets are present, but the lack of explicit timing for each event may lead to ambiguity in execution.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"The camera stays locked in place with a continuous small in-place vibration and jitter for the full duration — no panning, no zooming.\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"男孩不断眨眼，反复左右查看，他的影像时而出现双影和三影。\"\n        }\n      ],\n      \"rationale\": \"The prompt describes ongoing actions without breaking them into discrete phases or assigning specific durations to each event (e.g., blink frequency, head turn timing). While this is acceptable for a continuous loop, it introduces minor ambiguity in how the 15-second duration is allocated. However, no infeasible or conflicting timestamps are present.\"\n    },\n    {\n      \"criterion\": \"SPC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"The subject remains centered in a close-up throughout, with no unexplained position swaps. Head turns are described with motion blur trailing, consistent with in-place movement. Camera remains static with only in-place vibration, preserving screen direction and relative position.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"The face remains centered in close-up throughout; no new subjects, props, text, or speech appear.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"The camera stays locked in place with a continuous small in-place vibration and jitter for the full duration — no panning, no zooming.\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"composition: centered subject with symmetrical framing, shot_scale: close-up\"\n        }\n      ],\n      \"rationale\": \"The subject’s position is consistently described as centered and symmetrical. Head movements are lateral and in-place, with motion blur trailing, which is spatially coherent. The camera remains fixed, preserving screen direction and spatial relationships. No entrances, exits, or position swaps occur.\"\n    },\n    {\n      \"criterion\": \"PL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"The digital glitch aesthetic (wireframe, chromatic aberration, ghosting) is consistent with non-physical, stylized rules. Motion blur and ghosting are plausible within this fictional framework. No real-world physics violations (e.g., gravity, contact) are present.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"a visible wireframe mesh overlay against a dark smoky grayscale background crossed by horizontal scan lines and RGB chromatic-aberration glitch streaks\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"primary_style: cyberpunk_wireframe, secondary_styles: [glitch_art, digital_distortion]\"\n        }\n      ],\n      \"rationale\": \"The described effects (ghosting, motion blur, scan lines) are consistent with digital distortion and glitch art, which operate under fictional rules. The wireframe rendering and non-physical artifacts are not bound by real-world physics, and their behavior is internally consistent within the aesthetic.\"\n    },\n    {\n      \"criterion\": \"AVS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"No dialogue, music, or speech is present in the prompt or evidence. The soundscape (digital hum, glitch flickers) is non-diegetic and synchronized with visual effects (ghosting), maintaining temporal alignment.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"A low digital hum and faint static crackle underlie the whole clip, punctuated by soft glitchy electronic flickers that spike in sync with the ghosting moments. No speech or human vocal sounds occur.\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"audio: {ambience: false, effects: false, music: false, speech: false}\"\n        }\n      ],\n      \"rationale\": \"The audio description is minimal and non-diegetic, with effects synchronized to visual events (ghosting). Since no speech or music is present, there is no risk of misalignment. The described soundscape is consistent with the visual style and timing.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt maintains internal consistency with the original instruction, preserving the core actions (blinking, head turns, ghosting effects, camera shake) and visual style (wireframe, glitch effects). However, it introduces additional details (e.g., specific color artifacts, precise timing of effects) not present in the original, which may slightly over-specify or diverge from the minimal instruction. No contradictions or attribute drift are present, but the elaboration risks over-interpreting the static image’s potential motion. The prompt remains coherent and plausible within its digital glitch aesthetic.",
+  "usage": {
+    "completion_tokens": 1682,
+    "prompt_tokens": 2174,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 3856
+  }
+}

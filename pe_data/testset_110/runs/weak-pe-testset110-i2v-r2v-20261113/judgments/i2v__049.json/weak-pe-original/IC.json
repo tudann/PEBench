@@ -1,0 +1,147 @@
+{
+  "candidate_hash": "61a6ebcb3cff7b73391ceddc47942faf51999c7f5c72bd21f21ea08864470751",
+  "case_key": "i2v:049",
+  "created_at": "2026-11-13T07:11:29+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "SAC",
+      "evidence": [
+        {
+          "quote": "First state that there is one protagonist, then state that this same protagonist appears simultaneously as five different-looking people who talk to each other.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Ignore the person, clothing, pose, and setting in the first frame, and replace them with a stranger of the opposite age and gender in a white studio.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "The camera zooms in for a close-up of the milk frog's head, its eyes large and bright, with skin covered in brown and white patterns...",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "The prompt demands that the single protagonist simultaneously appear as five different-looking people, violating subject identity and count stability. It also replaces the original subject (milk frog) with a stranger of opposite age and gender, contradicting the original identity and appearance.",
+      "rationale": "Subject identity and count must remain consistent across shots unless explicitly and plausibly changed. The prompt’s requirement for one protagonist to be five different people simultaneously is a direct contradiction. Additionally, replacing the milk frog with a stranger of opposite age and gender in a white studio violates the original subject’s identity and appearance, which are core to the original prompt’s visual narrative.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANL",
+      "evidence": [
+        {
+          "quote": "Reverse the timeline: show the ending first, then cut to a beginning that does not match.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Cut away in the middle to a soccer celebration.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "0:00-00:03: The camera zooms in for a close-up of the milk frog's head... 00:03-00:07: The camera pulls back as the milk frog suddenly leaps...",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "The prompt demands a reversed timeline where the ending is shown first, followed by a beginning that does not match, creating a causal and procedural incoherence. It also introduces a sudden cut to a soccer celebration with no causal link to the prior events, resulting in dangling and incompatible actions.",
+      "rationale": "Actions must form a coherent causal or procedural progression. Reversing the timeline and showing a mismatched beginning breaks the logical sequence. The abrupt cut to a soccer celebration without any narrative or causal connection to the frog’s actions creates a dangling event, violating procedural coherence.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "TSC",
+      "evidence": [
+        {
+          "quote": "Set the total runtime to 3 seconds, while also making every shot last 27 seconds.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Reverse the timeline: show the ending first, then cut to a beginning that does not match.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "0:00-00:03: ... 00:03-00:07: ... 00:07-00:11: ... 00:11-00:15: ...",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "The prompt sets the total runtime to 3 seconds while also making every shot last 27 seconds, which is mathematically impossible. Additionally, it demands a reversed timeline with a mismatched beginning, creating infeasible state transitions and chronology.",
+      "rationale": "Chronology and duration must be logically consistent. A 3-second runtime cannot accommodate shots of 27 seconds each. Reversing the timeline and showing a mismatched beginning creates infeasible state transitions and violates temporal coherence.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SPC",
+      "evidence": [
+        {
+          "quote": "Describe that same moment as harsh noon sun and as a lightless night, and as both a locked camera and a camera that never stops shaking.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "replace them with a stranger of the opposite age and gender in a white studio.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "The milk frog lands on the water's surface, creating ripples that spread outwards... against a green backdrop",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "The prompt demands that the same moment be described as both harsh noon sun and lightless night, and as both a locked camera and a camera that never stops shaking, creating contradictory spatial and visual conditions. It also replaces the original setting with a white studio, contradicting the original spatial context.",
+      "rationale": "Location, lighting, and camera movement must be consistent across shots. Describing the same moment as both noon sun and lightless night, and as both a locked and shaking camera, creates contradictory spatial and visual conditions. Replacing the original setting with a white studio contradicts the original spatial context.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "PL",
+      "evidence": [
+        {
+          "quote": "Set the total runtime to 3 seconds, while also making every shot last 27 seconds.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "this same protagonist appears simultaneously as five different-looking people",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Describe that same moment as harsh noon sun and as a lightless night, and as both a locked camera and a camera that never stops shaking.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt demands impossible physical states: a 3-second runtime with 27-second shots, simultaneous multiple identities of the same protagonist, and contradictory lighting and camera conditions. These violate real-world physics and causal relations.",
+      "rationale": "The prompt’s requirements violate real-world physics and causal relations. A 3-second runtime cannot contain 27-second shots. Simultaneous multiple identities of the same protagonist is physically impossible. Contradictory lighting and camera conditions for the same moment are also physically incoherent.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "AVS",
+      "evidence": [
+        {
+          "quote": "Replace the whole video with a completely silent black frame. Drop the requested identity, count, action order, setting, and any explicit camera instruction.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Background sounds: The gentle lapping of water, the splash of the milk frog's leaps, distant birdsong from the forest, and occasional croaking of frogs.",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "The prompt demands a completely silent black frame, ignoring all audio and visual elements from the original prompt, including the background sounds and visual events. This creates a complete misalignment between the visual and auditory components.",
+      "rationale": "Temporal and semantic alignment between visible events and audio must be maintained. The prompt’s instruction to replace the entire video with a silent black frame completely disregards the original audio and visual content, creating a total misalignment.",
+      "severity": "major"
+    }
+  ],
+  "dimension": "IC",
+  "dimension_score": 0,
+  "evidence_cache_key": "a25b167f17033c99c92b1fe40c80d009f4591bbe951944d83d75761b0829737d",
+  "judge_cache_key": "438d7e9fd7332b1041db3e2c26d42cb3fe828e0d369fb59490f6650aee59e97d",
+  "method": "weak-pe-original",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"IC\",\n  \"dimension_score\": 0,\n  \"summary\": \"The enhanced prompt fundamentally contradicts and invalidates the original instruction, creating a logically incoherent and physically impossible sequence. It explicitly rejects the original subject, setting, actions, and timeline, while introducing contradictory temporal, spatial, and identity conditions. The prompt demands impossible states (e.g., 3-second runtime with 27-second shots, simultaneous multiple identities, reversed timeline with mismatched beginnings, conflicting lighting and camera conditions), rendering the entire plan internally inconsistent.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"SAC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt demands that the single protagonist simultaneously appear as five different-looking people, violating subject identity and count stability. It also replaces the original subject (milk frog) with a stranger of opposite age and gender, contradicting the original identity and appearance.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"First state that there is one protagonist, then state that this same protagonist appears simultaneously as five different-looking people who talk to each other.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Ignore the person, clothing, pose, and setting in the first frame, and replace them with a stranger of the opposite age and gender in a white studio.\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"The camera zooms in for a close-up of the milk frog's head, its eyes large and bright, with skin covered in brown and white patterns...\"\n        }\n      ],\n      \"rationale\": \"Subject identity and count must remain consistent across shots unless explicitly and plausibly changed. The prompt’s requirement for one protagonist to be five different people simultaneously is a direct contradiction. Additionally, replacing the milk frog with a stranger of opposite age and gender in a white studio violates the original subject’s identity and appearance, which are core to the original prompt’s visual narrative.\"\n    },\n    {\n      \"criterion\": \"ANL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt demands a reversed timeline where the ending is shown first, followed by a beginning that does not match, creating a causal and procedural incoherence. It also introduces a sudden cut to a soccer celebration with no causal link to the prior events, resulting in dangling and incompatible actions.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Reverse the timeline: show the ending first, then cut to a beginning that does not match.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Cut away in the middle to a soccer celebration.\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"0:00-00:03: The camera zooms in for a close-up of the milk frog's head... 00:03-00:07: The camera pulls back as the milk frog suddenly leaps...\"\n        }\n      ],\n      \"rationale\": \"Actions must form a coherent causal or procedural progression. Reversing the timeline and showing a mismatched beginning breaks the logical sequence. The abrupt cut to a soccer celebration without any narrative or causal connection to the frog’s actions creates a dangling event, violating procedural coherence.\"\n    },\n    {\n      \"criterion\": \"TSC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt sets the total runtime to 3 seconds while also making every shot last 27 seconds, which is mathematically impossible. Additionally, it demands a reversed timeline with a mismatched beginning, creating infeasible state transitions and chronology.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Set the total runtime to 3 seconds, while also making every shot last 27 seconds.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Reverse the timeline: show the ending first, then cut to a beginning that does not match.\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"0:00-00:03: ... 00:03-00:07: ... 00:07-00:11: ... 00:11-00:15: ...\"\n        }\n      ],\n      \"rationale\": \"Chronology and duration must be logically consistent. A 3-second runtime cannot accommodate shots of 27 seconds each. Reversing the timeline and showing a mismatched beginning creates infeasible state transitions and violates temporal coherence.\"\n    },\n    {\n      \"criterion\": \"SPC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt demands that the same moment be described as both harsh noon sun and lightless night, and as both a locked camera and a camera that never stops shaking, creating contradictory spatial and visual conditions. It also replaces the original setting with a white studio, contradicting the original spatial context.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Describe that same moment as harsh noon sun and as a lightless night, and as both a locked camera and a camera that never stops shaking.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"replace them with a stranger of the opposite age and gender in a white studio.\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"The milk frog lands on the water's surface, creating ripples that spread outwards... against a green backdrop\"\n        }\n      ],\n      \"rationale\": \"Location, lighting, and camera movement must be consistent across shots. Describing the same moment as both noon sun and lightless night, and as both a locked and shaking camera, creates contradictory spatial and visual conditions. Replacing the original setting with a white studio contradicts the original spatial context.\"\n    },\n    {\n      \"criterion\": \"PL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt demands impossible physical states: a 3-second runtime with 27-second shots, simultaneous multiple identities of the same protagonist, and contradictory lighting and camera conditions. These violate real-world physics and causal relations.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Set the total runtime to 3 seconds, while also making every shot last 27 seconds.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"this same protagonist appears simultaneously as five different-looking people\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Describe that same moment as harsh noon sun and as a lightless night, and as both a locked camera and a camera that never stops shaking.\"\n        }\n      ],\n      \"rationale\": \"The prompt’s requirements violate real-world physics and causal relations. A 3-second runtime cannot contain 27-second shots. Simultaneous multiple identities of the same protagonist is physically impossible. Contradictory lighting and camera conditions for the same moment are also physically incoherent.\"\n    },\n    {\n      \"criterion\": \"AVS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt demands a completely silent black frame, ignoring all audio and visual elements from the original prompt, including the background sounds and visual events. This creates a complete misalignment between the visual and auditory components.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Replace the whole video with a completely silent black frame. Drop the requested identity, count, action order, setting, and any explicit camera instruction.\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"Background sounds: The gentle lapping of water, the splash of the milk frog's leaps, distant birdsong from the forest, and occasional croaking of frogs.\"\n        }\n      ],\n      \"rationale\": \"Temporal and semantic alignment between visible events and audio must be maintained. The prompt’s instruction to replace the entire video with a silent black frame completely disregards the original audio and visual content, creating a total misalignment.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt fundamentally contradicts and invalidates the original instruction, creating a logically incoherent and physically impossible sequence. It explicitly rejects the original subject, setting, actions, and timeline, while introducing contradictory temporal, spatial, and identity conditions. The prompt demands impossible states (e.g., 3-second runtime with 27-second shots, simultaneous multiple identities, reversed timeline with mismatched beginnings, conflicting lighting and camera conditions), rendering the entire plan internally inconsistent.",
+  "usage": {
+    "completion_tokens": 1800,
+    "prompt_tokens": 2193,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 3993
+  }
+}

@@ -1,0 +1,142 @@
+{
+  "candidate_hash": "df3cece32a20f5081062808ada883bfb30198be637955b03afe8382c4e19904c",
+  "case_key": "t2v:079",
+  "created_at": "2026-11-13T07:27:36+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "STC",
+      "evidence": [
+        {
+          "quote": "总时长写成2秒，同时又要求每个分镜各自持续17秒。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "No feasible temporal plan; contradictory duration requirements (2s total vs. 17s per shot) and illogical sequence (reverse chronology with mismatched start/end).",
+      "rationale": "The prompt specifies mutually exclusive durations that make temporal planning impossible. Additionally, the instruction to 'time倒过来：先给结尾，再跳到一个对不上的开头' creates a non-continuous, unstructured timeline without logical shot boundaries or progression.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CDS",
+      "evidence": [
+        {
+          "quote": "写成机位锁死，又写成镜头一直在晃。镜头每半秒甩动、环绕、急推。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Conflicting and contradictory camera specifications: fixed vs. shaking camera, rapid movements every half-second, and no consistent framing or lens choice.",
+      "rationale": "The prompt simultaneously demands a locked camera and constant, rapid movement, which is physically impossible. No actionable framing, scale, or lens is specified, making shot execution infeasible.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ETD",
+      "evidence": [
+        {
+          "quote": "中途插进一段无关的足球庆祝。时间倒过来：先给结尾，再跳到一个对不上的开头。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Transitions are disconnected and unmotivated; abrupt cuts to unrelated content (football celebration) and reverse chronology without continuity.",
+      "rationale": "The prompt introduces a football celebration with no narrative or spatial connection to the main scene, and reverses time without establishing continuity or motivation for cuts, violating temporal and spatial coherence.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "LCS",
+      "evidence": [
+        {
+          "quote": "写成正午暴晒，又写成深夜无光；",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Contradictory lighting conditions: '正午暴晒' (noon sun) and '深夜无光' (deep night) are mutually exclusive and not reconciled.",
+      "rationale": "The prompt specifies two incompatible lighting environments without any transition or justification, making consistent lighting design impossible.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "NDE",
+      "evidence": [
+        {
+          "quote": "这个主角同时变成五个外貌不同的人，并且互相对话。时间倒过来：先给结尾，再跳到一个对不上的开头。中途插进一段无关的足球庆祝。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "No progression or variation; instead, the prompt introduces chaotic, contradictory elements (multiple identities, reverse time, unrelated inserts) without narrative arc or resolution.",
+      "rationale": "The prompt lacks any coherent progression or escalation. Instead, it introduces disjointed, contradictory elements that prevent narrative or visual development, resulting in static chaos.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CIF",
+      "evidence": [
+        {
+          "quote": "这个主角同时变成五个外貌不同的人，并且互相对话。中途插进一段无关的足球庆祝。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Additions are irrelevant and distracting: multiple identities, football celebration, and contradictory time/lighting are not supportive of any central request.",
+      "rationale": "The prompt adds elements (five identities, football celebration) that are not only irrelevant but actively contradict the original prompt’s focus on a romantic, serene moment. These additions distract from any potential central theme.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SDI",
+      "evidence": [
+        {
+          "quote": "丢掉原指令里的主体身份、人数、动作顺序、场景和明确的镜头要求。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "No audio specifications provided; however, the prompt does not request any, so absence is not a major issue.",
+      "rationale": "The prompt explicitly removes all original audio-related elements, and no audio is requested. Therefore, lack of audio specification is not a failure, but the absence of any mention of sound or music is consistent with the instruction to discard original elements.",
+      "severity": "minor"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SPS",
+      "evidence": [
+        {
+          "quote": "先写成只有一个主角，紧接着又写成这个主角同时变成五个外貌不同的人，并且互相对话。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Subject and performance details are contradictory: one character becomes five, with no description of appearance, expression, or interaction; no clear performance or movement is specified.",
+      "rationale": "The prompt introduces a character transformation without specifying any visual or performative details (appearance, expression, gesture, interaction). The 'dialogue' between five versions of the same person is undefined, making performance impossible to render.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "VSS",
+      "evidence": [
+        {
+          "quote": "整段改成空会议室里一杯水纹丝不动，没有人和对抗。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "No actionable specification of medium, texture, rendering, or visual treatment; contradictory scene settings (empty meeting room vs. original beach) with no production design guidance.",
+      "rationale": "The prompt changes the setting to an empty meeting room with no description of visual style, texture, or rendering approach. The original beach scene’s visual treatment is discarded without replacement, leaving no actionable visual design.",
+      "severity": "major"
+    }
+  ],
+  "dimension": "DC",
+  "dimension_score": 0,
+  "evidence_cache_key": "e252520f10c132feb30718da58e4445f5be8588e2eeb5f3d7726db0ba2dc48d4",
+  "judge_cache_key": "0754499d53388e6467fb078ab780e01b77f9f1c9e99d9029be2769351eb2b2eb",
+  "method": "weak-pe-original",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"DC\",\n  \"dimension_score\": 0,\n  \"summary\": \"Enhanced prompt is incoherent and contradictory, violating core temporal, spatial, and technical feasibility requirements. It introduces impossible constraints (e.g., 2-second total duration with 17-second shots), illogical narrative structure (reverse chronology with mismatched start/end), and conflicting visual parameters (fixed vs. shaking camera, day vs. night). No actionable plan or coherent shot sequence is provided, rendering the prompt unexecutable for video generation.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"STC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"No feasible temporal plan; contradictory duration requirements (2s total vs. 17s per shot) and illogical sequence (reverse chronology with mismatched start/end).\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"总时长写成2秒，同时又要求每个分镜各自持续17秒。\"\n        }\n      ],\n      \"rationale\": \"The prompt specifies mutually exclusive durations that make temporal planning impossible. Additionally, the instruction to 'time倒过来：先给结尾，再跳到一个对不上的开头' creates a non-continuous, unstructured timeline without logical shot boundaries or progression.\"\n    },\n    {\n      \"criterion\": \"CDS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Conflicting and contradictory camera specifications: fixed vs. shaking camera, rapid movements every half-second, and no consistent framing or lens choice.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"写成机位锁死，又写成镜头一直在晃。镜头每半秒甩动、环绕、急推。\"\n        }\n      ],\n      \"rationale\": \"The prompt simultaneously demands a locked camera and constant, rapid movement, which is physically impossible. No actionable framing, scale, or lens is specified, making shot execution infeasible.\"\n    },\n    {\n      \"criterion\": \"ETD\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Transitions are disconnected and unmotivated; abrupt cuts to unrelated content (football celebration) and reverse chronology without continuity.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"中途插进一段无关的足球庆祝。时间倒过来：先给结尾，再跳到一个对不上的开头。\"\n        }\n      ],\n      \"rationale\": \"The prompt introduces a football celebration with no narrative or spatial connection to the main scene, and reverses time without establishing continuity or motivation for cuts, violating temporal and spatial coherence.\"\n    },\n    {\n      \"criterion\": \"LCS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Contradictory lighting conditions: '正午暴晒' (noon sun) and '深夜无光' (deep night) are mutually exclusive and not reconciled.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"写成正午暴晒，又写成深夜无光；\"\n        }\n      ],\n      \"rationale\": \"The prompt specifies two incompatible lighting environments without any transition or justification, making consistent lighting design impossible.\"\n    },\n    {\n      \"criterion\": \"NDE\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"No progression or variation; instead, the prompt introduces chaotic, contradictory elements (multiple identities, reverse time, unrelated inserts) without narrative arc or resolution.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"这个主角同时变成五个外貌不同的人，并且互相对话。时间倒过来：先给结尾，再跳到一个对不上的开头。中途插进一段无关的足球庆祝。\"\n        }\n      ],\n      \"rationale\": \"The prompt lacks any coherent progression or escalation. Instead, it introduces disjointed, contradictory elements that prevent narrative or visual development, resulting in static chaos.\"\n    },\n    {\n      \"criterion\": \"CIF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Additions are irrelevant and distracting: multiple identities, football celebration, and contradictory time/lighting are not supportive of any central request.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"这个主角同时变成五个外貌不同的人，并且互相对话。中途插进一段无关的足球庆祝。\"\n        }\n      ],\n      \"rationale\": \"The prompt adds elements (five identities, football celebration) that are not only irrelevant but actively contradict the original prompt’s focus on a romantic, serene moment. These additions distract from any potential central theme.\"\n    },\n    {\n      \"criterion\": \"SDI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"minor\",\n      \"issue\": \"No audio specifications provided; however, the prompt does not request any, so absence is not a major issue.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"丢掉原指令里的主体身份、人数、动作顺序、场景和明确的镜头要求。\"\n        }\n      ],\n      \"rationale\": \"The prompt explicitly removes all original audio-related elements, and no audio is requested. Therefore, lack of audio specification is not a failure, but the absence of any mention of sound or music is consistent with the instruction to discard original elements.\"\n    },\n    {\n      \"criterion\": \"SPS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Subject and performance details are contradictory: one character becomes five, with no description of appearance, expression, or interaction; no clear performance or movement is specified.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"先写成只有一个主角，紧接着又写成这个主角同时变成五个外貌不同的人，并且互相对话。\"\n        }\n      ],\n      \"rationale\": \"The prompt introduces a character transformation without specifying any visual or performative details (appearance, expression, gesture, interaction). The 'dialogue' between five versions of the same person is undefined, making performance impossible to render.\"\n    },\n    {\n      \"criterion\": \"VSS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"No actionable specification of medium, texture, rendering, or visual treatment; contradictory scene settings (empty meeting room vs. original beach) with no production design guidance.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"整段改成空会议室里一杯水纹丝不动，没有人和对抗。\"\n        }\n      ],\n      \"rationale\": \"The prompt changes the setting to an empty meeting room with no description of visual style, texture, or rendering approach. The original beach scene’s visual treatment is discarded without replacement, leaving no actionable visual design.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "Enhanced prompt is incoherent and contradictory, violating core temporal, spatial, and technical feasibility requirements. It introduces impossible constraints (e.g., 2-second total duration with 17-second shots), illogical narrative structure (reverse chronology with mismatched start/end), and conflicting visual parameters (fixed vs. shaking camera, day vs. night). No actionable plan or coherent shot sequence is provided, rendering the prompt unexecutable for video generation.",
+  "usage": {
+    "completion_tokens": 1550,
+    "prompt_tokens": 1108,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 2658
+  }
+}

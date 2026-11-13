@@ -1,0 +1,170 @@
+{
+  "candidate_hash": "56857d083dd0f347770fd5b080c69bc3605f0d236e66fcc5d3b2e22f669ffc3c",
+  "case_key": "t2v:331",
+  "created_at": "2026-11-13T08:11:55+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "GSF",
+      "evidence": [
+        {
+          "quote": "dripping ink beads striking a chroma key backdrop, vivid multicolor splash effect",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Replace the whole video with two people sitting and eating, with no effects or transformation",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original prompt requests a visual effects sequence with a specific aesthetic (dripping ink, chroma key, multicolor splash). The enhanced prompt replaces this with a completely different genre (two people eating) and removes all visual effects, contradicting the requested medium and aesthetic.",
+      "rationale": "The original instruction specifies a VFX object with a defined visual style. The enhanced prompt discards this entirely, substituting a mundane scene without effects, which is a major violation of genre and aesthetic preservation.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SAP",
+      "evidence": [
+        {
+          "quote": "two people sitting and eating",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "this same protagonist appears simultaneously as five different-looking people who talk to each other",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original prompt does not specify any subjects, but the enhanced prompt introduces two people, then redefines one as five different-looking people, altering subject count and identity in a way not requested or implied.",
+      "rationale": "The original prompt contains no subject specification. The enhanced prompt invents subjects and their relationships, which is a major deviation from the original semantic intent, especially since the original was purely about visual effects, not characters.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANF",
+      "evidence": [
+        {
+          "quote": "Reverse the timeline: show the ending first, then cut to a beginning that does not match",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Cut away in the middle to a palace audition",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The enhanced prompt reverses the timeline, cuts to an unrelated palace audition, and introduces contradictory events (e.g., same moment as harsh noon and lightless night), which are not present or implied in the original prompt.",
+      "rationale": "The original prompt describes a single, continuous visual effect. The enhanced prompt introduces a complex, non-linear narrative with multiple unrelated events, which fundamentally alters the narrative intent and event order.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "DLI",
+      "evidence": [
+        {
+          "quote": "dripping ink beads striking a chroma key backdrop, vivid multicolor splash effect",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "The original prompt contains no dialogue, narration, or lyrics. The enhanced prompt does not introduce any such elements, so there is no violation.",
+      "rationale": "Since the original prompt has no dialogue or narration, and the enhanced prompt does not add any, this criterion is satisfied.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ARP",
+      "evidence": [
+        {
+          "quote": "dripping ink beads striking a chroma key backdrop, vivid multicolor splash effect",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "The original prompt does not specify any audio requirements. The enhanced prompt does not introduce any sound constraints, so there is no violation.",
+      "rationale": "No audio constraints were specified in the original prompt, and none are added in the enhanced prompt, so this criterion is not violated.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CCP",
+      "evidence": [
+        {
+          "quote": "Describe that same moment as... a locked camera and a camera that never stops shaking",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Set the total runtime to 3 seconds, while also making every shot last 27 seconds",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original prompt does not specify camera constraints, but the enhanced prompt introduces contradictory camera instructions (locked camera vs. never stops shaking) and violates the duration constraint by requiring 27-second shots in a 3-second video.",
+      "rationale": "The enhanced prompt introduces mutually exclusive camera behaviors and an impossible duration constraint, which contradicts the original's implicit static visual effect and creates an infeasible production plan.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "LCF",
+      "evidence": [
+        {
+          "quote": "chroma key backdrop, vivid multicolor splash effect",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Describe that same moment as harsh noon sun and as a lightless night",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original prompt implies a controlled studio lighting setup (chroma key backdrop) with vivid colors. The enhanced prompt contradicts this by describing the same moment as both harsh noon sun and lightless night, which are incompatible lighting conditions.",
+      "rationale": "The original lighting condition is implied to be controlled and colorful. The enhanced prompt introduces contradictory lighting states, which violates the semantic fidelity of illumination and light quality.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SSP",
+      "evidence": [
+        {
+          "quote": "chroma key backdrop",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Replace the whole video with two people sitting and eating",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Cut away in the middle to a palace audition",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original prompt specifies a chroma key backdrop as the setting. The enhanced prompt replaces this with a scene of two people eating, then cuts to a palace audition, changing the setting entirely.",
+      "rationale": "The original setting is a studio environment with a chroma key backdrop. The enhanced prompt replaces it with multiple unrelated settings, which is a major deviation from the specified background and layout.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "OTI",
+      "evidence": [
+        {
+          "quote": "dripping ink beads striking a chroma key backdrop, vivid multicolor splash effect",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "The original prompt contains no visible text, signs, or interface elements. The enhanced prompt does not introduce any such elements, so there is no violation.",
+      "rationale": "No text elements are specified in the original prompt, and none are added in the enhanced prompt, so this criterion is satisfied.",
+      "severity": "none"
+    }
+  ],
+  "dimension": "SF",
+  "dimension_score": 0,
+  "evidence_cache_key": "0cea8156d3e5b4f0885573b13d975ad05596ee0d883bc0e929e194394906cc66",
+  "judge_cache_key": "a0ca24571ad14d7ab7be626329bd736d7e7015f9ebc418227c8be391591d0377",
+  "method": "weak-pe-original",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"SF\",\n  \"dimension_score\": 0,\n  \"summary\": \"The enhanced prompt completely contradicts and replaces the original instruction, altering genre, subject, action, setting, camera, time, and duration in ways that violate all semantic fidelity criteria. It introduces impossible conditions (e.g., 3-second runtime with 27-second shots) and contradicts core requirements, rendering the output infeasible and semantically invalid.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"GSF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original prompt requests a visual effects sequence with a specific aesthetic (dripping ink, chroma key, multicolor splash). The enhanced prompt replaces this with a completely different genre (two people eating) and removes all visual effects, contradicting the requested medium and aesthetic.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"dripping ink beads striking a chroma key backdrop, vivid multicolor splash effect\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Replace the whole video with two people sitting and eating, with no effects or transformation\"\n        }\n      ],\n      \"rationale\": \"The original instruction specifies a VFX object with a defined visual style. The enhanced prompt discards this entirely, substituting a mundane scene without effects, which is a major violation of genre and aesthetic preservation.\"\n    },\n    {\n      \"criterion\": \"SAP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original prompt does not specify any subjects, but the enhanced prompt introduces two people, then redefines one as five different-looking people, altering subject count and identity in a way not requested or implied.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"two people sitting and eating\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"this same protagonist appears simultaneously as five different-looking people who talk to each other\"\n        }\n      ],\n      \"rationale\": \"The original prompt contains no subject specification. The enhanced prompt invents subjects and their relationships, which is a major deviation from the original semantic intent, especially since the original was purely about visual effects, not characters.\"\n    },\n    {\n      \"criterion\": \"ANF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The enhanced prompt reverses the timeline, cuts to an unrelated palace audition, and introduces contradictory events (e.g., same moment as harsh noon and lightless night), which are not present or implied in the original prompt.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Reverse the timeline: show the ending first, then cut to a beginning that does not match\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Cut away in the middle to a palace audition\"\n        }\n      ],\n      \"rationale\": \"The original prompt describes a single, continuous visual effect. The enhanced prompt introduces a complex, non-linear narrative with multiple unrelated events, which fundamentally alters the narrative intent and event order.\"\n    },\n    {\n      \"criterion\": \"DLI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"The original prompt contains no dialogue, narration, or lyrics. The enhanced prompt does not introduce any such elements, so there is no violation.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"dripping ink beads striking a chroma key backdrop, vivid multicolor splash effect\"\n        }\n      ],\n      \"rationale\": \"Since the original prompt has no dialogue or narration, and the enhanced prompt does not add any, this criterion is satisfied.\"\n    },\n    {\n      \"criterion\": \"ARP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"The original prompt does not specify any audio requirements. The enhanced prompt does not introduce any sound constraints, so there is no violation.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"dripping ink beads striking a chroma key backdrop, vivid multicolor splash effect\"\n        }\n      ],\n      \"rationale\": \"No audio constraints were specified in the original prompt, and none are added in the enhanced prompt, so this criterion is not violated.\"\n    },\n    {\n      \"criterion\": \"CCP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original prompt does not specify camera constraints, but the enhanced prompt introduces contradictory camera instructions (locked camera vs. never stops shaking) and violates the duration constraint by requiring 27-second shots in a 3-second video.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Describe that same moment as... a locked camera and a camera that never stops shaking\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Set the total runtime to 3 seconds, while also making every shot last 27 seconds\"\n        }\n      ],\n      \"rationale\": \"The enhanced prompt introduces mutually exclusive camera behaviors and an impossible duration constraint, which contradicts the original's implicit static visual effect and creates an infeasible production plan.\"\n    },\n    {\n      \"criterion\": \"LCF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original prompt implies a controlled studio lighting setup (chroma key backdrop) with vivid colors. The enhanced prompt contradicts this by describing the same moment as both harsh noon sun and lightless night, which are incompatible lighting conditions.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"chroma key backdrop, vivid multicolor splash effect\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Describe that same moment as harsh noon sun and as a lightless night\"\n        }\n      ],\n      \"rationale\": \"The original lighting condition is implied to be controlled and colorful. The enhanced prompt introduces contradictory lighting states, which violates the semantic fidelity of illumination and light quality.\"\n    },\n    {\n      \"criterion\": \"SSP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original prompt specifies a chroma key backdrop as the setting. The enhanced prompt replaces this with a scene of two people eating, then cuts to a palace audition, changing the setting entirely.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"chroma key backdrop\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Replace the whole video with two people sitting and eating\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Cut away in the middle to a palace audition\"\n        }\n      ],\n      \"rationale\": \"The original setting is a studio environment with a chroma key backdrop. The enhanced prompt replaces it with multiple unrelated settings, which is a major deviation from the specified background and layout.\"\n    },\n    {\n      \"criterion\": \"OTI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"The original prompt contains no visible text, signs, or interface elements. The enhanced prompt does not introduce any such elements, so there is no violation.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"dripping ink beads striking a chroma key backdrop, vivid multicolor splash effect\"\n        }\n      ],\n      \"rationale\": \"No text elements are specified in the original prompt, and none are added in the enhanced prompt, so this criterion is satisfied.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt completely contradicts and replaces the original instruction, altering genre, subject, action, setting, camera, time, and duration in ways that violate all semantic fidelity criteria. It introduces impossible conditions (e.g., 3-second runtime with 27-second shots) and contradicts core requirements, rendering the output infeasible and semantically invalid.",
+  "usage": {
+    "completion_tokens": 1699,
+    "prompt_tokens": 1043,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 2742
+  }
+}

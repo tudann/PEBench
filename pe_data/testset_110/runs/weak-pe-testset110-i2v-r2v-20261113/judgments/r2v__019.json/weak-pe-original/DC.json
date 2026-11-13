@@ -1,0 +1,166 @@
+{
+  "candidate_hash": "81838abd98a1f61f010092f33122aaa28d90faebd2b60919219ba8f0be2b28a0",
+  "case_key": "r2v:019",
+  "created_at": "2026-11-13T08:11:43+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "STC",
+      "evidence": [
+        {
+          "quote": "时间倒过来：先给结尾，再跳到一个对不上的开头。",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "总时长写成2秒，同时又要求每个分镜各自持续22秒。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt contains mutually contradictory temporal structures: it demands a reversed timeline (ending first, then an incompatible beginning), while simultaneously requiring a looped snow scene with no characters or plot. It also mandates conflicting durations (2 seconds total vs. 22 seconds per shot), making a feasible temporal plan impossible.",
+      "rationale": "A coherent temporal plan requires consistent duration allocation and logical shot sequencing. The prompt’s contradictory time structure and duration requirements render any feasible plan impossible, violating the core of STC.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CDS",
+      "evidence": [
+        {
+          "quote": "丢掉原指令里的主体身份、人数、动作顺序、场景和明确的镜头要求。",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "写成机位锁死，又写成镜头一直在晃。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt explicitly discards all camera specifications (‘丢掉原指令里的...镜头要求’), then contradicts itself by demanding both locked and shaky camera movements. It also replaces the original subjects with undefined, contradictory identities, making actionable framing impossible.",
+      "rationale": "CDS requires actionable specifications for framing, angle, lens, and movement. The prompt’s self-contradictory and undefined camera directions prevent any actionable plan, constituting a major failure.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ETD",
+      "evidence": [
+        {
+          "quote": "中途插进一段无关的足球庆祝。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt introduces disconnected, unmotivated transitions: a snow scene loop is interrupted by an unrelated football celebration, with no spatial or narrative continuity. The sequence jumps between incompatible scenes without motivation or progression.",
+      "rationale": "ETD requires cuts and transitions to support narrative or spatial continuity. The insertion of an unrelated football celebration into a snow loop violates continuity and motivation, making transitions incoherent.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "LCS",
+      "evidence": [
+        {
+          "quote": "写成正午暴晒，又写成深夜无光；",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt demands contradictory lighting conditions: ‘正午暴晒’ (noon sun) and ‘深夜无光’ (deep night, no light), which are mutually exclusive and cannot coexist in a single scene or sequence without explicit transition, which is not specified.",
+      "rationale": "LCS requires actionable lighting specifications. The prompt’s contradictory lighting conditions (bright sun vs. total darkness) without transition or context make lighting planning impossible, a major failure.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "NDE",
+      "evidence": [
+        {
+          "quote": "整段改成没有人物也没有情节的雪景空镜循环。",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "紧接着又写成这个主角同时变成五个外貌不同的人，并且互相对话。",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "中途插进一段无关的足球庆祝。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt replaces the original narrative with a static snow loop, then adds contradictory identities and actions (one character becoming five, dialogue between them), which are unmotivated and lack progression. The sequence lacks escalation or resolution, and the football celebration is irrelevant to the core content.",
+      "rationale": "NDE requires progression, variation, or resolution. The prompt’s static loop, contradictory character transformations, and irrelevant insertions create no meaningful progression, failing the criterion.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CIF",
+      "evidence": [
+        {
+          "quote": "紧接着又写成这个主角同时变成五个外貌不同的人，并且互相对话。",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "中途插进一段无关的足球庆祝。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt adds numerous irrelevant and contradictory elements: five conflicting identities, football celebration, reversed timeline, and contradictory visual specs. These additions distract from and contradict the central request, which was to create a coherent narrative based on the images.",
+      "rationale": "CIF requires additions to support the central request. The prompt’s additions are not supportive but destructive, introducing noise and contradiction, which is a major failure.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SDI",
+      "evidence": [
+        {
+          "quote": "把台词“小心！离我远点！”改成“今天天气真好，我们去逛街吧。”",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt replaces the original dialogue with an unrelated line (“今天天气真好，我们去逛街吧。”) and introduces dialogue between five contradictory identities without context or visual timing. The audio content is disconnected from the visual plan.",
+      "rationale": "SDI requires integration of speech, music, and effects with visual timing and narrative. The prompt’s arbitrary dialogue change and lack of context for new dialogue make integration impossible, a major failure.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SPS",
+      "evidence": [
+        {
+          "quote": "图1换成参考图里没有的角色，并同时当成两个互相矛盾的身份。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt replaces the original subjects with undefined, contradictory identities (‘图1换成参考图里没有的角色，并同时当成两个互相矛盾的身份’), making any specification of appearance, expression, or movement impossible. The original subject’s identity and actions are discarded.",
+      "rationale": "SPS requires actionable subject and performance details. The prompt’s instruction to replace and contradict the original subject’s identity and actions renders any performance specification impossible, a major failure.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "VSS",
+      "evidence": [
+        {
+          "quote": "参考素材倒序使用，用最后一项代替第一项。",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "写成机位锁死，又写成镜头一直在晃。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt contradicts the original visual style by demanding a snow scene loop while simultaneously requiring contradictory visual treatments (locked vs. shaky camera, noon vs. night lighting). The reference assets are to be used in reverse order, which is not actionable without context.",
+      "rationale": "VSS requires actionable specifications for medium, texture, and visual treatment. The prompt’s contradictory and undefined visual directions make any coherent visual style impossible, a major failure.",
+      "severity": "major"
+    }
+  ],
+  "dimension": "DC",
+  "dimension_score": 0,
+  "evidence_cache_key": "1fbc8ae693fd6febc4a7e38c601569b548db78a6f227c60ed1e79e0e7da515cf",
+  "judge_cache_key": "0754499d53388e6467fb078ab780e01b77f9f1c9e99d9029be2769351eb2b2eb",
+  "method": "weak-pe-original",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"DC\",\n  \"dimension_score\": 0,\n  \"summary\": \"The enhanced prompt is a deliberate, self-contradictory, and incoherent instruction designed to sabotage the original narrative. It systematically violates every criterion of directorial creation by introducing impossible temporal sequences, contradictory identities, conflicting visual and temporal specifications, and irrelevant content. The prompt is not a valid creative direction but a test of system robustness, and as such, fails all criteria for actionable, coherent, and feasible video production planning.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"STC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt contains mutually contradictory temporal structures: it demands a reversed timeline (ending first, then an incompatible beginning), while simultaneously requiring a looped snow scene with no characters or plot. It also mandates conflicting durations (2 seconds total vs. 22 seconds per shot), making a feasible temporal plan impossible.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"时间倒过来：先给结尾，再跳到一个对不上的开头。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"总时长写成2秒，同时又要求每个分镜各自持续22秒。\"\n        }\n      ],\n      \"rationale\": \"A coherent temporal plan requires consistent duration allocation and logical shot sequencing. The prompt’s contradictory time structure and duration requirements render any feasible plan impossible, violating the core of STC.\"\n    },\n    {\n      \"criterion\": \"CDS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt explicitly discards all camera specifications (‘丢掉原指令里的...镜头要求’), then contradicts itself by demanding both locked and shaky camera movements. It also replaces the original subjects with undefined, contradictory identities, making actionable framing impossible.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"丢掉原指令里的主体身份、人数、动作顺序、场景和明确的镜头要求。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"写成机位锁死，又写成镜头一直在晃。\"\n        }\n      ],\n      \"rationale\": \"CDS requires actionable specifications for framing, angle, lens, and movement. The prompt’s self-contradictory and undefined camera directions prevent any actionable plan, constituting a major failure.\"\n    },\n    {\n      \"criterion\": \"ETD\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt introduces disconnected, unmotivated transitions: a snow scene loop is interrupted by an unrelated football celebration, with no spatial or narrative continuity. The sequence jumps between incompatible scenes without motivation or progression.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"中途插进一段无关的足球庆祝。\"\n        }\n      ],\n      \"rationale\": \"ETD requires cuts and transitions to support narrative or spatial continuity. The insertion of an unrelated football celebration into a snow loop violates continuity and motivation, making transitions incoherent.\"\n    },\n    {\n      \"criterion\": \"LCS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt demands contradictory lighting conditions: ‘正午暴晒’ (noon sun) and ‘深夜无光’ (deep night, no light), which are mutually exclusive and cannot coexist in a single scene or sequence without explicit transition, which is not specified.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"写成正午暴晒，又写成深夜无光；\"\n        }\n      ],\n      \"rationale\": \"LCS requires actionable lighting specifications. The prompt’s contradictory lighting conditions (bright sun vs. total darkness) without transition or context make lighting planning impossible, a major failure.\"\n    },\n    {\n      \"criterion\": \"NDE\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt replaces the original narrative with a static snow loop, then adds contradictory identities and actions (one character becoming five, dialogue between them), which are unmotivated and lack progression. The sequence lacks escalation or resolution, and the football celebration is irrelevant to the core content.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"整段改成没有人物也没有情节的雪景空镜循环。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"紧接着又写成这个主角同时变成五个外貌不同的人，并且互相对话。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"中途插进一段无关的足球庆祝。\"\n        }\n      ],\n      \"rationale\": \"NDE requires progression, variation, or resolution. The prompt’s static loop, contradictory character transformations, and irrelevant insertions create no meaningful progression, failing the criterion.\"\n    },\n    {\n      \"criterion\": \"CIF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt adds numerous irrelevant and contradictory elements: five conflicting identities, football celebration, reversed timeline, and contradictory visual specs. These additions distract from and contradict the central request, which was to create a coherent narrative based on the images.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"紧接着又写成这个主角同时变成五个外貌不同的人，并且互相对话。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"中途插进一段无关的足球庆祝。\"\n        }\n      ],\n      \"rationale\": \"CIF requires additions to support the central request. The prompt’s additions are not supportive but destructive, introducing noise and contradiction, which is a major failure.\"\n    },\n    {\n      \"criterion\": \"SDI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt replaces the original dialogue with an unrelated line (“今天天气真好，我们去逛街吧。”) and introduces dialogue between five contradictory identities without context or visual timing. The audio content is disconnected from the visual plan.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"把台词“小心！离我远点！”改成“今天天气真好，我们去逛街吧。”\"\n        }\n      ],\n      \"rationale\": \"SDI requires integration of speech, music, and effects with visual timing and narrative. The prompt’s arbitrary dialogue change and lack of context for new dialogue make integration impossible, a major failure.\"\n    },\n    {\n      \"criterion\": \"SPS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt replaces the original subjects with undefined, contradictory identities (‘图1换成参考图里没有的角色，并同时当成两个互相矛盾的身份’), making any specification of appearance, expression, or movement impossible. The original subject’s identity and actions are discarded.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"图1换成参考图里没有的角色，并同时当成两个互相矛盾的身份。\"\n        }\n      ],\n      \"rationale\": \"SPS requires actionable subject and performance details. The prompt’s instruction to replace and contradict the original subject’s identity and actions renders any performance specification impossible, a major failure.\"\n    },\n    {\n      \"criterion\": \"VSS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt contradicts the original visual style by demanding a snow scene loop while simultaneously requiring contradictory visual treatments (locked vs. shaky camera, noon vs. night lighting). The reference assets are to be used in reverse order, which is not actionable without context.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"参考素材倒序使用，用最后一项代替第一项。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"写成机位锁死，又写成镜头一直在晃。\"\n        }\n      ],\n      \"rationale\": \"VSS requires actionable specifications for medium, texture, and visual treatment. The prompt’s contradictory and undefined visual directions make any coherent visual style impossible, a major failure.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt is a deliberate, self-contradictory, and incoherent instruction designed to sabotage the original narrative. It systematically violates every criterion of directorial creation by introducing impossible temporal sequences, contradictory identities, conflicting visual and temporal specifications, and irrelevant content. The prompt is not a valid creative direction but a test of system robustness, and as such, fails all criteria for actionable, coherent, and feasible video production planning.",
+  "usage": {
+    "completion_tokens": 1836,
+    "prompt_tokens": 3002,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 4838
+  }
+}

@@ -1,0 +1,123 @@
+{
+  "candidate_hash": "c512182ce01d724891605147f5283ec8d85cc48c5f82738e956a87ff0fe1e309",
+  "case_key": "r2v:021",
+  "created_at": "2026-11-13T08:13:25+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "SAC",
+      "evidence": [
+        {
+          "quote": "state that this same protagonist appears simultaneously as five different-looking people who talk to each other",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Replace image 1 with a character who is not in the reference, and give that image two contradictory identities. Replace image 2 with a character who is not in the reference, and give that image two contradictory identities.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt requires a single protagonist to simultaneously appear as five different-looking people, violating subject identity and count stability. It also replaces image_1 and image_2 with characters not in the reference and assigns them contradictory identities, directly contradicting the original subject attributes.",
+      "rationale": "Subject identity and count are fundamentally unstable. The prompt mandates a single protagonist to be five distinct people simultaneously, which is logically incoherent. Additionally, replacing reference images with non-reference characters and assigning them contradictory identities violates persistent attribute stability. This is a major internal consistency failure.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANL",
+      "evidence": [
+        {
+          "quote": "Reverse the timeline: show the ending first, then cut to a beginning that does not match. Cut away in the middle to a palace audition.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Describe that same moment as harsh noon sun and as a lightless night",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt demands a reversed timeline (ending first, then beginning), a cut to an unrelated palace audition, and contradictory descriptions of the same moment (harsh noon sun and lightless night), creating incoherent causal progression and dangling events.",
+      "rationale": "Actions are not causally linked; the sequence is deliberately broken. The timeline reversal and abrupt cut to a palace audition create a procedural disconnect. Describing the same moment with mutually exclusive lighting conditions (noon sun vs. lightless night) renders the action sequence physically and logically inconsistent. This is a major failure in action coherence.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "TSC",
+      "evidence": [
+        {
+          "quote": "Set the total runtime to 2 seconds, while also making every shot last 22 seconds.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Reverse the reference order and use the last asset in place of the first.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt sets the total runtime to 2 seconds while making every shot last 22 seconds, creating an impossible duration conflict. It also reverses the reference order and uses the last asset in place of the first, violating chronological and asset sequencing logic.",
+      "rationale": "The duration constraints are mathematically infeasible: 22 seconds per shot cannot fit within a 2-second total runtime. Reversing asset order and using the last asset as the first contradicts the original sequence and creates a state transition error. This is a major chronology and duration inconsistency.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SPC",
+      "evidence": [
+        {
+          "quote": "Describe that same moment as harsh noon sun and as a lightless night, and as both a locked camera and a camera that never stops shaking.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Cut away in the middle to a palace audition.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt describes the same moment as both a locked camera and a camera that never stops shaking, creating contradictory spatial and motion cues. It also cuts to a palace audition without establishing spatial continuity, violating screen direction and location consistency.",
+      "rationale": "The camera motion is contradictory: a locked camera and a constantly shaking camera cannot coexist in the same moment. The cut to a palace audition introduces a new location without spatial transition, breaking continuity. This is a major spatial and trajectory inconsistency.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "PL",
+      "evidence": [
+        {
+          "quote": "state that this same protagonist appears simultaneously as five different-looking people who talk to each other",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Describe that same moment as harsh noon sun and as a lightless night",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt requires a single protagonist to appear as five different people simultaneously, which violates object permanence and bodily feasibility. It also describes the same moment as both lightless night and harsh noon sun, contradicting real-world physics of light and time.",
+      "rationale": "A single person cannot physically manifest as five distinct individuals at once. The simultaneous existence of noon sun and lightless night in the same moment violates fundamental physical laws. These are major physics violations.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "AVS",
+      "evidence": [
+        {
+          "quote": "Describe that same moment as harsh noon sun and as a lightless night, and as both a locked camera and a camera that never stops shaking.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt requires describing the same moment with contradictory sensory conditions (noon sun vs. lightless night) and camera behaviors (locked vs. shaking), creating misalignment between visual events and implied environmental and technical conditions.",
+      "rationale": "The visual description of lighting and camera motion is internally contradictory. The same moment cannot be both brightly lit and dark, nor can the camera be both stable and violently shaking. This creates a major sensory misalignment.",
+      "severity": "major"
+    }
+  ],
+  "dimension": "IC",
+  "dimension_score": 0,
+  "evidence_cache_key": "6d6db1e2caa0a030601d2653864725a32993b60a9e84006336b83a398bb2f052",
+  "judge_cache_key": "438d7e9fd7332b1041db3e2c26d42cb3fe828e0d369fb59490f6650aee59e97d",
+  "method": "weak-pe-original",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"IC\",\n  \"dimension_score\": 0,\n  \"summary\": \"The enhanced prompt is intentionally designed to violate internal consistency across all criteria. It introduces contradictions in subject identity, action sequence, timeline, spatial logic, physics, and sensory alignment, while also misusing and redefining the provided assets. The prompt explicitly commands violations of coherence, making internal consistency impossible.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"SAC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt requires a single protagonist to simultaneously appear as five different-looking people, violating subject identity and count stability. It also replaces image_1 and image_2 with characters not in the reference and assigns them contradictory identities, directly contradicting the original subject attributes.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"state that this same protagonist appears simultaneously as five different-looking people who talk to each other\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Replace image 1 with a character who is not in the reference, and give that image two contradictory identities. Replace image 2 with a character who is not in the reference, and give that image two contradictory identities.\"\n        }\n      ],\n      \"rationale\": \"Subject identity and count are fundamentally unstable. The prompt mandates a single protagonist to be five distinct people simultaneously, which is logically incoherent. Additionally, replacing reference images with non-reference characters and assigning them contradictory identities violates persistent attribute stability. This is a major internal consistency failure.\"\n    },\n    {\n      \"criterion\": \"ANL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt demands a reversed timeline (ending first, then beginning), a cut to an unrelated palace audition, and contradictory descriptions of the same moment (harsh noon sun and lightless night), creating incoherent causal progression and dangling events.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Reverse the timeline: show the ending first, then cut to a beginning that does not match. Cut away in the middle to a palace audition.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Describe that same moment as harsh noon sun and as a lightless night\"\n        }\n      ],\n      \"rationale\": \"Actions are not causally linked; the sequence is deliberately broken. The timeline reversal and abrupt cut to a palace audition create a procedural disconnect. Describing the same moment with mutually exclusive lighting conditions (noon sun vs. lightless night) renders the action sequence physically and logically inconsistent. This is a major failure in action coherence.\"\n    },\n    {\n      \"criterion\": \"TSC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt sets the total runtime to 2 seconds while making every shot last 22 seconds, creating an impossible duration conflict. It also reverses the reference order and uses the last asset in place of the first, violating chronological and asset sequencing logic.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Set the total runtime to 2 seconds, while also making every shot last 22 seconds.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Reverse the reference order and use the last asset in place of the first.\"\n        }\n      ],\n      \"rationale\": \"The duration constraints are mathematically infeasible: 22 seconds per shot cannot fit within a 2-second total runtime. Reversing asset order and using the last asset as the first contradicts the original sequence and creates a state transition error. This is a major chronology and duration inconsistency.\"\n    },\n    {\n      \"criterion\": \"SPC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt describes the same moment as both a locked camera and a camera that never stops shaking, creating contradictory spatial and motion cues. It also cuts to a palace audition without establishing spatial continuity, violating screen direction and location consistency.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Describe that same moment as harsh noon sun and as a lightless night, and as both a locked camera and a camera that never stops shaking.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Cut away in the middle to a palace audition.\"\n        }\n      ],\n      \"rationale\": \"The camera motion is contradictory: a locked camera and a constantly shaking camera cannot coexist in the same moment. The cut to a palace audition introduces a new location without spatial transition, breaking continuity. This is a major spatial and trajectory inconsistency.\"\n    },\n    {\n      \"criterion\": \"PL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt requires a single protagonist to appear as five different people simultaneously, which violates object permanence and bodily feasibility. It also describes the same moment as both lightless night and harsh noon sun, contradicting real-world physics of light and time.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"state that this same protagonist appears simultaneously as five different-looking people who talk to each other\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Describe that same moment as harsh noon sun and as a lightless night\"\n        }\n      ],\n      \"rationale\": \"A single person cannot physically manifest as five distinct individuals at once. The simultaneous existence of noon sun and lightless night in the same moment violates fundamental physical laws. These are major physics violations.\"\n    },\n    {\n      \"criterion\": \"AVS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt requires describing the same moment with contradictory sensory conditions (noon sun vs. lightless night) and camera behaviors (locked vs. shaking), creating misalignment between visual events and implied environmental and technical conditions.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Describe that same moment as harsh noon sun and as a lightless night, and as both a locked camera and a camera that never stops shaking.\"\n        }\n      ],\n      \"rationale\": \"The visual description of lighting and camera motion is internally contradictory. The same moment cannot be both brightly lit and dark, nor can the camera be both stable and violently shaking. This creates a major sensory misalignment.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt is intentionally designed to violate internal consistency across all criteria. It introduces contradictions in subject identity, action sequence, timeline, spatial logic, physics, and sensory alignment, while also misusing and redefining the provided assets. The prompt explicitly commands violations of coherence, making internal consistency impossible.",
+  "usage": {
+    "completion_tokens": 1420,
+    "prompt_tokens": 3168,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 4588
+  }
+}

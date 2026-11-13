@@ -1,0 +1,131 @@
+{
+  "candidate_hash": "cbed3328382463d3a27ec074a3333897a86cfd2471b2c7dbc36b684b2986a2cb",
+  "case_key": "i2v:029",
+  "created_at": "2026-11-13T07:20:27+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "SAC",
+      "evidence": [
+        {
+          "quote": "A man on the roof is wearing headphones... a woman in the yard... two schoolchildren seated at the low wooden table",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "the man in white over-ear headphones, navy polo, and dark trousers... the woman in the red polka-dot top... the two schoolchildren seated at the low wooden table",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "man_on_roof: wearing a dark blue t-shirt, black pants, black shoes, and white over-ear headphones... woman_in_yard: wearing a red polka-dot shirt... children: wearing white and blue school uniforms",
+          "source": "evidence_facts"
+        }
+      ],
+      "issue": "Subject identities, count, clothing, and props remain consistent with the original image. The man in white headphones, navy polo, and dark trousers; the woman in red polka-dot top; and the children in school uniforms are all correctly referenced. No unexplained renaming, duplication, or attribute drift occurs.",
+      "rationale": "All subjects are correctly identified and described with consistent attributes across the original prompt, enhanced prompt, and evidence. No changes to identity, clothing, or props are introduced that contradict the source image.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANL",
+      "evidence": [
+        {
+          "quote": "the man straightens into exaggerated hip sways and broad arm swings while raking... his body leans and tilts wildly near the edge, nearly flying off... the woman stands from her green plastic stool, grabs a round winnowing basket, and holds it out under the cascade, shifting her stance side to side in sync with his rake rhythm",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "The man's movements are not exaggerated or dance-like as described in the prompt; he is raking rice in a normal, focused manner... The woman is not holding a winnowing basket to catch rice; she is sorting vegetables into a basket... There is no visible synergy between the man's and woman's movements",
+          "source": "evidence_facts"
+        }
+      ],
+      "issue": "The enhanced prompt fabricates a causal and procedural progression not supported by the evidence: the man’s ‘dancing’ and ‘exaggerated hip sways’ leading to a near-fall, and the woman’s responsive basket-holding to catch cascading rice. These actions lack plausible prerequisites and are not grounded in the static, focused activities shown in the image. The ‘synergy’ between the man and woman is invented without basis in the original scene.",
+      "rationale": "The prompt invents a complex, choreographed interaction between the man and woman that is not present in the evidence. The man’s actions are described as dynamic and extreme, while the image shows a static, focused raking motion. The woman’s response to the rice cascade is entirely fabricated—she is sorting vegetables, not catching rice. This creates a major inconsistency in action logic and causal binding.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "TSC",
+      "evidence": [
+        {
+          "quote": "From the bent stroke, the man straightens into exaggerated hip sways... his body leans and tilts wildly near the edge... Rice begins cascading over the front roof edge... The woman stands from her green plastic stool, grabs a round winnowing basket... shifting her stance side to side in sync with his rake rhythm",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "The image does not visually support the dynamic, exaggerated, or synergistic actions described in the prompt... The scene is static and lacks the implied motion and energy of 'dancing' or 'frantic raking'",
+          "source": "evidence_facts"
+        }
+      ],
+      "issue": "The enhanced prompt describes a dynamic sequence of events (man dancing, rice cascading, woman reacting) that must unfold over time, but the evidence is a static image with no temporal progression. The prompt implies a state transition from normal raking to exaggerated dancing to near-fall, which cannot be verified or supported by the single frame. The duration of 15 seconds is allocated to a sequence that lacks any temporal markers or state changes in the evidence.",
+      "rationale": "The prompt constructs a multi-stage temporal narrative (raking → dancing → near-fall → rice cascade → woman’s reaction) that requires a sequence of state changes. However, the evidence is a single static frame with no indication of motion or progression. This creates a major inconsistency in chronology and state transitions, as the described events cannot be temporally mapped to the evidence.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SPC",
+      "evidence": [
+        {
+          "quote": "A man on the roof... a woman in the yard... children seated at the low wooden table",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "the man... on the flat concrete roof; the woman... squatting at her bamboo baskets; the two schoolchildren seated at the low wooden table below",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "man_on_roof is raking rice on the rooftop... woman_in_yard is sorting vegetables into a basket... children are seated at a table... ladder leans against the house, leading to the rooftop... satellite dish is mounted on the rooftop",
+          "source": "evidence_facts"
+        }
+      ],
+      "issue": "The spatial layout, relative positions, and screen direction are consistent with the original image. The man remains on the rooftop, the woman in the yard, and the children at the table. The ladder, scooter, satellite dish, and terraced hills are in their original positions. No unexplained position swaps or movement paths are introduced.",
+      "rationale": "All spatial relationships and object placements are preserved as in the original image. The enhanced prompt does not alter the scene’s composition or introduce impossible trajectories or position swaps. The description of movement (e.g., man leaning near edge) is consistent with the rooftop’s geometry and does not contradict the static spatial layout.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "PL",
+      "evidence": [
+        {
+          "quote": "his body leans and tilts wildly near the edge, nearly flying off, yet he keeps the rhythm without falling... Rice begins cascading over the front roof edge in a thin golden waterfall... the woman... holds it out under the cascade, shifting her stance side to side in sync with his rake rhythm",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "There is no visible rice cascading down from the roof like a waterfall; the rice remains on the rooftop... The prompt describes 'frantically raking and drying rice while dancing with exaggerated hip movements and arm swings' — none of these are present in the image",
+          "source": "evidence_facts"
+        }
+      ],
+      "issue": "The enhanced prompt describes physically implausible events: the man’s body ‘nearly flying off’ the roof while maintaining rhythm, rice cascading like a waterfall from a flat roof, and the woman catching rice with a basket in sync with his movements. These defy real-world physics—gravity, object permanence, and causal relations—unless interpreted as fantasy, which is not indicated. The prompt does not establish a fictional world where such events are plausible.",
+      "rationale": "The prompt introduces events that violate real-world physics: a man leaning wildly on a roof without falling, rice flowing like a waterfall from a flat surface, and synchronized movement between two people across a distance. These are not justified by any fictional context, making them major physical inconsistencies.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "AVS",
+      "evidence": [
+        {
+          "quote": "Rhythmic scraping of the wooden rake through dry rice grains... Rice begins cascading... patters and pours onto the winnowing basket... faint rural ambience, distant wind turbines, and the children's quiet clinking of bowls and chopsticks",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The enhanced prompt includes a soundscape description (rhythmic scraping, rice pattering, rural ambience) that aligns with the visual events described. There is no dialogue, music, or effects that would require synchronization with visual events. The soundscape is plausible and consistent with the described actions, even if those actions are not visually supported.",
+      "rationale": "The soundscape is described as matching the visual events (raking, cascading rice, children eating) and does not introduce any misaligned or premature effects. Since there is no dialogue or music, and the ambient sounds are consistent with the scene, no AVS issues are present.",
+      "severity": "none"
+    }
+  ],
+  "dimension": "IC",
+  "dimension_score": 65,
+  "evidence_cache_key": "0f74659f709a169692692018b0b8aead9c0226e40b6b4de1dd9812fe7417d712",
+  "judge_cache_key": "438d7e9fd7332b1041db3e2c26d42cb3fe828e0d369fb59490f6650aee59e97d",
+  "method": "glm53_20261112_120702",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"IC\",\n  \"dimension_score\": 65,\n  \"summary\": \"The enhanced prompt introduces a dynamic, choreographed sequence of actions that diverge significantly from the static, realistic scene in the original image. While the prompt maintains subject identities and basic spatial layout, it fabricates exaggerated movements, synergistic actions, and cascading rice not present in the evidence. These additions create internal inconsistencies in action progression, chronology, and physical plausibility, particularly regarding the man’s near-fall and the woman’s responsive basket-holding. The prompt’s description of motion and interaction is unsupported by the static image, leading to major inconsistencies in ANL, TSC, and PL, though SAC and SPC remain mostly intact due to preserved identities and positions.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"SAC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"Subject identities, count, clothing, and props remain consistent with the original image. The man in white headphones, navy polo, and dark trousers; the woman in red polka-dot top; and the children in school uniforms are all correctly referenced. No unexplained renaming, duplication, or attribute drift occurs.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"A man on the roof is wearing headphones... a woman in the yard... two schoolchildren seated at the low wooden table\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"the man in white over-ear headphones, navy polo, and dark trousers... the woman in the red polka-dot top... the two schoolchildren seated at the low wooden table\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"man_on_roof: wearing a dark blue t-shirt, black pants, black shoes, and white over-ear headphones... woman_in_yard: wearing a red polka-dot shirt... children: wearing white and blue school uniforms\"\n        }\n      ],\n      \"rationale\": \"All subjects are correctly identified and described with consistent attributes across the original prompt, enhanced prompt, and evidence. No changes to identity, clothing, or props are introduced that contradict the source image.\"\n    },\n    {\n      \"criterion\": \"ANL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The enhanced prompt fabricates a causal and procedural progression not supported by the evidence: the man’s ‘dancing’ and ‘exaggerated hip sways’ leading to a near-fall, and the woman’s responsive basket-holding to catch cascading rice. These actions lack plausible prerequisites and are not grounded in the static, focused activities shown in the image. The ‘synergy’ between the man and woman is invented without basis in the original scene.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"the man straightens into exaggerated hip sways and broad arm swings while raking... his body leans and tilts wildly near the edge, nearly flying off... the woman stands from her green plastic stool, grabs a round winnowing basket, and holds it out under the cascade, shifting her stance side to side in sync with his rake rhythm\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"The man's movements are not exaggerated or dance-like as described in the prompt; he is raking rice in a normal, focused manner... The woman is not holding a winnowing basket to catch rice; she is sorting vegetables into a basket... There is no visible synergy between the man's and woman's movements\"\n        }\n      ],\n      \"rationale\": \"The prompt invents a complex, choreographed interaction between the man and woman that is not present in the evidence. The man’s actions are described as dynamic and extreme, while the image shows a static, focused raking motion. The woman’s response to the rice cascade is entirely fabricated—she is sorting vegetables, not catching rice. This creates a major inconsistency in action logic and causal binding.\"\n    },\n    {\n      \"criterion\": \"TSC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The enhanced prompt describes a dynamic sequence of events (man dancing, rice cascading, woman reacting) that must unfold over time, but the evidence is a static image with no temporal progression. The prompt implies a state transition from normal raking to exaggerated dancing to near-fall, which cannot be verified or supported by the single frame. The duration of 15 seconds is allocated to a sequence that lacks any temporal markers or state changes in the evidence.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"From the bent stroke, the man straightens into exaggerated hip sways... his body leans and tilts wildly near the edge... Rice begins cascading over the front roof edge... The woman stands from her green plastic stool, grabs a round winnowing basket... shifting her stance side to side in sync with his rake rhythm\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"The image does not visually support the dynamic, exaggerated, or synergistic actions described in the prompt... The scene is static and lacks the implied motion and energy of 'dancing' or 'frantic raking'\"\n        }\n      ],\n      \"rationale\": \"The prompt constructs a multi-stage temporal narrative (raking → dancing → near-fall → rice cascade → woman’s reaction) that requires a sequence of state changes. However, the evidence is a single static frame with no indication of motion or progression. This creates a major inconsistency in chronology and state transitions, as the described events cannot be temporally mapped to the evidence.\"\n    },\n    {\n      \"criterion\": \"SPC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"The spatial layout, relative positions, and screen direction are consistent with the original image. The man remains on the rooftop, the woman in the yard, and the children at the table. The ladder, scooter, satellite dish, and terraced hills are in their original positions. No unexplained position swaps or movement paths are introduced.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"A man on the roof... a woman in the yard... children seated at the low wooden table\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"the man... on the flat concrete roof; the woman... squatting at her bamboo baskets; the two schoolchildren seated at the low wooden table below\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"man_on_roof is raking rice on the rooftop... woman_in_yard is sorting vegetables into a basket... children are seated at a table... ladder leans against the house, leading to the rooftop... satellite dish is mounted on the rooftop\"\n        }\n      ],\n      \"rationale\": \"All spatial relationships and object placements are preserved as in the original image. The enhanced prompt does not alter the scene’s composition or introduce impossible trajectories or position swaps. The description of movement (e.g., man leaning near edge) is consistent with the rooftop’s geometry and does not contradict the static spatial layout.\"\n    },\n    {\n      \"criterion\": \"PL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The enhanced prompt describes physically implausible events: the man’s body ‘nearly flying off’ the roof while maintaining rhythm, rice cascading like a waterfall from a flat roof, and the woman catching rice with a basket in sync with his movements. These defy real-world physics—gravity, object permanence, and causal relations—unless interpreted as fantasy, which is not indicated. The prompt does not establish a fictional world where such events are plausible.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"his body leans and tilts wildly near the edge, nearly flying off, yet he keeps the rhythm without falling... Rice begins cascading over the front roof edge in a thin golden waterfall... the woman... holds it out under the cascade, shifting her stance side to side in sync with his rake rhythm\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"There is no visible rice cascading down from the roof like a waterfall; the rice remains on the rooftop... The prompt describes 'frantically raking and drying rice while dancing with exaggerated hip movements and arm swings' — none of these are present in the image\"\n        }\n      ],\n      \"rationale\": \"The prompt introduces events that violate real-world physics: a man leaning wildly on a roof without falling, rice flowing like a waterfall from a flat surface, and synchronized movement between two people across a distance. These are not justified by any fictional context, making them major physical inconsistencies.\"\n    },\n    {\n      \"criterion\": \"AVS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"The enhanced prompt includes a soundscape description (rhythmic scraping, rice pattering, rural ambience) that aligns with the visual events described. There is no dialogue, music, or effects that would require synchronization with visual events. The soundscape is plausible and consistent with the described actions, even if those actions are not visually supported.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Rhythmic scraping of the wooden rake through dry rice grains... Rice begins cascading... patters and pours onto the winnowing basket... faint rural ambience, distant wind turbines, and the children's quiet clinking of bowls and chopsticks\"\n        }\n      ],\n      \"rationale\": \"The soundscape is described as matching the visual events (raking, cascading rice, children eating) and does not introduce any misaligned or premature effects. Since there is no dialogue or music, and the ambient sounds are consistent with the scene, no AVS issues are present.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt introduces a dynamic, choreographed sequence of actions that diverge significantly from the static, realistic scene in the original image. While the prompt maintains subject identities and basic spatial layout, it fabricates exaggerated movements, synergistic actions, and cascading rice not present in the evidence. These additions create internal inconsistencies in action progression, chronology, and physical plausibility, particularly regarding the man’s near-fall and the woman’s responsive basket-holding. The prompt’s description of motion and interaction is unsupported by the static image, leading to major inconsistencies in ANL, TSC, and PL, though SAC and SPC remain mostly intact due to preserved identities and positions.",
+  "usage": {
+    "completion_tokens": 2149,
+    "prompt_tokens": 3067,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 5216
+  }
+}

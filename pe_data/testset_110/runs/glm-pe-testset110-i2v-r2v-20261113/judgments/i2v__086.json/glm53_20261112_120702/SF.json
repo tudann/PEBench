@@ -1,0 +1,160 @@
+{
+  "candidate_hash": "2bb63a4c871f66c04f87a135744b7375fc2ffd6b0b10b9c36d50e4dd6549bc2e",
+  "case_key": "i2v:086",
+  "created_at": "2026-11-13T07:30:20+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "GSF",
+      "evidence": [
+        {
+          "quote": "seamless 3d style animation while floating in the cloudscinematic, anamorphic lens, shallow depth of field",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Seamless 3D animation, cinematic with anamorphic lens and shallow depth of field",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The requested genre (cinematic 3D animation), medium (video), and visual style (anamorphic lens, shallow depth of field) are preserved. The enhanced prompt elaborates on these with compatible details (e.g., 'high three-quarter aerial view', 'warm light from upper left') without contradiction.",
+      "rationale": "The core visual style and medium are preserved. The added details (e.g., 'high three-quarter aerial view') are compatible elaborations, not substitutions or contradictions.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SAP",
+      "evidence": [
+        {
+          "quote": "mattress floating above and surrounded by clouds",
+          "source": "evidence_facts"
+        },
+        {
+          "quote": "its quilted white top with soft blue swirl patterns, navy blue ribbed side panels, and cream mesh border band fully preserved",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The subject (mattress) is preserved with its identity, appearance (quilted white top, blue swirls, navy ribbed sides, cream mesh border), and attributes (floating, size transformations) maintained. The enhanced prompt correctly references the initial state from the image and preserves its visual characteristics throughout the sequence.",
+      "rationale": "The subject’s identity and appearance are accurately preserved. The transformation sequence is described with consistent visual attributes, even if the direction is reversed (see ANF).",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANF",
+      "evidence": [
+        {
+          "quote": "seamlessly getting bigger, king size mattress to a queen size to a baby-size mattress",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "At around 2.5 seconds, the mattress contracts seamlessly to queen size... At around 4.5 seconds, it shrinks again in one smooth morph to baby size",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original prompt specifies the mattress 'getting bigger' (king → queen → baby), implying an increase in size. However, the enhanced prompt describes a shrinking sequence (king → queen → baby), which reverses the requested transformation direction. This is a material contradiction in the event chain and narrative intent.",
+      "rationale": "The transformation direction is a core narrative element. Reversing 'getting bigger' to 'shrinking' fundamentally alters the requested event sequence and intent, constituting a major semantic fidelity issue.",
+      "severity": "major"
+    },
+    {
+      "applicability": "not_applicable",
+      "criterion": "DLI",
+      "evidence": [],
+      "issue": "",
+      "rationale": "There is no dialogue, narration, or lyrics specified in the original prompt or enhanced prompt. Therefore, this criterion does not apply.",
+      "severity": null
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ARP",
+      "evidence": [
+        {
+          "quote": "seamless 3d style animation while floating in the cloudscinematic, anamorphic lens, shallow depth of field",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "A soft, airy wind drifts across the cloudscape with a faint low atmospheric hum. Gentle whooshes of displaced air accompany each size-shifting morph...",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original prompt does not specify any sound constraints. The enhanced prompt adds a soundscape (soft wind, whooshes, misty swirl) and states 'non_diegetic_music: N/A', which is compatible with the original silence. However, the addition of sound effects is an elaboration not requested, which slightly exceeds the original scope.",
+      "rationale": "The original prompt does not mention sound, so the addition of a soundscape is not a violation but an unrequested elaboration. Since no sound was forbidden, this is a minor issue for over-specification.",
+      "severity": "minor"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CCP",
+      "evidence": [
+        {
+          "quote": "cinematic, anamorphic lens, shallow depth of field",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "high three-quarter aerial view opens on the large pillow-top mattress... the camera pushes in with small amplitude at slow speed",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The enhanced prompt preserves the requested cinematic style with anamorphic lens and shallow depth of field. It adds a slow push-in camera movement and a high three-quarter aerial view, which are compatible with the original intent and do not override explicit constraints.",
+      "rationale": "The added camera motion is a compatible elaboration that enhances the cinematic feel without contradicting the original constraints.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "LCF",
+      "evidence": [
+        {
+          "quote": "diffuse overhead light with soft highlights on top of mattress and cloud tops; subtle rim light on edges of mattress",
+          "source": "evidence_facts"
+        },
+        {
+          "quote": "Warm light from the upper left glints on the quilting while foreground and background clouds stay softly blurred",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The lighting is preserved with warm highlights from the upper left and cool overall tone, consistent with the original image’s dawn/dusk cues. The enhanced prompt maintains this with 'warm light glinting on the quilting' and 'softly blurred' clouds, preserving the color palette and illumination style.",
+      "rationale": "The lighting conditions and color temperature are preserved with compatible elaboration. No defining condition is changed.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SSP",
+      "evidence": [
+        {
+          "quote": "mattress floating above and surrounded by clouds",
+          "source": "evidence_facts"
+        },
+        {
+          "quote": "floating tilted at a slight diagonal among a dense sea of cumulus clouds",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The setting (cloudscape), background (dense sea of cumulus clouds), and spatial relations (mattress floating among clouds) are preserved. The enhanced prompt maintains the mattress’s position within the cloud sea and describes its movement as 'bobbing subtly' and 'drifting slightly upward and forward', which is consistent with the original static image’s implied environment.",
+      "rationale": "The spatial setting and subject-background relationships are preserved without contradiction or omission.",
+      "severity": "none"
+    },
+    {
+      "applicability": "not_applicable",
+      "criterion": "OTI",
+      "evidence": [],
+      "issue": "",
+      "rationale": "There is no visible text, titles, signs, or interface elements specified in the original prompt or present in the evidence. Therefore, this criterion does not apply.",
+      "severity": null
+    }
+  ],
+  "dimension": "SF",
+  "dimension_score": 85,
+  "evidence_cache_key": "9f438107f85679b6fd8ba2a0c339d984c2385a746d2c1249a8d30ad6f3f36ad6",
+  "judge_cache_key": "a0ca24571ad14d7ab7be626329bd736d7e7015f9ebc418227c8be391591d0377",
+  "method": "glm53_20261112_120702",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"SF\",\n  \"dimension_score\": 85,\n  \"summary\": \"The enhanced prompt largely preserves the original request’s semantic intent, including the 3D cinematic style, anamorphic lens, shallow depth of field, and the seamless size transformations of the mattress from king to queen to baby size while floating in clouds. However, a critical issue is that the original prompt specifies the mattress 'getting bigger' (king → queen → baby), which implies increasing size, but the enhanced prompt describes a shrinking sequence (king → queen → baby). This reversal of the transformation direction constitutes a major semantic fidelity issue. Additionally, the enhanced prompt adds narrative details (e.g., camera push-in, cloud mist, sound effects) not requested, which, while compatible, slightly over-elaborate beyond the original scope. The lighting, camera, and style are preserved with minor elaboration. Overall, the core visual and narrative intent is mostly maintained, but the direction of transformation is inverted, which is a material error.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"GSF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"The requested genre (cinematic 3D animation), medium (video), and visual style (anamorphic lens, shallow depth of field) are preserved. The enhanced prompt elaborates on these with compatible details (e.g., 'high three-quarter aerial view', 'warm light from upper left') without contradiction.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"seamless 3d style animation while floating in the cloudscinematic, anamorphic lens, shallow depth of field\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Seamless 3D animation, cinematic with anamorphic lens and shallow depth of field\"\n        }\n      ],\n      \"rationale\": \"The core visual style and medium are preserved. The added details (e.g., 'high three-quarter aerial view') are compatible elaborations, not substitutions or contradictions.\"\n    },\n    {\n      \"criterion\": \"SAP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"The subject (mattress) is preserved with its identity, appearance (quilted white top, blue swirls, navy ribbed sides, cream mesh border), and attributes (floating, size transformations) maintained. The enhanced prompt correctly references the initial state from the image and preserves its visual characteristics throughout the sequence.\",\n      \"evidence\": [\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"mattress floating above and surrounded by clouds\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"its quilted white top with soft blue swirl patterns, navy blue ribbed side panels, and cream mesh border band fully preserved\"\n        }\n      ],\n      \"rationale\": \"The subject’s identity and appearance are accurately preserved. The transformation sequence is described with consistent visual attributes, even if the direction is reversed (see ANF).\"\n    },\n    {\n      \"criterion\": \"ANF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original prompt specifies the mattress 'getting bigger' (king → queen → baby), implying an increase in size. However, the enhanced prompt describes a shrinking sequence (king → queen → baby), which reverses the requested transformation direction. This is a material contradiction in the event chain and narrative intent.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"seamlessly getting bigger, king size mattress to a queen size to a baby-size mattress\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"At around 2.5 seconds, the mattress contracts seamlessly to queen size... At around 4.5 seconds, it shrinks again in one smooth morph to baby size\"\n        }\n      ],\n      \"rationale\": \"The transformation direction is a core narrative element. Reversing 'getting bigger' to 'shrinking' fundamentally alters the requested event sequence and intent, constituting a major semantic fidelity issue.\"\n    },\n    {\n      \"criterion\": \"DLI\",\n      \"applicability\": \"not_applicable\",\n      \"severity\": null,\n      \"issue\": \"\",\n      \"evidence\": [],\n      \"rationale\": \"There is no dialogue, narration, or lyrics specified in the original prompt or enhanced prompt. Therefore, this criterion does not apply.\"\n    },\n    {\n      \"criterion\": \"ARP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"minor\",\n      \"issue\": \"The original prompt does not specify any sound constraints. The enhanced prompt adds a soundscape (soft wind, whooshes, misty swirl) and states 'non_diegetic_music: N/A', which is compatible with the original silence. However, the addition of sound effects is an elaboration not requested, which slightly exceeds the original scope.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"seamless 3d style animation while floating in the cloudscinematic, anamorphic lens, shallow depth of field\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"A soft, airy wind drifts across the cloudscape with a faint low atmospheric hum. Gentle whooshes of displaced air accompany each size-shifting morph...\"\n        }\n      ],\n      \"rationale\": \"The original prompt does not mention sound, so the addition of a soundscape is not a violation but an unrequested elaboration. Since no sound was forbidden, this is a minor issue for over-specification.\"\n    },\n    {\n      \"criterion\": \"CCP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"The enhanced prompt preserves the requested cinematic style with anamorphic lens and shallow depth of field. It adds a slow push-in camera movement and a high three-quarter aerial view, which are compatible with the original intent and do not override explicit constraints.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"cinematic, anamorphic lens, shallow depth of field\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"high three-quarter aerial view opens on the large pillow-top mattress... the camera pushes in with small amplitude at slow speed\"\n        }\n      ],\n      \"rationale\": \"The added camera motion is a compatible elaboration that enhances the cinematic feel without contradicting the original constraints.\"\n    },\n    {\n      \"criterion\": \"LCF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"The lighting is preserved with warm highlights from the upper left and cool overall tone, consistent with the original image’s dawn/dusk cues. The enhanced prompt maintains this with 'warm light glinting on the quilting' and 'softly blurred' clouds, preserving the color palette and illumination style.\",\n      \"evidence\": [\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"diffuse overhead light with soft highlights on top of mattress and cloud tops; subtle rim light on edges of mattress\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Warm light from the upper left glints on the quilting while foreground and background clouds stay softly blurred\"\n        }\n      ],\n      \"rationale\": \"The lighting conditions and color temperature are preserved with compatible elaboration. No defining condition is changed.\"\n    },\n    {\n      \"criterion\": \"SSP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"The setting (cloudscape), background (dense sea of cumulus clouds), and spatial relations (mattress floating among clouds) are preserved. The enhanced prompt maintains the mattress’s position within the cloud sea and describes its movement as 'bobbing subtly' and 'drifting slightly upward and forward', which is consistent with the original static image’s implied environment.\",\n      \"evidence\": [\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"mattress floating above and surrounded by clouds\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"floating tilted at a slight diagonal among a dense sea of cumulus clouds\"\n        }\n      ],\n      \"rationale\": \"The spatial setting and subject-background relationships are preserved without contradiction or omission.\"\n    },\n    {\n      \"criterion\": \"OTI\",\n      \"applicability\": \"not_applicable\",\n      \"severity\": null,\n      \"issue\": \"\",\n      \"evidence\": [],\n      \"rationale\": \"There is no visible text, titles, signs, or interface elements specified in the original prompt or present in the evidence. Therefore, this criterion does not apply.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt largely preserves the original request’s semantic intent, including the 3D cinematic style, anamorphic lens, shallow depth of field, and the seamless size transformations of the mattress from king to queen to baby size while floating in clouds. However, a critical issue is that the original prompt specifies the mattress 'getting bigger' (king → queen → baby), which implies increasing size, but the enhanced prompt describes a shrinking sequence (king → queen → baby). This reversal of the transformation direction constitutes a major semantic fidelity issue. Additionally, the enhanced prompt adds narrative details (e.g., camera push-in, cloud mist, sound effects) not requested, which, while compatible, slightly over-elaborate beyond the original scope. The lighting, camera, and style are preserved with minor elaboration. Overall, the core visual and narrative intent is mostly maintained, but the direction of transformation is inverted, which is a material error.",
+  "usage": {
+    "completion_tokens": 1902,
+    "prompt_tokens": 2335,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 4237
+  }
+}

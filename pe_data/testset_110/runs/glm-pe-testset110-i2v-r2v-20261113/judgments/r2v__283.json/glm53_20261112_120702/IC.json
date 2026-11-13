@@ -1,0 +1,127 @@
+{
+  "candidate_hash": "3b34f8654b554664914fd2b49067200442bce2493ce2d8866a096094dba5af30",
+  "case_key": "r2v:283",
+  "created_at": "2026-11-13T09:15:40+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "SAC",
+      "evidence": [
+        {
+          "quote": "<Subject 1> is the gentleman defined by <Picture 1> — a young Black man in 1905 attire, wearing a straw boater hat with a dark band, a patterned cravat over a high-collar shirt, a light three-piece linen suit with waistcoat and watch chain, and two-tone spectator shoes, with a warm smile.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "<Subject 2> is the lady defined by <Picture 2> — a young Black woman in 1905 attire, with a voluminous curly updo, drop earrings, and an Edwardian lace-trimmed gown with puffed sleeves, a fitted corseted bodice, and a long flowing skirt, with a gentle smile.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "<Subject 3> is a single white feather that drifts down from the sky and settles on the lawn beside the lady, serving as the camera's tracking anchor in the opening shot.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Subject identities, appearances, clothing, and props are consistently preserved across shots. <Subject 1> and <Subject 2> are defined by <Picture 1> and <Picture 2> respectively, and their attributes (e.g., straw boater, lace gown, watch chain) are retained throughout. <Subject 3> (the feather) is consistently described as drifting and settling without change.",
+      "rationale": "All subjects are defined with stable attributes that are maintained across shots. The reference images (image_1, image_2) confirm the visual details, and the prompt explicitly preserves them. No renaming, duplication, or attribute drift occurs.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANL",
+      "evidence": [
+        {
+          "quote": "The camera tracks the feather's descent continuously and smoothly, following it all the way down... until it settles softly on the grass beside <Subject 2>.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "<Subject 1> steps toward <Subject 2> and extends his hand in invitation, his warm smile steady. She lifts her eyes to him, smiles, and places her hand in his palm. The two begin their first dance, turning together across the lawn...",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Actions form a coherent causal progression: the feather descends (triggering camera movement), the gentleman extends his hand, the lady accepts it, and they begin to spin. Each action logically follows the prior, with plausible bindings (e.g., hand extension → hand acceptance → spinning). No dangling or incompatible events.",
+      "rationale": "The sequence of actions is causally linked and physically plausible. The feather’s descent leads to the camera tracking, which transitions into the dance initiation. The hand extension and acceptance are directly connected to the spinning motion, forming a coherent procedural flow.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "TSC",
+      "evidence": [
+        {
+          "quote": "[Shot 1] ... the tracking ends as the feather comes to rest.\n[Shot 2] At 00:06.000, a slow dissolve... transitions to a restrained ground-level framing on the lawn.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The transition from [Shot 1] to [Shot 2] at 00:06.000 is described as a 'slow dissolve' but lacks explicit duration or state continuity. The feather is present at the end of [Shot 1] and remains in [Shot 2], which is consistent, but the exact timing of the feather’s settling and the start of the dance is not precisely synchronized.",
+      "rationale": "The timeline is mostly coherent, with a clear start (feather descent) and end (couple mid-spin). The dissolve at 00:06.000 is plausible, but the exact moment the feather settles and the dance begins is not tightly synchronized, creating a minor gap in temporal precision. However, this does not break internal consistency.",
+      "severity": "minor"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SPC",
+      "evidence": [
+        {
+          "quote": "The camera tracks the feather's descent... until it settles softly on the grass beside <Subject 2>, the lady... She is seated standing at the lawn's edge...",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "<Subject 1> steps toward <Subject 2> and extends his hand... The two begin their first dance, turning together across the lawn...",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Location (American lawn in 1905) and camera movement (tracking the feather, then static with slow push-in) are consistent. The feather lands beside <Subject 2>, who is standing at the lawn’s edge; <Subject 1> approaches from off-screen, and they spin together. No unexplained position swaps or impossible trajectories.",
+      "rationale": "The spatial layout is coherent: the feather lands beside the lady, the gentleman approaches from a plausible direction, and their spinning motion is consistent with the lawn setting. The camera movement (tracking → static) is logically connected to the action.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "PL",
+      "evidence": [
+        {
+          "quote": "<Subject 3>, a single white feather, drifts and sways side to side in a light breeze, catching soft diffused sunlight. The camera tracks the feather's descent continuously and smoothly, following it all the way down... until it settles softly on the grass...",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "The two begin their first dance, turning together across the lawn; her long skirt swirls and catches the soft light as they spin...",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Physics are consistent with real-world expectations: the feather drifts slowly in a breeze, lands gently, and remains on the grass. The couple’s spinning motion is plausible, with the lady’s skirt swirling naturally. No violations of gravity, contact, or object permanence.",
+      "rationale": "All physical behaviors are consistent with real-world physics. The feather’s descent and the couple’s dance are described without any fantastical or implausible elements. The soft-focus, sepia tone does not alter physical plausibility.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "AVS",
+      "evidence": [
+        {
+          "quote": "A light, upbeat Ragtime piano short phrase — jaunty, syncopated, and period-appropriate for 1905 — runs under the entire 15 seconds, swelling slightly as the couple begins to spin in [Shot 2].",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "No diegetic sound; the scene is silent apart from the audience-only score, in keeping with the silent-era feel.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The non-diegetic Ragtime piano music is described as running under the entire 15 seconds, swelling slightly as the couple begins to spin. This aligns temporally with the visual action (spin initiation at 00:06.000) and is consistent with the silent-era aesthetic. No dialogue or on-screen text is present, so no misalignment occurs.",
+      "rationale": "The music is described as temporally aligned with the dance initiation and stylistically appropriate. Since there is no dialogue or lip-sync, no misalignment is possible. The music’s swell matches the visual action of spinning, enhancing coherence.",
+      "severity": "none"
+    }
+  ],
+  "dimension": "IC",
+  "dimension_score": 95,
+  "evidence_cache_key": "e0f4fd465782e18981e93dbc7b10956ea87156371a634f9b795ddfa354c08d50",
+  "judge_cache_key": "438d7e9fd7332b1041db3e2c26d42cb3fe828e0d369fb59490f6650aee59e97d",
+  "method": "glm53_20261112_120702",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"IC\",\n  \"dimension_score\": 95,\n  \"summary\": \"The enhanced prompt maintains strong internal consistency across subject identity, actions, chronology, and visual style. Subject attributes are preserved from the reference images, actions form a coherent progression, and the timeline is logically structured. Minor issues include slight ambiguity in the feather’s initial position and a brief transition gap between shots, but no major contradictions or attribute drifts are present.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"SAC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"Subject identities, appearances, clothing, and props are consistently preserved across shots. <Subject 1> and <Subject 2> are defined by <Picture 1> and <Picture 2> respectively, and their attributes (e.g., straw boater, lace gown, watch chain) are retained throughout. <Subject 3> (the feather) is consistently described as drifting and settling without change.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"<Subject 1> is the gentleman defined by <Picture 1> — a young Black man in 1905 attire, wearing a straw boater hat with a dark band, a patterned cravat over a high-collar shirt, a light three-piece linen suit with waistcoat and watch chain, and two-tone spectator shoes, with a warm smile.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"<Subject 2> is the lady defined by <Picture 2> — a young Black woman in 1905 attire, with a voluminous curly updo, drop earrings, and an Edwardian lace-trimmed gown with puffed sleeves, a fitted corseted bodice, and a long flowing skirt, with a gentle smile.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"<Subject 3> is a single white feather that drifts down from the sky and settles on the lawn beside the lady, serving as the camera's tracking anchor in the opening shot.\"\n        }\n      ],\n      \"rationale\": \"All subjects are defined with stable attributes that are maintained across shots. The reference images (image_1, image_2) confirm the visual details, and the prompt explicitly preserves them. No renaming, duplication, or attribute drift occurs.\"\n    },\n    {\n      \"criterion\": \"ANL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"Actions form a coherent causal progression: the feather descends (triggering camera movement), the gentleman extends his hand, the lady accepts it, and they begin to spin. Each action logically follows the prior, with plausible bindings (e.g., hand extension → hand acceptance → spinning). No dangling or incompatible events.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"The camera tracks the feather's descent continuously and smoothly, following it all the way down... until it settles softly on the grass beside <Subject 2>.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"<Subject 1> steps toward <Subject 2> and extends his hand in invitation, his warm smile steady. She lifts her eyes to him, smiles, and places her hand in his palm. The two begin their first dance, turning together across the lawn...\"\n        }\n      ],\n      \"rationale\": \"The sequence of actions is causally linked and physically plausible. The feather’s descent leads to the camera tracking, which transitions into the dance initiation. The hand extension and acceptance are directly connected to the spinning motion, forming a coherent procedural flow.\"\n    },\n    {\n      \"criterion\": \"TSC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"minor\",\n      \"issue\": \"The transition from [Shot 1] to [Shot 2] at 00:06.000 is described as a 'slow dissolve' but lacks explicit duration or state continuity. The feather is present at the end of [Shot 1] and remains in [Shot 2], which is consistent, but the exact timing of the feather’s settling and the start of the dance is not precisely synchronized.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"[Shot 1] ... the tracking ends as the feather comes to rest.\\n[Shot 2] At 00:06.000, a slow dissolve... transitions to a restrained ground-level framing on the lawn.\"\n        }\n      ],\n      \"rationale\": \"The timeline is mostly coherent, with a clear start (feather descent) and end (couple mid-spin). The dissolve at 00:06.000 is plausible, but the exact moment the feather settles and the dance begins is not tightly synchronized, creating a minor gap in temporal precision. However, this does not break internal consistency.\"\n    },\n    {\n      \"criterion\": \"SPC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"Location (American lawn in 1905) and camera movement (tracking the feather, then static with slow push-in) are consistent. The feather lands beside <Subject 2>, who is standing at the lawn’s edge; <Subject 1> approaches from off-screen, and they spin together. No unexplained position swaps or impossible trajectories.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"The camera tracks the feather's descent... until it settles softly on the grass beside <Subject 2>, the lady... She is seated standing at the lawn's edge...\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"<Subject 1> steps toward <Subject 2> and extends his hand... The two begin their first dance, turning together across the lawn...\"\n        }\n      ],\n      \"rationale\": \"The spatial layout is coherent: the feather lands beside the lady, the gentleman approaches from a plausible direction, and their spinning motion is consistent with the lawn setting. The camera movement (tracking → static) is logically connected to the action.\"\n    },\n    {\n      \"criterion\": \"PL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"Physics are consistent with real-world expectations: the feather drifts slowly in a breeze, lands gently, and remains on the grass. The couple’s spinning motion is plausible, with the lady’s skirt swirling naturally. No violations of gravity, contact, or object permanence.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"<Subject 3>, a single white feather, drifts and sways side to side in a light breeze, catching soft diffused sunlight. The camera tracks the feather's descent continuously and smoothly, following it all the way down... until it settles softly on the grass...\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"The two begin their first dance, turning together across the lawn; her long skirt swirls and catches the soft light as they spin...\"\n        }\n      ],\n      \"rationale\": \"All physical behaviors are consistent with real-world physics. The feather’s descent and the couple’s dance are described without any fantastical or implausible elements. The soft-focus, sepia tone does not alter physical plausibility.\"\n    },\n    {\n      \"criterion\": \"AVS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"The non-diegetic Ragtime piano music is described as running under the entire 15 seconds, swelling slightly as the couple begins to spin. This aligns temporally with the visual action (spin initiation at 00:06.000) and is consistent with the silent-era aesthetic. No dialogue or on-screen text is present, so no misalignment occurs.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"A light, upbeat Ragtime piano short phrase — jaunty, syncopated, and period-appropriate for 1905 — runs under the entire 15 seconds, swelling slightly as the couple begins to spin in [Shot 2].\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"No diegetic sound; the scene is silent apart from the audience-only score, in keeping with the silent-era feel.\"\n        }\n      ],\n      \"rationale\": \"The music is described as temporally aligned with the dance initiation and stylistically appropriate. Since there is no dialogue or lip-sync, no misalignment is possible. The music’s swell matches the visual action of spinning, enhancing coherence.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt maintains strong internal consistency across subject identity, actions, chronology, and visual style. Subject attributes are preserved from the reference images, actions form a coherent progression, and the timeline is logically structured. Minor issues include slight ambiguity in the feather’s initial position and a brief transition gap between shots, but no major contradictions or attribute drifts are present.",
+  "usage": {
+    "completion_tokens": 1886,
+    "prompt_tokens": 4114,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 6000
+  }
+}

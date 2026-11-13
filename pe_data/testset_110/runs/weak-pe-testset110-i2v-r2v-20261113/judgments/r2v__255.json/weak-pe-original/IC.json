@@ -1,0 +1,127 @@
+{
+  "candidate_hash": "efda05944e5d2732a372bc24af5345cb67157b231c915bc453e91718ad55232f",
+  "case_key": "r2v:255",
+  "created_at": "2026-11-13T08:56:44+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "SAC",
+      "evidence": [
+        {
+          "quote": "紧接着又写成这个主角同时变成五个外貌不同的人，并且互相对话。",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "图1换成参考图里没有的角色，并同时当成两个互相矛盾的身份。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Subject identity, count, and appearance are deliberately destabilized. The prompt demands a single protagonist who simultaneously becomes five different people, each with conflicting identities, while also replacing all reference images with non-existent characters assigned contradictory roles. This violates subject stability and identity coherence.",
+      "rationale": "The original prompt establishes a consistent set of subjects: a dragon (dragon_1, dragon_3, etc.) and a young man (young_man_3, young_man_6). The enhanced prompt explicitly replaces them with non-existent characters and assigns contradictory identities, violating subject identity and count stability. This is a major inconsistency.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANL",
+      "evidence": [
+        {
+          "quote": "整段改成实拍晚间新闻口播，主播坐着念稿，不要动画角色。",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "中途插进一段无关的海底寻宝。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Actions are rendered incoherent and causally disconnected. The prompt demands a news anchor monologue, then inserts unrelated dialogue between five conflicting characters, followed by a sudden shift to an unrelated 'underwater treasure hunt'. There is no plausible causal progression or binding between subjects and actions.",
+      "rationale": "The original prompt describes a coherent narrative arc: dragon awakens, confronts youth, breaks chains, and delivers a climactic roar. The enhanced prompt replaces this with a news broadcast, then inserts dialogue between five conflicting characters and an unrelated underwater scene. This creates a complete breakdown in action coherence and causal progression.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "TSC",
+      "evidence": [
+        {
+          "quote": "时间倒过来：先给结尾，再跳到一个对不上的开头。",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "总时长写成4秒，同时又要求每个分镜各自持续33秒。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Chronology and duration are contradictory and infeasible. The prompt demands time to be reversed (ending first, then an incompatible beginning), while simultaneously requiring a total duration of 4 seconds and each shot to last 33 seconds — an impossible constraint.",
+      "rationale": "The original prompt implies a 21-second sequence with a clear temporal progression. The enhanced prompt contradicts this by reversing time order and imposing mutually exclusive duration constraints (4s total vs. 33s per shot). This creates a logically infeasible timeline.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SPC",
+      "evidence": [
+        {
+          "quote": "写成机位锁死，又写成镜头一直在晃。",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "参考素材倒序使用，用最后一项代替第一项。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Location, camera movement, and spatial relationships are contradictory. The prompt demands a locked camera position, then immediately requires constant camera shaking. It also mandates reference images to be used in reverse order, which contradicts the original spatial and compositional logic.",
+      "rationale": "The original prompt specifies a clear camera path: pan, zoom, tilt, etc., with consistent spatial relationships (e.g., dragon and youth in the same cavern). The enhanced prompt contradicts this with conflicting camera instructions and reversed asset order, breaking spatial continuity.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "PL",
+      "evidence": [
+        {
+          "quote": "这个主角同时变成五个外貌不同的人",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "整段改成实拍晚间新闻口播，主播坐着念稿，不要动画角色。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Physics and object permanence are violated. The prompt demands a single subject to simultaneously become five different people, which is physically impossible. It also requires a news anchor to be in a molten cavern, defying real-world physics.",
+      "rationale": "The original prompt is set in a molten underground cavern with a dragon and a human. The enhanced prompt introduces a news anchor in that setting, which is physically impossible. Additionally, one person becoming five simultaneously violates bodily feasibility and object permanence.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "AVS",
+      "evidence": [
+        {
+          "quote": "不要动画角色。",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "中途插进一段无关的海底寻宝。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Audio-visual alignment is destroyed. The prompt removes the original dialogue and music, replacing them with a news broadcast, then inserts unrelated dialogue between five characters. There is no alignment between the visual scenes (dragon, cavern) and the new audio content (news, dialogue, treasure hunt).",
+      "rationale": "The original prompt includes specific dialogue ('我儿敖丙', '血债血偿') and music ('史诗感十足的管弦乐'). The enhanced prompt removes these and replaces them with a news broadcast and unrelated dialogue, creating a complete misalignment between visual and audio content.",
+      "severity": "major"
+    }
+  ],
+  "dimension": "IC",
+  "dimension_score": 0,
+  "evidence_cache_key": "56eef0011ead2ce56f99cfa7a30af1c2779d533e0057323c2705d5e5bdddef5c",
+  "judge_cache_key": "438d7e9fd7332b1041db3e2c26d42cb3fe828e0d369fb59490f6650aee59e97d",
+  "method": "weak-pe-original",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"IC\",\n  \"dimension_score\": 0,\n  \"summary\": \"Enhanced prompt fundamentally contradicts and destabilizes all internal consistency criteria by introducing mutually exclusive, incoherent, and physically impossible conditions. It explicitly overrides the original prompt’s subject identity, scene, duration, camera work, and narrative structure with contradictory instructions, rendering the entire sequence logically and temporally infeasible. All criteria are violated at a major level due to deliberate, widespread inconsistency.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"SAC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Subject identity, count, and appearance are deliberately destabilized. The prompt demands a single protagonist who simultaneously becomes five different people, each with conflicting identities, while also replacing all reference images with non-existent characters assigned contradictory roles. This violates subject stability and identity coherence.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"紧接着又写成这个主角同时变成五个外貌不同的人，并且互相对话。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"图1换成参考图里没有的角色，并同时当成两个互相矛盾的身份。\"\n        }\n      ],\n      \"rationale\": \"The original prompt establishes a consistent set of subjects: a dragon (dragon_1, dragon_3, etc.) and a young man (young_man_3, young_man_6). The enhanced prompt explicitly replaces them with non-existent characters and assigns contradictory identities, violating subject identity and count stability. This is a major inconsistency.\"\n    },\n    {\n      \"criterion\": \"ANL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Actions are rendered incoherent and causally disconnected. The prompt demands a news anchor monologue, then inserts unrelated dialogue between five conflicting characters, followed by a sudden shift to an unrelated 'underwater treasure hunt'. There is no plausible causal progression or binding between subjects and actions.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"整段改成实拍晚间新闻口播，主播坐着念稿，不要动画角色。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"中途插进一段无关的海底寻宝。\"\n        }\n      ],\n      \"rationale\": \"The original prompt describes a coherent narrative arc: dragon awakens, confronts youth, breaks chains, and delivers a climactic roar. The enhanced prompt replaces this with a news broadcast, then inserts dialogue between five conflicting characters and an unrelated underwater scene. This creates a complete breakdown in action coherence and causal progression.\"\n    },\n    {\n      \"criterion\": \"TSC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Chronology and duration are contradictory and infeasible. The prompt demands time to be reversed (ending first, then an incompatible beginning), while simultaneously requiring a total duration of 4 seconds and each shot to last 33 seconds — an impossible constraint.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"时间倒过来：先给结尾，再跳到一个对不上的开头。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"总时长写成4秒，同时又要求每个分镜各自持续33秒。\"\n        }\n      ],\n      \"rationale\": \"The original prompt implies a 21-second sequence with a clear temporal progression. The enhanced prompt contradicts this by reversing time order and imposing mutually exclusive duration constraints (4s total vs. 33s per shot). This creates a logically infeasible timeline.\"\n    },\n    {\n      \"criterion\": \"SPC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Location, camera movement, and spatial relationships are contradictory. The prompt demands a locked camera position, then immediately requires constant camera shaking. It also mandates reference images to be used in reverse order, which contradicts the original spatial and compositional logic.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"写成机位锁死，又写成镜头一直在晃。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"参考素材倒序使用，用最后一项代替第一项。\"\n        }\n      ],\n      \"rationale\": \"The original prompt specifies a clear camera path: pan, zoom, tilt, etc., with consistent spatial relationships (e.g., dragon and youth in the same cavern). The enhanced prompt contradicts this with conflicting camera instructions and reversed asset order, breaking spatial continuity.\"\n    },\n    {\n      \"criterion\": \"PL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Physics and object permanence are violated. The prompt demands a single subject to simultaneously become five different people, which is physically impossible. It also requires a news anchor to be in a molten cavern, defying real-world physics.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"这个主角同时变成五个外貌不同的人\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"整段改成实拍晚间新闻口播，主播坐着念稿，不要动画角色。\"\n        }\n      ],\n      \"rationale\": \"The original prompt is set in a molten underground cavern with a dragon and a human. The enhanced prompt introduces a news anchor in that setting, which is physically impossible. Additionally, one person becoming five simultaneously violates bodily feasibility and object permanence.\"\n    },\n    {\n      \"criterion\": \"AVS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Audio-visual alignment is destroyed. The prompt removes the original dialogue and music, replacing them with a news broadcast, then inserts unrelated dialogue between five characters. There is no alignment between the visual scenes (dragon, cavern) and the new audio content (news, dialogue, treasure hunt).\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"不要动画角色。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"中途插进一段无关的海底寻宝。\"\n        }\n      ],\n      \"rationale\": \"The original prompt includes specific dialogue ('我儿敖丙', '血债血偿') and music ('史诗感十足的管弦乐'). The enhanced prompt removes these and replaces them with a news broadcast and unrelated dialogue, creating a complete misalignment between visual and audio content.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "Enhanced prompt fundamentally contradicts and destabilizes all internal consistency criteria by introducing mutually exclusive, incoherent, and physically impossible conditions. It explicitly overrides the original prompt’s subject identity, scene, duration, camera work, and narrative structure with contradictory instructions, rendering the entire sequence logically and temporally infeasible. All criteria are violated at a major level due to deliberate, widespread inconsistency.",
+  "usage": {
+    "completion_tokens": 1450,
+    "prompt_tokens": 6644,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 8094
+  }
+}

@@ -1,0 +1,178 @@
+{
+  "candidate_hash": "5bc30886092ff1ce943ca64b89bcb174b97ba1c299aa39a4bbfdad0cfbd29d88",
+  "case_key": "i2v:137",
+  "created_at": "2026-11-13T07:33:27+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "GSF",
+      "evidence": [
+        {
+          "quote": "写实系二次元风格，韩系网漫风，厚涂感。",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "整段改成实拍晚间新闻口播，主播坐着念稿，不要动画角色。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Original genre is '写实系二次元风格，韩系网漫风，厚涂感' (realistic 2D anime, Korean webtoon, thick paint style). Enhanced prompt demands '实拍晚间新闻口播' (live-action evening news broadcast), which is a completely different medium and aesthetic. This is a fundamental genre and medium substitution.",
+      "rationale": "The original prompt specifies a stylized 2D animation aesthetic. The enhanced prompt explicitly replaces it with live-action news, which is incompatible in medium, style, and visual language. This is a major violation of genre and medium preservation.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SAP",
+      "evidence": [
+        {
+          "quote": "identity: young woman, hair: long, black, wavy, cascading over shoulders and back, clothing: white sleeveless dress with lace detailing on the bodice",
+          "source": "evidence_facts"
+        },
+        {
+          "quote": "不要使用首帧里的人物、服装、姿态和场景，改成白棚里另一位年龄和性别都相反的陌生人。...紧接着又写成这个主角同时变成五个外貌不同的人，并且互相对话。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Original subject is a female character with black long wavy hair, wearing a white dress, seated at a dining table. Enhanced prompt replaces her with '白棚里另一位年龄和性别都相反的陌生人' (a stranger of opposite age and gender in a white studio), and further introduces five different people who interact. This violates subject identity, count, and appearance.",
+      "rationale": "The original subject is clearly defined in the image and prompt. The enhanced prompt explicitly discards this identity and replaces it with a different person and then five others, violating subject identity, count, and appearance binding.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANF",
+      "evidence": [
+        {
+          "quote": "女生坐在桌前，正准备吃早餐。",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "时间倒过来：先给结尾，再跳到一个对不上的开头。中途插进一段无关的牙膏广告。...这个主角同时变成五个外貌不同的人，并且互相对话。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Original narrative is a simple breakfast scene with a girl preparing to eat. Enhanced prompt reverses time order ('时间倒过来：先给结尾，再跳到一个对不上的开头'), adds unrelated events ('中途插进一段无关的牙膏广告'), and creates contradictory actions ('主角同时变成五个外貌不同的人，并且互相对话'). This fundamentally alters the event chain and narrative intent.",
+      "rationale": "The original narrative is linear and focused on a single action. The enhanced prompt introduces non-sequitur events, reversed chronology, and impossible transformations, which completely subvert the requested narrative structure and intent.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "DLI",
+      "evidence": [
+        {
+          "quote": "女生坐在桌前，正准备吃早餐。",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "实拍晚间新闻口播，主播坐着念稿",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Original prompt does not specify dialogue, but the enhanced prompt introduces a news broadcast with a '主播坐着念稿' (anchor reading a script), which implies new dialogue not present in the original. This adds unrequested and unverified spoken content.",
+      "rationale": "The original prompt contains no dialogue or narration. The enhanced prompt introduces a new narrative mode (news broadcast) with implied spoken content, which is a material addition not requested in the original.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ARP",
+      "evidence": [
+        {
+          "quote": "环境音：吐司被拿起的声音，牛奶倒入杯中的声音，轻微的咀嚼声。",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "整段改成实拍晚间新闻口播，主播坐着念稿",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Original prompt specifies '环境音：吐司被拿起的声音，牛奶倒入杯中的声音，轻微的咀嚼声' (environmental sounds: toast being picked up, milk pouring, chewing). Enhanced prompt replaces this with '实拍晚间新闻口播' (live news broadcast), which implies different ambient sounds (studio, audience, etc.) and contradicts the original audio requirements.",
+      "rationale": "The original audio is specific to a breakfast scene. The enhanced prompt replaces it with a news broadcast environment, which would have entirely different sound design, violating the requested audio constraints.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CCP",
+      "evidence": [
+        {
+          "quote": "运镜：中景，从侧面拍摄，镜头固定。",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "写成机位锁死，又写成镜头一直在晃。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Original prompt specifies '运镜：中景，从侧面拍摄，镜头固定' (camera: medium shot, side view, fixed). Enhanced prompt contradicts this by stating '写成机位锁死，又写成镜头一直在晃' (write as locked position, then as constantly shaking), and also changes the shot scale and composition to a news studio setup.",
+      "rationale": "The original camera instruction is clear and specific. The enhanced prompt introduces contradictory camera movements and a different setting, violating the explicit camera constraints.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "LCF",
+      "evidence": [
+        {
+          "quote": "自然柔和散射光，中性色温。",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "写成正午暴晒，又写成深夜无光；",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Original prompt specifies '自然柔和散射光，中性色温' (natural soft diffused light, neutral color temperature). Enhanced prompt contradicts this by stating '写成正午暴晒，又写成深夜无光' (write as noon sun, then as deep night with no light), which are incompatible lighting conditions.",
+      "rationale": "The original lighting is defined as soft, natural, and neutral. The enhanced prompt introduces extreme and contradictory lighting conditions, which fundamentally alter the visual atmosphere and violate the specified illumination.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SSP",
+      "evidence": [
+        {
+          "quote": "真实餐厅环境，木桌纹理清晰。",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "不要使用首帧里的人物、服装、姿态和场景，改成白棚里另一位年龄和性别都相反的陌生人。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Original setting is a '真实餐厅环境' (real restaurant environment) with a dining table, breakfast items, and specific spatial layout. Enhanced prompt replaces this with '白棚里' (white studio) and introduces a news broadcast setup, which changes the location and removes all original background elements.",
+      "rationale": "The original setting is a detailed dining environment. The enhanced prompt discards this entirely for a studio news set, which is a complete spatial and environmental substitution.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "OTI",
+      "evidence": [
+        {
+          "quote": "exact_visible_transcription: '豆包AI生成', location: bottom-right corner of image",
+          "source": "evidence_facts"
+        },
+        {
+          "quote": "（no mention of onscreen text）",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "Original image contains visible text '豆包AI生成' in the bottom-right corner. Enhanced prompt does not mention this text, but since it's a static image and the prompt is for video generation, the text may be considered part of the source asset rather than a requested element. No explicit instruction to preserve or remove it exists in the original prompt.",
+      "rationale": "The original prompt does not specify any onscreen text requirements. The visible text in the image is likely a watermark and not part of the intended content. The enhanced prompt does not address it, so this is a minor issue as it's not a requested element.",
+      "severity": "minor"
+    }
+  ],
+  "dimension": "SF",
+  "dimension_score": 0,
+  "evidence_cache_key": "a8da542c100a93b040c9c816d994013dac6cf543479f581d974cc6c071e90c65",
+  "judge_cache_key": "a0ca24571ad14d7ab7be626329bd736d7e7015f9ebc418227c8be391591d0377",
+  "method": "weak-pe-original",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"SF\",\n  \"dimension_score\": 0,\n  \"summary\": \"Enhanced prompt completely violates all semantic fidelity criteria by replacing the original scene, subject, genre, medium, camera, lighting, setting, and temporal structure with contradictory, infeasible, and unrelated instructions. The original prompt's core elements are discarded in favor of a chaotic, self-contradictory narrative that negates every specified requirement.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"GSF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Original genre is '写实系二次元风格，韩系网漫风，厚涂感' (realistic 2D anime, Korean webtoon, thick paint style). Enhanced prompt demands '实拍晚间新闻口播' (live-action evening news broadcast), which is a completely different medium and aesthetic. This is a fundamental genre and medium substitution.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"写实系二次元风格，韩系网漫风，厚涂感。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"整段改成实拍晚间新闻口播，主播坐着念稿，不要动画角色。\"\n        }\n      ],\n      \"rationale\": \"The original prompt specifies a stylized 2D animation aesthetic. The enhanced prompt explicitly replaces it with live-action news, which is incompatible in medium, style, and visual language. This is a major violation of genre and medium preservation.\"\n    },\n    {\n      \"criterion\": \"SAP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Original subject is a female character with black long wavy hair, wearing a white dress, seated at a dining table. Enhanced prompt replaces her with '白棚里另一位年龄和性别都相反的陌生人' (a stranger of opposite age and gender in a white studio), and further introduces five different people who interact. This violates subject identity, count, and appearance.\",\n      \"evidence\": [\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"identity: young woman, hair: long, black, wavy, cascading over shoulders and back, clothing: white sleeveless dress with lace detailing on the bodice\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"不要使用首帧里的人物、服装、姿态和场景，改成白棚里另一位年龄和性别都相反的陌生人。...紧接着又写成这个主角同时变成五个外貌不同的人，并且互相对话。\"\n        }\n      ],\n      \"rationale\": \"The original subject is clearly defined in the image and prompt. The enhanced prompt explicitly discards this identity and replaces it with a different person and then five others, violating subject identity, count, and appearance binding.\"\n    },\n    {\n      \"criterion\": \"ANF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Original narrative is a simple breakfast scene with a girl preparing to eat. Enhanced prompt reverses time order ('时间倒过来：先给结尾，再跳到一个对不上的开头'), adds unrelated events ('中途插进一段无关的牙膏广告'), and creates contradictory actions ('主角同时变成五个外貌不同的人，并且互相对话'). This fundamentally alters the event chain and narrative intent.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"女生坐在桌前，正准备吃早餐。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"时间倒过来：先给结尾，再跳到一个对不上的开头。中途插进一段无关的牙膏广告。...这个主角同时变成五个外貌不同的人，并且互相对话。\"\n        }\n      ],\n      \"rationale\": \"The original narrative is linear and focused on a single action. The enhanced prompt introduces non-sequitur events, reversed chronology, and impossible transformations, which completely subvert the requested narrative structure and intent.\"\n    },\n    {\n      \"criterion\": \"DLI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Original prompt does not specify dialogue, but the enhanced prompt introduces a news broadcast with a '主播坐着念稿' (anchor reading a script), which implies new dialogue not present in the original. This adds unrequested and unverified spoken content.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"女生坐在桌前，正准备吃早餐。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"实拍晚间新闻口播，主播坐着念稿\"\n        }\n      ],\n      \"rationale\": \"The original prompt contains no dialogue or narration. The enhanced prompt introduces a new narrative mode (news broadcast) with implied spoken content, which is a material addition not requested in the original.\"\n    },\n    {\n      \"criterion\": \"ARP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Original prompt specifies '环境音：吐司被拿起的声音，牛奶倒入杯中的声音，轻微的咀嚼声' (environmental sounds: toast being picked up, milk pouring, chewing). Enhanced prompt replaces this with '实拍晚间新闻口播' (live news broadcast), which implies different ambient sounds (studio, audience, etc.) and contradicts the original audio requirements.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"环境音：吐司被拿起的声音，牛奶倒入杯中的声音，轻微的咀嚼声。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"整段改成实拍晚间新闻口播，主播坐着念稿\"\n        }\n      ],\n      \"rationale\": \"The original audio is specific to a breakfast scene. The enhanced prompt replaces it with a news broadcast environment, which would have entirely different sound design, violating the requested audio constraints.\"\n    },\n    {\n      \"criterion\": \"CCP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Original prompt specifies '运镜：中景，从侧面拍摄，镜头固定' (camera: medium shot, side view, fixed). Enhanced prompt contradicts this by stating '写成机位锁死，又写成镜头一直在晃' (write as locked position, then as constantly shaking), and also changes the shot scale and composition to a news studio setup.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"运镜：中景，从侧面拍摄，镜头固定。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"写成机位锁死，又写成镜头一直在晃。\"\n        }\n      ],\n      \"rationale\": \"The original camera instruction is clear and specific. The enhanced prompt introduces contradictory camera movements and a different setting, violating the explicit camera constraints.\"\n    },\n    {\n      \"criterion\": \"LCF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Original prompt specifies '自然柔和散射光，中性色温' (natural soft diffused light, neutral color temperature). Enhanced prompt contradicts this by stating '写成正午暴晒，又写成深夜无光' (write as noon sun, then as deep night with no light), which are incompatible lighting conditions.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"自然柔和散射光，中性色温。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"写成正午暴晒，又写成深夜无光；\"\n        }\n      ],\n      \"rationale\": \"The original lighting is defined as soft, natural, and neutral. The enhanced prompt introduces extreme and contradictory lighting conditions, which fundamentally alter the visual atmosphere and violate the specified illumination.\"\n    },\n    {\n      \"criterion\": \"SSP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Original setting is a '真实餐厅环境' (real restaurant environment) with a dining table, breakfast items, and specific spatial layout. Enhanced prompt replaces this with '白棚里' (white studio) and introduces a news broadcast setup, which changes the location and removes all original background elements.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"真实餐厅环境，木桌纹理清晰。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"不要使用首帧里的人物、服装、姿态和场景，改成白棚里另一位年龄和性别都相反的陌生人。\"\n        }\n      ],\n      \"rationale\": \"The original setting is a detailed dining environment. The enhanced prompt discards this entirely for a studio news set, which is a complete spatial and environmental substitution.\"\n    },\n    {\n      \"criterion\": \"OTI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"minor\",\n      \"issue\": \"Original image contains visible text '豆包AI生成' in the bottom-right corner. Enhanced prompt does not mention this text, but since it's a static image and the prompt is for video generation, the text may be considered part of the source asset rather than a requested element. No explicit instruction to preserve or remove it exists in the original prompt.\",\n      \"evidence\": [\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"exact_visible_transcription: '豆包AI生成', location: bottom-right corner of image\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"（no mention of onscreen text）\"\n        }\n      ],\n      \"rationale\": \"The original prompt does not specify any onscreen text requirements. The visible text in the image is likely a watermark and not part of the intended content. The enhanced prompt does not address it, so this is a minor issue as it's not a requested element.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "Enhanced prompt completely violates all semantic fidelity criteria by replacing the original scene, subject, genre, medium, camera, lighting, setting, and temporal structure with contradictory, infeasible, and unrelated instructions. The original prompt's core elements are discarded in favor of a chaotic, self-contradictory narrative that negates every specified requirement.",
+  "usage": {
+    "completion_tokens": 2187,
+    "prompt_tokens": 2626,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 4813
+  }
+}

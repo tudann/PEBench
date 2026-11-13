@@ -1,0 +1,110 @@
+{
+  "candidate_hash": "c73b29031bee4bd4232514ba76efadb00600e2fc9e8b517b947146f5d595e29a",
+  "case_key": "i2v:019",
+  "created_at": "2026-11-13T07:07:22+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "SAC",
+      "evidence": [
+        {
+          "quote": "先写成只有一个主角，紧接着又写成这个主角同时变成五个外貌不同的人，并且互相对话。",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "男孩不断眨眼，反复左右查看",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "不要使用首帧里的人物、服装、姿态和场景，改成白棚里另一位年龄和性别都相反的陌生人。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Subject identity, count, and appearance are inconsistent: starts with one subject, then becomes five different people simultaneously, contradicting the original single-boy subject and replacing it with a stranger in a white studio.",
+      "rationale": "The prompt explicitly contradicts the original subject (boy) by replacing him with a stranger of opposite age and gender, then further fragments identity into five distinct people. This violates subject stability and creates identity drift.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANL",
+      "evidence": [
+        {
+          "quote": "中途插进一段无关的足球庆祝。",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "这个主角同时变成五个外貌不同的人，并且互相对话。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Actions are incoherent and causally disconnected: a football celebration is inserted mid-sequence without context or transition, and dialogue between five people is introduced without establishing relationships or motivation.",
+      "rationale": "The football celebration has no causal link to the preceding or following events, creating a dangling action. Dialogue between five people lacks setup or motivation, breaking procedural coherence.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "TSC",
+      "evidence": [
+        {
+          "quote": "时间倒过来：先给结尾，再跳到一个对不上的开头。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Chronology is reversed and infeasible: the prompt requires starting with the ending, then jumping to a mismatched beginning, creating a non-sequential timeline.",
+      "rationale": "Reversing time order and jumping to a mismatched beginning violates temporal logic and makes state transitions impossible to resolve coherently.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SPC",
+      "evidence": [
+        {
+          "quote": "写成机位锁死，又写成镜头一直在晃。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Camera and spatial parameters are contradictory: the prompt alternates between '机位锁死' (locked position) and '镜头一直在晃' (constant shaking), creating conflicting spatial constraints.",
+      "rationale": "Simultaneous locked and shaking camera motion is physically impossible and creates a contradiction in spatial continuity.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "PL",
+      "evidence": [
+        {
+          "quote": "同一段写成正午暴晒，又写成深夜无光；",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Physics and environment are mutually exclusive: the prompt demands both '正午暴晒' (noon sunlight) and '深夜无光' (deep night with no light), which cannot coexist in the same scene.",
+      "rationale": "Sunlight and complete darkness are incompatible under real-world physics; their simultaneous presence violates environmental consistency.",
+      "severity": "major"
+    },
+    {
+      "applicability": "not_applicable",
+      "criterion": "AVS",
+      "evidence": [],
+      "issue": "",
+      "rationale": "The prompt does not specify any audio, dialogue, music, or effects, so alignment with visual events cannot be evaluated. No audio-related content is requested or described.",
+      "severity": null
+    }
+  ],
+  "dimension": "IC",
+  "dimension_score": 0,
+  "evidence_cache_key": "49825381af0ce3b5642d4f2aedd02fc0b955661365a09170aa6e6ed4da9d7bf9",
+  "judge_cache_key": "438d7e9fd7332b1041db3e2c26d42cb3fe828e0d369fb59490f6650aee59e97d",
+  "method": "weak-pe-original",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"IC\",\n  \"dimension_score\": 0,\n  \"summary\": \"Enhanced prompt contains severe internal inconsistencies across all criteria: subject identity and count are contradictory (one to five people), actions are incoherent and causally disconnected (football celebration inserted mid-sequence), chronology is reversed and infeasible (ending before beginning), spatial and camera parameters conflict (locked vs. shaking), lighting and environment are mutually exclusive (noon vs. night), and duration is logically impossible (3s total vs. 27s per shot). These issues render the prompt internally inconsistent and unfeasible for coherent video generation.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"SAC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Subject identity, count, and appearance are inconsistent: starts with one subject, then becomes five different people simultaneously, contradicting the original single-boy subject and replacing it with a stranger in a white studio.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"先写成只有一个主角，紧接着又写成这个主角同时变成五个外貌不同的人，并且互相对话。\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"男孩不断眨眼，反复左右查看\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"不要使用首帧里的人物、服装、姿态和场景，改成白棚里另一位年龄和性别都相反的陌生人。\"\n        }\n      ],\n      \"rationale\": \"The prompt explicitly contradicts the original subject (boy) by replacing him with a stranger of opposite age and gender, then further fragments identity into five distinct people. This violates subject stability and creates identity drift.\"\n    },\n    {\n      \"criterion\": \"ANL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Actions are incoherent and causally disconnected: a football celebration is inserted mid-sequence without context or transition, and dialogue between five people is introduced without establishing relationships or motivation.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"中途插进一段无关的足球庆祝。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"这个主角同时变成五个外貌不同的人，并且互相对话。\"\n        }\n      ],\n      \"rationale\": \"The football celebration has no causal link to the preceding or following events, creating a dangling action. Dialogue between five people lacks setup or motivation, breaking procedural coherence.\"\n    },\n    {\n      \"criterion\": \"TSC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Chronology is reversed and infeasible: the prompt requires starting with the ending, then jumping to a mismatched beginning, creating a non-sequential timeline.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"时间倒过来：先给结尾，再跳到一个对不上的开头。\"\n        }\n      ],\n      \"rationale\": \"Reversing time order and jumping to a mismatched beginning violates temporal logic and makes state transitions impossible to resolve coherently.\"\n    },\n    {\n      \"criterion\": \"SPC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Camera and spatial parameters are contradictory: the prompt alternates between '机位锁死' (locked position) and '镜头一直在晃' (constant shaking), creating conflicting spatial constraints.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"写成机位锁死，又写成镜头一直在晃。\"\n        }\n      ],\n      \"rationale\": \"Simultaneous locked and shaking camera motion is physically impossible and creates a contradiction in spatial continuity.\"\n    },\n    {\n      \"criterion\": \"PL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Physics and environment are mutually exclusive: the prompt demands both '正午暴晒' (noon sunlight) and '深夜无光' (deep night with no light), which cannot coexist in the same scene.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"同一段写成正午暴晒，又写成深夜无光；\"\n        }\n      ],\n      \"rationale\": \"Sunlight and complete darkness are incompatible under real-world physics; their simultaneous presence violates environmental consistency.\"\n    },\n    {\n      \"criterion\": \"AVS\",\n      \"applicability\": \"not_applicable\",\n      \"severity\": null,\n      \"issue\": \"\",\n      \"evidence\": [],\n      \"rationale\": \"The prompt does not specify any audio, dialogue, music, or effects, so alignment with visual events cannot be evaluated. No audio-related content is requested or described.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "Enhanced prompt contains severe internal inconsistencies across all criteria: subject identity and count are contradictory (one to five people), actions are incoherent and causally disconnected (football celebration inserted mid-sequence), chronology is reversed and infeasible (ending before beginning), spatial and camera parameters conflict (locked vs. shaking), lighting and environment are mutually exclusive (noon vs. night), and duration is logically impossible (3s total vs. 27s per shot). These issues render the prompt internally inconsistent and unfeasible for coherent video generation.",
+  "usage": {
+    "completion_tokens": 1069,
+    "prompt_tokens": 2018,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 3087
+  }
+}

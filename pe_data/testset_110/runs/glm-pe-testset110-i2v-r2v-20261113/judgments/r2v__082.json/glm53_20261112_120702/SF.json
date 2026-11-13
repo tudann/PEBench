@@ -1,0 +1,182 @@
+{
+  "candidate_hash": "bce409ea3fb7351c54a7664e4902d731e0dea3fef4482614c0e506bc4a0b4f66",
+  "case_key": "r2v:082",
+  "created_at": "2026-11-13T08:40:19+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "GSF",
+      "evidence": [
+        {
+          "quote": "3D 真人写实电影感，画面内不出现任何文字；徕卡 M10 拍摄，运镜平稳、清晰",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "photorealistic live-action cinematic short with a Leica M10 look — crisp, steady, richly grained, natural color; absolutely no anime, cartoon, 3D-render, or over-smoothed appearance",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "The enhanced prompt explicitly preserves the requested photorealistic, cinematic, Leica M10 style with film grain and natural textures. It explicitly forbids incompatible styles (anime, cartoon, 3D-render), aligning with the original instruction.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SAP",
+      "evidence": [
+        {
+          "quote": "沈清涵图2低头吃饭，顾言澈图3坐在她对面，手托着腮看她",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "<Subject 1> Shen Qinghan... sits with her head down eating with chopsticks. Opposite her, <Subject 2> Gu Yanche... rests his chin on one hand, watching her",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "Subject identities, appearances, and bindings are fully preserved. Shen Qinghan’s uniform, hairstyle, and actions (eating, freezing chopsticks, frowning, blushing, slapping table, standing) are all retained. Gu Yanche’s outfit, pose, and actions (chin on hand, leaning forward, sipping soup, nodding) are preserved. The environment (cafeteria with rain on windows) is also preserved as per the original.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANF",
+      "evidence": [
+        {
+          "quote": "顾言澈图3笑着开口说：‘学姐，你上个月拒绝我表白的录音，我导出来当铃声了。’；沈清涵图2的筷子停在半空，抬头皱眉，压低声音说：‘你说什么？’；顾言澈图3身体前倾，眼睛发亮，说：‘我说，我每天晚上听着你拒绝我的声音入睡，特有仪式感。’；随后切近景到沈清涵的脸，她脸颊微微泛红，瞪着他说：‘删除。’；顾言澈图3舀起汤，慢条斯理地喝了一口，说：‘不删。除非你答应做我女朋友。’；沈清涵图2拍桌站起，说：‘你威胁我？’；顾言澈图3点头，理直气壮地说：‘嗯。对学姐，我向来不择手段。’",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Gu Yanche... says, <d>[Chinese] 学姐，你上个月拒绝我表白的录音，我导出来当铃声了。</d>... Her chopsticks stop mid-air... she raises her head, frowning... <d>[Chinese] 你说什么？</d>... Gu Yanche leans forward... <d>[Chinese] 我说，我每天晚上听着你拒绝我的声音入睡，特有仪式感。</d>... <d>[Chinese] 删除。</d>... <d>[Chinese] 不删。除非你答应做我女朋友。</d>... <d>[Chinese] 你威胁我？</d>... <d>[Chinese] 嗯。对学姐，我向来不择手段。</d>",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "All actions, interactions, event order, and narrative intent are preserved. The sequence of dialogue, reactions, and camera cuts (medium shot → close-up → two-shot) matches the original. No events are omitted, substituted, or reordered.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "DLI",
+      "evidence": [
+        {
+          "quote": "‘学姐，你上个月拒绝我表白的录音，我导出来当铃声了。’；‘你说什么？’；‘我说，我每天晚上听着你拒绝我的声音入睡，特有仪式感。’；‘删除。’；‘不删。除非你答应做我女朋友。’；‘你威胁我？’；‘嗯。对学姐，我向来不择手段。’",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "<d>[Chinese] 学姐，你上个月拒绝我表白的录音，我导出来当铃声了。</d>... <d>[Chinese] 你说什么？</d>... <d>[Chinese] 我说，我每天晚上听着你拒绝我的声音入睡，特有仪式感。</d>... <d>[Chinese] 删除。</d>... <d>[Chinese] 不删。除非你答应做我女朋友。</d>... <d>[Chinese] 你威胁我？</d>... <d>[Chinese] 嗯。对学姐，我向来不择手段。</d>",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "All seven dialogue lines are preserved verbatim in Chinese, with correct speaker attribution. No paraphrasing, translation, or omission occurs. The enhanced prompt explicitly marks them as <d>[Chinese] ... </d> to preserve wording and language.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ARP",
+      "evidence": [
+        {
+          "quote": "离散音效：筷子停顿的轻响、拍桌声。... 无背景音乐、无环境音、无旁白",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "only the seven dialogue lines and the two discrete SFX are audible... Otherwise total silence — no rain sound, no cafeteria ambience, no room tone. The only audible sounds are the seven verbatim dialogue lines and two discrete SFX: the light chopstick-pause clink... and the sharp table slap",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "The enhanced prompt strictly preserves the requested soundscape: only the two specified SFX (chopstick clink, table slap) and the seven dialogue lines are audible. It explicitly forbids music, ambience, narration, and subtitles, matching the original instruction.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CCP",
+      "evidence": [
+        {
+          "quote": "徕卡 M10 拍摄，运镜平稳、清晰",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "steady camera with a very slight slow push-in... static close-up... static medium two-shot... photorealistic live-action cinematic short with a Leica M10 look — crisp, steady, richly grained",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "Camera constraints are preserved: steady, Leica M10 style, no shaky or dynamic movement. The shot sequence (static transition → medium shot → close-up → two-shot) is specified with timing and movement (slight push-in) that does not override the original intent of smooth, cinematic framing.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "LCF",
+      "evidence": [
+        {
+          "quote": "图1A 为大食堂靠窗餐桌，窗外正下着小雨",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "the window glass carries light rain streaks per user intent",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "The image does not show any rain outside the windows, contradicting the prompt's description of '窗外正下着小雨'",
+          "source": "evidence_facts"
+        }
+      ],
+      "issue": "The original prompt specifies '窗外正下着小雨' (it is raining outside the window) in the first frame, but the evidence asset image_1 does not visually show rain. The enhanced prompt adds rain streaks to the window glass in the first frame, which is a compatible elaboration, but the visual evidence does not confirm its presence in the asset.",
+      "rationale": "The enhanced prompt correctly adds rain streaks to the window glass as per user intent, which is a compatible elaboration. However, the evidence asset image_1 does not visually confirm rain, creating a minor discrepancy. This does not alter the requested condition but is a minor issue due to the asset’s static nature and lack of visual confirmation.",
+      "severity": "minor"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SSP",
+      "evidence": [
+        {
+          "quote": "图1A 为大食堂靠窗餐桌，沈清涵图2低头吃饭，顾言澈图3坐在她对面",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "window-side table in <Subject 3> where <Subject 1> Shen Qinghan is eating and <Subject 2> Gu Yanche teases her... opposite her",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "The setting (cafeteria, window-side table), background elements (food-service counter, large windows), and spatial relations (Shen Qinghan sitting opposite Gu Yanche) are preserved. The rain on the windows is added as per user intent, which is compatible with the original setting.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "OTI",
+      "evidence": [
+        {
+          "quote": "画面内不出现任何文字；... 对白不显示字幕",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "no text or subtitles ever appear on screen",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "The enhanced prompt explicitly forbids any on-screen text, subtitles, or interface text, preserving the original requirement. The watermark '豆包AI生成' in the assets is not part of the video content and does not violate the instruction.",
+      "severity": "none"
+    }
+  ],
+  "dimension": "SF",
+  "dimension_score": 98,
+  "evidence_cache_key": "97d0a76fb9e65fc96c67b5ac1533beb94db4ca6b85c34086f0e4573937040478",
+  "judge_cache_key": "a0ca24571ad14d7ab7be626329bd736d7e7015f9ebc418227c8be391591d0377",
+  "method": "glm53_20261112_120702",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"SF\",\n  \"dimension_score\": 98,\n  \"summary\": \"The enhanced prompt preserves the original instruction's semantic fidelity with high accuracy. It fully retains the requested genre (photorealistic live-action cinematic), medium (3D realistic photography), aesthetic (Leica M10 style with film grain), and visual style (natural skin texture, fabric details, rain on windows). All subject identities, actions, dialogue, camera constraints, and environmental conditions are preserved with minor elaborations that do not contradict the original. The only noted issue is a minor deviation in the description of the rain's visual presence in the first frame, which is addressed in the prompt but not visually confirmed in the asset. No major omissions, substitutions, or contradictions are found.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"GSF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"3D 真人写实电影感，画面内不出现任何文字；徕卡 M10 拍摄，运镜平稳、清晰\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"photorealistic live-action cinematic short with a Leica M10 look — crisp, steady, richly grained, natural color; absolutely no anime, cartoon, 3D-render, or over-smoothed appearance\"\n        }\n      ],\n      \"rationale\": \"The enhanced prompt explicitly preserves the requested photorealistic, cinematic, Leica M10 style with film grain and natural textures. It explicitly forbids incompatible styles (anime, cartoon, 3D-render), aligning with the original instruction.\"\n    },\n    {\n      \"criterion\": \"SAP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"沈清涵图2低头吃饭，顾言澈图3坐在她对面，手托着腮看她\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"<Subject 1> Shen Qinghan... sits with her head down eating with chopsticks. Opposite her, <Subject 2> Gu Yanche... rests his chin on one hand, watching her\"\n        }\n      ],\n      \"rationale\": \"Subject identities, appearances, and bindings are fully preserved. Shen Qinghan’s uniform, hairstyle, and actions (eating, freezing chopsticks, frowning, blushing, slapping table, standing) are all retained. Gu Yanche’s outfit, pose, and actions (chin on hand, leaning forward, sipping soup, nodding) are preserved. The environment (cafeteria with rain on windows) is also preserved as per the original.\"\n    },\n    {\n      \"criterion\": \"ANF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"顾言澈图3笑着开口说：‘学姐，你上个月拒绝我表白的录音，我导出来当铃声了。’；沈清涵图2的筷子停在半空，抬头皱眉，压低声音说：‘你说什么？’；顾言澈图3身体前倾，眼睛发亮，说：‘我说，我每天晚上听着你拒绝我的声音入睡，特有仪式感。’；随后切近景到沈清涵的脸，她脸颊微微泛红，瞪着他说：‘删除。’；顾言澈图3舀起汤，慢条斯理地喝了一口，说：‘不删。除非你答应做我女朋友。’；沈清涵图2拍桌站起，说：‘你威胁我？’；顾言澈图3点头，理直气壮地说：‘嗯。对学姐，我向来不择手段。’\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Gu Yanche... says, <d>[Chinese] 学姐，你上个月拒绝我表白的录音，我导出来当铃声了。</d>... Her chopsticks stop mid-air... she raises her head, frowning... <d>[Chinese] 你说什么？</d>... Gu Yanche leans forward... <d>[Chinese] 我说，我每天晚上听着你拒绝我的声音入睡，特有仪式感。</d>... <d>[Chinese] 删除。</d>... <d>[Chinese] 不删。除非你答应做我女朋友。</d>... <d>[Chinese] 你威胁我？</d>... <d>[Chinese] 嗯。对学姐，我向来不择手段。</d>\"\n        }\n      ],\n      \"rationale\": \"All actions, interactions, event order, and narrative intent are preserved. The sequence of dialogue, reactions, and camera cuts (medium shot → close-up → two-shot) matches the original. No events are omitted, substituted, or reordered.\"\n    },\n    {\n      \"criterion\": \"DLI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"‘学姐，你上个月拒绝我表白的录音，我导出来当铃声了。’；‘你说什么？’；‘我说，我每天晚上听着你拒绝我的声音入睡，特有仪式感。’；‘删除。’；‘不删。除非你答应做我女朋友。’；‘你威胁我？’；‘嗯。对学姐，我向来不择手段。’\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"<d>[Chinese] 学姐，你上个月拒绝我表白的录音，我导出来当铃声了。</d>... <d>[Chinese] 你说什么？</d>... <d>[Chinese] 我说，我每天晚上听着你拒绝我的声音入睡，特有仪式感。</d>... <d>[Chinese] 删除。</d>... <d>[Chinese] 不删。除非你答应做我女朋友。</d>... <d>[Chinese] 你威胁我？</d>... <d>[Chinese] 嗯。对学姐，我向来不择手段。</d>\"\n        }\n      ],\n      \"rationale\": \"All seven dialogue lines are preserved verbatim in Chinese, with correct speaker attribution. No paraphrasing, translation, or omission occurs. The enhanced prompt explicitly marks them as <d>[Chinese] ... </d> to preserve wording and language.\"\n    },\n    {\n      \"criterion\": \"ARP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"离散音效：筷子停顿的轻响、拍桌声。... 无背景音乐、无环境音、无旁白\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"only the seven dialogue lines and the two discrete SFX are audible... Otherwise total silence — no rain sound, no cafeteria ambience, no room tone. The only audible sounds are the seven verbatim dialogue lines and two discrete SFX: the light chopstick-pause clink... and the sharp table slap\"\n        }\n      ],\n      \"rationale\": \"The enhanced prompt strictly preserves the requested soundscape: only the two specified SFX (chopstick clink, table slap) and the seven dialogue lines are audible. It explicitly forbids music, ambience, narration, and subtitles, matching the original instruction.\"\n    },\n    {\n      \"criterion\": \"CCP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"徕卡 M10 拍摄，运镜平稳、清晰\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"steady camera with a very slight slow push-in... static close-up... static medium two-shot... photorealistic live-action cinematic short with a Leica M10 look — crisp, steady, richly grained\"\n        }\n      ],\n      \"rationale\": \"Camera constraints are preserved: steady, Leica M10 style, no shaky or dynamic movement. The shot sequence (static transition → medium shot → close-up → two-shot) is specified with timing and movement (slight push-in) that does not override the original intent of smooth, cinematic framing.\"\n    },\n    {\n      \"criterion\": \"LCF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"minor\",\n      \"issue\": \"The original prompt specifies '窗外正下着小雨' (it is raining outside the window) in the first frame, but the evidence asset image_1 does not visually show rain. The enhanced prompt adds rain streaks to the window glass in the first frame, which is a compatible elaboration, but the visual evidence does not confirm its presence in the asset.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"图1A 为大食堂靠窗餐桌，窗外正下着小雨\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"the window glass carries light rain streaks per user intent\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"The image does not show any rain outside the windows, contradicting the prompt's description of '窗外正下着小雨'\"\n        }\n      ],\n      \"rationale\": \"The enhanced prompt correctly adds rain streaks to the window glass as per user intent, which is a compatible elaboration. However, the evidence asset image_1 does not visually confirm rain, creating a minor discrepancy. This does not alter the requested condition but is a minor issue due to the asset’s static nature and lack of visual confirmation.\"\n    },\n    {\n      \"criterion\": \"SSP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"图1A 为大食堂靠窗餐桌，沈清涵图2低头吃饭，顾言澈图3坐在她对面\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"window-side table in <Subject 3> where <Subject 1> Shen Qinghan is eating and <Subject 2> Gu Yanche teases her... opposite her\"\n        }\n      ],\n      \"rationale\": \"The setting (cafeteria, window-side table), background elements (food-service counter, large windows), and spatial relations (Shen Qinghan sitting opposite Gu Yanche) are preserved. The rain on the windows is added as per user intent, which is compatible with the original setting.\"\n    },\n    {\n      \"criterion\": \"OTI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"画面内不出现任何文字；... 对白不显示字幕\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"no text or subtitles ever appear on screen\"\n        }\n      ],\n      \"rationale\": \"The enhanced prompt explicitly forbids any on-screen text, subtitles, or interface text, preserving the original requirement. The watermark '豆包AI生成' in the assets is not part of the video content and does not violate the instruction.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt preserves the original instruction's semantic fidelity with high accuracy. It fully retains the requested genre (photorealistic live-action cinematic), medium (3D realistic photography), aesthetic (Leica M10 style with film grain), and visual style (natural skin texture, fabric details, rain on windows). All subject identities, actions, dialogue, camera constraints, and environmental conditions are preserved with minor elaborations that do not contradict the original. The only noted issue is a minor deviation in the description of the rain's visual presence in the first frame, which is addressed in the prompt but not visually confirmed in the asset. No major omissions, substitutions, or contradictions are found.",
+  "usage": {
+    "completion_tokens": 2560,
+    "prompt_tokens": 5880,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 8440
+  }
+}

@@ -1,0 +1,131 @@
+{
+  "candidate_hash": "70779e4e70cf4972454db8d47f5a924ece34a6859bc10c1cbc206ba9069ab2a5",
+  "case_key": "r2v:227",
+  "created_at": "2026-11-13T09:08:39+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "SAC",
+      "evidence": [
+        {
+          "quote": "<Subject 1> is the lead astronaut from <Video 1>, wearing a white-and-gray futuristic armored suit with dark gray joint panels and a reflective gold-green visored helmet...",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "两名宇航员在日落时分平稳行走于浅水中的内容",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "astronaut_1 is in front of astronaut_2. both astronauts are in front of the aircraft.",
+          "source": "evidence_facts"
+        }
+      ],
+      "issue": "Subject identities, counts, appearances, and props are consistently preserved. <Subject 1> and <Subject 2> retain their white-and-gray suits and reflective helmets; <Prop 1> remains unchanged in the background; <Prop 2> is introduced as a new element without conflicting with existing attributes.",
+      "rationale": "All subjects and props are consistently defined and maintained across the sequence. The new element <Prop 2> is introduced without altering existing subject attributes or causing identity drift.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANL",
+      "evidence": [
+        {
+          "quote": "At 4 seconds, <Prop 2> suddenly accelerates toward the astronauts; <Subject 1> recoils backward in fear with a sharp splash of water...",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "自3秒起，在画面右侧水面下加入一道若隐若现的蓝色光带...4秒后突然加速朝两名宇航员冲来",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "The action sequence is coherent and causally linked: walking → freeze → turn → recoil → frozen stare. However, the description of the blue light band 'rushes toward them' in the enhanced prompt slightly exaggerates the motion compared to the original 'accelerates' and '冲来', which may imply a more abrupt or violent movement than intended.",
+      "rationale": "The causal chain is logically sound: the appearance of the light triggers the astronauts' reaction. The minor discrepancy in motion intensity ('rushes' vs. 'accelerates') is a stylistic elaboration, not a contradiction, and does not break coherence.",
+      "severity": "minor"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "TSC",
+      "evidence": [
+        {
+          "quote": "From 0 to 3 seconds, <Subject 1>...wade steadily toward the camera...At 3 seconds, <Subject 1> abruptly freezes...At 4 seconds, <Prop 2> suddenly accelerates...From 4.5 to 5 seconds, the light band stops...",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "0-3秒，两名宇航员朝镜头方向稳步涉水前进；3秒时，前方宇航员骤然停住...4秒后，前方宇航员因惊恐向后退一步...4.5秒至5秒之间，让宇航员脚下的浅水浮现出冰蓝色微光",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "Chronology and state transitions are precisely aligned with the original prompt: 0–3s walking, 3s freeze and light appearance, 4s recoil, 4.5–5s icy glow. No overlapping or infeasible timestamps are present.",
+      "rationale": "The timeline is strictly preserved and matches the original instruction without gaps or contradictions.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SPC",
+      "evidence": [
+        {
+          "quote": "camera static near the waterline, continuously focused on the two astronauts...<Prop 1>...unchanged in the background...<Prop 2>...beneath the water on the right",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "astronauts are in the foreground, the aircraft is in the midground",
+          "source": "evidence_facts"
+        }
+      ],
+      "issue": "Spatial relationships are consistent: astronauts remain centered and in foreground, spacecraft in midground, light band appears on the right side of the water. No unexplained position swaps or movement path breaks are present.",
+      "rationale": "All spatial elements are maintained with no contradictions. The new light band is introduced in a plausible location (right side of water) without disrupting existing spatial logic.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "PL",
+      "evidence": [
+        {
+          "quote": "gentle ripples spreading around their legs with each step...abnormal ripples unrelated to their footsteps...sharp splash as <Subject 1> recoils",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "自3秒起，水面上增加与宇航员步伐无关的异常涟漪",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "Physics are consistent within the sci-fi context: water ripples, splashes, and light behavior are plausible for a photorealistic setting. The sudden appearance of the blue light band is treated as a fictional phenomenon without violating established rules.",
+      "rationale": "The physical behaviors (ripples, splash, light movement) are consistent with real-world physics where applicable, and the supernatural element (blue light) is clearly marked as fictional without breaking internal logic.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "AVS",
+      "evidence": [
+        {
+          "quote": "a low, subtle ominous underwater hum as the wading rhythm ceases",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "新增音效：0-3秒配合宇航员行走加入有节奏的涉水声；约4秒处配合宇航员后退动作，加入急促的水花飞溅声",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "The enhanced prompt adds a 'low, subtle ominous underwater hum' from 3s, which is not explicitly mentioned in the original prompt. While plausible, this is an unsupported addition that slightly deviates from the requested sound design.",
+      "rationale": "The original prompt specifies only two sound effects: rhythmic wading (0–3s) and a splash at ~4s. The addition of an 'ominous hum' is a minor elaboration that enhances mood but was not requested, thus constituting a minor deviation.",
+      "severity": "minor"
+    }
+  ],
+  "dimension": "IC",
+  "dimension_score": 95,
+  "evidence_cache_key": "9ad1139180c931b518675686353e7178a0cf2dd2caf564be1225727da4d604be",
+  "judge_cache_key": "438d7e9fd7332b1041db3e2c26d42cb3fe828e0d369fb59490f6650aee59e97d",
+  "method": "glm53_20261112_120702",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"IC\",\n  \"dimension_score\": 95,\n  \"summary\": \"The enhanced prompt maintains strong internal consistency with the original instruction, preserving subject identities, actions, chronology, and environmental elements while introducing a coherent sci-fi suspense sequence. Minor issues include slight discrepancies in sound description (e.g., 'ominous underwater hum' not explicitly requested) and a minor overstatement in the description of the light band's behavior ('rushes toward them' vs. 'accelerates'). No major contradictions or attribute drifts are present.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"SAC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"Subject identities, counts, appearances, and props are consistently preserved. <Subject 1> and <Subject 2> retain their white-and-gray suits and reflective helmets; <Prop 1> remains unchanged in the background; <Prop 2> is introduced as a new element without conflicting with existing attributes.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"<Subject 1> is the lead astronaut from <Video 1>, wearing a white-and-gray futuristic armored suit with dark gray joint panels and a reflective gold-green visored helmet...\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"两名宇航员在日落时分平稳行走于浅水中的内容\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"astronaut_1 is in front of astronaut_2. both astronauts are in front of the aircraft.\"\n        }\n      ],\n      \"rationale\": \"All subjects and props are consistently defined and maintained across the sequence. The new element <Prop 2> is introduced without altering existing subject attributes or causing identity drift.\"\n    },\n    {\n      \"criterion\": \"ANL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"minor\",\n      \"issue\": \"The action sequence is coherent and causally linked: walking → freeze → turn → recoil → frozen stare. However, the description of the blue light band 'rushes toward them' in the enhanced prompt slightly exaggerates the motion compared to the original 'accelerates' and '冲来', which may imply a more abrupt or violent movement than intended.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"At 4 seconds, <Prop 2> suddenly accelerates toward the astronauts; <Subject 1> recoils backward in fear with a sharp splash of water...\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"自3秒起，在画面右侧水面下加入一道若隐若现的蓝色光带...4秒后突然加速朝两名宇航员冲来\"\n        }\n      ],\n      \"rationale\": \"The causal chain is logically sound: the appearance of the light triggers the astronauts' reaction. The minor discrepancy in motion intensity ('rushes' vs. 'accelerates') is a stylistic elaboration, not a contradiction, and does not break coherence.\"\n    },\n    {\n      \"criterion\": \"TSC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"Chronology and state transitions are precisely aligned with the original prompt: 0–3s walking, 3s freeze and light appearance, 4s recoil, 4.5–5s icy glow. No overlapping or infeasible timestamps are present.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"From 0 to 3 seconds, <Subject 1>...wade steadily toward the camera...At 3 seconds, <Subject 1> abruptly freezes...At 4 seconds, <Prop 2> suddenly accelerates...From 4.5 to 5 seconds, the light band stops...\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"0-3秒，两名宇航员朝镜头方向稳步涉水前进；3秒时，前方宇航员骤然停住...4秒后，前方宇航员因惊恐向后退一步...4.5秒至5秒之间，让宇航员脚下的浅水浮现出冰蓝色微光\"\n        }\n      ],\n      \"rationale\": \"The timeline is strictly preserved and matches the original instruction without gaps or contradictions.\"\n    },\n    {\n      \"criterion\": \"SPC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"Spatial relationships are consistent: astronauts remain centered and in foreground, spacecraft in midground, light band appears on the right side of the water. No unexplained position swaps or movement path breaks are present.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"camera static near the waterline, continuously focused on the two astronauts...<Prop 1>...unchanged in the background...<Prop 2>...beneath the water on the right\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"astronauts are in the foreground, the aircraft is in the midground\"\n        }\n      ],\n      \"rationale\": \"All spatial elements are maintained with no contradictions. The new light band is introduced in a plausible location (right side of water) without disrupting existing spatial logic.\"\n    },\n    {\n      \"criterion\": \"PL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"Physics are consistent within the sci-fi context: water ripples, splashes, and light behavior are plausible for a photorealistic setting. The sudden appearance of the blue light band is treated as a fictional phenomenon without violating established rules.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"gentle ripples spreading around their legs with each step...abnormal ripples unrelated to their footsteps...sharp splash as <Subject 1> recoils\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"自3秒起，水面上增加与宇航员步伐无关的异常涟漪\"\n        }\n      ],\n      \"rationale\": \"The physical behaviors (ripples, splash, light movement) are consistent with real-world physics where applicable, and the supernatural element (blue light) is clearly marked as fictional without breaking internal logic.\"\n    },\n    {\n      \"criterion\": \"AVS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"minor\",\n      \"issue\": \"The enhanced prompt adds a 'low, subtle ominous underwater hum' from 3s, which is not explicitly mentioned in the original prompt. While plausible, this is an unsupported addition that slightly deviates from the requested sound design.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"a low, subtle ominous underwater hum as the wading rhythm ceases\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"新增音效：0-3秒配合宇航员行走加入有节奏的涉水声；约4秒处配合宇航员后退动作，加入急促的水花飞溅声\"\n        }\n      ],\n      \"rationale\": \"The original prompt specifies only two sound effects: rhythmic wading (0–3s) and a splash at ~4s. The addition of an 'ominous hum' is a minor elaboration that enhances mood but was not requested, thus constituting a minor deviation.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt maintains strong internal consistency with the original instruction, preserving subject identities, actions, chronology, and environmental elements while introducing a coherent sci-fi suspense sequence. Minor issues include slight discrepancies in sound description (e.g., 'ominous underwater hum' not explicitly requested) and a minor overstatement in the description of the light band's behavior ('rushes toward them' vs. 'accelerates'). No major contradictions or attribute drifts are present.",
+  "usage": {
+    "completion_tokens": 1632,
+    "prompt_tokens": 3323,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 4955
+  }
+}

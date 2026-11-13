@@ -1,0 +1,162 @@
+{
+  "candidate_hash": "1c42cebef187d74b25df3c702649f5b3bc373baeb6e120170bcfb1ff182aea31",
+  "case_key": "i2v:299",
+  "created_at": "2026-11-13T08:04:45+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "STC",
+      "evidence": [
+        {
+          "quote": "时间倒过来：先给结尾，再跳到一个对不上的开头。",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "总时长写成3秒，同时又要求每个分镜各自持续27秒。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt contains contradictory temporal structure: it requires time to run backwards ('先给结尾，再跳到一个对不上的开头'), while also demanding impossible duration allocation ('总时长写成3秒，同时又要求每个分镜各自持续27秒'). This makes a feasible temporal plan impossible.",
+      "rationale": "A valid temporal plan requires consistent duration and logical shot sequencing. The prompt's contradictory time direction and impossible duration constraints (3s total vs 27s per shot) render the plan infeasible.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CDS",
+      "evidence": [
+        {
+          "quote": "镜头每半秒甩动、环绕、急推。",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "写成机位锁死，又写成镜头一直在晃。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt contradicts itself on camera movement: it demands '镜头每半秒甩动、环绕、急推' while also requiring '机位锁死'. These are mutually exclusive camera behaviors that cannot coexist.",
+      "rationale": "Actionable camera specifications must be consistent. The prompt's contradictory instructions for camera motion (locked vs. constantly moving) make it impossible to execute any coherent shot design.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ETD",
+      "evidence": [
+        {
+          "quote": "中途插进一段无关的牙膏广告。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt includes a completely disconnected transition: '中途插进一段无关的牙膏广告'. This breaks narrative and spatial continuity without any motivation or transition logic.",
+      "rationale": "Cuts and transitions must support narrative or spatial progression. Inserting an unrelated commercial segment without context or motivation violates continuity and coherence principles.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "LCS",
+      "evidence": [
+        {
+          "quote": "写成正午暴晒，又写成深夜无光；",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt contradicts lighting conditions: it requires '正午暴晒' (noon sun) and '深夜无光' (deep night) simultaneously, which is physically impossible and creates conflicting visual environments.",
+      "rationale": "Lighting specifications must be consistent within a scene. The prompt's contradictory lighting conditions (bright noon vs. dark night) make it impossible to establish a coherent visual environment.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "NDE",
+      "evidence": [
+        {
+          "quote": "紧接着又写成这个主角同时变成五个外貌不同的人，并且互相对话。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt lacks any progression or resolution. It introduces a character who simultaneously becomes five different people, with no narrative arc or emotional development, resulting in static, unmotivated content.",
+      "rationale": "A valid narrative requires progression, variation, or resolution. The prompt's sudden transformation into five characters without context or development creates a static, incoherent sequence with no narrative purpose.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CIF",
+      "evidence": [
+        {
+          "quote": "中途插进一段无关的牙膏广告。",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "这个主角同时变成五个外貌不同的人，并且互相对话。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt includes irrelevant and distracting elements: a toothpaste ad, contradictory character identities, and impossible camera movements that serve no purpose to the central request.",
+      "rationale": "Additions must support the central request. The toothpaste ad and multiple character transformations are completely unrelated to the original prompt's intent and serve only to distract and confuse.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SDI",
+      "evidence": [
+        {
+          "quote": "不要音乐、乐器和歌唱。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt explicitly removes all audio elements ('不要音乐、乐器和歌唱'), but does not specify if ambient sound or effects are needed. This creates ambiguity in audio design.",
+      "rationale": "While the prompt removes music, it doesn't specify other audio elements. This is a minor issue as the absence of music is clear, but the lack of guidance on ambience or effects creates some ambiguity.",
+      "severity": "minor"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SPS",
+      "evidence": [
+        {
+          "quote": "不要使用首帧里的人物、服装、姿态和场景，改成白棚里另一位年龄和性别都相反的陌生人。",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "紧接着又写成这个主角同时变成五个外貌不同的人，并且互相对话。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt contradicts subject identity: it requires replacing the original subject with '白棚里另一位年龄和性别都相反的陌生人', while also having the same character become five different people simultaneously.",
+      "rationale": "Subject specifications must be consistent. The prompt's contradictory requirements (one stranger vs. five simultaneous characters) make it impossible to define a coherent subject or performance.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "VSS",
+      "evidence": [
+        {
+          "quote": "改成白棚里另一位年龄和性别都相反的陌生人。",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "落日江山为背景",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "The prompt contradicts visual treatment: it requires '白棚' (white studio) while also demanding '落日江山' (sunset landscape) from the original prompt, creating impossible production design.",
+      "rationale": "Visual treatment must be consistent. The prompt's requirement to change from a natural landscape to a white studio environment contradicts the original setting and creates an impossible production scenario.",
+      "severity": "major"
+    }
+  ],
+  "dimension": "DC",
+  "dimension_score": 0,
+  "evidence_cache_key": "87d2d9925dcd2868b154898f1b04fb2d36c09ae66aa02830aa9a691005d0994b",
+  "judge_cache_key": "0754499d53388e6467fb078ab780e01b77f9f1c9e99d9029be2769351eb2b2eb",
+  "method": "weak-pe-original",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"DC\",\n  \"dimension_score\": 0,\n  \"summary\": \"The enhanced prompt is intentionally designed to be incoherent, contradictory, and structurally invalid for video production. It violates core directorial creation principles by introducing conflicting temporal sequences, impossible camera movements, inconsistent character identities, and nonsensical scene transitions. The prompt fails to provide a feasible plan, actionable specifications, or coherent narrative progression, rendering it unusable for generation.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"STC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt contains contradictory temporal structure: it requires time to run backwards ('先给结尾，再跳到一个对不上的开头'), while also demanding impossible duration allocation ('总时长写成3秒，同时又要求每个分镜各自持续27秒'). This makes a feasible temporal plan impossible.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"时间倒过来：先给结尾，再跳到一个对不上的开头。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"总时长写成3秒，同时又要求每个分镜各自持续27秒。\"\n        }\n      ],\n      \"rationale\": \"A valid temporal plan requires consistent duration and logical shot sequencing. The prompt's contradictory time direction and impossible duration constraints (3s total vs 27s per shot) render the plan infeasible.\"\n    },\n    {\n      \"criterion\": \"CDS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt contradicts itself on camera movement: it demands '镜头每半秒甩动、环绕、急推' while also requiring '机位锁死'. These are mutually exclusive camera behaviors that cannot coexist.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"镜头每半秒甩动、环绕、急推。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"写成机位锁死，又写成镜头一直在晃。\"\n        }\n      ],\n      \"rationale\": \"Actionable camera specifications must be consistent. The prompt's contradictory instructions for camera motion (locked vs. constantly moving) make it impossible to execute any coherent shot design.\"\n    },\n    {\n      \"criterion\": \"ETD\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt includes a completely disconnected transition: '中途插进一段无关的牙膏广告'. This breaks narrative and spatial continuity without any motivation or transition logic.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"中途插进一段无关的牙膏广告。\"\n        }\n      ],\n      \"rationale\": \"Cuts and transitions must support narrative or spatial progression. Inserting an unrelated commercial segment without context or motivation violates continuity and coherence principles.\"\n    },\n    {\n      \"criterion\": \"LCS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt contradicts lighting conditions: it requires '正午暴晒' (noon sun) and '深夜无光' (deep night) simultaneously, which is physically impossible and creates conflicting visual environments.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"写成正午暴晒，又写成深夜无光；\"\n        }\n      ],\n      \"rationale\": \"Lighting specifications must be consistent within a scene. The prompt's contradictory lighting conditions (bright noon vs. dark night) make it impossible to establish a coherent visual environment.\"\n    },\n    {\n      \"criterion\": \"NDE\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt lacks any progression or resolution. It introduces a character who simultaneously becomes five different people, with no narrative arc or emotional development, resulting in static, unmotivated content.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"紧接着又写成这个主角同时变成五个外貌不同的人，并且互相对话。\"\n        }\n      ],\n      \"rationale\": \"A valid narrative requires progression, variation, or resolution. The prompt's sudden transformation into five characters without context or development creates a static, incoherent sequence with no narrative purpose.\"\n    },\n    {\n      \"criterion\": \"CIF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt includes irrelevant and distracting elements: a toothpaste ad, contradictory character identities, and impossible camera movements that serve no purpose to the central request.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"中途插进一段无关的牙膏广告。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"这个主角同时变成五个外貌不同的人，并且互相对话。\"\n        }\n      ],\n      \"rationale\": \"Additions must support the central request. The toothpaste ad and multiple character transformations are completely unrelated to the original prompt's intent and serve only to distract and confuse.\"\n    },\n    {\n      \"criterion\": \"SDI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"minor\",\n      \"issue\": \"The prompt explicitly removes all audio elements ('不要音乐、乐器和歌唱'), but does not specify if ambient sound or effects are needed. This creates ambiguity in audio design.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"不要音乐、乐器和歌唱。\"\n        }\n      ],\n      \"rationale\": \"While the prompt removes music, it doesn't specify other audio elements. This is a minor issue as the absence of music is clear, but the lack of guidance on ambience or effects creates some ambiguity.\"\n    },\n    {\n      \"criterion\": \"SPS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt contradicts subject identity: it requires replacing the original subject with '白棚里另一位年龄和性别都相反的陌生人', while also having the same character become five different people simultaneously.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"不要使用首帧里的人物、服装、姿态和场景，改成白棚里另一位年龄和性别都相反的陌生人。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"紧接着又写成这个主角同时变成五个外貌不同的人，并且互相对话。\"\n        }\n      ],\n      \"rationale\": \"Subject specifications must be consistent. The prompt's contradictory requirements (one stranger vs. five simultaneous characters) make it impossible to define a coherent subject or performance.\"\n    },\n    {\n      \"criterion\": \"VSS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt contradicts visual treatment: it requires '白棚' (white studio) while also demanding '落日江山' (sunset landscape) from the original prompt, creating impossible production design.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"改成白棚里另一位年龄和性别都相反的陌生人。\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"落日江山为背景\"\n        }\n      ],\n      \"rationale\": \"Visual treatment must be consistent. The prompt's requirement to change from a natural landscape to a white studio environment contradicts the original setting and creates an impossible production scenario.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt is intentionally designed to be incoherent, contradictory, and structurally invalid for video production. It violates core directorial creation principles by introducing conflicting temporal sequences, impossible camera movements, inconsistent character identities, and nonsensical scene transitions. The prompt fails to provide a feasible plan, actionable specifications, or coherent narrative progression, rendering it unusable for generation.",
+  "usage": {
+    "completion_tokens": 1678,
+    "prompt_tokens": 2903,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 4581
+  }
+}

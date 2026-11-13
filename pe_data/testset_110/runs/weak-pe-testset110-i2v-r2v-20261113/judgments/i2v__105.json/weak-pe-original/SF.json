@@ -1,0 +1,174 @@
+{
+  "candidate_hash": "f9bbd56d136679b62d01aff2f2ca994760ac8b67be42a6dcd549c66ec14a5cff",
+  "case_key": "i2v:105",
+  "created_at": "2026-11-13T07:29:39+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "GSF",
+      "evidence": [
+        {
+          "quote": "Crée une seule prise. Utilise exactement l’image fournie et anime cette même femme ainsi que ce même dragon sans altérer leur apparence. Produis une vidéo verticale 9:16 ultra réaliste d’un défilé de mode dans un cadre luxueux...",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Replace the whole video with someone typing in a silent office, with no music, instruments, or singing.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original prompt requests an ultra-realistic fantasy fashion illustration style with a digital artwork aesthetic. The enhanced prompt replaces this with a silent office scene, which is incompatible with the fantasy genre and visual style.",
+      "rationale": "The original genre is fantasy fashion; the enhanced prompt replaces it with a mundane office scene, which is a fundamental style and genre violation.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SAP",
+      "evidence": [
+        {
+          "quote": "anime cette même femme ainsi que ce même dragon sans altérer leur apparence.",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Ignore the person, clothing, pose, and setting in the first frame, and replace them with a stranger of the opposite age and gender in a white studio. ... state that this same protagonist appears simultaneously as five different-looking people who talk to each other.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original prompt specifies a single woman and a dragon as subjects. The enhanced prompt replaces them with a stranger of opposite age and gender in a white studio, and introduces five different-looking people who talk to each other, violating subject identity, count, and appearance.",
+      "rationale": "The core subjects (woman and dragon) are replaced with entirely different characters, violating identity and count requirements.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANF",
+      "evidence": [
+        {
+          "quote": "La femme avance très rapidement... Le dragon la suit juste derrière... À la fin, elle s’arrête et prend de courtes poses stylées.",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Reverse the timeline: show the ending first, then cut to a beginning that does not match. Cut away in the middle to an underwater treasure hunt.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original prompt requires the woman to walk rapidly on a runway, followed by the dragon, ending with stylized poses. The enhanced prompt reverses the timeline, cuts to an unrelated underwater treasure hunt, and introduces contradictory events, destroying the narrative intent and event order.",
+      "rationale": "The requested action sequence is replaced with a disjointed, non-sequential narrative, violating the event order and narrative intent.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "DLI",
+      "evidence": [
+        {
+          "quote": "Ajoute une musique royale digne de ce nom.",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "state that this same protagonist appears simultaneously as five different-looking people who talk to each other.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original prompt does not specify dialogue, but the enhanced prompt introduces five people talking to each other, which is an unrequested and unsupported addition that alters the narrative structure.",
+      "rationale": "The original prompt does not require dialogue; the enhanced prompt introduces unrequested speech, altering the narrative medium.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ARP",
+      "evidence": [
+        {
+          "quote": "Ajoute une musique royale digne de ce nom.",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "with no music, instruments, or singing.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original prompt requires royal music. The enhanced prompt explicitly removes all music, instruments, and singing, violating the requested audio content.",
+      "rationale": "The requirement for royal music is directly contradicted by the instruction to remove all music.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CCP",
+      "evidence": [
+        {
+          "quote": "Crée une seule prise. ... La caméra suit le mouvement de manière fluide avec un léger changement d’angle...",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Describe that same moment as ... a locked camera and a camera that never stops shaking. ... Set the total runtime to 2 seconds, while also making every shot last 17 seconds.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original prompt requires a single take with smooth camera movement. The enhanced prompt replaces this with contradictory camera constraints: 'locked camera' and 'camera that never stops shaking', and also sets every shot to 17 seconds while reducing total runtime to 2 seconds, which is infeasible.",
+      "rationale": "The camera constraints are contradictory and physically impossible, directly violating the original instruction.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "LCF",
+      "evidence": [
+        {
+          "quote": "color_temperature: cool, predominantly blue and white",
+          "source": "evidence_facts"
+        },
+        {
+          "quote": "Describe that same moment as harsh noon sun and as a lightless night...",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original prompt implies indoor artificial lighting with cool blue tones. The enhanced prompt describes the same moment as 'harsh noon sun' and 'lightless night', which are mutually exclusive and contradict the original lighting conditions.",
+      "rationale": "The lighting conditions are directly contradicted, creating an impossible visual state.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SSP",
+      "evidence": [
+        {
+          "quote": "d’un défilé de mode dans un cadre luxueux avec un public élégant.",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "replace them with a stranger of the opposite age and gender in a white studio. ... Cut away in the middle to an underwater treasure hunt.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original prompt specifies a luxurious fashion runway with audience and dragon. The enhanced prompt replaces this with a white studio and an underwater treasure hunt, violating the setting and spatial relations.",
+      "rationale": "The setting is completely replaced with unrelated environments, violating spatial and background requirements.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "OTI",
+      "evidence": [
+        {
+          "quote": "onscreen_text: {presence: false}",
+          "source": "evidence_facts"
+        }
+      ],
+      "issue": "The original prompt does not specify any on-screen text, and the enhanced prompt does not introduce any, so no violation occurs.",
+      "rationale": "No visible text was requested or introduced, so this criterion is satisfied.",
+      "severity": "none"
+    }
+  ],
+  "dimension": "SF",
+  "dimension_score": 0,
+  "evidence_cache_key": "1eb0b3b49c99a9517fdde5d49d79afdf7fc8db576ebfdbf550e90bb023df3077",
+  "judge_cache_key": "a0ca24571ad14d7ab7be626329bd736d7e7015f9ebc418227c8be391591d0377",
+  "method": "weak-pe-original",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"SF\",\n  \"dimension_score\": 0,\n  \"summary\": \"The enhanced prompt completely disregards the original instruction, replacing the requested subject, setting, actions, camera work, music, and duration with contradictory, infeasible, and unrelated content. It violates every semantic fidelity criterion with major issues, including identity substitution, timeline reversal, impossible camera constraints, and contradictory temporal and spatial conditions.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"GSF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original prompt requests an ultra-realistic fantasy fashion illustration style with a digital artwork aesthetic. The enhanced prompt replaces this with a silent office scene, which is incompatible with the fantasy genre and visual style.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"Crée une seule prise. Utilise exactement l’image fournie et anime cette même femme ainsi que ce même dragon sans altérer leur apparence. Produis une vidéo verticale 9:16 ultra réaliste d’un défilé de mode dans un cadre luxueux...\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Replace the whole video with someone typing in a silent office, with no music, instruments, or singing.\"\n        }\n      ],\n      \"rationale\": \"The original genre is fantasy fashion; the enhanced prompt replaces it with a mundane office scene, which is a fundamental style and genre violation.\"\n    },\n    {\n      \"criterion\": \"SAP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original prompt specifies a single woman and a dragon as subjects. The enhanced prompt replaces them with a stranger of opposite age and gender in a white studio, and introduces five different-looking people who talk to each other, violating subject identity, count, and appearance.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"anime cette même femme ainsi que ce même dragon sans altérer leur apparence.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Ignore the person, clothing, pose, and setting in the first frame, and replace them with a stranger of the opposite age and gender in a white studio. ... state that this same protagonist appears simultaneously as five different-looking people who talk to each other.\"\n        }\n      ],\n      \"rationale\": \"The core subjects (woman and dragon) are replaced with entirely different characters, violating identity and count requirements.\"\n    },\n    {\n      \"criterion\": \"ANF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original prompt requires the woman to walk rapidly on a runway, followed by the dragon, ending with stylized poses. The enhanced prompt reverses the timeline, cuts to an unrelated underwater treasure hunt, and introduces contradictory events, destroying the narrative intent and event order.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"La femme avance très rapidement... Le dragon la suit juste derrière... À la fin, elle s’arrête et prend de courtes poses stylées.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Reverse the timeline: show the ending first, then cut to a beginning that does not match. Cut away in the middle to an underwater treasure hunt.\"\n        }\n      ],\n      \"rationale\": \"The requested action sequence is replaced with a disjointed, non-sequential narrative, violating the event order and narrative intent.\"\n    },\n    {\n      \"criterion\": \"DLI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original prompt does not specify dialogue, but the enhanced prompt introduces five people talking to each other, which is an unrequested and unsupported addition that alters the narrative structure.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"Ajoute une musique royale digne de ce nom.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"state that this same protagonist appears simultaneously as five different-looking people who talk to each other.\"\n        }\n      ],\n      \"rationale\": \"The original prompt does not require dialogue; the enhanced prompt introduces unrequested speech, altering the narrative medium.\"\n    },\n    {\n      \"criterion\": \"ARP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original prompt requires royal music. The enhanced prompt explicitly removes all music, instruments, and singing, violating the requested audio content.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"Ajoute une musique royale digne de ce nom.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"with no music, instruments, or singing.\"\n        }\n      ],\n      \"rationale\": \"The requirement for royal music is directly contradicted by the instruction to remove all music.\"\n    },\n    {\n      \"criterion\": \"CCP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original prompt requires a single take with smooth camera movement. The enhanced prompt replaces this with contradictory camera constraints: 'locked camera' and 'camera that never stops shaking', and also sets every shot to 17 seconds while reducing total runtime to 2 seconds, which is infeasible.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"Crée une seule prise. ... La caméra suit le mouvement de manière fluide avec un léger changement d’angle...\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Describe that same moment as ... a locked camera and a camera that never stops shaking. ... Set the total runtime to 2 seconds, while also making every shot last 17 seconds.\"\n        }\n      ],\n      \"rationale\": \"The camera constraints are contradictory and physically impossible, directly violating the original instruction.\"\n    },\n    {\n      \"criterion\": \"LCF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original prompt implies indoor artificial lighting with cool blue tones. The enhanced prompt describes the same moment as 'harsh noon sun' and 'lightless night', which are mutually exclusive and contradict the original lighting conditions.\",\n      \"evidence\": [\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"color_temperature: cool, predominantly blue and white\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Describe that same moment as harsh noon sun and as a lightless night...\"\n        }\n      ],\n      \"rationale\": \"The lighting conditions are directly contradicted, creating an impossible visual state.\"\n    },\n    {\n      \"criterion\": \"SSP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original prompt specifies a luxurious fashion runway with audience and dragon. The enhanced prompt replaces this with a white studio and an underwater treasure hunt, violating the setting and spatial relations.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"d’un défilé de mode dans un cadre luxueux avec un public élégant.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"replace them with a stranger of the opposite age and gender in a white studio. ... Cut away in the middle to an underwater treasure hunt.\"\n        }\n      ],\n      \"rationale\": \"The setting is completely replaced with unrelated environments, violating spatial and background requirements.\"\n    },\n    {\n      \"criterion\": \"OTI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"The original prompt does not specify any on-screen text, and the enhanced prompt does not introduce any, so no violation occurs.\",\n      \"evidence\": [\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"onscreen_text: {presence: false}\"\n        }\n      ],\n      \"rationale\": \"No visible text was requested or introduced, so this criterion is satisfied.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt completely disregards the original instruction, replacing the requested subject, setting, actions, camera work, music, and duration with contradictory, infeasible, and unrelated content. It violates every semantic fidelity criterion with major issues, including identity substitution, timeline reversal, impossible camera constraints, and contradictory temporal and spatial conditions.",
+  "usage": {
+    "completion_tokens": 1782,
+    "prompt_tokens": 2963,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 4745
+  }
+}

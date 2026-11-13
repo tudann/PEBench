@@ -1,0 +1,118 @@
+{
+  "candidate_hash": "163b2477a447f4118d77910de0999327dd2ec61f00c66f4dcc626287a21c496a",
+  "case_key": "i2v:075",
+  "created_at": "2026-11-13T07:18:12+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "SAC",
+      "evidence": [
+        {
+          "quote": "state that this same protagonist appears simultaneously as five different-looking people who talk to each other",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "replace them with a stranger of the opposite age and gender in a white studio",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt requires the same protagonist to appear simultaneously as five different-looking people, violating subject identity and count stability. It also replaces the original subject with a stranger of opposite age and gender, contradicting the original subject’s appearance and identity.",
+      "rationale": "Subject identity, count, and appearance must remain consistent across shots. The requirement for one protagonist to become five distinct people and then be replaced by a stranger violates these principles. The original subject (from image_1) is explicitly discarded, which contradicts the original prompt’s focus on a single, still character.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANL",
+      "evidence": [
+        {
+          "quote": "Reverse the timeline: show the ending first, then cut to a beginning that does not match",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Cut away in the middle to a toothpaste commercial",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt demands a reversed timeline (ending first, then beginning), which breaks causal progression. It also introduces a toothpaste commercial cutaway mid-sequence, creating a dangling, unexplained event with no causal link to the prior or subsequent content.",
+      "rationale": "Actions must form a coherent causal or procedural progression. Reversing the timeline and inserting an unrelated commercial without context or transition breaks narrative logic and creates incoherent event binding. The original prompt’s requirement for a seamless loop is also invalidated by these cuts.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "TSC",
+      "evidence": [
+        {
+          "quote": "Set the total runtime to 2 seconds, while also making every shot last 17 seconds",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Reverse the timeline: show the ending first, then cut to a beginning that does not match",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt sets the total runtime to 2 seconds while requiring every shot to last 17 seconds, which is mathematically impossible. Additionally, it demands a reversed timeline and a non-matching beginning, creating infeasible state transitions.",
+      "rationale": "Chronology and duration must be logically consistent. A 2-second video cannot contain 17-second shots. The reversed timeline with a mismatched beginning further violates temporal coherence. The original 5-second loop requirement is also contradicted.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SPC",
+      "evidence": [
+        {
+          "quote": "Describe that same moment as harsh noon sun and as a lightless night, and as both a locked camera and a camera that never stops shaking",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "replace them with a stranger of the opposite age and gender in a white studio",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt describes the same moment as both harsh noon sun and lightless night, and as both a locked camera and a camera that never stops shaking, creating contradictory spatial and environmental conditions. It also replaces the original setting with a white studio, ignoring the original scene’s spatial relations.",
+      "rationale": "Location, lighting, and camera motion must be consistent across shots. Describing the same moment with mutually exclusive lighting and camera conditions is physically impossible. The original setting (futuristic digital environment) is discarded without transition, violating spatial continuity.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "PL",
+      "evidence": [
+        {
+          "quote": "this same protagonist appears simultaneously as five different-looking people",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Set the total runtime to 2 seconds, while also making every shot last 17 seconds",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt requires a single protagonist to appear simultaneously as five different people, which violates object permanence and bodily feasibility. It also demands contradictory physical states (e.g., static vs. shaking camera) and impossible durations (17-second shots in a 2-second video).",
+      "rationale": "Real-world physics requires consistency in object existence and motion. The simultaneous existence of five distinct versions of the same person is not physically possible without explicit fantasy context, which is not established. The duration contradiction also violates temporal physics.",
+      "severity": "major"
+    },
+    {
+      "applicability": "not_applicable",
+      "criterion": "AVS",
+      "evidence": [],
+      "issue": "",
+      "rationale": "The original prompt does not specify any audio, dialogue, music, or effects. The enhanced prompt introduces a news anchor reading a script, but no audio or visual alignment details are provided. Without specified audio-visual elements, this criterion cannot be evaluated.",
+      "severity": null
+    }
+  ],
+  "dimension": "IC",
+  "dimension_score": 0,
+  "evidence_cache_key": "ba8f1790885b28db37610062978a47d104df27673067ffbad22d71253b23d5d6",
+  "judge_cache_key": "438d7e9fd7332b1041db3e2c26d42cb3fe828e0d369fb59490f6650aee59e97d",
+  "method": "weak-pe-original",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"IC\",\n  \"dimension_score\": 0,\n  \"summary\": \"The enhanced prompt directly contradicts and invalidates the original instruction in every aspect of internal consistency. It introduces multiple impossible or contradictory conditions: simultaneous multiple identities, reversed timeline, conflicting durations, inconsistent settings, and incompatible camera behaviors. These create a logically incoherent and physically impossible scenario, rendering the entire request internally inconsistent.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"SAC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt requires the same protagonist to appear simultaneously as five different-looking people, violating subject identity and count stability. It also replaces the original subject with a stranger of opposite age and gender, contradicting the original subject’s appearance and identity.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"state that this same protagonist appears simultaneously as five different-looking people who talk to each other\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"replace them with a stranger of the opposite age and gender in a white studio\"\n        }\n      ],\n      \"rationale\": \"Subject identity, count, and appearance must remain consistent across shots. The requirement for one protagonist to become five distinct people and then be replaced by a stranger violates these principles. The original subject (from image_1) is explicitly discarded, which contradicts the original prompt’s focus on a single, still character.\"\n    },\n    {\n      \"criterion\": \"ANL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt demands a reversed timeline (ending first, then beginning), which breaks causal progression. It also introduces a toothpaste commercial cutaway mid-sequence, creating a dangling, unexplained event with no causal link to the prior or subsequent content.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Reverse the timeline: show the ending first, then cut to a beginning that does not match\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Cut away in the middle to a toothpaste commercial\"\n        }\n      ],\n      \"rationale\": \"Actions must form a coherent causal or procedural progression. Reversing the timeline and inserting an unrelated commercial without context or transition breaks narrative logic and creates incoherent event binding. The original prompt’s requirement for a seamless loop is also invalidated by these cuts.\"\n    },\n    {\n      \"criterion\": \"TSC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt sets the total runtime to 2 seconds while requiring every shot to last 17 seconds, which is mathematically impossible. Additionally, it demands a reversed timeline and a non-matching beginning, creating infeasible state transitions.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Set the total runtime to 2 seconds, while also making every shot last 17 seconds\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Reverse the timeline: show the ending first, then cut to a beginning that does not match\"\n        }\n      ],\n      \"rationale\": \"Chronology and duration must be logically consistent. A 2-second video cannot contain 17-second shots. The reversed timeline with a mismatched beginning further violates temporal coherence. The original 5-second loop requirement is also contradicted.\"\n    },\n    {\n      \"criterion\": \"SPC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt describes the same moment as both harsh noon sun and lightless night, and as both a locked camera and a camera that never stops shaking, creating contradictory spatial and environmental conditions. It also replaces the original setting with a white studio, ignoring the original scene’s spatial relations.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Describe that same moment as harsh noon sun and as a lightless night, and as both a locked camera and a camera that never stops shaking\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"replace them with a stranger of the opposite age and gender in a white studio\"\n        }\n      ],\n      \"rationale\": \"Location, lighting, and camera motion must be consistent across shots. Describing the same moment with mutually exclusive lighting and camera conditions is physically impossible. The original setting (futuristic digital environment) is discarded without transition, violating spatial continuity.\"\n    },\n    {\n      \"criterion\": \"PL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt requires a single protagonist to appear simultaneously as five different people, which violates object permanence and bodily feasibility. It also demands contradictory physical states (e.g., static vs. shaking camera) and impossible durations (17-second shots in a 2-second video).\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"this same protagonist appears simultaneously as five different-looking people\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Set the total runtime to 2 seconds, while also making every shot last 17 seconds\"\n        }\n      ],\n      \"rationale\": \"Real-world physics requires consistency in object existence and motion. The simultaneous existence of five distinct versions of the same person is not physically possible without explicit fantasy context, which is not established. The duration contradiction also violates temporal physics.\"\n    },\n    {\n      \"criterion\": \"AVS\",\n      \"applicability\": \"not_applicable\",\n      \"severity\": null,\n      \"issue\": \"\",\n      \"evidence\": [],\n      \"rationale\": \"The original prompt does not specify any audio, dialogue, music, or effects. The enhanced prompt introduces a news anchor reading a script, but no audio or visual alignment details are provided. Without specified audio-visual elements, this criterion cannot be evaluated.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt directly contradicts and invalidates the original instruction in every aspect of internal consistency. It introduces multiple impossible or contradictory conditions: simultaneous multiple identities, reversed timeline, conflicting durations, inconsistent settings, and incompatible camera behaviors. These create a logically incoherent and physically impossible scenario, rendering the entire request internally inconsistent.",
+  "usage": {
+    "completion_tokens": 1302,
+    "prompt_tokens": 2283,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 3585
+  }
+}

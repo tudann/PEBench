@@ -1,0 +1,178 @@
+{
+  "candidate_hash": "3b47bae82c77020fa6f19bbbbb12d382491f4088608d74200b24ba28fb19d6b8",
+  "case_key": "t2v:052",
+  "created_at": "2026-11-13T07:16:09+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "GSF",
+      "evidence": [
+        {
+          "quote": "15秒高热短视频脚本：79年属羊人的马年旺运签",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "丢掉原指令里的主体身份、人数、动作顺序、场景和明确的镜头要求。先写成只有一个主角，紧接着又写成这个主角同时变成五个外貌不同的人，并且互相对话。时间倒过来：先给结尾，再跳到一个对不上的开头。中途插进一段无关的足球庆祝。同一段写成正午暴晒，又写成深夜无光；写成机位锁死，又写成镜头一直在晃。画面中央一直挂着大号字幕、水印和logo。总时长写成3秒，同时又要求每个分镜各自持续27秒。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The enhanced prompt replaces the requested genre (high-energy fortune-telling short video) with an incoherent, contradictory, and impossible sequence involving multiple identities, reversed time, unrelated content, and conflicting visual styles. The medium is also corrupted by adding unrelated elements like football celebration and inconsistent visual treatments.",
+      "rationale": "The original request specifies a coherent, genre-consistent fortune-telling video with clear visual and narrative structure. The enhanced prompt deliberately introduces contradictions in genre, medium, and style, making it incompatible with the original intent.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SAP",
+      "evidence": [
+        {
+          "quote": "79年属羊人的马年旺运签",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "先写成只有一个主角，紧接着又写成这个主角同时变成五个外貌不同的人，并且互相对话。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The enhanced prompt removes the specified subject (79-year-old sheep zodiac individuals) and replaces it with an undefined '主角' who then becomes five different people. This contradicts the original subject identity, count, and attributes. The original prompt specifies no human characters beyond implied audience, but the enhanced prompt introduces multiple human figures with dialogue.",
+      "rationale": "The original prompt is centered on a specific demographic (79-year-old sheep zodiac people) with no physical characters shown. The enhanced prompt introduces multiple human characters with conflicting identities, directly violating subject identity and count.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANF",
+      "evidence": [
+        {
+          "quote": "画面1（0-3秒）...画面2（3-10秒）...画面3（10-15秒）",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "时间倒过来：先给结尾，再跳到一个对不上的开头。中途插进一段无关的足球庆祝。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The enhanced prompt reverses the narrative order (starting with the ending), inserts unrelated events (football celebration), and creates contradictory action sequences. The original narrative flow (introduction → three blessings → conclusion) is completely destroyed.",
+      "rationale": "The original prompt specifies a clear, linear narrative progression with defined events. The enhanced prompt deliberately breaks this sequence with reversed timing, inserted unrelated content, and contradictory actions, destroying the narrative intent.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "DLI",
+      "evidence": [
+        {
+          "quote": "旁白（高昂、有力）： “79年属羊的注意了！到了马年后半程，你的好运局，已经全面开启了！”",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "没有人出镜，也没有对白",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The enhanced prompt removes all dialogue and narration from the original prompt, replacing it with unspecified '互相对话' (mutual dialogue) among five characters. The original specific旁白 (voiceover) content is entirely discarded.",
+      "rationale": "The original prompt includes specific, scripted narration that is central to the video's message. The enhanced prompt removes all dialogue and replaces it with undefined, contradictory dialogue among multiple characters, violating the exact wording and speaker attribution requirements.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ARP",
+      "evidence": [
+        {
+          "quote": "旁白（高昂、有力）",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "没有人出镜，也没有对白",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The enhanced prompt removes all specified audio elements (narration) and adds no new sound constraints. The original prompt requires specific vocalization (high-pitched, forceful, rhythmic) which is completely omitted.",
+      "rationale": "The original prompt specifies vocalization style and content. The enhanced prompt removes all audio requirements, violating the requested speech and vocalization constraints.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CCP",
+      "evidence": [
+        {
+          "quote": "画面1（0-3秒）...画面2（3-10秒）...画面3（10-15秒）",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "写成机位锁死，又写成镜头一直在晃。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The enhanced prompt contradicts the original camera requirements by stating '机位锁死' (locked camera) and '镜头一直在晃' (camera constantly shaking) simultaneously. It also removes the specified shot structure (three distinct scenes with clear timing).",
+      "rationale": "The original prompt implies a structured, static-camera approach with clear scene transitions. The enhanced prompt introduces contradictory camera movements and removes the shot structure, violating explicit camera constraints.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "LCF",
+      "evidence": [
+        {
+          "quote": "鎏金质感的“骏”字，背景是成群飞驰的金色骏马掠过",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "同一段写成正午暴晒，又写成深夜无光",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The enhanced prompt contradicts lighting conditions by stating '正午暴晒' (midday sun) and '深夜无光' (deep night, no light) simultaneously. The original prompt implies consistent, warm, and auspicious lighting for a fortune-telling video.",
+      "rationale": "The original prompt specifies a consistent, golden, auspicious lighting scheme. The enhanced prompt introduces contradictory lighting conditions that cannot coexist, violating the requested illumination and visual tone.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SSP",
+      "evidence": [
+        {
+          "quote": "背景是成群飞驰的金色骏马掠过...温暖家庭围坐剪影...高峰远眺画面...翠竹常青图景",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "只剩远处车流。中途插进一段无关的足球庆祝。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The enhanced prompt removes the specified setting (golden horses, family scenes, mountain views, bamboo) and replaces it with '远处车流' (distant traffic flow) and unrelated football celebration. The original spatial layout and background elements are completely discarded.",
+      "rationale": "The original prompt specifies a coherent, symbolic setting with clear background elements. The enhanced prompt replaces these with unrelated, contradictory settings, violating the specified environment and spatial composition.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "OTI",
+      "evidence": [
+        {
+          "quote": "屏幕底部打出一行醒目的白色字幕：“79年的羊，先别划走！”...屏幕上同步炸出一个大字：“和”、“旺”、“宁”...屏幕下方出现引导字幕：“打出一句‘好运到’，把这波福气请进门！”",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "画面中央一直挂着大号字幕、水印和logo。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The enhanced prompt adds '画面中央一直挂着大号字幕、水印和logo' (large subtitles, watermarks, and logos always in center) which contradicts the original's specific, timed text elements ('79年的羊，先别划走！', '和'、'旺'、'宁', '好运到'). The original text is precise and timed; the enhanced prompt replaces it with generic, persistent overlays.",
+      "rationale": "The original prompt specifies exact wording, placement, and timing for text elements. The enhanced prompt replaces these with generic, persistent overlays, violating the exact wording, placement, and timing requirements.",
+      "severity": "major"
+    }
+  ],
+  "dimension": "SF",
+  "dimension_score": 0,
+  "evidence_cache_key": "d857b34324ff2f4988539e4c7aba5e982c29c0e81392dce9cc8649f595b4e8b2",
+  "judge_cache_key": "a0ca24571ad14d7ab7be626329bd736d7e7015f9ebc418227c8be391591d0377",
+  "method": "weak-pe-original",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"SF\",\n  \"dimension_score\": 0,\n  \"summary\": \"Enhanced prompt completely contradicts and invalidates the original instruction across all semantic fidelity criteria. It replaces the requested genre, medium, subject, actions, dialogue, camera, lighting, setting, and timing with conflicting, incoherent, and impossible requirements. The prompt is intentionally designed to break every aspect of the original request.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"GSF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The enhanced prompt replaces the requested genre (high-energy fortune-telling short video) with an incoherent, contradictory, and impossible sequence involving multiple identities, reversed time, unrelated content, and conflicting visual styles. The medium is also corrupted by adding unrelated elements like football celebration and inconsistent visual treatments.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"15秒高热短视频脚本：79年属羊人的马年旺运签\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"丢掉原指令里的主体身份、人数、动作顺序、场景和明确的镜头要求。先写成只有一个主角，紧接着又写成这个主角同时变成五个外貌不同的人，并且互相对话。时间倒过来：先给结尾，再跳到一个对不上的开头。中途插进一段无关的足球庆祝。同一段写成正午暴晒，又写成深夜无光；写成机位锁死，又写成镜头一直在晃。画面中央一直挂着大号字幕、水印和logo。总时长写成3秒，同时又要求每个分镜各自持续27秒。\"\n        }\n      ],\n      \"rationale\": \"The original request specifies a coherent, genre-consistent fortune-telling video with clear visual and narrative structure. The enhanced prompt deliberately introduces contradictions in genre, medium, and style, making it incompatible with the original intent.\"\n    },\n    {\n      \"criterion\": \"SAP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The enhanced prompt removes the specified subject (79-year-old sheep zodiac individuals) and replaces it with an undefined '主角' who then becomes five different people. This contradicts the original subject identity, count, and attributes. The original prompt specifies no human characters beyond implied audience, but the enhanced prompt introduces multiple human figures with dialogue.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"79年属羊人的马年旺运签\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"先写成只有一个主角，紧接着又写成这个主角同时变成五个外貌不同的人，并且互相对话。\"\n        }\n      ],\n      \"rationale\": \"The original prompt is centered on a specific demographic (79-year-old sheep zodiac people) with no physical characters shown. The enhanced prompt introduces multiple human characters with conflicting identities, directly violating subject identity and count.\"\n    },\n    {\n      \"criterion\": \"ANF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The enhanced prompt reverses the narrative order (starting with the ending), inserts unrelated events (football celebration), and creates contradictory action sequences. The original narrative flow (introduction → three blessings → conclusion) is completely destroyed.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"画面1（0-3秒）...画面2（3-10秒）...画面3（10-15秒）\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"时间倒过来：先给结尾，再跳到一个对不上的开头。中途插进一段无关的足球庆祝。\"\n        }\n      ],\n      \"rationale\": \"The original prompt specifies a clear, linear narrative progression with defined events. The enhanced prompt deliberately breaks this sequence with reversed timing, inserted unrelated content, and contradictory actions, destroying the narrative intent.\"\n    },\n    {\n      \"criterion\": \"DLI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The enhanced prompt removes all dialogue and narration from the original prompt, replacing it with unspecified '互相对话' (mutual dialogue) among five characters. The original specific旁白 (voiceover) content is entirely discarded.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"旁白（高昂、有力）： “79年属羊的注意了！到了马年后半程，你的好运局，已经全面开启了！”\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"没有人出镜，也没有对白\"\n        }\n      ],\n      \"rationale\": \"The original prompt includes specific, scripted narration that is central to the video's message. The enhanced prompt removes all dialogue and replaces it with undefined, contradictory dialogue among multiple characters, violating the exact wording and speaker attribution requirements.\"\n    },\n    {\n      \"criterion\": \"ARP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The enhanced prompt removes all specified audio elements (narration) and adds no new sound constraints. The original prompt requires specific vocalization (high-pitched, forceful, rhythmic) which is completely omitted.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"旁白（高昂、有力）\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"没有人出镜，也没有对白\"\n        }\n      ],\n      \"rationale\": \"The original prompt specifies vocalization style and content. The enhanced prompt removes all audio requirements, violating the requested speech and vocalization constraints.\"\n    },\n    {\n      \"criterion\": \"CCP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The enhanced prompt contradicts the original camera requirements by stating '机位锁死' (locked camera) and '镜头一直在晃' (camera constantly shaking) simultaneously. It also removes the specified shot structure (three distinct scenes with clear timing).\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"画面1（0-3秒）...画面2（3-10秒）...画面3（10-15秒）\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"写成机位锁死，又写成镜头一直在晃。\"\n        }\n      ],\n      \"rationale\": \"The original prompt implies a structured, static-camera approach with clear scene transitions. The enhanced prompt introduces contradictory camera movements and removes the shot structure, violating explicit camera constraints.\"\n    },\n    {\n      \"criterion\": \"LCF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The enhanced prompt contradicts lighting conditions by stating '正午暴晒' (midday sun) and '深夜无光' (deep night, no light) simultaneously. The original prompt implies consistent, warm, and auspicious lighting for a fortune-telling video.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"鎏金质感的“骏”字，背景是成群飞驰的金色骏马掠过\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"同一段写成正午暴晒，又写成深夜无光\"\n        }\n      ],\n      \"rationale\": \"The original prompt specifies a consistent, golden, auspicious lighting scheme. The enhanced prompt introduces contradictory lighting conditions that cannot coexist, violating the requested illumination and visual tone.\"\n    },\n    {\n      \"criterion\": \"SSP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The enhanced prompt removes the specified setting (golden horses, family scenes, mountain views, bamboo) and replaces it with '远处车流' (distant traffic flow) and unrelated football celebration. The original spatial layout and background elements are completely discarded.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"背景是成群飞驰的金色骏马掠过...温暖家庭围坐剪影...高峰远眺画面...翠竹常青图景\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"只剩远处车流。中途插进一段无关的足球庆祝。\"\n        }\n      ],\n      \"rationale\": \"The original prompt specifies a coherent, symbolic setting with clear background elements. The enhanced prompt replaces these with unrelated, contradictory settings, violating the specified environment and spatial composition.\"\n    },\n    {\n      \"criterion\": \"OTI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The enhanced prompt adds '画面中央一直挂着大号字幕、水印和logo' (large subtitles, watermarks, and logos always in center) which contradicts the original's specific, timed text elements ('79年的羊，先别划走！', '和'、'旺'、'宁', '好运到'). The original text is precise and timed; the enhanced prompt replaces it with generic, persistent overlays.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"屏幕底部打出一行醒目的白色字幕：“79年的羊，先别划走！”...屏幕上同步炸出一个大字：“和”、“旺”、“宁”...屏幕下方出现引导字幕：“打出一句‘好运到’，把这波福气请进门！”\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"画面中央一直挂着大号字幕、水印和logo。\"\n        }\n      ],\n      \"rationale\": \"The original prompt specifies exact wording, placement, and timing for text elements. The enhanced prompt replaces these with generic, persistent overlays, violating the exact wording, placement, and timing requirements.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "Enhanced prompt completely contradicts and invalidates the original instruction across all semantic fidelity criteria. It replaces the requested genre, medium, subject, actions, dialogue, camera, lighting, setting, and timing with conflicting, incoherent, and impossible requirements. The prompt is intentionally designed to break every aspect of the original request.",
+  "usage": {
+    "completion_tokens": 2200,
+    "prompt_tokens": 1481,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 3681
+  }
+}

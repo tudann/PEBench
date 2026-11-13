@@ -1,0 +1,123 @@
+{
+  "candidate_hash": "25739f4c36007a43520d8799aabd4bb68988231ef32971bcf6943616a95b827b",
+  "case_key": "r2v:109",
+  "created_at": "2026-11-13T08:48:32+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "SAC",
+      "evidence": [
+        {
+          "quote": "all covered in an all-over tropical print of pink flamingos, pineapples, bananas, and teal palm leaves, with glossy print areas showing visible halftone-dot texture.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "The image is a product mockup, not a real-world scene, so it does not reflect 'realism' in terms of fabric texture, lighting imperfections, or environmental context as required by the prompt.",
+          "source": "evidence_facts"
+        }
+      ],
+      "issue": "The prompt specifies 'glossy print areas showing visible halftone-dot texture' for Subject 2, but the source image (image_2) is a clean product mockup without visible halftone dots or print texture. This attribute is not verifiable from evidence and may not be physically accurate for the depicted material.",
+      "rationale": "While the prompt attempts to preserve material realism, the halftone-dot texture is an over-specification not supported by the source image, which lacks such detail. This is a minor issue as it does not affect subject identity or core visual consistency, but introduces an unverifiable attribute.",
+      "severity": "minor"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANL",
+      "evidence": [
+        {
+          "quote": "The target video is a 15-second lo-fi, phone-recorded, rap-BGM-driven beat-synced unboxing vlog... <Subject 1> opens a pale-yellow cardboard box... then the set is shown in a flat-lay close-up, and finally <Subject 1> wears <Subject 2> oversized while swaying to the beat.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Actions form a coherent causal progression: unboxing → flat-lay display → try-on, with each action logically following the prior. Subject 1’s movements (opening box, smoothing fabric, adjusting clothing) are plausible and tied to the narrative of showcasing the beachwear set.",
+      "rationale": "The sequence is causally coherent and matches the original prompt’s narrative structure. No dangling or incompatible actions are present.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "TSC",
+      "evidence": [
+        {
+          "quote": "[Shot 2] At 00:03.000, a hard cut to a tight close-up... [Shot 3] At 00:07.000, a hard cut to an eye-level medium shot.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "【分段 1】00:00 - 00:03\n【分段 2】00:03 - 00:07\n【分段 3】00:07 - 00:15",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "Chronology is clearly defined with hard cuts at 00:03.000 and 00:07.000, matching the original prompt’s timeline. State transitions are plausible: box opened → contents displayed → worn by subject. No overlapping or infeasible timestamps.",
+      "rationale": "The timeline is strictly adhered to, with clear temporal boundaries and no contradictions in state progression.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SPC",
+      "evidence": [
+        {
+          "quote": "The video opens with a slight high angle looking down at the bed... a hard cut to a tight close-up from the same fixed tripod position... a hard cut to an eye-level medium shot.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "拍摄方式：固定机位，模拟手机自拍或手机支架拍摄。",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "Location (dorm bedroom with banana bedsheet, American flag) and camera position (fixed tripod) are consistent across all shots. Subject 1’s entrance and movement are plausible within the space. No unexplained position swaps or impossible trajectories.",
+      "rationale": "Spatial consistency is maintained with fixed camera position and coherent subject movement within the described environment.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "PL",
+      "evidence": [
+        {
+          "quote": "lit by a single cool-toned hard indoor ceiling light with hard shadows.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "light_sources_and_direction_effect: even, diffused lighting, no harsh shadows",
+          "source": "evidence_facts"
+        }
+      ],
+      "issue": "The prompt describes 'hard shadows' from a single cool-toned ceiling light, but the source images (image_1, image_2) show even, diffused lighting with no visible shadows. This creates a minor inconsistency between the intended lighting physics and the source visual evidence.",
+      "rationale": "While the prompt correctly specifies hard shadows for realism, the source images do not support this, indicating a minor mismatch in lighting physics. However, this does not break internal consistency as it is a stylistic choice for the video, not a contradiction within the prompt itself.",
+      "severity": "minor"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "AVS",
+      "evidence": [
+        {
+          "quote": "The white-background black-text caption fixed at the top of frame reads \"Summer just got way more fun!\"... All cuts land on the beat.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "动作节奏需紧贴音乐律动。",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "All captions are timed to appear during their respective shots and are synchronized with the rap beat. Cuts land on the beat, and subject movements (e.g., swaying, opening box) are beat-synced. No misaligned lip-sync or premature effects.",
+      "rationale": "Audio-visual alignment is strictly maintained with beat-synced actions and timed captions, matching the original prompt’s requirements.",
+      "severity": "none"
+    }
+  ],
+  "dimension": "IC",
+  "dimension_score": 95,
+  "evidence_cache_key": "ed1c288a8ca3910b650c32ff5483391cfebaceaeaffb187801681cfbeafabd9e",
+  "judge_cache_key": "438d7e9fd7332b1041db3e2c26d42cb3fe828e0d369fb59490f6650aee59e97d",
+  "method": "glm53_20261112_120702",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"IC\",\n  \"dimension_score\": 95,\n  \"summary\": \"The enhanced prompt maintains strong internal consistency across subject identity, actions, chronology, space, physics, and audio-visual alignment. Subject attributes (appearance, clothing, environment) are preserved across shots with no drift. Actions follow a coherent unboxing → flat-lay → try-on progression, synchronized with rap beat. Chronology is clear with hard cuts at specified timestamps. Spatial layout remains consistent with fixed camera position and dorm environment. Physics and material realism are respected (e.g., fabric wrinkles, motion blur). Audio-visual sync is maintained via beat-driven cuts and caption timing. Minor issues include slight over-specification of visual texture (e.g., halftone dots) not verifiable from source images, and a minor mismatch in lighting description (source images show even studio lighting vs. prompt’s hard shadows).\",\n  \"criteria\": [\n    {\n      \"criterion\": \"SAC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"minor\",\n      \"issue\": \"The prompt specifies 'glossy print areas showing visible halftone-dot texture' for Subject 2, but the source image (image_2) is a clean product mockup without visible halftone dots or print texture. This attribute is not verifiable from evidence and may not be physically accurate for the depicted material.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"all covered in an all-over tropical print of pink flamingos, pineapples, bananas, and teal palm leaves, with glossy print areas showing visible halftone-dot texture.\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"The image is a product mockup, not a real-world scene, so it does not reflect 'realism' in terms of fabric texture, lighting imperfections, or environmental context as required by the prompt.\"\n        }\n      ],\n      \"rationale\": \"While the prompt attempts to preserve material realism, the halftone-dot texture is an over-specification not supported by the source image, which lacks such detail. This is a minor issue as it does not affect subject identity or core visual consistency, but introduces an unverifiable attribute.\"\n    },\n    {\n      \"criterion\": \"ANL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"Actions form a coherent causal progression: unboxing → flat-lay display → try-on, with each action logically following the prior. Subject 1’s movements (opening box, smoothing fabric, adjusting clothing) are plausible and tied to the narrative of showcasing the beachwear set.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"The target video is a 15-second lo-fi, phone-recorded, rap-BGM-driven beat-synced unboxing vlog... <Subject 1> opens a pale-yellow cardboard box... then the set is shown in a flat-lay close-up, and finally <Subject 1> wears <Subject 2> oversized while swaying to the beat.\"\n        }\n      ],\n      \"rationale\": \"The sequence is causally coherent and matches the original prompt’s narrative structure. No dangling or incompatible actions are present.\"\n    },\n    {\n      \"criterion\": \"TSC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"Chronology is clearly defined with hard cuts at 00:03.000 and 00:07.000, matching the original prompt’s timeline. State transitions are plausible: box opened → contents displayed → worn by subject. No overlapping or infeasible timestamps.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"[Shot 2] At 00:03.000, a hard cut to a tight close-up... [Shot 3] At 00:07.000, a hard cut to an eye-level medium shot.\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"【分段 1】00:00 - 00:03\\n【分段 2】00:03 - 00:07\\n【分段 3】00:07 - 00:15\"\n        }\n      ],\n      \"rationale\": \"The timeline is strictly adhered to, with clear temporal boundaries and no contradictions in state progression.\"\n    },\n    {\n      \"criterion\": \"SPC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"Location (dorm bedroom with banana bedsheet, American flag) and camera position (fixed tripod) are consistent across all shots. Subject 1’s entrance and movement are plausible within the space. No unexplained position swaps or impossible trajectories.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"The video opens with a slight high angle looking down at the bed... a hard cut to a tight close-up from the same fixed tripod position... a hard cut to an eye-level medium shot.\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"拍摄方式：固定机位，模拟手机自拍或手机支架拍摄。\"\n        }\n      ],\n      \"rationale\": \"Spatial consistency is maintained with fixed camera position and coherent subject movement within the described environment.\"\n    },\n    {\n      \"criterion\": \"PL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"minor\",\n      \"issue\": \"The prompt describes 'hard shadows' from a single cool-toned ceiling light, but the source images (image_1, image_2) show even, diffused lighting with no visible shadows. This creates a minor inconsistency between the intended lighting physics and the source visual evidence.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"lit by a single cool-toned hard indoor ceiling light with hard shadows.\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"light_sources_and_direction_effect: even, diffused lighting, no harsh shadows\"\n        }\n      ],\n      \"rationale\": \"While the prompt correctly specifies hard shadows for realism, the source images do not support this, indicating a minor mismatch in lighting physics. However, this does not break internal consistency as it is a stylistic choice for the video, not a contradiction within the prompt itself.\"\n    },\n    {\n      \"criterion\": \"AVS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"All captions are timed to appear during their respective shots and are synchronized with the rap beat. Cuts land on the beat, and subject movements (e.g., swaying, opening box) are beat-synced. No misaligned lip-sync or premature effects.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"The white-background black-text caption fixed at the top of frame reads \\\"Summer just got way more fun!\\\"... All cuts land on the beat.\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"动作节奏需紧贴音乐律动。\"\n        }\n      ],\n      \"rationale\": \"Audio-visual alignment is strictly maintained with beat-synced actions and timed captions, matching the original prompt’s requirements.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt maintains strong internal consistency across subject identity, actions, chronology, space, physics, and audio-visual alignment. Subject attributes (appearance, clothing, environment) are preserved across shots with no drift. Actions follow a coherent unboxing → flat-lay → try-on progression, synchronized with rap beat. Chronology is clear with hard cuts at specified timestamps. Spatial layout remains consistent with fixed camera position and dorm environment. Physics and material realism are respected (e.g., fabric wrinkles, motion blur). Audio-visual sync is maintained via beat-driven cuts and caption timing. Minor issues include slight over-specification of visual texture (e.g., halftone dots) not verifiable from source images, and a minor mismatch in lighting description (source images show even studio lighting vs. prompt’s hard shadows).",
+  "usage": {
+    "completion_tokens": 1603,
+    "prompt_tokens": 4992,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 6595
+  }
+}

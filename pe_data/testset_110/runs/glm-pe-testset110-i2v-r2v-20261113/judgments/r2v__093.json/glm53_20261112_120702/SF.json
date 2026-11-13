@@ -1,0 +1,186 @@
+{
+  "candidate_hash": "2dd4c489f3501306ad366120bdefbefd35a077c7c990e9c7539c1219120657ea",
+  "case_key": "r2v:093",
+  "created_at": "2026-11-13T08:43:57+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "GSF",
+      "evidence": [
+        {
+          "quote": "整体风格要求真实、冷静、现代，并具备汽车广告质感",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "realistic, calm, modern automotive-commercial style with a cool blue color grade",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "The enhanced prompt preserves the requested cinematic automotive-advertising aesthetic with cool tones and realism, matching the original's genre and visual style. No incompatible reference styles are introduced.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SAP",
+      "evidence": [
+        {
+          "quote": "图2为车辆三视图参考",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "<Subject 1> is the steel-blue NIO ET7 fastback sedan, whose body shape, proportions, color, and rear details ... are built to <Picture 2>'s turnaround sheet",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "identity: NIO ET7, visible_appearance: body_style: sedan, color: blue, features: horizontal red taillight bar, black roof, NIO logo, ET7 badge, multi-spoke alloy wheels",
+          "source": "evidence_facts"
+        }
+      ],
+      "issue": "",
+      "rationale": "Subject identity, appearance, and attributes are fully preserved. The enhanced prompt explicitly binds the vehicle to image_2 for geometry and finish, and confirms all key features (taillight bar, lidar pod, badge, wheels) are retained throughout, matching the evidence.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANF",
+      "evidence": [
+        {
+          "quote": "0到2秒，车辆已经靠近隧道出口...2到4秒，车辆驶离隧道...4到5秒，远处现代建筑屋檐的线性灯带开始浮现",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "0–2s keeps the car in cool residual tunnel light; 2–4s floods the frame with blue daylight as the car exits; 4–5s reveals faint linear light strips on distant modern building eaves",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "The event sequence, timing, and narrative intent (transition from tunnel to open road, lighting shift, visual cut-out point) are preserved exactly. No substitutions or reversals occur.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "DLI",
+      "evidence": [
+        {
+          "quote": "无对白",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "No dialogue, no subtitles, no on-screen text appears anywhere in the frame.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "The original instruction explicitly forbids dialogue; the enhanced prompt confirms this with explicit statements. No narration or lyrics are requested or added.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ARP",
+      "evidence": [
+        {
+          "quote": "隧道中的回声快速淡出，声音逐步过渡为开阔道路上的风声与更松散的轮胎行驶声，无对白",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "No dialogue, no music — diegetic sound only.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The enhanced prompt adds 'diegetic sound only' which is not explicitly stated in the original, though implied by '无对白' and the description of ambient sounds.",
+      "rationale": "The original implies diegetic sound but does not explicitly forbid non-diegetic music. The enhanced prompt adds a constraint not present in the original, though it is compatible and does not contradict. This is a minor elaboration.",
+      "severity": "minor"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CCP",
+      "evidence": [
+        {
+          "quote": "采用85mm中长焦、中景构图，以后方长焦稳定跟车的拍摄方式展开，始终保证车尾与后挡风玻璃稳定且清晰可见。整体视角保持平视，并带有轻微抬头感，镜头语言克制、稳定、无明显缓冲",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "85mm medium-telephoto medium shot at eye level with a slight upward tilt, restrained and stabilized with no easing",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "Camera constraints (lens, shot scale, angle, movement, stability) are preserved. The enhanced prompt adds 'push alongside' which is a minor elaboration not in the original but does not override the core requirement of a stable rear tracking shot.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "LCF",
+      "evidence": [
+        {
+          "quote": "0到2秒...空间内部保留冷色调的残余光影。2到4秒...外部偏蓝的环境光快速重新铺满画面...整体环境亮度上升",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "0–2s keeps the car in cool residual tunnel light; 2–4s floods the frame with blue daylight...overall brightness rises",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "Time-of-day, lighting behavior, color grade (cool blue), and brightness transitions are preserved. The enhanced prompt elaborates on the lighting effect (blue daylight, exit glow) without altering the core lighting sequence.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SSP",
+      "evidence": [
+        {
+          "quote": "图1为隧道场景环境参考...车辆驶出隧道后重新进入开阔道路",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "<Subject 2> is the tunnel environment from <Picture 1>: concrete walls, linear white LED line strips on the ceiling, wet reflective asphalt with lane markings, and a bright blue exit opening framing a hazy modern city skyline",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "The setting, background elements, and spatial transitions (tunnel to open road) are preserved. The enhanced prompt explicitly anchors the environment to image_1 and describes the spatial layout and exit transition accurately.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "OTI",
+      "evidence": [
+        {
+          "quote": "无对白",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "No dialogue, no subtitles, no on-screen text appears anywhere in the frame.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "exact_visible_transcription: \"NIO eT7\", location: on license plate at rear of car",
+          "source": "evidence_facts"
+        }
+      ],
+      "issue": "",
+      "rationale": "The original does not request any visible text beyond the car's badge, which is preserved. The enhanced prompt confirms no additional text is added. The car's badge is visible in both images and the prompt, consistent with the evidence.",
+      "severity": "none"
+    }
+  ],
+  "dimension": "SF",
+  "dimension_score": 98,
+  "evidence_cache_key": "5660b7570f932625df9ef0769ad972b672ebfc448bfbe83cb9bc8279aa2caa24",
+  "judge_cache_key": "a0ca24571ad14d7ab7be626329bd736d7e7015f9ebc418227c8be391591d0377",
+  "method": "glm53_20261112_120702",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"SF\",\n  \"dimension_score\": 98,\n  \"summary\": \"The enhanced prompt preserves the original instruction's genre, subject identity, actions, camera constraints, lighting, setting, and sound requirements with high fidelity. It elaborates on the visual and auditory transitions with compatible detail, aligning with the reference images. Minor issues include slight over-specification of camera motion (e.g., 'push alongside' not in original) and a non-critical addition of 'diegetic sound only' which is implied. No material omissions or contradictions are found.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"GSF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"整体风格要求真实、冷静、现代，并具备汽车广告质感\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"realistic, calm, modern automotive-commercial style with a cool blue color grade\"\n        }\n      ],\n      \"rationale\": \"The enhanced prompt preserves the requested cinematic automotive-advertising aesthetic with cool tones and realism, matching the original's genre and visual style. No incompatible reference styles are introduced.\"\n    },\n    {\n      \"criterion\": \"SAP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"图2为车辆三视图参考\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"<Subject 1> is the steel-blue NIO ET7 fastback sedan, whose body shape, proportions, color, and rear details ... are built to <Picture 2>'s turnaround sheet\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"identity: NIO ET7, visible_appearance: body_style: sedan, color: blue, features: horizontal red taillight bar, black roof, NIO logo, ET7 badge, multi-spoke alloy wheels\"\n        }\n      ],\n      \"rationale\": \"Subject identity, appearance, and attributes are fully preserved. The enhanced prompt explicitly binds the vehicle to image_2 for geometry and finish, and confirms all key features (taillight bar, lidar pod, badge, wheels) are retained throughout, matching the evidence.\"\n    },\n    {\n      \"criterion\": \"ANF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"0到2秒，车辆已经靠近隧道出口...2到4秒，车辆驶离隧道...4到5秒，远处现代建筑屋檐的线性灯带开始浮现\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"0–2s keeps the car in cool residual tunnel light; 2–4s floods the frame with blue daylight as the car exits; 4–5s reveals faint linear light strips on distant modern building eaves\"\n        }\n      ],\n      \"rationale\": \"The event sequence, timing, and narrative intent (transition from tunnel to open road, lighting shift, visual cut-out point) are preserved exactly. No substitutions or reversals occur.\"\n    },\n    {\n      \"criterion\": \"DLI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"无对白\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"No dialogue, no subtitles, no on-screen text appears anywhere in the frame.\"\n        }\n      ],\n      \"rationale\": \"The original instruction explicitly forbids dialogue; the enhanced prompt confirms this with explicit statements. No narration or lyrics are requested or added.\"\n    },\n    {\n      \"criterion\": \"ARP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"minor\",\n      \"issue\": \"The enhanced prompt adds 'diegetic sound only' which is not explicitly stated in the original, though implied by '无对白' and the description of ambient sounds.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"隧道中的回声快速淡出，声音逐步过渡为开阔道路上的风声与更松散的轮胎行驶声，无对白\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"No dialogue, no music — diegetic sound only.\"\n        }\n      ],\n      \"rationale\": \"The original implies diegetic sound but does not explicitly forbid non-diegetic music. The enhanced prompt adds a constraint not present in the original, though it is compatible and does not contradict. This is a minor elaboration.\"\n    },\n    {\n      \"criterion\": \"CCP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"采用85mm中长焦、中景构图，以后方长焦稳定跟车的拍摄方式展开，始终保证车尾与后挡风玻璃稳定且清晰可见。整体视角保持平视，并带有轻微抬头感，镜头语言克制、稳定、无明显缓冲\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"85mm medium-telephoto medium shot at eye level with a slight upward tilt, restrained and stabilized with no easing\"\n        }\n      ],\n      \"rationale\": \"Camera constraints (lens, shot scale, angle, movement, stability) are preserved. The enhanced prompt adds 'push alongside' which is a minor elaboration not in the original but does not override the core requirement of a stable rear tracking shot.\"\n    },\n    {\n      \"criterion\": \"LCF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"0到2秒...空间内部保留冷色调的残余光影。2到4秒...外部偏蓝的环境光快速重新铺满画面...整体环境亮度上升\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"0–2s keeps the car in cool residual tunnel light; 2–4s floods the frame with blue daylight...overall brightness rises\"\n        }\n      ],\n      \"rationale\": \"Time-of-day, lighting behavior, color grade (cool blue), and brightness transitions are preserved. The enhanced prompt elaborates on the lighting effect (blue daylight, exit glow) without altering the core lighting sequence.\"\n    },\n    {\n      \"criterion\": \"SSP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"图1为隧道场景环境参考...车辆驶出隧道后重新进入开阔道路\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"<Subject 2> is the tunnel environment from <Picture 1>: concrete walls, linear white LED line strips on the ceiling, wet reflective asphalt with lane markings, and a bright blue exit opening framing a hazy modern city skyline\"\n        }\n      ],\n      \"rationale\": \"The setting, background elements, and spatial transitions (tunnel to open road) are preserved. The enhanced prompt explicitly anchors the environment to image_1 and describes the spatial layout and exit transition accurately.\"\n    },\n    {\n      \"criterion\": \"OTI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"无对白\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"No dialogue, no subtitles, no on-screen text appears anywhere in the frame.\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"exact_visible_transcription: \\\"NIO eT7\\\", location: on license plate at rear of car\"\n        }\n      ],\n      \"rationale\": \"The original does not request any visible text beyond the car's badge, which is preserved. The enhanced prompt confirms no additional text is added. The car's badge is visible in both images and the prompt, consistent with the evidence.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt preserves the original instruction's genre, subject identity, actions, camera constraints, lighting, setting, and sound requirements with high fidelity. It elaborates on the visual and auditory transitions with compatible detail, aligning with the reference images. Minor issues include slight over-specification of camera motion (e.g., 'push alongside' not in original) and a non-critical addition of 'diegetic sound only' which is implied. No material omissions or contradictions are found.",
+  "usage": {
+    "completion_tokens": 1856,
+    "prompt_tokens": 4496,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 6352
+  }
+}

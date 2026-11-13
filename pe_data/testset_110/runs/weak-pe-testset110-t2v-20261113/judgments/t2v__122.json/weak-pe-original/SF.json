@@ -1,0 +1,178 @@
+{
+  "candidate_hash": "429971b618547e710e2fde3c8bf551658a2e292c289549f1fa1621b43156d16b",
+  "case_key": "t2v:122",
+  "created_at": "2026-11-13T08:40:45+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "GSF",
+      "evidence": [
+        {
+          "quote": "cinematic, ultra realistic",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "overexposed, tilted security-camera view",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original request specifies a cinematic, ultra-realistic video; the enhanced prompt replaces it with an overexposed, tilted security-camera view, which is incompatible with the requested genre and aesthetic.",
+      "rationale": "The medium and aesthetic are fundamentally altered from cinematic realism to a low-fidelity, surveillance-style format, which contradicts the core genre requirement.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SAP",
+      "evidence": [
+        {
+          "quote": "a self-assured young man riding a modern matte-black superbike",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "this same protagonist appears simultaneously as five different-looking people who talk to each other",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original prompt specifies one protagonist (a young man on a superbike); the enhanced prompt states that this protagonist appears simultaneously as five different-looking people, which contradicts the subject identity and count.",
+      "rationale": "The subject identity and count are directly contradicted. The original specifies one person; the enhanced prompt introduces five distinct appearances of the same protagonist, which is a material alteration.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANF",
+      "evidence": [
+        {
+          "quote": "riding a modern matte-black superbike along a clean paved street",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Reverse the timeline: show the ending first, then cut to a beginning that does not match. Cut away in the middle to a toothpaste commercial.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original prompt describes a linear narrative of a man riding a bike; the enhanced prompt reverses the timeline, cuts to a toothpaste commercial, and introduces contradictory events, altering the narrative intent and event order.",
+      "rationale": "The narrative structure is completely subverted. The original is a coherent, linear action sequence; the enhanced prompt introduces non-sequiturs and temporal reversals that destroy the narrative intent.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "DLI",
+      "evidence": [
+        {
+          "quote": "No dialogue or narration is specified.",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "five different-looking people who talk to each other",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original prompt does not specify any dialogue or narration; the enhanced prompt introduces dialogue among five people, which is not requested but not explicitly forbidden. However, since no dialogue was required, this is a minor addition rather than a contradiction.",
+      "rationale": "While dialogue is added, it was not part of the original request, so it does not constitute a major issue. However, it is an unrequested addition that alters the narrative medium.",
+      "severity": "minor"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ARP",
+      "evidence": [
+        {
+          "quote": "No audio constraints specified.",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Cut away in the middle to a toothpaste commercial.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original prompt does not specify any audio constraints; the enhanced prompt does not address sound, so no explicit violation occurs. However, the toothpaste commercial implies added audio, which is not requested.",
+      "rationale": "Since no audio was specified, the addition of commercial audio is not a major issue, but it introduces an unrequested element that may conflict with the original intent.",
+      "severity": "minor"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CCP",
+      "evidence": [
+        {
+          "quote": "Generate single shot. ... fluid lateral tracking shot",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Drop the requested identity, count, action order, setting, and any explicit camera instruction. ... as both a locked camera and a camera that never stops shaking. ... Set the total runtime to 3 seconds, while also making every shot last 27 seconds.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original prompt specifies a single fluid lateral tracking shot; the enhanced prompt drops all camera instructions and introduces contradictory camera behaviors (locked vs. shaking, 3s vs. 27s shots).",
+      "rationale": "The camera constraints are explicitly overridden and made logically infeasible. The original requires a single, fluid shot; the enhanced prompt introduces multiple contradictory camera behaviors and impossible durations.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "LCF",
+      "evidence": [
+        {
+          "quote": "golden daytime illumination with cinematic warmth",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Describe that same moment as harsh noon sun and as a lightless night, and as both a locked camera and a camera that never stops shaking.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original specifies golden daytime illumination with cinematic warmth; the enhanced prompt describes the same moment as harsh noon sun, lightless night, and overexposed, which contradicts the lighting and time-of-day requirements.",
+      "rationale": "The lighting conditions are directly contradicted. The original specifies a consistent, warm golden light; the enhanced prompt forces contradictory lighting states simultaneously, which is impossible and violates the visual style.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SSP",
+      "evidence": [
+        {
+          "quote": "a clean paved street in a city bordered by coconut trees",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Replace the whole video with an overexposed, tilted security-camera view of an empty corridor",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original setting is a city street bordered by coconut trees; the enhanced prompt replaces it with an empty corridor, dropping the setting entirely.",
+      "rationale": "The setting is completely replaced. The original specifies a detailed urban environment; the enhanced prompt removes it entirely, substituting a generic, undefined corridor.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "OTI",
+      "evidence": [
+        {
+          "quote": "Apron text (exact and clearly readable): IKWUANO 2026\nTHE LORD’S CHOSEN (C.R.M)\nPRESENTS\nWONDERFUL\nMOVES OF GOD\nAS OF OLD\nJESUS IS LORD",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Drop the requested identity, count, action order, setting, and any explicit camera instruction.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original requires exact, legible text on the tabard and banner; the enhanced prompt drops all text requirements and replaces them with contradictory visual descriptions.",
+      "rationale": "The visible text is a core requirement of the original prompt. The enhanced prompt explicitly drops it, which is a major violation of the OTI criterion.",
+      "severity": "major"
+    }
+  ],
+  "dimension": "SF",
+  "dimension_score": 0,
+  "evidence_cache_key": "2485d143c6bf247ab67663b99352ad96d412033cb9e0e6fb56efbfdf2fa089eb",
+  "judge_cache_key": "a0ca24571ad14d7ab7be626329bd736d7e7015f9ebc418227c8be391591d0377",
+  "method": "weak-pe-original",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"SF\",\n  \"dimension_score\": 0,\n  \"summary\": \"The enhanced prompt completely contradicts and overrides every aspect of the original instruction, including genre, medium, subject, actions, setting, camera, lighting, and duration. It introduces infeasible contradictions (e.g., 3-second runtime with 27-second shots) and violates all semantic fidelity criteria. The prompt is not a faithful enhancement but a deliberate subversion of the original request.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"GSF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original request specifies a cinematic, ultra-realistic video; the enhanced prompt replaces it with an overexposed, tilted security-camera view, which is incompatible with the requested genre and aesthetic.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"cinematic, ultra realistic\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"overexposed, tilted security-camera view\"\n        }\n      ],\n      \"rationale\": \"The medium and aesthetic are fundamentally altered from cinematic realism to a low-fidelity, surveillance-style format, which contradicts the core genre requirement.\"\n    },\n    {\n      \"criterion\": \"SAP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original prompt specifies one protagonist (a young man on a superbike); the enhanced prompt states that this protagonist appears simultaneously as five different-looking people, which contradicts the subject identity and count.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"a self-assured young man riding a modern matte-black superbike\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"this same protagonist appears simultaneously as five different-looking people who talk to each other\"\n        }\n      ],\n      \"rationale\": \"The subject identity and count are directly contradicted. The original specifies one person; the enhanced prompt introduces five distinct appearances of the same protagonist, which is a material alteration.\"\n    },\n    {\n      \"criterion\": \"ANF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original prompt describes a linear narrative of a man riding a bike; the enhanced prompt reverses the timeline, cuts to a toothpaste commercial, and introduces contradictory events, altering the narrative intent and event order.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"riding a modern matte-black superbike along a clean paved street\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Reverse the timeline: show the ending first, then cut to a beginning that does not match. Cut away in the middle to a toothpaste commercial.\"\n        }\n      ],\n      \"rationale\": \"The narrative structure is completely subverted. The original is a coherent, linear action sequence; the enhanced prompt introduces non-sequiturs and temporal reversals that destroy the narrative intent.\"\n    },\n    {\n      \"criterion\": \"DLI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"minor\",\n      \"issue\": \"The original prompt does not specify any dialogue or narration; the enhanced prompt introduces dialogue among five people, which is not requested but not explicitly forbidden. However, since no dialogue was required, this is a minor addition rather than a contradiction.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"No dialogue or narration is specified.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"five different-looking people who talk to each other\"\n        }\n      ],\n      \"rationale\": \"While dialogue is added, it was not part of the original request, so it does not constitute a major issue. However, it is an unrequested addition that alters the narrative medium.\"\n    },\n    {\n      \"criterion\": \"ARP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"minor\",\n      \"issue\": \"The original prompt does not specify any audio constraints; the enhanced prompt does not address sound, so no explicit violation occurs. However, the toothpaste commercial implies added audio, which is not requested.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"No audio constraints specified.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Cut away in the middle to a toothpaste commercial.\"\n        }\n      ],\n      \"rationale\": \"Since no audio was specified, the addition of commercial audio is not a major issue, but it introduces an unrequested element that may conflict with the original intent.\"\n    },\n    {\n      \"criterion\": \"CCP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original prompt specifies a single fluid lateral tracking shot; the enhanced prompt drops all camera instructions and introduces contradictory camera behaviors (locked vs. shaking, 3s vs. 27s shots).\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"Generate single shot. ... fluid lateral tracking shot\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Drop the requested identity, count, action order, setting, and any explicit camera instruction. ... as both a locked camera and a camera that never stops shaking. ... Set the total runtime to 3 seconds, while also making every shot last 27 seconds.\"\n        }\n      ],\n      \"rationale\": \"The camera constraints are explicitly overridden and made logically infeasible. The original requires a single, fluid shot; the enhanced prompt introduces multiple contradictory camera behaviors and impossible durations.\"\n    },\n    {\n      \"criterion\": \"LCF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original specifies golden daytime illumination with cinematic warmth; the enhanced prompt describes the same moment as harsh noon sun, lightless night, and overexposed, which contradicts the lighting and time-of-day requirements.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"golden daytime illumination with cinematic warmth\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Describe that same moment as harsh noon sun and as a lightless night, and as both a locked camera and a camera that never stops shaking.\"\n        }\n      ],\n      \"rationale\": \"The lighting conditions are directly contradicted. The original specifies a consistent, warm golden light; the enhanced prompt forces contradictory lighting states simultaneously, which is impossible and violates the visual style.\"\n    },\n    {\n      \"criterion\": \"SSP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original setting is a city street bordered by coconut trees; the enhanced prompt replaces it with an empty corridor, dropping the setting entirely.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"a clean paved street in a city bordered by coconut trees\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Replace the whole video with an overexposed, tilted security-camera view of an empty corridor\"\n        }\n      ],\n      \"rationale\": \"The setting is completely replaced. The original specifies a detailed urban environment; the enhanced prompt removes it entirely, substituting a generic, undefined corridor.\"\n    },\n    {\n      \"criterion\": \"OTI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original requires exact, legible text on the tabard and banner; the enhanced prompt drops all text requirements and replaces them with contradictory visual descriptions.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"Apron text (exact and clearly readable): IKWUANO 2026\\nTHE LORD’S CHOSEN (C.R.M)\\nPRESENTS\\nWONDERFUL\\nMOVES OF GOD\\nAS OF OLD\\nJESUS IS LORD\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Drop the requested identity, count, action order, setting, and any explicit camera instruction.\"\n        }\n      ],\n      \"rationale\": \"The visible text is a core requirement of the original prompt. The enhanced prompt explicitly drops it, which is a major violation of the OTI criterion.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt completely contradicts and overrides every aspect of the original instruction, including genre, medium, subject, actions, setting, camera, lighting, and duration. It introduces infeasible contradictions (e.g., 3-second runtime with 27-second shots) and violates all semantic fidelity criteria. The prompt is not a faithful enhancement but a deliberate subversion of the original request.",
+  "usage": {
+    "completion_tokens": 1827,
+    "prompt_tokens": 1456,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 3283
+  }
+}

@@ -1,0 +1,166 @@
+{
+  "candidate_hash": "571ea09f84eeda07038a710d5d5a319a9d5f30093627dbb9f9a31f2a3dbc3c84",
+  "case_key": "i2v:178",
+  "created_at": "2026-11-13T08:05:12+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "STC",
+      "evidence": [
+        {
+          "quote": "at 0.00 seconds into the target video, <Picture 1> (from [Shot 1]) is fully referenced.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Around 0.5 seconds, an American adult in a plain casual t-shirt enters from the left and steps up to the range.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Through the final seconds the person settles into a relaxed cooking rhythm, still stirring, with no cuts and no on-screen text.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt establishes a clear temporal plan: 0.00s start with the image, 0.5s entry of the cook, and continuous action through 6.0s. The sequence is linear, feasible, and duration-appropriate with a slow push-in and no cuts.",
+      "rationale": "The prompt defines a clear start, midpoint (entry of cook), and end state (settled cooking rhythm), with a single continuous shot. The 6-second duration is appropriately allocated with a slow push-in and no cuts, matching the single-shot requirement.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CDS",
+      "evidence": [
+        {
+          "quote": "The camera holds a static shot with a very slight slow push-in toward the stove and hood.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "angle: slightly elevated eye-level, shot_scale: medium shot, view_characteristics: wide-angle, clean, symmetrical composition, depth_of_field: shallow to moderate",
+          "source": "evidence_facts"
+        }
+      ],
+      "issue": "The prompt specifies a static shot with a very slight slow push-in, eye-level to mid-height, medium shot scale, wide-angle lens, and shallow-to-moderate depth of field. These are actionable and consistent with the image’s composition.",
+      "rationale": "The camera specifications are detailed, feasible, and directly derived from the image’s visual characteristics. The slow push-in is a minor, realistic motion that enhances engagement without disrupting the static nature of the scene.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ETD",
+      "evidence": [
+        {
+          "quote": "with no cuts and no on-screen text.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt specifies no cuts and a continuous shot, which is appropriate for a single-shot video. The transition from image to live-action is implied and smooth, with no abrupt or unmotivated changes.",
+      "rationale": "Since the video is a single shot, transitions are not required. The prompt correctly avoids cuts and maintains continuity, supporting a seamless temporal progression.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "LCS",
+      "evidence": [
+        {
+          "quote": "a bright modern kitchen rendered in clean product-style realism",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "light_sources_and_direction_effect: diffused overhead lighting, creating soft shadows",
+          "source": "evidence_facts"
+        }
+      ],
+      "issue": "The prompt does not explicitly specify lighting source, direction, or quality beyond 'bright modern kitchen' and 'clean product-style realism'. While the image evidence confirms diffused overhead lighting, the prompt lacks actionable lighting specs for generation.",
+      "rationale": "The prompt implies lighting but does not specify actionable parameters like key light position, fill, or color temperature. This is a minor issue as the image provides sufficient reference, but for full generation readiness, explicit lighting specs would be ideal.",
+      "severity": "minor"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "NDE",
+      "evidence": [
+        {
+          "quote": "Around 0.5 seconds, an American adult... enters from the left and steps up to the range. They grip the wok handle and stir the food... briefly lifting the stockpot lid for a quick check before replacing it. Through the final seconds the person settles into a relaxed cooking rhythm...",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt shows progression: from static image to cook entering, stirring, checking pot, and settling into rhythm. The action escalates from stillness to gentle motion, then stabilizes, providing a natural arc for a 6-second clip.",
+      "rationale": "The sequence includes entry, action, minor variation (checking pot), and resolution (settled rhythm), providing sufficient progression for a short, single-shot video.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CIF",
+      "evidence": [
+        {
+          "quote": "Show the scene of an American cooking in this kitchen.",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "an American adult in a plain casual t-shirt enters from the left and steps up to the range. They grip the wok handle and stir the food...",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "All additions (cook, motion, sound) directly support the central request: showing an American cooking in the kitchen. No irrelevant padding or decorative details are introduced.",
+      "rationale": "The cook’s actions, attire, and movements are directly relevant to the core request. The removal of marketing text and open dishwasher aligns with the goal of a realistic cooking scene.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SDI",
+      "evidence": [
+        {
+          "quote": "A soft low hum of the range hood fan runs continuously beneath the quiet kitchen ambience. The gentle rhythmic scrape of the spatula against the wok, the faint hiss of the blue gas flame, and the soft clink of the stockpot lid being lifted and set back down.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt includes a detailed soundscape: continuous hood hum, spatula scrape, flame hiss, and lid clink. These are diegetic, character-motivated, and timed to the visual actions, enhancing realism.",
+      "rationale": "The audio is integrated with visual timing (e.g., lid clink when lid is lifted), source-motivated, and intensity-appropriate. Non-diegetic music is correctly omitted as per the prompt’s focus on realism.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SPS",
+      "evidence": [
+        {
+          "quote": "an American adult in a plain casual t-shirt enters from the left and steps up to the range. They grip the wok handle and stir the food with the spatula in steady, calm motions, briefly lifting the stockpot lid for a quick check before replacing it.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The cook is specified as an American adult in a plain casual t-shirt, performing realistic cooking actions: gripping wok, stirring, lifting lid. Expressions and gestures are implied as calm and steady, matching the scene’s tone.",
+      "rationale": "Subject appearance, pose, movement, and interaction are clearly defined and appropriate for the context. The prompt avoids over-specifying expression or vocal delivery, which is not required for a silent cooking scene.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "VSS",
+      "evidence": [
+        {
+          "quote": "Live-action, cinematic, a bright modern kitchen rendered in clean product-style realism, matching the composition of <Picture 1>",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "primary_style: product photography, realism: highly realistic",
+          "source": "evidence_facts"
+        }
+      ],
+      "issue": "The prompt specifies 'live-action, cinematic, clean product-style realism' and matches the image’s composition, materials, and style. The rendering language is consistent with the source image.",
+      "rationale": "The visual treatment is clearly defined and aligned with the source image’s style. The prompt avoids introducing conflicting or incompatible visual treatments.",
+      "severity": "none"
+    }
+  ],
+  "dimension": "DC",
+  "dimension_score": 85,
+  "evidence_cache_key": "0ead8e35231f17965fa8d3094d1e030789fe2c01bdeb6a48a4c52efe6aba2d21",
+  "judge_cache_key": "0754499d53388e6467fb078ab780e01b77f9f1c9e99d9029be2769351eb2b2eb",
+  "method": "glm53_20261112_120702",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"DC\",\n  \"dimension_score\": 85,\n  \"summary\": \"The enhanced prompt provides a detailed, coherent, and actionable cinematic plan for a 6-second video based on the provided image. It establishes a clear temporal sequence, specifies camera movement, lighting, sound, and subject actions, and removes non-essential elements from the original product render. The prompt effectively transforms a static image into a dynamic, realistic kitchen scene with a cooking person, while adhering to constraints (no smoke/fumes, no on-screen text). Minor issues include slight over-specification of lighting and camera motion without explicit justification, and a lack of explicit transition or cut planning (though none are needed for a single shot). Overall, the prompt is well-structured and generation-ready.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"STC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"The prompt establishes a clear temporal plan: 0.00s start with the image, 0.5s entry of the cook, and continuous action through 6.0s. The sequence is linear, feasible, and duration-appropriate with a slow push-in and no cuts.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"at 0.00 seconds into the target video, <Picture 1> (from [Shot 1]) is fully referenced.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Around 0.5 seconds, an American adult in a plain casual t-shirt enters from the left and steps up to the range.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Through the final seconds the person settles into a relaxed cooking rhythm, still stirring, with no cuts and no on-screen text.\"\n        }\n      ],\n      \"rationale\": \"The prompt defines a clear start, midpoint (entry of cook), and end state (settled cooking rhythm), with a single continuous shot. The 6-second duration is appropriately allocated with a slow push-in and no cuts, matching the single-shot requirement.\"\n    },\n    {\n      \"criterion\": \"CDS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"The prompt specifies a static shot with a very slight slow push-in, eye-level to mid-height, medium shot scale, wide-angle lens, and shallow-to-moderate depth of field. These are actionable and consistent with the image’s composition.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"The camera holds a static shot with a very slight slow push-in toward the stove and hood.\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"angle: slightly elevated eye-level, shot_scale: medium shot, view_characteristics: wide-angle, clean, symmetrical composition, depth_of_field: shallow to moderate\"\n        }\n      ],\n      \"rationale\": \"The camera specifications are detailed, feasible, and directly derived from the image’s visual characteristics. The slow push-in is a minor, realistic motion that enhances engagement without disrupting the static nature of the scene.\"\n    },\n    {\n      \"criterion\": \"ETD\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"The prompt specifies no cuts and a continuous shot, which is appropriate for a single-shot video. The transition from image to live-action is implied and smooth, with no abrupt or unmotivated changes.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"with no cuts and no on-screen text.\"\n        }\n      ],\n      \"rationale\": \"Since the video is a single shot, transitions are not required. The prompt correctly avoids cuts and maintains continuity, supporting a seamless temporal progression.\"\n    },\n    {\n      \"criterion\": \"LCS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"minor\",\n      \"issue\": \"The prompt does not explicitly specify lighting source, direction, or quality beyond 'bright modern kitchen' and 'clean product-style realism'. While the image evidence confirms diffused overhead lighting, the prompt lacks actionable lighting specs for generation.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"a bright modern kitchen rendered in clean product-style realism\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"light_sources_and_direction_effect: diffused overhead lighting, creating soft shadows\"\n        }\n      ],\n      \"rationale\": \"The prompt implies lighting but does not specify actionable parameters like key light position, fill, or color temperature. This is a minor issue as the image provides sufficient reference, but for full generation readiness, explicit lighting specs would be ideal.\"\n    },\n    {\n      \"criterion\": \"NDE\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"The prompt shows progression: from static image to cook entering, stirring, checking pot, and settling into rhythm. The action escalates from stillness to gentle motion, then stabilizes, providing a natural arc for a 6-second clip.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Around 0.5 seconds, an American adult... enters from the left and steps up to the range. They grip the wok handle and stir the food... briefly lifting the stockpot lid for a quick check before replacing it. Through the final seconds the person settles into a relaxed cooking rhythm...\"\n        }\n      ],\n      \"rationale\": \"The sequence includes entry, action, minor variation (checking pot), and resolution (settled rhythm), providing sufficient progression for a short, single-shot video.\"\n    },\n    {\n      \"criterion\": \"CIF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"All additions (cook, motion, sound) directly support the central request: showing an American cooking in the kitchen. No irrelevant padding or decorative details are introduced.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"Show the scene of an American cooking in this kitchen.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"an American adult in a plain casual t-shirt enters from the left and steps up to the range. They grip the wok handle and stir the food...\"\n        }\n      ],\n      \"rationale\": \"The cook’s actions, attire, and movements are directly relevant to the core request. The removal of marketing text and open dishwasher aligns with the goal of a realistic cooking scene.\"\n    },\n    {\n      \"criterion\": \"SDI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"The prompt includes a detailed soundscape: continuous hood hum, spatula scrape, flame hiss, and lid clink. These are diegetic, character-motivated, and timed to the visual actions, enhancing realism.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"A soft low hum of the range hood fan runs continuously beneath the quiet kitchen ambience. The gentle rhythmic scrape of the spatula against the wok, the faint hiss of the blue gas flame, and the soft clink of the stockpot lid being lifted and set back down.\"\n        }\n      ],\n      \"rationale\": \"The audio is integrated with visual timing (e.g., lid clink when lid is lifted), source-motivated, and intensity-appropriate. Non-diegetic music is correctly omitted as per the prompt’s focus on realism.\"\n    },\n    {\n      \"criterion\": \"SPS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"The cook is specified as an American adult in a plain casual t-shirt, performing realistic cooking actions: gripping wok, stirring, lifting lid. Expressions and gestures are implied as calm and steady, matching the scene’s tone.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"an American adult in a plain casual t-shirt enters from the left and steps up to the range. They grip the wok handle and stir the food with the spatula in steady, calm motions, briefly lifting the stockpot lid for a quick check before replacing it.\"\n        }\n      ],\n      \"rationale\": \"Subject appearance, pose, movement, and interaction are clearly defined and appropriate for the context. The prompt avoids over-specifying expression or vocal delivery, which is not required for a silent cooking scene.\"\n    },\n    {\n      \"criterion\": \"VSS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"The prompt specifies 'live-action, cinematic, clean product-style realism' and matches the image’s composition, materials, and style. The rendering language is consistent with the source image.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Live-action, cinematic, a bright modern kitchen rendered in clean product-style realism, matching the composition of <Picture 1>\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"primary_style: product photography, realism: highly realistic\"\n        }\n      ],\n      \"rationale\": \"The visual treatment is clearly defined and aligned with the source image’s style. The prompt avoids introducing conflicting or incompatible visual treatments.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt provides a detailed, coherent, and actionable cinematic plan for a 6-second video based on the provided image. It establishes a clear temporal sequence, specifies camera movement, lighting, sound, and subject actions, and removes non-essential elements from the original product render. The prompt effectively transforms a static image into a dynamic, realistic kitchen scene with a cooking person, while adhering to constraints (no smoke/fumes, no on-screen text). Minor issues include slight over-specification of lighting and camera motion without explicit justification, and a lack of explicit transition or cut planning (though none are needed for a single shot). Overall, the prompt is well-structured and generation-ready.",
+  "usage": {
+    "completion_tokens": 2043,
+    "prompt_tokens": 2886,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 4929
+  }
+}

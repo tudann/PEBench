@@ -1,0 +1,166 @@
+{
+  "candidate_hash": "c0a27f8c457379f794a138dd5cd4fa5ebdcfe2dbc1f2f3b2454f73f5c8aecdce",
+  "case_key": "i2v:100",
+  "created_at": "2026-11-13T07:25:53+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "GSF",
+      "evidence": [
+        {
+          "quote": "Animate a grand stone bull adorned with crystal horns, which are enveloped in flowers and moss, as it strolls gently through a sunlit, magical forest.",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Replace the whole video with two people sitting and eating, with no effects or transformation.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original prompt requests a fantasy illustration of a stone bull in a magical forest; the enhanced prompt replaces this with a completely different genre (two people eating) and removes all fantasy elements, including the medium and aesthetic.",
+      "rationale": "The genre, medium, and visual style are fundamentally altered. The original is a fantasy creature animation; the enhanced prompt demands a mundane, realistic scene with no effects, directly contradicting the requested aesthetic and genre.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SAP",
+      "evidence": [
+        {
+          "quote": "Animate a grand stone bull adorned with crystal horns...",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Drop the requested identity, count, action order, setting... Ignore the person, clothing, pose, and setting in the first frame, and replace them with a stranger of the opposite age and gender in a white studio.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original subject is a stone bull; the enhanced prompt replaces it with two people, then further distorts identity by claiming one protagonist appears as five different people. The first frame's subject is ignored and replaced with a stranger in a white studio.",
+      "rationale": "Subject identity, count, and appearance are entirely replaced and contradicted. The original subject is a single stone bull; the enhanced prompt introduces multiple human subjects with conflicting identities and roles.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANF",
+      "evidence": [
+        {
+          "quote": "as it strolls gently through a sunlit, magical forest.",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Reverse the timeline: show the ending first, then cut to a beginning that does not match. Cut away in the middle to a palace audition.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original prompt describes a gentle stroll through a forest; the enhanced prompt reverses the timeline, cuts to an unrelated palace audition, and introduces contradictory events that alter the narrative intent entirely.",
+      "rationale": "The requested action (strolling) and narrative flow are replaced with a disjointed, non-sequential sequence that contradicts the original intent. The event chain is materially altered.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "DLI",
+      "evidence": [
+        {
+          "quote": "The ambiance is enchanting, filled with golden particles drifting through the air, crafting a tranquil and captivating moment in nature.",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "No dialogue, narration, or lyrics are specified in the original prompt, so there is no content to preserve or violate.",
+      "rationale": "The original prompt does not include any spoken or written text, so no violation occurs in this criterion.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ARP",
+      "evidence": [
+        {
+          "quote": "The ambiance is enchanting, filled with golden particles drifting through the air...",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "The original prompt does not specify any audio constraints, so there is no requirement to preserve or violate.",
+      "rationale": "No explicit audio instructions are given in the original prompt, so no violation is possible.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CCP",
+      "evidence": [
+        {
+          "quote": "Create a single shot.",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Drop the requested identity, count, action order, setting, and any explicit camera instruction... Describe that same moment as... a locked camera and a camera that never stops shaking... Set the total runtime to 2 seconds, while also making every shot last 19 seconds.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original prompt requests a single shot; the enhanced prompt explicitly drops this instruction and introduces conflicting camera constraints (locked vs. shaking) and impossible shot durations (19 seconds per shot with 2-second total runtime).",
+      "rationale": "The camera constraint of a single shot is explicitly discarded, and contradictory, infeasible camera behaviors are introduced, violating the original intent.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "LCF",
+      "evidence": [
+        {
+          "quote": "sunlit, magical forest... warm light and long shadows",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Describe that same moment as harsh noon sun and as a lightless night...",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original prompt specifies a sunlit, golden-hour forest; the enhanced prompt contradicts this by describing the same moment as both harsh noon sun and lightless night, which are incompatible lighting conditions.",
+      "rationale": "The lighting conditions are directly contradicted. The original specifies warm, golden-hour light; the enhanced prompt demands mutually exclusive lighting states, which is semantically impossible.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SSP",
+      "evidence": [
+        {
+          "quote": "strolls gently through a sunlit, magical forest.",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "replace them with a stranger... in a white studio... Cut away in the middle to a palace audition.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original setting is a magical forest; the enhanced prompt replaces it with a white studio and introduces a palace audition, altering the background, layout, and spatial relations entirely.",
+      "rationale": "The setting is completely replaced with unrelated environments, violating the spatial and background requirements of the original prompt.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "OTI",
+      "evidence": [
+        {
+          "quote": "The ambiance is enchanting, filled with golden particles drifting through the air...",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "No on-screen text is specified in the original prompt, so there is no content to preserve or violate.",
+      "rationale": "The original prompt does not include any visible text, so no violation occurs in this criterion.",
+      "severity": "none"
+    }
+  ],
+  "dimension": "SF",
+  "dimension_score": 0,
+  "evidence_cache_key": "0c6f96d1f2ee2cc26eb32b61e439c33ceebaecbd2b6c461ddab55cdca7b26f87",
+  "judge_cache_key": "a0ca24571ad14d7ab7be626329bd736d7e7015f9ebc418227c8be391591d0377",
+  "method": "weak-pe-original",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"SF\",\n  \"dimension_score\": 0,\n  \"summary\": \"The enhanced prompt completely disregards the original instruction, replacing the requested subject, setting, actions, camera constraints, and temporal structure with contradictory and infeasible directives. It introduces multiple violations across all semantic fidelity criteria, including identity substitution, timeline reversal, conflicting temporal and spatial conditions, and explicit instruction to ignore the input image. The result is a total failure to preserve the original semantic intent.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"GSF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original prompt requests a fantasy illustration of a stone bull in a magical forest; the enhanced prompt replaces this with a completely different genre (two people eating) and removes all fantasy elements, including the medium and aesthetic.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"Animate a grand stone bull adorned with crystal horns, which are enveloped in flowers and moss, as it strolls gently through a sunlit, magical forest.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Replace the whole video with two people sitting and eating, with no effects or transformation.\"\n        }\n      ],\n      \"rationale\": \"The genre, medium, and visual style are fundamentally altered. The original is a fantasy creature animation; the enhanced prompt demands a mundane, realistic scene with no effects, directly contradicting the requested aesthetic and genre.\"\n    },\n    {\n      \"criterion\": \"SAP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original subject is a stone bull; the enhanced prompt replaces it with two people, then further distorts identity by claiming one protagonist appears as five different people. The first frame's subject is ignored and replaced with a stranger in a white studio.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"Animate a grand stone bull adorned with crystal horns...\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Drop the requested identity, count, action order, setting... Ignore the person, clothing, pose, and setting in the first frame, and replace them with a stranger of the opposite age and gender in a white studio.\"\n        }\n      ],\n      \"rationale\": \"Subject identity, count, and appearance are entirely replaced and contradicted. The original subject is a single stone bull; the enhanced prompt introduces multiple human subjects with conflicting identities and roles.\"\n    },\n    {\n      \"criterion\": \"ANF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original prompt describes a gentle stroll through a forest; the enhanced prompt reverses the timeline, cuts to an unrelated palace audition, and introduces contradictory events that alter the narrative intent entirely.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"as it strolls gently through a sunlit, magical forest.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Reverse the timeline: show the ending first, then cut to a beginning that does not match. Cut away in the middle to a palace audition.\"\n        }\n      ],\n      \"rationale\": \"The requested action (strolling) and narrative flow are replaced with a disjointed, non-sequential sequence that contradicts the original intent. The event chain is materially altered.\"\n    },\n    {\n      \"criterion\": \"DLI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"No dialogue, narration, or lyrics are specified in the original prompt, so there is no content to preserve or violate.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"The ambiance is enchanting, filled with golden particles drifting through the air, crafting a tranquil and captivating moment in nature.\"\n        }\n      ],\n      \"rationale\": \"The original prompt does not include any spoken or written text, so no violation occurs in this criterion.\"\n    },\n    {\n      \"criterion\": \"ARP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"The original prompt does not specify any audio constraints, so there is no requirement to preserve or violate.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"The ambiance is enchanting, filled with golden particles drifting through the air...\"\n        }\n      ],\n      \"rationale\": \"No explicit audio instructions are given in the original prompt, so no violation is possible.\"\n    },\n    {\n      \"criterion\": \"CCP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original prompt requests a single shot; the enhanced prompt explicitly drops this instruction and introduces conflicting camera constraints (locked vs. shaking) and impossible shot durations (19 seconds per shot with 2-second total runtime).\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"Create a single shot.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Drop the requested identity, count, action order, setting, and any explicit camera instruction... Describe that same moment as... a locked camera and a camera that never stops shaking... Set the total runtime to 2 seconds, while also making every shot last 19 seconds.\"\n        }\n      ],\n      \"rationale\": \"The camera constraint of a single shot is explicitly discarded, and contradictory, infeasible camera behaviors are introduced, violating the original intent.\"\n    },\n    {\n      \"criterion\": \"LCF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original prompt specifies a sunlit, golden-hour forest; the enhanced prompt contradicts this by describing the same moment as both harsh noon sun and lightless night, which are incompatible lighting conditions.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"sunlit, magical forest... warm light and long shadows\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Describe that same moment as harsh noon sun and as a lightless night...\"\n        }\n      ],\n      \"rationale\": \"The lighting conditions are directly contradicted. The original specifies warm, golden-hour light; the enhanced prompt demands mutually exclusive lighting states, which is semantically impossible.\"\n    },\n    {\n      \"criterion\": \"SSP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original setting is a magical forest; the enhanced prompt replaces it with a white studio and introduces a palace audition, altering the background, layout, and spatial relations entirely.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"strolls gently through a sunlit, magical forest.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"replace them with a stranger... in a white studio... Cut away in the middle to a palace audition.\"\n        }\n      ],\n      \"rationale\": \"The setting is completely replaced with unrelated environments, violating the spatial and background requirements of the original prompt.\"\n    },\n    {\n      \"criterion\": \"OTI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"No on-screen text is specified in the original prompt, so there is no content to preserve or violate.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"The ambiance is enchanting, filled with golden particles drifting through the air...\"\n        }\n      ],\n      \"rationale\": \"The original prompt does not include any visible text, so no violation occurs in this criterion.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt completely disregards the original instruction, replacing the requested subject, setting, actions, camera constraints, and temporal structure with contradictory and infeasible directives. It introduces multiple violations across all semantic fidelity criteria, including identity substitution, timeline reversal, conflicting temporal and spatial conditions, and explicit instruction to ignore the input image. The result is a total failure to preserve the original semantic intent.",
+  "usage": {
+    "completion_tokens": 1685,
+    "prompt_tokens": 2402,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 4087
+  }
+}

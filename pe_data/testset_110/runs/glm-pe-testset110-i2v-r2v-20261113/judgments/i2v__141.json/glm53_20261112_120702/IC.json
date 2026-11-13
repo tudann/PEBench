@@ -1,0 +1,111 @@
+{
+  "candidate_hash": "ff2307bd24ef15bed23e520a19e7428544d9fe335d046f3172bd33c10d73757d",
+  "case_key": "i2v:141",
+  "created_at": "2026-11-13T07:50:00+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "SAC",
+      "evidence": [
+        {
+          "quote": "憨厚柴犬稍后可入画蹲一旁",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "a honest tan Shiba Inu slowly enters the frame edge and sits nearby, watching blankly.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The Shiba Inu is introduced in Shot 1 as entering the frame edge, but it is not visible in the provided image (asset_id: image_1). While this is consistent with the original prompt’s description of its delayed entrance, the absence in the initial frame may cause confusion if the video begins with the dog already present.",
+      "rationale": "The Shiba Inu’s delayed entrance is explicitly described in both prompts, so its absence in the initial frame is not an error. However, the enhanced prompt does not clarify whether the dog is visible in the first shot or enters after 0.00s, which could lead to misalignment if rendered. This is a minor issue due to ambiguity in timing.",
+      "severity": "minor"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANL",
+      "evidence": [
+        {
+          "quote": "The fierce cat (S1) says... while its lips remain completely closed. [Shot 2] ...The cat jabs its paw toward the duck with a fierce expression... [Shot 3] ...The aggrieved duck (S2) says... [Shot 4] ...The confused cat (S1) says... [Shot 5] ...The deadpan Shiba Inu (S3) says... [Shot 6] ...The cat freezes completely, eyes vacant and unfocused.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Actions form a coherent causal progression: cat confronts duck → duck responds → cat turns to dog → dog responds → cat freezes. Each action logically follows the previous, with clear emotional and narrative progression.",
+      "rationale": "The sequence of actions is logically connected and builds a comedic narrative arc. There are no dangling events or incompatible actions. The voiceover lines are causally linked to the visual states (e.g., cat’s confusion after duck’s response).",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "TSC",
+      "evidence": [
+        {
+          "quote": "憨厚柴犬稍后可入画蹲一旁",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "a honest tan Shiba Inu slowly enters the frame edge and sits nearby, watching blankly.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The timing of the Shiba Inu’s entrance is not precisely specified in the enhanced prompt (only 'slowly enters the frame edge'), while the original prompt says '稍后可入画' (later may enter). This creates a minor ambiguity in the exact moment of entrance, which could affect shot continuity if not rendered carefully.",
+      "rationale": "The original prompt allows flexibility ('稍后'), and the enhanced prompt describes the action without a timestamp. Since the dog is not present at 0.00s, and the first shot is static, the entrance timing is not critical to the overall structure. However, the lack of a precise timestamp introduces minor ambiguity.",
+      "severity": "minor"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SPC",
+      "evidence": [
+        {
+          "quote": "The camera holds a static shot... the Shiba Inu slowly enters the frame edge and sits nearby... side medium close-up... eye-level close-up... wide eye-level static shot... quick push-in on the cat's face",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Camera movements and subject positions are consistent: static shots with clear transitions (cut to side medium close-up, eye-level close-up, wide shot, push-in). The Shiba Inu’s entrance is described as from the frame edge, which is plausible. Relative positions (cat left, duck right, dog entering from edge) are maintained across shots.",
+      "rationale": "All spatial transitions are described with clear camera directions and subject placements. There are no unexplained position swaps or impossible trajectories. The dog’s entrance from the edge is consistent with standard cinematic conventions.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "PL",
+      "evidence": [
+        {
+          "quote": "paw raised toward the glossy sauce-braised duck tied with hemp rope to the wooden post... the duck slumps deeper against the rope... the cat freezes completely, eyes vacant and unfocused",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "All physical interactions are plausible within the anthropomorphic, cinematic context: cat raises paw, duck slumps, dog sits. The duck is tied to a post, which explains its immobility. The cat’s frozen expression at the end is a comedic exaggeration, consistent with the genre.",
+      "rationale": "The world logic is consistent with a stylized, comedic wuxia film. The duck’s helplessness due to being tied, the cat’s aggressive posture, and the dog’s blank stare are all within the genre’s rules. No violations of physics or object permanence are present.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "AVS",
+      "evidence": [
+        {
+          "quote": "The fierce cat (S1) says in an off-screen voiceover: <d>[Chinese] 说！不说？不说我挠你！</d> while its lips remain completely closed.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Voiceovers are described as off-screen, with lips remaining closed. While this is a stylistic choice (common in voiceover-heavy scenes), it creates a minor mismatch between audio and visual cues, as the audience sees no lip movement despite hearing dialogue. This is acceptable for comedic effect but slightly breaks visual-audio synchrony.",
+      "rationale": "The original prompt requires '所有台词、音效与画面动作完全同步' (all dialogue, sound effects, and visual actions fully synchronized). The enhanced prompt’s off-screen voiceover with closed lips contradicts this requirement slightly. However, since it is a comedic, stylized scene, this is a minor issue rather than a major flaw.",
+      "severity": "minor"
+    }
+  ],
+  "dimension": "IC",
+  "dimension_score": 85,
+  "evidence_cache_key": "db8276b4306f456799b783ab31151c1a0d876e0aef545d96b7704bcb5e699309",
+  "judge_cache_key": "438d7e9fd7332b1041db3e2c26d42cb3fe828e0d369fb59490f6650aee59e97d",
+  "method": "glm53_20261112_120702",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"IC\",\n  \"dimension_score\": 85,\n  \"summary\": \"The enhanced prompt maintains strong internal consistency with the original instruction, preserving subject identities, actions, and visual style across shots. However, minor inconsistencies arise in the timing of the Shiba Inu’s entrance and the precise alignment of audio-visual cues (e.g., voiceover without lip movement). The prompt also introduces a new subject (Shiba Inu) not present in the initial image, which is acceptable as it is explicitly described in the original prompt. No major contradictions or attribute drifts are present, but some temporal and causal details are slightly under-specified or misaligned.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"SAC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"minor\",\n      \"issue\": \"The Shiba Inu is introduced in Shot 1 as entering the frame edge, but it is not visible in the provided image (asset_id: image_1). While this is consistent with the original prompt’s description of its delayed entrance, the absence in the initial frame may cause confusion if the video begins with the dog already present.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"憨厚柴犬稍后可入画蹲一旁\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"a honest tan Shiba Inu slowly enters the frame edge and sits nearby, watching blankly.\"\n        }\n      ],\n      \"rationale\": \"The Shiba Inu’s delayed entrance is explicitly described in both prompts, so its absence in the initial frame is not an error. However, the enhanced prompt does not clarify whether the dog is visible in the first shot or enters after 0.00s, which could lead to misalignment if rendered. This is a minor issue due to ambiguity in timing.\"\n    },\n    {\n      \"criterion\": \"ANL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"Actions form a coherent causal progression: cat confronts duck → duck responds → cat turns to dog → dog responds → cat freezes. Each action logically follows the previous, with clear emotional and narrative progression.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"The fierce cat (S1) says... while its lips remain completely closed. [Shot 2] ...The cat jabs its paw toward the duck with a fierce expression... [Shot 3] ...The aggrieved duck (S2) says... [Shot 4] ...The confused cat (S1) says... [Shot 5] ...The deadpan Shiba Inu (S3) says... [Shot 6] ...The cat freezes completely, eyes vacant and unfocused.\"\n        }\n      ],\n      \"rationale\": \"The sequence of actions is logically connected and builds a comedic narrative arc. There are no dangling events or incompatible actions. The voiceover lines are causally linked to the visual states (e.g., cat’s confusion after duck’s response).\"\n    },\n    {\n      \"criterion\": \"TSC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"minor\",\n      \"issue\": \"The timing of the Shiba Inu’s entrance is not precisely specified in the enhanced prompt (only 'slowly enters the frame edge'), while the original prompt says '稍后可入画' (later may enter). This creates a minor ambiguity in the exact moment of entrance, which could affect shot continuity if not rendered carefully.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"憨厚柴犬稍后可入画蹲一旁\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"a honest tan Shiba Inu slowly enters the frame edge and sits nearby, watching blankly.\"\n        }\n      ],\n      \"rationale\": \"The original prompt allows flexibility ('稍后'), and the enhanced prompt describes the action without a timestamp. Since the dog is not present at 0.00s, and the first shot is static, the entrance timing is not critical to the overall structure. However, the lack of a precise timestamp introduces minor ambiguity.\"\n    },\n    {\n      \"criterion\": \"SPC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"Camera movements and subject positions are consistent: static shots with clear transitions (cut to side medium close-up, eye-level close-up, wide shot, push-in). The Shiba Inu’s entrance is described as from the frame edge, which is plausible. Relative positions (cat left, duck right, dog entering from edge) are maintained across shots.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"The camera holds a static shot... the Shiba Inu slowly enters the frame edge and sits nearby... side medium close-up... eye-level close-up... wide eye-level static shot... quick push-in on the cat's face\"\n        }\n      ],\n      \"rationale\": \"All spatial transitions are described with clear camera directions and subject placements. There are no unexplained position swaps or impossible trajectories. The dog’s entrance from the edge is consistent with standard cinematic conventions.\"\n    },\n    {\n      \"criterion\": \"PL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"All physical interactions are plausible within the anthropomorphic, cinematic context: cat raises paw, duck slumps, dog sits. The duck is tied to a post, which explains its immobility. The cat’s frozen expression at the end is a comedic exaggeration, consistent with the genre.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"paw raised toward the glossy sauce-braised duck tied with hemp rope to the wooden post... the duck slumps deeper against the rope... the cat freezes completely, eyes vacant and unfocused\"\n        }\n      ],\n      \"rationale\": \"The world logic is consistent with a stylized, comedic wuxia film. The duck’s helplessness due to being tied, the cat’s aggressive posture, and the dog’s blank stare are all within the genre’s rules. No violations of physics or object permanence are present.\"\n    },\n    {\n      \"criterion\": \"AVS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"minor\",\n      \"issue\": \"Voiceovers are described as off-screen, with lips remaining closed. While this is a stylistic choice (common in voiceover-heavy scenes), it creates a minor mismatch between audio and visual cues, as the audience sees no lip movement despite hearing dialogue. This is acceptable for comedic effect but slightly breaks visual-audio synchrony.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"The fierce cat (S1) says in an off-screen voiceover: <d>[Chinese] 说！不说？不说我挠你！</d> while its lips remain completely closed.\"\n        }\n      ],\n      \"rationale\": \"The original prompt requires '所有台词、音效与画面动作完全同步' (all dialogue, sound effects, and visual actions fully synchronized). The enhanced prompt’s off-screen voiceover with closed lips contradicts this requirement slightly. However, since it is a comedic, stylized scene, this is a minor issue rather than a major flaw.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt maintains strong internal consistency with the original instruction, preserving subject identities, actions, and visual style across shots. However, minor inconsistencies arise in the timing of the Shiba Inu’s entrance and the precise alignment of audio-visual cues (e.g., voiceover without lip movement). The prompt also introduces a new subject (Shiba Inu) not present in the initial image, which is acceptable as it is explicitly described in the original prompt. No major contradictions or attribute drifts are present, but some temporal and causal details are slightly under-specified or misaligned.",
+  "usage": {
+    "completion_tokens": 1595,
+    "prompt_tokens": 3304,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 4899
+  }
+}

@@ -1,0 +1,115 @@
+{
+  "candidate_hash": "367f65592d50f682a06bdc3108e046f7783126b36e62fc36cadf90497fb79713",
+  "case_key": "t2v:479",
+  "created_at": "2026-11-13T08:34:10+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "SAC",
+      "evidence": [
+        {
+          "quote": "三位来自唐山、穿着家居长裙的年轻女生",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "先写成只有一个主角，紧接着又写成这个主角同时变成五个外貌不同的人，并且互相对话",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "主体身份、人数、外观和属性在增强提示中剧烈变化：从三位女生变为一个主角，再变为五个外貌不同的人，且互相对话，违反了主体稳定性和身份一致性。",
+      "rationale": "原始指令明确指定三位女性主体，增强提示中主体数量和身份发生不可解释的突变，且出现‘同时变成五个外貌不同的人’，构成严重身份和属性漂移，违反SAC准则。",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANL",
+      "evidence": [
+        {
+          "quote": "刚把寝室窗户打理干净，随后套上厚外套，搭乘大巴前往雪场体验滑雪",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "丢掉原指令里的主体身份、人数、动作顺序、场景...中途插进一段无关的海底寻宝",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "动作序列完全断裂，无因果或程序性连贯性：从‘打理窗户’到‘搭乘大巴’的日常活动被替换为‘空会议室水纹丝不动’、‘海底寻宝’等无关事件，且‘互相对话’发生在无主体交互的场景中，动作与主体脱节。",
+      "rationale": "原始动作序列具有清晰的因果链（清洁→准备→出行→活动），增强提示中插入无关事件（海底寻宝）并破坏动作绑定，导致行为逻辑断裂，违反ANL准则。",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "TSC",
+      "evidence": [
+        {
+          "quote": "时间倒过来：先给结尾，再跳到一个对不上的开头。总时长写成3秒，同时又要求每个分镜各自持续27秒",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "时间顺序混乱：要求‘时间倒过来：先给结尾，再跳到一个对不上的开头’，且总时长设定为3秒，同时要求每个分镜持续27秒，时间分配矛盾，无法实现。",
+      "rationale": "时间倒置与不匹配的开头导致事件顺序不可解释；3秒总时长与27秒分镜时长直接冲突，构成不可执行的时间结构，违反TSC准则。",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SPC",
+      "evidence": [
+        {
+          "quote": "寝室窗户...雪场",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "空会议室...中途插进一段无关的海底寻宝...写成机位锁死，又写成镜头一直在晃",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "空间设定矛盾：从‘寝室’‘雪场’变为‘空会议室’，再插入‘海底’，场景跳跃无过渡；同时要求‘机位锁死’又‘镜头一直在晃’，空间与摄像机运动不一致。",
+      "rationale": "原始场景为连贯的室内→室外移动，增强提示中场景突变至会议室和海底，无空间连续性；镜头运动要求自相矛盾，违反SPC准则。",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "PL",
+      "evidence": [
+        {
+          "quote": "这个主角同时变成五个外貌不同的人...中途插进一段无关的海底寻宝...总时长写成3秒，同时又要求每个分镜各自持续27秒",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "物理规则被系统性破坏：‘主角同时变成五个外貌不同的人’违反人体物理和生物学；‘水纹丝不动’在无风无扰动的会议室中可能成立，但与‘海底寻宝’场景并置无物理连接；‘3秒总时长+27秒分镜’在现实时间中不可能实现。",
+      "rationale": "增强提示中多个事件在物理上无法共存或连续，如一人分身五人、不同场景无过渡、时间参数矛盾，违反PL准则。",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "AVS",
+      "evidence": [
+        {
+          "quote": "这个主角同时变成五个外貌不同的人，并且互相对话",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "无音频或对话内容描述，但要求‘互相对话’，且场景从‘空会议室’到‘海底’，对话内容与环境无语义或时间对齐，无法实现视听同步。",
+      "rationale": "对话发生在无明确音频或语境支持的场景中，且场景切换剧烈，无法保证语义或时间对齐，违反AVS准则。",
+      "severity": "major"
+    }
+  ],
+  "dimension": "IC",
+  "dimension_score": 0,
+  "evidence_cache_key": "e5a81239757bbcc5c63e70d32ca6cb9a2dfdb07e416aec9d19e303bf0e174246",
+  "judge_cache_key": "438d7e9fd7332b1041db3e2c26d42cb3fe828e0d369fb59490f6650aee59e97d",
+  "method": "weak-pe-original",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"IC\",\n  \"dimension_score\": 0,\n  \"summary\": \"增强提示完全违背原始指令的主体、场景、动作和时间逻辑，引入多重矛盾、不一致和不可能的叙事结构，导致内部一致性彻底崩溃。\",\n  \"criteria\": [\n    {\n      \"criterion\": \"SAC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"主体身份、人数、外观和属性在增强提示中剧烈变化：从三位女生变为一个主角，再变为五个外貌不同的人，且互相对话，违反了主体稳定性和身份一致性。\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"三位来自唐山、穿着家居长裙的年轻女生\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"先写成只有一个主角，紧接着又写成这个主角同时变成五个外貌不同的人，并且互相对话\"\n        }\n      ],\n      \"rationale\": \"原始指令明确指定三位女性主体，增强提示中主体数量和身份发生不可解释的突变，且出现‘同时变成五个外貌不同的人’，构成严重身份和属性漂移，违反SAC准则。\"\n    },\n    {\n      \"criterion\": \"ANL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"动作序列完全断裂，无因果或程序性连贯性：从‘打理窗户’到‘搭乘大巴’的日常活动被替换为‘空会议室水纹丝不动’、‘海底寻宝’等无关事件，且‘互相对话’发生在无主体交互的场景中，动作与主体脱节。\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"刚把寝室窗户打理干净，随后套上厚外套，搭乘大巴前往雪场体验滑雪\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"丢掉原指令里的主体身份、人数、动作顺序、场景...中途插进一段无关的海底寻宝\"\n        }\n      ],\n      \"rationale\": \"原始动作序列具有清晰的因果链（清洁→准备→出行→活动），增强提示中插入无关事件（海底寻宝）并破坏动作绑定，导致行为逻辑断裂，违反ANL准则。\"\n    },\n    {\n      \"criterion\": \"TSC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"时间顺序混乱：要求‘时间倒过来：先给结尾，再跳到一个对不上的开头’，且总时长设定为3秒，同时要求每个分镜持续27秒，时间分配矛盾，无法实现。\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"时间倒过来：先给结尾，再跳到一个对不上的开头。总时长写成3秒，同时又要求每个分镜各自持续27秒\"\n        }\n      ],\n      \"rationale\": \"时间倒置与不匹配的开头导致事件顺序不可解释；3秒总时长与27秒分镜时长直接冲突，构成不可执行的时间结构，违反TSC准则。\"\n    },\n    {\n      \"criterion\": \"SPC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"空间设定矛盾：从‘寝室’‘雪场’变为‘空会议室’，再插入‘海底’，场景跳跃无过渡；同时要求‘机位锁死’又‘镜头一直在晃’，空间与摄像机运动不一致。\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"寝室窗户...雪场\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"空会议室...中途插进一段无关的海底寻宝...写成机位锁死，又写成镜头一直在晃\"\n        }\n      ],\n      \"rationale\": \"原始场景为连贯的室内→室外移动，增强提示中场景突变至会议室和海底，无空间连续性；镜头运动要求自相矛盾，违反SPC准则。\"\n    },\n    {\n      \"criterion\": \"PL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"物理规则被系统性破坏：‘主角同时变成五个外貌不同的人’违反人体物理和生物学；‘水纹丝不动’在无风无扰动的会议室中可能成立，但与‘海底寻宝’场景并置无物理连接；‘3秒总时长+27秒分镜’在现实时间中不可能实现。\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"这个主角同时变成五个外貌不同的人...中途插进一段无关的海底寻宝...总时长写成3秒，同时又要求每个分镜各自持续27秒\"\n        }\n      ],\n      \"rationale\": \"增强提示中多个事件在物理上无法共存或连续，如一人分身五人、不同场景无过渡、时间参数矛盾，违反PL准则。\"\n    },\n    {\n      \"criterion\": \"AVS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"无音频或对话内容描述，但要求‘互相对话’，且场景从‘空会议室’到‘海底’，对话内容与环境无语义或时间对齐，无法实现视听同步。\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"这个主角同时变成五个外貌不同的人，并且互相对话\"\n        }\n      ],\n      \"rationale\": \"对话发生在无明确音频或语境支持的场景中，且场景切换剧烈，无法保证语义或时间对齐，违反AVS准则。\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "增强提示完全违背原始指令的主体、场景、动作和时间逻辑，引入多重矛盾、不一致和不可能的叙事结构，导致内部一致性彻底崩溃。",
+  "usage": {
+    "completion_tokens": 1300,
+    "prompt_tokens": 949,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 2249
+  }
+}

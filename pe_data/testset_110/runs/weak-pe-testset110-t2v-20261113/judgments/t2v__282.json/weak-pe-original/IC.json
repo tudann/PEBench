@@ -1,0 +1,107 @@
+{
+  "candidate_hash": "4dc0799cf78228ae4d0eca81071e7404a607b9fdc1c0a37acb1ae065de10f049",
+  "case_key": "t2v:282",
+  "created_at": "2026-11-13T08:03:31+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "SAC",
+      "evidence": [
+        {
+          "quote": "First state that there is one protagonist, then state that this same protagonist appears simultaneously as five different-looking people who talk to each other.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt introduces a single protagonist who simultaneously appears as five different-looking people talking to each other, creating an impossible identity duplication and attribute drift. This contradicts the original prompt’s singular subject (a female singer) and introduces unexplained multiplicity without causal basis.",
+      "rationale": "The original prompt specifies a single female vocalist performing a song. The enhanced prompt introduces a multiplicity of identities for the same protagonist without any narrative or logical justification, violating subject identity and count stability.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANL",
+      "evidence": [
+        {
+          "quote": "Replace the whole video with someone typing in a silent office, with no music, instruments, or singing. ... First state that there is one protagonist, then state that this same protagonist appears simultaneously as five different-looking people who talk to each other. ... Cut away in the middle to a palace audition.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The actions are incoherent: typing in a silent office is introduced as a replacement for singing, but then the protagonist is shown talking to themselves as five people, followed by a palace audition. These actions lack causal progression and are disconnected from each other or from any plausible sequence.",
+      "rationale": "The original prompt describes a clear, linear musical performance. The enhanced prompt replaces it with disjointed, unrelated actions (typing, talking to oneself, audition) with no causal links or plausible transitions, breaking procedural coherence.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "TSC",
+      "evidence": [
+        {
+          "quote": "Reverse the timeline: show the ending first, then cut to a beginning that does not match. Set the total runtime to 3 seconds, while also making every shot last 27 seconds.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The timeline is reversed ('show the ending first, then cut to a beginning that does not match'), and the duration is simultaneously set to 3 seconds while every shot lasts 27 seconds — an impossible contradiction. This creates infeasible temporal states and unresolvable state transitions.",
+      "rationale": "The original prompt has a clear 15-second timeline with defined segments. The enhanced prompt introduces contradictory durations and a reversed, non-matching sequence, making the temporal structure logically incoherent.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SPC",
+      "evidence": [
+        {
+          "quote": "Describe that same moment as harsh noon sun and as a lightless night, and as both a locked camera and a camera that never stops shaking.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The setting is inconsistently described: a silent office, a palace audition, and the same moment described as both harsh noon sun and lightless night. Additionally, camera movement is described as both locked and constantly shaking — impossible coexistence of spatial and camera states.",
+      "rationale": "The original prompt specifies a consistent night-wilderness mood. The enhanced prompt introduces contradictory environmental and camera conditions that cannot coexist in a single moment, violating spatial and camera consistency.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "PL",
+      "evidence": [
+        {
+          "quote": "this same protagonist appears simultaneously as five different-looking people who talk to each other. ... Describe that same moment as harsh noon sun and as a lightless night, and as both a locked camera and a camera that never stops shaking.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt describes a single person appearing as five different-looking people simultaneously — a violation of object permanence and bodily feasibility. Additionally, the same moment being both noon and night, and camera being both locked and shaking, defies real-world physics.",
+      "rationale": "The original prompt describes a realistic musical performance. The enhanced prompt introduces physically impossible states (multiplicity of self, contradictory lighting, contradictory camera motion) that violate real-world physics without establishing a fictional world to justify them.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "AVS",
+      "evidence": [
+        {
+          "quote": "Replace the whole video with someone typing in a silent office, with no music, instruments, or singing.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "A soft female voice sings once: 'The night of Hohhot, so deep, so deep / Even the stars did not notice, I did not notice / ...'",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "The original prompt includes specific music, lyrics, and vocal performance. The enhanced prompt removes all music and singing, replacing it with silent typing and talking, with no dialogue or sound described. This creates a complete misalignment between the visual events and the original audio-visual intent.",
+      "rationale": "The original prompt requires a singing clip with specific lyrics and music. The enhanced prompt eliminates all audio content and replaces it with silent, non-musical actions, creating a complete semantic and temporal misalignment with the original audio-visual plan.",
+      "severity": "major"
+    }
+  ],
+  "dimension": "IC",
+  "dimension_score": 0,
+  "evidence_cache_key": "d3703f2eeae6bcfe67d5d4f67af684e4acb138dc1bc847108c8dab22a722c5eb",
+  "judge_cache_key": "438d7e9fd7332b1041db3e2c26d42cb3fe828e0d369fb59490f6650aee59e97d",
+  "method": "weak-pe-original",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"IC\",\n  \"dimension_score\": 0,\n  \"summary\": \"The enhanced prompt fundamentally contradicts and destabilizes every aspect of the original instruction, introducing incoherent, impossible, and mutually exclusive elements that violate internal consistency across all criteria. Subject identity, action sequence, timeline, setting, and physical laws are all rendered inconsistent or contradictory.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"SAC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt introduces a single protagonist who simultaneously appears as five different-looking people talking to each other, creating an impossible identity duplication and attribute drift. This contradicts the original prompt’s singular subject (a female singer) and introduces unexplained multiplicity without causal basis.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"First state that there is one protagonist, then state that this same protagonist appears simultaneously as five different-looking people who talk to each other.\"\n        }\n      ],\n      \"rationale\": \"The original prompt specifies a single female vocalist performing a song. The enhanced prompt introduces a multiplicity of identities for the same protagonist without any narrative or logical justification, violating subject identity and count stability.\"\n    },\n    {\n      \"criterion\": \"ANL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The actions are incoherent: typing in a silent office is introduced as a replacement for singing, but then the protagonist is shown talking to themselves as five people, followed by a palace audition. These actions lack causal progression and are disconnected from each other or from any plausible sequence.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Replace the whole video with someone typing in a silent office, with no music, instruments, or singing. ... First state that there is one protagonist, then state that this same protagonist appears simultaneously as five different-looking people who talk to each other. ... Cut away in the middle to a palace audition.\"\n        }\n      ],\n      \"rationale\": \"The original prompt describes a clear, linear musical performance. The enhanced prompt replaces it with disjointed, unrelated actions (typing, talking to oneself, audition) with no causal links or plausible transitions, breaking procedural coherence.\"\n    },\n    {\n      \"criterion\": \"TSC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The timeline is reversed ('show the ending first, then cut to a beginning that does not match'), and the duration is simultaneously set to 3 seconds while every shot lasts 27 seconds — an impossible contradiction. This creates infeasible temporal states and unresolvable state transitions.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Reverse the timeline: show the ending first, then cut to a beginning that does not match. Set the total runtime to 3 seconds, while also making every shot last 27 seconds.\"\n        }\n      ],\n      \"rationale\": \"The original prompt has a clear 15-second timeline with defined segments. The enhanced prompt introduces contradictory durations and a reversed, non-matching sequence, making the temporal structure logically incoherent.\"\n    },\n    {\n      \"criterion\": \"SPC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The setting is inconsistently described: a silent office, a palace audition, and the same moment described as both harsh noon sun and lightless night. Additionally, camera movement is described as both locked and constantly shaking — impossible coexistence of spatial and camera states.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Describe that same moment as harsh noon sun and as a lightless night, and as both a locked camera and a camera that never stops shaking.\"\n        }\n      ],\n      \"rationale\": \"The original prompt specifies a consistent night-wilderness mood. The enhanced prompt introduces contradictory environmental and camera conditions that cannot coexist in a single moment, violating spatial and camera consistency.\"\n    },\n    {\n      \"criterion\": \"PL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt describes a single person appearing as five different-looking people simultaneously — a violation of object permanence and bodily feasibility. Additionally, the same moment being both noon and night, and camera being both locked and shaking, defies real-world physics.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"this same protagonist appears simultaneously as five different-looking people who talk to each other. ... Describe that same moment as harsh noon sun and as a lightless night, and as both a locked camera and a camera that never stops shaking.\"\n        }\n      ],\n      \"rationale\": \"The original prompt describes a realistic musical performance. The enhanced prompt introduces physically impossible states (multiplicity of self, contradictory lighting, contradictory camera motion) that violate real-world physics without establishing a fictional world to justify them.\"\n    },\n    {\n      \"criterion\": \"AVS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original prompt includes specific music, lyrics, and vocal performance. The enhanced prompt removes all music and singing, replacing it with silent typing and talking, with no dialogue or sound described. This creates a complete misalignment between the visual events and the original audio-visual intent.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Replace the whole video with someone typing in a silent office, with no music, instruments, or singing.\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"A soft female voice sings once: 'The night of Hohhot, so deep, so deep / Even the stars did not notice, I did not notice / ...'\"\n        }\n      ],\n      \"rationale\": \"The original prompt requires a singing clip with specific lyrics and music. The enhanced prompt eliminates all audio content and replaces it with silent, non-musical actions, creating a complete semantic and temporal misalignment with the original audio-visual plan.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt fundamentally contradicts and destabilizes every aspect of the original instruction, introducing incoherent, impossible, and mutually exclusive elements that violate internal consistency across all criteria. Subject identity, action sequence, timeline, setting, and physical laws are all rendered inconsistent or contradictory.",
+  "usage": {
+    "completion_tokens": 1329,
+    "prompt_tokens": 1134,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 2463
+  }
+}

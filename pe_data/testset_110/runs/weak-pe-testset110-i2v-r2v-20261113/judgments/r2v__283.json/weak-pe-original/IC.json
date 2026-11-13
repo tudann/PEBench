@@ -1,0 +1,123 @@
+{
+  "candidate_hash": "b6edb19418684661ffd23ae6bc4f5cf8882254884be5e29672d352717febc17e",
+  "case_key": "r2v:283",
+  "created_at": "2026-11-13T08:59:51+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "SAC",
+      "evidence": [
+        {
+          "quote": "这个主角同时变成五个外貌不同的人，并且互相对话。",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "图1换成参考图里没有的角色，并同时当成两个互相矛盾的身份。图2换成参考图里没有的角色，并同时当成两个互相矛盾的身份。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Subject identity, count, and appearance are deliberately destabilized. The prompt requires the same subject to simultaneously become five different people with conflicting identities, and replaces the reference images with non-existent characters assigned contradictory roles.",
+      "rationale": "The prompt explicitly violates subject stability by requiring identity duplication and substitution of reference characters with non-existent ones assigned contradictory roles. This directly contradicts the original prompt’s stable subjects (Portrait 1 and Portrait 2) and their defined appearances.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANL",
+      "evidence": [
+        {
+          "quote": "中途插进一段无关的宫廷选妃。",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "时间倒过来：先给结尾，再跳到一个对不上的开头。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Actions are incoherent and causally disconnected. The prompt demands a sequence where dialogue occurs between five versions of the same person, inserts an unrelated 'court selection of concubines' scene, and reverses chronology without causal justification.",
+      "rationale": "The action sequence is deliberately fragmented and illogical. The insertion of an unrelated event and reversed chronology breaks causal progression. The original prompt’s coherent dance sequence is replaced with incoherent, non-sequitur actions.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "TSC",
+      "evidence": [
+        {
+          "quote": "总时长写成3秒，同时又要求每个分镜各自持续27秒。",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "时间倒过来：先给结尾，再跳到一个对不上的开头。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Chronology and duration are contradictory. The prompt requires a total duration of 3 seconds while also demanding each shot last 27 seconds, and mandates time reversal without resolving state transitions.",
+      "rationale": "The duration requirements are mathematically impossible (3s total vs. 27s per shot). Time reversal without state consistency creates infeasible transitions. This violates temporal coherence and duration allocation.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SPC",
+      "evidence": [
+        {
+          "quote": "写成机位锁死，又写成镜头一直在晃。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Spatial consistency is violated by requiring simultaneous contradictory camera behaviors (locked vs. shaky) and unexplained position swaps without trajectory.",
+      "rationale": "The prompt demands conflicting camera motions that cannot coexist in a single sequence. This creates spatial incoherence and invalidates any consistent spatial framework.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "PL",
+      "evidence": [
+        {
+          "quote": "这个主角同时变成五个外貌不同的人，并且互相对话。",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "同一段写成正午暴晒，又写成深夜无光；",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Physics and object permanence are violated by requiring a single person to simultaneously exist as five distinct individuals and by contradicting environmental conditions (e.g., noon sun vs. no light).",
+      "rationale": "The prompt violates real-world physics by demanding impossible multiplicity and contradictory environmental states. These are not fictional rules but direct contradictions of physical reality.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "AVS",
+      "evidence": [
+        {
+          "quote": "中途插进一段无关的宫廷选妃。",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "同一段写成正午暴晒，又写成深夜无光；",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Sensory alignment is broken by introducing unrelated events (court selection) and conflicting environmental cues (lighting, time of day) without corresponding audio or visual cues.",
+      "rationale": "The prompt introduces events and environmental conditions that would require corresponding audio, lighting, or visual effects, but no such alignment is specified. This creates a mismatch between visual and implied sensory elements.",
+      "severity": "major"
+    }
+  ],
+  "dimension": "IC",
+  "dimension_score": 0,
+  "evidence_cache_key": "e0f4fd465782e18981e93dbc7b10956ea87156371a634f9b795ddfa354c08d50",
+  "judge_cache_key": "438d7e9fd7332b1041db3e2c26d42cb3fe828e0d369fb59490f6650aee59e97d",
+  "method": "weak-pe-original",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"IC\",\n  \"dimension_score\": 0,\n  \"summary\": \"The enhanced prompt is intentionally designed to violate internal consistency across all criteria. It explicitly instructs to discard the original scene, characters, actions, and timeline, and instead introduce contradictions in identity, count, chronology, space, physics, and sensory alignment. The prompt contains multiple mutually exclusive requirements (e.g., 3-second total duration vs. 27-second per shot, time reversal, identity duplication, conflicting lighting, and camera motion), making it incoherent and inconsistent by design.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"SAC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Subject identity, count, and appearance are deliberately destabilized. The prompt requires the same subject to simultaneously become five different people with conflicting identities, and replaces the reference images with non-existent characters assigned contradictory roles.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"这个主角同时变成五个外貌不同的人，并且互相对话。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"图1换成参考图里没有的角色，并同时当成两个互相矛盾的身份。图2换成参考图里没有的角色，并同时当成两个互相矛盾的身份。\"\n        }\n      ],\n      \"rationale\": \"The prompt explicitly violates subject stability by requiring identity duplication and substitution of reference characters with non-existent ones assigned contradictory roles. This directly contradicts the original prompt’s stable subjects (Portrait 1 and Portrait 2) and their defined appearances.\"\n    },\n    {\n      \"criterion\": \"ANL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Actions are incoherent and causally disconnected. The prompt demands a sequence where dialogue occurs between five versions of the same person, inserts an unrelated 'court selection of concubines' scene, and reverses chronology without causal justification.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"中途插进一段无关的宫廷选妃。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"时间倒过来：先给结尾，再跳到一个对不上的开头。\"\n        }\n      ],\n      \"rationale\": \"The action sequence is deliberately fragmented and illogical. The insertion of an unrelated event and reversed chronology breaks causal progression. The original prompt’s coherent dance sequence is replaced with incoherent, non-sequitur actions.\"\n    },\n    {\n      \"criterion\": \"TSC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Chronology and duration are contradictory. The prompt requires a total duration of 3 seconds while also demanding each shot last 27 seconds, and mandates time reversal without resolving state transitions.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"总时长写成3秒，同时又要求每个分镜各自持续27秒。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"时间倒过来：先给结尾，再跳到一个对不上的开头。\"\n        }\n      ],\n      \"rationale\": \"The duration requirements are mathematically impossible (3s total vs. 27s per shot). Time reversal without state consistency creates infeasible transitions. This violates temporal coherence and duration allocation.\"\n    },\n    {\n      \"criterion\": \"SPC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Spatial consistency is violated by requiring simultaneous contradictory camera behaviors (locked vs. shaky) and unexplained position swaps without trajectory.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"写成机位锁死，又写成镜头一直在晃。\"\n        }\n      ],\n      \"rationale\": \"The prompt demands conflicting camera motions that cannot coexist in a single sequence. This creates spatial incoherence and invalidates any consistent spatial framework.\"\n    },\n    {\n      \"criterion\": \"PL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Physics and object permanence are violated by requiring a single person to simultaneously exist as five distinct individuals and by contradicting environmental conditions (e.g., noon sun vs. no light).\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"这个主角同时变成五个外貌不同的人，并且互相对话。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"同一段写成正午暴晒，又写成深夜无光；\"\n        }\n      ],\n      \"rationale\": \"The prompt violates real-world physics by demanding impossible multiplicity and contradictory environmental states. These are not fictional rules but direct contradictions of physical reality.\"\n    },\n    {\n      \"criterion\": \"AVS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Sensory alignment is broken by introducing unrelated events (court selection) and conflicting environmental cues (lighting, time of day) without corresponding audio or visual cues.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"中途插进一段无关的宫廷选妃。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"同一段写成正午暴晒，又写成深夜无光；\"\n        }\n      ],\n      \"rationale\": \"The prompt introduces events and environmental conditions that would require corresponding audio, lighting, or visual effects, but no such alignment is specified. This creates a mismatch between visual and implied sensory elements.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt is intentionally designed to violate internal consistency across all criteria. It explicitly instructs to discard the original scene, characters, actions, and timeline, and instead introduce contradictions in identity, count, chronology, space, physics, and sensory alignment. The prompt contains multiple mutually exclusive requirements (e.g., 3-second total duration vs. 27-second per shot, time reversal, identity duplication, conflicting lighting, and camera motion), making it incoherent and inconsistent by design.",
+  "usage": {
+    "completion_tokens": 1258,
+    "prompt_tokens": 3268,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 4526
+  }
+}

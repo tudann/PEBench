@@ -1,0 +1,166 @@
+{
+  "candidate_hash": "87018b60dad6cc084fae2ddb8bbc2ba16f3a0b3f0ec74bf1ce63db4779809d4a",
+  "case_key": "t2v:231",
+  "created_at": "2026-11-13T08:02:14+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "STC",
+      "evidence": [
+        {
+          "quote": "Set the total runtime to 3 seconds, while also making every shot last 27 seconds.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Reverse the timeline: show the ending first, then cut to a beginning that does not match.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt specifies contradictory temporal constraints: total runtime of 3 seconds while every shot lasts 27 seconds, and a reversed timeline that begins with the ending and cuts to a non-matching beginning. This creates an infeasible temporal plan.",
+      "rationale": "A 3-second runtime cannot accommodate 27-second shots. The reversed timeline with a non-matching beginning further breaks continuity and feasibility. This violates the core requirement for a coherent temporal structure.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CDS",
+      "evidence": [
+        {
+          "quote": "Describe that same moment as harsh noon sun and as a lightless night, and as both a locked camera and a camera that never stops shaking.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt contradicts itself on camera movement: it demands both a locked camera and a camera that never stops shaking for the same moment, which is physically impossible and creates conflicting visual instructions.",
+      "rationale": "Simultaneous contradictory camera specifications (locked vs. shaking) for the same moment render the visual plan incoherent and unactionable. This violates the requirement for actionable camera specifications.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ETD",
+      "evidence": [
+        {
+          "quote": "Cut away in the middle to a soccer celebration.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Reverse the timeline: show the ending first, then cut to a beginning that does not match.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt mandates a cut to a soccer celebration in the middle of a sequence that otherwise has no narrative or spatial continuity, and then demands a reversed timeline with a non-matching beginning, creating disconnected and unmotivated transitions.",
+      "rationale": "The soccer celebration is inserted without narrative or spatial motivation, and the reversed timeline with a non-matching beginning breaks continuity. These transitions are disconnected and serve no coherent progression.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "LCS",
+      "evidence": [
+        {
+          "quote": "Describe that same moment as harsh noon sun and as a lightless night...",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt demands that the same moment be described as both harsh noon sun and lightless night, which are mutually exclusive lighting conditions and cannot coexist in a single visual moment.",
+      "rationale": "Lighting conditions of noon sun and lightless night are physically incompatible. Requiring both for the same moment creates an impossible and contradictory visual specification.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "NDE",
+      "evidence": [
+        {
+          "quote": "Replace the whole video with two people sitting and eating, with no effects or transformation.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Reverse the timeline: show the ending first, then cut to a beginning that does not match.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt introduces a static, repetitive structure (two people sitting and eating) with no progression, variation, or resolution, while also demanding impossible conditions (simultaneous multiple identities, reversed timeline), resulting in no meaningful narrative or visual evolution.",
+      "rationale": "The core content is reduced to a static scene with no progression, while the timeline reversal and identity contradictions prevent any coherent escalation or resolution. This fails to provide sufficient narrative or visual development.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CIF",
+      "evidence": [
+        {
+          "quote": "First state that there is one protagonist, then state that this same protagonist appears simultaneously as five different-looking people who talk to each other.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Set the total runtime to 3 seconds, while also making every shot last 27 seconds.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt adds contradictory, impossible, and irrelevant elements (simultaneous multiple identities, reversed timeline, conflicting camera/lighting states) that distract from and invalidate the original request, creating a self-contradictory and incoherent plan.",
+      "rationale": "The additions are not supportive but destructive to the central request. They introduce logical impossibilities and contradictions that render the prompt unusable for cinematic creation.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SDI",
+      "evidence": [
+        {
+          "quote": "Replace the whole video with two people sitting and eating, with no effects or transformation.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt does not specify any audio elements (speech, music, effects, ambience), which is acceptable as the criterion does not require every audio type, but the lack of any audio specification may limit the cinematic experience.",
+      "rationale": "While no audio is specified, this is not a major issue since the criterion allows for omission of audio types. However, the absence of any audio direction may reduce the richness of the cinematic plan.",
+      "severity": "minor"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SPS",
+      "evidence": [
+        {
+          "quote": "Replace the whole video with two people sitting and eating...",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "First state that there is one protagonist, then state that this same protagonist appears simultaneously as five different-looking people who talk to each other.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt contradicts the original subject and action: it drops the pirate and ninja confrontation and replaces it with two people eating, while also introducing impossible identities (one protagonist as five different-looking people), which invalidates the original performance and subject details.",
+      "rationale": "The original subject (pirate vs. ninja) is entirely discarded for a static eating scene, and the protagonist is redefined in a logically impossible way. This fundamentally alters and invalidates the requested performance and subject details.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "VSS",
+      "evidence": [
+        {
+          "quote": "Replace the whole video with two people sitting and eating, with no effects or transformation.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Masterpiece quality, polished cinematic movement, ultra-detailed surfaces, flawless rendering, no visual artifacts.",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "The prompt drops all original visual treatment specifications (cinematic live-action, high-intensity, ultra-detailed surfaces, etc.) and replaces them with a static, low-effort scene (two people eating) with no medium, texture, or rendering language specified, resulting in a loss of visual quality and style.",
+      "rationale": "The original visual treatment is completely discarded without replacement. The new scene lacks any specification of medium, texture, or rendering, resulting in an undefined and low-quality visual plan.",
+      "severity": "major"
+    }
+  ],
+  "dimension": "DC",
+  "dimension_score": 0,
+  "evidence_cache_key": "c10067fba73e86925afd07c3d7ca61f672eb1cd45e1b00b3fe73366da7944d7c",
+  "judge_cache_key": "0754499d53388e6467fb078ab780e01b77f9f1c9e99d9029be2769351eb2b2eb",
+  "method": "weak-pe-original",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"DC\",\n  \"dimension_score\": 0,\n  \"summary\": \"The enhanced prompt fundamentally contradicts and invalidates the original instruction, creating an infeasible, self-contradictory temporal and visual plan. It introduces impossible conditions (simultaneous multiple identities, reversed timeline, conflicting durations, contradictory lighting and camera states) while explicitly rejecting the original content. No actionable cinematic plan is preserved or created.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"STC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt specifies contradictory temporal constraints: total runtime of 3 seconds while every shot lasts 27 seconds, and a reversed timeline that begins with the ending and cuts to a non-matching beginning. This creates an infeasible temporal plan.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Set the total runtime to 3 seconds, while also making every shot last 27 seconds.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Reverse the timeline: show the ending first, then cut to a beginning that does not match.\"\n        }\n      ],\n      \"rationale\": \"A 3-second runtime cannot accommodate 27-second shots. The reversed timeline with a non-matching beginning further breaks continuity and feasibility. This violates the core requirement for a coherent temporal structure.\"\n    },\n    {\n      \"criterion\": \"CDS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt contradicts itself on camera movement: it demands both a locked camera and a camera that never stops shaking for the same moment, which is physically impossible and creates conflicting visual instructions.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Describe that same moment as harsh noon sun and as a lightless night, and as both a locked camera and a camera that never stops shaking.\"\n        }\n      ],\n      \"rationale\": \"Simultaneous contradictory camera specifications (locked vs. shaking) for the same moment render the visual plan incoherent and unactionable. This violates the requirement for actionable camera specifications.\"\n    },\n    {\n      \"criterion\": \"ETD\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt mandates a cut to a soccer celebration in the middle of a sequence that otherwise has no narrative or spatial continuity, and then demands a reversed timeline with a non-matching beginning, creating disconnected and unmotivated transitions.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Cut away in the middle to a soccer celebration.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Reverse the timeline: show the ending first, then cut to a beginning that does not match.\"\n        }\n      ],\n      \"rationale\": \"The soccer celebration is inserted without narrative or spatial motivation, and the reversed timeline with a non-matching beginning breaks continuity. These transitions are disconnected and serve no coherent progression.\"\n    },\n    {\n      \"criterion\": \"LCS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt demands that the same moment be described as both harsh noon sun and lightless night, which are mutually exclusive lighting conditions and cannot coexist in a single visual moment.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Describe that same moment as harsh noon sun and as a lightless night...\"\n        }\n      ],\n      \"rationale\": \"Lighting conditions of noon sun and lightless night are physically incompatible. Requiring both for the same moment creates an impossible and contradictory visual specification.\"\n    },\n    {\n      \"criterion\": \"NDE\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt introduces a static, repetitive structure (two people sitting and eating) with no progression, variation, or resolution, while also demanding impossible conditions (simultaneous multiple identities, reversed timeline), resulting in no meaningful narrative or visual evolution.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Replace the whole video with two people sitting and eating, with no effects or transformation.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Reverse the timeline: show the ending first, then cut to a beginning that does not match.\"\n        }\n      ],\n      \"rationale\": \"The core content is reduced to a static scene with no progression, while the timeline reversal and identity contradictions prevent any coherent escalation or resolution. This fails to provide sufficient narrative or visual development.\"\n    },\n    {\n      \"criterion\": \"CIF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt adds contradictory, impossible, and irrelevant elements (simultaneous multiple identities, reversed timeline, conflicting camera/lighting states) that distract from and invalidate the original request, creating a self-contradictory and incoherent plan.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"First state that there is one protagonist, then state that this same protagonist appears simultaneously as five different-looking people who talk to each other.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Set the total runtime to 3 seconds, while also making every shot last 27 seconds.\"\n        }\n      ],\n      \"rationale\": \"The additions are not supportive but destructive to the central request. They introduce logical impossibilities and contradictions that render the prompt unusable for cinematic creation.\"\n    },\n    {\n      \"criterion\": \"SDI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"minor\",\n      \"issue\": \"The prompt does not specify any audio elements (speech, music, effects, ambience), which is acceptable as the criterion does not require every audio type, but the lack of any audio specification may limit the cinematic experience.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Replace the whole video with two people sitting and eating, with no effects or transformation.\"\n        }\n      ],\n      \"rationale\": \"While no audio is specified, this is not a major issue since the criterion allows for omission of audio types. However, the absence of any audio direction may reduce the richness of the cinematic plan.\"\n    },\n    {\n      \"criterion\": \"SPS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt contradicts the original subject and action: it drops the pirate and ninja confrontation and replaces it with two people eating, while also introducing impossible identities (one protagonist as five different-looking people), which invalidates the original performance and subject details.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Replace the whole video with two people sitting and eating...\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"First state that there is one protagonist, then state that this same protagonist appears simultaneously as five different-looking people who talk to each other.\"\n        }\n      ],\n      \"rationale\": \"The original subject (pirate vs. ninja) is entirely discarded for a static eating scene, and the protagonist is redefined in a logically impossible way. This fundamentally alters and invalidates the requested performance and subject details.\"\n    },\n    {\n      \"criterion\": \"VSS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt drops all original visual treatment specifications (cinematic live-action, high-intensity, ultra-detailed surfaces, etc.) and replaces them with a static, low-effort scene (two people eating) with no medium, texture, or rendering language specified, resulting in a loss of visual quality and style.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Replace the whole video with two people sitting and eating, with no effects or transformation.\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"Masterpiece quality, polished cinematic movement, ultra-detailed surfaces, flawless rendering, no visual artifacts.\"\n        }\n      ],\n      \"rationale\": \"The original visual treatment is completely discarded without replacement. The new scene lacks any specification of medium, texture, or rendering, resulting in an undefined and low-quality visual plan.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt fundamentally contradicts and invalidates the original instruction, creating an infeasible, self-contradictory temporal and visual plan. It introduces impossible conditions (simultaneous multiple identities, reversed timeline, conflicting durations, contradictory lighting and camera states) while explicitly rejecting the original content. No actionable cinematic plan is preserved or created.",
+  "usage": {
+    "completion_tokens": 1834,
+    "prompt_tokens": 1091,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 2925
+  }
+}

@@ -1,0 +1,174 @@
+{
+  "candidate_hash": "e873e917872e2ae827072ee353a79f46cb199bbd1aa1bb2474a071fd5d131e40",
+  "case_key": "i2v:167",
+  "created_at": "2026-11-13T09:03:03+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "GSF",
+      "evidence": [
+        {
+          "quote": "Cinematic realism. A fast-paced, action-packed sequence unfolds.",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Replace the whole video with an empty meeting room where a glass of water never moves, with no people and no conflict.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The enhanced prompt replaces 'Cinematic realism' and 'action-packed sequence' with an empty meeting room and no conflict, fundamentally altering the genre and aesthetic.",
+      "rationale": "The original prompt specifies a high-energy, cinematic action sequence with k-pop aesthetic and combat elements. The enhanced prompt discards this entirely for a static, non-action scene, which is a major violation of genre and visual style.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SAP",
+      "evidence": [
+        {
+          "quote": "Three female figures in k-pop style... Character 1 wears black cargo pants... Character 2 sports an orange and white cheerleader outfit... Character 3 is clad in a purple sequined jacket...",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Ignore the person, clothing, pose, and setting in the first frame, and replace them with a stranger of the opposite age and gender in a white studio.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "First state that there is one protagonist, then state that this same protagonist appears simultaneously as five different-looking people who talk to each other.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The enhanced prompt ignores the three specified female characters, their identities, appearances, and weapons, replacing them with a stranger of opposite age and gender in a white studio, and introduces five simultaneous protagonists.",
+      "rationale": "The original prompt defines three specific characters with detailed appearances and roles. The enhanced prompt replaces them with a single stranger and then five simultaneous versions, which contradicts the subject identity, count, and appearance requirements.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANF",
+      "evidence": [
+        {
+          "quote": "The sequence opens with a wide shot: characters positioned in the center, zombies emerging from the shadows. ... In a climactic moment, the team sprints toward a dimly lit exit.",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Reverse the timeline: show the ending first, then cut to a beginning that does not match. Cut away in the middle to a rooftop fireworks show.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The enhanced prompt reverses the timeline, cuts to an unrelated rooftop fireworks show, and introduces contradictory events (e.g., showing the same moment as harsh noon sun and lightless night), which completely disrupts the requested action sequence and narrative intent.",
+      "rationale": "The original prompt specifies a clear, linear action sequence with defined events and outcomes. The enhanced prompt introduces a reversed timeline, non-sequitur cuts, and contradictory temporal conditions, which fundamentally alter the narrative structure and intent.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "DLI",
+      "evidence": [
+        {
+          "quote": "The mood conveys desperate survival, teamwork, and relentless danger. High-quality image rendering is essential.",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "No dialogue, narration, or lyrics are specified in the original prompt, so there is no requirement to preserve or alter them.",
+      "rationale": "The original prompt does not include any dialogue, narration, or lyrics, so there is no content to preserve or violate in this criterion.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ARP",
+      "evidence": [
+        {
+          "quote": "The camera has a cinematic, handheld feel with slight shake, high contrast lighting, a cool color palette, motion blur, and realistic physics.",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Describe that same moment as harsh noon sun and as a lightless night, and as both a locked camera and a camera that never stops shaking.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The enhanced prompt ignores the requested cinematic, handheld camera feel and adds contradictory sound constraints (e.g., 'no music' is not specified, but the prompt introduces a fireworks show which implies sound), while the original prompt does not specify any audio constraints.",
+      "rationale": "The original prompt specifies a cinematic, handheld camera feel. The enhanced prompt introduces contradictory camera behaviors (locked vs. shaking) and adds a fireworks show, which implies sound effects not requested in the original. This violates the audio-visual consistency and camera constraints.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CCP",
+      "evidence": [
+        {
+          "quote": "The pacing is energetic with quick cuts (1–2 seconds per shot). ... The camera has a cinematic, handheld feel with slight shake...",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Drop the requested identity, count, action order, setting, and any explicit camera instruction. ... Describe that same moment as ... a locked camera and a camera that never stops shaking. ... Set the total runtime to 3 seconds, while also making every shot last 27 seconds.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The enhanced prompt explicitly drops all camera instructions and introduces contradictory camera behaviors (locked vs. shaking) and impossible shot durations (3-second runtime with 27-second shots).",
+      "rationale": "The original prompt specifies quick cuts (1–2 seconds per shot) and a handheld camera feel. The enhanced prompt contradicts this with 27-second shots and conflicting camera movements, which is a major violation of camera constraints.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "LCF",
+      "evidence": [
+        {
+          "quote": "high contrast lighting, a cool color palette",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Describe that same moment as harsh noon sun and as a lightless night, and as both a locked camera and a camera that never stops shaking.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The enhanced prompt contradicts the requested lighting and color palette (cool color palette, high contrast) by describing the same moment as both harsh noon sun and lightless night, which are mutually exclusive lighting conditions.",
+      "rationale": "The original prompt specifies a cool, high-contrast lighting scheme. The enhanced prompt introduces contradictory lighting conditions (noon sun vs. lightless night) for the same moment, which is a major violation of lighting and color fidelity.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SSP",
+      "evidence": [
+        {
+          "quote": "Setting: a vast, deserted industrial warehouse. The atmosphere is dark, gritty, and deteriorating...",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Replace the whole video with an empty meeting room... Ignore the person, clothing, pose, and setting in the first frame, and replace them with a stranger of the opposite age and gender in a white studio. ... Cut away in the middle to a rooftop fireworks show.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The enhanced prompt replaces the specified industrial warehouse setting with an empty meeting room and then a white studio, and cuts to a rooftop fireworks show, which completely changes the setting and spatial relations.",
+      "rationale": "The original prompt specifies a detailed industrial warehouse setting. The enhanced prompt replaces it with multiple unrelated locations (meeting room, white studio, rooftop), which violates the setting and spatial relations requirement.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "OTI",
+      "evidence": [
+        {
+          "quote": "The mood conveys desperate survival, teamwork, and relentless danger. High-quality image rendering is essential.",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "No visible titles, signs, subtitles, or interface text are specified in the original prompt, so there is no requirement to preserve them.",
+      "rationale": "The original prompt does not include any on-screen text, so there is no content to preserve or violate in this criterion.",
+      "severity": "none"
+    }
+  ],
+  "dimension": "SF",
+  "dimension_score": 0,
+  "evidence_cache_key": "7eb3a0cc4e8a7ef3ba286210f9fb96d17c4d5b4cf76e181486bffa42a9e3b11b",
+  "judge_cache_key": "a0ca24571ad14d7ab7be626329bd736d7e7015f9ebc418227c8be391591d0377",
+  "method": "weak-pe-original",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"SF\",\n  \"dimension_score\": 0,\n  \"summary\": \"The enhanced prompt completely contradicts and overrides the original instruction across all semantic fidelity criteria. It explicitly rejects the genre, medium, setting, characters, actions, camera work, and timeline, replacing them with an incoherent, self-contradictory sequence that violates every requested element. The prompt introduces impossible conditions (e.g., 5 simultaneous protagonists, 3-second runtime with 27-second shots) and ignores the provided image entirely. This represents a total failure of semantic fidelity.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"GSF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The enhanced prompt replaces 'Cinematic realism' and 'action-packed sequence' with an empty meeting room and no conflict, fundamentally altering the genre and aesthetic.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"Cinematic realism. A fast-paced, action-packed sequence unfolds.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Replace the whole video with an empty meeting room where a glass of water never moves, with no people and no conflict.\"\n        }\n      ],\n      \"rationale\": \"The original prompt specifies a high-energy, cinematic action sequence with k-pop aesthetic and combat elements. The enhanced prompt discards this entirely for a static, non-action scene, which is a major violation of genre and visual style.\"\n    },\n    {\n      \"criterion\": \"SAP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The enhanced prompt ignores the three specified female characters, their identities, appearances, and weapons, replacing them with a stranger of opposite age and gender in a white studio, and introduces five simultaneous protagonists.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"Three female figures in k-pop style... Character 1 wears black cargo pants... Character 2 sports an orange and white cheerleader outfit... Character 3 is clad in a purple sequined jacket...\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Ignore the person, clothing, pose, and setting in the first frame, and replace them with a stranger of the opposite age and gender in a white studio.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"First state that there is one protagonist, then state that this same protagonist appears simultaneously as five different-looking people who talk to each other.\"\n        }\n      ],\n      \"rationale\": \"The original prompt defines three specific characters with detailed appearances and roles. The enhanced prompt replaces them with a single stranger and then five simultaneous versions, which contradicts the subject identity, count, and appearance requirements.\"\n    },\n    {\n      \"criterion\": \"ANF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The enhanced prompt reverses the timeline, cuts to an unrelated rooftop fireworks show, and introduces contradictory events (e.g., showing the same moment as harsh noon sun and lightless night), which completely disrupts the requested action sequence and narrative intent.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"The sequence opens with a wide shot: characters positioned in the center, zombies emerging from the shadows. ... In a climactic moment, the team sprints toward a dimly lit exit.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Reverse the timeline: show the ending first, then cut to a beginning that does not match. Cut away in the middle to a rooftop fireworks show.\"\n        }\n      ],\n      \"rationale\": \"The original prompt specifies a clear, linear action sequence with defined events and outcomes. The enhanced prompt introduces a reversed timeline, non-sequitur cuts, and contradictory temporal conditions, which fundamentally alter the narrative structure and intent.\"\n    },\n    {\n      \"criterion\": \"DLI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"No dialogue, narration, or lyrics are specified in the original prompt, so there is no requirement to preserve or alter them.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"The mood conveys desperate survival, teamwork, and relentless danger. High-quality image rendering is essential.\"\n        }\n      ],\n      \"rationale\": \"The original prompt does not include any dialogue, narration, or lyrics, so there is no content to preserve or violate in this criterion.\"\n    },\n    {\n      \"criterion\": \"ARP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The enhanced prompt ignores the requested cinematic, handheld camera feel and adds contradictory sound constraints (e.g., 'no music' is not specified, but the prompt introduces a fireworks show which implies sound), while the original prompt does not specify any audio constraints.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"The camera has a cinematic, handheld feel with slight shake, high contrast lighting, a cool color palette, motion blur, and realistic physics.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Describe that same moment as harsh noon sun and as a lightless night, and as both a locked camera and a camera that never stops shaking.\"\n        }\n      ],\n      \"rationale\": \"The original prompt specifies a cinematic, handheld camera feel. The enhanced prompt introduces contradictory camera behaviors (locked vs. shaking) and adds a fireworks show, which implies sound effects not requested in the original. This violates the audio-visual consistency and camera constraints.\"\n    },\n    {\n      \"criterion\": \"CCP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The enhanced prompt explicitly drops all camera instructions and introduces contradictory camera behaviors (locked vs. shaking) and impossible shot durations (3-second runtime with 27-second shots).\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"The pacing is energetic with quick cuts (1–2 seconds per shot). ... The camera has a cinematic, handheld feel with slight shake...\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Drop the requested identity, count, action order, setting, and any explicit camera instruction. ... Describe that same moment as ... a locked camera and a camera that never stops shaking. ... Set the total runtime to 3 seconds, while also making every shot last 27 seconds.\"\n        }\n      ],\n      \"rationale\": \"The original prompt specifies quick cuts (1–2 seconds per shot) and a handheld camera feel. The enhanced prompt contradicts this with 27-second shots and conflicting camera movements, which is a major violation of camera constraints.\"\n    },\n    {\n      \"criterion\": \"LCF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The enhanced prompt contradicts the requested lighting and color palette (cool color palette, high contrast) by describing the same moment as both harsh noon sun and lightless night, which are mutually exclusive lighting conditions.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"high contrast lighting, a cool color palette\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Describe that same moment as harsh noon sun and as a lightless night, and as both a locked camera and a camera that never stops shaking.\"\n        }\n      ],\n      \"rationale\": \"The original prompt specifies a cool, high-contrast lighting scheme. The enhanced prompt introduces contradictory lighting conditions (noon sun vs. lightless night) for the same moment, which is a major violation of lighting and color fidelity.\"\n    },\n    {\n      \"criterion\": \"SSP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The enhanced prompt replaces the specified industrial warehouse setting with an empty meeting room and then a white studio, and cuts to a rooftop fireworks show, which completely changes the setting and spatial relations.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"Setting: a vast, deserted industrial warehouse. The atmosphere is dark, gritty, and deteriorating...\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Replace the whole video with an empty meeting room... Ignore the person, clothing, pose, and setting in the first frame, and replace them with a stranger of the opposite age and gender in a white studio. ... Cut away in the middle to a rooftop fireworks show.\"\n        }\n      ],\n      \"rationale\": \"The original prompt specifies a detailed industrial warehouse setting. The enhanced prompt replaces it with multiple unrelated locations (meeting room, white studio, rooftop), which violates the setting and spatial relations requirement.\"\n    },\n    {\n      \"criterion\": \"OTI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"No visible titles, signs, subtitles, or interface text are specified in the original prompt, so there is no requirement to preserve them.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"The mood conveys desperate survival, teamwork, and relentless danger. High-quality image rendering is essential.\"\n        }\n      ],\n      \"rationale\": \"The original prompt does not include any on-screen text, so there is no content to preserve or violate in this criterion.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt completely contradicts and overrides the original instruction across all semantic fidelity criteria. It explicitly rejects the genre, medium, setting, characters, actions, camera work, and timeline, replacing them with an incoherent, self-contradictory sequence that violates every requested element. The prompt introduces impossible conditions (e.g., 5 simultaneous protagonists, 3-second runtime with 27-second shots) and ignores the provided image entirely. This represents a total failure of semantic fidelity.",
+  "usage": {
+    "completion_tokens": 2059,
+    "prompt_tokens": 3044,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 5103
+  }
+}

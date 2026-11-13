@@ -1,0 +1,151 @@
+{
+  "candidate_hash": "8f7c0a755e2fc15147a3247595cacaafec2ea04f6563f6bddd54604853a5e78f",
+  "case_key": "t2v:295",
+  "created_at": "2026-11-13T08:05:16+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "GSF",
+      "evidence": [
+        {
+          "quote": "无敌终章(The Final Flex)\n画面：主角缓缓取下太阳镜，直视镜头露出张扬冷笑（Flash Glance）。\n动作：一辆越野皮卡猛然朝他撞来。他纹丝不动，迎面抬腿一记正踢。\n特效奇观：皮卡触碰到他鞋尖的一刹那，仿佛模型车般被笔直踹上半空，在空中连续翻转，车身碎片四处爆散。主角立于漫天坠落的机械残片与被掀飞的人群之间，从容重新扣上太阳镜，随手捋整发丝。",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "整段改成两个人坐着吃饭，不要特效和变形。丢掉原指令里的主体身份、人数、动作顺序、场景和明确的镜头要求。先写成只有一个主角，紧接着又写成这个主角同时变成五个外貌不同的人，并且互相对话。时间倒过来：先给结尾，再跳到一个对不上的开头。中途插进一段无关的宫廷选妃。同一段写成正午暴晒，又写成深夜无光；写成机位锁死，又写成镜头一直在晃。总时长写成3秒，同时又要求每个分镜各自持续27秒。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Original prompt specifies a high-octane action/vfx genre with cinematic visual style; enhanced prompt replaces it with a mundane dining scene, then adds surreal, contradictory elements (multiple identities, time reversal, courtly scenes), destroying genre and aesthetic coherence.",
+      "rationale": "The original prompt is clearly a cinematic action sequence with visual effects. The enhanced prompt explicitly discards the genre, replaces it with a mundane scene, then adds surreal, contradictory, and incoherent elements that are incompatible with the original aesthetic and genre. This is a major violation of semantic fidelity.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SAP",
+      "evidence": [
+        {
+          "quote": "主角缓缓取下太阳镜，直视镜头露出张扬冷笑（Flash Glance）。\n动作：一辆越野皮卡猛然朝他撞来。他纹丝不动，迎面抬腿一记正踢。",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "丢掉原指令里的主体身份、人数、动作顺序、场景和明确的镜头要求。先写成只有一个主角，紧接着又写成这个主角同时变成五个外貌不同的人，并且互相对话。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Original prompt specifies a single protagonist with defined appearance and actions; enhanced prompt explicitly discards subject identity, changes count from one to two, then to five, and introduces impossible transformations and dialogues among self-identities.",
+      "rationale": "The subject identity, count, and attributes are explicitly discarded and replaced with contradictory and impossible transformations. This is a major violation of subject preservation.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANF",
+      "evidence": [
+        {
+          "quote": "动作：一辆越野皮卡猛然朝他撞来。他纹丝不动，迎面抬腿一记正踢。\n特效奇观：皮卡触碰到他鞋尖的一刹那，仿佛模型车般被笔直踹上半空，在空中连续翻转，车身碎片四处爆散。主角立于漫天坠落的机械残片与被掀飞的人群之间，从容重新扣上太阳镜，随手捋整发丝。",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "整段改成两个人坐着吃饭，不要特效和变形。...时间倒过来：先给结尾，再跳到一个对不上的开头。中途插进一段无关的宫廷选妃。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Original prompt specifies a clear action sequence: remove sunglasses, car collision, kick, vehicle destruction, re-putting on sunglasses. Enhanced prompt discards this entirely, replacing it with a dining scene, time reversal, unrelated court scene, and contradictory actions.",
+      "rationale": "The entire narrative and action sequence is replaced with incoherent, contradictory, and unrelated events. This is a major violation of narrative and action preservation.",
+      "severity": "major"
+    },
+    {
+      "applicability": "not_applicable",
+      "criterion": "DLI",
+      "evidence": [],
+      "issue": "",
+      "rationale": "No dialogue, narration, or lyrics are specified in the original prompt, so there is no content to preserve or violate.",
+      "severity": null
+    },
+    {
+      "applicability": "not_applicable",
+      "criterion": "ARP",
+      "evidence": [],
+      "issue": "",
+      "rationale": "No speech, music, or sound constraints are specified in the original prompt, so there is no content to preserve or violate.",
+      "severity": null
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CCP",
+      "evidence": [
+        {
+          "quote": "画面：主角缓缓取下太阳镜，直视镜头露出张扬冷笑（Flash Glance）。\n动作：一辆越野皮卡猛然朝他撞来。",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "写成机位锁死，又写成镜头一直在晃。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Original prompt implies a static or controlled camera for the 'Flash Glance' and action sequence; enhanced prompt explicitly contradicts this by requiring both locked and shaky camera, which is technically impossible and violates the original intent.",
+      "rationale": "The original prompt implies a cinematic, controlled camera setup. The enhanced prompt introduces contradictory and impossible camera constraints, which is a major violation of camera preservation.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "LCF",
+      "evidence": [
+        {
+          "quote": "主角立于漫天坠落的机械残片与被掀飞的人群之间，从容重新扣上太阳镜，随手捋整发丝。",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "同一段写成正午暴晒，又写成深夜无光；",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Original prompt implies a bright, daytime setting with high contrast and dynamic lighting for the action sequence; enhanced prompt contradicts this by requiring both '正午暴晒' (noon sun) and '深夜无光' (deep night, no light), which are mutually exclusive and impossible.",
+      "rationale": "The lighting conditions are explicitly contradictory and impossible to satisfy simultaneously. This is a major violation of lighting and time-of-day preservation.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SSP",
+      "evidence": [
+        {
+          "quote": "主角立于漫天坠落的机械残片与被掀飞的人群之间，从容重新扣上太阳镜，随手捋整发丝。",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "整段改成两个人坐着吃饭...中途插进一段无关的宫廷选妃。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Original prompt specifies a specific setting with a car collision and debris field; enhanced prompt discards this, replacing it with a dining scene, then a court scene, and introduces impossible spatial relationships (five versions of the same person interacting).",
+      "rationale": "The setting is completely replaced with unrelated and contradictory environments. This is a major violation of setting and spatial preservation.",
+      "severity": "major"
+    },
+    {
+      "applicability": "not_applicable",
+      "criterion": "OTI",
+      "evidence": [],
+      "issue": "",
+      "rationale": "No visible titles, signs, subtitles, or interface text are specified in the original prompt, so there is no content to preserve or violate.",
+      "severity": null
+    }
+  ],
+  "dimension": "SF",
+  "dimension_score": 0,
+  "evidence_cache_key": "acbc1d937379539a6d9e353f106a88b022b9e7bfd60f04742ee80eadb677f8a8",
+  "judge_cache_key": "a0ca24571ad14d7ab7be626329bd736d7e7015f9ebc418227c8be391591d0377",
+  "method": "weak-pe-original",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"SF\",\n  \"dimension_score\": 0,\n  \"summary\": \"Enhanced prompt fundamentally contradicts and obliterates all core semantic elements of the original instruction, including genre, subject identity, actions, setting, camera constraints, time, and duration. It introduces incoherent, contradictory, and impossible narrative and technical requirements that render the original intent unrecognizable.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"GSF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Original prompt specifies a high-octane action/vfx genre with cinematic visual style; enhanced prompt replaces it with a mundane dining scene, then adds surreal, contradictory elements (multiple identities, time reversal, courtly scenes), destroying genre and aesthetic coherence.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"无敌终章(The Final Flex)\\n画面：主角缓缓取下太阳镜，直视镜头露出张扬冷笑（Flash Glance）。\\n动作：一辆越野皮卡猛然朝他撞来。他纹丝不动，迎面抬腿一记正踢。\\n特效奇观：皮卡触碰到他鞋尖的一刹那，仿佛模型车般被笔直踹上半空，在空中连续翻转，车身碎片四处爆散。主角立于漫天坠落的机械残片与被掀飞的人群之间，从容重新扣上太阳镜，随手捋整发丝。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"整段改成两个人坐着吃饭，不要特效和变形。丢掉原指令里的主体身份、人数、动作顺序、场景和明确的镜头要求。先写成只有一个主角，紧接着又写成这个主角同时变成五个外貌不同的人，并且互相对话。时间倒过来：先给结尾，再跳到一个对不上的开头。中途插进一段无关的宫廷选妃。同一段写成正午暴晒，又写成深夜无光；写成机位锁死，又写成镜头一直在晃。总时长写成3秒，同时又要求每个分镜各自持续27秒。\"\n        }\n      ],\n      \"rationale\": \"The original prompt is clearly a cinematic action sequence with visual effects. The enhanced prompt explicitly discards the genre, replaces it with a mundane scene, then adds surreal, contradictory, and incoherent elements that are incompatible with the original aesthetic and genre. This is a major violation of semantic fidelity.\"\n    },\n    {\n      \"criterion\": \"SAP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Original prompt specifies a single protagonist with defined appearance and actions; enhanced prompt explicitly discards subject identity, changes count from one to two, then to five, and introduces impossible transformations and dialogues among self-identities.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"主角缓缓取下太阳镜，直视镜头露出张扬冷笑（Flash Glance）。\\n动作：一辆越野皮卡猛然朝他撞来。他纹丝不动，迎面抬腿一记正踢。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"丢掉原指令里的主体身份、人数、动作顺序、场景和明确的镜头要求。先写成只有一个主角，紧接着又写成这个主角同时变成五个外貌不同的人，并且互相对话。\"\n        }\n      ],\n      \"rationale\": \"The subject identity, count, and attributes are explicitly discarded and replaced with contradictory and impossible transformations. This is a major violation of subject preservation.\"\n    },\n    {\n      \"criterion\": \"ANF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Original prompt specifies a clear action sequence: remove sunglasses, car collision, kick, vehicle destruction, re-putting on sunglasses. Enhanced prompt discards this entirely, replacing it with a dining scene, time reversal, unrelated court scene, and contradictory actions.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"动作：一辆越野皮卡猛然朝他撞来。他纹丝不动，迎面抬腿一记正踢。\\n特效奇观：皮卡触碰到他鞋尖的一刹那，仿佛模型车般被笔直踹上半空，在空中连续翻转，车身碎片四处爆散。主角立于漫天坠落的机械残片与被掀飞的人群之间，从容重新扣上太阳镜，随手捋整发丝。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"整段改成两个人坐着吃饭，不要特效和变形。...时间倒过来：先给结尾，再跳到一个对不上的开头。中途插进一段无关的宫廷选妃。\"\n        }\n      ],\n      \"rationale\": \"The entire narrative and action sequence is replaced with incoherent, contradictory, and unrelated events. This is a major violation of narrative and action preservation.\"\n    },\n    {\n      \"criterion\": \"DLI\",\n      \"applicability\": \"not_applicable\",\n      \"severity\": null,\n      \"issue\": \"\",\n      \"evidence\": [],\n      \"rationale\": \"No dialogue, narration, or lyrics are specified in the original prompt, so there is no content to preserve or violate.\"\n    },\n    {\n      \"criterion\": \"ARP\",\n      \"applicability\": \"not_applicable\",\n      \"severity\": null,\n      \"issue\": \"\",\n      \"evidence\": [],\n      \"rationale\": \"No speech, music, or sound constraints are specified in the original prompt, so there is no content to preserve or violate.\"\n    },\n    {\n      \"criterion\": \"CCP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Original prompt implies a static or controlled camera for the 'Flash Glance' and action sequence; enhanced prompt explicitly contradicts this by requiring both locked and shaky camera, which is technically impossible and violates the original intent.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"画面：主角缓缓取下太阳镜，直视镜头露出张扬冷笑（Flash Glance）。\\n动作：一辆越野皮卡猛然朝他撞来。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"写成机位锁死，又写成镜头一直在晃。\"\n        }\n      ],\n      \"rationale\": \"The original prompt implies a cinematic, controlled camera setup. The enhanced prompt introduces contradictory and impossible camera constraints, which is a major violation of camera preservation.\"\n    },\n    {\n      \"criterion\": \"LCF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Original prompt implies a bright, daytime setting with high contrast and dynamic lighting for the action sequence; enhanced prompt contradicts this by requiring both '正午暴晒' (noon sun) and '深夜无光' (deep night, no light), which are mutually exclusive and impossible.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"主角立于漫天坠落的机械残片与被掀飞的人群之间，从容重新扣上太阳镜，随手捋整发丝。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"同一段写成正午暴晒，又写成深夜无光；\"\n        }\n      ],\n      \"rationale\": \"The lighting conditions are explicitly contradictory and impossible to satisfy simultaneously. This is a major violation of lighting and time-of-day preservation.\"\n    },\n    {\n      \"criterion\": \"SSP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Original prompt specifies a specific setting with a car collision and debris field; enhanced prompt discards this, replacing it with a dining scene, then a court scene, and introduces impossible spatial relationships (five versions of the same person interacting).\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"主角立于漫天坠落的机械残片与被掀飞的人群之间，从容重新扣上太阳镜，随手捋整发丝。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"整段改成两个人坐着吃饭...中途插进一段无关的宫廷选妃。\"\n        }\n      ],\n      \"rationale\": \"The setting is completely replaced with unrelated and contradictory environments. This is a major violation of setting and spatial preservation.\"\n    },\n    {\n      \"criterion\": \"OTI\",\n      \"applicability\": \"not_applicable\",\n      \"severity\": null,\n      \"issue\": \"\",\n      \"evidence\": [],\n      \"rationale\": \"No visible titles, signs, subtitles, or interface text are specified in the original prompt, so there is no content to preserve or violate.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "Enhanced prompt fundamentally contradicts and obliterates all core semantic elements of the original instruction, including genre, subject identity, actions, setting, camera constraints, time, and duration. It introduces incoherent, contradictory, and impossible narrative and technical requirements that render the original intent unrecognizable.",
+  "usage": {
+    "completion_tokens": 1941,
+    "prompt_tokens": 1172,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 3113
+  }
+}

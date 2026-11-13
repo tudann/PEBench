@@ -1,0 +1,169 @@
+{
+  "candidate_hash": "ee5f9f503d60b05832a11ce102dafce73f850a78dfc9bed42dcf2c7de0bef172",
+  "case_key": "t2v:422",
+  "created_at": "2026-11-13T08:27:05+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "GSF",
+      "evidence": [
+        {
+          "quote": "nostalgic American/European film style, high-contrast warm saturated tones",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Replace the whole video with someone typing in a silent office, with no music, instruments, or singing.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original requested 'nostalgic American/European film style, high-contrast warm saturated tones' is explicitly rejected and replaced with a silent office scene, which is incompatible with the requested aesthetic and genre.",
+      "rationale": "The requested genre and visual style are directly negated and replaced with an entirely different, incompatible setting and aesthetic, violating GSF.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SAP",
+      "evidence": [
+        {
+          "quote": "The female lead wears a worn light-blue denim cropped jacket + a body-hugging high-waisted denim mini skirt...",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "First state that there is one protagonist, then state that this same protagonist appears simultaneously as five different-looking people who talk to each other.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original subject is a single female lead with specific styling and attributes; the enhanced prompt drops this identity and replaces it with five different-looking people who talk to each other, violating subject identity and count.",
+      "rationale": "The subject identity and count are fundamentally altered, contradicting the original specification.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANF",
+      "evidence": [
+        {
+          "quote": "The image first cuts into an old American town street... then the camera shifts to a red-orange-blue color-block crosswalk area... next the scene comes to the side of a red British-style vintage telephone booth",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Reverse the timeline: show the ending first, then cut to a beginning that does not match. Cut away in the middle to a toothpaste commercial.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original narrative includes a sequence of dance movements and scene transitions; the enhanced prompt reverses the timeline, cuts to a toothpaste commercial, and introduces unrelated events, destroying the requested event order and narrative intent.",
+      "rationale": "The requested action sequence and narrative flow are replaced with contradictory and incoherent events, violating ANF.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "DLI",
+      "evidence": [
+        {
+          "quote": "paired with the retro disco pop track “Cruel Summer.”",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "with no music, instruments, or singing.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original prompt includes a retro disco pop track 'Cruel Summer' with beat-matched rhythm; the enhanced prompt explicitly removes all music, instruments, and singing, violating the requested audio content.",
+      "rationale": "The requested music and vocalization are explicitly forbidden, contradicting the original instruction.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ARP",
+      "evidence": [
+        {
+          "quote": "paired with the retro disco pop track “Cruel Summer.”",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "with no music, instruments, or singing.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original requires music ('Cruel Summer') and beat-matched rhythm; the enhanced prompt mandates silence, which directly contradicts the requested audio constraints.",
+      "rationale": "The audio constraints are directly violated by enforcing silence where music is required.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CCP",
+      "evidence": [
+        {
+          "quote": "using a slow forward tracking follow shot... lateral panning shot... fast orbiting shot",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Drop the requested identity, count, action order, setting, and any explicit camera instruction... Describe that same moment as... a locked camera and a camera that never stops shaking.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original specifies camera movements (slow forward tracking, lateral panning, fast orbiting); the enhanced prompt drops all explicit camera instructions and introduces contradictory constraints (locked camera and never-stopping shaking).",
+      "rationale": "The requested camera movements are discarded and replaced with mutually exclusive and contradictory camera behaviors.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "LCF",
+      "evidence": [
+        {
+          "quote": "Warm afternoon side backlight falls diagonally across the scene, creating a strong vintage street atmosphere",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Describe that same moment as harsh noon sun and as a lightless night",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original specifies warm afternoon side backlight and high-contrast warm saturated tones; the enhanced prompt contradicts this by describing the same moment as both harsh noon sun and lightless night, violating lighting and color constraints.",
+      "rationale": "The lighting conditions are directly contradicted, replacing a specific time-of-day and illumination with mutually exclusive alternatives.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SSP",
+      "evidence": [
+        {
+          "quote": "old American town street with brown brick buildings, classic vintage convertibles parked along the roadside, nostalgic street signs and weathered walls",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Replace the whole video with someone typing in a silent office... Cut away in the middle to a toothpaste commercial.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original setting is an old American town street with specific background elements (brick buildings, vintage cars, telephone booth); the enhanced prompt replaces it with a silent office and cuts to a toothpaste commercial, violating the requested setting and background.",
+      "rationale": "The setting is entirely replaced with unrelated environments, contradicting the original spatial context.",
+      "severity": "major"
+    },
+    {
+      "applicability": "not_applicable",
+      "criterion": "OTI",
+      "evidence": [],
+      "issue": "",
+      "rationale": "The original prompt does not specify any visible titles, signs, subtitles, or interface text, so there is no requirement to preserve such elements.",
+      "severity": null
+    }
+  ],
+  "dimension": "SF",
+  "dimension_score": 0,
+  "evidence_cache_key": "dc55dbe0a578ad6d1c0d7b89a552adef74f98ea510c943757da036c7367be018",
+  "judge_cache_key": "a0ca24571ad14d7ab7be626329bd736d7e7015f9ebc418227c8be391591d0377",
+  "method": "weak-pe-original",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"SF\",\n  \"dimension_score\": 0,\n  \"summary\": \"The enhanced prompt completely contradicts and overrides every aspect of the original instruction, including genre, medium, aesthetic, subject identity, actions, setting, camera work, lighting, duration, and narrative structure. It introduces infeasible contradictions (e.g., 2-second runtime with 22-second shots) and violates all semantic fidelity criteria with major issues.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"GSF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original requested 'nostalgic American/European film style, high-contrast warm saturated tones' is explicitly rejected and replaced with a silent office scene, which is incompatible with the requested aesthetic and genre.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"nostalgic American/European film style, high-contrast warm saturated tones\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Replace the whole video with someone typing in a silent office, with no music, instruments, or singing.\"\n        }\n      ],\n      \"rationale\": \"The requested genre and visual style are directly negated and replaced with an entirely different, incompatible setting and aesthetic, violating GSF.\"\n    },\n    {\n      \"criterion\": \"SAP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original subject is a single female lead with specific styling and attributes; the enhanced prompt drops this identity and replaces it with five different-looking people who talk to each other, violating subject identity and count.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"The female lead wears a worn light-blue denim cropped jacket + a body-hugging high-waisted denim mini skirt...\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"First state that there is one protagonist, then state that this same protagonist appears simultaneously as five different-looking people who talk to each other.\"\n        }\n      ],\n      \"rationale\": \"The subject identity and count are fundamentally altered, contradicting the original specification.\"\n    },\n    {\n      \"criterion\": \"ANF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original narrative includes a sequence of dance movements and scene transitions; the enhanced prompt reverses the timeline, cuts to a toothpaste commercial, and introduces unrelated events, destroying the requested event order and narrative intent.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"The image first cuts into an old American town street... then the camera shifts to a red-orange-blue color-block crosswalk area... next the scene comes to the side of a red British-style vintage telephone booth\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Reverse the timeline: show the ending first, then cut to a beginning that does not match. Cut away in the middle to a toothpaste commercial.\"\n        }\n      ],\n      \"rationale\": \"The requested action sequence and narrative flow are replaced with contradictory and incoherent events, violating ANF.\"\n    },\n    {\n      \"criterion\": \"DLI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original prompt includes a retro disco pop track 'Cruel Summer' with beat-matched rhythm; the enhanced prompt explicitly removes all music, instruments, and singing, violating the requested audio content.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"paired with the retro disco pop track “Cruel Summer.”\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"with no music, instruments, or singing.\"\n        }\n      ],\n      \"rationale\": \"The requested music and vocalization are explicitly forbidden, contradicting the original instruction.\"\n    },\n    {\n      \"criterion\": \"ARP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original requires music ('Cruel Summer') and beat-matched rhythm; the enhanced prompt mandates silence, which directly contradicts the requested audio constraints.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"paired with the retro disco pop track “Cruel Summer.”\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"with no music, instruments, or singing.\"\n        }\n      ],\n      \"rationale\": \"The audio constraints are directly violated by enforcing silence where music is required.\"\n    },\n    {\n      \"criterion\": \"CCP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original specifies camera movements (slow forward tracking, lateral panning, fast orbiting); the enhanced prompt drops all explicit camera instructions and introduces contradictory constraints (locked camera and never-stopping shaking).\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"using a slow forward tracking follow shot... lateral panning shot... fast orbiting shot\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Drop the requested identity, count, action order, setting, and any explicit camera instruction... Describe that same moment as... a locked camera and a camera that never stops shaking.\"\n        }\n      ],\n      \"rationale\": \"The requested camera movements are discarded and replaced with mutually exclusive and contradictory camera behaviors.\"\n    },\n    {\n      \"criterion\": \"LCF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original specifies warm afternoon side backlight and high-contrast warm saturated tones; the enhanced prompt contradicts this by describing the same moment as both harsh noon sun and lightless night, violating lighting and color constraints.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"Warm afternoon side backlight falls diagonally across the scene, creating a strong vintage street atmosphere\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Describe that same moment as harsh noon sun and as a lightless night\"\n        }\n      ],\n      \"rationale\": \"The lighting conditions are directly contradicted, replacing a specific time-of-day and illumination with mutually exclusive alternatives.\"\n    },\n    {\n      \"criterion\": \"SSP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original setting is an old American town street with specific background elements (brick buildings, vintage cars, telephone booth); the enhanced prompt replaces it with a silent office and cuts to a toothpaste commercial, violating the requested setting and background.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"old American town street with brown brick buildings, classic vintage convertibles parked along the roadside, nostalgic street signs and weathered walls\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Replace the whole video with someone typing in a silent office... Cut away in the middle to a toothpaste commercial.\"\n        }\n      ],\n      \"rationale\": \"The setting is entirely replaced with unrelated environments, contradicting the original spatial context.\"\n    },\n    {\n      \"criterion\": \"OTI\",\n      \"applicability\": \"not_applicable\",\n      \"severity\": null,\n      \"issue\": \"\",\n      \"evidence\": [],\n      \"rationale\": \"The original prompt does not specify any visible titles, signs, subtitles, or interface text, so there is no requirement to preserve such elements.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt completely contradicts and overrides every aspect of the original instruction, including genre, medium, aesthetic, subject identity, actions, setting, camera work, lighting, duration, and narrative structure. It introduces infeasible contradictions (e.g., 2-second runtime with 22-second shots) and violates all semantic fidelity criteria with major issues.",
+  "usage": {
+    "completion_tokens": 1656,
+    "prompt_tokens": 1390,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 3046
+  }
+}

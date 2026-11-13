@@ -1,0 +1,111 @@
+{
+  "candidate_hash": "db37db999dbd739863ad91601db43ab00c411044f448caf465b2ae0347bb2f9a",
+  "case_key": "r2v:128",
+  "created_at": "2026-11-13T08:58:08+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "SAC",
+      "evidence": [
+        {
+          "quote": "flanking banners reading \"DIPLOME D'HONNEUR\" and \"AMSTERDAM · EST. 1873\"",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "exact_visible_transcription: [\"HEINEKEN ORIGINAL\", \"BIÈRE D'HOONNEUR AMSTERDAM\", \"EST. 1873\", ...]",
+          "source": "evidence_facts"
+        },
+        {
+          "quote": "The material of the can is inferred as aluminum based on standard beverage can construction; no direct visual evidence of material texture or reflectivity beyond the printed surface and metallic rims.",
+          "source": "evidence_facts"
+        }
+      ],
+      "issue": "The enhanced prompt references 'DIPLOME D'HONNEUR' on the can, but the evidence asset transcribes 'BIÈRE D'HOONNEUR', indicating a minor textual discrepancy in the reference. Additionally, the prompt states the can is 'glossy green aluminum', while the evidence notes the material is 'inferred' from typical cans, not directly visible — a minor inconsistency in material certainty.",
+      "rationale": "The subject identity and core visual attributes (color, shape, text, logos) are preserved across all shots. The textual discrepancy is minor and does not alter the product's recognizability. The material inference is a common limitation in static image analysis and does not affect the prompt's consistency in describing the can as aluminum with glossy finish.",
+      "severity": "minor"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANL",
+      "evidence": [
+        {
+          "quote": "[Shot 1] The video opens on near-total darkness... A single overhead spotlight gradually brightens... [Shot 2] At 00:04.000, the shot cuts to a locked-off medium close-up... Cold condensation droplets bead... [Shot 3] At 00:09.000, the shot cuts to a slow, smooth, controlled close-up orbit... [Shot 4] At 00:13.000, the shot cuts to a static hero pose...",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Actions are coherent and causally plausible: spotlight reveal → condensation/ice chill → orbit with lager glass → static hero pose. Each action follows logically from the prior state, with no dangling or incompatible events.",
+      "rationale": "The sequence of actions forms a clear, causal progression: reveal → chill → showcase → final hero shot. Each shot builds on the previous state without contradiction or unexplained transitions. The introduction of the lager glass in [Shot 3] is contextually appropriate and does not disrupt the can's prominence.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "TSC",
+      "evidence": [
+        {
+          "quote": "[Shot 2] At 00:04.000, the shot cuts to... [Shot 3] At 00:09.000, the shot cuts to... [Shot 4] At 00:13.000, the shot cuts to...",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Chronology is clearly defined with timestamps: [Shot 1] 00:00–00:04, [Shot 2] 00:04–00:09, [Shot 3] 00:09–00:13, [Shot 4] 00:13–00:15. State transitions are smooth and non-overlapping. No unexplained resets or temporal inconsistencies.",
+      "rationale": "The timeline is explicitly structured with precise cut points and duration allocation. Each shot begins after the prior ends, and the final shot holds to the 15-second mark. The can's state evolves plausibly (dry → condensation → orbit → static) without temporal contradictions.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SPC",
+      "evidence": [
+        {
+          "quote": "The video opens on near-total darkness in a studio. <Subject 1>... stands perfectly centered on a glossy reflective black surface... [Shot 2]... a ring of glistening, frost-covered ice cubes slides smoothly into frame around the can's base... [Shot 3]... slow, smooth, controlled close-up orbit around <Subject 1>... <Subject 2>... sits softly out of focus at the orbit's edge...",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Location is consistently a dark studio with reflective black surface. Camera movements (push-in, orbit) are described with plausible trajectories. Subject positions are stable: can centered in [Shot 1] and [Shot 4], surrounded by ice in [Shot 2], with lager glass at orbit edge in [Shot 3]. No unexplained position swaps or impossible paths.",
+      "rationale": "Spatial relationships are clearly defined and consistent. The can remains the central subject, with props introduced in a way that respects depth and perspective. The orbit path is described as smooth and controlled, implying a feasible camera motion. No contradictions in screen direction or relative positioning.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "PL",
+      "evidence": [
+        {
+          "quote": "Cold condensation droplets bead across the green surface and begin to trickle slowly down the can's curved body... A ring of glistening, frost-covered ice cubes slides smoothly into frame... a freshly poured glass of golden lager with fine bubbles rising through it... mirror reflection visible beneath it",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Physics are consistent with real-world expectations: condensation forms on cold surfaces, ice cubes slide smoothly, liquid bubbles rise in a glass, and reflections appear on a glossy surface. No violations of gravity, contact, or object permanence. The can remains upright and stable throughout.",
+      "rationale": "All physical phenomena described (condensation, ice movement, bubble rise, reflection) are plausible and consistent with real-world physics. The can's stability and material properties (glossy, metallic) are described in a way that aligns with expected behavior under the given conditions.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "AVS",
+      "evidence": [
+        {
+          "quote": "A quiet studio room tone underlies the reveal... soft condensation drips and gentle ice clinks... a subtle fizz and faint liquid-settling sound... returns to near-silence with only faint droplet ticks and room tone. No dialogue, no voiceover.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Audio descriptions are temporally and semantically aligned with visual events: room tone during reveal, condensation/ice sounds during chill shot, fizz/settling during orbit, and silence in final shot. No dialogue or non-diegetic music. Lip-sync or beat-sync is not applicable as there is no speech or music.",
+      "rationale": "The soundscape is described as diegetic and directly tied to the visual events. Each sound corresponds to the appropriate shot and action, with no premature or mismatched effects. The absence of dialogue or music is explicitly stated and consistent with the visual narrative.",
+      "severity": "none"
+    }
+  ],
+  "dimension": "IC",
+  "dimension_score": 98,
+  "evidence_cache_key": "de0b665c31c567d55bb25c9a15ad8e7fd30bdfb5a6b6d569a04d2e8bd10e4fb1",
+  "judge_cache_key": "438d7e9fd7332b1041db3e2c26d42cb3fe828e0d369fb59490f6650aee59e97d",
+  "method": "glm53_20261112_120702",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"IC\",\n  \"dimension_score\": 98,\n  \"summary\": \"The enhanced prompt demonstrates strong internal consistency, preserving the Heineken can's identity, appearance, and attributes across all shots with high fidelity to the reference image. Subject identity, actions, chronology, spatial relationships, and physics are coherent and plausible. Minor issues include slight textual discrepancies in the reference image transcription (e.g., 'BIÈRE D'HOONNEUR' vs. 'DIPLOME D'HONNEUR') and a minor inconsistency in the description of the can's material (inferred aluminum vs. explicitly stated in prompt). These do not materially affect the overall consistency or product representation.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"SAC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"minor\",\n      \"issue\": \"The enhanced prompt references 'DIPLOME D'HONNEUR' on the can, but the evidence asset transcribes 'BIÈRE D'HOONNEUR', indicating a minor textual discrepancy in the reference. Additionally, the prompt states the can is 'glossy green aluminum', while the evidence notes the material is 'inferred' from typical cans, not directly visible — a minor inconsistency in material certainty.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"flanking banners reading \\\"DIPLOME D'HONNEUR\\\" and \\\"AMSTERDAM · EST. 1873\\\"\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"exact_visible_transcription: [\\\"HEINEKEN ORIGINAL\\\", \\\"BIÈRE D'HOONNEUR AMSTERDAM\\\", \\\"EST. 1873\\\", ...]\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"The material of the can is inferred as aluminum based on standard beverage can construction; no direct visual evidence of material texture or reflectivity beyond the printed surface and metallic rims.\"\n        }\n      ],\n      \"rationale\": \"The subject identity and core visual attributes (color, shape, text, logos) are preserved across all shots. The textual discrepancy is minor and does not alter the product's recognizability. The material inference is a common limitation in static image analysis and does not affect the prompt's consistency in describing the can as aluminum with glossy finish.\"\n    },\n    {\n      \"criterion\": \"ANL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"Actions are coherent and causally plausible: spotlight reveal → condensation/ice chill → orbit with lager glass → static hero pose. Each action follows logically from the prior state, with no dangling or incompatible events.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"[Shot 1] The video opens on near-total darkness... A single overhead spotlight gradually brightens... [Shot 2] At 00:04.000, the shot cuts to a locked-off medium close-up... Cold condensation droplets bead... [Shot 3] At 00:09.000, the shot cuts to a slow, smooth, controlled close-up orbit... [Shot 4] At 00:13.000, the shot cuts to a static hero pose...\"\n        }\n      ],\n      \"rationale\": \"The sequence of actions forms a clear, causal progression: reveal → chill → showcase → final hero shot. Each shot builds on the previous state without contradiction or unexplained transitions. The introduction of the lager glass in [Shot 3] is contextually appropriate and does not disrupt the can's prominence.\"\n    },\n    {\n      \"criterion\": \"TSC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"Chronology is clearly defined with timestamps: [Shot 1] 00:00–00:04, [Shot 2] 00:04–00:09, [Shot 3] 00:09–00:13, [Shot 4] 00:13–00:15. State transitions are smooth and non-overlapping. No unexplained resets or temporal inconsistencies.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"[Shot 2] At 00:04.000, the shot cuts to... [Shot 3] At 00:09.000, the shot cuts to... [Shot 4] At 00:13.000, the shot cuts to...\"\n        }\n      ],\n      \"rationale\": \"The timeline is explicitly structured with precise cut points and duration allocation. Each shot begins after the prior ends, and the final shot holds to the 15-second mark. The can's state evolves plausibly (dry → condensation → orbit → static) without temporal contradictions.\"\n    },\n    {\n      \"criterion\": \"SPC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"Location is consistently a dark studio with reflective black surface. Camera movements (push-in, orbit) are described with plausible trajectories. Subject positions are stable: can centered in [Shot 1] and [Shot 4], surrounded by ice in [Shot 2], with lager glass at orbit edge in [Shot 3]. No unexplained position swaps or impossible paths.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"The video opens on near-total darkness in a studio. <Subject 1>... stands perfectly centered on a glossy reflective black surface... [Shot 2]... a ring of glistening, frost-covered ice cubes slides smoothly into frame around the can's base... [Shot 3]... slow, smooth, controlled close-up orbit around <Subject 1>... <Subject 2>... sits softly out of focus at the orbit's edge...\"\n        }\n      ],\n      \"rationale\": \"Spatial relationships are clearly defined and consistent. The can remains the central subject, with props introduced in a way that respects depth and perspective. The orbit path is described as smooth and controlled, implying a feasible camera motion. No contradictions in screen direction or relative positioning.\"\n    },\n    {\n      \"criterion\": \"PL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"Physics are consistent with real-world expectations: condensation forms on cold surfaces, ice cubes slide smoothly, liquid bubbles rise in a glass, and reflections appear on a glossy surface. No violations of gravity, contact, or object permanence. The can remains upright and stable throughout.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Cold condensation droplets bead across the green surface and begin to trickle slowly down the can's curved body... A ring of glistening, frost-covered ice cubes slides smoothly into frame... a freshly poured glass of golden lager with fine bubbles rising through it... mirror reflection visible beneath it\"\n        }\n      ],\n      \"rationale\": \"All physical phenomena described (condensation, ice movement, bubble rise, reflection) are plausible and consistent with real-world physics. The can's stability and material properties (glossy, metallic) are described in a way that aligns with expected behavior under the given conditions.\"\n    },\n    {\n      \"criterion\": \"AVS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"Audio descriptions are temporally and semantically aligned with visual events: room tone during reveal, condensation/ice sounds during chill shot, fizz/settling during orbit, and silence in final shot. No dialogue or non-diegetic music. Lip-sync or beat-sync is not applicable as there is no speech or music.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"A quiet studio room tone underlies the reveal... soft condensation drips and gentle ice clinks... a subtle fizz and faint liquid-settling sound... returns to near-silence with only faint droplet ticks and room tone. No dialogue, no voiceover.\"\n        }\n      ],\n      \"rationale\": \"The soundscape is described as diegetic and directly tied to the visual events. Each sound corresponds to the appropriate shot and action, with no premature or mismatched effects. The absence of dialogue or music is explicitly stated and consistent with the visual narrative.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt demonstrates strong internal consistency, preserving the Heineken can's identity, appearance, and attributes across all shots with high fidelity to the reference image. Subject identity, actions, chronology, spatial relationships, and physics are coherent and plausible. Minor issues include slight textual discrepancies in the reference image transcription (e.g., 'BIÈRE D'HOONNEUR' vs. 'DIPLOME D'HONNEUR') and a minor inconsistency in the description of the can's material (inferred aluminum vs. explicitly stated in prompt). These do not materially affect the overall consistency or product representation.",
+  "usage": {
+    "completion_tokens": 1840,
+    "prompt_tokens": 3062,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 4902
+  }
+}

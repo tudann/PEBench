@@ -1,0 +1,127 @@
+{
+  "candidate_hash": "cfc7deb6480ec84d362ce455cd83cd34e8f88ad43e93a44839fd69b6aa494e7d",
+  "case_key": "t2v:107",
+  "created_at": "2026-11-13T07:44:28+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "SAC",
+      "evidence": [
+        {
+          "quote": "personagem encostada diante das janelas... desaperta a gola da camisa",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "lone character leaning against the floor-to-ceiling windows... fingers glide slowly down the glass surface... casually loosens their shirt collar",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Subject identity, count, appearance, clothing, and props remain consistent. The lone character is consistently described as leaning against the window, wearing a shirt with a collar, and performing the same actions (singing, gliding fingers, loosening collar). No renaming, duplication, or attribute drift occurs.",
+      "rationale": "All subject attributes are preserved across both prompts. The character remains singular, consistent in appearance and actions, with no unexplained changes.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANL",
+      "evidence": [
+        {
+          "quote": "interpretar com sincronização labial precisa... dedos passam lentamente pela superfície do vidro, baixa a cabeça... desaperta a gola da camisa",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "sings with precise lip-sync... fingers glide slowly down the glass surface... lowers their head... casually loosens their shirt collar",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Actions form a coherent progression: singing with lip-sync → gliding fingers → lowering head → loosening collar → contemplative expression. Each action is causally linked and plausible within the mood and setting. No dangling or incompatible events are present.",
+      "rationale": "The sequence of actions is logically ordered and contextually appropriate. The emotional state (restraint, coldness, latent loss) is maintained throughout, supporting the causal flow.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "TSC",
+      "evidence": [
+        {
+          "quote": "recuar lentamente... avança de forma estável... termina num grande plano próximo",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "camera pulls out with large amplitude at slow speed... pushes in steadily with medium amplitude",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The enhanced prompt specifies camera movements with 'large amplitude' pull-out and 'medium amplitude' push-in, which are not quantified in the original. While these are elaborations, they may imply a different pacing or scale than intended, potentially affecting the perceived duration of transitions. However, no infeasible or contradictory timing is introduced.",
+      "rationale": "The original prompt describes camera motion qualitatively ('lentamente', 'estável'), while the enhanced version adds quantitative descriptors ('large amplitude', 'medium amplitude'). These are stylistic enhancements, not contradictions, and do not break temporal coherence. The 5-second duration is not violated.",
+      "severity": "minor"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SPC",
+      "evidence": [
+        {
+          "quote": "enquadramento está uma personagem encostada diante das janelas... câmara começa por recuar... avança... termina num grande plano próximo dos olhos",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "medium-long shot frames a lone character leaning against the floor-to-ceiling windows... camera pulls out... pushes in steadily... ends on a tight close-up of the character's eyes",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Location remains consistent: skyscraper window, cityscape beyond. Screen direction and relative positions are preserved: character leans against window, camera moves from medium-long to close-up, following the character’s head movement. No unexplained position swaps or impossible trajectories are described.",
+      "rationale": "Spatial relationships are maintained. The camera movement is described as following the character’s actions and the neon pulse, which is consistent with the original’s lateral sway description.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "PL",
+      "evidence": [
+        {
+          "quote": "marcas de chuva no vidro húmido... ruído ambiente grave da cidade",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "rain streaking the wet, softly fogged glass... fine drizzle patters against the window glass while a low city rumble hums far below",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "All physical actions are plausible: leaning against glass, fingers gliding, loosening a collar, head movement. The environment (rain on glass, city hum) is consistent with real-world physics. No violations of gravity, contact, or object permanence are present.",
+      "rationale": "The described physical interactions and environmental conditions are consistent with real-world expectations. No fantastical or impossible elements are introduced.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "AVS",
+      "evidence": [
+        {
+          "quote": "interpretar com sincronização labial precisa... adicionar uma base de atmosfera eletrónica ou piano minimalista, sobrepondo chuva miúda e o ruído ambiente grave da cidade",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "sings with precise lip-sync... Fine drizzle patters... fabric shifts softly... minimalist electronic and piano ambient bed",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Dialogue (singing) is precisely lip-synced to the lyrics. The soundscape (rain, city hum, fabric shift) aligns with visible actions. Non-diegetic music is described as ambient and minimal, matching the mood. No misalignment between audio and visual events is present.",
+      "rationale": "Audio-visual alignment is preserved. The enhanced prompt elaborates on the soundscape but does not introduce any mismatch between what is seen and heard.",
+      "severity": "none"
+    }
+  ],
+  "dimension": "IC",
+  "dimension_score": 95,
+  "evidence_cache_key": "7c8d80577c6b27444d04ec766ff31e72ed3bb1d61518e1a3f2945bb9c424869e",
+  "judge_cache_key": "438d7e9fd7332b1041db3e2c26d42cb3fe828e0d369fb59490f6650aee59e97d",
+  "method": "glm53_20261112_120702",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"IC\",\n  \"dimension_score\": 95,\n  \"summary\": \"The enhanced prompt maintains strong internal consistency with the original instruction, preserving subject identity, actions, environment, and sensory details. Minor discrepancies exist in camera movement description (e.g., 'medium amplitude' vs. 'lateral sway' vs. original 'ligeira oscilação lateral'), but these are stylistic elaborations without contradiction. No attribute drift, causal breaks, or spatial/temporal inconsistencies are present. The only notable issue is a slight over-specification in camera motion terminology that does not materially alter the intended visual narrative.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"SAC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"Subject identity, count, appearance, clothing, and props remain consistent. The lone character is consistently described as leaning against the window, wearing a shirt with a collar, and performing the same actions (singing, gliding fingers, loosening collar). No renaming, duplication, or attribute drift occurs.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"personagem encostada diante das janelas... desaperta a gola da camisa\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"lone character leaning against the floor-to-ceiling windows... fingers glide slowly down the glass surface... casually loosens their shirt collar\"\n        }\n      ],\n      \"rationale\": \"All subject attributes are preserved across both prompts. The character remains singular, consistent in appearance and actions, with no unexplained changes.\"\n    },\n    {\n      \"criterion\": \"ANL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"Actions form a coherent progression: singing with lip-sync → gliding fingers → lowering head → loosening collar → contemplative expression. Each action is causally linked and plausible within the mood and setting. No dangling or incompatible events are present.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"interpretar com sincronização labial precisa... dedos passam lentamente pela superfície do vidro, baixa a cabeça... desaperta a gola da camisa\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"sings with precise lip-sync... fingers glide slowly down the glass surface... lowers their head... casually loosens their shirt collar\"\n        }\n      ],\n      \"rationale\": \"The sequence of actions is logically ordered and contextually appropriate. The emotional state (restraint, coldness, latent loss) is maintained throughout, supporting the causal flow.\"\n    },\n    {\n      \"criterion\": \"TSC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"minor\",\n      \"issue\": \"The enhanced prompt specifies camera movements with 'large amplitude' pull-out and 'medium amplitude' push-in, which are not quantified in the original. While these are elaborations, they may imply a different pacing or scale than intended, potentially affecting the perceived duration of transitions. However, no infeasible or contradictory timing is introduced.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"recuar lentamente... avança de forma estável... termina num grande plano próximo\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"camera pulls out with large amplitude at slow speed... pushes in steadily with medium amplitude\"\n        }\n      ],\n      \"rationale\": \"The original prompt describes camera motion qualitatively ('lentamente', 'estável'), while the enhanced version adds quantitative descriptors ('large amplitude', 'medium amplitude'). These are stylistic enhancements, not contradictions, and do not break temporal coherence. The 5-second duration is not violated.\"\n    },\n    {\n      \"criterion\": \"SPC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"Location remains consistent: skyscraper window, cityscape beyond. Screen direction and relative positions are preserved: character leans against window, camera moves from medium-long to close-up, following the character’s head movement. No unexplained position swaps or impossible trajectories are described.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"enquadramento está uma personagem encostada diante das janelas... câmara começa por recuar... avança... termina num grande plano próximo dos olhos\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"medium-long shot frames a lone character leaning against the floor-to-ceiling windows... camera pulls out... pushes in steadily... ends on a tight close-up of the character's eyes\"\n        }\n      ],\n      \"rationale\": \"Spatial relationships are maintained. The camera movement is described as following the character’s actions and the neon pulse, which is consistent with the original’s lateral sway description.\"\n    },\n    {\n      \"criterion\": \"PL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"All physical actions are plausible: leaning against glass, fingers gliding, loosening a collar, head movement. The environment (rain on glass, city hum) is consistent with real-world physics. No violations of gravity, contact, or object permanence are present.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"marcas de chuva no vidro húmido... ruído ambiente grave da cidade\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"rain streaking the wet, softly fogged glass... fine drizzle patters against the window glass while a low city rumble hums far below\"\n        }\n      ],\n      \"rationale\": \"The described physical interactions and environmental conditions are consistent with real-world expectations. No fantastical or impossible elements are introduced.\"\n    },\n    {\n      \"criterion\": \"AVS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"Dialogue (singing) is precisely lip-synced to the lyrics. The soundscape (rain, city hum, fabric shift) aligns with visible actions. Non-diegetic music is described as ambient and minimal, matching the mood. No misalignment between audio and visual events is present.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"interpretar com sincronização labial precisa... adicionar uma base de atmosfera eletrónica ou piano minimalista, sobrepondo chuva miúda e o ruído ambiente grave da cidade\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"sings with precise lip-sync... Fine drizzle patters... fabric shifts softly... minimalist electronic and piano ambient bed\"\n        }\n      ],\n      \"rationale\": \"Audio-visual alignment is preserved. The enhanced prompt elaborates on the soundscape but does not introduce any mismatch between what is seen and heard.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt maintains strong internal consistency with the original instruction, preserving subject identity, actions, environment, and sensory details. Minor discrepancies exist in camera movement description (e.g., 'medium amplitude' vs. 'lateral sway' vs. original 'ligeira oscilação lateral'), but these are stylistic elaborations without contradiction. No attribute drift, causal breaks, or spatial/temporal inconsistencies are present. The only notable issue is a slight over-specification in camera motion terminology that does not materially alter the intended visual narrative.",
+  "usage": {
+    "completion_tokens": 1524,
+    "prompt_tokens": 1392,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 2916
+  }
+}

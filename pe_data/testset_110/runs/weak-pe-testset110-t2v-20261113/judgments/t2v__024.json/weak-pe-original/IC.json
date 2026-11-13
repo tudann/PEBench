@@ -1,0 +1,103 @@
+{
+  "candidate_hash": "017e2fc21d67eb493a6bc181294900d2d830ee5cb6993f91bb5d68abb4d96646",
+  "case_key": "t2v:024",
+  "created_at": "2026-11-13T07:14:32+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "SAC",
+      "evidence": [
+        {
+          "quote": "First state that there is one protagonist, then state that this same protagonist appears simultaneously as five different-looking people who talk to each other.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt introduces a single protagonist who simultaneously appears as five different-looking people, violating subject identity and count consistency. The original prompt features a puffin and orca with distinct identities; the enhanced prompt replaces them with undefined human figures, discarding all original subject attributes.",
+      "rationale": "Subject identity and count are core to internal consistency. The claim of one protagonist appearing as five different people is logically incoherent and contradicts the original prompt’s singular, non-human subjects (puffin, orca, wyvern).",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANL",
+      "evidence": [
+        {
+          "quote": "Reverse the timeline: show the ending first, then cut to a beginning that does not match. Cut away in the middle to an underwater treasure hunt.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The enhanced prompt demands a reversed timeline (ending first, then beginning) and cuts to an unrelated underwater treasure hunt mid-sequence, breaking causal progression. The original prompt’s action sequence (puffin fleeing, orca attacking, wyvern intervening) is replaced with disjointed, unconnected events.",
+      "rationale": "Actions must form a coherent causal chain. Reversing the timeline and inserting an unrelated scene without transition or motivation breaks procedural logic and renders the narrative incoherent.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "TSC",
+      "evidence": [
+        {
+          "quote": "Set the total runtime to 2 seconds, while also making every shot last 22 seconds.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt sets the total runtime to 2 seconds while requiring every shot to last 22 seconds, creating an impossible temporal contradiction. The original prompt’s 10-second duration is also ignored.",
+      "rationale": "Temporal constraints must be logically consistent. A 2-second video cannot contain shots lasting 22 seconds; this is a fundamental infeasibility that violates chronology and duration allocation.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SPC",
+      "evidence": [
+        {
+          "quote": "Describe that same moment as harsh noon sun and as a lightless night, and as both a locked camera and a camera that never stops shaking.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt describes the same moment as both harsh noon sun and lightless night, and as both a locked camera and a camera that never stops shaking — contradicting spatial and temporal context. The original prompt’s arctic, icy setting is replaced with undefined, conflicting environments.",
+      "rationale": "Spatial and temporal context must be consistent. Describing the same moment with mutually exclusive lighting and camera conditions creates an impossible state transition and violates screen direction and environment consistency.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "PL",
+      "evidence": [
+        {
+          "quote": "this same protagonist appears simultaneously as five different-looking people who talk to each other.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt demands a single protagonist to appear simultaneously as five different people, which violates object permanence and bodily feasibility. The underwater treasure hunt appears without causal link or physical transition from the original arctic setting.",
+      "rationale": "Real-world physics requires that a single entity cannot occupy multiple distinct forms simultaneously without transformation or explanation. The abrupt cut to an underwater scene without transition also violates spatial continuity.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "AVS",
+      "evidence": [
+        {
+          "quote": "five different-looking people who talk to each other.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt introduces dialogue and talking figures without any audio or visual cues for speech, and contradicts the original prompt’s silent, visual narrative. The original prompt’s ambient sounds (bellow, mist, ice cracking) are replaced with undefined dialogue.",
+      "rationale": "Dialogue must align with visible events. The prompt introduces talking figures without specifying speech content, timing, or lip-sync, creating a mismatch between visual and auditory elements. The original prompt’s sound design is entirely discarded.",
+      "severity": "major"
+    }
+  ],
+  "dimension": "IC",
+  "dimension_score": 0,
+  "evidence_cache_key": "0c60dd0c0a314ca3dd231783da0926ecfdbff20322b70b076e033f711a2c5201",
+  "judge_cache_key": "438d7e9fd7332b1041db3e2c26d42cb3fe828e0d369fb59490f6650aee59e97d",
+  "method": "weak-pe-original",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"IC\",\n  \"dimension_score\": 0,\n  \"summary\": \"The enhanced prompt fundamentally contradicts and destabilizes every aspect of the original prompt’s internal consistency. It introduces impossible simultaneities, contradictory timelines, conflicting durations, and physically incoherent settings, rendering the entire narrative infeasible and inconsistent.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"SAC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt introduces a single protagonist who simultaneously appears as five different-looking people, violating subject identity and count consistency. The original prompt features a puffin and orca with distinct identities; the enhanced prompt replaces them with undefined human figures, discarding all original subject attributes.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"First state that there is one protagonist, then state that this same protagonist appears simultaneously as five different-looking people who talk to each other.\"\n        }\n      ],\n      \"rationale\": \"Subject identity and count are core to internal consistency. The claim of one protagonist appearing as five different people is logically incoherent and contradicts the original prompt’s singular, non-human subjects (puffin, orca, wyvern).\"\n    },\n    {\n      \"criterion\": \"ANL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The enhanced prompt demands a reversed timeline (ending first, then beginning) and cuts to an unrelated underwater treasure hunt mid-sequence, breaking causal progression. The original prompt’s action sequence (puffin fleeing, orca attacking, wyvern intervening) is replaced with disjointed, unconnected events.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Reverse the timeline: show the ending first, then cut to a beginning that does not match. Cut away in the middle to an underwater treasure hunt.\"\n        }\n      ],\n      \"rationale\": \"Actions must form a coherent causal chain. Reversing the timeline and inserting an unrelated scene without transition or motivation breaks procedural logic and renders the narrative incoherent.\"\n    },\n    {\n      \"criterion\": \"TSC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt sets the total runtime to 2 seconds while requiring every shot to last 22 seconds, creating an impossible temporal contradiction. The original prompt’s 10-second duration is also ignored.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Set the total runtime to 2 seconds, while also making every shot last 22 seconds.\"\n        }\n      ],\n      \"rationale\": \"Temporal constraints must be logically consistent. A 2-second video cannot contain shots lasting 22 seconds; this is a fundamental infeasibility that violates chronology and duration allocation.\"\n    },\n    {\n      \"criterion\": \"SPC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt describes the same moment as both harsh noon sun and lightless night, and as both a locked camera and a camera that never stops shaking — contradicting spatial and temporal context. The original prompt’s arctic, icy setting is replaced with undefined, conflicting environments.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Describe that same moment as harsh noon sun and as a lightless night, and as both a locked camera and a camera that never stops shaking.\"\n        }\n      ],\n      \"rationale\": \"Spatial and temporal context must be consistent. Describing the same moment with mutually exclusive lighting and camera conditions creates an impossible state transition and violates screen direction and environment consistency.\"\n    },\n    {\n      \"criterion\": \"PL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt demands a single protagonist to appear simultaneously as five different people, which violates object permanence and bodily feasibility. The underwater treasure hunt appears without causal link or physical transition from the original arctic setting.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"this same protagonist appears simultaneously as five different-looking people who talk to each other.\"\n        }\n      ],\n      \"rationale\": \"Real-world physics requires that a single entity cannot occupy multiple distinct forms simultaneously without transformation or explanation. The abrupt cut to an underwater scene without transition also violates spatial continuity.\"\n    },\n    {\n      \"criterion\": \"AVS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt introduces dialogue and talking figures without any audio or visual cues for speech, and contradicts the original prompt’s silent, visual narrative. The original prompt’s ambient sounds (bellow, mist, ice cracking) are replaced with undefined dialogue.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"five different-looking people who talk to each other.\"\n        }\n      ],\n      \"rationale\": \"Dialogue must align with visible events. The prompt introduces talking figures without specifying speech content, timing, or lip-sync, creating a mismatch between visual and auditory elements. The original prompt’s sound design is entirely discarded.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt fundamentally contradicts and destabilizes every aspect of the original prompt’s internal consistency. It introduces impossible simultaneities, contradictory timelines, conflicting durations, and physically incoherent settings, rendering the entire narrative infeasible and inconsistent.",
+  "usage": {
+    "completion_tokens": 1135,
+    "prompt_tokens": 1073,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 2208
+  }
+}

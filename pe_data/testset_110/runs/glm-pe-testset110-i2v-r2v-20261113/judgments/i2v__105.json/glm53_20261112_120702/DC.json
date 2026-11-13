@@ -1,0 +1,154 @@
+{
+  "candidate_hash": "ca5523dd034204e9e0c4b607b3c73870449facf3061d5e5c22b09fd1dc052824",
+  "case_key": "i2v:105",
+  "created_at": "2026-11-13T07:41:54+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "STC",
+      "evidence": [
+        {
+          "quote": "at 0.00 seconds into the target video, <Picture 1> (from [Shot 1]) is fully referenced.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "The woman advances very rapidly down the runway toward the camera... the dragon follows immediately behind... At around 3.5 seconds she reaches the end of the runway, stops, and strikes two short stylized poses...",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "The prompt establishes a clear temporal sequence: start at 0.00s with the reference image, continuous motion for ~3.5s, then a stop and two poses. The duration (5s) is well-allocated with a dynamic walk (3.5s) and a brief pause (1.5s). Shot boundaries are implied by the continuous take with angle shifts, which are logically ordered and feasible.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CDS",
+      "evidence": [
+        {
+          "quote": "Ultra-realistic live-action, cinematic, vertical composition, a single continuous take begins exactly from <Picture 1>... the camera follows the movement smoothly in one continuous take, starting frontal, shifting to a side angle as she passes, then returning to a frontal angle.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "The prompt specifies camera movement (smooth follow, angle shifts), shot scale (implied medium-long from context), viewpoint (frontal → side → frontal), and composition (vertical, cinematic). These are actionable and consistent with the original instruction.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ETD",
+      "evidence": [
+        {
+          "quote": "the camera follows the movement smoothly in one continuous take, starting frontal, shifting to a side angle as she passes, then returning to a frontal angle.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt does not explicitly describe transitions between the different camera angles, though they are implied as smooth shifts within a single continuous take.",
+      "rationale": "While the transitions are implied as smooth and continuous, there is no explicit mention of how the angle changes are executed (e.g., pan, dolly, tracking). This is a minor omission, as the continuity is clear and the transitions are logically motivated by the subject’s movement.",
+      "severity": "minor"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "LCS",
+      "evidence": [
+        {
+          "quote": "light_sources_and_direction: multiple chandeliers on both sides, glowing lights along the runway, ambient blue glow from dragon_1 and gown",
+          "source": "evidence_facts"
+        },
+        {
+          "quote": "color_temperature: cool, predominantly blue and white",
+          "source": "evidence_facts"
+        }
+      ],
+      "issue": "The prompt does not specify lighting sources, direction, or grading, though it inherits the visual style from the reference image.",
+      "rationale": "The lighting is not explicitly specified in the enhanced prompt, but the reference image provides sufficient context (cool blue tones, chandeliers, ambient glow). The prompt relies on the image’s lighting, which is acceptable for i2v, but a minor gap in direct specification.",
+      "severity": "minor"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "NDE",
+      "evidence": [
+        {
+          "quote": "The woman advances very rapidly... the dragon follows immediately behind... At around 3.5 seconds she reaches the end of the runway, stops, and strikes two short stylized poses...",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "The sequence shows clear progression: dynamic movement → deceleration → static poses. The escalation from motion to stillness is well-motivated and appropriate for a runway finale. No unmotivated repetition or static restatement.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CIF",
+      "evidence": [
+        {
+          "quote": "the dress train and water-like splashes trailing dynamically behind her; the dragon follows immediately behind at a similar fast, elegant, controlled pace, wings slightly folding as it moves forward.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "All additions (e.g., dynamic train, wing folding, audience reactions) are directly tied to the central request: a realistic, fast-paced runway walk with a dragon. No irrelevant padding or decorative details are introduced.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SDI",
+      "evidence": [
+        {
+          "quote": "overall_soundscape: Fast clicking footsteps of heels on the runway and the heavy measured claws of the dragon striking the floor, with fluid splashes from the trailing gown, a low reverberant hall ambience, and the murmur and phone-clicks of the elegant audience.\n\nnon_diegetic_music: Royal, regal orchestral score at a brisk tempo — blazing brass fanfare, timpani rolls and sweeping strings — building through the walk and holding a majestic peak as she poses at the end.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "The audio design is well-integrated: diegetic sounds (footsteps, claws, splashes, ambience) match the visual action, and non-diegetic music builds with the narrative arc. Timing (building during walk, peaking at poses) is specified and appropriate.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SPS",
+      "evidence": [
+        {
+          "quote": "the same woman with long wavy blue-grey hair, silver-blue crown, jeweled choker and arm cuffs, barefoot with jeweled ankle piece, wearing the iridescent blue-green corset gown... mid-stride facing the camera... advances very rapidly down the runway toward the camera with a fluid, natural, accelerated x2-like gait... strikes two short stylized poses — a hand on her hip, then a turn with her chin lifted",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "Subject appearance, movement, expression, and interaction are clearly specified. The woman’s gait, pose transitions, and the dragon’s controlled movement are detailed and consistent with the reference image and original instruction.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "VSS",
+      "evidence": [
+        {
+          "quote": "Ultra-realistic live-action, cinematic, vertical composition",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "primary_style: fantasy fashion illustration, realism: highly stylized, fantasy realism",
+          "source": "evidence_facts"
+        }
+      ],
+      "issue": "",
+      "rationale": "The visual style is specified as 'ultra-realistic live-action, cinematic' and 'vertical composition', which aligns with the original request for a vertical, ultra-realistic fashion video. The reference image’s fantasy realism is preserved without contradiction.",
+      "severity": "none"
+    }
+  ],
+  "dimension": "DC",
+  "dimension_score": 88,
+  "evidence_cache_key": "1eb0b3b49c99a9517fdde5d49d79afdf7fc8db576ebfdbf550e90bb023df3077",
+  "judge_cache_key": "0754499d53388e6467fb078ab780e01b77f9f1c9e99d9029be2769351eb2b2eb",
+  "method": "glm53_20261112_120702",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"DC\",\n  \"dimension_score\": 88,\n  \"summary\": \"The enhanced prompt provides a detailed, actionable, and coherent temporal plan with clear shot structure, camera movement, character actions, and audio design. It accurately reflects the original instruction while adding necessary cinematic specifications. Minor issues include slight over-specification in some areas (e.g., exact timing of poses) and a lack of explicit transition details between shots, but these do not materially affect the feasibility or quality of the plan. The prompt effectively supports a high-fidelity, ultra-realistic vertical fashion runway sequence with integrated sound design.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"STC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"at 0.00 seconds into the target video, <Picture 1> (from [Shot 1]) is fully referenced.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"The woman advances very rapidly down the runway toward the camera... the dragon follows immediately behind... At around 3.5 seconds she reaches the end of the runway, stops, and strikes two short stylized poses...\"\n        }\n      ],\n      \"rationale\": \"The prompt establishes a clear temporal sequence: start at 0.00s with the reference image, continuous motion for ~3.5s, then a stop and two poses. The duration (5s) is well-allocated with a dynamic walk (3.5s) and a brief pause (1.5s). Shot boundaries are implied by the continuous take with angle shifts, which are logically ordered and feasible.\"\n    },\n    {\n      \"criterion\": \"CDS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Ultra-realistic live-action, cinematic, vertical composition, a single continuous take begins exactly from <Picture 1>... the camera follows the movement smoothly in one continuous take, starting frontal, shifting to a side angle as she passes, then returning to a frontal angle.\"\n        }\n      ],\n      \"rationale\": \"The prompt specifies camera movement (smooth follow, angle shifts), shot scale (implied medium-long from context), viewpoint (frontal → side → frontal), and composition (vertical, cinematic). These are actionable and consistent with the original instruction.\"\n    },\n    {\n      \"criterion\": \"ETD\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"minor\",\n      \"issue\": \"The prompt does not explicitly describe transitions between the different camera angles, though they are implied as smooth shifts within a single continuous take.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"the camera follows the movement smoothly in one continuous take, starting frontal, shifting to a side angle as she passes, then returning to a frontal angle.\"\n        }\n      ],\n      \"rationale\": \"While the transitions are implied as smooth and continuous, there is no explicit mention of how the angle changes are executed (e.g., pan, dolly, tracking). This is a minor omission, as the continuity is clear and the transitions are logically motivated by the subject’s movement.\"\n    },\n    {\n      \"criterion\": \"LCS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"minor\",\n      \"issue\": \"The prompt does not specify lighting sources, direction, or grading, though it inherits the visual style from the reference image.\",\n      \"evidence\": [\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"light_sources_and_direction: multiple chandeliers on both sides, glowing lights along the runway, ambient blue glow from dragon_1 and gown\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"color_temperature: cool, predominantly blue and white\"\n        }\n      ],\n      \"rationale\": \"The lighting is not explicitly specified in the enhanced prompt, but the reference image provides sufficient context (cool blue tones, chandeliers, ambient glow). The prompt relies on the image’s lighting, which is acceptable for i2v, but a minor gap in direct specification.\"\n    },\n    {\n      \"criterion\": \"NDE\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"The woman advances very rapidly... the dragon follows immediately behind... At around 3.5 seconds she reaches the end of the runway, stops, and strikes two short stylized poses...\"\n        }\n      ],\n      \"rationale\": \"The sequence shows clear progression: dynamic movement → deceleration → static poses. The escalation from motion to stillness is well-motivated and appropriate for a runway finale. No unmotivated repetition or static restatement.\"\n    },\n    {\n      \"criterion\": \"CIF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"the dress train and water-like splashes trailing dynamically behind her; the dragon follows immediately behind at a similar fast, elegant, controlled pace, wings slightly folding as it moves forward.\"\n        }\n      ],\n      \"rationale\": \"All additions (e.g., dynamic train, wing folding, audience reactions) are directly tied to the central request: a realistic, fast-paced runway walk with a dragon. No irrelevant padding or decorative details are introduced.\"\n    },\n    {\n      \"criterion\": \"SDI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"overall_soundscape: Fast clicking footsteps of heels on the runway and the heavy measured claws of the dragon striking the floor, with fluid splashes from the trailing gown, a low reverberant hall ambience, and the murmur and phone-clicks of the elegant audience.\\n\\nnon_diegetic_music: Royal, regal orchestral score at a brisk tempo — blazing brass fanfare, timpani rolls and sweeping strings — building through the walk and holding a majestic peak as she poses at the end.\"\n        }\n      ],\n      \"rationale\": \"The audio design is well-integrated: diegetic sounds (footsteps, claws, splashes, ambience) match the visual action, and non-diegetic music builds with the narrative arc. Timing (building during walk, peaking at poses) is specified and appropriate.\"\n    },\n    {\n      \"criterion\": \"SPS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"the same woman with long wavy blue-grey hair, silver-blue crown, jeweled choker and arm cuffs, barefoot with jeweled ankle piece, wearing the iridescent blue-green corset gown... mid-stride facing the camera... advances very rapidly down the runway toward the camera with a fluid, natural, accelerated x2-like gait... strikes two short stylized poses — a hand on her hip, then a turn with her chin lifted\"\n        }\n      ],\n      \"rationale\": \"Subject appearance, movement, expression, and interaction are clearly specified. The woman’s gait, pose transitions, and the dragon’s controlled movement are detailed and consistent with the reference image and original instruction.\"\n    },\n    {\n      \"criterion\": \"VSS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Ultra-realistic live-action, cinematic, vertical composition\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"primary_style: fantasy fashion illustration, realism: highly stylized, fantasy realism\"\n        }\n      ],\n      \"rationale\": \"The visual style is specified as 'ultra-realistic live-action, cinematic' and 'vertical composition', which aligns with the original request for a vertical, ultra-realistic fashion video. The reference image’s fantasy realism is preserved without contradiction.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt provides a detailed, actionable, and coherent temporal plan with clear shot structure, camera movement, character actions, and audio design. It accurately reflects the original instruction while adding necessary cinematic specifications. Minor issues include slight over-specification in some areas (e.g., exact timing of poses) and a lack of explicit transition details between shots, but these do not materially affect the feasibility or quality of the plan. The prompt effectively supports a high-fidelity, ultra-realistic vertical fashion runway sequence with integrated sound design.",
+  "usage": {
+    "completion_tokens": 1813,
+    "prompt_tokens": 3137,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 4950
+  }
+}

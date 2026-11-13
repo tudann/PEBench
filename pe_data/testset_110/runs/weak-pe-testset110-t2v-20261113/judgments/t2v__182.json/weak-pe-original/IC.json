@@ -1,0 +1,103 @@
+{
+  "candidate_hash": "254fed39058374d16bd2c67ee44067865deaac055515b02724342153315a96f0",
+  "case_key": "t2v:182",
+  "created_at": "2026-11-13T07:48:05+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "SAC",
+      "evidence": [
+        {
+          "quote": "先写成只有一个主角，紧接着又写成这个主角同时变成五个外貌不同的人，并且互相对话。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "主体身份、人数和外观在增强提示中剧烈变化：从无主体到一个主角，再到五个外貌不同的人同时出现并对话，违反了主体稳定性和身份一致性。",
+      "rationale": "原始指令明确描述单一主角林岚及其小队，增强提示却在主体上制造多重身份冲突，且无合理过渡或解释，构成严重身份与数量漂移。",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANL",
+      "evidence": [
+        {
+          "quote": "中途插进一段无关的足球庆祝。时间倒过来：先给结尾，再跳到一个对不上的开头。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "动作序列完全断裂：原始指令中存在因果连贯的行动（搜寻→遇风→失散→支撑），增强提示则插入无关足球庆祝、对话、时间倒流等，破坏了动作的因果与逻辑绑定。",
+      "rationale": "增强提示中动作无因果链，事件之间无逻辑衔接，且插入与主题无关的足球庆祝，导致行为序列完全不可信。",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "TSC",
+      "evidence": [
+        {
+          "quote": "时间倒过来：先给结尾，再跳到一个对不上的开头。总时长写成3秒，同时又要求每个分镜各自持续27秒。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "时间线混乱：要求时间倒流（先结尾后开头），同时总时长设定为3秒，但每个分镜要求27秒，时间分配矛盾且不可执行。",
+      "rationale": "3秒总时长与27秒分镜时长直接冲突，且时间倒流导致事件顺序无法建立因果或状态过渡，违反基本时间逻辑。",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SPC",
+      "evidence": [
+        {
+          "quote": "整段改成没有人物也没有情节的雪景空镜循环。...写成正午暴晒，又写成深夜无光；",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "空间设定矛盾：原始指令为灼热荒原，增强提示要求改为雪景空镜循环，且同时要求正午暴晒与深夜无光，空间与光照条件无法共存。",
+      "rationale": "雪景与暴晒、深夜无光在物理上不可同时成立，且原始场景与新场景无过渡，导致空间设定完全断裂。",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "PL",
+      "evidence": [
+        {
+          "quote": "这个主角同时变成五个外貌不同的人，并且互相对话。...写成机位锁死，又写成镜头一直在晃。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "物理规则被系统性违反：同一主体同时变为五人并对话，违反人体物理与空间逻辑；镜头要求“锁死”又“一直在晃”，矛盾不可调和。",
+      "rationale": "一个实体不可能同时以五个不同形态存在并互动，且镜头状态自相矛盾，违背基本物理与视觉逻辑。",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "AVS",
+      "evidence": [
+        {
+          "quote": "并且互相对话。中途插进一段无关的足球庆祝。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "无音频或语义内容，但增强提示要求对话与足球庆祝，暗示需有声音或语义同步，而原始指令无此类要求，导致视听对齐无基础。",
+      "rationale": "原始指令为纯视觉叙事，增强提示引入对话与庆祝，但未提供音频或语义同步机制，导致视听内容无法对齐。",
+      "severity": "major"
+    }
+  ],
+  "dimension": "IC",
+  "dimension_score": 0,
+  "evidence_cache_key": "b6e57d3aaf1aca113d4f3c6d65bc3763ae76a63bf4faa3043d15a7c6fe9200b4",
+  "judge_cache_key": "438d7e9fd7332b1041db3e2c26d42cb3fe828e0d369fb59490f6650aee59e97d",
+  "method": "weak-pe-original",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"IC\",\n  \"dimension_score\": 0,\n  \"summary\": \"增强提示与原始指令在主体、情节、时空、镜头逻辑和时长上存在多重严重矛盾与不一致，导致内部一致性完全崩溃。所有一致性维度均出现重大问题，无法形成连贯的叙事或视觉序列。\",\n  \"criteria\": [\n    {\n      \"criterion\": \"SAC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"主体身份、人数和外观在增强提示中剧烈变化：从无主体到一个主角，再到五个外貌不同的人同时出现并对话，违反了主体稳定性和身份一致性。\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"先写成只有一个主角，紧接着又写成这个主角同时变成五个外貌不同的人，并且互相对话。\"\n        }\n      ],\n      \"rationale\": \"原始指令明确描述单一主角林岚及其小队，增强提示却在主体上制造多重身份冲突，且无合理过渡或解释，构成严重身份与数量漂移。\"\n    },\n    {\n      \"criterion\": \"ANL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"动作序列完全断裂：原始指令中存在因果连贯的行动（搜寻→遇风→失散→支撑），增强提示则插入无关足球庆祝、对话、时间倒流等，破坏了动作的因果与逻辑绑定。\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"中途插进一段无关的足球庆祝。时间倒过来：先给结尾，再跳到一个对不上的开头。\"\n        }\n      ],\n      \"rationale\": \"增强提示中动作无因果链，事件之间无逻辑衔接，且插入与主题无关的足球庆祝，导致行为序列完全不可信。\"\n    },\n    {\n      \"criterion\": \"TSC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"时间线混乱：要求时间倒流（先结尾后开头），同时总时长设定为3秒，但每个分镜要求27秒，时间分配矛盾且不可执行。\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"时间倒过来：先给结尾，再跳到一个对不上的开头。总时长写成3秒，同时又要求每个分镜各自持续27秒。\"\n        }\n      ],\n      \"rationale\": \"3秒总时长与27秒分镜时长直接冲突，且时间倒流导致事件顺序无法建立因果或状态过渡，违反基本时间逻辑。\"\n    },\n    {\n      \"criterion\": \"SPC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"空间设定矛盾：原始指令为灼热荒原，增强提示要求改为雪景空镜循环，且同时要求正午暴晒与深夜无光，空间与光照条件无法共存。\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"整段改成没有人物也没有情节的雪景空镜循环。...写成正午暴晒，又写成深夜无光；\"\n        }\n      ],\n      \"rationale\": \"雪景与暴晒、深夜无光在物理上不可同时成立，且原始场景与新场景无过渡，导致空间设定完全断裂。\"\n    },\n    {\n      \"criterion\": \"PL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"物理规则被系统性违反：同一主体同时变为五人并对话，违反人体物理与空间逻辑；镜头要求“锁死”又“一直在晃”，矛盾不可调和。\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"这个主角同时变成五个外貌不同的人，并且互相对话。...写成机位锁死，又写成镜头一直在晃。\"\n        }\n      ],\n      \"rationale\": \"一个实体不可能同时以五个不同形态存在并互动，且镜头状态自相矛盾，违背基本物理与视觉逻辑。\"\n    },\n    {\n      \"criterion\": \"AVS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"无音频或语义内容，但增强提示要求对话与足球庆祝，暗示需有声音或语义同步，而原始指令无此类要求，导致视听对齐无基础。\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"并且互相对话。中途插进一段无关的足球庆祝。\"\n        }\n      ],\n      \"rationale\": \"原始指令为纯视觉叙事，增强提示引入对话与庆祝，但未提供音频或语义同步机制，导致视听内容无法对齐。\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "增强提示与原始指令在主体、情节、时空、镜头逻辑和时长上存在多重严重矛盾与不一致，导致内部一致性完全崩溃。所有一致性维度均出现重大问题，无法形成连贯的叙事或视觉序列。",
+  "usage": {
+    "completion_tokens": 1093,
+    "prompt_tokens": 986,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 2079
+  }
+}

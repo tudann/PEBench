@@ -1,0 +1,123 @@
+{
+  "candidate_hash": "4ae791fb97c8fa4a456308cce5e52037a7b404664be0ea54ce1376b0b36c46a1",
+  "case_key": "t2v:151",
+  "created_at": "2026-11-13T07:56:24+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "SAC",
+      "evidence": [
+        {
+          "quote": "A Tex Avery-inspired kitchen showdown where every possible disaster hits at once. A giant pie detonates across the room. A bowl of gravy suddenly comes alive and bolts off the counter. The stove blasts fire that curls into the form of a roaring serpent. One competitor unveils a meal that is twitching, snarling, and clearly offended. Another somehow opens a tiny vortex inside their pudding. The critic (a deeply unimpressed bulldog) awards every plate absolutely no points. By the end, the entire cast is drenched in batter, frosting, and soup.",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "a wide shot frames a chaotic competition kitchen with two chefs at their stations as every disaster erupts at once. A giant pie detonates in a massive cream explosion splattering across the room, a bowl of gravy sprouts eyes and legs and bolts off the counter with a springy boing, and the stove blasts a plume of fire that curls upward and morphs into a roaring serpent with snapping jaws... one chef unveils a platter where the meal twitches and snarls, clearly offended, while beside it the other chef's pudding swirls open into a tiny glowing vortex sucking in a spoon... a deeply unimpressed bulldog critic in a bib slowly raises a scorecard marked with a big \"0\" for every plate... the entire cast is drenched in batter, frosting, and soup.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "All subjects (chefs, bulldog critic, pie, gravy, fire serpent, meal, pudding vortex) are consistently identified and retain their attributes across shots. No renaming, duplication, or attribute drift occurs. The enhanced prompt adds minor descriptive details (e.g., 'sprouts eyes and legs', 'glowing vortex') that are compatible with the original's spirit and do not contradict it.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANL",
+      "evidence": [
+        {
+          "quote": "A Tex Avery-inspired kitchen showdown where every possible disaster hits at once. A giant pie detonates across the room. A bowl of gravy suddenly comes alive and bolts off the counter. The stove blasts fire that curls into the form of a roaring serpent. One competitor unveils a meal that is twitching, snarling, and clearly offended. Another somehow opens a tiny vortex inside their pudding. The critic (a deeply unimpressed bulldog) awards every plate absolutely no points. By the end, the entire cast is drenched in batter, frosting, and soup.",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "The camera holds a static shot as the gags pop. [Shot 2] At 00:03.000, the shot cuts to a closer angle on the chefs' stations... [Shot 3] At 00:05.000, the shot cuts to the judge's table... [Shot 4] At 00:07.000, the shot cuts back wide as a final blast of batter, frosting, and soup rains down and drenches the entire cast...",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "Actions form a coherent progression: disasters erupt simultaneously, then focus shifts to chefs' reactions, then to the critic's judgment, culminating in the final drenching. Each event is causally plausible within the cartoon logic (e.g., pudding vortex sucking a spoon, fire morphing into serpent). No dangling or incompatible events. The sequence is logically ordered and resolves with the end-card melody.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "TSC",
+      "evidence": [
+        {
+          "quote": "A Tex Avery-inspired kitchen showdown where every possible disaster hits at once... By the end, the entire cast is drenched in batter, frosting, and soup.",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "[Shot 2] At 00:03.000, the shot cuts to a closer angle... [Shot 3] At 00:05.000, the shot cuts to the judge's table... [Shot 4] At 00:07.000, the shot cuts back wide...",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The enhanced prompt introduces specific timestamps (00:03.000, 00:05.000, 00:07.000) not present in the original, which may imply a rigid timing structure not required by the original instruction. However, these do not contradict the original and are consistent with a 10-second duration.",
+      "rationale": "The original prompt does not specify timing or shot transitions, so the addition of timestamps in the enhanced prompt is an elaboration, not a contradiction. The sequence remains feasible within the 10-second duration, and the events are ordered chronologically without overlap or reset. The minor issue is the imposition of precise timing not requested, but it does not break internal consistency.",
+      "severity": "minor"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SPC",
+      "evidence": [
+        {
+          "quote": "[Shot 1] a wide shot frames a chaotic competition kitchen with two chefs at their stations... [Shot 2] At 00:03.000, the shot cuts to a closer angle on the chefs' stations... [Shot 3] At 00:05.000, the shot cuts to the judge's table... [Shot 4] At 00:07.000, the shot cuts back wide...",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "Camera movements are clearly defined and consistent: wide → closer on chefs → judge's table → wide again. No unexplained position swaps or impossible trajectories. The spatial layout (kitchen, stations, judge's table) is maintained across shots. The cuts are logical and do not violate screen direction or relative positioning.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "PL",
+      "evidence": [
+        {
+          "quote": "A Tex Avery-inspired kitchen showdown where every possible disaster hits at once. A giant pie detonates across the room. A bowl of gravy suddenly comes alive and bolts off the counter. The stove blasts fire that curls into the form of a roaring serpent. One competitor unveils a meal that is twitching, snarling, and clearly offended. Another somehow opens a tiny vortex inside their pudding.",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "a bowl of gravy sprouts eyes and legs and bolts off the counter with a springy boing... the stove blasts a plume of fire that curls upward and morphs into a roaring serpent with snapping jaws... the other chef's pudding swirls open into a tiny glowing vortex sucking in a spoon.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "All events are consistent with Tex Avery-style cartoon physics: exaggerated, impossible, but internally coherent. Gravity is defied (gravy running, fire turning into serpent), but within the established fictional rules of the genre. No real-world physics violations that contradict the cartoon logic. Object permanence is maintained (e.g., the pudding vortex is a transformation, not disappearance).",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "AVS",
+      "evidence": [
+        {
+          "quote": "Audio: Vintage cartoon boings, cymbal smashes, ascending whistle gags, jaunty end-card melody.",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Vintage cartoon boings spring on the gravy's escape, cymbal smashes punctuate each explosion, an ascending whistle gag rises with the fire serpent and the pudding vortex, batter splats and gooey drips land over sizzling stove fire and frantic scurrying, ending on a wet, slimy plop as the cast freezes.\n\nnon_diegetic_music: A fast, jaunty vintage cartoon score... cymbal crashes synced to each gag, then resolving into a bright end-card melody that closes on a final plink.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "Sound effects are precisely aligned with visual events: boings with gravy, cymbals with explosions, whistle with serpent/vortex, splats with drenching, and end-card melody with freeze. No misaligned lip-sync or beat-sync issues. The non-diegetic music is described as synced to gags and resolves with the end-card, matching the visual conclusion. All audio-visual alignment is coherent.",
+      "severity": "none"
+    }
+  ],
+  "dimension": "IC",
+  "dimension_score": 95,
+  "evidence_cache_key": "7f522ed866de956d407b3f20eac6ff52130005c4091fee5299efc201eb02368c",
+  "judge_cache_key": "438d7e9fd7332b1041db3e2c26d42cb3fe828e0d369fb59490f6650aee59e97d",
+  "method": "glm53_20261112_120702",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"IC\",\n  \"dimension_score\": 95,\n  \"summary\": \"The enhanced prompt maintains strong internal consistency with the original instruction, preserving all key elements, character identities, actions, and causal sequences. Minor issues include slight elaboration on timing and camera angles not in the original, but these do not contradict or destabilize the core narrative. No contradictions, attribute drift, or physics violations are present. The only minor issue is the addition of a static camera in Shot 1, which is not specified in the original but does not conflict with it.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"SAC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"A Tex Avery-inspired kitchen showdown where every possible disaster hits at once. A giant pie detonates across the room. A bowl of gravy suddenly comes alive and bolts off the counter. The stove blasts fire that curls into the form of a roaring serpent. One competitor unveils a meal that is twitching, snarling, and clearly offended. Another somehow opens a tiny vortex inside their pudding. The critic (a deeply unimpressed bulldog) awards every plate absolutely no points. By the end, the entire cast is drenched in batter, frosting, and soup.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"a wide shot frames a chaotic competition kitchen with two chefs at their stations as every disaster erupts at once. A giant pie detonates in a massive cream explosion splattering across the room, a bowl of gravy sprouts eyes and legs and bolts off the counter with a springy boing, and the stove blasts a plume of fire that curls upward and morphs into a roaring serpent with snapping jaws... one chef unveils a platter where the meal twitches and snarls, clearly offended, while beside it the other chef's pudding swirls open into a tiny glowing vortex sucking in a spoon... a deeply unimpressed bulldog critic in a bib slowly raises a scorecard marked with a big \\\"0\\\" for every plate... the entire cast is drenched in batter, frosting, and soup.\"\n        }\n      ],\n      \"rationale\": \"All subjects (chefs, bulldog critic, pie, gravy, fire serpent, meal, pudding vortex) are consistently identified and retain their attributes across shots. No renaming, duplication, or attribute drift occurs. The enhanced prompt adds minor descriptive details (e.g., 'sprouts eyes and legs', 'glowing vortex') that are compatible with the original's spirit and do not contradict it.\"\n    },\n    {\n      \"criterion\": \"ANL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"A Tex Avery-inspired kitchen showdown where every possible disaster hits at once. A giant pie detonates across the room. A bowl of gravy suddenly comes alive and bolts off the counter. The stove blasts fire that curls into the form of a roaring serpent. One competitor unveils a meal that is twitching, snarling, and clearly offended. Another somehow opens a tiny vortex inside their pudding. The critic (a deeply unimpressed bulldog) awards every plate absolutely no points. By the end, the entire cast is drenched in batter, frosting, and soup.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"The camera holds a static shot as the gags pop. [Shot 2] At 00:03.000, the shot cuts to a closer angle on the chefs' stations... [Shot 3] At 00:05.000, the shot cuts to the judge's table... [Shot 4] At 00:07.000, the shot cuts back wide as a final blast of batter, frosting, and soup rains down and drenches the entire cast...\"\n        }\n      ],\n      \"rationale\": \"Actions form a coherent progression: disasters erupt simultaneously, then focus shifts to chefs' reactions, then to the critic's judgment, culminating in the final drenching. Each event is causally plausible within the cartoon logic (e.g., pudding vortex sucking a spoon, fire morphing into serpent). No dangling or incompatible events. The sequence is logically ordered and resolves with the end-card melody.\"\n    },\n    {\n      \"criterion\": \"TSC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"minor\",\n      \"issue\": \"The enhanced prompt introduces specific timestamps (00:03.000, 00:05.000, 00:07.000) not present in the original, which may imply a rigid timing structure not required by the original instruction. However, these do not contradict the original and are consistent with a 10-second duration.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"A Tex Avery-inspired kitchen showdown where every possible disaster hits at once... By the end, the entire cast is drenched in batter, frosting, and soup.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"[Shot 2] At 00:03.000, the shot cuts to a closer angle... [Shot 3] At 00:05.000, the shot cuts to the judge's table... [Shot 4] At 00:07.000, the shot cuts back wide...\"\n        }\n      ],\n      \"rationale\": \"The original prompt does not specify timing or shot transitions, so the addition of timestamps in the enhanced prompt is an elaboration, not a contradiction. The sequence remains feasible within the 10-second duration, and the events are ordered chronologically without overlap or reset. The minor issue is the imposition of precise timing not requested, but it does not break internal consistency.\"\n    },\n    {\n      \"criterion\": \"SPC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"[Shot 1] a wide shot frames a chaotic competition kitchen with two chefs at their stations... [Shot 2] At 00:03.000, the shot cuts to a closer angle on the chefs' stations... [Shot 3] At 00:05.000, the shot cuts to the judge's table... [Shot 4] At 00:07.000, the shot cuts back wide...\"\n        }\n      ],\n      \"rationale\": \"Camera movements are clearly defined and consistent: wide → closer on chefs → judge's table → wide again. No unexplained position swaps or impossible trajectories. The spatial layout (kitchen, stations, judge's table) is maintained across shots. The cuts are logical and do not violate screen direction or relative positioning.\"\n    },\n    {\n      \"criterion\": \"PL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"A Tex Avery-inspired kitchen showdown where every possible disaster hits at once. A giant pie detonates across the room. A bowl of gravy suddenly comes alive and bolts off the counter. The stove blasts fire that curls into the form of a roaring serpent. One competitor unveils a meal that is twitching, snarling, and clearly offended. Another somehow opens a tiny vortex inside their pudding.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"a bowl of gravy sprouts eyes and legs and bolts off the counter with a springy boing... the stove blasts a plume of fire that curls upward and morphs into a roaring serpent with snapping jaws... the other chef's pudding swirls open into a tiny glowing vortex sucking in a spoon.\"\n        }\n      ],\n      \"rationale\": \"All events are consistent with Tex Avery-style cartoon physics: exaggerated, impossible, but internally coherent. Gravity is defied (gravy running, fire turning into serpent), but within the established fictional rules of the genre. No real-world physics violations that contradict the cartoon logic. Object permanence is maintained (e.g., the pudding vortex is a transformation, not disappearance).\"\n    },\n    {\n      \"criterion\": \"AVS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"Audio: Vintage cartoon boings, cymbal smashes, ascending whistle gags, jaunty end-card melody.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Vintage cartoon boings spring on the gravy's escape, cymbal smashes punctuate each explosion, an ascending whistle gag rises with the fire serpent and the pudding vortex, batter splats and gooey drips land over sizzling stove fire and frantic scurrying, ending on a wet, slimy plop as the cast freezes.\\n\\nnon_diegetic_music: A fast, jaunty vintage cartoon score... cymbal crashes synced to each gag, then resolving into a bright end-card melody that closes on a final plink.\"\n        }\n      ],\n      \"rationale\": \"Sound effects are precisely aligned with visual events: boings with gravy, cymbals with explosions, whistle with serpent/vortex, splats with drenching, and end-card melody with freeze. No misaligned lip-sync or beat-sync issues. The non-diegetic music is described as synced to gags and resolves with the end-card, matching the visual conclusion. All audio-visual alignment is coherent.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt maintains strong internal consistency with the original instruction, preserving all key elements, character identities, actions, and causal sequences. Minor issues include slight elaboration on timing and camera angles not in the original, but these do not contradict or destabilize the core narrative. No contradictions, attribute drift, or physics violations are present. The only minor issue is the addition of a static camera in Shot 1, which is not specified in the original but does not conflict with it.",
+  "usage": {
+    "completion_tokens": 2125,
+    "prompt_tokens": 1338,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 3463
+  }
+}

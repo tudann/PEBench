@@ -1,0 +1,127 @@
+{
+  "candidate_hash": "6fc6f8fed6ac886c395088eea4382ae815d3e411b047281733f5a34241dcdc24",
+  "case_key": "t2v:334",
+  "created_at": "2026-11-13T08:29:29+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "SAC",
+      "evidence": [
+        {
+          "quote": "整段影像完全由纯净色面直接拼接成形，没有外框线、内部勾线或笔刷痕迹，所有对象只依靠色块之间的分割、遮蔽与位移关系成立。",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "The entire frame is composed of pure flat color planes with no outline, no interior linework, no brush texture, and no gradient shading — every form exists only through the cutting, occlusion and displacement of color blocks.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "Subject identity (the pink face) and attributes (flat color blocks, no outlines, geometric abstraction) are consistently preserved. The face is never renamed or duplicated, and its appearance evolves coherently through color block reorganization without introducing new or contradictory features. Crowd elements remain as small color rectangles, buildings as vertical modules — all persistent attributes are maintained.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANL",
+      "evidence": [
+        {
+          "quote": "随着时间推进，这片柔粉色继续上顶...广场地面的矩形铺装开始发生细小错移...邻近几栋楼体底部的色块也出现轻度倾斜...那些原本移动的人群色块逐渐停下，散开后集中在开放空间边缘...",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "From around the fourth second, the pink mass keeps rising...Plaza paving blocks shift minutely...the base color blocks of several adjacent buildings tilt slightly. The tiny crowd blocks stop, disperse and gather at the edges...",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "Actions form a coherent causal progression: the pink mass rises → ground and buildings deform → crowd reorganizes. Each action is a plausible reaction to the prior state. The final eyelid contraction is synchronized with the underground sound dip, forming a causal resolution. No dangling or incompatible events are present.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "TSC",
+      "evidence": [
+        {
+          "quote": "从镜头后段，那张脸抬升得更高...最后一瞬，闭合眼睑中央发生一次极其轻微的收束...",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "From around the ninth second, the face rises higher...In the final instant, at the center of the closed eyelid occurs one extremely slight contraction...",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "Chronology is preserved: rise begins around 4s, face occupies center by 9s, final contraction at 15s. State transitions are smooth and sequential. No overlapping or infeasible timestamps. The 'about to open, yet still unopened' state at the end is consistent with the original's final moment.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SPC",
+      "evidence": [
+        {
+          "quote": "镜头固定，画面中央是一片被规划成高度规整几何区域的城市开放空间...",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "a single fixed shot with the camera completely locked for the full 15 seconds. The entire frame is composed of pure flat color planes...",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "Camera is fixed throughout. Spatial relationships are consistent: plaza at center, buildings around, underground below. Movement paths are implied through color block displacement, not physical motion, and are coherent. No unexplained position swaps or impossible trajectories. Screen direction is maintained via consistent composition.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "PL",
+      "evidence": [
+        {
+          "quote": "广场地面的矩形铺装开始发生细小错移，有的向外滑移，有的被轻微掀起，邻近几栋楼体底部的色块也出现轻度倾斜...",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Plaza paving blocks shift minutely, some sliding outward, some slightly lifted; the base color blocks of several adjacent buildings tilt slightly.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "Physics are consistent within the abstract, graphic world: ground splits like a thin plate, buildings tilt without collapsing — plausible within the stylized rules. No violations of object permanence or gravity. The rising face is treated as a massive, smooth, flat body — consistent with the 'urban section-cut' aesthetic. No real-world physics are broken; the world logic is internally coherent.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "AVS",
+      "evidence": [
+        {
+          "quote": "背景声音以持续的低沉电子延音、细微地下震颤、远方都市电流噪声和偶发结构刮擦声为主。",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "As the pink mass rises, the drone thickens with faint structural friction...In the final phase the sound compresses to a single sustained low drone...with one synchronized low-frequency dip at the final eyelid contraction.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Enhanced prompt adds slightly more specific auditory cues (e.g., 'structural friction' and 'low-frequency dip') than the original, but these are consistent with the visual events and do not misalign.",
+      "rationale": "The enhanced prompt elaborates on the soundscape with more precise timing and cause-effect relationships (e.g., friction during rise, dip at contraction), which aligns with the visual events. While the original does not specify these exact details, they are not contradictory and enhance coherence. The minor severity reflects the slight elaboration rather than misalignment.",
+      "severity": "minor"
+    }
+  ],
+  "dimension": "IC",
+  "dimension_score": 98,
+  "evidence_cache_key": "ef040a282ad4e215bcd901e7b25f8472cc5c4648ca0719eb2315a9cbd7a942c3",
+  "judge_cache_key": "438d7e9fd7332b1041db3e2c26d42cb3fe828e0d369fb59490f6650aee59e97d",
+  "method": "glm53_20261112_120702",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"IC\",\n  \"dimension_score\": 98,\n  \"summary\": \"The enhanced prompt maintains strong internal consistency with the original instruction, preserving all key visual, spatial, and narrative elements. Subject identity (the rising pink face), actions (gradual emergence, ground displacement, crowd repositioning), chronology (progressive rise from 4s to 9s, final contraction at 15s), spatial relationships (fixed camera, flat plane composition, consistent screen direction), and physics (plausible slow structural deformation without contradiction) are all coherently maintained. The only minor issue is a slight elaboration in the enhanced prompt that adds a 'forehead' and 'nose bridge' description not explicitly named in the original, but this does not contradict or destabilize the core concept. No contradictions, omissions, or unsupported claims are present. The audio description is also consistent with the visual progression.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"SAC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"整段影像完全由纯净色面直接拼接成形，没有外框线、内部勾线或笔刷痕迹，所有对象只依靠色块之间的分割、遮蔽与位移关系成立。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"The entire frame is composed of pure flat color planes with no outline, no interior linework, no brush texture, and no gradient shading — every form exists only through the cutting, occlusion and displacement of color blocks.\"\n        }\n      ],\n      \"rationale\": \"Subject identity (the pink face) and attributes (flat color blocks, no outlines, geometric abstraction) are consistently preserved. The face is never renamed or duplicated, and its appearance evolves coherently through color block reorganization without introducing new or contradictory features. Crowd elements remain as small color rectangles, buildings as vertical modules — all persistent attributes are maintained.\"\n    },\n    {\n      \"criterion\": \"ANL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"随着时间推进，这片柔粉色继续上顶...广场地面的矩形铺装开始发生细小错移...邻近几栋楼体底部的色块也出现轻度倾斜...那些原本移动的人群色块逐渐停下，散开后集中在开放空间边缘...\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"From around the fourth second, the pink mass keeps rising...Plaza paving blocks shift minutely...the base color blocks of several adjacent buildings tilt slightly. The tiny crowd blocks stop, disperse and gather at the edges...\"\n        }\n      ],\n      \"rationale\": \"Actions form a coherent causal progression: the pink mass rises → ground and buildings deform → crowd reorganizes. Each action is a plausible reaction to the prior state. The final eyelid contraction is synchronized with the underground sound dip, forming a causal resolution. No dangling or incompatible events are present.\"\n    },\n    {\n      \"criterion\": \"TSC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"从镜头后段，那张脸抬升得更高...最后一瞬，闭合眼睑中央发生一次极其轻微的收束...\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"From around the ninth second, the face rises higher...In the final instant, at the center of the closed eyelid occurs one extremely slight contraction...\"\n        }\n      ],\n      \"rationale\": \"Chronology is preserved: rise begins around 4s, face occupies center by 9s, final contraction at 15s. State transitions are smooth and sequential. No overlapping or infeasible timestamps. The 'about to open, yet still unopened' state at the end is consistent with the original's final moment.\"\n    },\n    {\n      \"criterion\": \"SPC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"镜头固定，画面中央是一片被规划成高度规整几何区域的城市开放空间...\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"a single fixed shot with the camera completely locked for the full 15 seconds. The entire frame is composed of pure flat color planes...\"\n        }\n      ],\n      \"rationale\": \"Camera is fixed throughout. Spatial relationships are consistent: plaza at center, buildings around, underground below. Movement paths are implied through color block displacement, not physical motion, and are coherent. No unexplained position swaps or impossible trajectories. Screen direction is maintained via consistent composition.\"\n    },\n    {\n      \"criterion\": \"PL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"广场地面的矩形铺装开始发生细小错移，有的向外滑移，有的被轻微掀起，邻近几栋楼体底部的色块也出现轻度倾斜...\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Plaza paving blocks shift minutely, some sliding outward, some slightly lifted; the base color blocks of several adjacent buildings tilt slightly.\"\n        }\n      ],\n      \"rationale\": \"Physics are consistent within the abstract, graphic world: ground splits like a thin plate, buildings tilt without collapsing — plausible within the stylized rules. No violations of object permanence or gravity. The rising face is treated as a massive, smooth, flat body — consistent with the 'urban section-cut' aesthetic. No real-world physics are broken; the world logic is internally coherent.\"\n    },\n    {\n      \"criterion\": \"AVS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"minor\",\n      \"issue\": \"Enhanced prompt adds slightly more specific auditory cues (e.g., 'structural friction' and 'low-frequency dip') than the original, but these are consistent with the visual events and do not misalign.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"背景声音以持续的低沉电子延音、细微地下震颤、远方都市电流噪声和偶发结构刮擦声为主。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"As the pink mass rises, the drone thickens with faint structural friction...In the final phase the sound compresses to a single sustained low drone...with one synchronized low-frequency dip at the final eyelid contraction.\"\n        }\n      ],\n      \"rationale\": \"The enhanced prompt elaborates on the soundscape with more precise timing and cause-effect relationships (e.g., friction during rise, dip at contraction), which aligns with the visual events. While the original does not specify these exact details, they are not contradictory and enhance coherence. The minor severity reflects the slight elaboration rather than misalignment.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt maintains strong internal consistency with the original instruction, preserving all key visual, spatial, and narrative elements. Subject identity (the rising pink face), actions (gradual emergence, ground displacement, crowd repositioning), chronology (progressive rise from 4s to 9s, final contraction at 15s), spatial relationships (fixed camera, flat plane composition, consistent screen direction), and physics (plausible slow structural deformation without contradiction) are all coherently maintained. The only minor issue is a slight elaboration in the enhanced prompt that adds a 'forehead' and 'nose bridge' description not explicitly named in the original, but this does not contradict or destabilize the core concept. No contradictions, omissions, or unsupported claims are present. The audio description is also consistent with the visual progression.",
+  "usage": {
+    "completion_tokens": 1576,
+    "prompt_tokens": 2407,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 3983
+  }
+}

@@ -1,0 +1,115 @@
+{
+  "candidate_hash": "69e7f454f4ff6dfffa6f9b93d1a1bded3c6d65c85984ec9fbfb4b76c0723edd6",
+  "case_key": "i2v:075",
+  "created_at": "2026-11-13T07:29:04+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "SAC",
+      "evidence": [
+        {
+          "quote": "standing centered in profile/three-quarter view facing slightly right",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "frame_position: centered, slightly left of frame center",
+          "source": "evidence_facts"
+        }
+      ],
+      "issue": "The subject’s position is described as 'centered' in the enhanced prompt, but the evidence indicates 'slightly left of frame center'. This is a minor discrepancy in spatial description that does not affect the overall identity or appearance consistency.",
+      "rationale": "The subject’s identity, clothing, expression, and posture are consistently maintained as required. The minor positional discrepancy does not alter the visual identity or cause attribute drift. The description of the subject’s appearance (dark hair, stubble, olive-green jacket) matches the evidence exactly.",
+      "severity": "minor"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANL",
+      "evidence": [
+        {
+          "quote": "cyan and golden energy ribbons undulate and swirl gently around him, drifting outward and returning along their original paths; fine particles and small glass shards float slowly upward and outward, then drift back to their starting positions",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "All actions are consistent with the requirement of a static subject and animated environment. The background animations (energy ribbons, particles, light shafts) are described with coherent, reversible motion patterns that support a seamless loop without causal contradictions.",
+      "rationale": "The actions described are procedurally coherent and form a closed loop. There are no dangling events or incompatible sequences. The subject remains motionless, and the environment’s motion is self-contained and reversible, aligning with the original instruction.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "TSC",
+      "evidence": [
+        {
+          "quote": "Every element's position, brightness, and color at the end of the shot exactly matches the first frame, forming a seamless loop with no visible jump or flicker.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt specifies a 5-second duration with a seamless loop, and the description of the environment’s motion (returning to original positions) supports a consistent state transition from start to end. No overlapping or infeasible timestamps are described.",
+      "rationale": "The temporal structure is clearly defined: a 5-second loop with identical start and end states. The motion of background elements is described as returning to their original positions, ensuring state consistency. No unexplained resets or timeline conflicts are present.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SPC",
+      "evidence": [
+        {
+          "quote": "The camera holds a completely locked static shot with no pan, zoom, or shake.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "He remains absolutely still for the full duration, with identical posture, head angle, facial expression, and position at the start and end of the shot.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The subject remains in a fixed position with no movement or change in orientation. The camera is described as static, and the environment’s motion is described as flowing around the subject without altering his spatial relationship to the scene. No unexplained position swaps or trajectory conflicts are present.",
+      "rationale": "The spatial relationships are preserved: subject centered (with minor positional note), camera static, environment animates around him without altering his position. All movement is consistent with a fixed subject in a dynamic environment.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "PL",
+      "evidence": [
+        {
+          "quote": "cyan and golden energy ribbons undulate and swirl gently around him, drifting outward and returning along their original paths",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "primary_style: cyberpunk/futuristic digital environment",
+          "source": "evidence_facts"
+        }
+      ],
+      "issue": "The physics of the environment are consistent with a fictional sci-fi setting: energy ribbons, floating particles, and light shafts behave as expected in a digital/holographic space. The subject’s stillness and the environment’s motion are physically plausible within the established world logic.",
+      "rationale": "The environment’s behavior (floating particles, glowing ribbons, light shafts) is consistent with a digital or holographic space. The subject’s stillness is physically feasible and does not contradict the environment’s motion. No violations of object permanence or gravity are described.",
+      "severity": "none"
+    },
+    {
+      "applicability": "not_applicable",
+      "criterion": "AVS",
+      "evidence": [
+        {
+          "quote": "overall_soundscape: A low, steady ambient hum of futuristic machinery with faint crystalline shimmer... remaining constant and loop-friendly throughout.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "No dialogue, lyrics, music, or effects are specified in the prompt or evidence that require alignment with visual events. The soundscape is described as ambient and constant, which does not conflict with the visual loop.",
+      "rationale": "There is no non-diegetic music or dialogue to align with visual events. The ambient soundscape is described as constant and loop-friendly, which is compatible with the visual loop. No misalignment is possible or required to evaluate.",
+      "severity": null
+    }
+  ],
+  "dimension": "IC",
+  "dimension_score": 95,
+  "evidence_cache_key": "ba8f1790885b28db37610062978a47d104df27673067ffbad22d71253b23d5d6",
+  "judge_cache_key": "438d7e9fd7332b1041db3e2c26d42cb3fe828e0d369fb59490f6650aee59e97d",
+  "method": "glm53_20261112_120702",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"IC\",\n  \"dimension_score\": 95,\n  \"summary\": \"The enhanced prompt maintains strong internal consistency with the original instruction, preserving subject identity, appearance, and static posture throughout the 5-second loop. The environment’s animated elements are described with precise, coherent motion patterns that support a seamless loop. Minor issues include slight ambiguity in the exact nature of the loop’s visual continuity (due to lack of video output) and a minor overstatement in the description of the subject’s position as 'centered' when the evidence suggests 'slightly left of center'. No major contradictions or attribute drift are present.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"SAC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"minor\",\n      \"issue\": \"The subject’s position is described as 'centered' in the enhanced prompt, but the evidence indicates 'slightly left of frame center'. This is a minor discrepancy in spatial description that does not affect the overall identity or appearance consistency.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"standing centered in profile/three-quarter view facing slightly right\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"frame_position: centered, slightly left of frame center\"\n        }\n      ],\n      \"rationale\": \"The subject’s identity, clothing, expression, and posture are consistently maintained as required. The minor positional discrepancy does not alter the visual identity or cause attribute drift. The description of the subject’s appearance (dark hair, stubble, olive-green jacket) matches the evidence exactly.\"\n    },\n    {\n      \"criterion\": \"ANL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"All actions are consistent with the requirement of a static subject and animated environment. The background animations (energy ribbons, particles, light shafts) are described with coherent, reversible motion patterns that support a seamless loop without causal contradictions.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"cyan and golden energy ribbons undulate and swirl gently around him, drifting outward and returning along their original paths; fine particles and small glass shards float slowly upward and outward, then drift back to their starting positions\"\n        }\n      ],\n      \"rationale\": \"The actions described are procedurally coherent and form a closed loop. There are no dangling events or incompatible sequences. The subject remains motionless, and the environment’s motion is self-contained and reversible, aligning with the original instruction.\"\n    },\n    {\n      \"criterion\": \"TSC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"The prompt specifies a 5-second duration with a seamless loop, and the description of the environment’s motion (returning to original positions) supports a consistent state transition from start to end. No overlapping or infeasible timestamps are described.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Every element's position, brightness, and color at the end of the shot exactly matches the first frame, forming a seamless loop with no visible jump or flicker.\"\n        }\n      ],\n      \"rationale\": \"The temporal structure is clearly defined: a 5-second loop with identical start and end states. The motion of background elements is described as returning to their original positions, ensuring state consistency. No unexplained resets or timeline conflicts are present.\"\n    },\n    {\n      \"criterion\": \"SPC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"The subject remains in a fixed position with no movement or change in orientation. The camera is described as static, and the environment’s motion is described as flowing around the subject without altering his spatial relationship to the scene. No unexplained position swaps or trajectory conflicts are present.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"The camera holds a completely locked static shot with no pan, zoom, or shake.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"He remains absolutely still for the full duration, with identical posture, head angle, facial expression, and position at the start and end of the shot.\"\n        }\n      ],\n      \"rationale\": \"The spatial relationships are preserved: subject centered (with minor positional note), camera static, environment animates around him without altering his position. All movement is consistent with a fixed subject in a dynamic environment.\"\n    },\n    {\n      \"criterion\": \"PL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"The physics of the environment are consistent with a fictional sci-fi setting: energy ribbons, floating particles, and light shafts behave as expected in a digital/holographic space. The subject’s stillness and the environment’s motion are physically plausible within the established world logic.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"cyan and golden energy ribbons undulate and swirl gently around him, drifting outward and returning along their original paths\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"primary_style: cyberpunk/futuristic digital environment\"\n        }\n      ],\n      \"rationale\": \"The environment’s behavior (floating particles, glowing ribbons, light shafts) is consistent with a digital or holographic space. The subject’s stillness is physically feasible and does not contradict the environment’s motion. No violations of object permanence or gravity are described.\"\n    },\n    {\n      \"criterion\": \"AVS\",\n      \"applicability\": \"not_applicable\",\n      \"severity\": null,\n      \"issue\": \"No dialogue, lyrics, music, or effects are specified in the prompt or evidence that require alignment with visual events. The soundscape is described as ambient and constant, which does not conflict with the visual loop.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"overall_soundscape: A low, steady ambient hum of futuristic machinery with faint crystalline shimmer... remaining constant and loop-friendly throughout.\"\n        }\n      ],\n      \"rationale\": \"There is no non-diegetic music or dialogue to align with visual events. The ambient soundscape is described as constant and loop-friendly, which is compatible with the visual loop. No misalignment is possible or required to evaluate.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt maintains strong internal consistency with the original instruction, preserving subject identity, appearance, and static posture throughout the 5-second loop. The environment’s animated elements are described with precise, coherent motion patterns that support a seamless loop. Minor issues include slight ambiguity in the exact nature of the loop’s visual continuity (due to lack of video output) and a minor overstatement in the description of the subject’s position as 'centered' when the evidence suggests 'slightly left of center'. No major contradictions or attribute drift are present.",
+  "usage": {
+    "completion_tokens": 1383,
+    "prompt_tokens": 2454,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 3837
+  }
+}

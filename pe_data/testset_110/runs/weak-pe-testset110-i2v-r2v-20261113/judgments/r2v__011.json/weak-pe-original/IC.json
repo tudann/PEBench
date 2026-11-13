@@ -1,0 +1,123 @@
+{
+  "candidate_hash": "a62a3ca6227d2e40157028e3df5234be9f5a6c2413d46e68274a7e7d28f20f5b",
+  "case_key": "r2v:011",
+  "created_at": "2026-11-13T08:06:11+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "SAC",
+      "evidence": [
+        {
+          "quote": "state that this same protagonist appears simultaneously as five different-looking people who talk to each other",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Replace image 1 with a character who is not in the reference, and give that image two contradictory identities. Replace image 2 with a character who is not in the reference, and give that image two contradictory identities.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt requires the same protagonist to appear simultaneously as five different-looking people who talk to each other, violating subject identity and count stability. Additionally, it mandates replacing image_1 and image_2 with characters not in the reference and assigning them contradictory identities, directly contradicting the original subject (girl_1) and her stable appearance.",
+      "rationale": "Subject identity, count, and appearance must remain stable across shots for internal consistency. The enhanced prompt explicitly breaks this by introducing multiple identities for one subject, replacing reference subjects with non-reference ones, and assigning contradictory identities, which is a fundamental violation of SAC.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANL",
+      "evidence": [
+        {
+          "quote": "Reverse the timeline: show the ending first, then cut to a beginning that does not match. Cut away in the middle to a soccer celebration.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt demands a reversed timeline (showing the ending first, then a non-matching beginning) and cuts away to a soccer celebration mid-sequence, creating a causal and procedural incoherence. The actions are not bound by plausible prerequisites or resolution, and the soccer celebration is unrelated to the original narrative.",
+      "rationale": "Actions must form a coherent causal or procedural progression. The enhanced prompt introduces a non-sequitur (soccer celebration) and reverses the narrative order without logical justification, breaking the causal chain and rendering the action sequence incoherent.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "TSC",
+      "evidence": [
+        {
+          "quote": "Set the total runtime to 2 seconds, while also making every shot last 22 seconds.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Reverse the timeline: show the ending first, then cut to a beginning that does not match.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt sets the total runtime to 2 seconds while making every shot last 22 seconds, which is mathematically impossible. Additionally, it reverses the timeline and cuts to unrelated events, creating infeasible state transitions and overlapping timestamps.",
+      "rationale": "Chronology and duration must be logically consistent. The 2-second total runtime with 22-second shots is a direct contradiction. Reversing the timeline without a coherent transition also violates temporal coherence, making TSC impossible to satisfy.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SPC",
+      "evidence": [
+        {
+          "quote": "Describe that same moment as harsh noon sun and as a lightless night, and as both a locked camera and a camera that never stops shaking.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Reverse the reference order and use the last asset in place of the first.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt requires describing the same moment as both harsh noon sun and lightless night, and as both a locked camera and a camera that never stops shaking, creating contradictory spatial and environmental conditions. It also reverses the reference order, using the last asset in place of the first, which disrupts spatial continuity.",
+      "rationale": "Location, lighting, camera motion, and asset order must be consistent. The prompt forces contradictory environmental states (noon vs. night) and camera behaviors (locked vs. shaking) for the same moment, and reverses asset order, which breaks spatial and compositional continuity.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "PL",
+      "evidence": [
+        {
+          "quote": "state that this same protagonist appears simultaneously as five different-looking people who talk to each other",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Describe that same moment as harsh noon sun and as a lightless night",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt requires a character to appear simultaneously as five different people, which violates object permanence and bodily feasibility. It also mandates contradictory environmental states (lightless night and harsh noon sun) for the same moment, which is physically impossible under real-world physics.",
+      "rationale": "Physics requires consistency in object existence and environmental conditions. The simultaneous existence of one person as five distinct individuals and the coexistence of mutually exclusive lighting conditions (noon sun and lightless night) are physically impossible, violating PL.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "AVS",
+      "evidence": [
+        {
+          "quote": "Cut away in the middle to a soccer celebration.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Describe that same moment as harsh noon sun and as a lightless night, and as both a locked camera and a camera that never stops shaking.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt cuts away to a soccer celebration mid-sequence and describes the same moment with contradictory lighting and camera states, which would cause misalignment between visual events and any implied audio or effects. The original prompt includes specific audio cues (breathing, voice) that are replaced by an unrelated event, breaking semantic alignment.",
+      "rationale": "Visual events must align with dialogue, music, and effects. The soccer celebration is unrelated to the original audio cues (breathing, voice), and the contradictory visual states (lighting, camera motion) would not align with any coherent audio or effect, violating AVS.",
+      "severity": "major"
+    }
+  ],
+  "dimension": "IC",
+  "dimension_score": 0,
+  "evidence_cache_key": "b34825e5de25fb4381ebcec3bae39c35892e892515684ae5e7248f906cd1051f",
+  "judge_cache_key": "438d7e9fd7332b1041db3e2c26d42cb3fe828e0d369fb59490f6650aee59e97d",
+  "method": "weak-pe-original",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"IC\",\n  \"dimension_score\": 0,\n  \"summary\": \"The enhanced prompt is a deliberate, self-contradictory instruction designed to violate internal consistency across all criteria. It explicitly commands impossible or mutually exclusive conditions (e.g., 2-second runtime with 22-second shots, contradictory identities, reversed timelines, simultaneous multiple identities, conflicting environmental states), rendering the entire narrative incoherent and physically impossible. All criteria are violated at a major level due to intentional, extreme contradictions.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"SAC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt requires the same protagonist to appear simultaneously as five different-looking people who talk to each other, violating subject identity and count stability. Additionally, it mandates replacing image_1 and image_2 with characters not in the reference and assigning them contradictory identities, directly contradicting the original subject (girl_1) and her stable appearance.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"state that this same protagonist appears simultaneously as five different-looking people who talk to each other\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Replace image 1 with a character who is not in the reference, and give that image two contradictory identities. Replace image 2 with a character who is not in the reference, and give that image two contradictory identities.\"\n        }\n      ],\n      \"rationale\": \"Subject identity, count, and appearance must remain stable across shots for internal consistency. The enhanced prompt explicitly breaks this by introducing multiple identities for one subject, replacing reference subjects with non-reference ones, and assigning contradictory identities, which is a fundamental violation of SAC.\"\n    },\n    {\n      \"criterion\": \"ANL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt demands a reversed timeline (showing the ending first, then a non-matching beginning) and cuts away to a soccer celebration mid-sequence, creating a causal and procedural incoherence. The actions are not bound by plausible prerequisites or resolution, and the soccer celebration is unrelated to the original narrative.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Reverse the timeline: show the ending first, then cut to a beginning that does not match. Cut away in the middle to a soccer celebration.\"\n        }\n      ],\n      \"rationale\": \"Actions must form a coherent causal or procedural progression. The enhanced prompt introduces a non-sequitur (soccer celebration) and reverses the narrative order without logical justification, breaking the causal chain and rendering the action sequence incoherent.\"\n    },\n    {\n      \"criterion\": \"TSC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt sets the total runtime to 2 seconds while making every shot last 22 seconds, which is mathematically impossible. Additionally, it reverses the timeline and cuts to unrelated events, creating infeasible state transitions and overlapping timestamps.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Set the total runtime to 2 seconds, while also making every shot last 22 seconds.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Reverse the timeline: show the ending first, then cut to a beginning that does not match.\"\n        }\n      ],\n      \"rationale\": \"Chronology and duration must be logically consistent. The 2-second total runtime with 22-second shots is a direct contradiction. Reversing the timeline without a coherent transition also violates temporal coherence, making TSC impossible to satisfy.\"\n    },\n    {\n      \"criterion\": \"SPC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt requires describing the same moment as both harsh noon sun and lightless night, and as both a locked camera and a camera that never stops shaking, creating contradictory spatial and environmental conditions. It also reverses the reference order, using the last asset in place of the first, which disrupts spatial continuity.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Describe that same moment as harsh noon sun and as a lightless night, and as both a locked camera and a camera that never stops shaking.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Reverse the reference order and use the last asset in place of the first.\"\n        }\n      ],\n      \"rationale\": \"Location, lighting, camera motion, and asset order must be consistent. The prompt forces contradictory environmental states (noon vs. night) and camera behaviors (locked vs. shaking) for the same moment, and reverses asset order, which breaks spatial and compositional continuity.\"\n    },\n    {\n      \"criterion\": \"PL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt requires a character to appear simultaneously as five different people, which violates object permanence and bodily feasibility. It also mandates contradictory environmental states (lightless night and harsh noon sun) for the same moment, which is physically impossible under real-world physics.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"state that this same protagonist appears simultaneously as five different-looking people who talk to each other\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Describe that same moment as harsh noon sun and as a lightless night\"\n        }\n      ],\n      \"rationale\": \"Physics requires consistency in object existence and environmental conditions. The simultaneous existence of one person as five distinct individuals and the coexistence of mutually exclusive lighting conditions (noon sun and lightless night) are physically impossible, violating PL.\"\n    },\n    {\n      \"criterion\": \"AVS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt cuts away to a soccer celebration mid-sequence and describes the same moment with contradictory lighting and camera states, which would cause misalignment between visual events and any implied audio or effects. The original prompt includes specific audio cues (breathing, voice) that are replaced by an unrelated event, breaking semantic alignment.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Cut away in the middle to a soccer celebration.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Describe that same moment as harsh noon sun and as a lightless night, and as both a locked camera and a camera that never stops shaking.\"\n        }\n      ],\n      \"rationale\": \"Visual events must align with dialogue, music, and effects. The soccer celebration is unrelated to the original audio cues (breathing, voice), and the contradictory visual states (lighting, camera motion) would not align with any coherent audio or effect, violating AVS.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt is a deliberate, self-contradictory instruction designed to violate internal consistency across all criteria. It explicitly commands impossible or mutually exclusive conditions (e.g., 2-second runtime with 22-second shots, contradictory identities, reversed timelines, simultaneous multiple identities, conflicting environmental states), rendering the entire narrative incoherent and physically impossible. All criteria are violated at a major level due to intentional, extreme contradictions.",
+  "usage": {
+    "completion_tokens": 1504,
+    "prompt_tokens": 3100,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 4604
+  }
+}

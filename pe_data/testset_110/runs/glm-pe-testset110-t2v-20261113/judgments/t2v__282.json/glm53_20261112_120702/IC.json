@@ -1,0 +1,127 @@
+{
+  "candidate_hash": "2cea180f63f1e97ae8f74af46a9b528f142583d9390ebde5d9ae3ccced468cdf",
+  "case_key": "t2v:282",
+  "created_at": "2026-11-13T08:21:07+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "SAC",
+      "evidence": [
+        {
+          "quote": "cool desolate night-wilderness mood",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "a cool, desolate night wilderness on the outskirts of Hohhot — a vast still grassland under a dark hazy sky, thin mist drifting low over the ground",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "The subject (the wilderness scene) remains consistent in identity and appearance across shots. No new subjects or props are introduced, and the environment is described with consistent attributes (desolate, night, mist, grassland). The enhanced prompt adds visual detail but does not alter the core subject or introduce contradictions.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANL",
+      "evidence": [
+        {
+          "quote": "brief instrumental lead-in, then one chorus only, then a short fade",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "For the first three seconds the scene is instrumental only... At 00:03.000, the camera holds the same wide frame... a soft, breathy female voice (S1) begins to sing the chorus once... At 00:13.000, the voice ends and the shot continues... a short instrumental echo... dissolving into a final moment of breathing silence",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "The actions follow a coherent causal progression: instrumental intro → vocal chorus → instrumental fade → silence. The sequence is plausible and matches the original instruction. The female voice is introduced at the correct time and ends at the correct time, with no dangling or incompatible events.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "TSC",
+      "evidence": [
+        {
+          "quote": "3-13s [Chorus 1 only]... 13-15s [Outro fade]",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "At 00:13.000, the voice ends and the shot continues... a short instrumental echo... dissolving into a final moment of breathing silence; the clip ends in quiet stillness",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The enhanced prompt specifies the vocal ends at 00:13.000, while the original instruction allocates 3-13s for the chorus (10 seconds) and 13-15s for the fade (2 seconds). The enhanced prompt implies the fade begins at 00:13.000 and ends at 00:15.000, but the description says 'the clip ends in quiet stillness' at 00:13.000, which may imply a 13-second total duration, conflicting with the 15-second requirement.",
+      "rationale": "The original instruction clearly allocates 15 seconds total, with 10s for chorus and 2s for fade. The enhanced prompt describes the fade as beginning at 00:13.000 but ends the clip at 00:13.000, which may imply the fade is not fully rendered or is compressed. This is a minor issue as the fade is still implied, but the timing is slightly ambiguous and may result in a 13-second clip if strictly interpreted.",
+      "severity": "minor"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SPC",
+      "evidence": [
+        {
+          "quote": "the camera holds the same wide frame with a very slow, subtle push-in",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "the shot continues its slow push-in over the still landscape",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "The camera movement is consistent across shots: a slow push-in is maintained from Shot 1 through Shot 3. There are no unexplained position swaps or movement path inconsistencies. The spatial continuity is preserved.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "PL",
+      "evidence": [
+        {
+          "quote": "cool desolate night-wilderness mood",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "thin mist drifting low over the ground, faint stars glimmering through the haze",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "The physical environment is described plausibly: mist drifting, stars visible through haze, wind moving across grassland. The slow push-in is a realistic camera motion. No violations of real-world physics are present.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "AVS",
+      "evidence": [
+        {
+          "quote": "A soft female voice sings once: 'The night of Hohhot, so deep, so deep / Even the stars did not notice, I did not notice / The night of Hohhot, so deep, so deep / Even the mist did not hear, I did not hear.'",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "a soft, breathy female voice (S1) begins to sing the chorus once: <d>[English] The night of Hohhot, so deep, so deep / Even the stars did not notice, I did not notice / The night of Hohhot, so deep, so deep / Even the mist did not hear, I did not hear.</d>",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "The lyrics, vocal timbre, and timing of the voice are aligned with the visual and sonic context. The voice begins at 00:03.000 as specified, and the instrumental fade follows the vocal end at 00:13.000. No misalignment between audio and visual events is present.",
+      "severity": "none"
+    }
+  ],
+  "dimension": "IC",
+  "dimension_score": 95,
+  "evidence_cache_key": "d3703f2eeae6bcfe67d5d4f67af684e4acb138dc1bc847108c8dab22a722c5eb",
+  "judge_cache_key": "438d7e9fd7332b1041db3e2c26d42cb3fe828e0d369fb59490f6650aee59e97d",
+  "method": "glm53_20261112_120702",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"IC\",\n  \"dimension_score\": 95,\n  \"summary\": \"The enhanced prompt maintains strong internal consistency with the original instruction, preserving subject identity, action sequence, temporal structure, and sonic elements. Minor issues include slight elaboration on visual details not in the original (e.g., 'static wide shot', 'slow push-in') and a minor temporal adjustment (ending at 00:13.000 instead of 13-15s), but these do not contradict or materially alter the core requirements. All criteria are satisfied with no major inconsistencies.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"SAC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"cool desolate night-wilderness mood\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"a cool, desolate night wilderness on the outskirts of Hohhot — a vast still grassland under a dark hazy sky, thin mist drifting low over the ground\"\n        }\n      ],\n      \"rationale\": \"The subject (the wilderness scene) remains consistent in identity and appearance across shots. No new subjects or props are introduced, and the environment is described with consistent attributes (desolate, night, mist, grassland). The enhanced prompt adds visual detail but does not alter the core subject or introduce contradictions.\"\n    },\n    {\n      \"criterion\": \"ANL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"brief instrumental lead-in, then one chorus only, then a short fade\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"For the first three seconds the scene is instrumental only... At 00:03.000, the camera holds the same wide frame... a soft, breathy female voice (S1) begins to sing the chorus once... At 00:13.000, the voice ends and the shot continues... a short instrumental echo... dissolving into a final moment of breathing silence\"\n        }\n      ],\n      \"rationale\": \"The actions follow a coherent causal progression: instrumental intro → vocal chorus → instrumental fade → silence. The sequence is plausible and matches the original instruction. The female voice is introduced at the correct time and ends at the correct time, with no dangling or incompatible events.\"\n    },\n    {\n      \"criterion\": \"TSC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"minor\",\n      \"issue\": \"The enhanced prompt specifies the vocal ends at 00:13.000, while the original instruction allocates 3-13s for the chorus (10 seconds) and 13-15s for the fade (2 seconds). The enhanced prompt implies the fade begins at 00:13.000 and ends at 00:15.000, but the description says 'the clip ends in quiet stillness' at 00:13.000, which may imply a 13-second total duration, conflicting with the 15-second requirement.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"3-13s [Chorus 1 only]... 13-15s [Outro fade]\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"At 00:13.000, the voice ends and the shot continues... a short instrumental echo... dissolving into a final moment of breathing silence; the clip ends in quiet stillness\"\n        }\n      ],\n      \"rationale\": \"The original instruction clearly allocates 15 seconds total, with 10s for chorus and 2s for fade. The enhanced prompt describes the fade as beginning at 00:13.000 but ends the clip at 00:13.000, which may imply the fade is not fully rendered or is compressed. This is a minor issue as the fade is still implied, but the timing is slightly ambiguous and may result in a 13-second clip if strictly interpreted.\"\n    },\n    {\n      \"criterion\": \"SPC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"the camera holds the same wide frame with a very slow, subtle push-in\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"the shot continues its slow push-in over the still landscape\"\n        }\n      ],\n      \"rationale\": \"The camera movement is consistent across shots: a slow push-in is maintained from Shot 1 through Shot 3. There are no unexplained position swaps or movement path inconsistencies. The spatial continuity is preserved.\"\n    },\n    {\n      \"criterion\": \"PL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"cool desolate night-wilderness mood\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"thin mist drifting low over the ground, faint stars glimmering through the haze\"\n        }\n      ],\n      \"rationale\": \"The physical environment is described plausibly: mist drifting, stars visible through haze, wind moving across grassland. The slow push-in is a realistic camera motion. No violations of real-world physics are present.\"\n    },\n    {\n      \"criterion\": \"AVS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"A soft female voice sings once: 'The night of Hohhot, so deep, so deep / Even the stars did not notice, I did not notice / The night of Hohhot, so deep, so deep / Even the mist did not hear, I did not hear.'\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"a soft, breathy female voice (S1) begins to sing the chorus once: <d>[English] The night of Hohhot, so deep, so deep / Even the stars did not notice, I did not notice / The night of Hohhot, so deep, so deep / Even the mist did not hear, I did not hear.</d>\"\n        }\n      ],\n      \"rationale\": \"The lyrics, vocal timbre, and timing of the voice are aligned with the visual and sonic context. The voice begins at 00:03.000 as specified, and the instrumental fade follows the vocal end at 00:13.000. No misalignment between audio and visual events is present.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt maintains strong internal consistency with the original instruction, preserving subject identity, action sequence, temporal structure, and sonic elements. Minor issues include slight elaboration on visual details not in the original (e.g., 'static wide shot', 'slow push-in') and a minor temporal adjustment (ending at 00:13.000 instead of 13-15s), but these do not contradict or materially alter the core requirements. All criteria are satisfied with no major inconsistencies.",
+  "usage": {
+    "completion_tokens": 1537,
+    "prompt_tokens": 1452,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 2989
+  }
+}

@@ -1,0 +1,158 @@
+{
+  "candidate_hash": "4cfde4a12d531b3c299a056d1a2b624f8500f87cabaa2095b1a27e1239010b55",
+  "case_key": "t2v:023",
+  "created_at": "2026-11-13T07:12:12+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "GSF",
+      "evidence": [
+        {
+          "quote": "Help me generate a video: Strong Man vs. Wild Boar",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Replace the whole video with an empty meeting room where a glass of water never moves, with no people and no conflict.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original prompt requests a combat/action genre with a 'Strong Man vs. Wild Boar' theme. The enhanced prompt replaces this with a static, non-conflict scene in an empty meeting room, removing all genre-defining elements.",
+      "rationale": "The genre is fundamentally altered from action/combat to a static, non-narrative scene. The combat theme is entirely removed, which is a major violation of genre preservation.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SAP",
+      "evidence": [
+        {
+          "quote": "Strong Man vs. Wild Boar",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "First state that there is one protagonist, then state that this same protagonist appears simultaneously as five different-looking people who talk to each other.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original prompt implies two subjects: a Strong Man and a Wild Boar. The enhanced prompt drops both identities, replacing them with five different-looking people who are described as the same protagonist, which contradicts the original subject count and identity.",
+      "rationale": "The original subjects are entirely removed and replaced with a fictional, contradictory setup. This is a major identity and count violation.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANF",
+      "evidence": [
+        {
+          "quote": "Strong Man vs. Wild Boar",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Reverse the timeline: show the ending first, then cut to a beginning that does not match. Cut away in the middle to a toothpaste commercial.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original prompt implies a combat narrative with a clear action sequence. The enhanced prompt reverses the timeline, cuts to a toothpaste commercial, and introduces non-sequitur events, completely altering the narrative intent and event order.",
+      "rationale": "The narrative structure is intentionally broken and replaced with absurd, non-continuous events, which is a major violation of action and narrative preservation.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "DLI",
+      "evidence": [
+        {
+          "quote": "Help me generate a video: Strong Man vs. Wild Boar",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "No dialogue, narration, or lyrics are specified in the original prompt, so there is no content to preserve or violate.",
+      "rationale": "The original prompt does not include any dialogue or narration, so this criterion is not violated.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ARP",
+      "evidence": [
+        {
+          "quote": "Cut away in the middle to a toothpaste commercial.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original prompt does not specify any audio constraints, but the enhanced prompt introduces a toothpaste commercial, which implies added music and voiceover, violating the implicit silence or neutral audio expectation of a combat scene.",
+      "rationale": "The addition of a commercial implies music, voiceover, and sound effects not requested in the original prompt, which is a major violation of audio preservation.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CCP",
+      "evidence": [
+        {
+          "quote": "Describe that same moment as... a locked camera and a camera that never stops shaking. Set the total runtime to 3 seconds, while also making every shot last 27 seconds.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original prompt does not specify camera constraints, but the enhanced prompt contradicts itself by describing both a locked camera and a camera that never stops shaking, and also sets conflicting shot durations (3 seconds total runtime vs. 27 seconds per shot).",
+      "rationale": "The camera instructions are internally contradictory and impossible to execute, which is a major violation of camera constraint preservation.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "LCF",
+      "evidence": [
+        {
+          "quote": "Describe that same moment as harsh noon sun and as a lightless night...",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original prompt implies outdoor lighting for a combat scene, but the enhanced prompt describes the same moment as both 'harsh noon sun' and 'lightless night', which are mutually exclusive and contradictory.",
+      "rationale": "The lighting conditions are directly contradictory, making it impossible to preserve the original lighting intent, which is a major violation.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SSP",
+      "evidence": [
+        {
+          "quote": "Strong Man vs. Wild Boar",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Replace the whole video with an empty meeting room...",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original prompt implies an outdoor or arena setting for a combat scene. The enhanced prompt replaces it with an empty meeting room, which is a complete change of setting and background elements.",
+      "rationale": "The setting is entirely replaced with a different environment, which is a major violation of spatial and background preservation.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "OTI",
+      "evidence": [
+        {
+          "quote": "Help me generate a video: Strong Man vs. Wild Boar",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "No visible text, titles, or interface elements are specified in the original prompt, so there is no content to preserve or violate.",
+      "rationale": "The original prompt does not include any text elements, so this criterion is not violated.",
+      "severity": "none"
+    }
+  ],
+  "dimension": "SF",
+  "dimension_score": 0,
+  "evidence_cache_key": "c7e0e94f9a20e002e22a7336900c43978c41b586f86371b14ed2a8d603969a7e",
+  "judge_cache_key": "a0ca24571ad14d7ab7be626329bd736d7e7015f9ebc418227c8be391591d0377",
+  "method": "weak-pe-original",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"SF\",\n  \"dimension_score\": 0,\n  \"summary\": \"The enhanced prompt completely contradicts and replaces the original instruction, violating all semantic fidelity criteria. It negates the requested genre, subject, action, setting, and camera constraints, introduces impossible temporal and spatial conditions, and adds unrelated content. The prompt is intentionally designed to subvert the original request, making semantic fidelity impossible.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"GSF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original prompt requests a combat/action genre with a 'Strong Man vs. Wild Boar' theme. The enhanced prompt replaces this with a static, non-conflict scene in an empty meeting room, removing all genre-defining elements.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"Help me generate a video: Strong Man vs. Wild Boar\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Replace the whole video with an empty meeting room where a glass of water never moves, with no people and no conflict.\"\n        }\n      ],\n      \"rationale\": \"The genre is fundamentally altered from action/combat to a static, non-narrative scene. The combat theme is entirely removed, which is a major violation of genre preservation.\"\n    },\n    {\n      \"criterion\": \"SAP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original prompt implies two subjects: a Strong Man and a Wild Boar. The enhanced prompt drops both identities, replacing them with five different-looking people who are described as the same protagonist, which contradicts the original subject count and identity.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"Strong Man vs. Wild Boar\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"First state that there is one protagonist, then state that this same protagonist appears simultaneously as five different-looking people who talk to each other.\"\n        }\n      ],\n      \"rationale\": \"The original subjects are entirely removed and replaced with a fictional, contradictory setup. This is a major identity and count violation.\"\n    },\n    {\n      \"criterion\": \"ANF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original prompt implies a combat narrative with a clear action sequence. The enhanced prompt reverses the timeline, cuts to a toothpaste commercial, and introduces non-sequitur events, completely altering the narrative intent and event order.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"Strong Man vs. Wild Boar\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Reverse the timeline: show the ending first, then cut to a beginning that does not match. Cut away in the middle to a toothpaste commercial.\"\n        }\n      ],\n      \"rationale\": \"The narrative structure is intentionally broken and replaced with absurd, non-continuous events, which is a major violation of action and narrative preservation.\"\n    },\n    {\n      \"criterion\": \"DLI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"No dialogue, narration, or lyrics are specified in the original prompt, so there is no content to preserve or violate.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"Help me generate a video: Strong Man vs. Wild Boar\"\n        }\n      ],\n      \"rationale\": \"The original prompt does not include any dialogue or narration, so this criterion is not violated.\"\n    },\n    {\n      \"criterion\": \"ARP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original prompt does not specify any audio constraints, but the enhanced prompt introduces a toothpaste commercial, which implies added music and voiceover, violating the implicit silence or neutral audio expectation of a combat scene.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Cut away in the middle to a toothpaste commercial.\"\n        }\n      ],\n      \"rationale\": \"The addition of a commercial implies music, voiceover, and sound effects not requested in the original prompt, which is a major violation of audio preservation.\"\n    },\n    {\n      \"criterion\": \"CCP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original prompt does not specify camera constraints, but the enhanced prompt contradicts itself by describing both a locked camera and a camera that never stops shaking, and also sets conflicting shot durations (3 seconds total runtime vs. 27 seconds per shot).\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Describe that same moment as... a locked camera and a camera that never stops shaking. Set the total runtime to 3 seconds, while also making every shot last 27 seconds.\"\n        }\n      ],\n      \"rationale\": \"The camera instructions are internally contradictory and impossible to execute, which is a major violation of camera constraint preservation.\"\n    },\n    {\n      \"criterion\": \"LCF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original prompt implies outdoor lighting for a combat scene, but the enhanced prompt describes the same moment as both 'harsh noon sun' and 'lightless night', which are mutually exclusive and contradictory.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Describe that same moment as harsh noon sun and as a lightless night...\"\n        }\n      ],\n      \"rationale\": \"The lighting conditions are directly contradictory, making it impossible to preserve the original lighting intent, which is a major violation.\"\n    },\n    {\n      \"criterion\": \"SSP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original prompt implies an outdoor or arena setting for a combat scene. The enhanced prompt replaces it with an empty meeting room, which is a complete change of setting and background elements.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"Strong Man vs. Wild Boar\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Replace the whole video with an empty meeting room...\"\n        }\n      ],\n      \"rationale\": \"The setting is entirely replaced with a different environment, which is a major violation of spatial and background preservation.\"\n    },\n    {\n      \"criterion\": \"OTI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"No visible text, titles, or interface elements are specified in the original prompt, so there is no content to preserve or violate.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"Help me generate a video: Strong Man vs. Wild Boar\"\n        }\n      ],\n      \"rationale\": \"The original prompt does not include any text elements, so this criterion is not violated.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt completely contradicts and replaces the original instruction, violating all semantic fidelity criteria. It negates the requested genre, subject, action, setting, and camera constraints, introduces impossible temporal and spatial conditions, and adds unrelated content. The prompt is intentionally designed to subvert the original request, making semantic fidelity impossible.",
+  "usage": {
+    "completion_tokens": 1556,
+    "prompt_tokens": 1040,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 2596
+  }
+}

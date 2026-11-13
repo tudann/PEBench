@@ -1,0 +1,111 @@
+{
+  "candidate_hash": "638a3a86ae2daa9af5fc6dec91459191b0850e433ca7a848d908be95def2cab7",
+  "case_key": "t2v:479",
+  "created_at": "2026-11-13T08:48:14+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "SAC",
+      "evidence": [
+        {
+          "quote": "穿着家居长裙的年轻女生",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "three young Chinese women in cozy home-wear long dresses",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original prompt mentions 'home long dresses' while the enhanced prompt specifies 'cozy home-wear long dresses'—a minor elaboration that does not alter identity or appearance. The three women remain consistent in count and role across all shots.",
+      "rationale": "The elaboration is compatible and does not introduce contradiction or drift. The core identity and appearance remain consistent across shots.",
+      "severity": "minor"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANL",
+      "evidence": [
+        {
+          "quote": "cleaning the large window together... pull thick winter coats... coach bus... click into skis",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Actions form a coherent causal progression: cleaning windows → preparing for cold weather → traveling by bus → skiing. Each action logically follows the previous, with plausible prerequisites (e.g., cleaning before leaving, putting on gear before skiing).",
+      "rationale": "The sequence of actions is causally linked and plausible. No dangling or incompatible events are present.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "TSC",
+      "evidence": [
+        {
+          "quote": "At 00:04.000, the shot cuts to... At 00:08.000, the shot cuts to... At 00:11.000, the shot cuts to...",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "刚把寝室窗户打理干净，随后套上厚外套，搭乘大巴前往雪场体验滑雪。",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "The enhanced prompt specifies timestamps (00:04.000, 00:08.000, 00:11.000) that align with the 15-second duration, but the original prompt does not specify timing. The transitions are plausible, though the exact duration of each shot is not fully justified by the original instruction.",
+      "rationale": "The timing is internally consistent within the enhanced prompt, but the original instruction lacks temporal detail. The minor issue is in the addition of precise timestamps without explicit support, but it does not break coherence.",
+      "severity": "minor"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SPC",
+      "evidence": [
+        {
+          "quote": "inside a sunlit college dorm... by the dorm door... interior of a coach bus... wide tracking shot at the ski resort",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Location transitions are clearly defined: dorm → dorm door → bus interior → ski resort. Screen direction and relative positions are consistent (e.g., women together in each shot). No unexplained position swaps or movement path conflicts.",
+      "rationale": "Each location change is logically connected and described with consistent spatial relationships. The camera movements (push-in, steady, tracking) support the spatial transitions without contradiction.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "PL",
+      "evidence": [
+        {
+          "quote": "sprays cleaner, wipes the glass... zipping up... ski gear bags... click into skis... glide down together",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "All physical actions are plausible: cleaning windows, putting on winter gear, riding a bus, skiing. No violations of gravity, object permanence, or bodily feasibility. The snowy environment and ski gear are consistent with the activity.",
+      "rationale": "The actions adhere to real-world physics. Skiing on a gentle slope with proper gear is feasible and described without fantasy elements.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "AVS",
+      "evidence": [
+        {
+          "quote": "Soft squeaks of a spray bottle... zip of jackets... bus engine hums... crisp skis carve... bright laughter... light, upbeat acoustic track... brightening as the skiers descend... gently fading at the end.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The soundscape and music are temporally and semantically aligned with the visuals: cleaning sounds → gear sounds → bus hum → ski sounds. Music brightens during descent and fades at end, matching the emotional arc.",
+      "rationale": "Audio elements are described to match the visual events and emotional progression. No misalignment or premature effects are present.",
+      "severity": "none"
+    }
+  ],
+  "dimension": "IC",
+  "dimension_score": 95,
+  "evidence_cache_key": "e5a81239757bbcc5c63e70d32ca6cb9a2dfdb07e416aec9d19e303bf0e174246",
+  "judge_cache_key": "438d7e9fd7332b1041db3e2c26d42cb3fe828e0d369fb59490f6650aee59e97d",
+  "method": "glm53_20261112_120702",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"IC\",\n  \"dimension_score\": 95,\n  \"summary\": \"The enhanced prompt maintains strong internal consistency with the original instruction, preserving subject identity, actions, and progression. Minor issues include slight ambiguity in the exact timing of transitions and a small inconsistency in the description of the window-cleaning activity (e.g., 'cozy home-wear long dresses' vs. 'home long dresses' in original), but these do not materially affect coherence. All criteria are applicable and mostly satisfied with only minor deviations.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"SAC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"minor\",\n      \"issue\": \"The original prompt mentions 'home long dresses' while the enhanced prompt specifies 'cozy home-wear long dresses'—a minor elaboration that does not alter identity or appearance. The three women remain consistent in count and role across all shots.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"穿着家居长裙的年轻女生\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"three young Chinese women in cozy home-wear long dresses\"\n        }\n      ],\n      \"rationale\": \"The elaboration is compatible and does not introduce contradiction or drift. The core identity and appearance remain consistent across shots.\"\n    },\n    {\n      \"criterion\": \"ANL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"Actions form a coherent causal progression: cleaning windows → preparing for cold weather → traveling by bus → skiing. Each action logically follows the previous, with plausible prerequisites (e.g., cleaning before leaving, putting on gear before skiing).\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"cleaning the large window together... pull thick winter coats... coach bus... click into skis\"\n        }\n      ],\n      \"rationale\": \"The sequence of actions is causally linked and plausible. No dangling or incompatible events are present.\"\n    },\n    {\n      \"criterion\": \"TSC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"minor\",\n      \"issue\": \"The enhanced prompt specifies timestamps (00:04.000, 00:08.000, 00:11.000) that align with the 15-second duration, but the original prompt does not specify timing. The transitions are plausible, though the exact duration of each shot is not fully justified by the original instruction.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"At 00:04.000, the shot cuts to... At 00:08.000, the shot cuts to... At 00:11.000, the shot cuts to...\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"刚把寝室窗户打理干净，随后套上厚外套，搭乘大巴前往雪场体验滑雪。\"\n        }\n      ],\n      \"rationale\": \"The timing is internally consistent within the enhanced prompt, but the original instruction lacks temporal detail. The minor issue is in the addition of precise timestamps without explicit support, but it does not break coherence.\"\n    },\n    {\n      \"criterion\": \"SPC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"Location transitions are clearly defined: dorm → dorm door → bus interior → ski resort. Screen direction and relative positions are consistent (e.g., women together in each shot). No unexplained position swaps or movement path conflicts.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"inside a sunlit college dorm... by the dorm door... interior of a coach bus... wide tracking shot at the ski resort\"\n        }\n      ],\n      \"rationale\": \"Each location change is logically connected and described with consistent spatial relationships. The camera movements (push-in, steady, tracking) support the spatial transitions without contradiction.\"\n    },\n    {\n      \"criterion\": \"PL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"All physical actions are plausible: cleaning windows, putting on winter gear, riding a bus, skiing. No violations of gravity, object permanence, or bodily feasibility. The snowy environment and ski gear are consistent with the activity.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"sprays cleaner, wipes the glass... zipping up... ski gear bags... click into skis... glide down together\"\n        }\n      ],\n      \"rationale\": \"The actions adhere to real-world physics. Skiing on a gentle slope with proper gear is feasible and described without fantasy elements.\"\n    },\n    {\n      \"criterion\": \"AVS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"The soundscape and music are temporally and semantically aligned with the visuals: cleaning sounds → gear sounds → bus hum → ski sounds. Music brightens during descent and fades at end, matching the emotional arc.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Soft squeaks of a spray bottle... zip of jackets... bus engine hums... crisp skis carve... bright laughter... light, upbeat acoustic track... brightening as the skiers descend... gently fading at the end.\"\n        }\n      ],\n      \"rationale\": \"Audio elements are described to match the visual events and emotional progression. No misalignment or premature effects are present.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt maintains strong internal consistency with the original instruction, preserving subject identity, actions, and progression. Minor issues include slight ambiguity in the exact timing of transitions and a small inconsistency in the description of the window-cleaning activity (e.g., 'cozy home-wear long dresses' vs. 'home long dresses' in original), but these do not materially affect coherence. All criteria are applicable and mostly satisfied with only minor deviations.",
+  "usage": {
+    "completion_tokens": 1228,
+    "prompt_tokens": 1146,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 2374
+  }
+}

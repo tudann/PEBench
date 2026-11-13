@@ -1,0 +1,147 @@
+{
+  "candidate_hash": "c7b48d9a9f9b7c7287882dcd77091c2e369f77545ba36b93d1223e9aa8861cc4",
+  "case_key": "i2v:138",
+  "created_at": "2026-11-13T07:47:59+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "SAC",
+      "evidence": [
+        {
+          "quote": "主体为【由许多小狗拼成的卡通犬头剪影木质拼图】，贴墙/立面展示（无独立底座支架），剪影内拼满各品种卡通小狗，中央是戴蓝项圈银环的巴哥犬大脸；桌面前景是写实黑白奶牛猫趴卧姿势，也戴同款蓝项圈银环，周围散落若干狗形与常规拼图块",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "a large cartoon dog-head silhouette wooden puzzle mounted flat on a white wall, filled with many small cartoon puppies of various breeds with a big round pug face at the center wearing a blue collar with a silver ring, loose dog puzzle pieces scattered on the wall around the silhouette, and a realistic black-and-white cow cat lying in a loaf pose on the warm wooden table in the lower foreground, front paws extended, wearing a matching blue collar with silver ring",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "A black-and-white cat wearing a blue collar with a silver ring lies on a wooden table in front of a large dog-head-shaped wooden puzzle mounted on a white wall. The puzzle is composed of many small cartoon dog pieces, with a central pug face wearing the same collar.",
+          "source": "evidence_facts"
+        }
+      ],
+      "issue": "",
+      "rationale": "Subject identities (puzzle_dog_head, cat, scattered_puzzle_pieces) and attributes (blue collar with silver ring, pug face, black-and-white cat, wooden table, white wall) are consistently preserved across all sources. No renaming, duplication, or attribute drift is observed. The enhanced prompt adds minor descriptive elaboration (e.g., 'goofy wide-eyed expression') but does not contradict or alter core attributes.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANL",
+      "evidence": [
+        {
+          "quote": "开场对齐首帧——拼图剪影贴墙静止，奶牛猫趴卧桌面盯着镜头/拼图约2秒；随后猫抬爪轻轻戳拼图中下部一块小狗拼图块，拼图块轻轻晃动像要掉又没掉，猫立刻缩爪，歪头盯着晃块，好奇又调皮，其他块基本不动，制造小悬念。",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "The cat rises slightly onto its forelegs, lifts one front paw, and gently pokes a small puppy puzzle piece at the puzzle's lower-middle area; the piece wobbles with a light trembling shake as if about to fall but does not, while all other pieces stay fixed. The cat instantly retracts its paw, tilts its head, and stares at the wobbling piece with wide, curious, mischievous eyes.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "The cat's expression is neutral, not 'neurotic' or 'mischievous' as described in the prompt — this is a static image and cannot convey dynamic expression or human-like hand movements.",
+          "source": "evidence_facts"
+        }
+      ],
+      "issue": "",
+      "rationale": "The action sequence is coherent and causally linked: cat observes → pokes piece → piece wobbles → cat retracts paw → stares curiously. The enhanced prompt adds 'mischievous eyes' and 'playful meow' which are plausible extensions of the original 'neurotic, funny, mischievous' character description. No dangling or incompatible actions are present. The evidence confirms the static state, but the prompt describes dynamic behavior consistent with the scene.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "TSC",
+      "evidence": [
+        {
+          "quote": "开篇全景（3秒）斜上方约45°拍贴墙拼图与趴卧奶牛猫；慢推（8秒）推到拼图中部与猫爪，聚焦晃动块与猫表情；定格特写（4秒）锁定晃块、猫爪与搞怪表情。",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "At 00:11.000, the camera cuts to a close-up locked on the wobbling puzzle piece, the cat's extended paw, and its goofy wide-eyed expression.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The enhanced prompt specifies Shot 3 at 00:11.000, but the original prompt describes a 4-second final close-up shot following an 8-second slow push, which would place the close-up starting at 00:11.000 (3s + 8s = 11s), aligning with the enhanced prompt. However, the original prompt does not explicitly state the start time of the close-up, only its duration. The timing is consistent but not explicitly anchored in the original, making the enhanced prompt's timestamp a minor elaboration.",
+      "rationale": "The enhanced prompt's timing (00:11.000 for the close-up) is logically consistent with the original's 3s + 8s = 11s structure. However, the original prompt does not specify absolute timestamps, so the enhanced prompt's explicit timing is a minor addition rather than a contradiction. No infeasible or overlapping events are present.",
+      "severity": "minor"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SPC",
+      "evidence": [
+        {
+          "quote": "开篇全景（3秒）斜上方约45°拍贴墙拼图与趴卧奶牛猫；慢推（8秒）推到拼图中部与猫爪，聚焦晃动块与猫表情；定格特写（4秒）锁定晃块、猫爪与搞怪表情。",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "The camera holds a static shot for about two seconds... [Shot 2] At 00:03.000, the camera cuts to a medium shot and pushes in with small amplitude at slow speed toward the puzzle's lower-middle section and the cat. [Shot 3] At 00:11.000, the camera cuts to a close-up locked on the wobbling puzzle piece, the cat's extended paw, and its goofy wide-eyed expression.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "angle: slightly elevated, looking down at cat and puzzle; composition: cat centered in foreground, puzzle centered in background, balanced with floating pieces around edges",
+          "source": "evidence_facts"
+        }
+      ],
+      "issue": "",
+      "rationale": "Camera movement and spatial relationships are consistent: static wide shot → slow push-in → close-up. The enhanced prompt specifies 'cuts' between shots, which is acceptable for a 3D animation. The evidence confirms the initial composition, and the prompt's movement is plausible and coherent. No unexplained position swaps or infeasible trajectories are described.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "PL",
+      "evidence": [
+        {
+          "quote": "拼图块轻轻晃动像要掉又没掉",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "the piece wobbles with a light trembling shake as if about to fall but does not, while all other pieces stay fixed",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "The puzzle pieces are not shown in motion; the prompt describes a piece being gently touched and wobbling, which is not depicted here.",
+          "source": "evidence_facts"
+        }
+      ],
+      "issue": "",
+      "rationale": "The wobbling puzzle piece is described as a temporary, controlled motion due to a gentle poke, which is physically plausible for a loose wooden piece. The cat's paw movement and retraction are also consistent with feline anatomy. The 'floating' pieces are interpreted as arranged to appear so, which is acceptable in a cartoon-real hybrid style. No violations of object permanence or gravity are present.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "AVS",
+      "evidence": [
+        {
+          "quote": "轻快卡通BGM（钢琴+木鱼），“咔哒”晃动声、调皮“喵呜”，结尾1秒疑惑“嗯？”音效。",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "A light \"click\" sounds as the cat's paw taps the puzzle piece, followed by the piece's gentle wobbling rattle against the wall. A playful short \"meow\" comes from the cat near the end, closing with a puzzled rising \"hmm?\" vocal effect as the piece settles.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "The prompt describes a 15-second animation with specific timing and actions, but the image only represents a single frame (likely the opening frame).",
+          "source": "evidence_facts"
+        }
+      ],
+      "issue": "",
+      "rationale": "The soundscape is temporally and semantically aligned: click at poke, wobble rattle during motion, meow and 'hmm?' at the end. The enhanced prompt adds 'puzzled rising \"hmm?\"' which matches the cat's expression and the suspenseful beat. No misaligned lip-sync or premature effects are described. The audio is consistent with the visual events.",
+      "severity": "none"
+    }
+  ],
+  "dimension": "IC",
+  "dimension_score": 95,
+  "evidence_cache_key": "5abfb653c647e19f6fbb9120e0317052857a87d203af5dce817939cfdf3864f0",
+  "judge_cache_key": "438d7e9fd7332b1041db3e2c26d42cb3fe828e0d369fb59490f6650aee59e97d",
+  "method": "glm53_20261112_120702",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"IC\",\n  \"dimension_score\": 95,\n  \"summary\": \"The enhanced prompt maintains strong internal consistency with the original instruction, preserving subject identity, actions, chronology, and spatial relationships. Minor issues include slight elaboration beyond the original prompt (e.g., 'goofy wide-eyed expression' not explicitly stated) and a minor temporal misalignment in shot timing (00:11.000 vs. 4-second final shot). No major contradictions or attribute drifts are present. The prompt aligns well with the evidence asset, which confirms the static scene composition and subject attributes.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"SAC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"主体为【由许多小狗拼成的卡通犬头剪影木质拼图】，贴墙/立面展示（无独立底座支架），剪影内拼满各品种卡通小狗，中央是戴蓝项圈银环的巴哥犬大脸；桌面前景是写实黑白奶牛猫趴卧姿势，也戴同款蓝项圈银环，周围散落若干狗形与常规拼图块\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"a large cartoon dog-head silhouette wooden puzzle mounted flat on a white wall, filled with many small cartoon puppies of various breeds with a big round pug face at the center wearing a blue collar with a silver ring, loose dog puzzle pieces scattered on the wall around the silhouette, and a realistic black-and-white cow cat lying in a loaf pose on the warm wooden table in the lower foreground, front paws extended, wearing a matching blue collar with silver ring\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"A black-and-white cat wearing a blue collar with a silver ring lies on a wooden table in front of a large dog-head-shaped wooden puzzle mounted on a white wall. The puzzle is composed of many small cartoon dog pieces, with a central pug face wearing the same collar.\"\n        }\n      ],\n      \"rationale\": \"Subject identities (puzzle_dog_head, cat, scattered_puzzle_pieces) and attributes (blue collar with silver ring, pug face, black-and-white cat, wooden table, white wall) are consistently preserved across all sources. No renaming, duplication, or attribute drift is observed. The enhanced prompt adds minor descriptive elaboration (e.g., 'goofy wide-eyed expression') but does not contradict or alter core attributes.\"\n    },\n    {\n      \"criterion\": \"ANL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"开场对齐首帧——拼图剪影贴墙静止，奶牛猫趴卧桌面盯着镜头/拼图约2秒；随后猫抬爪轻轻戳拼图中下部一块小狗拼图块，拼图块轻轻晃动像要掉又没掉，猫立刻缩爪，歪头盯着晃块，好奇又调皮，其他块基本不动，制造小悬念。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"The cat rises slightly onto its forelegs, lifts one front paw, and gently pokes a small puppy puzzle piece at the puzzle's lower-middle area; the piece wobbles with a light trembling shake as if about to fall but does not, while all other pieces stay fixed. The cat instantly retracts its paw, tilts its head, and stares at the wobbling piece with wide, curious, mischievous eyes.\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"The cat's expression is neutral, not 'neurotic' or 'mischievous' as described in the prompt — this is a static image and cannot convey dynamic expression or human-like hand movements.\"\n        }\n      ],\n      \"rationale\": \"The action sequence is coherent and causally linked: cat observes → pokes piece → piece wobbles → cat retracts paw → stares curiously. The enhanced prompt adds 'mischievous eyes' and 'playful meow' which are plausible extensions of the original 'neurotic, funny, mischievous' character description. No dangling or incompatible actions are present. The evidence confirms the static state, but the prompt describes dynamic behavior consistent with the scene.\"\n    },\n    {\n      \"criterion\": \"TSC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"minor\",\n      \"issue\": \"The enhanced prompt specifies Shot 3 at 00:11.000, but the original prompt describes a 4-second final close-up shot following an 8-second slow push, which would place the close-up starting at 00:11.000 (3s + 8s = 11s), aligning with the enhanced prompt. However, the original prompt does not explicitly state the start time of the close-up, only its duration. The timing is consistent but not explicitly anchored in the original, making the enhanced prompt's timestamp a minor elaboration.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"开篇全景（3秒）斜上方约45°拍贴墙拼图与趴卧奶牛猫；慢推（8秒）推到拼图中部与猫爪，聚焦晃动块与猫表情；定格特写（4秒）锁定晃块、猫爪与搞怪表情。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"At 00:11.000, the camera cuts to a close-up locked on the wobbling puzzle piece, the cat's extended paw, and its goofy wide-eyed expression.\"\n        }\n      ],\n      \"rationale\": \"The enhanced prompt's timing (00:11.000 for the close-up) is logically consistent with the original's 3s + 8s = 11s structure. However, the original prompt does not specify absolute timestamps, so the enhanced prompt's explicit timing is a minor addition rather than a contradiction. No infeasible or overlapping events are present.\"\n    },\n    {\n      \"criterion\": \"SPC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"开篇全景（3秒）斜上方约45°拍贴墙拼图与趴卧奶牛猫；慢推（8秒）推到拼图中部与猫爪，聚焦晃动块与猫表情；定格特写（4秒）锁定晃块、猫爪与搞怪表情。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"The camera holds a static shot for about two seconds... [Shot 2] At 00:03.000, the camera cuts to a medium shot and pushes in with small amplitude at slow speed toward the puzzle's lower-middle section and the cat. [Shot 3] At 00:11.000, the camera cuts to a close-up locked on the wobbling puzzle piece, the cat's extended paw, and its goofy wide-eyed expression.\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"angle: slightly elevated, looking down at cat and puzzle; composition: cat centered in foreground, puzzle centered in background, balanced with floating pieces around edges\"\n        }\n      ],\n      \"rationale\": \"Camera movement and spatial relationships are consistent: static wide shot → slow push-in → close-up. The enhanced prompt specifies 'cuts' between shots, which is acceptable for a 3D animation. The evidence confirms the initial composition, and the prompt's movement is plausible and coherent. No unexplained position swaps or infeasible trajectories are described.\"\n    },\n    {\n      \"criterion\": \"PL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"拼图块轻轻晃动像要掉又没掉\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"the piece wobbles with a light trembling shake as if about to fall but does not, while all other pieces stay fixed\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"The puzzle pieces are not shown in motion; the prompt describes a piece being gently touched and wobbling, which is not depicted here.\"\n        }\n      ],\n      \"rationale\": \"The wobbling puzzle piece is described as a temporary, controlled motion due to a gentle poke, which is physically plausible for a loose wooden piece. The cat's paw movement and retraction are also consistent with feline anatomy. The 'floating' pieces are interpreted as arranged to appear so, which is acceptable in a cartoon-real hybrid style. No violations of object permanence or gravity are present.\"\n    },\n    {\n      \"criterion\": \"AVS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"轻快卡通BGM（钢琴+木鱼），“咔哒”晃动声、调皮“喵呜”，结尾1秒疑惑“嗯？”音效。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"A light \\\"click\\\" sounds as the cat's paw taps the puzzle piece, followed by the piece's gentle wobbling rattle against the wall. A playful short \\\"meow\\\" comes from the cat near the end, closing with a puzzled rising \\\"hmm?\\\" vocal effect as the piece settles.\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"The prompt describes a 15-second animation with specific timing and actions, but the image only represents a single frame (likely the opening frame).\"\n        }\n      ],\n      \"rationale\": \"The soundscape is temporally and semantically aligned: click at poke, wobble rattle during motion, meow and 'hmm?' at the end. The enhanced prompt adds 'puzzled rising \\\"hmm?\\\"' which matches the cat's expression and the suspenseful beat. No misaligned lip-sync or premature effects are described. The audio is consistent with the visual events.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt maintains strong internal consistency with the original instruction, preserving subject identity, actions, chronology, and spatial relationships. Minor issues include slight elaboration beyond the original prompt (e.g., 'goofy wide-eyed expression' not explicitly stated) and a minor temporal misalignment in shot timing (00:11.000 vs. 4-second final shot). No major contradictions or attribute drifts are present. The prompt aligns well with the evidence asset, which confirms the static scene composition and subject attributes.",
+  "usage": {
+    "completion_tokens": 2305,
+    "prompt_tokens": 3504,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 5809
+  }
+}

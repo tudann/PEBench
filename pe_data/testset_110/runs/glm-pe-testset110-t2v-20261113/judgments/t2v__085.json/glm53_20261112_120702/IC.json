@@ -1,0 +1,127 @@
+{
+  "candidate_hash": "4013c4d95b7371db3b06d832e8fcb85751d3ca183ba57a51fb60116bc5ac4ce5",
+  "case_key": "t2v:085",
+  "created_at": "2026-11-13T07:40:49+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "SAC",
+      "evidence": [
+        {
+          "quote": "sprinters crouched in their starting blocks",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "rise into full upright sprinting form",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The athletes are described as 'crouched in their starting blocks' in Shot 1 and then 'rise into full upright sprinting form' in Shot 2. While this is physically accurate, the transition is not explicitly described, which may cause a minor discontinuity in visual continuity if not rendered with smooth motion. No identity, count, or attribute drift occurs.",
+      "rationale": "The change in posture is a natural progression of a sprint start and is consistent with real-world biomechanics. The description does not introduce new subjects or alter clothing/props. The minor issue is due to lack of explicit transitional description, not an actual inconsistency.",
+      "severity": "minor"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANL",
+      "evidence": [
+        {
+          "quote": "starting signal fires, and the sprinters explode out of the blocks in unison",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "accelerating at maximum effort down the straightaway",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The actions form a coherent causal progression: starting blocks → explosion out of blocks → acceleration → full sprint. Each action logically follows the previous, with appropriate physical prerequisites (e.g., crouched position before explosive start). No dangling or incompatible events are present.",
+      "rationale": "The sequence of actions is physically plausible and causally linked. The athletes' movements are consistent with sprint mechanics, and there are no unexplained or contradictory actions.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "TSC",
+      "evidence": [
+        {
+          "quote": "At 00:05.500, the camera cuts to a smooth lateral tracking shot",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "田径馆的直道上，几名高校田径选手正在进行百米短跑全力起跑冲刺",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "The prompt specifies a cut at 00:05.500, which implies a precise timing within the 15-second duration. However, the original prompt does not specify timing, and the enhanced prompt does not anchor this timestamp to the start of the video or to the duration of the sprint. This may lead to misalignment if not interpreted correctly.",
+      "rationale": "While the timestamp is precise, it is not inherently contradictory. However, without a clear reference point (e.g., '5.5 seconds after start'), it introduces a minor ambiguity in temporal alignment. The overall chronology remains coherent.",
+      "severity": "minor"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SPC",
+      "evidence": [
+        {
+          "quote": "low static-ish angle near lane level",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "smooth lateral tracking shot gliding alongside the lane",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The camera moves from a low static angle near lane level to a lateral tracking shot alongside the lane. The transition is described as a cut, not a physical camera movement, so no spatial continuity is required. The relative positions of athletes and track remain consistent with the action (e.g., lane lines blur beneath them).",
+      "rationale": "The camera change is a cut, not a continuous movement, so no spatial continuity violation occurs. The description of the athletes' positions relative to the track and lane lines is consistent with sprinting motion.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "PL",
+      "evidence": [
+        {
+          "quote": "spikes bite into the track",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "driving low with powerful strides and pumping arms",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "All physical actions (explosive start, acceleration, upright sprinting, spikes biting into track) are consistent with real-world physics. No violations of gravity, contact, or object permanence are present. The description of the athletes' movements is biomechanically plausible.",
+      "rationale": "The actions described are standard for sprinting and do not violate physical laws. The environment (indoor track, arena lights) is consistent with the activity.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "AVS",
+      "evidence": [
+        {
+          "quote": "A sharp starting signal cracks through the hush... followed by an explosive burst of spikes striking the track",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Driving percussive pulse... building steadily in intensity and volume as the sprint accelerates",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The soundscape (starting signal, spikes striking track, breathing, air whoosh) and non-diegetic music (driving pulse, building intensity) are temporally and semantically aligned with the visual events. The music builds as the sprint accelerates, matching the visual progression.",
+      "rationale": "The audio elements are described in a way that matches the visual timeline and emotional arc of the sprint. No misalignment or premature effects are present.",
+      "severity": "none"
+    }
+  ],
+  "dimension": "IC",
+  "dimension_score": 95,
+  "evidence_cache_key": "b96d95d8a4795894ba2b26ef0fd0e5a933100b9d0b9f4ad47dd68e26bda020a2",
+  "judge_cache_key": "438d7e9fd7332b1041db3e2c26d42cb3fe828e0d369fb59490f6650aee59e97d",
+  "method": "glm53_20261112_120702",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"IC\",\n  \"dimension_score\": 95,\n  \"summary\": \"The enhanced prompt maintains strong internal consistency with the original instruction, preserving subject identity, action progression, and environmental context. Minor issues include slight over-specification of timing (00:05.500) without explicit duration anchoring, and a minor attribute drift in the description of the athletes' posture (from crouched to upright) without explicit transition cues. No contradictions or physics violations are present. The soundscape and music are logically aligned with the visual events.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"SAC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"minor\",\n      \"issue\": \"The athletes are described as 'crouched in their starting blocks' in Shot 1 and then 'rise into full upright sprinting form' in Shot 2. While this is physically accurate, the transition is not explicitly described, which may cause a minor discontinuity in visual continuity if not rendered with smooth motion. No identity, count, or attribute drift occurs.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"sprinters crouched in their starting blocks\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"rise into full upright sprinting form\"\n        }\n      ],\n      \"rationale\": \"The change in posture is a natural progression of a sprint start and is consistent with real-world biomechanics. The description does not introduce new subjects or alter clothing/props. The minor issue is due to lack of explicit transitional description, not an actual inconsistency.\"\n    },\n    {\n      \"criterion\": \"ANL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"The actions form a coherent causal progression: starting blocks → explosion out of blocks → acceleration → full sprint. Each action logically follows the previous, with appropriate physical prerequisites (e.g., crouched position before explosive start). No dangling or incompatible events are present.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"starting signal fires, and the sprinters explode out of the blocks in unison\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"accelerating at maximum effort down the straightaway\"\n        }\n      ],\n      \"rationale\": \"The sequence of actions is physically plausible and causally linked. The athletes' movements are consistent with sprint mechanics, and there are no unexplained or contradictory actions.\"\n    },\n    {\n      \"criterion\": \"TSC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"minor\",\n      \"issue\": \"The prompt specifies a cut at 00:05.500, which implies a precise timing within the 15-second duration. However, the original prompt does not specify timing, and the enhanced prompt does not anchor this timestamp to the start of the video or to the duration of the sprint. This may lead to misalignment if not interpreted correctly.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"At 00:05.500, the camera cuts to a smooth lateral tracking shot\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"田径馆的直道上，几名高校田径选手正在进行百米短跑全力起跑冲刺\"\n        }\n      ],\n      \"rationale\": \"While the timestamp is precise, it is not inherently contradictory. However, without a clear reference point (e.g., '5.5 seconds after start'), it introduces a minor ambiguity in temporal alignment. The overall chronology remains coherent.\"\n    },\n    {\n      \"criterion\": \"SPC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"The camera moves from a low static angle near lane level to a lateral tracking shot alongside the lane. The transition is described as a cut, not a physical camera movement, so no spatial continuity is required. The relative positions of athletes and track remain consistent with the action (e.g., lane lines blur beneath them).\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"low static-ish angle near lane level\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"smooth lateral tracking shot gliding alongside the lane\"\n        }\n      ],\n      \"rationale\": \"The camera change is a cut, not a continuous movement, so no spatial continuity violation occurs. The description of the athletes' positions relative to the track and lane lines is consistent with sprinting motion.\"\n    },\n    {\n      \"criterion\": \"PL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"All physical actions (explosive start, acceleration, upright sprinting, spikes biting into track) are consistent with real-world physics. No violations of gravity, contact, or object permanence are present. The description of the athletes' movements is biomechanically plausible.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"spikes bite into the track\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"driving low with powerful strides and pumping arms\"\n        }\n      ],\n      \"rationale\": \"The actions described are standard for sprinting and do not violate physical laws. The environment (indoor track, arena lights) is consistent with the activity.\"\n    },\n    {\n      \"criterion\": \"AVS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"The soundscape (starting signal, spikes striking track, breathing, air whoosh) and non-diegetic music (driving pulse, building intensity) are temporally and semantically aligned with the visual events. The music builds as the sprint accelerates, matching the visual progression.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"A sharp starting signal cracks through the hush... followed by an explosive burst of spikes striking the track\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Driving percussive pulse... building steadily in intensity and volume as the sprint accelerates\"\n        }\n      ],\n      \"rationale\": \"The audio elements are described in a way that matches the visual timeline and emotional arc of the sprint. No misalignment or premature effects are present.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt maintains strong internal consistency with the original instruction, preserving subject identity, action progression, and environmental context. Minor issues include slight over-specification of timing (00:05.500) without explicit duration anchoring, and a minor attribute drift in the description of the athletes' posture (from crouched to upright) without explicit transition cues. No contradictions or physics violations are present. The soundscape and music are logically aligned with the visual events.",
+  "usage": {
+    "completion_tokens": 1407,
+    "prompt_tokens": 1056,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 2463
+  }
+}

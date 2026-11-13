@@ -1,0 +1,162 @@
+{
+  "candidate_hash": "fd9bd88c8a4918b9f615ddafd2a13a374563653f3167cc2ca8dedccc3682c336",
+  "case_key": "t2v:467",
+  "created_at": "2026-11-13T08:33:15+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "STC",
+      "evidence": [
+        {
+          "quote": "Set the total runtime to 3 seconds, while also making every shot last 27 seconds.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Reverse the timeline: show the ending first, then cut to a beginning that does not match.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt specifies a 3-second runtime while requiring every shot to last 27 seconds, which is physically impossible. It also demands a reversed timeline with mismatched beginnings and endings, and an abrupt cut to a rooftop fireworks show without continuity, making a feasible temporal plan impossible.",
+      "rationale": "Temporal coherence is destroyed by contradictory duration constraints and illogical sequencing. A 3-second video cannot contain 27-second shots. The reversed timeline with mismatched beginning and ending further breaks continuity.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CDS",
+      "evidence": [
+        {
+          "quote": "Describe that same moment as harsh noon sun and as a lightless night, and as both a locked camera and a camera that never stops shaking.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt contradicts the original camera instructions and introduces conflicting camera behaviors: 'locked camera' and 'camera that never stops shaking' for the same moment, without specifying which applies. No actionable framing, scale, or movement is provided for the new content.",
+      "rationale": "The prompt introduces mutually exclusive camera behaviors for the same moment, creating an infeasible specification. No consistent shot scale, angle, or movement is defined for the new scene of people eating.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ETD",
+      "evidence": [
+        {
+          "quote": "Cut away in the middle to a rooftop fireworks show.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Describe that same moment as harsh noon sun and as a lightless night, and as both a locked camera and a camera that never stops shaking.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt mandates a cut to a rooftop fireworks show in the middle of the sequence without any spatial or narrative motivation, and then describes the same moment with conflicting lighting and camera conditions, breaking continuity and spatial logic.",
+      "rationale": "Transitions are disconnected and unmotivated. The cut to fireworks is abrupt and unexplained, and the simultaneous description of conflicting lighting and camera states for the same moment violates spatial and temporal continuity.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "LCS",
+      "evidence": [
+        {
+          "quote": "Describe that same moment as harsh noon sun and as a lightless night...",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt demands that the same moment be described as 'harsh noon sun' and 'lightless night' simultaneously, which is physically impossible and contradicts any actionable lighting specification.",
+      "rationale": "Lighting conditions are mutually exclusive and cannot coexist. This creates an infeasible specification for light source, direction, and quality.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "NDE",
+      "evidence": [
+        {
+          "quote": "Replace the whole video with two people sitting and eating, with no effects or transformation.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Reverse the timeline: show the ending first, then cut to a beginning that does not match.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt replaces the original narrative progression with a surreal, static scene of people eating, then introduces contradictory elements (five versions of the same protagonist, reversed timeline, fireworks cut) without any progression, escalation, or resolution.",
+      "rationale": "The content lacks any narrative or visual progression. The sequence is static, contradictory, and lacks resolution or meaningful variation.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CIF",
+      "evidence": [
+        {
+          "quote": "First state that there is one protagonist, then state that this same protagonist appears simultaneously as five different-looking people who talk to each other.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Play a loud pop chorus the entire time and have the characters lip-sync to it.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The additions (five versions of the protagonist, reversed timeline, fireworks cut, conflicting lighting, loud pop chorus) are irrelevant, contradictory, and distract from the central request to replace the video with a simple scene of people eating. These elements are not supportive but disruptive.",
+      "rationale": "The additions are not supportive of the central request but introduce surreal, contradictory, and irrelevant elements that undermine the intended result.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SDI",
+      "evidence": [
+        {
+          "quote": "Play a loud pop chorus the entire time and have the characters lip-sync to it.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt mandates a loud pop chorus to play the entire time with characters lip-syncing, but provides no specification for the source, character, intensity, or visual timing of the audio, and contradicts the original quiet, solemn atmosphere.",
+      "rationale": "Audio integration is specified without any actionable details for source, character, or visual timing. The loud pop chorus contradicts the original quiet, solemn atmosphere and is not integrated with the visual content.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SPS",
+      "evidence": [
+        {
+          "quote": "Drop the requested identity, count, action order, setting, and any explicit camera instruction.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "First state that there is one protagonist, then state that this same protagonist appears simultaneously as five different-looking people who talk to each other.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt drops all subject and performance details from the original (young man, expression, movement, interaction) and replaces them with vague instructions about 'two people sitting and eating' and 'five different-looking people who talk to each other' without specifying appearance, expression, gesture, or interaction.",
+      "rationale": "No actionable subject or performance details are provided. The description of the protagonist as five different-looking people who talk to each other lacks specificity for appearance, expression, or interaction.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "VSS",
+      "evidence": [
+        {
+          "quote": "Replace the whole video with two people sitting and eating, with no effects or transformation.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt drops all original visual treatment (museum setting, warm evening sunlight, suspended motion) and replaces it with a generic scene of people eating, with no specification of medium, texture, rendering language, or production design.",
+      "rationale": "No actionable specification of visual treatment is provided. The original detailed setting and effects are discarded without replacement.",
+      "severity": "major"
+    }
+  ],
+  "dimension": "DC",
+  "dimension_score": 0,
+  "evidence_cache_key": "e3cbfe9e596e6cd366b5d5e7be56a8e77e84751aee79f95b137c1d8272161631",
+  "judge_cache_key": "0754499d53388e6467fb078ab780e01b77f9f1c9e99d9029be2769351eb2b2eb",
+  "method": "weak-pe-original",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"DC\",\n  \"dimension_score\": 0,\n  \"summary\": \"The enhanced prompt is incoherent and contradictory, violating fundamental temporal, spatial, and production constraints. It explicitly contradicts the original instruction, introduces impossible conditions (e.g., 3-second runtime with 27-second shots), and replaces the requested content with a surreal, logically inconsistent sequence. No feasible temporal plan or actionable specifications are provided.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"STC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt specifies a 3-second runtime while requiring every shot to last 27 seconds, which is physically impossible. It also demands a reversed timeline with mismatched beginnings and endings, and an abrupt cut to a rooftop fireworks show without continuity, making a feasible temporal plan impossible.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Set the total runtime to 3 seconds, while also making every shot last 27 seconds.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Reverse the timeline: show the ending first, then cut to a beginning that does not match.\"\n        }\n      ],\n      \"rationale\": \"Temporal coherence is destroyed by contradictory duration constraints and illogical sequencing. A 3-second video cannot contain 27-second shots. The reversed timeline with mismatched beginning and ending further breaks continuity.\"\n    },\n    {\n      \"criterion\": \"CDS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt contradicts the original camera instructions and introduces conflicting camera behaviors: 'locked camera' and 'camera that never stops shaking' for the same moment, without specifying which applies. No actionable framing, scale, or movement is provided for the new content.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Describe that same moment as harsh noon sun and as a lightless night, and as both a locked camera and a camera that never stops shaking.\"\n        }\n      ],\n      \"rationale\": \"The prompt introduces mutually exclusive camera behaviors for the same moment, creating an infeasible specification. No consistent shot scale, angle, or movement is defined for the new scene of people eating.\"\n    },\n    {\n      \"criterion\": \"ETD\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt mandates a cut to a rooftop fireworks show in the middle of the sequence without any spatial or narrative motivation, and then describes the same moment with conflicting lighting and camera conditions, breaking continuity and spatial logic.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Cut away in the middle to a rooftop fireworks show.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Describe that same moment as harsh noon sun and as a lightless night, and as both a locked camera and a camera that never stops shaking.\"\n        }\n      ],\n      \"rationale\": \"Transitions are disconnected and unmotivated. The cut to fireworks is abrupt and unexplained, and the simultaneous description of conflicting lighting and camera states for the same moment violates spatial and temporal continuity.\"\n    },\n    {\n      \"criterion\": \"LCS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt demands that the same moment be described as 'harsh noon sun' and 'lightless night' simultaneously, which is physically impossible and contradicts any actionable lighting specification.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Describe that same moment as harsh noon sun and as a lightless night...\"\n        }\n      ],\n      \"rationale\": \"Lighting conditions are mutually exclusive and cannot coexist. This creates an infeasible specification for light source, direction, and quality.\"\n    },\n    {\n      \"criterion\": \"NDE\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt replaces the original narrative progression with a surreal, static scene of people eating, then introduces contradictory elements (five versions of the same protagonist, reversed timeline, fireworks cut) without any progression, escalation, or resolution.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Replace the whole video with two people sitting and eating, with no effects or transformation.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Reverse the timeline: show the ending first, then cut to a beginning that does not match.\"\n        }\n      ],\n      \"rationale\": \"The content lacks any narrative or visual progression. The sequence is static, contradictory, and lacks resolution or meaningful variation.\"\n    },\n    {\n      \"criterion\": \"CIF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The additions (five versions of the protagonist, reversed timeline, fireworks cut, conflicting lighting, loud pop chorus) are irrelevant, contradictory, and distract from the central request to replace the video with a simple scene of people eating. These elements are not supportive but disruptive.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"First state that there is one protagonist, then state that this same protagonist appears simultaneously as five different-looking people who talk to each other.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Play a loud pop chorus the entire time and have the characters lip-sync to it.\"\n        }\n      ],\n      \"rationale\": \"The additions are not supportive of the central request but introduce surreal, contradictory, and irrelevant elements that undermine the intended result.\"\n    },\n    {\n      \"criterion\": \"SDI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt mandates a loud pop chorus to play the entire time with characters lip-syncing, but provides no specification for the source, character, intensity, or visual timing of the audio, and contradicts the original quiet, solemn atmosphere.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Play a loud pop chorus the entire time and have the characters lip-sync to it.\"\n        }\n      ],\n      \"rationale\": \"Audio integration is specified without any actionable details for source, character, or visual timing. The loud pop chorus contradicts the original quiet, solemn atmosphere and is not integrated with the visual content.\"\n    },\n    {\n      \"criterion\": \"SPS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt drops all subject and performance details from the original (young man, expression, movement, interaction) and replaces them with vague instructions about 'two people sitting and eating' and 'five different-looking people who talk to each other' without specifying appearance, expression, gesture, or interaction.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Drop the requested identity, count, action order, setting, and any explicit camera instruction.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"First state that there is one protagonist, then state that this same protagonist appears simultaneously as five different-looking people who talk to each other.\"\n        }\n      ],\n      \"rationale\": \"No actionable subject or performance details are provided. The description of the protagonist as five different-looking people who talk to each other lacks specificity for appearance, expression, or interaction.\"\n    },\n    {\n      \"criterion\": \"VSS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt drops all original visual treatment (museum setting, warm evening sunlight, suspended motion) and replaces it with a generic scene of people eating, with no specification of medium, texture, rendering language, or production design.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Replace the whole video with two people sitting and eating, with no effects or transformation.\"\n        }\n      ],\n      \"rationale\": \"No actionable specification of visual treatment is provided. The original detailed setting and effects are discarded without replacement.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt is incoherent and contradictory, violating fundamental temporal, spatial, and production constraints. It explicitly contradicts the original instruction, introduces impossible conditions (e.g., 3-second runtime with 27-second shots), and replaces the requested content with a surreal, logically inconsistent sequence. No feasible temporal plan or actionable specifications are provided.",
+  "usage": {
+    "completion_tokens": 1788,
+    "prompt_tokens": 1421,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 3209
+  }
+}

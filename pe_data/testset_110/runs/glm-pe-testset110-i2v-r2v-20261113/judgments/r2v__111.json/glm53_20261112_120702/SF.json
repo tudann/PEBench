@@ -1,0 +1,190 @@
+{
+  "candidate_hash": "16244a46576ccb8186d7678b4c62f77671aaebe280411704e1622ba4e07b5025",
+  "case_key": "r2v:111",
+  "created_at": "2026-11-13T08:49:45+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "GSF",
+      "evidence": [
+        {
+          "quote": "电影级画质，细腻细节",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "cinematic period-drama vignette with delicate, film-grade light and shadow",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "The enhanced prompt preserves the cinematic, period-drama aesthetic and film-grade visual quality requested in the original prompt. The style is consistent with traditional Chinese historical storytelling, and no incompatible visual references are introduced.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SAP",
+      "evidence": [
+        {
+          "quote": "图1是戏弄者甲，图2是孙子楚",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "<Subject 1> is Teaser A (戏弄者甲)， the middle-aged man from <Picture 1>... <Subject 2> is Sun Zichu (孙子楚)， the young man from <Picture 2>",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "stable_subject_id: subject_1, visible_appearance: ... thin mustache and goatee, topknot with hairpin, brown cross-collared short robe...",
+          "source": "evidence_facts"
+        }
+      ],
+      "issue": "",
+      "rationale": "Subject identities, appearances, and attributes are fully preserved. The enhanced prompt accurately maps each subject to its reference image with precise description of clothing, facial features, and expressions, matching the evidence facts from the assets.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANF",
+      "evidence": [
+        {
+          "quote": "[0-2s]...戏弄者甲图1端着茶靠近...[2-7s]...压低嗓音...镜头随之推进...猛然抬头...[7-8s]...嘴角的笑意僵住了半秒",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "[Shot 1]...carries a cup of tea toward...[Shot 2]...leans in and lowers his voice...camera begins a smooth...push-in...Sun Zichu abruptly raises his head...[Shot 3]...his flirtatious smirk freezes for half a second",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "The sequence of actions, interactions, and outcomes is preserved exactly: approach → teasing line → push-in → sudden gaze → frozen smirk. The narrative intent of a subtle power shift is maintained.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "DLI",
+      "evidence": [
+        {
+          "quote": "听说你天天想着天上白云，我可帮你打听到了个消息——",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "<d>[Chinese] 听说你天天想着天上白云，我可帮你打听到了个消息——</d>",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "The exact dialogue is preserved in Chinese, with no paraphrasing or translation. The enhanced prompt explicitly marks it as a locked line with lip-sync requirement, matching the original's intent.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ARP",
+      "evidence": [
+        {
+          "quote": "音画无偏差",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "non_diegetic_music: N/A — ambient-driven sound design only, with no score.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original prompt explicitly requires 'no music' (implied by '音画无偏差' and 'ambient-driven' context), but the enhanced prompt does not explicitly state this constraint in the ARP section, though it correctly notes 'N/A — ambient-driven sound design only' in overall_soundscape.",
+      "rationale": "The enhanced prompt correctly implements the ambient-only soundscape, but the ARP criterion is not explicitly addressed in the dedicated section. This is a minor omission since the intent is preserved elsewhere.",
+      "severity": "minor"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CCP",
+      "evidence": [
+        {
+          "quote": "[0-2s]（中景）...[2-7s]（中景→近景推向图2孙子楚）...[7-8s]（近景停顿）",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "[Shot 1] medium shot...[Shot 2] smooth, steady, restrained push-in...[Shot 3] camera holds static on the close-up framing",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "Camera shot scale, movement (push-in), and static hold are preserved exactly as specified. The single-take continuity is maintained with no cuts.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "LCF",
+      "evidence": [
+        {
+          "quote": "午后斑驳阳光清晰可见",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "dappled afternoon sunlight filters through the cream canvas awning, casting mottled light patches",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "light_sources_and_direction_effect: bright, warm sunlight from upper left, casting dappled shadows",
+          "source": "evidence_facts"
+        }
+      ],
+      "issue": "",
+      "rationale": "The time of day (afternoon), lighting quality (dappled sunlight), and color temperature (warm) are preserved. The enhanced prompt elaborates on the visual effect without altering the core condition.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SSP",
+      "evidence": [
+        {
+          "quote": "以图3的午后茶摊为场景",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "The target video is an 8-second cinematic period vignette set at <Subject 3>, the town-gate tea stall anchored by <Picture 3>",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "bamboo poles with cream canvas awning, wooden tables and stools, red clay teapot on a red stove, stacked bowls, stone-paved street",
+          "source": "evidence_facts"
+        }
+      ],
+      "issue": "",
+      "rationale": "The setting, background elements, and spatial layout are preserved. The enhanced prompt correctly anchors the scene to <Picture 3> and maintains the relative positions of props and environment.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "OTI",
+      "evidence": [
+        {
+          "quote": "听说你天天想着天上白云，我可帮你打听到了个消息——",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "<d>[Chinese] 听说你天天想着天上白云，我可帮你打听到了个消息——</d>",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "The only visible text is the dialogue, which is preserved exactly in wording and language. No other onscreen text is present or requested.",
+      "severity": "none"
+    }
+  ],
+  "dimension": "SF",
+  "dimension_score": 98,
+  "evidence_cache_key": "d7ab07a46570642e28a9378cc44a9e60c0aa842f728b6765ac236f9b63ecc1ed",
+  "judge_cache_key": "a0ca24571ad14d7ab7be626329bd736d7e7015f9ebc418227c8be391591d0377",
+  "method": "glm53_20261112_120702",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"SF\",\n  \"dimension_score\": 98,\n  \"summary\": \"The enhanced prompt preserves the original instruction's genre, subjects, actions, dialogue, camera motion, lighting, setting, and visual style with high fidelity. It elaborates on character appearances, expressions, and environmental details while maintaining strict alignment with the reference assets. Minor issues include slight over-elaboration in description and a non-critical omission of explicit mention of 'no music' in the original prompt, though the enhanced prompt correctly states 'N/A — ambient-driven sound design only'. No major contradictions or omissions are present.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"GSF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"电影级画质，细腻细节\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"cinematic period-drama vignette with delicate, film-grade light and shadow\"\n        }\n      ],\n      \"rationale\": \"The enhanced prompt preserves the cinematic, period-drama aesthetic and film-grade visual quality requested in the original prompt. The style is consistent with traditional Chinese historical storytelling, and no incompatible visual references are introduced.\"\n    },\n    {\n      \"criterion\": \"SAP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"图1是戏弄者甲，图2是孙子楚\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"<Subject 1> is Teaser A (戏弄者甲)， the middle-aged man from <Picture 1>... <Subject 2> is Sun Zichu (孙子楚)， the young man from <Picture 2>\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"stable_subject_id: subject_1, visible_appearance: ... thin mustache and goatee, topknot with hairpin, brown cross-collared short robe...\"\n        }\n      ],\n      \"rationale\": \"Subject identities, appearances, and attributes are fully preserved. The enhanced prompt accurately maps each subject to its reference image with precise description of clothing, facial features, and expressions, matching the evidence facts from the assets.\"\n    },\n    {\n      \"criterion\": \"ANF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"[0-2s]...戏弄者甲图1端着茶靠近...[2-7s]...压低嗓音...镜头随之推进...猛然抬头...[7-8s]...嘴角的笑意僵住了半秒\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"[Shot 1]...carries a cup of tea toward...[Shot 2]...leans in and lowers his voice...camera begins a smooth...push-in...Sun Zichu abruptly raises his head...[Shot 3]...his flirtatious smirk freezes for half a second\"\n        }\n      ],\n      \"rationale\": \"The sequence of actions, interactions, and outcomes is preserved exactly: approach → teasing line → push-in → sudden gaze → frozen smirk. The narrative intent of a subtle power shift is maintained.\"\n    },\n    {\n      \"criterion\": \"DLI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"听说你天天想着天上白云，我可帮你打听到了个消息——\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"<d>[Chinese] 听说你天天想着天上白云，我可帮你打听到了个消息——</d>\"\n        }\n      ],\n      \"rationale\": \"The exact dialogue is preserved in Chinese, with no paraphrasing or translation. The enhanced prompt explicitly marks it as a locked line with lip-sync requirement, matching the original's intent.\"\n    },\n    {\n      \"criterion\": \"ARP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"minor\",\n      \"issue\": \"The original prompt explicitly requires 'no music' (implied by '音画无偏差' and 'ambient-driven' context), but the enhanced prompt does not explicitly state this constraint in the ARP section, though it correctly notes 'N/A — ambient-driven sound design only' in overall_soundscape.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"音画无偏差\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"non_diegetic_music: N/A — ambient-driven sound design only, with no score.\"\n        }\n      ],\n      \"rationale\": \"The enhanced prompt correctly implements the ambient-only soundscape, but the ARP criterion is not explicitly addressed in the dedicated section. This is a minor omission since the intent is preserved elsewhere.\"\n    },\n    {\n      \"criterion\": \"CCP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"[0-2s]（中景）...[2-7s]（中景→近景推向图2孙子楚）...[7-8s]（近景停顿）\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"[Shot 1] medium shot...[Shot 2] smooth, steady, restrained push-in...[Shot 3] camera holds static on the close-up framing\"\n        }\n      ],\n      \"rationale\": \"Camera shot scale, movement (push-in), and static hold are preserved exactly as specified. The single-take continuity is maintained with no cuts.\"\n    },\n    {\n      \"criterion\": \"LCF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"午后斑驳阳光清晰可见\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"dappled afternoon sunlight filters through the cream canvas awning, casting mottled light patches\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"light_sources_and_direction_effect: bright, warm sunlight from upper left, casting dappled shadows\"\n        }\n      ],\n      \"rationale\": \"The time of day (afternoon), lighting quality (dappled sunlight), and color temperature (warm) are preserved. The enhanced prompt elaborates on the visual effect without altering the core condition.\"\n    },\n    {\n      \"criterion\": \"SSP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"以图3的午后茶摊为场景\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"The target video is an 8-second cinematic period vignette set at <Subject 3>, the town-gate tea stall anchored by <Picture 3>\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"bamboo poles with cream canvas awning, wooden tables and stools, red clay teapot on a red stove, stacked bowls, stone-paved street\"\n        }\n      ],\n      \"rationale\": \"The setting, background elements, and spatial layout are preserved. The enhanced prompt correctly anchors the scene to <Picture 3> and maintains the relative positions of props and environment.\"\n    },\n    {\n      \"criterion\": \"OTI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"听说你天天想着天上白云，我可帮你打听到了个消息——\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"<d>[Chinese] 听说你天天想着天上白云，我可帮你打听到了个消息——</d>\"\n        }\n      ],\n      \"rationale\": \"The only visible text is the dialogue, which is preserved exactly in wording and language. No other onscreen text is present or requested.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt preserves the original instruction's genre, subjects, actions, dialogue, camera motion, lighting, setting, and visual style with high fidelity. It elaborates on character appearances, expressions, and environmental details while maintaining strict alignment with the reference assets. Minor issues include slight over-elaboration in description and a non-critical omission of explicit mention of 'no music' in the original prompt, though the enhanced prompt correctly states 'N/A — ambient-driven sound design only'. No major contradictions or omissions are present.",
+  "usage": {
+    "completion_tokens": 1863,
+    "prompt_tokens": 5859,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 7722
+  }
+}

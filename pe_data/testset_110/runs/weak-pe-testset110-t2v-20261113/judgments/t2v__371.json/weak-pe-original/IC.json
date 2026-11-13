@@ -1,0 +1,103 @@
+{
+  "candidate_hash": "3a514279b61902a0b016e5589af891a1f626ea2bc1c158d4b0c4409544b9e4f8",
+  "case_key": "t2v:371",
+  "created_at": "2026-11-13T08:18:43+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "SAC",
+      "evidence": [
+        {
+          "quote": "First state that there is one protagonist, then state that this same protagonist appears simultaneously as five different-looking people who talk to each other.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Subject identity and count are contradictory: the prompt states 'one protagonist' who 'appears simultaneously as five different-looking people who talk to each other', creating an impossible identity duplication and count conflict.",
+      "rationale": "A single protagonist cannot simultaneously exist as five distinct individuals without violating identity and count consistency. This is a fundamental contradiction in subject representation.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANL",
+      "evidence": [
+        {
+          "quote": "Reverse the timeline: show the ending first, then cut to a beginning that does not match. Cut away in the middle to a toothpaste commercial.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Actions are incoherent and causally impossible: the prompt demands a reversal of timeline (showing ending first, then a mismatched beginning), and introduces a toothpaste commercial mid-sequence, which breaks any causal or procedural progression.",
+      "rationale": "Reversing timeline and inserting an unrelated commercial mid-sequence creates a dangling, non-causal action sequence with no plausible binding between events. This violates procedural coherence.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "TSC",
+      "evidence": [
+        {
+          "quote": "Set the total runtime to 2 seconds, while also making every shot last 17 seconds.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Chronology and duration are infeasible: the prompt sets total runtime to 2 seconds while requiring every shot to last 17 seconds, which is mathematically impossible.",
+      "rationale": "A 2-second total runtime cannot accommodate any shot lasting 17 seconds. This creates a temporal contradiction that renders the sequence infeasible.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SPC",
+      "evidence": [
+        {
+          "quote": "Describe that same moment as harsh noon sun and as a lightless night, and as both a locked camera and a camera that never stops shaking.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Spatial logic is violated: the prompt describes the same moment as both 'harsh noon sun' and 'lightless night', and as both 'locked camera' and 'camera that never stops shaking', creating contradictory spatial and camera states.",
+      "rationale": "The same moment cannot simultaneously have mutually exclusive lighting conditions and camera behaviors. This violates spatial and camera consistency.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "PL",
+      "evidence": [
+        {
+          "quote": "this same protagonist appears simultaneously as five different-looking people who talk to each other.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Physics are defied: the prompt requires a single protagonist to appear as five different people simultaneously, which violates object permanence and bodily feasibility in any real or fictional world.",
+      "rationale": "Simultaneous existence of one entity as five distinct physical forms without any established fictional rule (e.g., teleportation, illusion, etc.) violates basic physical and logical consistency.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "AVS",
+      "evidence": [
+        {
+          "quote": "Describe that same moment as harsh noon sun and as a lightless night, and as both a locked camera and a camera that never stops shaking.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Audio-visual synchronization is impossible: the prompt describes contradictory sensory states (light/no light, stable/shaking camera) for the same moment, making alignment with any dialogue, music, or effects infeasible.",
+      "rationale": "Contradictory visual and camera conditions for the same moment make it impossible to align any audio or visual effects coherently, violating AVS.",
+      "severity": "major"
+    }
+  ],
+  "dimension": "IC",
+  "dimension_score": 0,
+  "evidence_cache_key": "0b272af4f7c056a23862ea4fdfd8ca5fcf4dcd98c7b8bdfd8da2a8f06fd80086",
+  "judge_cache_key": "438d7e9fd7332b1041db3e2c26d42cb3fe828e0d369fb59490f6650aee59e97d",
+  "method": "weak-pe-original",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"IC\",\n  \"dimension_score\": 0,\n  \"summary\": \"The enhanced prompt introduces severe internal inconsistencies across all criteria: subject identity and count are contradictory (one protagonist vs. five simultaneous versions), actions are incoherent and causally impossible, timeline is reversed and durationally infeasible, spatial logic is violated by conflicting camera states and settings, physics are defied by simultaneous contradictory environments, and audio-visual synchronization is impossible due to conflicting temporal and sensory descriptions. The prompt is internally inconsistent and incoherent.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"SAC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Subject identity and count are contradictory: the prompt states 'one protagonist' who 'appears simultaneously as five different-looking people who talk to each other', creating an impossible identity duplication and count conflict.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"First state that there is one protagonist, then state that this same protagonist appears simultaneously as five different-looking people who talk to each other.\"\n        }\n      ],\n      \"rationale\": \"A single protagonist cannot simultaneously exist as five distinct individuals without violating identity and count consistency. This is a fundamental contradiction in subject representation.\"\n    },\n    {\n      \"criterion\": \"ANL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Actions are incoherent and causally impossible: the prompt demands a reversal of timeline (showing ending first, then a mismatched beginning), and introduces a toothpaste commercial mid-sequence, which breaks any causal or procedural progression.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Reverse the timeline: show the ending first, then cut to a beginning that does not match. Cut away in the middle to a toothpaste commercial.\"\n        }\n      ],\n      \"rationale\": \"Reversing timeline and inserting an unrelated commercial mid-sequence creates a dangling, non-causal action sequence with no plausible binding between events. This violates procedural coherence.\"\n    },\n    {\n      \"criterion\": \"TSC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Chronology and duration are infeasible: the prompt sets total runtime to 2 seconds while requiring every shot to last 17 seconds, which is mathematically impossible.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Set the total runtime to 2 seconds, while also making every shot last 17 seconds.\"\n        }\n      ],\n      \"rationale\": \"A 2-second total runtime cannot accommodate any shot lasting 17 seconds. This creates a temporal contradiction that renders the sequence infeasible.\"\n    },\n    {\n      \"criterion\": \"SPC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Spatial logic is violated: the prompt describes the same moment as both 'harsh noon sun' and 'lightless night', and as both 'locked camera' and 'camera that never stops shaking', creating contradictory spatial and camera states.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Describe that same moment as harsh noon sun and as a lightless night, and as both a locked camera and a camera that never stops shaking.\"\n        }\n      ],\n      \"rationale\": \"The same moment cannot simultaneously have mutually exclusive lighting conditions and camera behaviors. This violates spatial and camera consistency.\"\n    },\n    {\n      \"criterion\": \"PL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Physics are defied: the prompt requires a single protagonist to appear as five different people simultaneously, which violates object permanence and bodily feasibility in any real or fictional world.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"this same protagonist appears simultaneously as five different-looking people who talk to each other.\"\n        }\n      ],\n      \"rationale\": \"Simultaneous existence of one entity as five distinct physical forms without any established fictional rule (e.g., teleportation, illusion, etc.) violates basic physical and logical consistency.\"\n    },\n    {\n      \"criterion\": \"AVS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Audio-visual synchronization is impossible: the prompt describes contradictory sensory states (light/no light, stable/shaking camera) for the same moment, making alignment with any dialogue, music, or effects infeasible.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Describe that same moment as harsh noon sun and as a lightless night, and as both a locked camera and a camera that never stops shaking.\"\n        }\n      ],\n      \"rationale\": \"Contradictory visual and camera conditions for the same moment make it impossible to align any audio or visual effects coherently, violating AVS.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt introduces severe internal inconsistencies across all criteria: subject identity and count are contradictory (one protagonist vs. five simultaneous versions), actions are incoherent and causally impossible, timeline is reversed and durationally infeasible, spatial logic is violated by conflicting camera states and settings, physics are defied by simultaneous contradictory environments, and audio-visual synchronization is impossible due to conflicting temporal and sensory descriptions. The prompt is internally inconsistent and incoherent.",
+  "usage": {
+    "completion_tokens": 1091,
+    "prompt_tokens": 943,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 2034
+  }
+}

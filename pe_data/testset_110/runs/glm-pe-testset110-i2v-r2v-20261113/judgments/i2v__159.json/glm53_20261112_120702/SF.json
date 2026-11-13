@@ -1,0 +1,186 @@
+{
+  "candidate_hash": "5f17a6870c7d3fcc20b2f5bca13b698c75915803d9ad18c799766c47901b4378",
+  "case_key": "i2v:159",
+  "created_at": "2026-11-13T07:56:43+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "GSF",
+      "evidence": [
+        {
+          "quote": "Keep same photo and background. Minimal movement: slight forward and backward tilt the bag left and right up and down. Zoom in and zoom out stable pose, realistic reflection, soft lighting. No talking or audio",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Live-action, realistic, the taupe leather shoulder bag with dark brown trim and knotted handles remains centered on the white tabletop exactly as in <Picture 1>... Soft natural daylight from the upper left stays constant throughout, with no flicker or color shift.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "primary_style: product photography, realism: high, secondary_styles: minimalist, soft lighting, clean composition",
+          "source": "evidence_facts"
+        }
+      ],
+      "issue": "",
+      "rationale": "The enhanced prompt maintains the realistic, product-photography aesthetic with soft lighting and clean composition as specified in the original prompt and evidence. The medium (live-action) and visual style are preserved without substitution or incompatibility.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SAP",
+      "evidence": [
+        {
+          "quote": "exact_visible_transcription: [\"FLOWER MARKET\", \"HUMUOLO\"], location: [on spine of book in midground, embossed on front of handbag]",
+          "source": "evidence_facts"
+        },
+        {
+          "quote": "All background props stay unchanged — the pleated cream table lamp at left, pink tulips in the pink vase atop stacked books, the small round vanity mirror, the glass cup with pastel pens, and the folded pink cloth with pencil at lower left.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The visible text 'FLOWER MARKET' on the book spine and 'HUMUOLO' on the handbag are not referenced in the enhanced prompt, despite being present in the original image and evidence.",
+      "rationale": "While the enhanced prompt correctly preserves the physical objects and their spatial relationships, it omits explicit mention of the visible text on the book and handbag. This is a minor issue as the text is not central to the scene’s identity or action, but its absence constitutes a small fidelity gap in subject attributes.",
+      "severity": "minor"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANF",
+      "evidence": [
+        {
+          "quote": "Minimal movement: slight forward and backward tilt the bag left and right up and down. Zoom in and zoom out",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "The hand gently tilts the bag forward and backward with a few centimeters of range, then rocks it slightly left and right, and finally lifts and settles it in a subtle up-down motion... The camera performs a very slow zoom in with small amplitude during the first three seconds, then a slow zoom back out to the original framing by the end",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "The enhanced prompt accurately translates the requested minimal movements into a detailed, coherent sequence that matches the original instruction. The order and nature of actions (tilt, rock, lift, zoom) are preserved without substitution or omission.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "DLI",
+      "evidence": [
+        {
+          "quote": "No talking or audio",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "No one speaks and no on-screen text appears.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "The requirement for no dialogue or on-screen text is strictly preserved. The enhanced prompt explicitly confirms the absence of speech and text, aligning with the original instruction.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ARP",
+      "evidence": [
+        {
+          "quote": "No talking or audio",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "overall_soundscape: N/A\n\nnon_diegetic_music: N/A",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "The enhanced prompt correctly preserves the silence constraint by explicitly marking both soundscape and music as N/A, consistent with the original instruction.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CCP",
+      "evidence": [
+        {
+          "quote": "Zoom in and zoom out stable pose",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "The camera performs a very slow zoom in with small amplitude during the first three seconds, then a slow zoom back out to the original framing by the end, otherwise holding stable.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "The camera motion is precisely specified in the enhanced prompt to match the original request for zoom in/out with stable framing, preserving the shot design intent.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "LCF",
+      "evidence": [
+        {
+          "quote": "Soft natural daylight from the upper left stays constant throughout",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "light_sources_and_direction_effect: soft, natural light from the right side (window), creating gentle shadows and highlights on the handbag and desk",
+          "source": "evidence_facts"
+        }
+      ],
+      "issue": "The enhanced prompt specifies 'soft natural daylight from the upper left', while the evidence indicates light from the 'right side' (window), creating a minor directional inconsistency.",
+      "rationale": "The lighting quality (soft, natural) is preserved, but the direction is slightly misaligned. This is a minor issue as it does not materially alter the scene’s illumination or mood, but it introduces a small inconsistency with the source image’s lighting cues.",
+      "severity": "minor"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SSP",
+      "evidence": [
+        {
+          "quote": "Keep same photo and background",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "All background props stay unchanged — the pleated cream table lamp at left, pink tulips in the pink vase atop stacked books, the small round vanity mirror, the glass cup with pastel pens, and the folded pink cloth with pencil at lower left.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "scene_type: indoor studio or home office setting, foreground/midground/background: [desk_1, lamp_1, notebook_1, chair_1], [handbag_1, hand_1, flowers_1, books_1, mirror_1, pens_1], [white wall, window light source]",
+          "source": "evidence_facts"
+        }
+      ],
+      "issue": "",
+      "rationale": "The setting, background elements, and spatial layout are accurately preserved. The enhanced prompt explicitly lists all key background objects and their positions, matching the original image’s composition.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "OTI",
+      "evidence": [
+        {
+          "quote": "exact_visible_transcription: [\"FLOWER MARKET\", \"HUMUOLO\"], presence: true",
+          "source": "evidence_facts"
+        },
+        {
+          "quote": "All background props stay unchanged — the pleated cream table lamp at left, pink tulips in the pink vase atop stacked books, the small round vanity mirror, the glass cup with pastel pens, and the folded pink cloth with pencil at lower left.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The visible text 'FLOWER MARKET' and 'HUMUOLO' from the original image are not preserved or referenced in the enhanced prompt, despite being part of the visual scene.",
+      "rationale": "The enhanced prompt does not mention the visible text on the book or handbag, which are part of the original image’s visual content. While not central to the scene’s action, their omission is a minor fidelity issue as they are part of the subject’s attributes and on-screen text.",
+      "severity": "minor"
+    }
+  ],
+  "dimension": "SF",
+  "dimension_score": 95,
+  "evidence_cache_key": "30a5ee7f412f95b55daeb8ba35609620df844d6c549917555c71e6c28795ae0b",
+  "judge_cache_key": "a0ca24571ad14d7ab7be626329bd736d7e7015f9ebc418227c8be391591d0377",
+  "method": "glm53_20261112_120702",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"SF\",\n  \"dimension_score\": 95,\n  \"summary\": \"The enhanced prompt preserves the core visual and narrative intent of the original instruction with high fidelity. It accurately maintains the subject, setting, lighting, and minimal motion requirements. Minor issues include a slight mismatch in lighting direction (original prompt implies soft lighting without specifying direction, while enhanced prompt specifies 'upper left' vs. evidence indicating 'right side'), and the omission of the visible text 'FLOWER MARKET' and 'HUMUOLO' from the original image, which are not referenced in the enhanced prompt. These are minor deviations that do not materially alter the scene’s identity or intent.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"GSF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"Keep same photo and background. Minimal movement: slight forward and backward tilt the bag left and right up and down. Zoom in and zoom out stable pose, realistic reflection, soft lighting. No talking or audio\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Live-action, realistic, the taupe leather shoulder bag with dark brown trim and knotted handles remains centered on the white tabletop exactly as in <Picture 1>... Soft natural daylight from the upper left stays constant throughout, with no flicker or color shift.\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"primary_style: product photography, realism: high, secondary_styles: minimalist, soft lighting, clean composition\"\n        }\n      ],\n      \"rationale\": \"The enhanced prompt maintains the realistic, product-photography aesthetic with soft lighting and clean composition as specified in the original prompt and evidence. The medium (live-action) and visual style are preserved without substitution or incompatibility.\"\n    },\n    {\n      \"criterion\": \"SAP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"minor\",\n      \"issue\": \"The visible text 'FLOWER MARKET' on the book spine and 'HUMUOLO' on the handbag are not referenced in the enhanced prompt, despite being present in the original image and evidence.\",\n      \"evidence\": [\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"exact_visible_transcription: [\\\"FLOWER MARKET\\\", \\\"HUMUOLO\\\"], location: [on spine of book in midground, embossed on front of handbag]\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"All background props stay unchanged — the pleated cream table lamp at left, pink tulips in the pink vase atop stacked books, the small round vanity mirror, the glass cup with pastel pens, and the folded pink cloth with pencil at lower left.\"\n        }\n      ],\n      \"rationale\": \"While the enhanced prompt correctly preserves the physical objects and their spatial relationships, it omits explicit mention of the visible text on the book and handbag. This is a minor issue as the text is not central to the scene’s identity or action, but its absence constitutes a small fidelity gap in subject attributes.\"\n    },\n    {\n      \"criterion\": \"ANF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"Minimal movement: slight forward and backward tilt the bag left and right up and down. Zoom in and zoom out\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"The hand gently tilts the bag forward and backward with a few centimeters of range, then rocks it slightly left and right, and finally lifts and settles it in a subtle up-down motion... The camera performs a very slow zoom in with small amplitude during the first three seconds, then a slow zoom back out to the original framing by the end\"\n        }\n      ],\n      \"rationale\": \"The enhanced prompt accurately translates the requested minimal movements into a detailed, coherent sequence that matches the original instruction. The order and nature of actions (tilt, rock, lift, zoom) are preserved without substitution or omission.\"\n    },\n    {\n      \"criterion\": \"DLI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"No talking or audio\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"No one speaks and no on-screen text appears.\"\n        }\n      ],\n      \"rationale\": \"The requirement for no dialogue or on-screen text is strictly preserved. The enhanced prompt explicitly confirms the absence of speech and text, aligning with the original instruction.\"\n    },\n    {\n      \"criterion\": \"ARP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"No talking or audio\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"overall_soundscape: N/A\\n\\nnon_diegetic_music: N/A\"\n        }\n      ],\n      \"rationale\": \"The enhanced prompt correctly preserves the silence constraint by explicitly marking both soundscape and music as N/A, consistent with the original instruction.\"\n    },\n    {\n      \"criterion\": \"CCP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"Zoom in and zoom out stable pose\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"The camera performs a very slow zoom in with small amplitude during the first three seconds, then a slow zoom back out to the original framing by the end, otherwise holding stable.\"\n        }\n      ],\n      \"rationale\": \"The camera motion is precisely specified in the enhanced prompt to match the original request for zoom in/out with stable framing, preserving the shot design intent.\"\n    },\n    {\n      \"criterion\": \"LCF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"minor\",\n      \"issue\": \"The enhanced prompt specifies 'soft natural daylight from the upper left', while the evidence indicates light from the 'right side' (window), creating a minor directional inconsistency.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Soft natural daylight from the upper left stays constant throughout\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"light_sources_and_direction_effect: soft, natural light from the right side (window), creating gentle shadows and highlights on the handbag and desk\"\n        }\n      ],\n      \"rationale\": \"The lighting quality (soft, natural) is preserved, but the direction is slightly misaligned. This is a minor issue as it does not materially alter the scene’s illumination or mood, but it introduces a small inconsistency with the source image’s lighting cues.\"\n    },\n    {\n      \"criterion\": \"SSP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"Keep same photo and background\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"All background props stay unchanged — the pleated cream table lamp at left, pink tulips in the pink vase atop stacked books, the small round vanity mirror, the glass cup with pastel pens, and the folded pink cloth with pencil at lower left.\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"scene_type: indoor studio or home office setting, foreground/midground/background: [desk_1, lamp_1, notebook_1, chair_1], [handbag_1, hand_1, flowers_1, books_1, mirror_1, pens_1], [white wall, window light source]\"\n        }\n      ],\n      \"rationale\": \"The setting, background elements, and spatial layout are accurately preserved. The enhanced prompt explicitly lists all key background objects and their positions, matching the original image’s composition.\"\n    },\n    {\n      \"criterion\": \"OTI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"minor\",\n      \"issue\": \"The visible text 'FLOWER MARKET' and 'HUMUOLO' from the original image are not preserved or referenced in the enhanced prompt, despite being part of the visual scene.\",\n      \"evidence\": [\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"exact_visible_transcription: [\\\"FLOWER MARKET\\\", \\\"HUMUOLO\\\"], presence: true\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"All background props stay unchanged — the pleated cream table lamp at left, pink tulips in the pink vase atop stacked books, the small round vanity mirror, the glass cup with pastel pens, and the folded pink cloth with pencil at lower left.\"\n        }\n      ],\n      \"rationale\": \"The enhanced prompt does not mention the visible text on the book or handbag, which are part of the original image’s visual content. While not central to the scene’s action, their omission is a minor fidelity issue as they are part of the subject’s attributes and on-screen text.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt preserves the core visual and narrative intent of the original instruction with high fidelity. It accurately maintains the subject, setting, lighting, and minimal motion requirements. Minor issues include a slight mismatch in lighting direction (original prompt implies soft lighting without specifying direction, while enhanced prompt specifies 'upper left' vs. evidence indicating 'right side'), and the omission of the visible text 'FLOWER MARKET' and 'HUMUOLO' from the original image, which are not referenced in the enhanced prompt. These are minor deviations that do not materially alter the scene’s identity or intent.",
+  "usage": {
+    "completion_tokens": 2060,
+    "prompt_tokens": 3310,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 5370
+  }
+}

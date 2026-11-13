@@ -1,0 +1,142 @@
+{
+  "candidate_hash": "c98c2c751597908fa332e50e7a292fa62f12e727aa90d41836abbbc9429ed425",
+  "case_key": "t2v:085",
+  "created_at": "2026-11-13T07:29:04+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "STC",
+      "evidence": [
+        {
+          "quote": "总时长写成3秒，同时又要求每个分镜各自持续27秒。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt contains contradictory temporal constraints: total duration is specified as 3 seconds, yet each shot is required to last 27 seconds. Additionally, it demands a reversed narrative structure (ending first, then an unrelated beginning) with no coherent event or shot boundaries.",
+      "rationale": "A feasible temporal plan requires consistent duration allocation and logical shot sequencing. The specified durations are mathematically impossible, and the narrative structure is incoherent, making STC critically failed.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CDS",
+      "evidence": [
+        {
+          "quote": "写成机位锁死，又写成镜头一直在晃。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt contradicts itself on camera movement: it demands '机位锁死' (locked position) and '镜头一直在晃' (constantly shaking) simultaneously, which is physically impossible. No actionable framing or lens specifications are provided.",
+      "rationale": "Camera specifications must be consistent and actionable. Contradictory directives render the prompt unexecutable, failing CDS.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ETD",
+      "evidence": [
+        {
+          "quote": "时间倒过来：先给结尾，再跳到一个对不上的开头。中途插进一段无关的牙膏广告。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt demands a reversed narrative (ending first, then an unrelated beginning) and inserts an unrelated toothpaste ad, creating disconnected shots with no continuity or motivation. Transitions are not specified and are inherently broken.",
+      "rationale": "Cuts and transitions must support narrative or spatial progression. The described structure is disjointed and lacks motivation, violating ETD.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "LCS",
+      "evidence": [
+        {
+          "quote": "写成正午暴晒，又写成深夜无光；",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt contradicts lighting conditions: it requires '正午暴晒' (noon sun) and '深夜无光' (deep night, no light) simultaneously, which is physically impossible. No actionable light source or quality specifications are provided.",
+      "rationale": "Lighting specifications must be consistent and feasible. Contradictory conditions make LCS impossible to satisfy.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "NDE",
+      "evidence": [
+        {
+          "quote": "紧接着又写成这个主角同时变成五个外貌不同的人，并且互相对话。中途插进一段无关的牙膏广告。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt lacks any progression, variation, or resolution. It introduces a character transformation (one to five people) without narrative motivation, and inserts an unrelated ad, resulting in static and unmotivated content.",
+      "rationale": "NDE requires meaningful progression or escalation. The described content is disjointed and lacks narrative development, failing NDE.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CIF",
+      "evidence": [
+        {
+          "quote": "中途插进一段无关的牙膏广告。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt adds irrelevant and distracting elements: a toothpaste ad, contradictory visual conditions, and illogical character transformations. These additions do not support the central request and actively undermine it.",
+      "rationale": "CIF requires additions to support the central request. The inserted elements are irrelevant and disruptive, failing CIF.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SDI",
+      "evidence": [
+        {
+          "quote": "丢掉原指令里的主体身份、人数、动作顺序、场景和明确的镜头要求。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "No audio elements (speech, music, effects) are specified, but the prompt does not require them. The lack of audio is not a failure since it is not requested.",
+      "rationale": "SDI is not violated because no audio specifications were requested. The absence is acceptable, hence only minor severity.",
+      "severity": "minor"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SPS",
+      "evidence": [
+        {
+          "quote": "丢掉原指令里的主体身份、人数、动作顺序、场景和明确的镜头要求。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt removes all subject and performance details from the original (athletes, sprinting, etc.) and replaces them with an undefined '主角' (main character) who transforms into five different people. No appearance, expression, movement, or interaction details are provided.",
+      "rationale": "SPS requires actionable subject and performance details. The prompt provides none, replacing them with vague and contradictory elements, failing SPS.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "VSS",
+      "evidence": [
+        {
+          "quote": "写成正午暴晒，又写成深夜无光；写成机位锁死，又写成镜头一直在晃。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "No medium, texture, rendering language, or visual treatment is specified. The prompt contradicts itself on visual conditions (lighting, camera movement), making visual style infeasible to define.",
+      "rationale": "VSS requires actionable visual treatment specifications. The contradictory and undefined conditions make VSS impossible to satisfy.",
+      "severity": "major"
+    }
+  ],
+  "dimension": "DC",
+  "dimension_score": 0,
+  "evidence_cache_key": "b96d95d8a4795894ba2b26ef0fd0e5a933100b9d0b9f4ad47dd68e26bda020a2",
+  "judge_cache_key": "0754499d53388e6467fb078ab780e01b77f9f1c9e99d9029be2769351eb2b2eb",
+  "method": "weak-pe-original",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"DC\",\n  \"dimension_score\": 0,\n  \"summary\": \"The enhanced prompt is incoherent and contradictory, violating fundamental principles of temporal planning, shot specification, and narrative continuity. It introduces impossible constraints (e.g., 3-second total duration with 27-second segments), contradictory visual conditions (e.g., noon sun vs. no light), and illogical character transformations. The prompt fails to provide a feasible directorial plan and actively undermines the original instruction.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"STC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt contains contradictory temporal constraints: total duration is specified as 3 seconds, yet each shot is required to last 27 seconds. Additionally, it demands a reversed narrative structure (ending first, then an unrelated beginning) with no coherent event or shot boundaries.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"总时长写成3秒，同时又要求每个分镜各自持续27秒。\"\n        }\n      ],\n      \"rationale\": \"A feasible temporal plan requires consistent duration allocation and logical shot sequencing. The specified durations are mathematically impossible, and the narrative structure is incoherent, making STC critically failed.\"\n    },\n    {\n      \"criterion\": \"CDS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt contradicts itself on camera movement: it demands '机位锁死' (locked position) and '镜头一直在晃' (constantly shaking) simultaneously, which is physically impossible. No actionable framing or lens specifications are provided.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"写成机位锁死，又写成镜头一直在晃。\"\n        }\n      ],\n      \"rationale\": \"Camera specifications must be consistent and actionable. Contradictory directives render the prompt unexecutable, failing CDS.\"\n    },\n    {\n      \"criterion\": \"ETD\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt demands a reversed narrative (ending first, then an unrelated beginning) and inserts an unrelated toothpaste ad, creating disconnected shots with no continuity or motivation. Transitions are not specified and are inherently broken.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"时间倒过来：先给结尾，再跳到一个对不上的开头。中途插进一段无关的牙膏广告。\"\n        }\n      ],\n      \"rationale\": \"Cuts and transitions must support narrative or spatial progression. The described structure is disjointed and lacks motivation, violating ETD.\"\n    },\n    {\n      \"criterion\": \"LCS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt contradicts lighting conditions: it requires '正午暴晒' (noon sun) and '深夜无光' (deep night, no light) simultaneously, which is physically impossible. No actionable light source or quality specifications are provided.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"写成正午暴晒，又写成深夜无光；\"\n        }\n      ],\n      \"rationale\": \"Lighting specifications must be consistent and feasible. Contradictory conditions make LCS impossible to satisfy.\"\n    },\n    {\n      \"criterion\": \"NDE\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt lacks any progression, variation, or resolution. It introduces a character transformation (one to five people) without narrative motivation, and inserts an unrelated ad, resulting in static and unmotivated content.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"紧接着又写成这个主角同时变成五个外貌不同的人，并且互相对话。中途插进一段无关的牙膏广告。\"\n        }\n      ],\n      \"rationale\": \"NDE requires meaningful progression or escalation. The described content is disjointed and lacks narrative development, failing NDE.\"\n    },\n    {\n      \"criterion\": \"CIF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt adds irrelevant and distracting elements: a toothpaste ad, contradictory visual conditions, and illogical character transformations. These additions do not support the central request and actively undermine it.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"中途插进一段无关的牙膏广告。\"\n        }\n      ],\n      \"rationale\": \"CIF requires additions to support the central request. The inserted elements are irrelevant and disruptive, failing CIF.\"\n    },\n    {\n      \"criterion\": \"SDI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"minor\",\n      \"issue\": \"No audio elements (speech, music, effects) are specified, but the prompt does not require them. The lack of audio is not a failure since it is not requested.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"丢掉原指令里的主体身份、人数、动作顺序、场景和明确的镜头要求。\"\n        }\n      ],\n      \"rationale\": \"SDI is not violated because no audio specifications were requested. The absence is acceptable, hence only minor severity.\"\n    },\n    {\n      \"criterion\": \"SPS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt removes all subject and performance details from the original (athletes, sprinting, etc.) and replaces them with an undefined '主角' (main character) who transforms into five different people. No appearance, expression, movement, or interaction details are provided.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"丢掉原指令里的主体身份、人数、动作顺序、场景和明确的镜头要求。\"\n        }\n      ],\n      \"rationale\": \"SPS requires actionable subject and performance details. The prompt provides none, replacing them with vague and contradictory elements, failing SPS.\"\n    },\n    {\n      \"criterion\": \"VSS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"No medium, texture, rendering language, or visual treatment is specified. The prompt contradicts itself on visual conditions (lighting, camera movement), making visual style infeasible to define.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"写成正午暴晒，又写成深夜无光；写成机位锁死，又写成镜头一直在晃。\"\n        }\n      ],\n      \"rationale\": \"VSS requires actionable visual treatment specifications. The contradictory and undefined conditions make VSS impossible to satisfy.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt is incoherent and contradictory, violating fundamental principles of temporal planning, shot specification, and narrative continuity. It introduces impossible constraints (e.g., 3-second total duration with 27-second segments), contradictory visual conditions (e.g., noon sun vs. no light), and illogical character transformations. The prompt fails to provide a feasible directorial plan and actively undermines the original instruction.",
+  "usage": {
+    "completion_tokens": 1515,
+    "prompt_tokens": 950,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 2465
+  }
+}

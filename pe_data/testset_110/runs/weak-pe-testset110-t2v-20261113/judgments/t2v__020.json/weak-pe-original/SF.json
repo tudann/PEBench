@@ -1,0 +1,166 @@
+{
+  "candidate_hash": "8b668714e58412de4bf75fbb99ddd0214e216e80c5f8e4cd05811076894543f7",
+  "case_key": "t2v:020",
+  "created_at": "2026-11-13T08:36:48+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "GSF",
+      "evidence": [
+        {
+          "quote": "Generate a scene of four puppies chasing each other and facing off.",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Replace the whole video with an empty meeting room where a glass of water never moves, with no people and no conflict.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original prompt requests a dynamic, playful, animal-centric scene; the enhanced prompt replaces it with a static, human-centric, surreal meeting room scene, fundamentally altering genre, medium, and aesthetic.",
+      "rationale": "The genre shifts from animal action/combat to surreal human interaction; the medium changes from dynamic to static; the aesthetic is replaced with contradictory and impossible conditions. This is a major violation of genre and visual style preservation.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SAP",
+      "evidence": [
+        {
+          "quote": "four puppies",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "state that there is one protagonist, then state that this same protagonist appears simultaneously as five different-looking people",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original subject is four puppies; the enhanced prompt removes all puppies and introduces five different-looking people as protagonists, violating subject identity, count, and attributes.",
+      "rationale": "The core subjects are entirely replaced. The original count (four) and identity (puppies) are discarded, and a new, contradictory subject (five people) is introduced. This is a major failure to preserve subject attributes.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANF",
+      "evidence": [
+        {
+          "quote": "chasing each other and facing off",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Reverse the timeline: show the ending first, then cut to a beginning that does not match. Cut away in the middle to a toothpaste commercial.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original action is chasing and facing off; the enhanced prompt removes all action, introduces talking, reverses timeline, cuts to a commercial, and adds contradictory events, completely altering the narrative intent and event order.",
+      "rationale": "The requested actions are entirely omitted and replaced with unrelated, contradictory events. The narrative structure is inverted and fragmented, violating the original intent and sequence.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "DLI",
+      "evidence": [
+        {
+          "quote": "Generate a scene of four puppies chasing each other and facing off.",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "five different-looking people who talk to each other",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original prompt does not specify dialogue; the enhanced prompt introduces dialogue among five people, which is not a violation since no dialogue was required, but it adds content not requested.",
+      "rationale": "Since no dialogue was specified in the original, adding it is not a major issue, but it does introduce new content that alters the scene’s nature. This is a minor deviation.",
+      "severity": "minor"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ARP",
+      "evidence": [
+        {
+          "quote": "Generate a scene of four puppies chasing each other and facing off.",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "five different-looking people who talk to each other. Cut away in the middle to a toothpaste commercial.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original prompt does not specify sound; the enhanced prompt introduces implied sound (talking, commercial) and does not mention music or silence, so no explicit violation, but adds unrequested audio elements.",
+      "rationale": "No sound constraints were given in the original, so adding dialogue and commercial audio is not a major issue, but it introduces new auditory content not requested.",
+      "severity": "minor"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CCP",
+      "evidence": [
+        {
+          "quote": "Describe that same moment as ... a locked camera and a camera that never stops shaking. Set the total runtime to 3 seconds, while also making every shot last 27 seconds.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original prompt does not specify camera constraints, but the enhanced prompt introduces contradictory camera instructions: 'locked camera' and 'camera that never stops shaking', as well as impossible shot durations (27 seconds in a 3-second video).",
+      "rationale": "The camera instructions are mutually exclusive and physically impossible, creating a major contradiction. Even if no camera constraints were in the original, introducing such infeasible and conflicting directives violates the principle of preserving or adding compatible constraints.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "LCF",
+      "evidence": [
+        {
+          "quote": "Describe that same moment as harsh noon sun and as a lightless night",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original prompt does not specify lighting, but the enhanced prompt introduces contradictory lighting conditions: 'harsh noon sun' and 'lightless night' for the same moment, which is physically impossible.",
+      "rationale": "The lighting conditions are mutually exclusive and cannot coexist in the same moment. This creates a major contradiction in illumination and time-of-day representation, violating the requirement to preserve or add compatible lighting conditions.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SSP",
+      "evidence": [
+        {
+          "quote": "Generate a scene of four puppies chasing each other and facing off.",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Replace the whole video with an empty meeting room",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original setting is an open space for puppies to chase; the enhanced prompt replaces it with an empty meeting room, removing the original setting and background elements entirely.",
+      "rationale": "The setting is completely changed from an implied outdoor or open indoor space to a meeting room, which is a major spatial and environmental deviation.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "OTI",
+      "evidence": [
+        {
+          "quote": "Generate a scene of four puppies chasing each other and facing off.",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "The original prompt does not specify any visible text, and the enhanced prompt does not introduce any visible titles, signs, or interface text, so no violation occurs.",
+      "rationale": "No text was requested or added, so this criterion is satisfied.",
+      "severity": "none"
+    }
+  ],
+  "dimension": "SF",
+  "dimension_score": 0,
+  "evidence_cache_key": "a640828aeed13de6c78587fcacedc836d03327c138644ac95b137a97e4e38706",
+  "judge_cache_key": "a0ca24571ad14d7ab7be626329bd736d7e7015f9ebc418227c8be391591d0377",
+  "method": "weak-pe-original",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"SF\",\n  \"dimension_score\": 0,\n  \"summary\": \"The enhanced prompt completely contradicts and replaces the original instruction, introducing a new scene with no puppies, no chasing, no conflict, and multiple impossible or contradictory constraints (e.g., 3-second runtime with 27-second shots, simultaneous five protagonists, reversed timeline, conflicting lighting, camera conditions). All original semantic elements are discarded or negated, resulting in total semantic infidelity.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"GSF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original prompt requests a dynamic, playful, animal-centric scene; the enhanced prompt replaces it with a static, human-centric, surreal meeting room scene, fundamentally altering genre, medium, and aesthetic.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"Generate a scene of four puppies chasing each other and facing off.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Replace the whole video with an empty meeting room where a glass of water never moves, with no people and no conflict.\"\n        }\n      ],\n      \"rationale\": \"The genre shifts from animal action/combat to surreal human interaction; the medium changes from dynamic to static; the aesthetic is replaced with contradictory and impossible conditions. This is a major violation of genre and visual style preservation.\"\n    },\n    {\n      \"criterion\": \"SAP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original subject is four puppies; the enhanced prompt removes all puppies and introduces five different-looking people as protagonists, violating subject identity, count, and attributes.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"four puppies\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"state that there is one protagonist, then state that this same protagonist appears simultaneously as five different-looking people\"\n        }\n      ],\n      \"rationale\": \"The core subjects are entirely replaced. The original count (four) and identity (puppies) are discarded, and a new, contradictory subject (five people) is introduced. This is a major failure to preserve subject attributes.\"\n    },\n    {\n      \"criterion\": \"ANF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original action is chasing and facing off; the enhanced prompt removes all action, introduces talking, reverses timeline, cuts to a commercial, and adds contradictory events, completely altering the narrative intent and event order.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"chasing each other and facing off\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Reverse the timeline: show the ending first, then cut to a beginning that does not match. Cut away in the middle to a toothpaste commercial.\"\n        }\n      ],\n      \"rationale\": \"The requested actions are entirely omitted and replaced with unrelated, contradictory events. The narrative structure is inverted and fragmented, violating the original intent and sequence.\"\n    },\n    {\n      \"criterion\": \"DLI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"minor\",\n      \"issue\": \"The original prompt does not specify dialogue; the enhanced prompt introduces dialogue among five people, which is not a violation since no dialogue was required, but it adds content not requested.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"Generate a scene of four puppies chasing each other and facing off.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"five different-looking people who talk to each other\"\n        }\n      ],\n      \"rationale\": \"Since no dialogue was specified in the original, adding it is not a major issue, but it does introduce new content that alters the scene’s nature. This is a minor deviation.\"\n    },\n    {\n      \"criterion\": \"ARP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"minor\",\n      \"issue\": \"The original prompt does not specify sound; the enhanced prompt introduces implied sound (talking, commercial) and does not mention music or silence, so no explicit violation, but adds unrequested audio elements.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"Generate a scene of four puppies chasing each other and facing off.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"five different-looking people who talk to each other. Cut away in the middle to a toothpaste commercial.\"\n        }\n      ],\n      \"rationale\": \"No sound constraints were given in the original, so adding dialogue and commercial audio is not a major issue, but it introduces new auditory content not requested.\"\n    },\n    {\n      \"criterion\": \"CCP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original prompt does not specify camera constraints, but the enhanced prompt introduces contradictory camera instructions: 'locked camera' and 'camera that never stops shaking', as well as impossible shot durations (27 seconds in a 3-second video).\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Describe that same moment as ... a locked camera and a camera that never stops shaking. Set the total runtime to 3 seconds, while also making every shot last 27 seconds.\"\n        }\n      ],\n      \"rationale\": \"The camera instructions are mutually exclusive and physically impossible, creating a major contradiction. Even if no camera constraints were in the original, introducing such infeasible and conflicting directives violates the principle of preserving or adding compatible constraints.\"\n    },\n    {\n      \"criterion\": \"LCF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original prompt does not specify lighting, but the enhanced prompt introduces contradictory lighting conditions: 'harsh noon sun' and 'lightless night' for the same moment, which is physically impossible.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Describe that same moment as harsh noon sun and as a lightless night\"\n        }\n      ],\n      \"rationale\": \"The lighting conditions are mutually exclusive and cannot coexist in the same moment. This creates a major contradiction in illumination and time-of-day representation, violating the requirement to preserve or add compatible lighting conditions.\"\n    },\n    {\n      \"criterion\": \"SSP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original setting is an open space for puppies to chase; the enhanced prompt replaces it with an empty meeting room, removing the original setting and background elements entirely.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"Generate a scene of four puppies chasing each other and facing off.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Replace the whole video with an empty meeting room\"\n        }\n      ],\n      \"rationale\": \"The setting is completely changed from an implied outdoor or open indoor space to a meeting room, which is a major spatial and environmental deviation.\"\n    },\n    {\n      \"criterion\": \"OTI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"The original prompt does not specify any visible text, and the enhanced prompt does not introduce any visible titles, signs, or interface text, so no violation occurs.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"Generate a scene of four puppies chasing each other and facing off.\"\n        }\n      ],\n      \"rationale\": \"No text was requested or added, so this criterion is satisfied.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt completely contradicts and replaces the original instruction, introducing a new scene with no puppies, no chasing, no conflict, and multiple impossible or contradictory constraints (e.g., 3-second runtime with 27-second shots, simultaneous five protagonists, reversed timeline, conflicting lighting, camera conditions). All original semantic elements are discarded or negated, resulting in total semantic infidelity.",
+  "usage": {
+    "completion_tokens": 1697,
+    "prompt_tokens": 1038,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 2735
+  }
+}

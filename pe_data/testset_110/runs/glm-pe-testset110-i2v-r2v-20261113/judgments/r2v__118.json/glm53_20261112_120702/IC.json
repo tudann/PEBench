@@ -1,0 +1,127 @@
+{
+  "candidate_hash": "792c6cd58c641f487cb7912761615858cb2281a9b49d59faf7ea3e118bd25db7",
+  "case_key": "r2v:118",
+  "created_at": "2026-11-13T08:54:15+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "SAC",
+      "evidence": [
+        {
+          "quote": "<Subject 1> is 林晚 (Lin Wan), the sole woman defined by <Picture 3>, with shoulder-length black hair, delicate natural-makeup features, wearing a cream sweatshirt and cream sweatpants.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "subjects: [...] identity: '林晚', visible_appearance: {clothing: 'beige long-sleeve top and matching pants', face: 'oval, clear skin, natural makeup', hair: 'shoulder-length, black, straight with slight waves'}",
+          "source": "evidence_facts"
+        }
+      ],
+      "issue": "",
+      "rationale": "Subject 1's identity, appearance, and clothing are consistently defined across the enhanced prompt and evidence. The reference to <Picture 3> as the identity source is preserved, and no duplication or attribute drift occurs. The environment (Subject 2) and prop (Picture 2) are also consistently referenced and described without change.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANL",
+      "evidence": [
+        {
+          "quote": "Her shoulder quivers slightly, and a soft sobbing sound rises in sync with the quiver. Her micro-expressions remain natural and continuous...",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "【动作触发音效】当图3肩膀轻颤时响起：抽泣声",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "Actions are causally linked: trembling lips trigger the spoken line, shoulder quiver triggers sobbing sound. The emotional progression from reddened eyes to heartbroken gaze is coherent and plausible. No dangling or incompatible events are present.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "TSC",
+      "evidence": [
+        {
+          "quote": "[Shot 1] ... [Shot 2] At 00:00.500, the shot cuts to a fixed close-up ... [Shot 3] At 00:05.000, the shot cuts back ... [Shot 4] At 00:10.000, the shot cuts to a final fixed close-up",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "【0s】近景：... 【0-5s】特写：... 【5-10s】近景：... 【10-12s】特写：...",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "Chronology is strictly maintained with precise timestamps matching the original prompt. State transitions (e.g., from stillness to tears, then to clenched fist) are sequential and plausible. No overlapping or infeasible timing issues are present.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SPC",
+      "evidence": [
+        {
+          "quote": "The camera is completely locked; she holds nearly still, breathing faintly. ... The locked framing shows the sofa and lamps consistent with Shot 1.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "camera_and_composition: {observed_camera_motion: 'none', shot_scale: 'wide_shot'}",
+          "source": "evidence_facts"
+        }
+      ],
+      "issue": "",
+      "rationale": "All shots are fixed, with no camera movement or position swaps. The subject's position relative to the environment (sofa, coffee table) is consistent across shots. The rack focus in Shot 3 does not imply physical movement, only optical focus shift, which is plausible.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "PL",
+      "evidence": [
+        {
+          "quote": "natural continuous motion with no teleporting, no clipping",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "动作自然且连贯，无瞬移、无穿模",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "All physical actions (tears, trembling lips, clenched fist) are within human physiological plausibility. The environment and props behave according to real-world physics (bill remains on table, no floating objects). No violations of gravity, contact, or object permanence are present.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "AVS",
+      "evidence": [
+        {
+          "quote": "As her lips tremble, she speaks in a choked, disheartened voice... Her shoulder quivers slightly, and a soft sobbing sound rises in sync with the quiver.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "【动作触发台词】当图3嘴唇发抖时说... 【动作触发音效】当图3肩膀轻颤时响起：抽泣声",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "The enhanced prompt elaborates on diegetic sounds (sobbing, choked speech) but does not explicitly state that these are synchronized with the visual events in the same way as the original prompt's '动作触发' (action-triggered) cues, though the alignment is implied.",
+      "rationale": "The enhanced prompt describes the audio events as synchronized with visual actions, which aligns with the original prompt's 'action-triggered' requirement. However, the explicit 'trigger' phrasing is omitted, making the alignment slightly less precise. This is a minor issue as the intended synchronization is still clear and plausible.",
+      "severity": "minor"
+    }
+  ],
+  "dimension": "IC",
+  "dimension_score": 98,
+  "evidence_cache_key": "8293b39157312aa27693cc64b584bdc19440161ca22ddb3fbd92d3217b36707c",
+  "judge_cache_key": "438d7e9fd7332b1041db3e2c26d42cb3fe828e0d369fb59490f6650aee59e97d",
+  "method": "glm53_20261112_120702",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"IC\",\n  \"dimension_score\": 98,\n  \"summary\": \"The enhanced prompt maintains strong internal consistency with the original instruction, preserving subject identity, environment, props, actions, and temporal progression. All key elements from the original prompt are accurately elaborated and aligned with the provided evidence assets. Minor issues include slight over-elaboration in subject definitions and a non-critical omission of explicit mention of the 'no subtitles' constraint in the enhanced prompt, but these do not affect core consistency. The narrative beats, emotional progression, and visual focus are coherent and physically plausible.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"SAC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"<Subject 1> is 林晚 (Lin Wan), the sole woman defined by <Picture 3>, with shoulder-length black hair, delicate natural-makeup features, wearing a cream sweatshirt and cream sweatpants.\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"subjects: [...] identity: '林晚', visible_appearance: {clothing: 'beige long-sleeve top and matching pants', face: 'oval, clear skin, natural makeup', hair: 'shoulder-length, black, straight with slight waves'}\"\n        }\n      ],\n      \"rationale\": \"Subject 1's identity, appearance, and clothing are consistently defined across the enhanced prompt and evidence. The reference to <Picture 3> as the identity source is preserved, and no duplication or attribute drift occurs. The environment (Subject 2) and prop (Picture 2) are also consistently referenced and described without change.\"\n    },\n    {\n      \"criterion\": \"ANL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Her shoulder quivers slightly, and a soft sobbing sound rises in sync with the quiver. Her micro-expressions remain natural and continuous...\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"【动作触发音效】当图3肩膀轻颤时响起：抽泣声\"\n        }\n      ],\n      \"rationale\": \"Actions are causally linked: trembling lips trigger the spoken line, shoulder quiver triggers sobbing sound. The emotional progression from reddened eyes to heartbroken gaze is coherent and plausible. No dangling or incompatible events are present.\"\n    },\n    {\n      \"criterion\": \"TSC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"[Shot 1] ... [Shot 2] At 00:00.500, the shot cuts to a fixed close-up ... [Shot 3] At 00:05.000, the shot cuts back ... [Shot 4] At 00:10.000, the shot cuts to a final fixed close-up\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"【0s】近景：... 【0-5s】特写：... 【5-10s】近景：... 【10-12s】特写：...\"\n        }\n      ],\n      \"rationale\": \"Chronology is strictly maintained with precise timestamps matching the original prompt. State transitions (e.g., from stillness to tears, then to clenched fist) are sequential and plausible. No overlapping or infeasible timing issues are present.\"\n    },\n    {\n      \"criterion\": \"SPC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"The camera is completely locked; she holds nearly still, breathing faintly. ... The locked framing shows the sofa and lamps consistent with Shot 1.\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"camera_and_composition: {observed_camera_motion: 'none', shot_scale: 'wide_shot'}\"\n        }\n      ],\n      \"rationale\": \"All shots are fixed, with no camera movement or position swaps. The subject's position relative to the environment (sofa, coffee table) is consistent across shots. The rack focus in Shot 3 does not imply physical movement, only optical focus shift, which is plausible.\"\n    },\n    {\n      \"criterion\": \"PL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"natural continuous motion with no teleporting, no clipping\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"动作自然且连贯，无瞬移、无穿模\"\n        }\n      ],\n      \"rationale\": \"All physical actions (tears, trembling lips, clenched fist) are within human physiological plausibility. The environment and props behave according to real-world physics (bill remains on table, no floating objects). No violations of gravity, contact, or object permanence are present.\"\n    },\n    {\n      \"criterion\": \"AVS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"minor\",\n      \"issue\": \"The enhanced prompt elaborates on diegetic sounds (sobbing, choked speech) but does not explicitly state that these are synchronized with the visual events in the same way as the original prompt's '动作触发' (action-triggered) cues, though the alignment is implied.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"As her lips tremble, she speaks in a choked, disheartened voice... Her shoulder quivers slightly, and a soft sobbing sound rises in sync with the quiver.\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"【动作触发台词】当图3嘴唇发抖时说... 【动作触发音效】当图3肩膀轻颤时响起：抽泣声\"\n        }\n      ],\n      \"rationale\": \"The enhanced prompt describes the audio events as synchronized with visual actions, which aligns with the original prompt's 'action-triggered' requirement. However, the explicit 'trigger' phrasing is omitted, making the alignment slightly less precise. This is a minor issue as the intended synchronization is still clear and plausible.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt maintains strong internal consistency with the original instruction, preserving subject identity, environment, props, actions, and temporal progression. All key elements from the original prompt are accurately elaborated and aligned with the provided evidence assets. Minor issues include slight over-elaboration in subject definitions and a non-critical omission of explicit mention of the 'no subtitles' constraint in the enhanced prompt, but these do not affect core consistency. The narrative beats, emotional progression, and visual focus are coherent and physically plausible.",
+  "usage": {
+    "completion_tokens": 1441,
+    "prompt_tokens": 5015,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 6456
+  }
+}

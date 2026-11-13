@@ -1,0 +1,127 @@
+{
+  "candidate_hash": "f42f362492c9a69b20a3a13c846ed4cc9ff784fb0e5dced67bd4c7a198813df2",
+  "case_key": "t2v:194",
+  "created_at": "2026-11-13T08:11:31+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "SAC",
+      "evidence": [
+        {
+          "quote": "A lab specialist in his late 20s shifts between a specimen viewer and a workstation",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "a male lab specialist in his late 20s, wearing a white lab coat, works between a specimen viewer and an adjacent workstation",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "Subject identity (male lab specialist, late 20s), count (one), appearance (lab coat), and props (specimen viewer, workstation, vials, pipette) are consistently maintained. No unexplained changes or duplications occur.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANL",
+      "evidence": [
+        {
+          "quote": "shifts between a specimen viewer and a workstation, conveying the brisk, concentrated rhythm of experimental work",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "He leans toward the specimen viewer, eyes narrowed at the glowing screen... then pivots smoothly to the workstation, fingers moving quickly across the keyboard... alternates with brisk, concentrated rhythm",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "Actions form a coherent procedural progression: observing → typing → adjusting → repeating. Each action logically follows from the previous, with plausible bindings (e.g., typing after viewing data). No dangling or incompatible events.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "TSC",
+      "evidence": [
+        {
+          "quote": "the camera holds steady, letting his efficient movements carry the scene across the full ten seconds",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "conveying the brisk, concentrated rhythm of experimental work",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "Chronology is consistent: a single continuous shot over 10 seconds with no resets or state contradictions. The subject’s actions progress in a plausible sequence without temporal overlaps or resets.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SPC",
+      "evidence": [
+        {
+          "quote": "He leans toward the specimen viewer... then pivots smoothly to the workstation",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "static medium shot frames a clean, coolly lit research facility laboratory",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "Spatial relationships are consistent: the specimen viewer and workstation are adjacent, and the subject’s pivoting motion is plausible within a static medium shot. No unexplained position swaps or impossible trajectories.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "PL",
+      "evidence": [
+        {
+          "quote": "fingers moving quickly across the keyboard while data shifts on the monitor",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "a small adjustment of a control knob",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "All physical actions (typing, turning knob, pivoting) are consistent with real-world physics. No violations of gravity, contact, or bodily feasibility. The environment and props behave as expected.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "AVS",
+      "evidence": [
+        {
+          "quote": "The low hum of laboratory instruments continues beneath the steady, rapid clatter of keyboard keys. Soft electronic beeps sound from the specimen viewer, a control knob clicks with a small turn...",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "A light, precise electronic pulse at a moderate tempo with sparse synth tones, maintaining a steady rhythmic drive",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The soundscape and music are described in detail but are not visually rendered; thus, alignment cannot be verified. However, the described audio elements (keyboard clatter, beeps, electronic pulse) are semantically consistent with the visual actions and environment.",
+      "rationale": "While no visual evidence exists to confirm audio-visual sync, the described sounds are plausibly aligned with the actions (e.g., typing with keyboard clatter, knob turn with click). The music’s rhythm matches the ‘brisk, concentrated rhythm’ of the work. This is a minor issue due to lack of renderable evidence, not a contradiction.",
+      "severity": "minor"
+    }
+  ],
+  "dimension": "IC",
+  "dimension_score": 95,
+  "evidence_cache_key": "6dbcf5e00687e119332a680b7f134bfef2001cd352ff83718089531d09d8d86b",
+  "judge_cache_key": "438d7e9fd7332b1041db3e2c26d42cb3fe828e0d369fb59490f6650aee59e97d",
+  "method": "glm53_20261112_120702",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"IC\",\n  \"dimension_score\": 95,\n  \"summary\": \"The enhanced prompt maintains strong internal consistency with the original instruction, preserving subject identity, actions, environment, and sensory details. Minor elaboration on lighting, camera, and sound does not contradict the original, and all elements cohere across time and space. No major inconsistencies or contradictions are present.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"SAC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"A lab specialist in his late 20s shifts between a specimen viewer and a workstation\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"a male lab specialist in his late 20s, wearing a white lab coat, works between a specimen viewer and an adjacent workstation\"\n        }\n      ],\n      \"rationale\": \"Subject identity (male lab specialist, late 20s), count (one), appearance (lab coat), and props (specimen viewer, workstation, vials, pipette) are consistently maintained. No unexplained changes or duplications occur.\"\n    },\n    {\n      \"criterion\": \"ANL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"shifts between a specimen viewer and a workstation, conveying the brisk, concentrated rhythm of experimental work\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"He leans toward the specimen viewer, eyes narrowed at the glowing screen... then pivots smoothly to the workstation, fingers moving quickly across the keyboard... alternates with brisk, concentrated rhythm\"\n        }\n      ],\n      \"rationale\": \"Actions form a coherent procedural progression: observing → typing → adjusting → repeating. Each action logically follows from the previous, with plausible bindings (e.g., typing after viewing data). No dangling or incompatible events.\"\n    },\n    {\n      \"criterion\": \"TSC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"the camera holds steady, letting his efficient movements carry the scene across the full ten seconds\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"conveying the brisk, concentrated rhythm of experimental work\"\n        }\n      ],\n      \"rationale\": \"Chronology is consistent: a single continuous shot over 10 seconds with no resets or state contradictions. The subject’s actions progress in a plausible sequence without temporal overlaps or resets.\"\n    },\n    {\n      \"criterion\": \"SPC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"He leans toward the specimen viewer... then pivots smoothly to the workstation\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"static medium shot frames a clean, coolly lit research facility laboratory\"\n        }\n      ],\n      \"rationale\": \"Spatial relationships are consistent: the specimen viewer and workstation are adjacent, and the subject’s pivoting motion is plausible within a static medium shot. No unexplained position swaps or impossible trajectories.\"\n    },\n    {\n      \"criterion\": \"PL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"fingers moving quickly across the keyboard while data shifts on the monitor\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"a small adjustment of a control knob\"\n        }\n      ],\n      \"rationale\": \"All physical actions (typing, turning knob, pivoting) are consistent with real-world physics. No violations of gravity, contact, or bodily feasibility. The environment and props behave as expected.\"\n    },\n    {\n      \"criterion\": \"AVS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"minor\",\n      \"issue\": \"The soundscape and music are described in detail but are not visually rendered; thus, alignment cannot be verified. However, the described audio elements (keyboard clatter, beeps, electronic pulse) are semantically consistent with the visual actions and environment.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"The low hum of laboratory instruments continues beneath the steady, rapid clatter of keyboard keys. Soft electronic beeps sound from the specimen viewer, a control knob clicks with a small turn...\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"A light, precise electronic pulse at a moderate tempo with sparse synth tones, maintaining a steady rhythmic drive\"\n        }\n      ],\n      \"rationale\": \"While no visual evidence exists to confirm audio-visual sync, the described sounds are plausibly aligned with the actions (e.g., typing with keyboard clatter, knob turn with click). The music’s rhythm matches the ‘brisk, concentrated rhythm’ of the work. This is a minor issue due to lack of renderable evidence, not a contradiction.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt maintains strong internal consistency with the original instruction, preserving subject identity, actions, environment, and sensory details. Minor elaboration on lighting, camera, and sound does not contradict the original, and all elements cohere across time and space. No major inconsistencies or contradictions are present.",
+  "usage": {
+    "completion_tokens": 1163,
+    "prompt_tokens": 1048,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 2211
+  }
+}

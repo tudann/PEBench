@@ -1,0 +1,135 @@
+{
+  "candidate_hash": "444bd150fa35a4b8dc363283188d37c92fa30494ad3bb6c62a3e0fe91c0d0931",
+  "case_key": "t2v:467",
+  "created_at": "2026-11-13T08:46:37+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "SAC",
+      "evidence": [
+        {
+          "quote": "a young man briskly weaving between the grand exhibition halls and display cases",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "a steady forward tracking shot follows a young man walking briskly through the grand exhibition halls and display cases",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "Subject identity (young man), count (singular), and persistent attributes (brisk walking, museum setting) are consistently maintained. No renaming, duplication, or attribute drift occurs. Clothing, props, and appearance are not specified in either prompt, so no inconsistency arises.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANL",
+      "evidence": [
+        {
+          "quote": "His expression quickly turns cold and hard as he suddenly raises one hand. In an instant, a perceptible transparent shockwave ripples outward... all ambient sound is completely stripped away",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "his expression turns cold and hard and he suddenly raises one hand. A perceptible transparent shockwave ripples outward from him as the center, and at that exact instant all ambient sound is completely stripped away",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "Actions form a coherent causal chain: alert → man stops → raises hand → shockwave → silence. The sequence is plausible and causally bound. No dangling or incompatible events are present. The man’s emotional progression (wariness → cold resolve) is consistent with the action.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "TSC",
+      "evidence": [
+        {
+          "quote": "At 00:05.000, the camera shifts into a 360-degree circular slow-motion orbit",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "[Shot 2_00:00:05-00:00:10] His expression quickly turns cold and hard as he suddenly raises one hand. In an instant, a perceptible transparent shockwave ripples outward... The camera shifts into a 360-degree circular slow-motion orbit",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "The enhanced prompt specifies the camera orbit begins at 00:05.000, while the original prompt implies the orbit begins immediately after the shockwave, which occurs at 00:00:05. The timing is nearly identical, but the explicit timestamp in the enhanced prompt introduces a slight precision mismatch.",
+      "rationale": "The orbit begins at the same moment (00:05) in both versions, but the enhanced prompt adds a precise timestamp (00:05.000) that slightly alters the implied timing precision. This is a minor issue as it does not affect the overall chronology or state transitions.",
+      "severity": "minor"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SPC",
+      "evidence": [
+        {
+          "quote": "The camera shifts into a 360-degree circular slow-motion orbit... The circling camera finally settles into a medium close-up from the front of the man",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "the camera shifts into a 360-degree circular slow-motion orbit... the circling camera settles into a medium close-up from the front of the man",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "Camera movement is consistent: forward tracking → 360° orbit → medium close-up. Spatial relationships (man as center, orbit around him) are preserved. No unexplained position swaps or impossible trajectories are described.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "PL",
+      "evidence": [
+        {
+          "quote": "a perceptible transparent shockwave ripples outward... all ambient sound is completely stripped away",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "A perceptible transparent shockwave ripples outward from him as the center, and at that exact instant all ambient sound is completely stripped away",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "The shockwave and sound-stripping are presented as a fictional, non-physical phenomenon consistent with the narrative context. No real-world physics violations are introduced; the rules of the scene (sudden stillness, suspended motion) are internally consistent and maintained.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "AVS",
+      "evidence": [
+        {
+          "quote": "Suddenly, a sharp system alert tone abruptly shatters the calm... all ambient sound is completely stripped away (the alert tone cuts off abruptly)",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "A sharp system alert tone abruptly shatters the calm... the alert tone cutting off abruptly. The orbit reveals the eerie, surreal stillness... everything fallen into absolute stillness",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "In the background audio, only a faint low-frequency hum remains, flickering in and out.",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "only a faint low-frequency hum remains afterward, flickering in and out.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "Audio events are temporally and semantically aligned with visual events: alert tone → shockwave → silence → faint hum. No misaligned lip-sync, music, or effects are described. The transition from sound to silence is abrupt and consistent across both prompts.",
+      "severity": "none"
+    }
+  ],
+  "dimension": "IC",
+  "dimension_score": 95,
+  "evidence_cache_key": "e3cbfe9e596e6cd366b5d5e7be56a8e77e84751aee79f95b137c1d8272161631",
+  "judge_cache_key": "438d7e9fd7332b1041db3e2c26d42cb3fe828e0d369fb59490f6650aee59e97d",
+  "method": "glm53_20261112_120702",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"IC\",\n  \"dimension_score\": 95,\n  \"summary\": \"The enhanced prompt maintains strong internal consistency with the original instruction, preserving subject identity, action progression, chronology, spatial relationships, and sensory alignment. Minor issues include slight rewording of the shockwave description and a minor discrepancy in the timing of the camera orbit initiation, but these do not materially affect coherence. No contradictions or attribute drift are present.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"SAC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"a young man briskly weaving between the grand exhibition halls and display cases\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"a steady forward tracking shot follows a young man walking briskly through the grand exhibition halls and display cases\"\n        }\n      ],\n      \"rationale\": \"Subject identity (young man), count (singular), and persistent attributes (brisk walking, museum setting) are consistently maintained. No renaming, duplication, or attribute drift occurs. Clothing, props, and appearance are not specified in either prompt, so no inconsistency arises.\"\n    },\n    {\n      \"criterion\": \"ANL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"His expression quickly turns cold and hard as he suddenly raises one hand. In an instant, a perceptible transparent shockwave ripples outward... all ambient sound is completely stripped away\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"his expression turns cold and hard and he suddenly raises one hand. A perceptible transparent shockwave ripples outward from him as the center, and at that exact instant all ambient sound is completely stripped away\"\n        }\n      ],\n      \"rationale\": \"Actions form a coherent causal chain: alert → man stops → raises hand → shockwave → silence. The sequence is plausible and causally bound. No dangling or incompatible events are present. The man’s emotional progression (wariness → cold resolve) is consistent with the action.\"\n    },\n    {\n      \"criterion\": \"TSC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"minor\",\n      \"issue\": \"The enhanced prompt specifies the camera orbit begins at 00:05.000, while the original prompt implies the orbit begins immediately after the shockwave, which occurs at 00:00:05. The timing is nearly identical, but the explicit timestamp in the enhanced prompt introduces a slight precision mismatch.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"At 00:05.000, the camera shifts into a 360-degree circular slow-motion orbit\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"[Shot 2_00:00:05-00:00:10] His expression quickly turns cold and hard as he suddenly raises one hand. In an instant, a perceptible transparent shockwave ripples outward... The camera shifts into a 360-degree circular slow-motion orbit\"\n        }\n      ],\n      \"rationale\": \"The orbit begins at the same moment (00:05) in both versions, but the enhanced prompt adds a precise timestamp (00:05.000) that slightly alters the implied timing precision. This is a minor issue as it does not affect the overall chronology or state transitions.\"\n    },\n    {\n      \"criterion\": \"SPC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"The camera shifts into a 360-degree circular slow-motion orbit... The circling camera finally settles into a medium close-up from the front of the man\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"the camera shifts into a 360-degree circular slow-motion orbit... the circling camera settles into a medium close-up from the front of the man\"\n        }\n      ],\n      \"rationale\": \"Camera movement is consistent: forward tracking → 360° orbit → medium close-up. Spatial relationships (man as center, orbit around him) are preserved. No unexplained position swaps or impossible trajectories are described.\"\n    },\n    {\n      \"criterion\": \"PL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"a perceptible transparent shockwave ripples outward... all ambient sound is completely stripped away\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"A perceptible transparent shockwave ripples outward from him as the center, and at that exact instant all ambient sound is completely stripped away\"\n        }\n      ],\n      \"rationale\": \"The shockwave and sound-stripping are presented as a fictional, non-physical phenomenon consistent with the narrative context. No real-world physics violations are introduced; the rules of the scene (sudden stillness, suspended motion) are internally consistent and maintained.\"\n    },\n    {\n      \"criterion\": \"AVS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"Suddenly, a sharp system alert tone abruptly shatters the calm... all ambient sound is completely stripped away (the alert tone cuts off abruptly)\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"A sharp system alert tone abruptly shatters the calm... the alert tone cutting off abruptly. The orbit reveals the eerie, surreal stillness... everything fallen into absolute stillness\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"In the background audio, only a faint low-frequency hum remains, flickering in and out.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"only a faint low-frequency hum remains afterward, flickering in and out.\"\n        }\n      ],\n      \"rationale\": \"Audio events are temporally and semantically aligned with visual events: alert tone → shockwave → silence → faint hum. No misaligned lip-sync, music, or effects are described. The transition from sound to silence is abrupt and consistent across both prompts.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt maintains strong internal consistency with the original instruction, preserving subject identity, action progression, chronology, spatial relationships, and sensory alignment. Minor issues include slight rewording of the shockwave description and a minor discrepancy in the timing of the camera orbit initiation, but these do not materially affect coherence. No contradictions or attribute drift are present.",
+  "usage": {
+    "completion_tokens": 1437,
+    "prompt_tokens": 1641,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 3078
+  }
+}

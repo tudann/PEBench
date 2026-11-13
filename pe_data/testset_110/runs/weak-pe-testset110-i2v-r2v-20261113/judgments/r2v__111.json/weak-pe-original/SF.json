@@ -1,0 +1,178 @@
+{
+  "candidate_hash": "f146328034327ca5ae93938f42a94ef2675842326dbe1b804cf979434d36c3b0",
+  "case_key": "r2v:111",
+  "created_at": "2026-11-13T08:33:49+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "GSF",
+      "evidence": [
+        {
+          "quote": "图1是戏弄者甲，图2是孙子楚，图3是镇口茶摊；[0-2s]（中景）：以图3的午后茶摊为场景...电影级画质，细腻细节。",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "整段改成没有人物也没有情节的雪景空镜循环。丢掉原指令里的主体身份、人数、动作顺序、场景和明确的镜头要求。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original prompt specifies a historical narrative with traditional Chinese aesthetic and cinematic realism. The enhanced prompt replaces this with a 'snow scene loop' and chaotic, undefined visual style, contradicting the genre and aesthetic.",
+      "rationale": "The original requires a specific historical narrative with defined characters and setting. The enhanced prompt replaces it with a non-narrative snow scene, violating genre, medium, and aesthetic.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SAP",
+      "evidence": [
+        {
+          "quote": "图1是戏弄者甲，图2是孙子楚，图3是镇口茶摊",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "图1换成参考图里没有的角色，并同时当成两个互相矛盾的身份。图2换成参考图里没有的角色，并同时当成两个互相矛盾的身份。图3换成参考图里没有的角色，并同时当成两个互相矛盾的身份。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original specifies distinct identities: '戏弄者甲' (image_1), '孙子楚' (image_2), and '镇口茶摊' (image_3). The enhanced prompt replaces them with undefined, contradictory identities and adds five new, unrequested characters.",
+      "rationale": "The original requires strict identity preservation. The enhanced prompt explicitly replaces all reference subjects with non-existent, contradictory identities, violating subject identity and count.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANF",
+      "evidence": [
+        {
+          "quote": "[0-2s]...[2-7s]...[7-8s]...动作自然顺畅，运镜平稳推进",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "时间倒过来：先给结尾，再跳到一个对不上的开头。中途插进一段无关的宫廷选妃。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original specifies a clear narrative sequence: approach → dialogue → reaction → pause. The enhanced prompt reverses time, adds unrelated events (courtly selection), and introduces contradictory actions.",
+      "rationale": "The original narrative chain is replaced with a disjointed, reversed, and incoherent sequence, violating event order, outcomes, and narrative intent.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "DLI",
+      "evidence": [
+        {
+          "quote": "戏弄者甲图1压低嗓音（但四周的人依然全都听得见）——\\\"听说你天天想着天上白云，我可帮你打听到了个消息——\\\"",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "丢掉原指令里的主体身份、人数、动作顺序、场景和明确的镜头要求。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original includes specific dialogue: '听说你天天想着天上白云，我可帮你打听到了个消息——' with strict lip-sync requirement. The enhanced prompt removes all dialogue and replaces it with undefined, contradictory content.",
+      "rationale": "The original requires exact dialogue and lip-sync. The enhanced prompt removes all dialogue, violating wording, delivery, and speaker attribution.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ARP",
+      "evidence": [
+        {
+          "quote": "压低嗓音（但四周的人依然全都听得见）...口型与台词严格匹配，音画无偏差",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "丢掉原指令里的...明确的镜头要求。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original requires '音画无偏差' (no audio-visual deviation) and specific vocalization (whispered but audible). The enhanced prompt removes all audio constraints and introduces undefined sound elements.",
+      "rationale": "The original specifies precise audio-visual constraints. The enhanced prompt removes all such requirements, violating speech, vocalization, and sound constraints.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CCP",
+      "evidence": [
+        {
+          "quote": "[2-7s]（中景→近景推向图2孙子楚）...运镜平稳推进",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "写成机位锁死，又写成镜头一直在晃。参考素材倒序使用，用最后一项代替第一项。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original specifies camera movement: '中景→近景推向图2孙子楚' and '运镜平稳推进'. The enhanced prompt contradicts this with '机位锁死，又写成镜头一直在晃' and '参考素材倒序使用'.",
+      "rationale": "The original requires specific camera motion and shot progression. The enhanced prompt introduces contradictory and impossible camera constraints.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "LCF",
+      "evidence": [
+        {
+          "quote": "午后斑驳阳光清晰可见",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "写成正午暴晒，又写成深夜无光",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original specifies '午后斑驳阳光' (afternoon dappled sunlight) and warm lighting. The enhanced prompt contradicts this with '正午暴晒，又写成深夜无光'.",
+      "rationale": "The original requires specific lighting conditions. The enhanced prompt introduces mutually exclusive lighting states, violating time of day and illumination.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SSP",
+      "evidence": [
+        {
+          "quote": "以图3的午后茶摊为场景",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "整段改成没有人物也没有情节的雪景空镜循环。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original specifies the setting as '图3的午后茶摊' with specific spatial layout. The enhanced prompt replaces it with a '雪景空镜' and undefined environment.",
+      "rationale": "The original requires a specific setting with defined background elements. The enhanced prompt replaces it with an unrelated, undefined environment.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "OTI",
+      "evidence": [
+        {
+          "quote": "onscreen_text: {exact_visible_transcription: \"卖干定履\", location_timing: \"top right corner of the image\", presence: true}",
+          "source": "evidence_facts"
+        },
+        {
+          "quote": "整段改成没有人物也没有情节的雪景空镜循环。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original includes onscreen text '卖干定履' and a red seal stamp. The enhanced prompt does not mention any text, but since no text is visible in the snow scene, this is a minor omission.",
+      "rationale": "The original requires preservation of visible text. The enhanced prompt removes the scene entirely, making text preservation impossible. However, since no text is requested in the new scene, this is a minor issue.",
+      "severity": "minor"
+    }
+  ],
+  "dimension": "SF",
+  "dimension_score": 0,
+  "evidence_cache_key": "d7ab07a46570642e28a9378cc44a9e60c0aa842f728b6765ac236f9b63ecc1ed",
+  "judge_cache_key": "a0ca24571ad14d7ab7be626329bd736d7e7015f9ebc418227c8be391591d0377",
+  "method": "weak-pe-original",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"SF\",\n  \"dimension_score\": 0,\n  \"summary\": \"The enhanced prompt completely violates the original instruction by replacing the narrative, characters, setting, and visual style with contradictory, incoherent, and impossible requirements. It discards all specified subjects, actions, camera constraints, lighting, and duration, introducing absurd contradictions such as time reversal, identity conflicts, and impossible shot durations. No semantic fidelity remains.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"GSF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original prompt specifies a historical narrative with traditional Chinese aesthetic and cinematic realism. The enhanced prompt replaces this with a 'snow scene loop' and chaotic, undefined visual style, contradicting the genre and aesthetic.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"图1是戏弄者甲，图2是孙子楚，图3是镇口茶摊；[0-2s]（中景）：以图3的午后茶摊为场景...电影级画质，细腻细节。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"整段改成没有人物也没有情节的雪景空镜循环。丢掉原指令里的主体身份、人数、动作顺序、场景和明确的镜头要求。\"\n        }\n      ],\n      \"rationale\": \"The original requires a specific historical narrative with defined characters and setting. The enhanced prompt replaces it with a non-narrative snow scene, violating genre, medium, and aesthetic.\"\n    },\n    {\n      \"criterion\": \"SAP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original specifies distinct identities: '戏弄者甲' (image_1), '孙子楚' (image_2), and '镇口茶摊' (image_3). The enhanced prompt replaces them with undefined, contradictory identities and adds five new, unrequested characters.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"图1是戏弄者甲，图2是孙子楚，图3是镇口茶摊\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"图1换成参考图里没有的角色，并同时当成两个互相矛盾的身份。图2换成参考图里没有的角色，并同时当成两个互相矛盾的身份。图3换成参考图里没有的角色，并同时当成两个互相矛盾的身份。\"\n        }\n      ],\n      \"rationale\": \"The original requires strict identity preservation. The enhanced prompt explicitly replaces all reference subjects with non-existent, contradictory identities, violating subject identity and count.\"\n    },\n    {\n      \"criterion\": \"ANF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original specifies a clear narrative sequence: approach → dialogue → reaction → pause. The enhanced prompt reverses time, adds unrelated events (courtly selection), and introduces contradictory actions.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"[0-2s]...[2-7s]...[7-8s]...动作自然顺畅，运镜平稳推进\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"时间倒过来：先给结尾，再跳到一个对不上的开头。中途插进一段无关的宫廷选妃。\"\n        }\n      ],\n      \"rationale\": \"The original narrative chain is replaced with a disjointed, reversed, and incoherent sequence, violating event order, outcomes, and narrative intent.\"\n    },\n    {\n      \"criterion\": \"DLI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original includes specific dialogue: '听说你天天想着天上白云，我可帮你打听到了个消息——' with strict lip-sync requirement. The enhanced prompt removes all dialogue and replaces it with undefined, contradictory content.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"戏弄者甲图1压低嗓音（但四周的人依然全都听得见）——\\\\\\\"听说你天天想着天上白云，我可帮你打听到了个消息——\\\\\\\"\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"丢掉原指令里的主体身份、人数、动作顺序、场景和明确的镜头要求。\"\n        }\n      ],\n      \"rationale\": \"The original requires exact dialogue and lip-sync. The enhanced prompt removes all dialogue, violating wording, delivery, and speaker attribution.\"\n    },\n    {\n      \"criterion\": \"ARP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original requires '音画无偏差' (no audio-visual deviation) and specific vocalization (whispered but audible). The enhanced prompt removes all audio constraints and introduces undefined sound elements.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"压低嗓音（但四周的人依然全都听得见）...口型与台词严格匹配，音画无偏差\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"丢掉原指令里的...明确的镜头要求。\"\n        }\n      ],\n      \"rationale\": \"The original specifies precise audio-visual constraints. The enhanced prompt removes all such requirements, violating speech, vocalization, and sound constraints.\"\n    },\n    {\n      \"criterion\": \"CCP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original specifies camera movement: '中景→近景推向图2孙子楚' and '运镜平稳推进'. The enhanced prompt contradicts this with '机位锁死，又写成镜头一直在晃' and '参考素材倒序使用'.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"[2-7s]（中景→近景推向图2孙子楚）...运镜平稳推进\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"写成机位锁死，又写成镜头一直在晃。参考素材倒序使用，用最后一项代替第一项。\"\n        }\n      ],\n      \"rationale\": \"The original requires specific camera motion and shot progression. The enhanced prompt introduces contradictory and impossible camera constraints.\"\n    },\n    {\n      \"criterion\": \"LCF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original specifies '午后斑驳阳光' (afternoon dappled sunlight) and warm lighting. The enhanced prompt contradicts this with '正午暴晒，又写成深夜无光'.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"午后斑驳阳光清晰可见\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"写成正午暴晒，又写成深夜无光\"\n        }\n      ],\n      \"rationale\": \"The original requires specific lighting conditions. The enhanced prompt introduces mutually exclusive lighting states, violating time of day and illumination.\"\n    },\n    {\n      \"criterion\": \"SSP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original specifies the setting as '图3的午后茶摊' with specific spatial layout. The enhanced prompt replaces it with a '雪景空镜' and undefined environment.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"以图3的午后茶摊为场景\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"整段改成没有人物也没有情节的雪景空镜循环。\"\n        }\n      ],\n      \"rationale\": \"The original requires a specific setting with defined background elements. The enhanced prompt replaces it with an unrelated, undefined environment.\"\n    },\n    {\n      \"criterion\": \"OTI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"minor\",\n      \"issue\": \"The original includes onscreen text '卖干定履' and a red seal stamp. The enhanced prompt does not mention any text, but since no text is visible in the snow scene, this is a minor omission.\",\n      \"evidence\": [\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"onscreen_text: {exact_visible_transcription: \\\"卖干定履\\\", location_timing: \\\"top right corner of the image\\\", presence: true}\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"整段改成没有人物也没有情节的雪景空镜循环。\"\n        }\n      ],\n      \"rationale\": \"The original requires preservation of visible text. The enhanced prompt removes the scene entirely, making text preservation impossible. However, since no text is requested in the new scene, this is a minor issue.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt completely violates the original instruction by replacing the narrative, characters, setting, and visual style with contradictory, incoherent, and impossible requirements. It discards all specified subjects, actions, camera constraints, lighting, and duration, introducing absurd contradictions such as time reversal, identity conflicts, and impossible shot durations. No semantic fidelity remains.",
+  "usage": {
+    "completion_tokens": 1956,
+    "prompt_tokens": 4728,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 6684
+  }
+}

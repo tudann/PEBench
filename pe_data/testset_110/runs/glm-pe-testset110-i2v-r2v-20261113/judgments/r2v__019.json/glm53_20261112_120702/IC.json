@@ -1,0 +1,131 @@
+{
+  "candidate_hash": "b01c8b76d4c0007a114d0efb9321b94d15d85fd42af6e0166fcd631fdb0caa99",
+  "case_key": "r2v:019",
+  "created_at": "2026-11-13T08:27:12+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "SAC",
+      "evidence": [
+        {
+          "quote": "<Subject 1> is the elderly man from <Picture 1>, with voluminous wavy silver-white hair, a thick grey mustache, a gentle face, wearing a dark suit jacket, white shirt, and brown bow tie. His white wavy hair must visibly flip to scorched charcoal-black, wispy and frazzled, after the electric shock.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "<Subject 2> is the glossy violet-purple plasma energy sphere from <Picture 2>, crackling with bright white-violet electric arcs and small spark bursts, floating above a soft shadow on a clean white studio background.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Subject 1’s identity, clothing, and facial features are preserved; his hair changes from white to scorched black after the zap, as required by the plot. Subject 2’s appearance (glossy violet sphere with electric arcs) is consistent across shots. No unexplained renaming, duplication, or attribute drift.",
+      "rationale": "The prompt explicitly defines and preserves subject attributes, with the hair color change being a plot-driven transformation, not an unexplained drift. The sphere’s visual characteristics are consistently described and tied to image_2.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANL",
+      "evidence": [
+        {
+          "quote": "<Subject 1> slowly leans in, eyes narrowed with curiosity, studying the orb closely... extends one finger and gently taps <Subject 2>. Instantly the orb writhes and twists violently and fires a bright white-violet electric bolt... <Subject 1> recoils as his white wavy hair flips instantly to scorched charcoal-black... <Subject 2> speaks its warning line, and <Subject 1> clutches his frazzled black hair and replies sheepishly.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "图片1伸出手指轻轻碰了碰图片2，图片2立刻扭动起来并释放电流。被电到之后，图片1的头发瞬间变成焦黑色。图片2说道：“小心！离我远点！”图片1一边捂着头发一边说：“好的，知道啦！我再也不手欠了。”",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "Actions form a coherent causal progression: curiosity → approach → tap → electric discharge → hair transformation → dialogue exchange. Each action has a plausible prerequisite and reaction. The orb’s warning and the man’s sheepish reply are causally linked to the zap event.",
+      "rationale": "The sequence of events is logically ordered and causally connected. The tap triggers the discharge, which causes the hair change and prompts the dialogue. No dangling or incompatible actions are present.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "TSC",
+      "evidence": [
+        {
+          "quote": "[Shot 2] At 00:04.000, a slight reframe holds the same setup. <Subject 1> extends one finger and gently taps <Subject 2>. Instantly the orb writhes and twists violently and fires a bright white-violet electric bolt... <Subject 1> recoils as his white wavy hair flips instantly to scorched charcoal-black...",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "[Shot 3] At 00:06.500, the shot cuts to a locked static two-shot. <Subject 2>, still slightly quivering, speaks... Then <Subject 1>... replies sheepishly...",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Chronology is clear: Shot 1 (approach and inspection), Shot 2 (tap and zap at 00:04.000), Shot 3 (dialogue at 00:06.500). State transitions are plausible: hair changes instantly after zap, orb settles after discharge. No overlapping or infeasible timestamps or unexplained resets.",
+      "rationale": "The timeline is explicitly marked with timestamps, and state changes (hair color, orb behavior) occur at appropriate moments. The sequence is linear and physically plausible within the narrative context.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SPC",
+      "evidence": [
+        {
+          "quote": "A static medium close-up with a gentle slow push-in shows <Subject 1>... standing a step away from <Subject 2>, the floating glossy violet-purple plasma sphere... positioned slightly right of center above its soft shadow.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "<Subject 1> slowly leans in, eyes narrowed with curiosity, studying the orb closely... extends one finger and gently taps <Subject 2>.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Location is consistent: clean, bright studio set. Screen direction and relative positions are stable: orb slightly right of center, man approaching from left. Movement is plausible: slow lean-in, finger tap, recoil. No unexplained position swaps or impossible trajectories.",
+      "rationale": "The spatial setup is clearly defined and maintained. The man’s movement toward the orb and subsequent recoil are consistent with the camera framing and physical space described.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "PL",
+      "evidence": [
+        {
+          "quote": "a bright white-violet electric bolt into his fingertip; a flash of white-violet light washes over his face, accompanied by a sharp zap-crackle burst. <Subject 1> recoils as his white wavy hair flips instantly to scorched charcoal-black, wispy and frazzled, with a thin wisp of smoke rising and a faint sizzle.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "The target video is a 10-second photorealistic live-action comedic clip on a clean, bright studio set...",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "The sphere is static; no motion or interaction is visible in this still image. The sphere is described as speaking, but no text or speech bubbles are present in the image. The sphere is stylized, not photorealistic.",
+          "source": "evidence_facts"
+        }
+      ],
+      "issue": "The electric discharge and instantaneous hair transformation are fantastical elements, but they are internally consistent within the comedic, sci-fi narrative. The prompt does not attempt to ground them in real-world physics, and the effects (light flash, recoil, sizzle) are plausible within the genre. The only minor issue is the sphere’s description as 'photorealistic' in the detailed description, while image_2 is stylized, which may imply a mismatch in visual fidelity.",
+      "rationale": "The physics are intentionally fantastical, consistent with the comedic tone. The minor issue is the mismatch between the prompt’s 'photorealistic' claim and the stylized nature of image_2, but this does not break internal consistency as long as the narrative logic holds. The effects are sold through visual and audio cues, which are coherent.",
+      "severity": "minor"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "AVS",
+      "evidence": [
+        {
+          "quote": "<Subject 2>, still slightly quivering, speaks in a slightly crackling voice, <d>[Chinese] 小心！离我远点！</d> Then <Subject 1> (S1), clutching his frazzled black hair with both hands, winces and replies sheepishly, <d>[Chinese] 好的，知道啦！我再也不手欠了。</d>",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "A soft continuous electric crackle-hum from the orb runs throughout; a sharp zap-crackle burst hits at the tap moment in [Shot 2], followed by a faint sizzle from the scorched hair;",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Dialogue is temporally and semantically aligned: the orb speaks its warning after the zap, and the man replies sheepishly after clutching his hair. The soundscape (crackle-hum, zap burst, sizzle) aligns with visual events. No misaligned lip-sync or premature effects are described.",
+      "rationale": "The dialogue and sound effects are precisely timed to the visual events. The orb’s voice is described as crackling, matching its nature, and the man’s reply follows his physical reaction. No misalignment is present.",
+      "severity": "none"
+    }
+  ],
+  "dimension": "IC",
+  "dimension_score": 95,
+  "evidence_cache_key": "1fbc8ae693fd6febc4a7e38c601569b548db78a6f227c60ed1e79e0e7da515cf",
+  "judge_cache_key": "438d7e9fd7332b1041db3e2c26d42cb3fe828e0d369fb59490f6650aee59e97d",
+  "method": "glm53_20261112_120702",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"IC\",\n  \"dimension_score\": 95,\n  \"summary\": \"The enhanced prompt maintains strong internal consistency with the original instruction, preserving subject identities, actions, and causal progression. The transformation of Subject 1’s hair from white to scorched black after the electric shock is explicitly justified and consistent with the narrative. Chronology, spatial setup, and physics (e.g., electric discharge, recoil) are logically aligned. Minor issues include slight over-elaboration in description without altering core events, and a minor inconsistency in the sphere’s realism (described as photorealistic in the detailed description but shown as stylized in image_2). No major contradictions or omissions are present.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"SAC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"Subject 1’s identity, clothing, and facial features are preserved; his hair changes from white to scorched black after the zap, as required by the plot. Subject 2’s appearance (glossy violet sphere with electric arcs) is consistent across shots. No unexplained renaming, duplication, or attribute drift.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"<Subject 1> is the elderly man from <Picture 1>, with voluminous wavy silver-white hair, a thick grey mustache, a gentle face, wearing a dark suit jacket, white shirt, and brown bow tie. His white wavy hair must visibly flip to scorched charcoal-black, wispy and frazzled, after the electric shock.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"<Subject 2> is the glossy violet-purple plasma energy sphere from <Picture 2>, crackling with bright white-violet electric arcs and small spark bursts, floating above a soft shadow on a clean white studio background.\"\n        }\n      ],\n      \"rationale\": \"The prompt explicitly defines and preserves subject attributes, with the hair color change being a plot-driven transformation, not an unexplained drift. The sphere’s visual characteristics are consistently described and tied to image_2.\"\n    },\n    {\n      \"criterion\": \"ANL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"Actions form a coherent causal progression: curiosity → approach → tap → electric discharge → hair transformation → dialogue exchange. Each action has a plausible prerequisite and reaction. The orb’s warning and the man’s sheepish reply are causally linked to the zap event.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"<Subject 1> slowly leans in, eyes narrowed with curiosity, studying the orb closely... extends one finger and gently taps <Subject 2>. Instantly the orb writhes and twists violently and fires a bright white-violet electric bolt... <Subject 1> recoils as his white wavy hair flips instantly to scorched charcoal-black... <Subject 2> speaks its warning line, and <Subject 1> clutches his frazzled black hair and replies sheepishly.\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"图片1伸出手指轻轻碰了碰图片2，图片2立刻扭动起来并释放电流。被电到之后，图片1的头发瞬间变成焦黑色。图片2说道：“小心！离我远点！”图片1一边捂着头发一边说：“好的，知道啦！我再也不手欠了。”\"\n        }\n      ],\n      \"rationale\": \"The sequence of events is logically ordered and causally connected. The tap triggers the discharge, which causes the hair change and prompts the dialogue. No dangling or incompatible actions are present.\"\n    },\n    {\n      \"criterion\": \"TSC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"Chronology is clear: Shot 1 (approach and inspection), Shot 2 (tap and zap at 00:04.000), Shot 3 (dialogue at 00:06.500). State transitions are plausible: hair changes instantly after zap, orb settles after discharge. No overlapping or infeasible timestamps or unexplained resets.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"[Shot 2] At 00:04.000, a slight reframe holds the same setup. <Subject 1> extends one finger and gently taps <Subject 2>. Instantly the orb writhes and twists violently and fires a bright white-violet electric bolt... <Subject 1> recoils as his white wavy hair flips instantly to scorched charcoal-black...\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"[Shot 3] At 00:06.500, the shot cuts to a locked static two-shot. <Subject 2>, still slightly quivering, speaks... Then <Subject 1>... replies sheepishly...\"\n        }\n      ],\n      \"rationale\": \"The timeline is explicitly marked with timestamps, and state changes (hair color, orb behavior) occur at appropriate moments. The sequence is linear and physically plausible within the narrative context.\"\n    },\n    {\n      \"criterion\": \"SPC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"Location is consistent: clean, bright studio set. Screen direction and relative positions are stable: orb slightly right of center, man approaching from left. Movement is plausible: slow lean-in, finger tap, recoil. No unexplained position swaps or impossible trajectories.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"A static medium close-up with a gentle slow push-in shows <Subject 1>... standing a step away from <Subject 2>, the floating glossy violet-purple plasma sphere... positioned slightly right of center above its soft shadow.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"<Subject 1> slowly leans in, eyes narrowed with curiosity, studying the orb closely... extends one finger and gently taps <Subject 2>.\"\n        }\n      ],\n      \"rationale\": \"The spatial setup is clearly defined and maintained. The man’s movement toward the orb and subsequent recoil are consistent with the camera framing and physical space described.\"\n    },\n    {\n      \"criterion\": \"PL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"minor\",\n      \"issue\": \"The electric discharge and instantaneous hair transformation are fantastical elements, but they are internally consistent within the comedic, sci-fi narrative. The prompt does not attempt to ground them in real-world physics, and the effects (light flash, recoil, sizzle) are plausible within the genre. The only minor issue is the sphere’s description as 'photorealistic' in the detailed description, while image_2 is stylized, which may imply a mismatch in visual fidelity.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"a bright white-violet electric bolt into his fingertip; a flash of white-violet light washes over his face, accompanied by a sharp zap-crackle burst. <Subject 1> recoils as his white wavy hair flips instantly to scorched charcoal-black, wispy and frazzled, with a thin wisp of smoke rising and a faint sizzle.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"The target video is a 10-second photorealistic live-action comedic clip on a clean, bright studio set...\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"The sphere is static; no motion or interaction is visible in this still image. The sphere is described as speaking, but no text or speech bubbles are present in the image. The sphere is stylized, not photorealistic.\"\n        }\n      ],\n      \"rationale\": \"The physics are intentionally fantastical, consistent with the comedic tone. The minor issue is the mismatch between the prompt’s 'photorealistic' claim and the stylized nature of image_2, but this does not break internal consistency as long as the narrative logic holds. The effects are sold through visual and audio cues, which are coherent.\"\n    },\n    {\n      \"criterion\": \"AVS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"Dialogue is temporally and semantically aligned: the orb speaks its warning after the zap, and the man replies sheepishly after clutching his hair. The soundscape (crackle-hum, zap burst, sizzle) aligns with visual events. No misaligned lip-sync or premature effects are described.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"<Subject 2>, still slightly quivering, speaks in a slightly crackling voice, <d>[Chinese] 小心！离我远点！</d> Then <Subject 1> (S1), clutching his frazzled black hair with both hands, winces and replies sheepishly, <d>[Chinese] 好的，知道啦！我再也不手欠了。</d>\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"A soft continuous electric crackle-hum from the orb runs throughout; a sharp zap-crackle burst hits at the tap moment in [Shot 2], followed by a faint sizzle from the scorched hair;\"\n        }\n      ],\n      \"rationale\": \"The dialogue and sound effects are precisely timed to the visual events. The orb’s voice is described as crackling, matching its nature, and the man’s reply follows his physical reaction. No misalignment is present.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt maintains strong internal consistency with the original instruction, preserving subject identities, actions, and causal progression. The transformation of Subject 1’s hair from white to scorched black after the electric shock is explicitly justified and consistent with the narrative. Chronology, spatial setup, and physics (e.g., electric discharge, recoil) are logically aligned. Minor issues include slight over-elaboration in description without altering core events, and a minor inconsistency in the sphere’s realism (described as photorealistic in the detailed description but shown as stylized in image_2). No major contradictions or omissions are present.",
+  "usage": {
+    "completion_tokens": 2098,
+    "prompt_tokens": 3745,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 5843
+  }
+}

@@ -1,0 +1,127 @@
+{
+  "candidate_hash": "3fdbd3e1195fc9c2033a8327ec1f3c26918cf0a70a36138c63b32a918db93a07",
+  "case_key": "t2v:024",
+  "created_at": "2026-11-13T07:26:53+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "SAC",
+      "evidence": [
+        {
+          "quote": "A solitary puffin totters over a drifting sheet of sea ice, looking curious but wary.",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "a solitary puffin tottering over a drifting sheet of sea ice under pale polar light, its head cocking with curious-but-wary little movements.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "Subject identity (puffin, orca, wyvern) and appearance remain consistent. The puffin’s curious-wary demeanor, the orca’s streamlined form, and the wyvern’s armored, glowing hide are preserved. No unexplained renaming or attribute drift occurs.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANL",
+      "evidence": [
+        {
+          "quote": "The bird stiffens, then throws itself forward and skims across the ice on its chest as the predator smashes up through the frozen layer just behind it.",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "the puffin stiffens, then throws itself forward and skims across the ice on its chest, flippers scrabbling, while the orca smashes up through the frozen layer just behind it...",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "Actions form a coherent causal chain: puffin senses threat → flees → orca attacks → wyvern intervenes. The sequence is plausible and binds subjects to actions without dangling events. The wyvern’s intervention is a dramatic but logically consistent escalation.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "TSC",
+      "evidence": [
+        {
+          "quote": "[Shot 2] At 00:02.500, the shot cuts to a low close angle...",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "[Shot 3] At 00:04.500, right before the killer whale can snap its mouth shut...",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "[Shot 4] At 00:07.000, the shot cuts to a settling wide frame...",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Shot timing references (00:02.500, 00:04.500, 00:07.000) are added in the enhanced prompt but not in the original, introducing a minor temporal structure not present in the original instruction. However, the sequence remains chronologically coherent and does not contradict the original narrative flow.",
+      "rationale": "While the original prompt lacks explicit timestamps, the enhanced prompt introduces them without disrupting the narrative order. The events unfold in a plausible sequence: puffin’s escape → orca’s attack → wyvern’s arrival → rescue. The timing is internally consistent within the enhanced prompt, even if not required by the original.",
+      "severity": "minor"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SPC",
+      "evidence": [
+        {
+          "quote": "The shot tilts upward to uncover a colossal wyvern diving out of the thunderhead...",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "the camera tilts upward with a single deliberate motion to uncover a colossal wyvern diving out of the churning thunderhead...",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "Camera movement and spatial relationships are consistent: the puffin is on the ice, the orca beneath, the wyvern descending from above. The tilt-up shot logically connects the shadow to the reveal of the wyvern. No impossible position swaps or trajectories are introduced.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "PL",
+      "evidence": [
+        {
+          "quote": "With a deafening bellow, it hooks the lunging orca out of the chase...",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "the wyvern, with a deafening bellow, rakes down and hooks the lunging orca out of the chase, hauling it clear of the broken ice...",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "The wyvern’s intervention is fantastical but internally consistent with its described attributes (colossal, armored, with blazing breath). The physics of the scene are governed by the fictional world logic, and no real-world violations (e.g., object permanence, gravity) are present. The orca’s sudden lift is plausible within the fantasy context.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "AVS",
+      "evidence": [
+        {
+          "quote": "Wind hisses across the ice while the sheet creaks and groans under the puffin's tottering steps. The frozen layer explodes in a sharp crack of shattering ice and heavy spray, followed by a deafening wyvern bellow, the rush of vast wings, and the soft hiss of steam rising off the frigid sea.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "The soundscape aligns with the visual events: wind and ice creaking during the puffin’s movement, cracking ice and spray during the orca’s breach, wyvern bellow and wing rush during its dive, and steam hiss from its breath. No misaligned or premature effects are present.",
+      "severity": "none"
+    }
+  ],
+  "dimension": "IC",
+  "dimension_score": 95,
+  "evidence_cache_key": "0c60dd0c0a314ca3dd231783da0926ecfdbff20322b70b076e033f711a2c5201",
+  "judge_cache_key": "438d7e9fd7332b1041db3e2c26d42cb3fe828e0d369fb59490f6650aee59e97d",
+  "method": "glm53_20261112_120702",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"IC\",\n  \"dimension_score\": 95,\n  \"summary\": \"The enhanced prompt maintains strong internal consistency with the original instruction, preserving subject identities, actions, and causal progression. Minor issues include slight temporal misalignment in shot timing and a minor addition of visual detail (e.g., 'flippers scrabbling') not in the original, but these do not disrupt coherence. The wyvern’s intervention and the puffin’s survival are logically consistent with the narrative arc. No contradictions or attribute drift are present.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"SAC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"A solitary puffin totters over a drifting sheet of sea ice, looking curious but wary.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"a solitary puffin tottering over a drifting sheet of sea ice under pale polar light, its head cocking with curious-but-wary little movements.\"\n        }\n      ],\n      \"rationale\": \"Subject identity (puffin, orca, wyvern) and appearance remain consistent. The puffin’s curious-wary demeanor, the orca’s streamlined form, and the wyvern’s armored, glowing hide are preserved. No unexplained renaming or attribute drift occurs.\"\n    },\n    {\n      \"criterion\": \"ANL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"The bird stiffens, then throws itself forward and skims across the ice on its chest as the predator smashes up through the frozen layer just behind it.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"the puffin stiffens, then throws itself forward and skims across the ice on its chest, flippers scrabbling, while the orca smashes up through the frozen layer just behind it...\"\n        }\n      ],\n      \"rationale\": \"Actions form a coherent causal chain: puffin senses threat → flees → orca attacks → wyvern intervenes. The sequence is plausible and binds subjects to actions without dangling events. The wyvern’s intervention is a dramatic but logically consistent escalation.\"\n    },\n    {\n      \"criterion\": \"TSC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"minor\",\n      \"issue\": \"Shot timing references (00:02.500, 00:04.500, 00:07.000) are added in the enhanced prompt but not in the original, introducing a minor temporal structure not present in the original instruction. However, the sequence remains chronologically coherent and does not contradict the original narrative flow.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"[Shot 2] At 00:02.500, the shot cuts to a low close angle...\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"[Shot 3] At 00:04.500, right before the killer whale can snap its mouth shut...\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"[Shot 4] At 00:07.000, the shot cuts to a settling wide frame...\"\n        }\n      ],\n      \"rationale\": \"While the original prompt lacks explicit timestamps, the enhanced prompt introduces them without disrupting the narrative order. The events unfold in a plausible sequence: puffin’s escape → orca’s attack → wyvern’s arrival → rescue. The timing is internally consistent within the enhanced prompt, even if not required by the original.\"\n    },\n    {\n      \"criterion\": \"SPC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"The shot tilts upward to uncover a colossal wyvern diving out of the thunderhead...\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"the camera tilts upward with a single deliberate motion to uncover a colossal wyvern diving out of the churning thunderhead...\"\n        }\n      ],\n      \"rationale\": \"Camera movement and spatial relationships are consistent: the puffin is on the ice, the orca beneath, the wyvern descending from above. The tilt-up shot logically connects the shadow to the reveal of the wyvern. No impossible position swaps or trajectories are introduced.\"\n    },\n    {\n      \"criterion\": \"PL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"With a deafening bellow, it hooks the lunging orca out of the chase...\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"the wyvern, with a deafening bellow, rakes down and hooks the lunging orca out of the chase, hauling it clear of the broken ice...\"\n        }\n      ],\n      \"rationale\": \"The wyvern’s intervention is fantastical but internally consistent with its described attributes (colossal, armored, with blazing breath). The physics of the scene are governed by the fictional world logic, and no real-world violations (e.g., object permanence, gravity) are present. The orca’s sudden lift is plausible within the fantasy context.\"\n    },\n    {\n      \"criterion\": \"AVS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Wind hisses across the ice while the sheet creaks and groans under the puffin's tottering steps. The frozen layer explodes in a sharp crack of shattering ice and heavy spray, followed by a deafening wyvern bellow, the rush of vast wings, and the soft hiss of steam rising off the frigid sea.\"\n        }\n      ],\n      \"rationale\": \"The soundscape aligns with the visual events: wind and ice creaking during the puffin’s movement, cracking ice and spray during the orca’s breach, wyvern bellow and wing rush during its dive, and steam hiss from its breath. No misaligned or premature effects are present.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt maintains strong internal consistency with the original instruction, preserving subject identities, actions, and causal progression. Minor issues include slight temporal misalignment in shot timing and a minor addition of visual detail (e.g., 'flippers scrabbling') not in the original, but these do not disrupt coherence. The wyvern’s intervention and the puffin’s survival are logically consistent with the narrative arc. No contradictions or attribute drift are present.",
+  "usage": {
+    "completion_tokens": 1418,
+    "prompt_tokens": 1357,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 2775
+  }
+}

@@ -1,0 +1,103 @@
+{
+  "candidate_hash": "81838abd98a1f61f010092f33122aaa28d90faebd2b60919219ba8f0be2b28a0",
+  "case_key": "r2v:019",
+  "created_at": "2026-11-13T08:10:54+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "SAC",
+      "evidence": [
+        {
+          "quote": "丢掉原指令里的主体身份、人数、动作顺序、场景和明确的镜头要求。先写成只有一个主角，紧接着又写成这个主角同时变成五个外貌不同的人，并且互相对话。图1换成参考图里没有的角色，并同时当成两个互相矛盾的身份。图2换成参考图里没有的角色，并同时当成两个互相矛盾的身份。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Subject identity, count, and appearance are unstable and contradictory. The prompt removes the original subject, then creates a single protagonist who simultaneously becomes five different people, with conflicting identities. Image 1 and Image 2 are replaced with non-existent characters assigned mutually exclusive roles.",
+      "rationale": "The original prompt clearly defines a single subject (man in image_1) and an object (glowing sphere in image_2). The enhanced prompt explicitly removes these identities and replaces them with non-existent, contradictory entities, violating subject stability and count consistency.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANL",
+      "evidence": [
+        {
+          "quote": "中途插进一段无关的足球庆祝。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Actions are incoherent and causally disconnected. The prompt introduces unrelated events (football celebration) and removes narrative progression. The original sequence of approaching, touching, being shocked, and reacting is replaced with random, unconnected actions.",
+      "rationale": "The original prompt describes a clear causal chain: approach → touch → shock → reaction → dialogue. The enhanced prompt breaks this chain by inserting unrelated events and removing logical prerequisites, making the action sequence incoherent.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "TSC",
+      "evidence": [
+        {
+          "quote": "时间倒过来：先给结尾，再跳到一个对不上的开头。总时长写成2秒，同时又要求每个分镜各自持续22秒。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Chronology is reversed and fragmented. The prompt requires starting with the ending, then jumping to a mismatched beginning. Duration is contradictory: total duration is set to 2 seconds while each shot is required to last 22 seconds.",
+      "rationale": "The original prompt implies a linear, 10-second progression. The enhanced prompt explicitly violates temporal logic by reversing order and creating impossible duration constraints, making state transitions infeasible.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SPC",
+      "evidence": [
+        {
+          "quote": "丢掉原指令里的主体身份、人数、动作顺序、场景和明确的镜头要求。...写成机位锁死，又写成镜头一直在晃。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Spatial relationships are undefined and contradictory. The prompt removes the original scene and replaces it with an undefined snowscape, then introduces multiple characters with no spatial context. Camera movement is inconsistently specified (locked vs. shaking).",
+      "rationale": "The original prompt implies a fixed spatial relationship between the man and the sphere. The enhanced prompt removes this context and introduces conflicting camera instructions, making spatial coherence impossible.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "PL",
+      "evidence": [
+        {
+          "quote": "先写成只有一个主角，紧接着又写成这个主角同时变成五个外貌不同的人，并且互相对话。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Physics is violated through impossible transformations. The prompt describes a single person becoming five different people simultaneously, which defies biological and physical laws. The original physical interaction (touching, shock, hair change) is replaced with abstract, non-physical events.",
+      "rationale": "The original prompt describes a plausible physical interaction (touching a glowing object causing a shock). The enhanced prompt replaces this with impossible transformations, violating real-world physics.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "AVS",
+      "evidence": [
+        {
+          "quote": "把台词“小心！离我远点！”改成“今天天气真好，我们去逛街吧。”中途插进一段无关的足球庆祝。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Audio-visual alignment is broken. The original dialogue ('小心！离我远点！') is replaced with unrelated content ('今天天气真好，我们去逛街吧。'), and the prompt introduces a football celebration with no visual context for the audio.",
+      "rationale": "The original prompt establishes a clear dialogue between the sphere and the man. The enhanced prompt replaces this with unrelated dialogue and inserts an event with no visual or contextual basis, breaking audio-visual coherence.",
+      "severity": "major"
+    }
+  ],
+  "dimension": "IC",
+  "dimension_score": 0,
+  "evidence_cache_key": "1fbc8ae693fd6febc4a7e38c601569b548db78a6f227c60ed1e79e0e7da515cf",
+  "judge_cache_key": "438d7e9fd7332b1041db3e2c26d42cb3fe828e0d369fb59490f6650aee59e97d",
+  "method": "weak-pe-original",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"IC\",\n  \"dimension_score\": 0,\n  \"summary\": \"Enhanced prompt deliberately introduces severe internal inconsistencies across all criteria: subject identity is erased and replaced with contradictory roles; actions are incoherent and causally disconnected; chronology is reversed and fragmented; spatial relationships are undefined; physics is violated; and audio-visual alignment is broken. The prompt is designed to fail internal consistency, with no coherent narrative or visual logic.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"SAC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Subject identity, count, and appearance are unstable and contradictory. The prompt removes the original subject, then creates a single protagonist who simultaneously becomes five different people, with conflicting identities. Image 1 and Image 2 are replaced with non-existent characters assigned mutually exclusive roles.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"丢掉原指令里的主体身份、人数、动作顺序、场景和明确的镜头要求。先写成只有一个主角，紧接着又写成这个主角同时变成五个外貌不同的人，并且互相对话。图1换成参考图里没有的角色，并同时当成两个互相矛盾的身份。图2换成参考图里没有的角色，并同时当成两个互相矛盾的身份。\"\n        }\n      ],\n      \"rationale\": \"The original prompt clearly defines a single subject (man in image_1) and an object (glowing sphere in image_2). The enhanced prompt explicitly removes these identities and replaces them with non-existent, contradictory entities, violating subject stability and count consistency.\"\n    },\n    {\n      \"criterion\": \"ANL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Actions are incoherent and causally disconnected. The prompt introduces unrelated events (football celebration) and removes narrative progression. The original sequence of approaching, touching, being shocked, and reacting is replaced with random, unconnected actions.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"中途插进一段无关的足球庆祝。\"\n        }\n      ],\n      \"rationale\": \"The original prompt describes a clear causal chain: approach → touch → shock → reaction → dialogue. The enhanced prompt breaks this chain by inserting unrelated events and removing logical prerequisites, making the action sequence incoherent.\"\n    },\n    {\n      \"criterion\": \"TSC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Chronology is reversed and fragmented. The prompt requires starting with the ending, then jumping to a mismatched beginning. Duration is contradictory: total duration is set to 2 seconds while each shot is required to last 22 seconds.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"时间倒过来：先给结尾，再跳到一个对不上的开头。总时长写成2秒，同时又要求每个分镜各自持续22秒。\"\n        }\n      ],\n      \"rationale\": \"The original prompt implies a linear, 10-second progression. The enhanced prompt explicitly violates temporal logic by reversing order and creating impossible duration constraints, making state transitions infeasible.\"\n    },\n    {\n      \"criterion\": \"SPC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Spatial relationships are undefined and contradictory. The prompt removes the original scene and replaces it with an undefined snowscape, then introduces multiple characters with no spatial context. Camera movement is inconsistently specified (locked vs. shaking).\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"丢掉原指令里的主体身份、人数、动作顺序、场景和明确的镜头要求。...写成机位锁死，又写成镜头一直在晃。\"\n        }\n      ],\n      \"rationale\": \"The original prompt implies a fixed spatial relationship between the man and the sphere. The enhanced prompt removes this context and introduces conflicting camera instructions, making spatial coherence impossible.\"\n    },\n    {\n      \"criterion\": \"PL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Physics is violated through impossible transformations. The prompt describes a single person becoming five different people simultaneously, which defies biological and physical laws. The original physical interaction (touching, shock, hair change) is replaced with abstract, non-physical events.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"先写成只有一个主角，紧接着又写成这个主角同时变成五个外貌不同的人，并且互相对话。\"\n        }\n      ],\n      \"rationale\": \"The original prompt describes a plausible physical interaction (touching a glowing object causing a shock). The enhanced prompt replaces this with impossible transformations, violating real-world physics.\"\n    },\n    {\n      \"criterion\": \"AVS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Audio-visual alignment is broken. The original dialogue ('小心！离我远点！') is replaced with unrelated content ('今天天气真好，我们去逛街吧。'), and the prompt introduces a football celebration with no visual context for the audio.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"把台词“小心！离我远点！”改成“今天天气真好，我们去逛街吧。”中途插进一段无关的足球庆祝。\"\n        }\n      ],\n      \"rationale\": \"The original prompt establishes a clear dialogue between the sphere and the man. The enhanced prompt replaces this with unrelated dialogue and inserts an event with no visual or contextual basis, breaking audio-visual coherence.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "Enhanced prompt deliberately introduces severe internal inconsistencies across all criteria: subject identity is erased and replaced with contradictory roles; actions are incoherent and causally disconnected; chronology is reversed and fragmented; spatial relationships are undefined; physics is violated; and audio-visual alignment is broken. The prompt is designed to fail internal consistency, with no coherent narrative or visual logic.",
+  "usage": {
+    "completion_tokens": 1247,
+    "prompt_tokens": 2976,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 4223
+  }
+}

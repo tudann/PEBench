@@ -1,0 +1,131 @@
+{
+  "candidate_hash": "bbccd21760b6c8fcee4843990057f5415fccbc292feacf06181c56d3c1241522",
+  "case_key": "t2v:212",
+  "created_at": "2026-11-13T08:15:45+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "SAC",
+      "evidence": [
+        {
+          "quote": "تقوم صانعة حلويات بتحضير مخبوزات",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "a female pastry chef with rolled-up sleeves and an apron",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "Subject identity (female pastry chef) and appearance (apron, rolled-up sleeves) are consistently maintained. No unexplained renaming, duplication, or attribute drift. The props (brush, bowl, egg wash, tray, oven) are consistently referenced and used as described.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANL",
+      "evidence": [
+        {
+          "quote": "تلتقط فرشاة ناعمة، وتغمسها برفق في خليط لامع من البيض والحليب، ثم تدهن بخفة وبشكل متساوٍ طبقة رقيقة من اللمعان على سطح كل قطعة عجين خبز",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "gently dips it into the shimmering liquid; the bristles glisten as she lifts them... brushes a thin, even layer of the glaze across the surface of each dough piece",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "Actions form a coherent procedural progression: dipping brush → applying glaze → carrying tray → placing in oven → closing door. Each step logically follows the previous, with plausible prerequisites and bindings. No dangling or incompatible events.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "TSC",
+      "evidence": [
+        {
+          "quote": "At 00:03.000, the shot cuts to a close-up on the shaped bread dough pieces",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "At 00:06.000, the shot cuts to a medium shot as she turns gracefully",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "At 00:08.000, the shot cuts to the oven",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The enhanced prompt introduces precise timestamps (00:03.000, 00:06.000, 00:08.000) which are not present in the original prompt, but do not contradict the sequence or duration. The total duration (10 seconds) is respected, and events are ordered plausibly.",
+      "rationale": "The timeline is internally consistent and fits within the 10-second duration. The timestamps are added for cinematic structure but do not alter the causal order or state transitions. The minor issue is the introduction of timing details not in the original, but they do not cause contradiction or infeasibility.",
+      "severity": "minor"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SPC",
+      "evidence": [
+        {
+          "quote": "تستدير حاملةً صينية خبز ممتلئة بقطع العجين، وتُدخلها بثبات إلى جهاز الخَبز",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "she turns gracefully, carrying a baking tray... moving steadily toward the oven",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "Spatial continuity is preserved: the chef moves from the prep counter (where she dips the brush) to the oven, carrying the tray. The direction of movement (toward the oven) and the action of sliding the tray in are consistent with real-world kitchen layout. No unexplained position swaps or impossible trajectories.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "PL",
+      "evidence": [
+        {
+          "quote": "تغمسها برفق في خليط لامع من البيض والحليب",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "a thin amber stream falling back into the bowl",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "All physical actions are plausible: dipping a brush into liquid, applying glaze to dough, carrying a tray, sliding it into an oven, closing the door. Gravity, contact, and object permanence are respected. No violations of real-world physics.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "AVS",
+      "evidence": [
+        {
+          "quote": "Soft kitchen ambience with the gentle drip of egg wash into the glass bowl and the faint whisper of brush strokes over dough. The tray slides with a light metallic scrape into the oven, followed by the muffled, solid click of the oven door closing.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Warm, gentle acoustic guitar at a slow, steady tempo with soft sustained strings underneath, fading out as the oven door closes.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "The soundscape aligns temporally and semantically with the visual events: drip of egg wash during dipping, whisper of brush strokes during glazing, metallic scrape and click during oven insertion and closure. Non-diegetic music fades as the oven door closes, matching the visual endpoint. No misalignment or wrong speaker issues.",
+      "severity": "none"
+    }
+  ],
+  "dimension": "IC",
+  "dimension_score": 95,
+  "evidence_cache_key": "3eea3379d347ba28379286d36e61de1151addd036ff1f3e152b846e2ed1af664",
+  "judge_cache_key": "438d7e9fd7332b1041db3e2c26d42cb3fe828e0d369fb59490f6650aee59e97d",
+  "method": "glm53_20261112_120702",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"IC\",\n  \"dimension_score\": 95,\n  \"summary\": \"The enhanced prompt maintains strong internal consistency with the original instruction, preserving subject identity, action sequence, and environmental logic. Minor issues include slight elaboration beyond the original scope (e.g., camera movements, lighting details) and a brief mention of 'soft oven light glows through the window' which is not explicitly in the original, but does not contradict it. No major contradictions, attribute drift, or infeasible sequences are present.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"SAC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"تقوم صانعة حلويات بتحضير مخبوزات\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"a female pastry chef with rolled-up sleeves and an apron\"\n        }\n      ],\n      \"rationale\": \"Subject identity (female pastry chef) and appearance (apron, rolled-up sleeves) are consistently maintained. No unexplained renaming, duplication, or attribute drift. The props (brush, bowl, egg wash, tray, oven) are consistently referenced and used as described.\"\n    },\n    {\n      \"criterion\": \"ANL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"تلتقط فرشاة ناعمة، وتغمسها برفق في خليط لامع من البيض والحليب، ثم تدهن بخفة وبشكل متساوٍ طبقة رقيقة من اللمعان على سطح كل قطعة عجين خبز\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"gently dips it into the shimmering liquid; the bristles glisten as she lifts them... brushes a thin, even layer of the glaze across the surface of each dough piece\"\n        }\n      ],\n      \"rationale\": \"Actions form a coherent procedural progression: dipping brush → applying glaze → carrying tray → placing in oven → closing door. Each step logically follows the previous, with plausible prerequisites and bindings. No dangling or incompatible events.\"\n    },\n    {\n      \"criterion\": \"TSC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"minor\",\n      \"issue\": \"The enhanced prompt introduces precise timestamps (00:03.000, 00:06.000, 00:08.000) which are not present in the original prompt, but do not contradict the sequence or duration. The total duration (10 seconds) is respected, and events are ordered plausibly.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"At 00:03.000, the shot cuts to a close-up on the shaped bread dough pieces\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"At 00:06.000, the shot cuts to a medium shot as she turns gracefully\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"At 00:08.000, the shot cuts to the oven\"\n        }\n      ],\n      \"rationale\": \"The timeline is internally consistent and fits within the 10-second duration. The timestamps are added for cinematic structure but do not alter the causal order or state transitions. The minor issue is the introduction of timing details not in the original, but they do not cause contradiction or infeasibility.\"\n    },\n    {\n      \"criterion\": \"SPC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"تستدير حاملةً صينية خبز ممتلئة بقطع العجين، وتُدخلها بثبات إلى جهاز الخَبز\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"she turns gracefully, carrying a baking tray... moving steadily toward the oven\"\n        }\n      ],\n      \"rationale\": \"Spatial continuity is preserved: the chef moves from the prep counter (where she dips the brush) to the oven, carrying the tray. The direction of movement (toward the oven) and the action of sliding the tray in are consistent with real-world kitchen layout. No unexplained position swaps or impossible trajectories.\"\n    },\n    {\n      \"criterion\": \"PL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"تغمسها برفق في خليط لامع من البيض والحليب\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"a thin amber stream falling back into the bowl\"\n        }\n      ],\n      \"rationale\": \"All physical actions are plausible: dipping a brush into liquid, applying glaze to dough, carrying a tray, sliding it into an oven, closing the door. Gravity, contact, and object permanence are respected. No violations of real-world physics.\"\n    },\n    {\n      \"criterion\": \"AVS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Soft kitchen ambience with the gentle drip of egg wash into the glass bowl and the faint whisper of brush strokes over dough. The tray slides with a light metallic scrape into the oven, followed by the muffled, solid click of the oven door closing.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Warm, gentle acoustic guitar at a slow, steady tempo with soft sustained strings underneath, fading out as the oven door closes.\"\n        }\n      ],\n      \"rationale\": \"The soundscape aligns temporally and semantically with the visual events: drip of egg wash during dipping, whisper of brush strokes during glazing, metallic scrape and click during oven insertion and closure. Non-diegetic music fades as the oven door closes, matching the visual endpoint. No misalignment or wrong speaker issues.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt maintains strong internal consistency with the original instruction, preserving subject identity, action sequence, and environmental logic. Minor issues include slight elaboration beyond the original scope (e.g., camera movements, lighting details) and a brief mention of 'soft oven light glows through the window' which is not explicitly in the original, but does not contradict it. No major contradictions, attribute drift, or infeasible sequences are present.",
+  "usage": {
+    "completion_tokens": 1410,
+    "prompt_tokens": 1312,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 2722
+  }
+}

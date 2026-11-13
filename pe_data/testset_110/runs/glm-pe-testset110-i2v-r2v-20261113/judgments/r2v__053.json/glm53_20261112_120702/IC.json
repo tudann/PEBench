@@ -1,0 +1,135 @@
+{
+  "candidate_hash": "ea4297f643764111423113114b47995da31f778118818c91e5dd51f554b3b93c",
+  "case_key": "r2v:053",
+  "created_at": "2026-11-13T08:33:07+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "SAC",
+      "evidence": [
+        {
+          "quote": "<Subject 1> is the demon warrior from <Picture 1>: long messy black hair with white streaks, large curved black horns, pale skin, piercing light-blue eyes, scar under left eye, pointed ears, white bandage-wrapped hands, and sleek dark navy-blue segmented plate armor with pointed layered shoulder pauldrons.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "visible_appearance: {armor: dark blue, segmented, form-fitting, with shoulder spikes and chest plating, ears: pointed, partially visible, face: pale skin, sharp features, blue eyes, small scar on left cheek, hair: long black with silver streaks, flowing, hands: white bandages on wrists, long white nails, horns: two black, curved horns on forehead}",
+          "source": "evidence_facts"
+        },
+        {
+          "quote": "<Subject 2> is the tiger warrior from <Picture 2>: long wild golden-brown hair, tiger ears, orange-and-black tiger-striped face paint, dark brown studded leather warrior outfit (studded leather coat, ornate belt, layered tunic, boots), gripping a twisted wooden staff as his key weapon.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "visible_appearance: {clothing: brown leather tunic, vest, and boots with metallic accents, ears: pointed, tiger-like ears, face: tiger-striped face paint (black and white), intense eyes, hair: long, wavy, brown with golden highlights, weapon: wooden staff with spiral design}",
+          "source": "evidence_facts"
+        }
+      ],
+      "issue": "",
+      "rationale": "Subject identities, counts, appearances, clothing, and props are consistently defined and preserved across the prompt and evidence. No renaming, duplication, or attribute drift occurs. The enhanced prompt explicitly references each image’s features and confirms their retention in the retention_analysis section. The staff and armor remain visually consistent throughout the described action.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANL",
+      "evidence": [
+        {
+          "quote": "<Subject 1> throws a heavy opening punch at <Subject 2>; <Subject 2> twists aside and counterattacks with his twisted wooden staff, and from 2–5s the two alternate offense and defense with blocks, staff counters, and evasive steps, each clash spraying snow and dislodging tumbling rocks.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Image 1 throws a punch at Image 2, Image 2 counterattacks, and Image 1 and Image 2 alternate offense and defense, with blocking and counterattacks, fully presenting the back-and-forth rhythm of attack, defense, and counterattack [5s].",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "The actions form a coherent causal progression: opening punch → evasion → counterattack → alternating offense/defense. Each action has a plausible prerequisite (e.g., punch requires forward motion, block requires raised arms) and reaction (snow spray, rock dislodgement). The sequence is logically bound to the subjects and their weapons. No dangling or incompatible events are present.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "TSC",
+      "evidence": [
+        {
+          "quote": "between 0–1s and throws a heavy punch",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Image 1 throws a punch at Image 2, Image 2 counterattacks, and Image 1 and Image 2 alternate offense and defense... [5s]",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "The timing of the opening punch is described as occurring between 0–1s, but the original prompt does not specify a precise timestamp for the punch, only that it is the opening action. This introduces a minor ambiguity in temporal anchoring.",
+      "rationale": "The enhanced prompt allocates 0–1s for the opening punch, which is a reasonable and plausible division of the 5-second duration. However, since the original prompt does not specify timing, this is a minor addition rather than a contradiction. The rest of the timeline (1–2s for counterattack, 2–5s for alternating exchange) is coherent and feasible. No infeasible overlaps or resets occur.",
+      "severity": "minor"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SPC",
+      "evidence": [
+        {
+          "quote": "The camera performs a smooth continuous tracking movement circling the duel, pushing into tight close-ups on the fighters' faces, the bandaged fist, and the staff shaft at each impact, then pulling back out to follow the next exchange; all movement is fluid and seamless, matching the slow-motion rhythm.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "add \"tracking shots + close-ups\" and let the AI automatically generate smooth camera movement to enhance the cinematic feel.",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "The spatial relationships are consistent: the fighters remain in the snowy mountain pass environment (Image 3), and their relative positions shift plausibly during combat (e.g., twisting aside, evasive steps). The camera movement is described as smooth and continuous, with no unexplained position swaps or impossible trajectories. The environment’s layout (jagged peaks, slopes) supports the described motion.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "PL",
+      "evidence": [
+        {
+          "quote": "each clash kicking up bursts of snow and dislodging small rocks that collide and tumble down the incline",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "adding environmental interactions such as \"snow spraying\" and \"rocks colliding\" to enhance realism.",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "The physics of the scene are consistent with real-world expectations: impacts produce snow spray and rock dislodgement, which is plausible in a snowy mountain environment. The fighters’ movements (punches, blocks, evasions) are physically feasible for human-like combatants. No violations of gravity, contact, or object permanence are present.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "AVS",
+      "evidence": [
+        {
+          "quote": "Diegetic sound in this shot: crisp snow crunch underfoot, sharp impact thuds on armor and staff blocks, whooshes of snow spray, and rocks clattering and tumbling.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "non_diegetic_music: An intense, percussive cinematic combat score synchronized to the impact beats, building steadily through the 2–5s alternating exchange without swelling past the final frame.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "The audio elements are temporally and semantically aligned with the visual events: snow crunches occur underfoot during movement, impact thuds coincide with punches and blocks, and the music builds with the combat rhythm. The music is explicitly synchronized to impact beats, and the diegetic sounds are tied to specific actions (e.g., rocks tumbling after a clash). No misaligned lip-sync or premature effects are present.",
+      "severity": "none"
+    }
+  ],
+  "dimension": "IC",
+  "dimension_score": 98,
+  "evidence_cache_key": "25ad5fb7b510ed3ab92da595e813d11c3111ca7d07199b90b666cae4e882c153",
+  "judge_cache_key": "438d7e9fd7332b1041db3e2c26d42cb3fe828e0d369fb59490f6650aee59e97d",
+  "method": "glm53_20261112_120702",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"IC\",\n  \"dimension_score\": 98,\n  \"summary\": \"The enhanced prompt maintains strong internal consistency across subject identity, actions, chronology, space, physics, and audio-visual alignment. All core visual attributes from the source images are preserved, actions form a coherent combat rhythm, and environmental interactions are logically integrated. Minor issues include slight ambiguity in the exact timing of the opening punch and a potential mismatch in the lighting of the environment (Image 3’s cool daylight vs. Image 2’s warm forest lighting), but these do not materially disrupt the overall coherence. No contradictions or attribute drift are present.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"SAC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"<Subject 1> is the demon warrior from <Picture 1>: long messy black hair with white streaks, large curved black horns, pale skin, piercing light-blue eyes, scar under left eye, pointed ears, white bandage-wrapped hands, and sleek dark navy-blue segmented plate armor with pointed layered shoulder pauldrons.\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"visible_appearance: {armor: dark blue, segmented, form-fitting, with shoulder spikes and chest plating, ears: pointed, partially visible, face: pale skin, sharp features, blue eyes, small scar on left cheek, hair: long black with silver streaks, flowing, hands: white bandages on wrists, long white nails, horns: two black, curved horns on forehead}\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"<Subject 2> is the tiger warrior from <Picture 2>: long wild golden-brown hair, tiger ears, orange-and-black tiger-striped face paint, dark brown studded leather warrior outfit (studded leather coat, ornate belt, layered tunic, boots), gripping a twisted wooden staff as his key weapon.\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"visible_appearance: {clothing: brown leather tunic, vest, and boots with metallic accents, ears: pointed, tiger-like ears, face: tiger-striped face paint (black and white), intense eyes, hair: long, wavy, brown with golden highlights, weapon: wooden staff with spiral design}\"\n        }\n      ],\n      \"rationale\": \"Subject identities, counts, appearances, clothing, and props are consistently defined and preserved across the prompt and evidence. No renaming, duplication, or attribute drift occurs. The enhanced prompt explicitly references each image’s features and confirms their retention in the retention_analysis section. The staff and armor remain visually consistent throughout the described action.\"\n    },\n    {\n      \"criterion\": \"ANL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"<Subject 1> throws a heavy opening punch at <Subject 2>; <Subject 2> twists aside and counterattacks with his twisted wooden staff, and from 2–5s the two alternate offense and defense with blocks, staff counters, and evasive steps, each clash spraying snow and dislodging tumbling rocks.\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"Image 1 throws a punch at Image 2, Image 2 counterattacks, and Image 1 and Image 2 alternate offense and defense, with blocking and counterattacks, fully presenting the back-and-forth rhythm of attack, defense, and counterattack [5s].\"\n        }\n      ],\n      \"rationale\": \"The actions form a coherent causal progression: opening punch → evasion → counterattack → alternating offense/defense. Each action has a plausible prerequisite (e.g., punch requires forward motion, block requires raised arms) and reaction (snow spray, rock dislodgement). The sequence is logically bound to the subjects and their weapons. No dangling or incompatible events are present.\"\n    },\n    {\n      \"criterion\": \"TSC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"minor\",\n      \"issue\": \"The timing of the opening punch is described as occurring between 0–1s, but the original prompt does not specify a precise timestamp for the punch, only that it is the opening action. This introduces a minor ambiguity in temporal anchoring.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"between 0–1s and throws a heavy punch\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"Image 1 throws a punch at Image 2, Image 2 counterattacks, and Image 1 and Image 2 alternate offense and defense... [5s]\"\n        }\n      ],\n      \"rationale\": \"The enhanced prompt allocates 0–1s for the opening punch, which is a reasonable and plausible division of the 5-second duration. However, since the original prompt does not specify timing, this is a minor addition rather than a contradiction. The rest of the timeline (1–2s for counterattack, 2–5s for alternating exchange) is coherent and feasible. No infeasible overlaps or resets occur.\"\n    },\n    {\n      \"criterion\": \"SPC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"The camera performs a smooth continuous tracking movement circling the duel, pushing into tight close-ups on the fighters' faces, the bandaged fist, and the staff shaft at each impact, then pulling back out to follow the next exchange; all movement is fluid and seamless, matching the slow-motion rhythm.\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"add \\\"tracking shots + close-ups\\\" and let the AI automatically generate smooth camera movement to enhance the cinematic feel.\"\n        }\n      ],\n      \"rationale\": \"The spatial relationships are consistent: the fighters remain in the snowy mountain pass environment (Image 3), and their relative positions shift plausibly during combat (e.g., twisting aside, evasive steps). The camera movement is described as smooth and continuous, with no unexplained position swaps or impossible trajectories. The environment’s layout (jagged peaks, slopes) supports the described motion.\"\n    },\n    {\n      \"criterion\": \"PL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"each clash kicking up bursts of snow and dislodging small rocks that collide and tumble down the incline\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"adding environmental interactions such as \\\"snow spraying\\\" and \\\"rocks colliding\\\" to enhance realism.\"\n        }\n      ],\n      \"rationale\": \"The physics of the scene are consistent with real-world expectations: impacts produce snow spray and rock dislodgement, which is plausible in a snowy mountain environment. The fighters’ movements (punches, blocks, evasions) are physically feasible for human-like combatants. No violations of gravity, contact, or object permanence are present.\"\n    },\n    {\n      \"criterion\": \"AVS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Diegetic sound in this shot: crisp snow crunch underfoot, sharp impact thuds on armor and staff blocks, whooshes of snow spray, and rocks clattering and tumbling.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"non_diegetic_music: An intense, percussive cinematic combat score synchronized to the impact beats, building steadily through the 2–5s alternating exchange without swelling past the final frame.\"\n        }\n      ],\n      \"rationale\": \"The audio elements are temporally and semantically aligned with the visual events: snow crunches occur underfoot during movement, impact thuds coincide with punches and blocks, and the music builds with the combat rhythm. The music is explicitly synchronized to impact beats, and the diegetic sounds are tied to specific actions (e.g., rocks tumbling after a clash). No misaligned lip-sync or premature effects are present.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt maintains strong internal consistency across subject identity, actions, chronology, space, physics, and audio-visual alignment. All core visual attributes from the source images are preserved, actions form a coherent combat rhythm, and environmental interactions are logically integrated. Minor issues include slight ambiguity in the exact timing of the opening punch and a potential mismatch in the lighting of the environment (Image 3’s cool daylight vs. Image 2’s warm forest lighting), but these do not materially disrupt the overall coherence. No contradictions or attribute drift are present.",
+  "usage": {
+    "completion_tokens": 1829,
+    "prompt_tokens": 4785,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 6614
+  }
+}

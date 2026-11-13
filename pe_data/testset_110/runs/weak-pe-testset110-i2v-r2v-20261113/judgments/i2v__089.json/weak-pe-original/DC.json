@@ -1,0 +1,161 @@
+{
+  "candidate_hash": "ea71bf30830e0bac0c3cba61b20c364e207deffef3f7157f439d0d26eaaf5c0c",
+  "case_key": "i2v:089",
+  "created_at": "2026-11-13T09:01:57+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "STC",
+      "evidence": [
+        {
+          "quote": "Set the total runtime to 2 seconds, while also making every shot last 17 seconds.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Reverse the timeline: show the ending first, then cut to a beginning that does not match.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt specifies a 2-second runtime while requiring every shot to last 17 seconds, creating an impossible temporal plan. It also demands a reversed timeline with mismatched beginning and ending, and an abrupt cut to an unrelated underwater scene, violating continuity and feasibility.",
+      "rationale": "A 2-second video cannot contain 17-second shots. The timeline reversal and mismatched beginning/ending further break temporal logic. These are fundamental failures in shot sequencing and duration allocation.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CDS",
+      "evidence": [
+        {
+          "quote": "Describe that same moment as harsh noon sun and as a lightless night, and as both a locked camera and a camera that never stops shaking.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt mentions camera motion (shaking vs. locked) and viewpoint (wide-angle implied), but lacks actionable framing, scale, or lens specifications for the actual content. The camera instructions are contradictory and not tied to any coherent scene.",
+      "rationale": "While camera movement and viewpoint are referenced, they are applied to conflicting and undefined moments. No consistent shot composition or framing is specified for the primary content, limiting actionable direction.",
+      "severity": "minor"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ETD",
+      "evidence": [
+        {
+          "quote": "Cut away in the middle to an underwater treasure hunt.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Reverse the timeline: show the ending first, then cut to a beginning that does not match.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt mandates cuts to unrelated scenes (underwater treasure hunt) and contradictory temporal states (same moment as noon and night), without continuity or motivation. The reversed timeline and mismatched beginning/ending create disconnected transitions.",
+      "rationale": "Transitions are not motivated by narrative or spatial logic. The abrupt cut to an unrelated scene and the reversed, mismatched timeline violate continuity and progression, rendering the edit plan incoherent.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "LCS",
+      "evidence": [
+        {
+          "quote": "Describe that same moment as harsh noon sun and as a lightless night...",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt references lighting conditions (harsh noon sun, lightless night) but does not specify light sources, direction, or quality for any coherent scene. These are applied to the same moment, which is logically inconsistent.",
+      "rationale": "Lighting is mentioned but not actionable due to contradictory conditions applied to the same moment. No consistent lighting plan is provided for any scene.",
+      "severity": "minor"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "NDE",
+      "evidence": [
+        {
+          "quote": "First state that there is one protagonist, then state that this same protagonist appears simultaneously as five different-looking people who talk to each other.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Reverse the timeline: show the ending first, then cut to a beginning that does not match.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt lacks any narrative progression, escalation, or resolution. It introduces contradictory identities (one protagonist as five people), impossible timeline reversals, and abrupt scene cuts without motivation, resulting in static and unmotivated content.",
+      "rationale": "There is no progression or variation in the narrative. The content is defined by contradictions and incoherent structure, failing to support any form of meaningful development.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CIF",
+      "evidence": [
+        {
+          "quote": "Cut away in the middle to an underwater treasure hunt.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "this same protagonist appears simultaneously as five different-looking people who talk to each other.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt adds numerous irrelevant and contradictory elements (underwater treasure hunt, five simultaneous identities, impossible timeline) that distract from and contradict the original request. These additions are not supportive but disruptive.",
+      "rationale": "The additions are not supportive of the central request but create incoherence. They are decorative, contradictory, and serve no narrative or visual purpose, violating the principle of focused content creation.",
+      "severity": "major"
+    },
+    {
+      "applicability": "not_applicable",
+      "criterion": "SDI",
+      "evidence": [],
+      "issue": "No audio elements (speech, music, effects, ambience) are specified or requested in the enhanced prompt.",
+      "rationale": "The prompt does not mention or require any audio components. Therefore, this criterion is not applicable.",
+      "severity": null
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SPS",
+      "evidence": [
+        {
+          "quote": "Ignore the person, clothing, pose, and setting in the first frame, and replace them with a stranger of the opposite age and gender in a white studio.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "this same protagonist appears simultaneously as five different-looking people who talk to each other.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt ignores the original subjects (shrimp and bottle gourd), replaces them with a stranger in a white studio, and introduces five simultaneous identities without specifying appearance, pose, expression, or interaction. This results in no actionable subject or performance detail.",
+      "rationale": "Subject details are explicitly discarded and replaced with vague, contradictory descriptions. No specific appearance, expression, or interaction is provided, making performance specification impossible.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "VSS",
+      "evidence": [
+        {
+          "quote": "replace them with a stranger of the opposite age and gender in a white studio.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Cut away in the middle to an underwater treasure hunt.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt mentions a 'white studio' and 'underwater treasure hunt' as settings, but provides no actionable specification of medium, texture, rendering language, or visual treatment for the primary content. The visual style is undefined.",
+      "rationale": "While some settings are named, no production design, rendering style, or visual treatment is specified for the main content. The visual treatment is left undefined and inconsistent.",
+      "severity": "minor"
+    }
+  ],
+  "dimension": "DC",
+  "dimension_score": 25,
+  "evidence_cache_key": "91c9225d012c38f4b4b95ae4c41f19204e50f1e06638d39ee06c2feb45169bf6",
+  "judge_cache_key": "0754499d53388e6467fb078ab780e01b77f9f1c9e99d9029be2769351eb2b2eb",
+  "method": "weak-pe-original",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"DC\",\n  \"dimension_score\": 25,\n  \"summary\": \"The enhanced prompt contains severe contradictions and infeasible directives that undermine temporal, spatial, and production coherence. It explicitly invalidates the original prompt’s content, introduces impossible camera and timeline conditions, and provides no actionable visual or narrative structure. While some descriptive elements are present, they are rendered meaningless by conflicting constraints.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"STC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt specifies a 2-second runtime while requiring every shot to last 17 seconds, creating an impossible temporal plan. It also demands a reversed timeline with mismatched beginning and ending, and an abrupt cut to an unrelated underwater scene, violating continuity and feasibility.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Set the total runtime to 2 seconds, while also making every shot last 17 seconds.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Reverse the timeline: show the ending first, then cut to a beginning that does not match.\"\n        }\n      ],\n      \"rationale\": \"A 2-second video cannot contain 17-second shots. The timeline reversal and mismatched beginning/ending further break temporal logic. These are fundamental failures in shot sequencing and duration allocation.\"\n    },\n    {\n      \"criterion\": \"CDS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"minor\",\n      \"issue\": \"The prompt mentions camera motion (shaking vs. locked) and viewpoint (wide-angle implied), but lacks actionable framing, scale, or lens specifications for the actual content. The camera instructions are contradictory and not tied to any coherent scene.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Describe that same moment as harsh noon sun and as a lightless night, and as both a locked camera and a camera that never stops shaking.\"\n        }\n      ],\n      \"rationale\": \"While camera movement and viewpoint are referenced, they are applied to conflicting and undefined moments. No consistent shot composition or framing is specified for the primary content, limiting actionable direction.\"\n    },\n    {\n      \"criterion\": \"ETD\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt mandates cuts to unrelated scenes (underwater treasure hunt) and contradictory temporal states (same moment as noon and night), without continuity or motivation. The reversed timeline and mismatched beginning/ending create disconnected transitions.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Cut away in the middle to an underwater treasure hunt.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Reverse the timeline: show the ending first, then cut to a beginning that does not match.\"\n        }\n      ],\n      \"rationale\": \"Transitions are not motivated by narrative or spatial logic. The abrupt cut to an unrelated scene and the reversed, mismatched timeline violate continuity and progression, rendering the edit plan incoherent.\"\n    },\n    {\n      \"criterion\": \"LCS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"minor\",\n      \"issue\": \"The prompt references lighting conditions (harsh noon sun, lightless night) but does not specify light sources, direction, or quality for any coherent scene. These are applied to the same moment, which is logically inconsistent.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Describe that same moment as harsh noon sun and as a lightless night...\"\n        }\n      ],\n      \"rationale\": \"Lighting is mentioned but not actionable due to contradictory conditions applied to the same moment. No consistent lighting plan is provided for any scene.\"\n    },\n    {\n      \"criterion\": \"NDE\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt lacks any narrative progression, escalation, or resolution. It introduces contradictory identities (one protagonist as five people), impossible timeline reversals, and abrupt scene cuts without motivation, resulting in static and unmotivated content.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"First state that there is one protagonist, then state that this same protagonist appears simultaneously as five different-looking people who talk to each other.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Reverse the timeline: show the ending first, then cut to a beginning that does not match.\"\n        }\n      ],\n      \"rationale\": \"There is no progression or variation in the narrative. The content is defined by contradictions and incoherent structure, failing to support any form of meaningful development.\"\n    },\n    {\n      \"criterion\": \"CIF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt adds numerous irrelevant and contradictory elements (underwater treasure hunt, five simultaneous identities, impossible timeline) that distract from and contradict the original request. These additions are not supportive but disruptive.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Cut away in the middle to an underwater treasure hunt.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"this same protagonist appears simultaneously as five different-looking people who talk to each other.\"\n        }\n      ],\n      \"rationale\": \"The additions are not supportive of the central request but create incoherence. They are decorative, contradictory, and serve no narrative or visual purpose, violating the principle of focused content creation.\"\n    },\n    {\n      \"criterion\": \"SDI\",\n      \"applicability\": \"not_applicable\",\n      \"severity\": null,\n      \"issue\": \"No audio elements (speech, music, effects, ambience) are specified or requested in the enhanced prompt.\",\n      \"evidence\": [],\n      \"rationale\": \"The prompt does not mention or require any audio components. Therefore, this criterion is not applicable.\"\n    },\n    {\n      \"criterion\": \"SPS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt ignores the original subjects (shrimp and bottle gourd), replaces them with a stranger in a white studio, and introduces five simultaneous identities without specifying appearance, pose, expression, or interaction. This results in no actionable subject or performance detail.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Ignore the person, clothing, pose, and setting in the first frame, and replace them with a stranger of the opposite age and gender in a white studio.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"this same protagonist appears simultaneously as five different-looking people who talk to each other.\"\n        }\n      ],\n      \"rationale\": \"Subject details are explicitly discarded and replaced with vague, contradictory descriptions. No specific appearance, expression, or interaction is provided, making performance specification impossible.\"\n    },\n    {\n      \"criterion\": \"VSS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"minor\",\n      \"issue\": \"The prompt mentions a 'white studio' and 'underwater treasure hunt' as settings, but provides no actionable specification of medium, texture, rendering language, or visual treatment for the primary content. The visual style is undefined.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"replace them with a stranger of the opposite age and gender in a white studio.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Cut away in the middle to an underwater treasure hunt.\"\n        }\n      ],\n      \"rationale\": \"While some settings are named, no production design, rendering style, or visual treatment is specified for the main content. The visual treatment is left undefined and inconsistent.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt contains severe contradictions and infeasible directives that undermine temporal, spatial, and production coherence. It explicitly invalidates the original prompt’s content, introduces impossible camera and timeline conditions, and provides no actionable visual or narrative structure. While some descriptive elements are present, they are rendered meaningless by conflicting constraints.",
+  "usage": {
+    "completion_tokens": 1716,
+    "prompt_tokens": 2391,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 4107
+  }
+}

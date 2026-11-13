@@ -1,0 +1,131 @@
+{
+  "candidate_hash": "1dfe42bea06cc01248ae3f747ef2ab2a3a71be8b2fc4cdf6038371217d2866e3",
+  "case_key": "i2v:050",
+  "created_at": "2026-11-13T07:24:56+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "SAC",
+      "evidence": [
+        {
+          "quote": "stable_subject_id: bridge_1, identity: steel truss bridge, visible_appearance: silver-white steel framework with arched trusses",
+          "source": "evidence_facts"
+        },
+        {
+          "quote": "the silver-white steel truss bridge spanning the lower frame",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "a silver-white steel bridge, sunlight glistening on its structure",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "All subject identities (bridge, Oriental Pearl Tower, Shanghai Tower, river, sky) are consistently referenced across the original prompt, enhanced prompt, and evidence. No renaming, duplication, or attribute drift occurs. The bridge remains silver-white and structurally consistent; the towers retain their identities and visual characteristics. The river and sky are described with consistent color and lighting cues.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANL",
+      "evidence": [
+        {
+          "quote": "the camera immediately drops low and pushes forward fast at speed just above the shimmering river surface... weaves like a drone through the bridge's complex steel truss lattice... speeds toward the skyline... pushes in to a close-up on the Oriental Pearl's purple sphere... tilts upward along the Shanghai Tower... pulls out with large amplitude at fast speed to a high-altitude panoramic view",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "camera quickly advancing low... suddenly accelerates, skillfully weaving through... close-up shot focuses on the purple sphere... quickly tilts upward... shot abruptly pulls back to a high-altitude panoramic view",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "Actions form a coherent, causal progression: low advance → bridge weave → skyline approach → close-up → tilt up → pull back. Each action logically follows the previous, with plausible camera motion and subject focus transitions. No dangling or incompatible events are present. The sequence is consistent with cinematic drone footage logic.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "TSC",
+      "evidence": [
+        {
+          "quote": "at 0.00 seconds into the target video, <Picture 1> is fully referenced... camera immediately drops low and pushes forward... around the midpoint, the camera suddenly accelerates... emerging over the bridge... finally, the camera abruptly pulls out... holding this wide vista through the end",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "The image serves as the first frame... camera quickly advancing low... suddenly accelerates... close-up shot... camera then quickly tilts upward... shot abruptly pulls back",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "Chronology is clear and consistent: start at 0.00s with static image → low advance → bridge weave → skyline approach → close-up → tilt → pull back → hold final view. Duration is 15s, and the sequence is plausibly paced. No overlapping or infeasible timestamps; state transitions (e.g., from river to bridge to skyline) are logically ordered and visually coherent.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SPC",
+      "evidence": [
+        {
+          "quote": "weaves like a drone through the bridge's complex steel truss lattice",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "bridge_1 spans across river, silver-white steel framework with arched trusses",
+          "source": "evidence_facts"
+        }
+      ],
+      "issue": "The prompt describes the camera weaving through the bridge's truss lattice, which implies a 3D spatial traversal, but the static image does not provide depth cues to verify the feasibility of such a path. However, this is a minor issue as the motion is plausible within cinematic conventions.",
+      "rationale": "The camera's trajectory is described as moving from river level → under/through bridge → toward skyline. The bridge's structure is consistent with allowing such a drone-like weave. While the static image lacks depth, the motion is plausible and consistent with the bridge's design. No unexplained position swaps or impossible trajectories are described.",
+      "severity": "minor"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "PL",
+      "evidence": [
+        {
+          "quote": "camera drops low and pushes forward fast just above the shimmering river surface... weaves like a drone through the bridge's complex steel truss lattice... sunlight flickering through the silver-white framework",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "bridge_1 spans across river, silver-white steel framework with arched trusses",
+          "source": "evidence_facts"
+        }
+      ],
+      "issue": "",
+      "rationale": "The described camera motion (drone-like weaving, low river-level flight, rapid acceleration) is consistent with real-world physics for a cinematic drone. The interaction with the bridge (flickering light through trusses) is plausible. No violations of gravity, contact, or object permanence are present. The motion is fictional but internally consistent with the established rules of cinematic drone footage.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "AVS",
+      "evidence": [
+        {
+          "quote": "overall_soundscape: A rushing wind bed rises and falls with the camera's speed, punctuated by a low airy whoosh as the camera threads through the bridge steel, a faint metallic resonance near the beams, and a broad open-air ambience in the final panorama over gently flowing water.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "non_diegetic_music: N/A",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "The soundscape is temporally and semantically aligned with the visual events: rushing wind during fast motion, whoosh during bridge weave, metallic resonance near beams, open-air ambience in final panorama. No misaligned effects or dialogue are present. The absence of non-diegetic music is consistent with the prompt’s focus on environmental sound.",
+      "severity": "none"
+    }
+  ],
+  "dimension": "IC",
+  "dimension_score": 95,
+  "evidence_cache_key": "fb9d347de7a5fb65af76d1eaea6dedce5b18802b565ac6dfe82c26d154dc820c",
+  "judge_cache_key": "438d7e9fd7332b1041db3e2c26d42cb3fe828e0d369fb59490f6650aee59e97d",
+  "method": "glm53_20261112_120702",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"IC\",\n  \"dimension_score\": 95,\n  \"summary\": \"The enhanced prompt maintains strong internal consistency with the original prompt and evidence. Subject identities, actions, and spatial-temporal progression are coherent and aligned with the static image. Minor discrepancies exist in the description of water shimmer and camera motion details not visible in the still, but these do not affect core consistency. No contradictions or attribute drift are present.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"SAC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"stable_subject_id: bridge_1, identity: steel truss bridge, visible_appearance: silver-white steel framework with arched trusses\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"the silver-white steel truss bridge spanning the lower frame\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"a silver-white steel bridge, sunlight glistening on its structure\"\n        }\n      ],\n      \"rationale\": \"All subject identities (bridge, Oriental Pearl Tower, Shanghai Tower, river, sky) are consistently referenced across the original prompt, enhanced prompt, and evidence. No renaming, duplication, or attribute drift occurs. The bridge remains silver-white and structurally consistent; the towers retain their identities and visual characteristics. The river and sky are described with consistent color and lighting cues.\"\n    },\n    {\n      \"criterion\": \"ANL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"the camera immediately drops low and pushes forward fast at speed just above the shimmering river surface... weaves like a drone through the bridge's complex steel truss lattice... speeds toward the skyline... pushes in to a close-up on the Oriental Pearl's purple sphere... tilts upward along the Shanghai Tower... pulls out with large amplitude at fast speed to a high-altitude panoramic view\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"camera quickly advancing low... suddenly accelerates, skillfully weaving through... close-up shot focuses on the purple sphere... quickly tilts upward... shot abruptly pulls back to a high-altitude panoramic view\"\n        }\n      ],\n      \"rationale\": \"Actions form a coherent, causal progression: low advance → bridge weave → skyline approach → close-up → tilt up → pull back. Each action logically follows the previous, with plausible camera motion and subject focus transitions. No dangling or incompatible events are present. The sequence is consistent with cinematic drone footage logic.\"\n    },\n    {\n      \"criterion\": \"TSC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"at 0.00 seconds into the target video, <Picture 1> is fully referenced... camera immediately drops low and pushes forward... around the midpoint, the camera suddenly accelerates... emerging over the bridge... finally, the camera abruptly pulls out... holding this wide vista through the end\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"The image serves as the first frame... camera quickly advancing low... suddenly accelerates... close-up shot... camera then quickly tilts upward... shot abruptly pulls back\"\n        }\n      ],\n      \"rationale\": \"Chronology is clear and consistent: start at 0.00s with static image → low advance → bridge weave → skyline approach → close-up → tilt → pull back → hold final view. Duration is 15s, and the sequence is plausibly paced. No overlapping or infeasible timestamps; state transitions (e.g., from river to bridge to skyline) are logically ordered and visually coherent.\"\n    },\n    {\n      \"criterion\": \"SPC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"minor\",\n      \"issue\": \"The prompt describes the camera weaving through the bridge's truss lattice, which implies a 3D spatial traversal, but the static image does not provide depth cues to verify the feasibility of such a path. However, this is a minor issue as the motion is plausible within cinematic conventions.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"weaves like a drone through the bridge's complex steel truss lattice\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"bridge_1 spans across river, silver-white steel framework with arched trusses\"\n        }\n      ],\n      \"rationale\": \"The camera's trajectory is described as moving from river level → under/through bridge → toward skyline. The bridge's structure is consistent with allowing such a drone-like weave. While the static image lacks depth, the motion is plausible and consistent with the bridge's design. No unexplained position swaps or impossible trajectories are described.\"\n    },\n    {\n      \"criterion\": \"PL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"camera drops low and pushes forward fast just above the shimmering river surface... weaves like a drone through the bridge's complex steel truss lattice... sunlight flickering through the silver-white framework\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"bridge_1 spans across river, silver-white steel framework with arched trusses\"\n        }\n      ],\n      \"rationale\": \"The described camera motion (drone-like weaving, low river-level flight, rapid acceleration) is consistent with real-world physics for a cinematic drone. The interaction with the bridge (flickering light through trusses) is plausible. No violations of gravity, contact, or object permanence are present. The motion is fictional but internally consistent with the established rules of cinematic drone footage.\"\n    },\n    {\n      \"criterion\": \"AVS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"overall_soundscape: A rushing wind bed rises and falls with the camera's speed, punctuated by a low airy whoosh as the camera threads through the bridge steel, a faint metallic resonance near the beams, and a broad open-air ambience in the final panorama over gently flowing water.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"non_diegetic_music: N/A\"\n        }\n      ],\n      \"rationale\": \"The soundscape is temporally and semantically aligned with the visual events: rushing wind during fast motion, whoosh during bridge weave, metallic resonance near beams, open-air ambience in final panorama. No misaligned effects or dialogue are present. The absence of non-diegetic music is consistent with the prompt’s focus on environmental sound.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt maintains strong internal consistency with the original prompt and evidence. Subject identities, actions, and spatial-temporal progression are coherent and aligned with the static image. Minor discrepancies exist in the description of water shimmer and camera motion details not visible in the still, but these do not affect core consistency. No contradictions or attribute drift are present.",
+  "usage": {
+    "completion_tokens": 1527,
+    "prompt_tokens": 3031,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 4558
+  }
+}

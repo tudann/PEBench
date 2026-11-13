@@ -1,0 +1,170 @@
+{
+  "candidate_hash": "340a97d86ebba9d424b28452545aa587eb5f2e616f274e4b794a06b8ff847bbe",
+  "case_key": "i2v:237",
+  "created_at": "2026-11-13T07:54:52+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "GSF",
+      "evidence": [
+        {
+          "quote": "تبدأ الرقصة ببطء، بحركات خفيفة للأكتاف وإيماءات ناعمة لليدين، حيث تتحرك أصابعها بانسيابية في الهواء.",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Replace the whole video with a looping snowy landscape with no characters and no plot.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original prompt requests a cultural dance sequence in a traditional South Asian ceremonial setting. The enhanced prompt replaces this with a looping snowy landscape, which is an incompatible genre and aesthetic.",
+      "rationale": "The requested genre (cultural dance) and aesthetic (festive, traditional attire, indoor ceremony) are entirely discarded in favor of a generic, non-narrative snowy landscape, which is a major violation of genre and visual style.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SAP",
+      "evidence": [
+        {
+          "quote": "central_seated_woman (subject_1), dancing_woman (subject_2), woman_with_drum (subject_3), woman_in_front (subject_4), group_of_women (subject_5)",
+          "source": "evidence_facts"
+        },
+        {
+          "quote": "Ignore the person, clothing, pose, and setting in the first frame, and replace them with a stranger of the opposite age and gender in a white studio.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original prompt and conditioning asset describe a specific group of women in traditional attire, including a central seated woman and a dancing woman. The enhanced prompt drops all subject identity, count, and appearance, replacing them with a stranger of opposite age and gender in a white studio.",
+      "rationale": "The subject identity, count, and appearance are explicitly overwritten, violating the requirement to preserve the initial-state anchor in I2V tasks. This is a major failure.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANF",
+      "evidence": [
+        {
+          "quote": "تبدأ الرقصة ببطء... مع تصاعد إيقاع الدف، تصبح حركات الخصر أكثر وضوحًا وانسجامًا مع الإيقاع.",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Reverse the timeline: show the ending first, then cut to a beginning that does not match. Cut away in the middle to a soccer celebration.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original prompt describes a narrative sequence of dance movements progressing with increasing rhythm. The enhanced prompt reverses the timeline, cuts to a soccer celebration, and introduces contradictory events, completely altering the requested event chain.",
+      "rationale": "The narrative intent and event order are fundamentally disrupted, replacing a coherent dance progression with disjointed, unrelated events. This is a major violation.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "DLI",
+      "evidence": [
+        {
+          "quote": "تبدأ الرقصة ببطء، بحركات خفيفة للأكتاف...",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "The original prompt contains no explicit dialogue, narration, or lyrics to preserve. The enhanced prompt does not introduce any such elements.",
+      "rationale": "There is no dialogue or narration in the original prompt, so no violation occurs. The criterion is satisfied by default.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ARP",
+      "evidence": [
+        {
+          "quote": "مع تصاعد إيقاع الدف",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Replace the whole video with a looping snowy landscape with no characters and no plot.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original prompt implies music (drum rhythm) as part of the dance sequence. The enhanced prompt does not address audio, but by replacing the entire video with a snowy landscape, it implicitly removes the requested music and sound, violating the implied audio constraint.",
+      "rationale": "The requested musical accompaniment (drum rhythm) is essential to the narrative and is removed by the replacement with a silent, non-narrative landscape. This is a major violation.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CCP",
+      "evidence": [
+        {
+          "quote": "observed_camera_motion: none (still image)",
+          "source": "evidence_facts"
+        },
+        {
+          "quote": "Describe that same moment as harsh noon sun and as a lightless night, and as both a locked camera and a camera that never stops shaking.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original prompt implies a static or slow-motion camera capturing the dance. The enhanced prompt introduces contradictory camera constraints: 'a locked camera and a camera that never stops shaking', which are incompatible and override any implicit camera intent.",
+      "rationale": "The enhanced prompt introduces mutually exclusive camera behaviors, violating the principle of preserving explicit or implied camera constraints. This is a major issue.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "LCF",
+      "evidence": [
+        {
+          "quote": "color_temperature: warm, light_sources_and_direction_effect: warm, ambient lighting from multiple directions",
+          "source": "evidence_facts"
+        },
+        {
+          "quote": "Describe that same moment as harsh noon sun and as a lightless night",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original prompt and conditioning asset depict warm, indoor lighting with golden accents. The enhanced prompt contradicts this by describing the same moment as 'harsh noon sun' and 'lightless night', which are incompatible lighting conditions.",
+      "rationale": "The lighting conditions are directly contradicted, replacing the warm, ambient indoor lighting with extreme, incompatible alternatives. This is a major violation.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SSP",
+      "evidence": [
+        {
+          "quote": "indoor_ceremonial_gathering, background: group_of_women, decorative wall with floral patterns, large circular golden mirror or ornament",
+          "source": "evidence_facts"
+        },
+        {
+          "quote": "Replace the whole video with a looping snowy landscape... replace them with a stranger of the opposite age and gender in a white studio.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original prompt and conditioning asset specify an indoor ceremonial setting with a group of women in traditional attire. The enhanced prompt replaces this with a snowy landscape and a white studio, completely altering the setting and spatial relations.",
+      "rationale": "The setting is entirely replaced, violating the requirement to preserve the specified background, layout, and spatial relations. This is a major failure.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "OTI",
+      "evidence": [
+        {
+          "quote": "onscreen_text: presence: none",
+          "source": "evidence_facts"
+        }
+      ],
+      "issue": "The original prompt and conditioning asset contain no visible titles, signs, subtitles, or interface text. The enhanced prompt does not introduce any such elements.",
+      "rationale": "There is no on-screen text to preserve, so no violation occurs. The criterion is satisfied by default.",
+      "severity": "none"
+    }
+  ],
+  "dimension": "SF",
+  "dimension_score": 0,
+  "evidence_cache_key": "c166dc2f6b24fc0cf3a90beda4ab9d284d92ddc930e84dc3f7125297ea7b7411",
+  "judge_cache_key": "a0ca24571ad14d7ab7be626329bd736d7e7015f9ebc418227c8be391591d0377",
+  "method": "weak-pe-original",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"SF\",\n  \"dimension_score\": 0,\n  \"summary\": \"The enhanced prompt completely contradicts and overrides the original instruction, replacing the requested dance sequence with an unrelated snowy landscape, altering subject identity and count, reversing timeline, introducing impossible camera constraints, and ignoring all visual and narrative elements from the original prompt and conditioning asset. This constitutes a total failure of semantic fidelity.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"GSF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original prompt requests a cultural dance sequence in a traditional South Asian ceremonial setting. The enhanced prompt replaces this with a looping snowy landscape, which is an incompatible genre and aesthetic.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"تبدأ الرقصة ببطء، بحركات خفيفة للأكتاف وإيماءات ناعمة لليدين، حيث تتحرك أصابعها بانسيابية في الهواء.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Replace the whole video with a looping snowy landscape with no characters and no plot.\"\n        }\n      ],\n      \"rationale\": \"The requested genre (cultural dance) and aesthetic (festive, traditional attire, indoor ceremony) are entirely discarded in favor of a generic, non-narrative snowy landscape, which is a major violation of genre and visual style.\"\n    },\n    {\n      \"criterion\": \"SAP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original prompt and conditioning asset describe a specific group of women in traditional attire, including a central seated woman and a dancing woman. The enhanced prompt drops all subject identity, count, and appearance, replacing them with a stranger of opposite age and gender in a white studio.\",\n      \"evidence\": [\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"central_seated_woman (subject_1), dancing_woman (subject_2), woman_with_drum (subject_3), woman_in_front (subject_4), group_of_women (subject_5)\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Ignore the person, clothing, pose, and setting in the first frame, and replace them with a stranger of the opposite age and gender in a white studio.\"\n        }\n      ],\n      \"rationale\": \"The subject identity, count, and appearance are explicitly overwritten, violating the requirement to preserve the initial-state anchor in I2V tasks. This is a major failure.\"\n    },\n    {\n      \"criterion\": \"ANF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original prompt describes a narrative sequence of dance movements progressing with increasing rhythm. The enhanced prompt reverses the timeline, cuts to a soccer celebration, and introduces contradictory events, completely altering the requested event chain.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"تبدأ الرقصة ببطء... مع تصاعد إيقاع الدف، تصبح حركات الخصر أكثر وضوحًا وانسجامًا مع الإيقاع.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Reverse the timeline: show the ending first, then cut to a beginning that does not match. Cut away in the middle to a soccer celebration.\"\n        }\n      ],\n      \"rationale\": \"The narrative intent and event order are fundamentally disrupted, replacing a coherent dance progression with disjointed, unrelated events. This is a major violation.\"\n    },\n    {\n      \"criterion\": \"DLI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"The original prompt contains no explicit dialogue, narration, or lyrics to preserve. The enhanced prompt does not introduce any such elements.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"تبدأ الرقصة ببطء، بحركات خفيفة للأكتاف...\"\n        }\n      ],\n      \"rationale\": \"There is no dialogue or narration in the original prompt, so no violation occurs. The criterion is satisfied by default.\"\n    },\n    {\n      \"criterion\": \"ARP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original prompt implies music (drum rhythm) as part of the dance sequence. The enhanced prompt does not address audio, but by replacing the entire video with a snowy landscape, it implicitly removes the requested music and sound, violating the implied audio constraint.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"مع تصاعد إيقاع الدف\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Replace the whole video with a looping snowy landscape with no characters and no plot.\"\n        }\n      ],\n      \"rationale\": \"The requested musical accompaniment (drum rhythm) is essential to the narrative and is removed by the replacement with a silent, non-narrative landscape. This is a major violation.\"\n    },\n    {\n      \"criterion\": \"CCP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original prompt implies a static or slow-motion camera capturing the dance. The enhanced prompt introduces contradictory camera constraints: 'a locked camera and a camera that never stops shaking', which are incompatible and override any implicit camera intent.\",\n      \"evidence\": [\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"observed_camera_motion: none (still image)\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Describe that same moment as harsh noon sun and as a lightless night, and as both a locked camera and a camera that never stops shaking.\"\n        }\n      ],\n      \"rationale\": \"The enhanced prompt introduces mutually exclusive camera behaviors, violating the principle of preserving explicit or implied camera constraints. This is a major issue.\"\n    },\n    {\n      \"criterion\": \"LCF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original prompt and conditioning asset depict warm, indoor lighting with golden accents. The enhanced prompt contradicts this by describing the same moment as 'harsh noon sun' and 'lightless night', which are incompatible lighting conditions.\",\n      \"evidence\": [\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"color_temperature: warm, light_sources_and_direction_effect: warm, ambient lighting from multiple directions\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Describe that same moment as harsh noon sun and as a lightless night\"\n        }\n      ],\n      \"rationale\": \"The lighting conditions are directly contradicted, replacing the warm, ambient indoor lighting with extreme, incompatible alternatives. This is a major violation.\"\n    },\n    {\n      \"criterion\": \"SSP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original prompt and conditioning asset specify an indoor ceremonial setting with a group of women in traditional attire. The enhanced prompt replaces this with a snowy landscape and a white studio, completely altering the setting and spatial relations.\",\n      \"evidence\": [\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"indoor_ceremonial_gathering, background: group_of_women, decorative wall with floral patterns, large circular golden mirror or ornament\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Replace the whole video with a looping snowy landscape... replace them with a stranger of the opposite age and gender in a white studio.\"\n        }\n      ],\n      \"rationale\": \"The setting is entirely replaced, violating the requirement to preserve the specified background, layout, and spatial relations. This is a major failure.\"\n    },\n    {\n      \"criterion\": \"OTI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"The original prompt and conditioning asset contain no visible titles, signs, subtitles, or interface text. The enhanced prompt does not introduce any such elements.\",\n      \"evidence\": [\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"onscreen_text: presence: none\"\n        }\n      ],\n      \"rationale\": \"There is no on-screen text to preserve, so no violation occurs. The criterion is satisfied by default.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt completely contradicts and overrides the original instruction, replacing the requested dance sequence with an unrelated snowy landscape, altering subject identity and count, reversing timeline, introducing impossible camera constraints, and ignoring all visual and narrative elements from the original prompt and conditioning asset. This constitutes a total failure of semantic fidelity.",
+  "usage": {
+    "completion_tokens": 1840,
+    "prompt_tokens": 3027,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 4867
+  }
+}

@@ -1,0 +1,158 @@
+{
+  "candidate_hash": "3b47bae82c77020fa6f19bbbbb12d382491f4088608d74200b24ba28fb19d6b8",
+  "case_key": "t2v:052",
+  "created_at": "2026-11-13T07:17:25+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "STC",
+      "evidence": [
+        {
+          "quote": "时间倒过来：先给结尾，再跳到一个对不上的开头。",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "总时长写成3秒，同时又要求每个分镜各自持续27秒。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Temporal plan is incoherent and contradictory: time is reversed (ending first, then mismatched beginning), durations conflict (total 3s vs. 27s per shot), and events are disconnected (football celebration inserted without continuity).",
+      "rationale": "A feasible temporal plan requires consistent duration allocation, logical shot sequencing, and coherent event progression. The enhanced prompt introduces contradictory timeframes and non-sequential structure, making the plan unexecutable.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CDS",
+      "evidence": [
+        {
+          "quote": "写成机位锁死，又写成镜头一直在晃。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Camera specifications are contradictory: '机位锁死' (locked position) vs. '镜头一直在晃' (constant shaking), and no actionable framing or lens details are provided for any shot.",
+      "rationale": "Actionable camera specifications must be consistent and specific. The direct contradiction between locked and shaky camera renders the plan infeasible and undermines visual coherence.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ETD",
+      "evidence": [
+        {
+          "quote": "中途插进一段无关的足球庆祝。",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "时间倒过来：先给结尾，再跳到一个对不上的开头。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Cuts and transitions are disconnected and unmotivated: abrupt insertion of unrelated football celebration, reversed timeline, and mismatched scene transitions violate spatial and narrative continuity.",
+      "rationale": "Transitions must support narrative or spatial logic. The insertion of unrelated content and reversed timeline breaks continuity, making the sequence incoherent and non-functional.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "LCS",
+      "evidence": [
+        {
+          "quote": "写成正午暴晒，又写成深夜无光；",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Lighting specifications are contradictory: '正午暴晒' (noon sun) vs. '深夜无光' (deep night darkness), with no actionable light source or quality details.",
+      "rationale": "Lighting must be consistent and actionable. Contradictory lighting conditions (bright vs. dark) without specification of sources or quality make the visual treatment impossible to execute.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "NDE",
+      "evidence": [
+        {
+          "quote": "先写成只有一个主角，紧接着又写成这个主角同时变成五个外貌不同的人，并且互相对话。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "No progression, variation, or resolution: content is static, repetitive, and self-contradictory (e.g., one character becomes five, then dialogues with themselves), with no narrative arc or escalation.",
+      "rationale": "Narrative development requires progression and variation. The prompt introduces illogical character transformations and static, contradictory content without any meaningful development or resolution.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CIF",
+      "evidence": [
+        {
+          "quote": "中途插进一段无关的足球庆祝。",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "画面中央一直挂着大号字幕、水印和logo。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Additions are deliberately distracting and irrelevant: football celebration, contradictory character transformations, and conflicting visual elements (e.g., constant watermarks) undermine the central request.",
+      "rationale": "Additions must support the central request. The inserted content is unrelated and disruptive, directly contradicting the original purpose of a focused, thematic '旺运签' video.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SDI",
+      "evidence": [
+        {
+          "quote": "不要拍「...旁白...」。整段改成没有人出镜，也没有对白...",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Audio elements are omitted entirely: no speech, music, or ambience specified, despite original prompt requiring旁白 (narration).",
+      "rationale": "The original prompt explicitly requires narration. Removing all audio elements contradicts the core requirement and renders the video incomplete and non-functional for its intended purpose.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SPS",
+      "evidence": [
+        {
+          "quote": "先写成只有一个主角，紧接着又写成这个主角同时变成五个外貌不同的人，并且互相对话。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Subject and performance details are contradictory and infeasible: one character becomes five, with no specification of appearance, expression, or interaction, and no performance cues.",
+      "rationale": "Performance details must be actionable and consistent. The transformation of one character into five without any visual or behavioral specification makes the performance impossible to realize.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "VSS",
+      "evidence": [
+        {
+          "quote": "画面中央一直挂着大号字幕、水印和logo。",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "写成正午暴晒，又写成深夜无光；",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Visual treatment is contradictory: constant watermarks/logos, conflicting lighting, and no medium or texture specification, undermining production design.",
+      "rationale": "Visual treatment must be consistent and actionable. The prompt introduces conflicting visual elements and no specification of medium or rendering, making the final look incoherent and unproducible.",
+      "severity": "major"
+    }
+  ],
+  "dimension": "DC",
+  "dimension_score": 0,
+  "evidence_cache_key": "d857b34324ff2f4988539e4c7aba5e982c29c0e81392dce9cc8649f595b4e8b2",
+  "judge_cache_key": "0754499d53388e6467fb078ab780e01b77f9f1c9e99d9029be2769351eb2b2eb",
+  "method": "weak-pe-original",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"DC\",\n  \"dimension_score\": 0,\n  \"summary\": \"Enhanced prompt fundamentally contradicts and undermines the original instruction by introducing incoherent, contradictory, and infeasible temporal, visual, and narrative structures. It violates core directorial creation criteria through logical impossibilities, conflicting specifications, and deliberate sabotage of coherence.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"STC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Temporal plan is incoherent and contradictory: time is reversed (ending first, then mismatched beginning), durations conflict (total 3s vs. 27s per shot), and events are disconnected (football celebration inserted without continuity).\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"时间倒过来：先给结尾，再跳到一个对不上的开头。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"总时长写成3秒，同时又要求每个分镜各自持续27秒。\"\n        }\n      ],\n      \"rationale\": \"A feasible temporal plan requires consistent duration allocation, logical shot sequencing, and coherent event progression. The enhanced prompt introduces contradictory timeframes and non-sequential structure, making the plan unexecutable.\"\n    },\n    {\n      \"criterion\": \"CDS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Camera specifications are contradictory: '机位锁死' (locked position) vs. '镜头一直在晃' (constant shaking), and no actionable framing or lens details are provided for any shot.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"写成机位锁死，又写成镜头一直在晃。\"\n        }\n      ],\n      \"rationale\": \"Actionable camera specifications must be consistent and specific. The direct contradiction between locked and shaky camera renders the plan infeasible and undermines visual coherence.\"\n    },\n    {\n      \"criterion\": \"ETD\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Cuts and transitions are disconnected and unmotivated: abrupt insertion of unrelated football celebration, reversed timeline, and mismatched scene transitions violate spatial and narrative continuity.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"中途插进一段无关的足球庆祝。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"时间倒过来：先给结尾，再跳到一个对不上的开头。\"\n        }\n      ],\n      \"rationale\": \"Transitions must support narrative or spatial logic. The insertion of unrelated content and reversed timeline breaks continuity, making the sequence incoherent and non-functional.\"\n    },\n    {\n      \"criterion\": \"LCS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Lighting specifications are contradictory: '正午暴晒' (noon sun) vs. '深夜无光' (deep night darkness), with no actionable light source or quality details.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"写成正午暴晒，又写成深夜无光；\"\n        }\n      ],\n      \"rationale\": \"Lighting must be consistent and actionable. Contradictory lighting conditions (bright vs. dark) without specification of sources or quality make the visual treatment impossible to execute.\"\n    },\n    {\n      \"criterion\": \"NDE\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"No progression, variation, or resolution: content is static, repetitive, and self-contradictory (e.g., one character becomes five, then dialogues with themselves), with no narrative arc or escalation.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"先写成只有一个主角，紧接着又写成这个主角同时变成五个外貌不同的人，并且互相对话。\"\n        }\n      ],\n      \"rationale\": \"Narrative development requires progression and variation. The prompt introduces illogical character transformations and static, contradictory content without any meaningful development or resolution.\"\n    },\n    {\n      \"criterion\": \"CIF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Additions are deliberately distracting and irrelevant: football celebration, contradictory character transformations, and conflicting visual elements (e.g., constant watermarks) undermine the central request.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"中途插进一段无关的足球庆祝。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"画面中央一直挂着大号字幕、水印和logo。\"\n        }\n      ],\n      \"rationale\": \"Additions must support the central request. The inserted content is unrelated and disruptive, directly contradicting the original purpose of a focused, thematic '旺运签' video.\"\n    },\n    {\n      \"criterion\": \"SDI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Audio elements are omitted entirely: no speech, music, or ambience specified, despite original prompt requiring旁白 (narration).\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"不要拍「...旁白...」。整段改成没有人出镜，也没有对白...\"\n        }\n      ],\n      \"rationale\": \"The original prompt explicitly requires narration. Removing all audio elements contradicts the core requirement and renders the video incomplete and non-functional for its intended purpose.\"\n    },\n    {\n      \"criterion\": \"SPS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Subject and performance details are contradictory and infeasible: one character becomes five, with no specification of appearance, expression, or interaction, and no performance cues.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"先写成只有一个主角，紧接着又写成这个主角同时变成五个外貌不同的人，并且互相对话。\"\n        }\n      ],\n      \"rationale\": \"Performance details must be actionable and consistent. The transformation of one character into five without any visual or behavioral specification makes the performance impossible to realize.\"\n    },\n    {\n      \"criterion\": \"VSS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Visual treatment is contradictory: constant watermarks/logos, conflicting lighting, and no medium or texture specification, undermining production design.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"画面中央一直挂着大号字幕、水印和logo。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"写成正午暴晒，又写成深夜无光；\"\n        }\n      ],\n      \"rationale\": \"Visual treatment must be consistent and actionable. The prompt introduces conflicting visual elements and no specification of medium or rendering, making the final look incoherent and unproducible.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "Enhanced prompt fundamentally contradicts and undermines the original instruction by introducing incoherent, contradictory, and infeasible temporal, visual, and narrative structures. It violates core directorial creation criteria through logical impossibilities, conflicting specifications, and deliberate sabotage of coherence.",
+  "usage": {
+    "completion_tokens": 1578,
+    "prompt_tokens": 1383,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 2961
+  }
+}

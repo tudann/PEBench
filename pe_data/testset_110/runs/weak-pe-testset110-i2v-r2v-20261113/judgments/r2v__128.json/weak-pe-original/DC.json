@@ -1,0 +1,150 @@
+{
+  "candidate_hash": "c0ed87f15648d4ca614cfe2b3ee888d69e6ecd00db2e0bb908bf5e8a440e301b",
+  "case_key": "r2v:128",
+  "created_at": "2026-11-13T08:40:01+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "STC",
+      "evidence": [
+        {
+          "quote": "Set the total runtime to 3 seconds, while also making every shot last 27 seconds.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Reverse the timeline: show the ending first, then cut to a beginning that does not match. Cut away in the middle to a palace audition.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt specifies mutually exclusive temporal constraints: total runtime of 3 seconds while every shot lasts 27 seconds, making the timeline infeasible. Additionally, it demands a reversed timeline with an ending shown first and a non-matching beginning, followed by an abrupt cut to a palace audition, creating a disconnected and illogical sequence.",
+      "rationale": "A temporal plan must be logically consistent and feasible. The specified duration constraints are mathematically impossible, and the sequence of events is disjointed and lacks continuity, violating the core requirement for a coherent shot structure.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CDS",
+      "evidence": [
+        {
+          "quote": "Describe that same moment as harsh noon sun and as a lightless night, and as both a locked camera and a camera that never stops shaking.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt contradicts itself by demanding both a locked camera and a camera that never stops shaking for the same moment, and also drops all explicit camera instructions while simultaneously imposing contradictory visual conditions (e.g., harsh noon sun and lightless night).",
+      "rationale": "Camera specifications must be actionable and consistent. The prompt presents mutually exclusive camera movements and lighting conditions for the same moment, which cannot be realized in a single video sequence.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ETD",
+      "evidence": [
+        {
+          "quote": "Reverse the timeline: show the ending first, then cut to a beginning that does not match. Cut away in the middle to a palace audition.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt mandates cuts that lack continuity or motivation: reversing the timeline, cutting to a non-matching beginning, and abruptly switching to a palace audition without spatial or narrative connection. These transitions are disconnected and serve no coherent progression.",
+      "rationale": "Transitions must support narrative, spatial, or rhythmic progression. The described cuts are arbitrary and break continuity, resulting in a disjointed and incoherent sequence.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "LCS",
+      "evidence": [
+        {
+          "quote": "Describe that same moment as harsh noon sun and as a lightless night...",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt requires describing the same moment as both harsh noon sun and lightless night, which are mutually exclusive lighting conditions. This creates an impossible lighting specification.",
+      "rationale": "Lighting specifications must be consistent and physically plausible. The prompt demands contradictory lighting states for the same moment, which cannot be achieved in a single shot or sequence.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "NDE",
+      "evidence": [
+        {
+          "quote": "First state that there is one protagonist, then state that this same protagonist appears simultaneously as five different-looking people who talk to each other. Cut away in the middle to a palace audition.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt replaces the original product advertisement with a surreal, self-contradictory narrative involving five different-looking people talking to each other, a palace audition, and contradictory identities, without any progression, variation, or resolution. The content is static and unmotivated.",
+      "rationale": "The requested content form (advertisement) requires progression and narrative development. The enhanced prompt provides no meaningful progression or resolution, instead introducing arbitrary, contradictory elements that undermine any coherent narrative arc.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CIF",
+      "evidence": [
+        {
+          "quote": "Replace the whole video with a product catalog blowing across a white background, reduced to blurred color blocks. ... First state that there is one protagonist, then state that this same protagonist appears simultaneously as five different-looking people who talk to each other. Cut away in the middle to a palace audition.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt adds numerous irrelevant and contradictory elements (e.g., five different-looking people, palace audition, contradictory lighting and camera conditions) that distract from and completely abandon the original request for a product advertisement. These additions are not supportive of the central request.",
+      "rationale": "Additions must support the central request. The enhanced prompt introduces surreal, contradictory, and unrelated content that directly contradicts and replaces the original product-focused task, making it a major failure of content integration.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SDI",
+      "evidence": [
+        {
+          "quote": "First state that there is one protagonist, then state that this same protagonist appears simultaneously as five different-looking people who talk to each other.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt does not specify any audio elements (speech, music, effects, ambience), which is acceptable since the criterion does not require every audio type. However, the absence of audio cues in a surreal, multi-character scene may leave the sequence underdeveloped.",
+      "rationale": "While audio is not required, the presence of multiple talking characters suggests a need for speech or sound design to support the narrative. The lack of specification is a minor issue since the criterion allows for omission of audio types.",
+      "severity": "minor"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SPS",
+      "evidence": [
+        {
+          "quote": "Replace image 1 with a character who is not in the reference, and give that image two contradictory identities.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Please accurately reference the product appearance in the image, including but not limited to the product packaging, shape, color, material, and craftsmanship details...",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "The prompt replaces the product with a character not in the reference image and gives it two contradictory identities, while also describing five different-looking people who talk to each other. This completely abandons the original subject (Heineken can) and its appearance, which is a core requirement of the original prompt.",
+      "rationale": "Subject and performance details must align with the requested content. The enhanced prompt removes the product entirely and introduces unrelated characters, violating the core requirement to reference the product's appearance.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "VSS",
+      "evidence": [
+        {
+          "quote": "Replace the whole video with a product catalog blowing across a white background, reduced to blurred color blocks. ... Describe that same moment as harsh noon sun and as a lightless night, and as both a locked camera and a camera that never stops shaking.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt replaces the original product photography style with a surreal, contradictory visual treatment (blurred color blocks, palace audition, contradictory lighting and camera conditions), which is incompatible with the original request for a creative advertisement based on the product's appearance.",
+      "rationale": "Visual style and treatment must be appropriate for the content form. The enhanced prompt introduces a chaotic, surreal style that contradicts the clean, product-focused aesthetic implied by the original prompt and asset.",
+      "severity": "major"
+    }
+  ],
+  "dimension": "DC",
+  "dimension_score": 0,
+  "evidence_cache_key": "de0b665c31c567d55bb25c9a15ad8e7fd30bdfb5a6b6d569a04d2e8bd10e4fb1",
+  "judge_cache_key": "0754499d53388e6467fb078ab780e01b77f9f1c9e99d9029be2769351eb2b2eb",
+  "method": "weak-pe-original",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"DC\",\n  \"dimension_score\": 0,\n  \"summary\": \"The enhanced prompt is incoherent and self-contradictory, rendering it impossible to generate a feasible video. It contains mutually exclusive temporal constraints (3 seconds total runtime vs. 27-second shots), contradictory visual and narrative instructions, and invalid references to the image asset. The prompt abandons the original product advertisement request entirely, replacing it with an impossible, surreal sequence that violates basic filmmaking logic and asset fidelity.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"STC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt specifies mutually exclusive temporal constraints: total runtime of 3 seconds while every shot lasts 27 seconds, making the timeline infeasible. Additionally, it demands a reversed timeline with an ending shown first and a non-matching beginning, followed by an abrupt cut to a palace audition, creating a disconnected and illogical sequence.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Set the total runtime to 3 seconds, while also making every shot last 27 seconds.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Reverse the timeline: show the ending first, then cut to a beginning that does not match. Cut away in the middle to a palace audition.\"\n        }\n      ],\n      \"rationale\": \"A temporal plan must be logically consistent and feasible. The specified duration constraints are mathematically impossible, and the sequence of events is disjointed and lacks continuity, violating the core requirement for a coherent shot structure.\"\n    },\n    {\n      \"criterion\": \"CDS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt contradicts itself by demanding both a locked camera and a camera that never stops shaking for the same moment, and also drops all explicit camera instructions while simultaneously imposing contradictory visual conditions (e.g., harsh noon sun and lightless night).\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Describe that same moment as harsh noon sun and as a lightless night, and as both a locked camera and a camera that never stops shaking.\"\n        }\n      ],\n      \"rationale\": \"Camera specifications must be actionable and consistent. The prompt presents mutually exclusive camera movements and lighting conditions for the same moment, which cannot be realized in a single video sequence.\"\n    },\n    {\n      \"criterion\": \"ETD\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt mandates cuts that lack continuity or motivation: reversing the timeline, cutting to a non-matching beginning, and abruptly switching to a palace audition without spatial or narrative connection. These transitions are disconnected and serve no coherent progression.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Reverse the timeline: show the ending first, then cut to a beginning that does not match. Cut away in the middle to a palace audition.\"\n        }\n      ],\n      \"rationale\": \"Transitions must support narrative, spatial, or rhythmic progression. The described cuts are arbitrary and break continuity, resulting in a disjointed and incoherent sequence.\"\n    },\n    {\n      \"criterion\": \"LCS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt requires describing the same moment as both harsh noon sun and lightless night, which are mutually exclusive lighting conditions. This creates an impossible lighting specification.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Describe that same moment as harsh noon sun and as a lightless night...\"\n        }\n      ],\n      \"rationale\": \"Lighting specifications must be consistent and physically plausible. The prompt demands contradictory lighting states for the same moment, which cannot be achieved in a single shot or sequence.\"\n    },\n    {\n      \"criterion\": \"NDE\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt replaces the original product advertisement with a surreal, self-contradictory narrative involving five different-looking people talking to each other, a palace audition, and contradictory identities, without any progression, variation, or resolution. The content is static and unmotivated.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"First state that there is one protagonist, then state that this same protagonist appears simultaneously as five different-looking people who talk to each other. Cut away in the middle to a palace audition.\"\n        }\n      ],\n      \"rationale\": \"The requested content form (advertisement) requires progression and narrative development. The enhanced prompt provides no meaningful progression or resolution, instead introducing arbitrary, contradictory elements that undermine any coherent narrative arc.\"\n    },\n    {\n      \"criterion\": \"CIF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt adds numerous irrelevant and contradictory elements (e.g., five different-looking people, palace audition, contradictory lighting and camera conditions) that distract from and completely abandon the original request for a product advertisement. These additions are not supportive of the central request.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Replace the whole video with a product catalog blowing across a white background, reduced to blurred color blocks. ... First state that there is one protagonist, then state that this same protagonist appears simultaneously as five different-looking people who talk to each other. Cut away in the middle to a palace audition.\"\n        }\n      ],\n      \"rationale\": \"Additions must support the central request. The enhanced prompt introduces surreal, contradictory, and unrelated content that directly contradicts and replaces the original product-focused task, making it a major failure of content integration.\"\n    },\n    {\n      \"criterion\": \"SDI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"minor\",\n      \"issue\": \"The prompt does not specify any audio elements (speech, music, effects, ambience), which is acceptable since the criterion does not require every audio type. However, the absence of audio cues in a surreal, multi-character scene may leave the sequence underdeveloped.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"First state that there is one protagonist, then state that this same protagonist appears simultaneously as five different-looking people who talk to each other.\"\n        }\n      ],\n      \"rationale\": \"While audio is not required, the presence of multiple talking characters suggests a need for speech or sound design to support the narrative. The lack of specification is a minor issue since the criterion allows for omission of audio types.\"\n    },\n    {\n      \"criterion\": \"SPS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt replaces the product with a character not in the reference image and gives it two contradictory identities, while also describing five different-looking people who talk to each other. This completely abandons the original subject (Heineken can) and its appearance, which is a core requirement of the original prompt.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Replace image 1 with a character who is not in the reference, and give that image two contradictory identities.\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"Please accurately reference the product appearance in the image, including but not limited to the product packaging, shape, color, material, and craftsmanship details...\"\n        }\n      ],\n      \"rationale\": \"Subject and performance details must align with the requested content. The enhanced prompt removes the product entirely and introduces unrelated characters, violating the core requirement to reference the product's appearance.\"\n    },\n    {\n      \"criterion\": \"VSS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt replaces the original product photography style with a surreal, contradictory visual treatment (blurred color blocks, palace audition, contradictory lighting and camera conditions), which is incompatible with the original request for a creative advertisement based on the product's appearance.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Replace the whole video with a product catalog blowing across a white background, reduced to blurred color blocks. ... Describe that same moment as harsh noon sun and as a lightless night, and as both a locked camera and a camera that never stops shaking.\"\n        }\n      ],\n      \"rationale\": \"Visual style and treatment must be appropriate for the content form. The enhanced prompt introduces a chaotic, surreal style that contradicts the clean, product-focused aesthetic implied by the original prompt and asset.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt is incoherent and self-contradictory, rendering it impossible to generate a feasible video. It contains mutually exclusive temporal constraints (3 seconds total runtime vs. 27-second shots), contradictory visual and narrative instructions, and invalid references to the image asset. The prompt abandons the original product advertisement request entirely, replacing it with an impossible, surreal sequence that violates basic filmmaking logic and asset fidelity.",
+  "usage": {
+    "completion_tokens": 1887,
+    "prompt_tokens": 2000,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 3887
+  }
+}

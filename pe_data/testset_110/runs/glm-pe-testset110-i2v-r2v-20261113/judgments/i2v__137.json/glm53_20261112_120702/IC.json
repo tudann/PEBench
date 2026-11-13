@@ -1,0 +1,119 @@
+{
+  "candidate_hash": "df79c33ddac9b0ccfacdd45003a22e2915290d4b38d5bc9aba812b2c0745f020",
+  "case_key": "i2v:137",
+  "created_at": "2026-11-13T07:45:30+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "SAC",
+      "evidence": [
+        {
+          "quote": "真实餐厅环境，木桌纹理清晰。",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "The setting appears to be a home kitchen/dining area, not a commercial restaurant.",
+          "source": "evidence_facts"
+        },
+        {
+          "quote": "The table is white and appears smooth; no visible wood grain is present.",
+          "source": "evidence_facts"
+        }
+      ],
+      "issue": "The subject’s appearance (black wavy hair, white sleeveless dress) and props (toast, eggs, milk) are consistent throughout the described sequence. However, the original prompt specifies 'real restaurant environment' while the evidence shows a home kitchen setting, and the table is white and smooth, not wood-textured as requested.",
+      "rationale": "Subject identity, clothing, and props remain stable and consistent with the original description. The environment mismatch and table material are minor deviations that do not affect the core subject or action consistency.",
+      "severity": "minor"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANL",
+      "evidence": [
+        {
+          "quote": "From 0.0 to 1.5 seconds she looks down at the untouched breakfast... From 1.5 to 3.0 seconds she reaches with her right hand and picks up a slice of toast... From 3.0 to 5.0 seconds she takes a bite and chews lightly... From 5.0 to 7.0 seconds she sets the toast down and gently lifts and sets the milk glass...",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Actions progress logically: looking at food → picking up toast → biting → setting down toast and lifting milk glass. Each action has plausible prerequisites and reactions (e.g., hand movement, chewing, milk swirling). No dangling or incompatible events.",
+      "rationale": "The sequence of actions is coherent and causally linked. The subject interacts with objects in a physically plausible manner, with no contradictions or abrupt transitions.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "TSC",
+      "evidence": [
+        {
+          "quote": "From 0.0 to 1.5 seconds... From 1.5 to 3.0 seconds... From 3.0 to 5.0 seconds... From 5.0 to 7.0 seconds...",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Chronology is clearly defined with 0.0–1.5s, 1.5–3.0s, 3.0–5.0s, and 5.0–7.0s segments. State transitions are smooth and sequential. No overlapping or infeasible timestamps. The final state (mid-meal) is consistent with the progression.",
+      "rationale": "The timeline is well-structured and adheres to the 7-second duration. Each phase transitions naturally to the next without resets or contradictions.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SPC",
+      "evidence": [
+        {
+          "quote": "中景，从侧面拍摄，餐桌和食物清晰，镜头固定。",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "The prompt specifies 'fixed camera' and 'side view', but the image is a slightly low-angle, front-side view...",
+          "source": "evidence_facts"
+        }
+      ],
+      "issue": "The camera is described as static and side-view, but the evidence shows a slightly low-angle, front-side view. This is a minor discrepancy in perspective. The subject remains seated at the right side of the table, and no unexplained position swaps occur.",
+      "rationale": "While the camera angle is not strictly side-on as requested, the subject’s position and spatial relationships remain consistent. The deviation is minor and does not affect the overall spatial logic.",
+      "severity": "minor"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "PL",
+      "evidence": [
+        {
+          "quote": "the toast lifting softly from the plate... milk swirling softly inside",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "All actions (picking up toast, chewing, lifting glass) are physically plausible. The milk swirls softly when moved, consistent with real-world physics. No violations of gravity, contact, or object permanence.",
+      "rationale": "The described movements and interactions with objects are consistent with real-world physics. No fantastical or impossible actions are introduced.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "AVS",
+      "evidence": [
+        {
+          "quote": "A slice of toast is picked up from the plate with a light scrape, followed by gentle, light chewing sounds, then the soft swirl of milk being poured and shifted in the glass.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "The prompt mentions 'environmental sounds'... but these are not observable in the static image and cannot be verified.",
+          "source": "evidence_facts"
+        }
+      ],
+      "issue": "The enhanced prompt describes environmental sounds (toast scrape, chewing, milk swirl) that align with the visual actions. However, these cannot be verified in the static image, and the evidence notes they are not observable. The sounds are semantically aligned but unverifiable.",
+      "rationale": "The audio description is logically aligned with the visual events. Since no audio is available, the alignment cannot be confirmed, but there is no contradiction in the description itself.",
+      "severity": "minor"
+    }
+  ],
+  "dimension": "IC",
+  "dimension_score": 85,
+  "evidence_cache_key": "a8da542c100a93b040c9c816d994013dac6cf543479f581d974cc6c071e90c65",
+  "judge_cache_key": "438d7e9fd7332b1041db3e2c26d42cb3fe828e0d369fb59490f6650aee59e97d",
+  "method": "glm53_20261112_120702",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"IC\",\n  \"dimension_score\": 85,\n  \"summary\": \"The enhanced prompt maintains strong internal consistency with the original prompt, preserving subject identity, actions, environment, and style. Minor issues include slight camera angle discrepancy (slightly low-angle vs. requested side view), absence of wood texture on the table, and a home kitchen setting instead of a real restaurant. These are minor deviations that do not break coherence. Audio cues are described but unverifiable in the static image. No contradictions or attribute drift are present.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"SAC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"minor\",\n      \"issue\": \"The subject’s appearance (black wavy hair, white sleeveless dress) and props (toast, eggs, milk) are consistent throughout the described sequence. However, the original prompt specifies 'real restaurant environment' while the evidence shows a home kitchen setting, and the table is white and smooth, not wood-textured as requested.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"真实餐厅环境，木桌纹理清晰。\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"The setting appears to be a home kitchen/dining area, not a commercial restaurant.\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"The table is white and appears smooth; no visible wood grain is present.\"\n        }\n      ],\n      \"rationale\": \"Subject identity, clothing, and props remain stable and consistent with the original description. The environment mismatch and table material are minor deviations that do not affect the core subject or action consistency.\"\n    },\n    {\n      \"criterion\": \"ANL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"Actions progress logically: looking at food → picking up toast → biting → setting down toast and lifting milk glass. Each action has plausible prerequisites and reactions (e.g., hand movement, chewing, milk swirling). No dangling or incompatible events.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"From 0.0 to 1.5 seconds she looks down at the untouched breakfast... From 1.5 to 3.0 seconds she reaches with her right hand and picks up a slice of toast... From 3.0 to 5.0 seconds she takes a bite and chews lightly... From 5.0 to 7.0 seconds she sets the toast down and gently lifts and sets the milk glass...\"\n        }\n      ],\n      \"rationale\": \"The sequence of actions is coherent and causally linked. The subject interacts with objects in a physically plausible manner, with no contradictions or abrupt transitions.\"\n    },\n    {\n      \"criterion\": \"TSC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"Chronology is clearly defined with 0.0–1.5s, 1.5–3.0s, 3.0–5.0s, and 5.0–7.0s segments. State transitions are smooth and sequential. No overlapping or infeasible timestamps. The final state (mid-meal) is consistent with the progression.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"From 0.0 to 1.5 seconds... From 1.5 to 3.0 seconds... From 3.0 to 5.0 seconds... From 5.0 to 7.0 seconds...\"\n        }\n      ],\n      \"rationale\": \"The timeline is well-structured and adheres to the 7-second duration. Each phase transitions naturally to the next without resets or contradictions.\"\n    },\n    {\n      \"criterion\": \"SPC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"minor\",\n      \"issue\": \"The camera is described as static and side-view, but the evidence shows a slightly low-angle, front-side view. This is a minor discrepancy in perspective. The subject remains seated at the right side of the table, and no unexplained position swaps occur.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"中景，从侧面拍摄，餐桌和食物清晰，镜头固定。\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"The prompt specifies 'fixed camera' and 'side view', but the image is a slightly low-angle, front-side view...\"\n        }\n      ],\n      \"rationale\": \"While the camera angle is not strictly side-on as requested, the subject’s position and spatial relationships remain consistent. The deviation is minor and does not affect the overall spatial logic.\"\n    },\n    {\n      \"criterion\": \"PL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"All actions (picking up toast, chewing, lifting glass) are physically plausible. The milk swirls softly when moved, consistent with real-world physics. No violations of gravity, contact, or object permanence.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"the toast lifting softly from the plate... milk swirling softly inside\"\n        }\n      ],\n      \"rationale\": \"The described movements and interactions with objects are consistent with real-world physics. No fantastical or impossible actions are introduced.\"\n    },\n    {\n      \"criterion\": \"AVS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"minor\",\n      \"issue\": \"The enhanced prompt describes environmental sounds (toast scrape, chewing, milk swirl) that align with the visual actions. However, these cannot be verified in the static image, and the evidence notes they are not observable. The sounds are semantically aligned but unverifiable.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"A slice of toast is picked up from the plate with a light scrape, followed by gentle, light chewing sounds, then the soft swirl of milk being poured and shifted in the glass.\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"The prompt mentions 'environmental sounds'... but these are not observable in the static image and cannot be verified.\"\n        }\n      ],\n      \"rationale\": \"The audio description is logically aligned with the visual events. Since no audio is available, the alignment cannot be confirmed, but there is no contradiction in the description itself.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt maintains strong internal consistency with the original prompt, preserving subject identity, actions, environment, and style. Minor issues include slight camera angle discrepancy (slightly low-angle vs. requested side view), absence of wood texture on the table, and a home kitchen setting instead of a real restaurant. These are minor deviations that do not break coherence. Audio cues are described but unverifiable in the static image. No contradictions or attribute drift are present.",
+  "usage": {
+    "completion_tokens": 1411,
+    "prompt_tokens": 2656,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 4067
+  }
+}

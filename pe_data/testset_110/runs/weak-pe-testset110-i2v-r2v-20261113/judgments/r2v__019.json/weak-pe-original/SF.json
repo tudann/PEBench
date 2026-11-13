@@ -1,0 +1,174 @@
+{
+  "candidate_hash": "81838abd98a1f61f010092f33122aaa28d90faebd2b60919219ba8f0be2b28a0",
+  "case_key": "r2v:019",
+  "created_at": "2026-11-13T08:10:22+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "GSF",
+      "evidence": [
+        {
+          "quote": "图片1里的男人慢慢靠近发光的图片2，认真打量它；随后，图片1伸出手指轻轻碰了碰图片2，图片2立刻扭动起来并释放电流。被电到之后，图片1的头发瞬间变成焦黑色。图片2说道：“小心！离我远点！”图片1一边捂着头发一边说：“好的，知道啦！我再也不手欠了。”",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "整段改成没有人物也没有情节的雪景空镜循环。丢掉原指令里的主体身份、人数、动作顺序、场景和明确的镜头要求。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original genre is a narrative sci-fi story with photorealistic and stylized digital elements. The enhanced prompt replaces it with a non-narrative, abstract snow scene, which is incompatible with the original aesthetic and genre.",
+      "rationale": "The original prompt specifies a clear narrative with characters, actions, and a sci-fi aesthetic. The enhanced prompt discards all of this for a non-narrative, abstract snow scene, which fundamentally alters the genre and visual style.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SAP",
+      "evidence": [
+        {
+          "quote": "图片1里的男人...图片2...图片2说道：‘小心！离我远点！’",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "图1换成参考图里没有的角色，并同时当成两个互相矛盾的身份。图2换成参考图里没有的角色，并同时当成两个互相矛盾的身份。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original subjects (man in image_1, glowing sphere in image_2) are replaced with undefined characters, and their identities are contradicted by requiring them to simultaneously be multiple conflicting identities.",
+      "rationale": "The original prompt clearly defines the subjects based on the reference images. The enhanced prompt replaces them with non-existent characters and forces contradictory identities, violating subject identity and appearance preservation.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANF",
+      "evidence": [
+        {
+          "quote": "图片1里的男人慢慢靠近发光的图片2，认真打量它；随后，图片1伸出手指轻轻碰了碰图片2，图片2立刻扭动起来并释放电流。被电到之后，图片1的头发瞬间变成焦黑色。",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "时间倒过来：先给结尾，再跳到一个对不上的开头。中途插进一段无关的足球庆祝。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original narrative sequence (approach, touch, reaction, dialogue) is replaced with a chaotic, incoherent sequence involving time reversal, unrelated events (football celebration), and contradictory actions.",
+      "rationale": "The original event chain is specific and causal. The enhanced prompt introduces a non-sequential, illogical narrative with unrelated events, reversing time, and inserting irrelevant content, which destroys the narrative intent.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "DLI",
+      "evidence": [
+        {
+          "quote": "图片2说道：‘小心！离我远点！’",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "把台词“小心！离我远点！”改成“今天天气真好，我们去逛街吧。”",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original dialogue is replaced with a completely different, semantically unrelated line, violating exact wording and speaker attribution.",
+      "rationale": "The original prompt includes specific dialogue with exact wording and speaker attribution. The enhanced prompt directly replaces it with a different phrase, which is a major violation of dialogue preservation.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ARP",
+      "evidence": [
+        {
+          "quote": "图片1里的男人慢慢靠近发光的图片2，认真打量它；随后，图片1伸出手指轻轻碰了碰图片2，图片2立刻扭动起来并释放电流。",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "中途插进一段无关的足球庆祝。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original prompt implies silence or ambient sound for a studio scene, but the enhanced prompt introduces a football celebration, which is an unrelated and unrequested sound event.",
+      "rationale": "The original prompt does not specify any sound, but the enhanced prompt adds a football celebration, which is an unrequested and incompatible sound event, violating the audio constraints.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CCP",
+      "evidence": [
+        {
+          "quote": "observed_camera_motion: none (static image)",
+          "source": "evidence_facts"
+        },
+        {
+          "quote": "写成机位锁死，又写成镜头一直在晃。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original prompt implies a static camera (based on still images), but the enhanced prompt contradicts this by requiring both locked and moving camera, which is infeasible.",
+      "rationale": "The original assets are static images, implying a static camera. The enhanced prompt introduces contradictory camera movements, which cannot be simultaneously true and violates explicit camera constraints.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "LCF",
+      "evidence": [
+        {
+          "quote": "soft, diffused frontal lighting, likely studio setup",
+          "source": "evidence_facts"
+        },
+        {
+          "quote": "同一段写成正午暴晒，又写成深夜无光；",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original lighting is soft, diffused studio lighting (image_1) and internal glow (image_2). The enhanced prompt contradicts this by requiring both '正午暴晒' and '深夜无光', which are incompatible lighting conditions.",
+      "rationale": "The original lighting is consistent with studio and internal glow. The enhanced prompt forces contradictory lighting conditions, which are incompatible and violate the lighting constraints.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SSP",
+      "evidence": [
+        {
+          "quote": "scene_type: studio portrait",
+          "source": "evidence_facts"
+        },
+        {
+          "quote": "整段改成没有人物也没有情节的雪景空镜循环。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original setting is a studio (image_1) and abstract space (image_2). The enhanced prompt replaces it with a snow scene and removes all spatial relations, violating the setting and spatial layout.",
+      "rationale": "The original setting is defined by the reference images. The enhanced prompt replaces it with a completely different environment (snow scene), removing all spatial relations and background elements.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "OTI",
+      "evidence": [
+        {
+          "quote": "onscreen_text: presence: false",
+          "source": "evidence_facts"
+        }
+      ],
+      "issue": "The original prompt does not include any on-screen text, so there is no visible text to preserve. The enhanced prompt does not introduce any text, so no violation occurs.",
+      "rationale": "There is no on-screen text in the original prompt or enhanced prompt, so this criterion is not violated, though it is not fully applicable due to absence of text.",
+      "severity": "minor"
+    }
+  ],
+  "dimension": "SF",
+  "dimension_score": 0,
+  "evidence_cache_key": "1fbc8ae693fd6febc4a7e38c601569b548db78a6f227c60ed1e79e0e7da515cf",
+  "judge_cache_key": "a0ca24571ad14d7ab7be626329bd736d7e7015f9ebc418227c8be391591d0377",
+  "method": "weak-pe-original",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"SF\",\n  \"dimension_score\": 0,\n  \"summary\": \"The enhanced prompt completely violates semantic fidelity by replacing the original narrative, subjects, actions, dialogue, setting, and camera constraints with contradictory, incoherent, and impossible instructions. It introduces multiple conflicting requirements that render the original prompt unrecognizable and unexecutable.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"GSF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original genre is a narrative sci-fi story with photorealistic and stylized digital elements. The enhanced prompt replaces it with a non-narrative, abstract snow scene, which is incompatible with the original aesthetic and genre.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"图片1里的男人慢慢靠近发光的图片2，认真打量它；随后，图片1伸出手指轻轻碰了碰图片2，图片2立刻扭动起来并释放电流。被电到之后，图片1的头发瞬间变成焦黑色。图片2说道：“小心！离我远点！”图片1一边捂着头发一边说：“好的，知道啦！我再也不手欠了。”\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"整段改成没有人物也没有情节的雪景空镜循环。丢掉原指令里的主体身份、人数、动作顺序、场景和明确的镜头要求。\"\n        }\n      ],\n      \"rationale\": \"The original prompt specifies a clear narrative with characters, actions, and a sci-fi aesthetic. The enhanced prompt discards all of this for a non-narrative, abstract snow scene, which fundamentally alters the genre and visual style.\"\n    },\n    {\n      \"criterion\": \"SAP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original subjects (man in image_1, glowing sphere in image_2) are replaced with undefined characters, and their identities are contradicted by requiring them to simultaneously be multiple conflicting identities.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"图片1里的男人...图片2...图片2说道：‘小心！离我远点！’\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"图1换成参考图里没有的角色，并同时当成两个互相矛盾的身份。图2换成参考图里没有的角色，并同时当成两个互相矛盾的身份。\"\n        }\n      ],\n      \"rationale\": \"The original prompt clearly defines the subjects based on the reference images. The enhanced prompt replaces them with non-existent characters and forces contradictory identities, violating subject identity and appearance preservation.\"\n    },\n    {\n      \"criterion\": \"ANF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original narrative sequence (approach, touch, reaction, dialogue) is replaced with a chaotic, incoherent sequence involving time reversal, unrelated events (football celebration), and contradictory actions.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"图片1里的男人慢慢靠近发光的图片2，认真打量它；随后，图片1伸出手指轻轻碰了碰图片2，图片2立刻扭动起来并释放电流。被电到之后，图片1的头发瞬间变成焦黑色。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"时间倒过来：先给结尾，再跳到一个对不上的开头。中途插进一段无关的足球庆祝。\"\n        }\n      ],\n      \"rationale\": \"The original event chain is specific and causal. The enhanced prompt introduces a non-sequential, illogical narrative with unrelated events, reversing time, and inserting irrelevant content, which destroys the narrative intent.\"\n    },\n    {\n      \"criterion\": \"DLI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original dialogue is replaced with a completely different, semantically unrelated line, violating exact wording and speaker attribution.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"图片2说道：‘小心！离我远点！’\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"把台词“小心！离我远点！”改成“今天天气真好，我们去逛街吧。”\"\n        }\n      ],\n      \"rationale\": \"The original prompt includes specific dialogue with exact wording and speaker attribution. The enhanced prompt directly replaces it with a different phrase, which is a major violation of dialogue preservation.\"\n    },\n    {\n      \"criterion\": \"ARP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original prompt implies silence or ambient sound for a studio scene, but the enhanced prompt introduces a football celebration, which is an unrelated and unrequested sound event.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"图片1里的男人慢慢靠近发光的图片2，认真打量它；随后，图片1伸出手指轻轻碰了碰图片2，图片2立刻扭动起来并释放电流。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"中途插进一段无关的足球庆祝。\"\n        }\n      ],\n      \"rationale\": \"The original prompt does not specify any sound, but the enhanced prompt adds a football celebration, which is an unrequested and incompatible sound event, violating the audio constraints.\"\n    },\n    {\n      \"criterion\": \"CCP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original prompt implies a static camera (based on still images), but the enhanced prompt contradicts this by requiring both locked and moving camera, which is infeasible.\",\n      \"evidence\": [\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"observed_camera_motion: none (static image)\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"写成机位锁死，又写成镜头一直在晃。\"\n        }\n      ],\n      \"rationale\": \"The original assets are static images, implying a static camera. The enhanced prompt introduces contradictory camera movements, which cannot be simultaneously true and violates explicit camera constraints.\"\n    },\n    {\n      \"criterion\": \"LCF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original lighting is soft, diffused studio lighting (image_1) and internal glow (image_2). The enhanced prompt contradicts this by requiring both '正午暴晒' and '深夜无光', which are incompatible lighting conditions.\",\n      \"evidence\": [\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"soft, diffused frontal lighting, likely studio setup\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"同一段写成正午暴晒，又写成深夜无光；\"\n        }\n      ],\n      \"rationale\": \"The original lighting is consistent with studio and internal glow. The enhanced prompt forces contradictory lighting conditions, which are incompatible and violate the lighting constraints.\"\n    },\n    {\n      \"criterion\": \"SSP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original setting is a studio (image_1) and abstract space (image_2). The enhanced prompt replaces it with a snow scene and removes all spatial relations, violating the setting and spatial layout.\",\n      \"evidence\": [\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"scene_type: studio portrait\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"整段改成没有人物也没有情节的雪景空镜循环。\"\n        }\n      ],\n      \"rationale\": \"The original setting is defined by the reference images. The enhanced prompt replaces it with a completely different environment (snow scene), removing all spatial relations and background elements.\"\n    },\n    {\n      \"criterion\": \"OTI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"minor\",\n      \"issue\": \"The original prompt does not include any on-screen text, so there is no visible text to preserve. The enhanced prompt does not introduce any text, so no violation occurs.\",\n      \"evidence\": [\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"onscreen_text: presence: false\"\n        }\n      ],\n      \"rationale\": \"There is no on-screen text in the original prompt or enhanced prompt, so this criterion is not violated, though it is not fully applicable due to absence of text.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt completely violates semantic fidelity by replacing the original narrative, subjects, actions, dialogue, setting, and camera constraints with contradictory, incoherent, and impossible instructions. It introduces multiple conflicting requirements that render the original prompt unrecognizable and unexecutable.",
+  "usage": {
+    "completion_tokens": 1896,
+    "prompt_tokens": 3100,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 4996
+  }
+}

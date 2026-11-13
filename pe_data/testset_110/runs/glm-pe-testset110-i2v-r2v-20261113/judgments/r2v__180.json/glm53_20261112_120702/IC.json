@@ -1,0 +1,111 @@
+{
+  "candidate_hash": "4e7322ce920e4ba444458b42376e854784018794e696a3d604ba831824810336",
+  "case_key": "r2v:180",
+  "created_at": "2026-11-13T09:01:13+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "SAC",
+      "evidence": [
+        {
+          "quote": "<Subject 1> is the young woman from <Picture 1>, with long matcha-green hair with bangs, pale skin, freckle-like dots under her eyes, a cream/ivory ruffled lace dress with puffy sleeves, and a translucent green flower hair accessory with small beads on the right side of her head.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "The person in the image has light green hair... white ruffled top... flower accessory in her hair.",
+          "source": "evidence_facts"
+        }
+      ],
+      "issue": "Subject 1’s identity, appearance, clothing, and accessories are consistently preserved from the image (image_1) across the entire video description. No unexplained renaming, duplication, or attribute drift occurs.",
+      "rationale": "The subject’s attributes are explicitly defined and preserved throughout the prompt, matching the image’s facts. No changes or inconsistencies are introduced.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANL",
+      "evidence": [
+        {
+          "quote": "From 0.0 to 2.5s she sings the opening phrase with one arm raised... From 2.5 to 4.5s she transitions into a small rhythmic step sequence... From 4.5 to 6.0s she hits a finishing flourish — both arms raised, a bright smile on the final note.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Actions form a coherent progression: singing and dancing with choreography energy from <Video 1>, with clear transitions (0.0–2.5s: arm raise, 2.5–4.5s: step sequence, 4.5–6.0s: flourish). All actions are bound to the audio track and lip-sync requirement, with no dangling or incompatible events.",
+      "rationale": "The action sequence is logically ordered, temporally segmented, and causally linked to the audio track. Each phase builds on the previous, culminating in a coherent performance.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "TSC",
+      "evidence": [
+        {
+          "quote": "From 0.0 to 2.5s... From 2.5 to 4.5s... From 4.5 to 6.0s",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Chronology is strictly maintained with clear timestamps (0.0–2.5s, 2.5–4.5s, 4.5–6.0s). State transitions are plausible: from arm raise to step sequence to flourish. No overlapping or infeasible timestamps or unexplained resets occur.",
+      "rationale": "The timeline is segmented with precise, non-overlapping intervals. Each phase transitions smoothly to the next, preserving temporal coherence.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SPC",
+      "evidence": [
+        {
+          "quote": "She is framed from the waist up, centered on a red-toned stage floor with a purple-blue gradient backdrop... the camera begins a very small, slow push-in toward her face, keeping her lips clearly visible.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Location is consistently described as a bright stage with red-toned floor and purple-blue gradient backdrop. Camera motion is a slow push-in, maintaining subject centering. No unexplained position swaps or movement path inconsistencies are present.",
+      "rationale": "The spatial setup is stable and logically consistent. The camera motion is described as gradual and continuous, preserving screen direction and subject orientation.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "PL",
+      "evidence": [
+        {
+          "quote": "swaying her body to the upbeat rhythm, her choreography energy drawn from <Video 1>'s dance style... body swaying side to side, hands gesturing in time with the beat, head bobbing slightly",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Physics are consistent with real-world performance: dancing movements, body sway, arm raises, and head bobbing are all plausible. No violations of gravity, contact, or object permanence are described.",
+      "rationale": "All described movements are physically feasible and consistent with human dance performance. No fantastical or impossible actions are introduced.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "AVS",
+      "evidence": [
+        {
+          "quote": "background: blue wall",
+          "source": "evidence_facts"
+        },
+        {
+          "quote": "a purple-blue gradient backdrop evoking the stage look of <Video 1>",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The audio-visual alignment is mostly accurate, but there is a minor discrepancy in the description of the stage backdrop: the reference video has a blue background, while the target video describes a purple-blue gradient. This may affect visual consistency with the audio’s original context, though it does not break lip-sync or timing.",
+      "rationale": "While the prompt attempts to preserve the aesthetic mood of the reference video, the specific color description (blue vs. purple-blue) introduces a minor visual drift. However, since the audio is reused and lip-sync is frame-accurate, this does not affect core AV alignment. The issue is aesthetic, not functional.",
+      "severity": "minor"
+    }
+  ],
+  "dimension": "IC",
+  "dimension_score": 95,
+  "evidence_cache_key": "6b40a9c653fbc706912042933a371eb8003d9dbe0042c863eb378eb445f6f79e",
+  "judge_cache_key": "438d7e9fd7332b1041db3e2c26d42cb3fe828e0d369fb59490f6650aee59e97d",
+  "method": "glm53_20261112_120702",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"IC\",\n  \"dimension_score\": 95,\n  \"summary\": \"The enhanced prompt maintains strong internal consistency across subject identity, actions, chronology, and audio-visual alignment. Subject 1 is consistently defined with stable attributes from the image, and her actions are coherent with the choreography and lip-sync requirements. The only minor issue is a slight mismatch in the description of the stage lighting and backdrop colors between the reference video (red floor, blue background) and the target video’s description (red-toned stage floor, purple-blue gradient backdrop), which may imply a minor aesthetic drift. No contradictions or omissions affect core requirements.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"SAC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"Subject 1’s identity, appearance, clothing, and accessories are consistently preserved from the image (image_1) across the entire video description. No unexplained renaming, duplication, or attribute drift occurs.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"<Subject 1> is the young woman from <Picture 1>, with long matcha-green hair with bangs, pale skin, freckle-like dots under her eyes, a cream/ivory ruffled lace dress with puffy sleeves, and a translucent green flower hair accessory with small beads on the right side of her head.\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"The person in the image has light green hair... white ruffled top... flower accessory in her hair.\"\n        }\n      ],\n      \"rationale\": \"The subject’s attributes are explicitly defined and preserved throughout the prompt, matching the image’s facts. No changes or inconsistencies are introduced.\"\n    },\n    {\n      \"criterion\": \"ANL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"Actions form a coherent progression: singing and dancing with choreography energy from <Video 1>, with clear transitions (0.0–2.5s: arm raise, 2.5–4.5s: step sequence, 4.5–6.0s: flourish). All actions are bound to the audio track and lip-sync requirement, with no dangling or incompatible events.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"From 0.0 to 2.5s she sings the opening phrase with one arm raised... From 2.5 to 4.5s she transitions into a small rhythmic step sequence... From 4.5 to 6.0s she hits a finishing flourish — both arms raised, a bright smile on the final note.\"\n        }\n      ],\n      \"rationale\": \"The action sequence is logically ordered, temporally segmented, and causally linked to the audio track. Each phase builds on the previous, culminating in a coherent performance.\"\n    },\n    {\n      \"criterion\": \"TSC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"Chronology is strictly maintained with clear timestamps (0.0–2.5s, 2.5–4.5s, 4.5–6.0s). State transitions are plausible: from arm raise to step sequence to flourish. No overlapping or infeasible timestamps or unexplained resets occur.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"From 0.0 to 2.5s... From 2.5 to 4.5s... From 4.5 to 6.0s\"\n        }\n      ],\n      \"rationale\": \"The timeline is segmented with precise, non-overlapping intervals. Each phase transitions smoothly to the next, preserving temporal coherence.\"\n    },\n    {\n      \"criterion\": \"SPC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"Location is consistently described as a bright stage with red-toned floor and purple-blue gradient backdrop. Camera motion is a slow push-in, maintaining subject centering. No unexplained position swaps or movement path inconsistencies are present.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"She is framed from the waist up, centered on a red-toned stage floor with a purple-blue gradient backdrop... the camera begins a very small, slow push-in toward her face, keeping her lips clearly visible.\"\n        }\n      ],\n      \"rationale\": \"The spatial setup is stable and logically consistent. The camera motion is described as gradual and continuous, preserving screen direction and subject orientation.\"\n    },\n    {\n      \"criterion\": \"PL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"Physics are consistent with real-world performance: dancing movements, body sway, arm raises, and head bobbing are all plausible. No violations of gravity, contact, or object permanence are described.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"swaying her body to the upbeat rhythm, her choreography energy drawn from <Video 1>'s dance style... body swaying side to side, hands gesturing in time with the beat, head bobbing slightly\"\n        }\n      ],\n      \"rationale\": \"All described movements are physically feasible and consistent with human dance performance. No fantastical or impossible actions are introduced.\"\n    },\n    {\n      \"criterion\": \"AVS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"minor\",\n      \"issue\": \"The audio-visual alignment is mostly accurate, but there is a minor discrepancy in the description of the stage backdrop: the reference video has a blue background, while the target video describes a purple-blue gradient. This may affect visual consistency with the audio’s original context, though it does not break lip-sync or timing.\",\n      \"evidence\": [\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"background: blue wall\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"a purple-blue gradient backdrop evoking the stage look of <Video 1>\"\n        }\n      ],\n      \"rationale\": \"While the prompt attempts to preserve the aesthetic mood of the reference video, the specific color description (blue vs. purple-blue) introduces a minor visual drift. However, since the audio is reused and lip-sync is frame-accurate, this does not affect core AV alignment. The issue is aesthetic, not functional.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt maintains strong internal consistency across subject identity, actions, chronology, and audio-visual alignment. Subject 1 is consistently defined with stable attributes from the image, and her actions are coherent with the choreography and lip-sync requirements. The only minor issue is a slight mismatch in the description of the stage lighting and backdrop colors between the reference video (red floor, blue background) and the target video’s description (red-toned stage floor, purple-blue gradient backdrop), which may imply a minor aesthetic drift. No contradictions or omissions affect core requirements.",
+  "usage": {
+    "completion_tokens": 1415,
+    "prompt_tokens": 3593,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 5008
+  }
+}

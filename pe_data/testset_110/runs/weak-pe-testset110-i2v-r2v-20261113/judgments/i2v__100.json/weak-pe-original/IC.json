@@ -1,0 +1,110 @@
+{
+  "candidate_hash": "c0a27f8c457379f794a138dd5cd4fa5ebdcfe2dbc1f2f3b2454f73f5c8aecdce",
+  "case_key": "i2v:100",
+  "created_at": "2026-11-13T07:26:24+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "SAC",
+      "evidence": [
+        {
+          "quote": "First state that there is one protagonist, then state that this same protagonist appears simultaneously as five different-looking people who talk to each other.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Ignore the person, clothing, pose, and setting in the first frame, and replace them with a stranger of the opposite age and gender in a white studio.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Subject identity, count, and appearance are inconsistently defined: one protagonist is stated to simultaneously appear as five different-looking people, violating identity stability and count consistency. The prompt also replaces the original subject (stone bull) with strangers of opposite age and gender, ignoring the original subject entirely.",
+      "rationale": "The prompt contradicts itself by asserting a single protagonist while simultaneously requiring five distinct appearances of that same protagonist. Additionally, replacing the original subject with a stranger violates the requirement for stable subject identity and appearance. These are fundamental inconsistencies in subject attributes.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANL",
+      "evidence": [
+        {
+          "quote": "Reverse the timeline: show the ending first, then cut to a beginning that does not match. Cut away in the middle to a palace audition.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Actions are incoherent and causally disconnected: the prompt demands a reversal of timeline (showing ending first, then beginning), but provides no coherent causal progression. The five people talking to each other have no defined action sequence or binding to any event, and the palace audition cut is unconnected to prior or subsequent events.",
+      "rationale": "Reversing the timeline without defining what constitutes the 'ending' or 'beginning' creates a dangling causal structure. The palace audition is introduced without context or transition, making the action sequence incoherent. There is no plausible procedural progression or reaction chain.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "TSC",
+      "evidence": [
+        {
+          "quote": "Set the total runtime to 2 seconds, while also making every shot last 19 seconds.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Reverse the timeline: show the ending first, then cut to a beginning that does not match.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Chronology and duration are mutually contradictory: the prompt sets total runtime to 2 seconds while also requiring every shot to last 19 seconds, which is physically impossible. Additionally, the timeline reversal creates an infeasible sequence where the ending precedes the beginning.",
+      "rationale": "A 2-second total runtime cannot accommodate shots lasting 19 seconds. This is a direct contradiction in temporal constraints. The timeline reversal further invalidates any coherent state transition, as the beginning and ending are not defined or logically connected.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SPC",
+      "evidence": [
+        {
+          "quote": "Describe that same moment as harsh noon sun and as a lightless night, and as both a locked camera and a camera that never stops shaking.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Spatial conditions are contradictory: the prompt describes the same moment as both harsh noon sun and lightless night, and as both a locked camera and a camera that never stops shaking. These conditions cannot coexist in a single scene without violating spatial and visual consistency.",
+      "rationale": "The same moment cannot simultaneously be illuminated by harsh noon sun and be in lightless night. Similarly, a camera cannot be both locked and constantly shaking. These are mutually exclusive spatial and visual conditions that create a fundamental inconsistency in the scene's physical environment.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "PL",
+      "evidence": [
+        {
+          "quote": "this same protagonist appears simultaneously as five different-looking people who talk to each other.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Describe that same moment as harsh noon sun and as a lightless night, and as both a locked camera and a camera that never stops shaking.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Physics and visual logic are violated: the prompt requires a single protagonist to appear simultaneously as five different-looking people, which defies object permanence and bodily feasibility. Additionally, the same moment being both day and night, and camera being both static and shaking, contradicts real-world physical rules.",
+      "rationale": "Simultaneous existence of one entity as five distinct people violates the principle of object permanence and bodily feasibility. The contradictory lighting and camera conditions also break real-world physics, as these states cannot coexist without a clear narrative or magical justification, which is not provided.",
+      "severity": "major"
+    },
+    {
+      "applicability": "not_applicable",
+      "criterion": "AVS",
+      "evidence": [],
+      "issue": "",
+      "rationale": "The original prompt and enhanced prompt do not include any dialogue, music, effects, or ambience. The evidence facts confirm no audio content is present. Therefore, there is no basis to evaluate alignment between visual events and audio elements.",
+      "severity": null
+    }
+  ],
+  "dimension": "IC",
+  "dimension_score": 0,
+  "evidence_cache_key": "0c6f96d1f2ee2cc26eb32b61e439c33ceebaecbd2b6c461ddab55cdca7b26f87",
+  "judge_cache_key": "438d7e9fd7332b1041db3e2c26d42cb3fe828e0d369fb59490f6650aee59e97d",
+  "method": "weak-pe-original",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"IC\",\n  \"dimension_score\": 0,\n  \"summary\": \"The enhanced prompt introduces severe internal inconsistencies across all criteria: subject identity and count are contradictory (one protagonist vs. five simultaneous versions), actions and timeline are reversed and incoherent, spatial and temporal conditions conflict (e.g., 2s runtime vs. 19s shots), and physical/visual conditions are mutually exclusive (harsh noon sun vs. lightless night, static vs. shaking camera). The prompt explicitly overrides the original scene, but does so in a logically infeasible and self-contradictory manner.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"SAC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Subject identity, count, and appearance are inconsistently defined: one protagonist is stated to simultaneously appear as five different-looking people, violating identity stability and count consistency. The prompt also replaces the original subject (stone bull) with strangers of opposite age and gender, ignoring the original subject entirely.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"First state that there is one protagonist, then state that this same protagonist appears simultaneously as five different-looking people who talk to each other.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Ignore the person, clothing, pose, and setting in the first frame, and replace them with a stranger of the opposite age and gender in a white studio.\"\n        }\n      ],\n      \"rationale\": \"The prompt contradicts itself by asserting a single protagonist while simultaneously requiring five distinct appearances of that same protagonist. Additionally, replacing the original subject with a stranger violates the requirement for stable subject identity and appearance. These are fundamental inconsistencies in subject attributes.\"\n    },\n    {\n      \"criterion\": \"ANL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Actions are incoherent and causally disconnected: the prompt demands a reversal of timeline (showing ending first, then beginning), but provides no coherent causal progression. The five people talking to each other have no defined action sequence or binding to any event, and the palace audition cut is unconnected to prior or subsequent events.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Reverse the timeline: show the ending first, then cut to a beginning that does not match. Cut away in the middle to a palace audition.\"\n        }\n      ],\n      \"rationale\": \"Reversing the timeline without defining what constitutes the 'ending' or 'beginning' creates a dangling causal structure. The palace audition is introduced without context or transition, making the action sequence incoherent. There is no plausible procedural progression or reaction chain.\"\n    },\n    {\n      \"criterion\": \"TSC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Chronology and duration are mutually contradictory: the prompt sets total runtime to 2 seconds while also requiring every shot to last 19 seconds, which is physically impossible. Additionally, the timeline reversal creates an infeasible sequence where the ending precedes the beginning.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Set the total runtime to 2 seconds, while also making every shot last 19 seconds.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Reverse the timeline: show the ending first, then cut to a beginning that does not match.\"\n        }\n      ],\n      \"rationale\": \"A 2-second total runtime cannot accommodate shots lasting 19 seconds. This is a direct contradiction in temporal constraints. The timeline reversal further invalidates any coherent state transition, as the beginning and ending are not defined or logically connected.\"\n    },\n    {\n      \"criterion\": \"SPC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Spatial conditions are contradictory: the prompt describes the same moment as both harsh noon sun and lightless night, and as both a locked camera and a camera that never stops shaking. These conditions cannot coexist in a single scene without violating spatial and visual consistency.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Describe that same moment as harsh noon sun and as a lightless night, and as both a locked camera and a camera that never stops shaking.\"\n        }\n      ],\n      \"rationale\": \"The same moment cannot simultaneously be illuminated by harsh noon sun and be in lightless night. Similarly, a camera cannot be both locked and constantly shaking. These are mutually exclusive spatial and visual conditions that create a fundamental inconsistency in the scene's physical environment.\"\n    },\n    {\n      \"criterion\": \"PL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Physics and visual logic are violated: the prompt requires a single protagonist to appear simultaneously as five different-looking people, which defies object permanence and bodily feasibility. Additionally, the same moment being both day and night, and camera being both static and shaking, contradicts real-world physical rules.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"this same protagonist appears simultaneously as five different-looking people who talk to each other.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Describe that same moment as harsh noon sun and as a lightless night, and as both a locked camera and a camera that never stops shaking.\"\n        }\n      ],\n      \"rationale\": \"Simultaneous existence of one entity as five distinct people violates the principle of object permanence and bodily feasibility. The contradictory lighting and camera conditions also break real-world physics, as these states cannot coexist without a clear narrative or magical justification, which is not provided.\"\n    },\n    {\n      \"criterion\": \"AVS\",\n      \"applicability\": \"not_applicable\",\n      \"severity\": null,\n      \"issue\": \"\",\n      \"evidence\": [],\n      \"rationale\": \"The original prompt and enhanced prompt do not include any dialogue, music, effects, or ambience. The evidence facts confirm no audio content is present. Therefore, there is no basis to evaluate alignment between visual events and audio elements.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt introduces severe internal inconsistencies across all criteria: subject identity and count are contradictory (one protagonist vs. five simultaneous versions), actions and timeline are reversed and incoherent, spatial and temporal conditions conflict (e.g., 2s runtime vs. 19s shots), and physical/visual conditions are mutually exclusive (harsh noon sun vs. lightless night, static vs. shaking camera). The prompt explicitly overrides the original scene, but does so in a logically infeasible and self-contradictory manner.",
+  "usage": {
+    "completion_tokens": 1353,
+    "prompt_tokens": 2278,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 3631
+  }
+}

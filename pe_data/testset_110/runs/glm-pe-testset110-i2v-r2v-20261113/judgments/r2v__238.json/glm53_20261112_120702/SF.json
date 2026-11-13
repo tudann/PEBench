@@ -1,0 +1,191 @@
+{
+  "candidate_hash": "a1d0eff03c37f96714b62418f84c8d381f39a370c81c16c261de3f1562703108",
+  "case_key": "r2v:238",
+  "created_at": "2026-11-13T09:11:07+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "GSF",
+      "evidence": [
+        {
+          "quote": "Ultra-realistic, ultra-fine textures are revealed layer by layer.",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "ultra-realistic, IMAX-level fine-texture continuous take",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "The enhanced prompt preserves the requested ultra-realistic aesthetic and visual style, aligning with the original’s emphasis on fine textures and IMAX-level detail. No incompatible style is introduced.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SAP",
+      "evidence": [
+        {
+          "quote": "The character’s appearance remains completely consistent throughout",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "<Subject 2> are the three cleanup workers from <Picture 3>, men in yellow high-visibility vests, dark clothing, gloves, and dust masks",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "worker_1 is sweeping debris near sofa_3",
+          "source": "evidence_facts"
+        }
+      ],
+      "issue": "",
+      "rationale": "Subject identities and attributes are preserved: the room (Subject 1) and workers (Subject 2) are correctly defined and consistent with the reference images. The workers’ appearance and roles are accurately mapped to image_3, and no extraneous subjects are introduced.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANF",
+      "evidence": [
+        {
+          "quote": "The camera slowly pushes forward... transitions with a horizontal pan into Image 2... smoothly follows and transitions to the final frame of Image 3",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "The camera begins a slow push-in... transitions into a horizontal pan... smoothly follows the pan into the final keyframe of <Picture 3>",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "The sequence of events — push-in from image_1, pan to image_2, transition to image_3 — is preserved. The narrative intent of a time-lapse decay followed by cleanup is maintained without omissions or substitutions.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "DLI",
+      "evidence": [
+        {
+          "quote": "No background music, no subtitles",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "No music, no subtitles, no dialogue",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "No dialogue, narration, or subtitles are requested or included. The prompt correctly preserves the silence constraint, with only diegetic sound described.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ARP",
+      "evidence": [
+        {
+          "quote": "with ambient sound effects and time-flow sound effects",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Diegetic ambient sound throughout: birdsong and soft room tone... layered time-flow whooshes... broom sweeping, debris bagging, scrubbing, bucket splashes, and vacuum hum",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "The enhanced prompt correctly preserves the requested audio constraints: no music, only diegetic ambient and time-flow effects, with specific sound details added that are compatible with the original intent.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CCP",
+      "evidence": [
+        {
+          "quote": "subtle wide-angle drifting orbit",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "slow push-in with a subtle wide-angle drifting orbit, staying close to scene details... horizontal pan with macro focus and slow perspective shifts",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The enhanced prompt adds more specific camera motion details (e.g., 'drifting orbit', 'macro focus', 'slow perspective shifts') than the original, which only mentions a 'subtle wide-angle drifting orbit' and 'horizontal pan'. While compatible, this is a minor elaboration beyond the original’s brevity.",
+      "rationale": "The core camera motion — push-in, pan — is preserved. The added details (macro focus, perspective shifts) are compatible and do not override the original intent. This is a minor elaboration, not a contradiction.",
+      "severity": "minor"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "LCF",
+      "evidence": [
+        {
+          "quote": "color_temperature: warm white",
+          "quote2": "color_temperature: cool, desaturated",
+          "source": "evidence_facts"
+        },
+        {
+          "quote": "Warm sunlight pours through sheer curtains... natural light from window, dim and diffused... natural light from window, supplemented by ambient light",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "The lighting conditions are preserved: warm, bright daylight in image_1; cool, overcast in images_2 and _3. The enhanced prompt correctly reflects these transitions without altering the defining conditions.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SSP",
+      "evidence": [
+        {
+          "quote": "the room proportions and perspective stay stable and unified",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "the room's layout, proportions, and perspective remain stable and unified",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "The three images depict the same room at different stages... The window, radiator, and general room layout are consistent across all three images",
+          "source": "cross_asset_relations"
+        }
+      ],
+      "issue": "",
+      "rationale": "The setting and spatial layout are preserved across all keyframes. The relative positions of furniture (sofa left, fireplace right, window center) remain consistent, as confirmed by cross-asset relations.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "OTI",
+      "evidence": [
+        {
+          "quote": "no subtitles",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "no subtitles",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "onscreen_text: presence: false",
+          "source": "evidence_facts"
+        }
+      ],
+      "issue": "",
+      "rationale": "No visible text is present in any reference image, and the prompt correctly preserves the constraint of no onscreen text or subtitles.",
+      "severity": "none"
+    }
+  ],
+  "dimension": "SF",
+  "dimension_score": 95,
+  "evidence_cache_key": "028bf2789a0e9be567cb1487f10c3591febe6b06ea15c364ab73c070c4488ed7",
+  "judge_cache_key": "a0ca24571ad14d7ab7be626329bd736d7e7015f9ebc418227c8be391591d0377",
+  "method": "glm53_20261112_120702",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"SF\",\n  \"dimension_score\": 95,\n  \"summary\": \"The enhanced prompt preserves the core semantic intent of the original instruction with high fidelity, accurately mapping the three reference images to a continuous 15-second take with defined keyframes and camera motion. It correctly maintains the room’s layout, subject identities, actions, and audio constraints. Minor elaborations (e.g., specifying worker actions, ambient sound details) are compatible and do not contradict the original. The only notable issue is a slight over-specification of the camera motion sequence (e.g., 'drifting orbit' and 'horizontal pan' are described in more detail than the original), but this does not alter the requested outcome. No major omissions or contradictions are present.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"GSF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"Ultra-realistic, ultra-fine textures are revealed layer by layer.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"ultra-realistic, IMAX-level fine-texture continuous take\"\n        }\n      ],\n      \"rationale\": \"The enhanced prompt preserves the requested ultra-realistic aesthetic and visual style, aligning with the original’s emphasis on fine textures and IMAX-level detail. No incompatible style is introduced.\"\n    },\n    {\n      \"criterion\": \"SAP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"The character’s appearance remains completely consistent throughout\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"<Subject 2> are the three cleanup workers from <Picture 3>, men in yellow high-visibility vests, dark clothing, gloves, and dust masks\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"worker_1 is sweeping debris near sofa_3\"\n        }\n      ],\n      \"rationale\": \"Subject identities and attributes are preserved: the room (Subject 1) and workers (Subject 2) are correctly defined and consistent with the reference images. The workers’ appearance and roles are accurately mapped to image_3, and no extraneous subjects are introduced.\"\n    },\n    {\n      \"criterion\": \"ANF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"The camera slowly pushes forward... transitions with a horizontal pan into Image 2... smoothly follows and transitions to the final frame of Image 3\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"The camera begins a slow push-in... transitions into a horizontal pan... smoothly follows the pan into the final keyframe of <Picture 3>\"\n        }\n      ],\n      \"rationale\": \"The sequence of events — push-in from image_1, pan to image_2, transition to image_3 — is preserved. The narrative intent of a time-lapse decay followed by cleanup is maintained without omissions or substitutions.\"\n    },\n    {\n      \"criterion\": \"DLI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"No background music, no subtitles\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"No music, no subtitles, no dialogue\"\n        }\n      ],\n      \"rationale\": \"No dialogue, narration, or subtitles are requested or included. The prompt correctly preserves the silence constraint, with only diegetic sound described.\"\n    },\n    {\n      \"criterion\": \"ARP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"with ambient sound effects and time-flow sound effects\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Diegetic ambient sound throughout: birdsong and soft room tone... layered time-flow whooshes... broom sweeping, debris bagging, scrubbing, bucket splashes, and vacuum hum\"\n        }\n      ],\n      \"rationale\": \"The enhanced prompt correctly preserves the requested audio constraints: no music, only diegetic ambient and time-flow effects, with specific sound details added that are compatible with the original intent.\"\n    },\n    {\n      \"criterion\": \"CCP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"minor\",\n      \"issue\": \"The enhanced prompt adds more specific camera motion details (e.g., 'drifting orbit', 'macro focus', 'slow perspective shifts') than the original, which only mentions a 'subtle wide-angle drifting orbit' and 'horizontal pan'. While compatible, this is a minor elaboration beyond the original’s brevity.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"subtle wide-angle drifting orbit\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"slow push-in with a subtle wide-angle drifting orbit, staying close to scene details... horizontal pan with macro focus and slow perspective shifts\"\n        }\n      ],\n      \"rationale\": \"The core camera motion — push-in, pan — is preserved. The added details (macro focus, perspective shifts) are compatible and do not override the original intent. This is a minor elaboration, not a contradiction.\"\n    },\n    {\n      \"criterion\": \"LCF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"color_temperature: warm white\"  ,\n          \"quote2\": \"color_temperature: cool, desaturated\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Warm sunlight pours through sheer curtains... natural light from window, dim and diffused... natural light from window, supplemented by ambient light\"\n        }\n      ],\n      \"rationale\": \"The lighting conditions are preserved: warm, bright daylight in image_1; cool, overcast in images_2 and _3. The enhanced prompt correctly reflects these transitions without altering the defining conditions.\"\n    },\n    {\n      \"criterion\": \"SSP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"the room proportions and perspective stay stable and unified\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"the room's layout, proportions, and perspective remain stable and unified\"\n        },\n        {\n          \"source\": \"cross_asset_relations\",\n          \"quote\": \"The three images depict the same room at different stages... The window, radiator, and general room layout are consistent across all three images\"\n        }\n      ],\n      \"rationale\": \"The setting and spatial layout are preserved across all keyframes. The relative positions of furniture (sofa left, fireplace right, window center) remain consistent, as confirmed by cross-asset relations.\"\n    },\n    {\n      \"criterion\": \"OTI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"no subtitles\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"no subtitles\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"onscreen_text: presence: false\"\n        }\n      ],\n      \"rationale\": \"No visible text is present in any reference image, and the prompt correctly preserves the constraint of no onscreen text or subtitles.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt preserves the core semantic intent of the original instruction with high fidelity, accurately mapping the three reference images to a continuous 15-second take with defined keyframes and camera motion. It correctly maintains the room’s layout, subject identities, actions, and audio constraints. Minor elaborations (e.g., specifying worker actions, ambient sound details) are compatible and do not contradict the original. The only notable issue is a slight over-specification of the camera motion sequence (e.g., 'drifting orbit' and 'horizontal pan' are described in more detail than the original), but this does not alter the requested outcome. No major omissions or contradictions are present.",
+  "usage": {
+    "completion_tokens": 1741,
+    "prompt_tokens": 6628,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 8369
+  }
+}

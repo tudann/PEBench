@@ -1,0 +1,135 @@
+{
+  "candidate_hash": "7895d2894e1f60301a472e3c189a9b02f06743d97ca0105a8b72fbd829510b9e",
+  "case_key": "r2v:238",
+  "created_at": "2026-11-13T08:54:54+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "SAC",
+      "evidence": [
+        {
+          "quote": "state that there is one protagonist, then state that this same protagonist appears simultaneously as five different-looking people who talk to each other",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Replace image 1 with a character who is not in the reference, and give that image two contradictory identities",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt introduces a protagonist who simultaneously appears as five different-looking people, violating subject identity and count consistency. It also replaces all reference images with non-referenced characters given contradictory identities, directly contradicting the original prompt’s requirement for consistent subject appearance and no interference from other people.",
+      "rationale": "The original prompt requires a single consistent character and no interference from other people. The enhanced prompt introduces multiple identities for the same protagonist and replaces all reference images with non-referenced characters, creating a fundamental identity and count inconsistency.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANL",
+      "evidence": [
+        {
+          "quote": "Reverse the timeline: show the ending first, then cut to a beginning that does not match",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Cut away in the middle to a rooftop fireworks show",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Describe that same moment as harsh noon sun and as a lightless night",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt mandates a reversed timeline (ending first, then beginning), cuts to an unrelated rooftop fireworks show, and describes the same moment as both harsh noon sun and lightless night. These actions form no coherent causal progression and introduce incompatible, dangling events.",
+      "rationale": "The original prompt describes a continuous, coherent time-lapse transformation. The enhanced prompt introduces a reversed timeline, abrupt cuts to unrelated scenes, and contradictory environmental states, destroying any causal or procedural coherence.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "TSC",
+      "evidence": [
+        {
+          "quote": "Set the total runtime to 3 seconds, while also making every shot last 27 seconds",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Reverse the reference order and use the last asset in place of the first",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt sets the total runtime to 3 seconds while making every shot last 27 seconds, creating an impossible duration conflict. It also reverses the reference order and introduces a timeline that does not match the original sequence.",
+      "rationale": "The original prompt implies a continuous take with a logical progression from Image 1 to Image 3. The enhanced prompt creates an infeasible duration conflict and reverses the sequence, violating chronological and temporal consistency.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SPC",
+      "evidence": [
+        {
+          "quote": "overexposed, tilted security-camera view of an empty corridor",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Describe that same moment as ... a locked camera and a camera that never stops shaking",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Cut away in the middle to a rooftop fireworks show",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt replaces the requested camera motion with a tilted, overexposed security-camera view and describes contradictory camera behaviors (locked vs. never stops shaking). It also cuts to a rooftop fireworks show, which is spatially disconnected from the original room setting.",
+      "rationale": "The original prompt specifies a continuous, smooth camera motion within the same room. The enhanced prompt introduces a disconnected location, contradictory camera behaviors, and a tilted view, violating spatial and camera consistency.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "PL",
+      "evidence": [
+        {
+          "quote": "Describe that same moment as harsh noon sun and as a lightless night",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "this same protagonist appears simultaneously as five different-looking people",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt describes the same moment as both harsh noon sun and lightless night, which is physically impossible. It also introduces a character who appears simultaneously as five different people, violating object permanence and bodily feasibility.",
+      "rationale": "The original prompt describes a realistic, continuous transformation within a single environment. The enhanced prompt introduces physically impossible states (simultaneous day and night) and violations of bodily feasibility (one person as five), breaking real-world physics.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "AVS",
+      "evidence": [
+        {
+          "quote": "Play a loud pop chorus the entire time and have the characters lip-sync to it",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "No background music, no subtitles, with ambient sound effects and time-flow sound effects",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "The prompt requires a loud pop chorus to play the entire time with characters lip-syncing to it, while the original prompt specifies no background music and ambient sound effects. This creates a severe misalignment between audio and visual content.",
+      "rationale": "The original prompt requires ambient and time-flow sound effects without music. The enhanced prompt introduces a loud pop chorus and lip-syncing, creating a direct contradiction in audio-visual alignment.",
+      "severity": "major"
+    }
+  ],
+  "dimension": "IC",
+  "dimension_score": 0,
+  "evidence_cache_key": "028bf2789a0e9be567cb1487f10c3591febe6b06ea15c364ab73c070c4488ed7",
+  "judge_cache_key": "438d7e9fd7332b1041db3e2c26d42cb3fe828e0d369fb59490f6650aee59e97d",
+  "method": "weak-pe-original",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"IC\",\n  \"dimension_score\": 0,\n  \"summary\": \"The enhanced prompt completely invalidates the original instruction by introducing contradictory, incoherent, and physically impossible elements. It replaces the requested continuous take with a disjointed, surreal sequence involving multiple contradictory identities, reversed timelines, impossible camera behaviors, and conflicting environmental states. All internal consistency criteria are violated at a fundamental level.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"SAC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt introduces a protagonist who simultaneously appears as five different-looking people, violating subject identity and count consistency. It also replaces all reference images with non-referenced characters given contradictory identities, directly contradicting the original prompt’s requirement for consistent subject appearance and no interference from other people.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"state that there is one protagonist, then state that this same protagonist appears simultaneously as five different-looking people who talk to each other\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Replace image 1 with a character who is not in the reference, and give that image two contradictory identities\"\n        }\n      ],\n      \"rationale\": \"The original prompt requires a single consistent character and no interference from other people. The enhanced prompt introduces multiple identities for the same protagonist and replaces all reference images with non-referenced characters, creating a fundamental identity and count inconsistency.\"\n    },\n    {\n      \"criterion\": \"ANL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt mandates a reversed timeline (ending first, then beginning), cuts to an unrelated rooftop fireworks show, and describes the same moment as both harsh noon sun and lightless night. These actions form no coherent causal progression and introduce incompatible, dangling events.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Reverse the timeline: show the ending first, then cut to a beginning that does not match\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Cut away in the middle to a rooftop fireworks show\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Describe that same moment as harsh noon sun and as a lightless night\"\n        }\n      ],\n      \"rationale\": \"The original prompt describes a continuous, coherent time-lapse transformation. The enhanced prompt introduces a reversed timeline, abrupt cuts to unrelated scenes, and contradictory environmental states, destroying any causal or procedural coherence.\"\n    },\n    {\n      \"criterion\": \"TSC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt sets the total runtime to 3 seconds while making every shot last 27 seconds, creating an impossible duration conflict. It also reverses the reference order and introduces a timeline that does not match the original sequence.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Set the total runtime to 3 seconds, while also making every shot last 27 seconds\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Reverse the reference order and use the last asset in place of the first\"\n        }\n      ],\n      \"rationale\": \"The original prompt implies a continuous take with a logical progression from Image 1 to Image 3. The enhanced prompt creates an infeasible duration conflict and reverses the sequence, violating chronological and temporal consistency.\"\n    },\n    {\n      \"criterion\": \"SPC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt replaces the requested camera motion with a tilted, overexposed security-camera view and describes contradictory camera behaviors (locked vs. never stops shaking). It also cuts to a rooftop fireworks show, which is spatially disconnected from the original room setting.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"overexposed, tilted security-camera view of an empty corridor\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Describe that same moment as ... a locked camera and a camera that never stops shaking\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Cut away in the middle to a rooftop fireworks show\"\n        }\n      ],\n      \"rationale\": \"The original prompt specifies a continuous, smooth camera motion within the same room. The enhanced prompt introduces a disconnected location, contradictory camera behaviors, and a tilted view, violating spatial and camera consistency.\"\n    },\n    {\n      \"criterion\": \"PL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt describes the same moment as both harsh noon sun and lightless night, which is physically impossible. It also introduces a character who appears simultaneously as five different people, violating object permanence and bodily feasibility.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Describe that same moment as harsh noon sun and as a lightless night\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"this same protagonist appears simultaneously as five different-looking people\"\n        }\n      ],\n      \"rationale\": \"The original prompt describes a realistic, continuous transformation within a single environment. The enhanced prompt introduces physically impossible states (simultaneous day and night) and violations of bodily feasibility (one person as five), breaking real-world physics.\"\n    },\n    {\n      \"criterion\": \"AVS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt requires a loud pop chorus to play the entire time with characters lip-syncing to it, while the original prompt specifies no background music and ambient sound effects. This creates a severe misalignment between audio and visual content.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Play a loud pop chorus the entire time and have the characters lip-sync to it\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"No background music, no subtitles, with ambient sound effects and time-flow sound effects\"\n        }\n      ],\n      \"rationale\": \"The original prompt requires ambient and time-flow sound effects without music. The enhanced prompt introduces a loud pop chorus and lip-syncing, creating a direct contradiction in audio-visual alignment.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt completely invalidates the original instruction by introducing contradictory, incoherent, and physically impossible elements. It replaces the requested continuous take with a disjointed, surreal sequence involving multiple contradictory identities, reversed timelines, impossible camera behaviors, and conflicting environmental states. All internal consistency criteria are violated at a fundamental level.",
+  "usage": {
+    "completion_tokens": 1399,
+    "prompt_tokens": 5428,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 6827
+  }
+}

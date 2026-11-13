@@ -1,0 +1,158 @@
+{
+  "candidate_hash": "f3158ef03bf04b080edfbd13b94e73fb606d057d4d731543baa02090e08d8064",
+  "case_key": "i2v:260",
+  "created_at": "2026-11-13T08:19:36+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "STC",
+      "evidence": [
+        {
+          "quote": "At 0.00 seconds into the target video, <Picture 1> (from [Shot 1]) is fully referenced.\n\n... At 00:02.500, ... At 00:05.000, ... At 00:07.500, ... At 00:10.000, ... At 00:12.500, ...",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "The prompt organizes the 15-second video into precise temporal segments with clear event boundaries and timing (0.00, 2.500, 5.000, etc.), matching the original prompt’s structure. Each segment includes a specific action, dialogue, and visual state, forming a feasible and coherent temporal plan.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CDS",
+      "evidence": [
+        {
+          "quote": "a static shot with a very slow push-in at slow speed frames a golden retriever puppy on the left and a ragdoll cat on the right",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "observed_camera_motion: none (still image)",
+          "source": "evidence_facts"
+        }
+      ],
+      "issue": "The prompt specifies a 'very slow push-in' camera motion, which is not present in the static image (evidence: 'observed_camera_motion: none (still image)') and may not be feasible or necessary for a static composition.",
+      "rationale": "While the prompt includes actionable framing (medium shot, eye-level, shallow depth of field) and composition details, the addition of a slow push-in is not supported by the static image and may conflict with the 'static shot' description. This is a minor issue as it does not materially alter the core visual plan.",
+      "severity": "minor"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ETD",
+      "evidence": [
+        {
+          "quote": "At 00:02.500, both pets hold their poses... At 00:05.000, the cat turns its head slightly toward the dog... At 00:07.500, the dog turns its head toward the cat... At 00:10.000, the dog gives a small emphatic head bob... At 00:12.500, the cat shakes its head, raises a paw to cover its face, and sighs...",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "Cuts and transitions are implied through precise timing and character actions, supporting narrative progression and emotional escalation (cat’s request → teacher’s question → cat’s insult → dog’s retort → dog’s taunt → cat’s defeat). There are no disconnected or unmotivated transitions.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "LCS",
+      "evidence": [
+        {
+          "quote": "soft daylight from the window with a beige curtain",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "natural light from window on the right, creating soft shadows on the left wall",
+          "source": "evidence_facts"
+        }
+      ],
+      "issue": "",
+      "rationale": "The prompt specifies natural daylight from the right, consistent with the evidence, and maintains warm-to-neutral color temperature and soft lighting. No explicit grading or palette is needed for this style, and the description is sufficient for generation.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "NDE",
+      "evidence": [
+        {
+          "quote": "At 00:05.000, the cat turns its head slightly toward the dog with a disdainful expression... At 00:07.500, the dog turns its head toward the cat with slight bark-like mouth movement... At 00:10.000, the dog gives a small emphatic head bob... At 00:12.500, the cat shakes its head, raises a paw to cover its face, and sighs...",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "The narrative progresses from a simple request to a humorous exchange with escalating tension and emotional payoff (cat’s defeat). The actions and dialogue show clear progression and resolution, avoiding static restatement.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CIF",
+      "evidence": [
+        {
+          "quote": "the cat with white/cream fur, blue eyes, a pink satin bow and multi-strand pearl necklace",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "AI萌宠搞笑剧情风格对话/字幕",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "The prompt includes detailed descriptions of the cat’s pink satin bow and multi-strand pearl necklace, which are not essential to the core request (a 15-second AI pet comedy skit with dialogue). These details may be decorative and distract from the primary narrative focus.",
+      "rationale": "While the bow and necklace are visually consistent with the image, they are not required for the core comedic dialogue. Their inclusion adds minor decorative detail that does not materially affect the request but slightly exceeds necessary elaboration.",
+      "severity": "minor"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SDI",
+      "evidence": [
+        {
+          "quote": "cheerful young female voice with a Sichuan accent (S1) says: <d>[Chinese] 老师我想换座位</d> while a subtitle reading \"老师我想换座位\" appears... off-screen female teacher's voice (S2) asks: <d>[Chinese] 为什么呀</d>... young male voice with a Sichuan accent (S3) retorts: <d>[Chinese] 你旁边才坐了只傻狗</d>... subtitle \"你旁边才坐了只傻狗\"... subtitle \"大傻狗\"... overall_soundscape: A quiet classroom ambience... non_diegetic_music: Light, playful plucked ukulele notes...",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "The prompt integrates speech (dialogue with specified accents and timing), subtitles, ambient sound, and background music with appropriate source, intensity, and visual timing. All audio elements support the narrative and are well-aligned with the visual events.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SPS",
+      "evidence": [
+        {
+          "quote": "the cat raises a paw slightly and speaks toward the front... the cat looking expectantly forward with a small head tilt... the cat turns its head slightly toward the dog with a disdainful expression... the dog's ears perk up... the dog turns its head toward the cat with slight bark-like mouth movement... the dog gives a small emphatic head bob... the cat shakes its head, raises a paw to cover its face, and sighs with its shoulders dropping... the dog looks smugly forward",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "The prompt provides detailed subject performance: expressions (disdainful, smug), gestures (paw raise, head bob, covering face), movements (head turns, sigh), and vocal delivery (Sichuan accents). These are generation-relevant and consistent with the comedic tone.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "VSS",
+      "evidence": [
+        {
+          "quote": "3D CG cute-pet comedy skit, vertical composition, a static shot with a very slow push-in... golden retriever puppy... ragdoll cat... wooden school desk... bright classroom... soft daylight... watermark \"豆包AI生成\"",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "primary_style: AI_generated_photorealism, secondary_styles: [cute_animal_portrait, school_setting]",
+          "source": "evidence_facts"
+        }
+      ],
+      "issue": "",
+      "rationale": "The prompt specifies medium (3D CG), style (AI-generated photorealism, cute pet comedy), composition (vertical, medium shot), setting (classroom), and visual treatment (soft lighting, watermark). These are actionable and consistent with the image and original request.",
+      "severity": "none"
+    }
+  ],
+  "dimension": "DC",
+  "dimension_score": 88,
+  "evidence_cache_key": "e8fbe91c80a0cc726aaf4df3ded01d24982e17418fbede9298afbd95f8af9b29",
+  "judge_cache_key": "0754499d53388e6467fb078ab780e01b77f9f1c9e99d9029be2769351eb2b2eb",
+  "method": "glm53_20261112_120702",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"DC\",\n  \"dimension_score\": 88,\n  \"summary\": \"The enhanced prompt provides a detailed, temporally structured plan with clear shot boundaries, character actions, dialogue timing, and visual/audio specifications. It accurately references the provided image and expands it into a coherent 15-second narrative with progression, emotional escalation, and appropriate visual/audio cues. Minor issues include slight over-specification of camera motion (slow push-in) not present in the static image, and some redundant or decorative details (e.g., exact bow/necklace description) that are not essential to the core request. Overall, the prompt is highly actionable and well-aligned with the original instruction.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"STC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"At 0.00 seconds into the target video, <Picture 1> (from [Shot 1]) is fully referenced.\\n\\n... At 00:02.500, ... At 00:05.000, ... At 00:07.500, ... At 00:10.000, ... At 00:12.500, ...\"\n        }\n      ],\n      \"rationale\": \"The prompt organizes the 15-second video into precise temporal segments with clear event boundaries and timing (0.00, 2.500, 5.000, etc.), matching the original prompt’s structure. Each segment includes a specific action, dialogue, and visual state, forming a feasible and coherent temporal plan.\"\n    },\n    {\n      \"criterion\": \"CDS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"minor\",\n      \"issue\": \"The prompt specifies a 'very slow push-in' camera motion, which is not present in the static image (evidence: 'observed_camera_motion: none (still image)') and may not be feasible or necessary for a static composition.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"a static shot with a very slow push-in at slow speed frames a golden retriever puppy on the left and a ragdoll cat on the right\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"observed_camera_motion: none (still image)\"\n        }\n      ],\n      \"rationale\": \"While the prompt includes actionable framing (medium shot, eye-level, shallow depth of field) and composition details, the addition of a slow push-in is not supported by the static image and may conflict with the 'static shot' description. This is a minor issue as it does not materially alter the core visual plan.\"\n    },\n    {\n      \"criterion\": \"ETD\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"At 00:02.500, both pets hold their poses... At 00:05.000, the cat turns its head slightly toward the dog... At 00:07.500, the dog turns its head toward the cat... At 00:10.000, the dog gives a small emphatic head bob... At 00:12.500, the cat shakes its head, raises a paw to cover its face, and sighs...\"\n        }\n      ],\n      \"rationale\": \"Cuts and transitions are implied through precise timing and character actions, supporting narrative progression and emotional escalation (cat’s request → teacher’s question → cat’s insult → dog’s retort → dog’s taunt → cat’s defeat). There are no disconnected or unmotivated transitions.\"\n    },\n    {\n      \"criterion\": \"LCS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"soft daylight from the window with a beige curtain\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"natural light from window on the right, creating soft shadows on the left wall\"\n        }\n      ],\n      \"rationale\": \"The prompt specifies natural daylight from the right, consistent with the evidence, and maintains warm-to-neutral color temperature and soft lighting. No explicit grading or palette is needed for this style, and the description is sufficient for generation.\"\n    },\n    {\n      \"criterion\": \"NDE\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"At 00:05.000, the cat turns its head slightly toward the dog with a disdainful expression... At 00:07.500, the dog turns its head toward the cat with slight bark-like mouth movement... At 00:10.000, the dog gives a small emphatic head bob... At 00:12.500, the cat shakes its head, raises a paw to cover its face, and sighs...\"\n        }\n      ],\n      \"rationale\": \"The narrative progresses from a simple request to a humorous exchange with escalating tension and emotional payoff (cat’s defeat). The actions and dialogue show clear progression and resolution, avoiding static restatement.\"\n    },\n    {\n      \"criterion\": \"CIF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"minor\",\n      \"issue\": \"The prompt includes detailed descriptions of the cat’s pink satin bow and multi-strand pearl necklace, which are not essential to the core request (a 15-second AI pet comedy skit with dialogue). These details may be decorative and distract from the primary narrative focus.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"the cat with white/cream fur, blue eyes, a pink satin bow and multi-strand pearl necklace\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"AI萌宠搞笑剧情风格对话/字幕\"\n        }\n      ],\n      \"rationale\": \"While the bow and necklace are visually consistent with the image, they are not required for the core comedic dialogue. Their inclusion adds minor decorative detail that does not materially affect the request but slightly exceeds necessary elaboration.\"\n    },\n    {\n      \"criterion\": \"SDI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"cheerful young female voice with a Sichuan accent (S1) says: <d>[Chinese] 老师我想换座位</d> while a subtitle reading \\\"老师我想换座位\\\" appears... off-screen female teacher's voice (S2) asks: <d>[Chinese] 为什么呀</d>... young male voice with a Sichuan accent (S3) retorts: <d>[Chinese] 你旁边才坐了只傻狗</d>... subtitle \\\"你旁边才坐了只傻狗\\\"... subtitle \\\"大傻狗\\\"... overall_soundscape: A quiet classroom ambience... non_diegetic_music: Light, playful plucked ukulele notes...\"\n        }\n      ],\n      \"rationale\": \"The prompt integrates speech (dialogue with specified accents and timing), subtitles, ambient sound, and background music with appropriate source, intensity, and visual timing. All audio elements support the narrative and are well-aligned with the visual events.\"\n    },\n    {\n      \"criterion\": \"SPS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"the cat raises a paw slightly and speaks toward the front... the cat looking expectantly forward with a small head tilt... the cat turns its head slightly toward the dog with a disdainful expression... the dog's ears perk up... the dog turns its head toward the cat with slight bark-like mouth movement... the dog gives a small emphatic head bob... the cat shakes its head, raises a paw to cover its face, and sighs with its shoulders dropping... the dog looks smugly forward\"\n        }\n      ],\n      \"rationale\": \"The prompt provides detailed subject performance: expressions (disdainful, smug), gestures (paw raise, head bob, covering face), movements (head turns, sigh), and vocal delivery (Sichuan accents). These are generation-relevant and consistent with the comedic tone.\"\n    },\n    {\n      \"criterion\": \"VSS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"3D CG cute-pet comedy skit, vertical composition, a static shot with a very slow push-in... golden retriever puppy... ragdoll cat... wooden school desk... bright classroom... soft daylight... watermark \\\"豆包AI生成\\\"\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"primary_style: AI_generated_photorealism, secondary_styles: [cute_animal_portrait, school_setting]\"\n        }\n      ],\n      \"rationale\": \"The prompt specifies medium (3D CG), style (AI-generated photorealism, cute pet comedy), composition (vertical, medium shot), setting (classroom), and visual treatment (soft lighting, watermark). These are actionable and consistent with the image and original request.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt provides a detailed, temporally structured plan with clear shot boundaries, character actions, dialogue timing, and visual/audio specifications. It accurately references the provided image and expands it into a coherent 15-second narrative with progression, emotional escalation, and appropriate visual/audio cues. Minor issues include slight over-specification of camera motion (slow push-in) not present in the static image, and some redundant or decorative details (e.g., exact bow/necklace description) that are not essential to the core request. Overall, the prompt is highly actionable and well-aligned with the original instruction.",
+  "usage": {
+    "completion_tokens": 2135,
+    "prompt_tokens": 2905,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 5040
+  }
+}

@@ -1,0 +1,119 @@
+{
+  "candidate_hash": "429971b618547e710e2fde3c8bf551658a2e292c289549f1fa1621b43156d16b",
+  "case_key": "t2v:122",
+  "created_at": "2026-11-13T07:35:21+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "SAC",
+      "evidence": [
+        {
+          "quote": "First state that there is one protagonist, then state that this same protagonist appears simultaneously as five different-looking people who talk to each other.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "A hyper-realistic 15-second cinematic video of a self-assured young man riding a modern matte-black superbike...",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "The prompt introduces a single protagonist who simultaneously appears as five different-looking people, violating subject identity and count consistency. The original prompt specifies one rider with a defined appearance and clothing; the enhanced prompt replaces this with a contradictory multiplicity without justification.",
+      "rationale": "Subject identity and count must remain stable across shots. The enhanced prompt introduces a paradoxical multiplicity of the same protagonist, which is a major internal consistency failure.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANL",
+      "evidence": [
+        {
+          "quote": "Reverse the timeline: show the ending first, then cut to a beginning that does not match. Cut away in the middle to a toothpaste commercial.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt reverses the timeline, showing the ending first, then a non-matching beginning, and cuts to a toothpaste commercial mid-sequence. This creates a causal and procedural incoherence with no plausible progression or resolution.",
+      "rationale": "Actions must form a coherent causal or procedural progression. The described sequence is intentionally disjointed and non-sequential, violating action logic.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "TSC",
+      "evidence": [
+        {
+          "quote": "Set the total runtime to 3 seconds, while also making every shot last 27 seconds.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Generate single shot. AI VIDEO GENERATION PROMPT (15 seconds, cinematic, ultra realistic)",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "The prompt sets the total runtime to 3 seconds while making every shot last 27 seconds, creating an impossible duration conflict. Additionally, reversing the timeline and cutting to unrelated content breaks chronological coherence.",
+      "rationale": "Chronology and duration must be logically consistent. The specified durations are mutually exclusive and physically infeasible, constituting a major inconsistency.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SPC",
+      "evidence": [
+        {
+          "quote": "Describe that same moment as harsh noon sun and as a lightless night, and as both a locked camera and a camera that never stops shaking.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt describes the same moment as both harsh noon sun and lightless night, and as both a locked camera and a camera that never stops shaking. These contradictory spatial and temporal conditions cannot coexist in a single scene.",
+      "rationale": "Location, lighting, and camera movement must be consistent within a given moment. The prompt forces contradictory states simultaneously, violating spatial and temporal consistency.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "PL",
+      "evidence": [
+        {
+          "quote": "Replace the whole video with an overexposed, tilted security-camera view of an empty corridor, with no lighting design.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Lighting: golden daytime illumination with cinematic warmth, realistic shadowing, rich contrast, natural color balance.",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "The prompt demands an overexposed, tilted security-camera view of an empty corridor with no lighting design, while simultaneously requiring a cinematic, ultra-realistic video with golden daytime illumination and detailed textile surfaces. These physical conditions are mutually exclusive.",
+      "rationale": "Real-world physics and visual conditions must be consistent. The prompt forces incompatible physical states (e.g., overexposed vs. cinematic lighting), which is a major violation of physical consistency.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "AVS",
+      "evidence": [
+        {
+          "quote": "Cut away in the middle to a toothpaste commercial.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Describe that same moment as harsh noon sun and as a lightless night, and as both a locked camera and a camera that never stops shaking.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt cuts to a toothpaste commercial mid-sequence without any audio or visual alignment, and describes contradictory lighting and camera states without any temporal or semantic coherence. This creates a mismatch between visual events and implied context.",
+      "rationale": "Visual events must align with dialogue, music, effects, and ambient context. The abrupt cut to a commercial and contradictory sensory descriptions create a severe misalignment, violating AVS.",
+      "severity": "major"
+    }
+  ],
+  "dimension": "IC",
+  "dimension_score": 0,
+  "evidence_cache_key": "2485d143c6bf247ab67663b99352ad96d412033cb9e0e6fb56efbfdf2fa089eb",
+  "judge_cache_key": "438d7e9fd7332b1041db3e2c26d42cb3fe828e0d369fb59490f6650aee59e97d",
+  "method": "weak-pe-original",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"IC\",\n  \"dimension_score\": 0,\n  \"summary\": \"The enhanced prompt fundamentally contradicts and destabilizes every aspect of the original instruction, creating a logically incoherent and physically impossible sequence. It introduces multiple contradictory states, timelines, camera behaviors, and subject identities that violate internal consistency across all criteria. The prompt is designed to break coherence rather than preserve it.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"SAC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt introduces a single protagonist who simultaneously appears as five different-looking people, violating subject identity and count consistency. The original prompt specifies one rider with a defined appearance and clothing; the enhanced prompt replaces this with a contradictory multiplicity without justification.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"First state that there is one protagonist, then state that this same protagonist appears simultaneously as five different-looking people who talk to each other.\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"A hyper-realistic 15-second cinematic video of a self-assured young man riding a modern matte-black superbike...\"\n        }\n      ],\n      \"rationale\": \"Subject identity and count must remain stable across shots. The enhanced prompt introduces a paradoxical multiplicity of the same protagonist, which is a major internal consistency failure.\"\n    },\n    {\n      \"criterion\": \"ANL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt reverses the timeline, showing the ending first, then a non-matching beginning, and cuts to a toothpaste commercial mid-sequence. This creates a causal and procedural incoherence with no plausible progression or resolution.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Reverse the timeline: show the ending first, then cut to a beginning that does not match. Cut away in the middle to a toothpaste commercial.\"\n        }\n      ],\n      \"rationale\": \"Actions must form a coherent causal or procedural progression. The described sequence is intentionally disjointed and non-sequential, violating action logic.\"\n    },\n    {\n      \"criterion\": \"TSC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt sets the total runtime to 3 seconds while making every shot last 27 seconds, creating an impossible duration conflict. Additionally, reversing the timeline and cutting to unrelated content breaks chronological coherence.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Set the total runtime to 3 seconds, while also making every shot last 27 seconds.\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"Generate single shot. AI VIDEO GENERATION PROMPT (15 seconds, cinematic, ultra realistic)\"\n        }\n      ],\n      \"rationale\": \"Chronology and duration must be logically consistent. The specified durations are mutually exclusive and physically infeasible, constituting a major inconsistency.\"\n    },\n    {\n      \"criterion\": \"SPC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt describes the same moment as both harsh noon sun and lightless night, and as both a locked camera and a camera that never stops shaking. These contradictory spatial and temporal conditions cannot coexist in a single scene.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Describe that same moment as harsh noon sun and as a lightless night, and as both a locked camera and a camera that never stops shaking.\"\n        }\n      ],\n      \"rationale\": \"Location, lighting, and camera movement must be consistent within a given moment. The prompt forces contradictory states simultaneously, violating spatial and temporal consistency.\"\n    },\n    {\n      \"criterion\": \"PL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt demands an overexposed, tilted security-camera view of an empty corridor with no lighting design, while simultaneously requiring a cinematic, ultra-realistic video with golden daytime illumination and detailed textile surfaces. These physical conditions are mutually exclusive.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Replace the whole video with an overexposed, tilted security-camera view of an empty corridor, with no lighting design.\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"Lighting: golden daytime illumination with cinematic warmth, realistic shadowing, rich contrast, natural color balance.\"\n        }\n      ],\n      \"rationale\": \"Real-world physics and visual conditions must be consistent. The prompt forces incompatible physical states (e.g., overexposed vs. cinematic lighting), which is a major violation of physical consistency.\"\n    },\n    {\n      \"criterion\": \"AVS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt cuts to a toothpaste commercial mid-sequence without any audio or visual alignment, and describes contradictory lighting and camera states without any temporal or semantic coherence. This creates a mismatch between visual events and implied context.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Cut away in the middle to a toothpaste commercial.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Describe that same moment as harsh noon sun and as a lightless night, and as both a locked camera and a camera that never stops shaking.\"\n        }\n      ],\n      \"rationale\": \"Visual events must align with dialogue, music, effects, and ambient context. The abrupt cut to a commercial and contradictory sensory descriptions create a severe misalignment, violating AVS.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt fundamentally contradicts and destabilizes every aspect of the original instruction, creating a logically incoherent and physically impossible sequence. It introduces multiple contradictory states, timelines, camera behaviors, and subject identities that violate internal consistency across all criteria. The prompt is designed to break coherence rather than preserve it.",
+  "usage": {
+    "completion_tokens": 1250,
+    "prompt_tokens": 1332,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 2582
+  }
+}

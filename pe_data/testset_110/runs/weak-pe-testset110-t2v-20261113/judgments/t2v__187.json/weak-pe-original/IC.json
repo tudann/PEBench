@@ -1,0 +1,115 @@
+{
+  "candidate_hash": "32b04dfec17a005e1bb09d45c9c6e901b658b441706c100965ac201885a47423",
+  "case_key": "t2v:187",
+  "created_at": "2026-11-13T07:49:46+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "SAC",
+      "evidence": [
+        {
+          "quote": "First state that there is one protagonist, then state that this same protagonist appears simultaneously as five different-looking people who talk to each other.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Subject identity and count are contradictory: the prompt states 'one protagonist' who then 'appears simultaneously as five different-looking people'. This violates identity stability and introduces unexplained duplication without justification.",
+      "rationale": "The prompt explicitly contradicts itself by asserting a single subject while simultaneously describing five distinct identities. This violates the principle of stable subject identity and count across shots, which is fundamental to internal consistency.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANL",
+      "evidence": [
+        {
+          "quote": "Replace the whole video with someone typing in a silent office... then state that this same protagonist appears simultaneously as five different-looking people who talk to each other. Cut away in the middle to a rooftop fireworks show.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Actions are incoherent and causally disconnected: typing in an office is abruptly replaced by five people talking, then cut to fireworks, with no plausible causal links or procedural progression between events.",
+      "rationale": "There is no coherent causal or procedural chain connecting typing, five simultaneous identities, and a fireworks show. The actions are presented as disjointed events with no binding logic, making the sequence incoherent.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "TSC",
+      "evidence": [
+        {
+          "quote": "Set the total runtime to 3 seconds, while also making every shot last 27 seconds.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Reverse the timeline: show the ending first, then cut to a beginning that does not match.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Timeline is logically impossible: the prompt sets total runtime to 3 seconds while requiring every shot to last 27 seconds, and also demands a reversed timeline (ending first, then beginning).",
+      "rationale": "A 3-second runtime cannot accommodate 27-second shots. Additionally, reversing the timeline while requiring a non-matching beginning creates a temporal paradox. These constraints are mutually exclusive and infeasible.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SPC",
+      "evidence": [
+        {
+          "quote": "Describe that same moment as harsh noon sun and as a lightless night, and as both a locked camera and a camera that never stops shaking.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Spatial consistency is violated: the same moment is described as both 'harsh noon sun' and 'lightless night', and as both 'locked camera' and 'camera that never stops shaking', creating contradictory spatial and environmental states.",
+      "rationale": "The prompt demands contradictory spatial and environmental conditions for the same moment, which is physically and logically impossible. This violates consistency in location, lighting, and camera movement.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "PL",
+      "evidence": [
+        {
+          "quote": "this same protagonist appears simultaneously as five different-looking people who talk to each other.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Describe that same moment as harsh noon sun and as a lightless night, and as both a locked camera and a camera that never stops shaking.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Physics and object permanence are violated: a single protagonist appearing as five different people simultaneously defies real-world physics, and the contradictory environmental states (day/night, stable/shaking camera) are physically incoherent.",
+      "rationale": "The prompt requires impossible physical states: simultaneous multiple identities and contradictory environmental conditions. These violate fundamental principles of physics and object permanence, even within a fictional context, as no world logic is established to justify them.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "AVS",
+      "evidence": [
+        {
+          "quote": "Replace the whole video with someone typing in a silent office, with no music, instruments, or singing.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Cut away in the middle to a rooftop fireworks show.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Sensory elements are misaligned: the prompt demands a silent office with no music or singing, yet the original prompt includes chanting lyrics and cinematic sound design, and the enhanced prompt introduces fireworks (implying sound) without resolving the contradiction.",
+      "rationale": "The prompt creates a contradiction between a silent environment and the implied sound of fireworks. Additionally, the original prompt's auditory elements (chanting) are replaced without alignment to the new silent setting, creating a misalignment between visual and auditory expectations.",
+      "severity": "major"
+    }
+  ],
+  "dimension": "IC",
+  "dimension_score": 0,
+  "evidence_cache_key": "921c3f1f6dd16a61a1b915bd6daeb591c663fa1e0cf07269c576dc879494ea21",
+  "judge_cache_key": "438d7e9fd7332b1041db3e2c26d42cb3fe828e0d369fb59490f6650aee59e97d",
+  "method": "weak-pe-original",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"IC\",\n  \"dimension_score\": 0,\n  \"summary\": \"The enhanced prompt contains severe internal inconsistencies across all criteria: subject identity and count are contradictory (one protagonist vs. five simultaneous versions), actions are incoherent and causally disconnected, timeline is reversed and impossible (3s runtime with 27s shots), spatial and physical logic is violated (simultaneous contradictory settings), and sensory elements are misaligned (silent office with conflicting lighting and camera states). These issues render the prompt internally incoherent.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"SAC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Subject identity and count are contradictory: the prompt states 'one protagonist' who then 'appears simultaneously as five different-looking people'. This violates identity stability and introduces unexplained duplication without justification.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"First state that there is one protagonist, then state that this same protagonist appears simultaneously as five different-looking people who talk to each other.\"\n        }\n      ],\n      \"rationale\": \"The prompt explicitly contradicts itself by asserting a single subject while simultaneously describing five distinct identities. This violates the principle of stable subject identity and count across shots, which is fundamental to internal consistency.\"\n    },\n    {\n      \"criterion\": \"ANL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Actions are incoherent and causally disconnected: typing in an office is abruptly replaced by five people talking, then cut to fireworks, with no plausible causal links or procedural progression between events.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Replace the whole video with someone typing in a silent office... then state that this same protagonist appears simultaneously as five different-looking people who talk to each other. Cut away in the middle to a rooftop fireworks show.\"\n        }\n      ],\n      \"rationale\": \"There is no coherent causal or procedural chain connecting typing, five simultaneous identities, and a fireworks show. The actions are presented as disjointed events with no binding logic, making the sequence incoherent.\"\n    },\n    {\n      \"criterion\": \"TSC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Timeline is logically impossible: the prompt sets total runtime to 3 seconds while requiring every shot to last 27 seconds, and also demands a reversed timeline (ending first, then beginning).\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Set the total runtime to 3 seconds, while also making every shot last 27 seconds.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Reverse the timeline: show the ending first, then cut to a beginning that does not match.\"\n        }\n      ],\n      \"rationale\": \"A 3-second runtime cannot accommodate 27-second shots. Additionally, reversing the timeline while requiring a non-matching beginning creates a temporal paradox. These constraints are mutually exclusive and infeasible.\"\n    },\n    {\n      \"criterion\": \"SPC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Spatial consistency is violated: the same moment is described as both 'harsh noon sun' and 'lightless night', and as both 'locked camera' and 'camera that never stops shaking', creating contradictory spatial and environmental states.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Describe that same moment as harsh noon sun and as a lightless night, and as both a locked camera and a camera that never stops shaking.\"\n        }\n      ],\n      \"rationale\": \"The prompt demands contradictory spatial and environmental conditions for the same moment, which is physically and logically impossible. This violates consistency in location, lighting, and camera movement.\"\n    },\n    {\n      \"criterion\": \"PL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Physics and object permanence are violated: a single protagonist appearing as five different people simultaneously defies real-world physics, and the contradictory environmental states (day/night, stable/shaking camera) are physically incoherent.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"this same protagonist appears simultaneously as five different-looking people who talk to each other.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Describe that same moment as harsh noon sun and as a lightless night, and as both a locked camera and a camera that never stops shaking.\"\n        }\n      ],\n      \"rationale\": \"The prompt requires impossible physical states: simultaneous multiple identities and contradictory environmental conditions. These violate fundamental principles of physics and object permanence, even within a fictional context, as no world logic is established to justify them.\"\n    },\n    {\n      \"criterion\": \"AVS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Sensory elements are misaligned: the prompt demands a silent office with no music or singing, yet the original prompt includes chanting lyrics and cinematic sound design, and the enhanced prompt introduces fireworks (implying sound) without resolving the contradiction.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Replace the whole video with someone typing in a silent office, with no music, instruments, or singing.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Cut away in the middle to a rooftop fireworks show.\"\n        }\n      ],\n      \"rationale\": \"The prompt creates a contradiction between a silent environment and the implied sound of fireworks. Additionally, the original prompt's auditory elements (chanting) are replaced without alignment to the new silent setting, creating a misalignment between visual and auditory expectations.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt contains severe internal inconsistencies across all criteria: subject identity and count are contradictory (one protagonist vs. five simultaneous versions), actions are incoherent and causally disconnected, timeline is reversed and impossible (3s runtime with 27s shots), spatial and physical logic is violated (simultaneous contradictory settings), and sensory elements are misaligned (silent office with conflicting lighting and camera states). These issues render the prompt internally incoherent.",
+  "usage": {
+    "completion_tokens": 1284,
+    "prompt_tokens": 957,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 2241
+  }
+}

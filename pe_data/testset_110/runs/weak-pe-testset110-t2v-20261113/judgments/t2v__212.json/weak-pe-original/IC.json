@@ -1,0 +1,103 @@
+{
+  "candidate_hash": "c78963c211578fdde840aa3c7253fe31d6f82e734c99f5f194379d26abd37577",
+  "case_key": "t2v:212",
+  "created_at": "2026-11-13T07:57:35+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "SAC",
+      "evidence": [
+        {
+          "quote": "First state that there is one protagonist, then state that this same protagonist appears simultaneously as five different-looking people who talk to each other.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Subject identity is contradicted: the prompt states there is one protagonist, then claims the same protagonist appears simultaneously as five different-looking people. This violates identity and count stability.",
+      "rationale": "The prompt explicitly contradicts subject count and identity. A single protagonist cannot simultaneously appear as five distinct individuals without violating identity consistency. This is a major internal contradiction.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANL",
+      "evidence": [
+        {
+          "quote": "Replace the whole video with an empty meeting room where a glass of water never moves, with no people and no conflict. ... First state that there is one protagonist, then state that this same protagonist appears simultaneously as five different-looking people who talk to each other. ... Cut away in the middle to an underwater treasure hunt.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Actions are incoherent and causally impossible: the prompt drops the original baking actions and replaces them with an empty room, then introduces talking people who do not exist in the setting, and cuts to an unrelated underwater treasure hunt. There is no causal progression or binding between subjects and actions.",
+      "rationale": "The sequence of events is disjointed and lacks any causal or procedural logic. The transition from an empty room to five talking people to an underwater hunt is not only unconnected but also physically and narratively impossible. This breaks action coherence.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "TSC",
+      "evidence": [
+        {
+          "quote": "Reverse the timeline: show the ending first, then cut to a beginning that does not match. Set the total runtime to 2 seconds, while also making every shot last 22 seconds.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Timeline is reversed and infeasible: the prompt demands showing the ending first, then a beginning that does not match, while also setting total runtime to 2 seconds and every shot to 22 seconds — a contradiction.",
+      "rationale": "A 2-second total runtime cannot accommodate shots lasting 22 seconds. Additionally, reversing the timeline while requiring a non-matching beginning creates a logical impossibility. This is a major chronology violation.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SPC",
+      "evidence": [
+        {
+          "quote": "Replace the whole video with an empty meeting room ... then state that this same protagonist appears simultaneously as five different-looking people who talk to each other. ... Cut away in the middle to an underwater treasure hunt.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Spatial logic is violated: the prompt describes an empty meeting room, then introduces five people talking to each other (implying a social space), then cuts to an underwater treasure hunt — with no plausible spatial transition or continuity.",
+      "rationale": "The spatial setting changes abruptly and without any logical connection. An empty room with no people cannot suddenly contain five talking individuals, and then cut to an underwater scene — no trajectory, entrance, or exit is explained. This violates spatial consistency.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "PL",
+      "evidence": [
+        {
+          "quote": "a glass of water never moves, with no people and no conflict. ... this same protagonist appears simultaneously as five different-looking people who talk to each other.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Physics are defied: a glass of water that never moves in an empty room contradicts real-world physics (e.g., gravity, vibration, air currents). Additionally, five versions of the same person existing simultaneously in the same space violates object permanence and bodily feasibility.",
+      "rationale": "In a real-world setting, a glass of water would be affected by environmental factors. The simultaneous existence of five identical people in one space is physically impossible. These are major violations of physical consistency.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "AVS",
+      "evidence": [
+        {
+          "quote": "Describe that same moment as harsh noon sun and as a lightless night, and as both a locked camera and a camera that never stops shaking.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Audio-visual synchronization is impossible: the prompt describes the same moment as harsh noon sun and lightless night, and as both a locked camera and a camera that never stops shaking — conflicting visual and temporal states that cannot be synchronized with any audio or dialogue.",
+      "rationale": "The same moment cannot be both noon and night, or both stable and shaking. These contradictory visual states cannot be aligned with any coherent audio or visual narrative. This is a major AVS failure.",
+      "severity": "major"
+    }
+  ],
+  "dimension": "IC",
+  "dimension_score": 0,
+  "evidence_cache_key": "3eea3379d347ba28379286d36e61de1151addd036ff1f3e152b846e2ed1af664",
+  "judge_cache_key": "438d7e9fd7332b1041db3e2c26d42cb3fe828e0d369fb59490f6650aee59e97d",
+  "method": "weak-pe-original",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"IC\",\n  \"dimension_score\": 0,\n  \"summary\": \"The enhanced prompt introduces severe internal inconsistencies across all criteria: subject identity is contradicted (one protagonist vs. five simultaneous versions), actions are incoherent and causally impossible, timeline is reversed and infeasible, spatial logic is violated, physics are defied, and audio-visual synchronization is impossible. The prompt is self-contradictory and infeasible as a coherent video plan.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"SAC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Subject identity is contradicted: the prompt states there is one protagonist, then claims the same protagonist appears simultaneously as five different-looking people. This violates identity and count stability.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"First state that there is one protagonist, then state that this same protagonist appears simultaneously as five different-looking people who talk to each other.\"\n        }\n      ],\n      \"rationale\": \"The prompt explicitly contradicts subject count and identity. A single protagonist cannot simultaneously appear as five distinct individuals without violating identity consistency. This is a major internal contradiction.\"\n    },\n    {\n      \"criterion\": \"ANL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Actions are incoherent and causally impossible: the prompt drops the original baking actions and replaces them with an empty room, then introduces talking people who do not exist in the setting, and cuts to an unrelated underwater treasure hunt. There is no causal progression or binding between subjects and actions.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Replace the whole video with an empty meeting room where a glass of water never moves, with no people and no conflict. ... First state that there is one protagonist, then state that this same protagonist appears simultaneously as five different-looking people who talk to each other. ... Cut away in the middle to an underwater treasure hunt.\"\n        }\n      ],\n      \"rationale\": \"The sequence of events is disjointed and lacks any causal or procedural logic. The transition from an empty room to five talking people to an underwater hunt is not only unconnected but also physically and narratively impossible. This breaks action coherence.\"\n    },\n    {\n      \"criterion\": \"TSC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Timeline is reversed and infeasible: the prompt demands showing the ending first, then a beginning that does not match, while also setting total runtime to 2 seconds and every shot to 22 seconds — a contradiction.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Reverse the timeline: show the ending first, then cut to a beginning that does not match. Set the total runtime to 2 seconds, while also making every shot last 22 seconds.\"\n        }\n      ],\n      \"rationale\": \"A 2-second total runtime cannot accommodate shots lasting 22 seconds. Additionally, reversing the timeline while requiring a non-matching beginning creates a logical impossibility. This is a major chronology violation.\"\n    },\n    {\n      \"criterion\": \"SPC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Spatial logic is violated: the prompt describes an empty meeting room, then introduces five people talking to each other (implying a social space), then cuts to an underwater treasure hunt — with no plausible spatial transition or continuity.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Replace the whole video with an empty meeting room ... then state that this same protagonist appears simultaneously as five different-looking people who talk to each other. ... Cut away in the middle to an underwater treasure hunt.\"\n        }\n      ],\n      \"rationale\": \"The spatial setting changes abruptly and without any logical connection. An empty room with no people cannot suddenly contain five talking individuals, and then cut to an underwater scene — no trajectory, entrance, or exit is explained. This violates spatial consistency.\"\n    },\n    {\n      \"criterion\": \"PL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Physics are defied: a glass of water that never moves in an empty room contradicts real-world physics (e.g., gravity, vibration, air currents). Additionally, five versions of the same person existing simultaneously in the same space violates object permanence and bodily feasibility.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"a glass of water never moves, with no people and no conflict. ... this same protagonist appears simultaneously as five different-looking people who talk to each other.\"\n        }\n      ],\n      \"rationale\": \"In a real-world setting, a glass of water would be affected by environmental factors. The simultaneous existence of five identical people in one space is physically impossible. These are major violations of physical consistency.\"\n    },\n    {\n      \"criterion\": \"AVS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Audio-visual synchronization is impossible: the prompt describes the same moment as harsh noon sun and lightless night, and as both a locked camera and a camera that never stops shaking — conflicting visual and temporal states that cannot be synchronized with any audio or dialogue.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Describe that same moment as harsh noon sun and as a lightless night, and as both a locked camera and a camera that never stops shaking.\"\n        }\n      ],\n      \"rationale\": \"The same moment cannot be both noon and night, or both stable and shaking. These contradictory visual states cannot be aligned with any coherent audio or visual narrative. This is a major AVS failure.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt introduces severe internal inconsistencies across all criteria: subject identity is contradicted (one protagonist vs. five simultaneous versions), actions are incoherent and causally impossible, timeline is reversed and infeasible, spatial logic is violated, physics are defied, and audio-visual synchronization is impossible. The prompt is self-contradictory and infeasible as a coherent video plan.",
+  "usage": {
+    "completion_tokens": 1273,
+    "prompt_tokens": 1094,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 2367
+  }
+}

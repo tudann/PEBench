@@ -1,0 +1,123 @@
+{
+  "candidate_hash": "0bdf6c12bdfffe85b85ac1dd2de4a0139228c93e8ba128b7ad93a318087be62a",
+  "case_key": "r2v:165",
+  "created_at": "2026-11-13T08:59:42+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "SAC",
+      "evidence": [
+        {
+          "quote": "<Subject 1> is the elderly East Asian scholar from <Video 1>, with short neat black hair, wearing a black suit and black shirt...",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "<Subject 2> is the historical study environment from <Picture 1>: dark wood paneling hung with aged parchment world maps and antique regional maps...",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Subject 1 (elderly East Asian scholar) is consistently described with short black hair, black suit, and scholarly gestures throughout. Subject 2 (study wall with maps, lamp, display case) is fully preserved with no attribute drift. No renaming, duplication, or disappearance occurs.",
+      "rationale": "The subject definitions and detailed description maintain stable identity, appearance, and props. The evidence from video_1 and image_1 confirms the described attributes are consistent with the source assets.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANL",
+      "evidence": [
+        {
+          "quote": "From 0 to 2 seconds, the scholar settles into his opening with a slight nod. From 2 to 7 seconds, he delivers his first line... From 7 to 10 seconds, he pauses briefly, raising a hand in a small emphatic pointing gesture... From 10 to 15 seconds, he delivers the closing line...",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Actions form a coherent lecture progression: settling (0-2s), delivering first line with gesture (2-7s), pausing with pointing gesture (7-10s), delivering closing line (10-15s). All actions are plausible for a scholarly presentation and bind to the speaker’s identity and delivery style from video_1.",
+      "rationale": "The sequence of actions is causally coherent and matches the expected behavior of a lecturer. No dangling or incompatible events are present.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "TSC",
+      "evidence": [
+        {
+          "quote": "The camera is static, or performs only a very slow, restrained push-in across the full duration.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "景别参照视频1的半身构图...背景保持清晰不要做虚化。",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "The enhanced prompt allows a 'very slow, restrained push-in' across the full duration, while the original prompt implies a static shot. This introduces a minor temporal motion inconsistency, though it does not disrupt the overall chronology or state transitions.",
+      "rationale": "The original prompt does not explicitly forbid camera motion, but video_1’s evidence shows a static shot. The push-in is a minor deviation that does not materially affect the scene’s coherence or duration allocation.",
+      "severity": "minor"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SPC",
+      "evidence": [
+        {
+          "quote": "<Subject 1>...stands centered in frame, facing the camera. Behind him is <Subject 2>...all crisp and bathed in warm golden light.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "The speaker is positioned in front of the wall...the speaker is in the foreground, the background is a decorative wall.",
+          "source": "evidence_facts"
+        }
+      ],
+      "issue": "The subject remains centered in a waist-up medium shot throughout. The background (study wall) is fixed behind the speaker with no unexplained position swaps or movement paths. Screen direction and relative positions are consistent with the static or slow push-in camera motion.",
+      "rationale": "Spatial relationships are preserved: speaker in foreground, maps in background. No contradictory entrances/exits or orientation shifts are described.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "PL",
+      "evidence": [
+        {
+          "quote": "The background remains fully sharp and in focus at all times; no depth-of-field blur or bokeh appears anywhere.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "a desk lamp provides direct light on the desk and the central map, creating a warm, focused glow",
+          "source": "evidence_facts"
+        }
+      ],
+      "issue": "All physical elements (speaker standing, maps hanging, lamp on desk, books in case) are consistent with real-world physics. The warm lighting and static or slow push-in camera motion are plausible. No object permanence violations or bodily infeasibilities are present.",
+      "rationale": "The described scene adheres to real-world physics: gravity, contact, and object permanence are respected. The warm lighting and static composition are physically feasible.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "AVS",
+      "evidence": [
+        {
+          "quote": "From 2 to 7 seconds, he delivers his first line in a warm, scholarly voice with a gentle open-palm gesture... From 10 to 15 seconds, he delivers the closing line...",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "a male voice speaking in Mandarin Chinese",
+          "source": "evidence_facts"
+        }
+      ],
+      "issue": "The dialogue is temporally aligned with the speaker’s actions: opening nod (0-2s), first line with gesture (2-7s), pause with pointing (7-10s), closing line (10-15s). No misaligned lip-sync or premature effects are described. The voice is generated to match the scholarly rhythm from video_1.",
+      "rationale": "The dialogue timing matches the described actions. No audio-visual misalignment is indicated, and the voice is consistent with the speaker’s identity and delivery style.",
+      "severity": "none"
+    }
+  ],
+  "dimension": "IC",
+  "dimension_score": 95,
+  "evidence_cache_key": "d264431b861a78e6e9686f5032cfacb988f85dc62f1cd7d8c7e2cbc8c91e00a3",
+  "judge_cache_key": "438d7e9fd7332b1041db3e2c26d42cb3fe828e0d369fb59490f6650aee59e97d",
+  "method": "glm53_20261112_120702",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"IC\",\n  \"dimension_score\": 95,\n  \"summary\": \"The enhanced prompt maintains strong internal consistency with the original instruction, preserving subject identity, background elements, and visual style. The scholar’s appearance, the map-covered study wall, and warm golden grading are consistently described across shots. Minor issues include a slight mismatch in camera motion (original prompt implies static, enhanced allows slow push-in) and unexplained retention of the speaker’s microphone (not in evidence), but these do not materially affect coherence. No contradictions or attribute drift are present.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"SAC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"Subject 1 (elderly East Asian scholar) is consistently described with short black hair, black suit, and scholarly gestures throughout. Subject 2 (study wall with maps, lamp, display case) is fully preserved with no attribute drift. No renaming, duplication, or disappearance occurs.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"<Subject 1> is the elderly East Asian scholar from <Video 1>, with short neat black hair, wearing a black suit and black shirt...\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"<Subject 2> is the historical study environment from <Picture 1>: dark wood paneling hung with aged parchment world maps and antique regional maps...\"\n        }\n      ],\n      \"rationale\": \"The subject definitions and detailed description maintain stable identity, appearance, and props. The evidence from video_1 and image_1 confirms the described attributes are consistent with the source assets.\"\n    },\n    {\n      \"criterion\": \"ANL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"Actions form a coherent lecture progression: settling (0-2s), delivering first line with gesture (2-7s), pausing with pointing gesture (7-10s), delivering closing line (10-15s). All actions are plausible for a scholarly presentation and bind to the speaker’s identity and delivery style from video_1.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"From 0 to 2 seconds, the scholar settles into his opening with a slight nod. From 2 to 7 seconds, he delivers his first line... From 7 to 10 seconds, he pauses briefly, raising a hand in a small emphatic pointing gesture... From 10 to 15 seconds, he delivers the closing line...\"\n        }\n      ],\n      \"rationale\": \"The sequence of actions is causally coherent and matches the expected behavior of a lecturer. No dangling or incompatible events are present.\"\n    },\n    {\n      \"criterion\": \"TSC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"minor\",\n      \"issue\": \"The enhanced prompt allows a 'very slow, restrained push-in' across the full duration, while the original prompt implies a static shot. This introduces a minor temporal motion inconsistency, though it does not disrupt the overall chronology or state transitions.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"The camera is static, or performs only a very slow, restrained push-in across the full duration.\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"景别参照视频1的半身构图...背景保持清晰不要做虚化。\"\n        }\n      ],\n      \"rationale\": \"The original prompt does not explicitly forbid camera motion, but video_1’s evidence shows a static shot. The push-in is a minor deviation that does not materially affect the scene’s coherence or duration allocation.\"\n    },\n    {\n      \"criterion\": \"SPC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"The subject remains centered in a waist-up medium shot throughout. The background (study wall) is fixed behind the speaker with no unexplained position swaps or movement paths. Screen direction and relative positions are consistent with the static or slow push-in camera motion.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"<Subject 1>...stands centered in frame, facing the camera. Behind him is <Subject 2>...all crisp and bathed in warm golden light.\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"The speaker is positioned in front of the wall...the speaker is in the foreground, the background is a decorative wall.\"\n        }\n      ],\n      \"rationale\": \"Spatial relationships are preserved: speaker in foreground, maps in background. No contradictory entrances/exits or orientation shifts are described.\"\n    },\n    {\n      \"criterion\": \"PL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"All physical elements (speaker standing, maps hanging, lamp on desk, books in case) are consistent with real-world physics. The warm lighting and static or slow push-in camera motion are plausible. No object permanence violations or bodily infeasibilities are present.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"The background remains fully sharp and in focus at all times; no depth-of-field blur or bokeh appears anywhere.\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"a desk lamp provides direct light on the desk and the central map, creating a warm, focused glow\"\n        }\n      ],\n      \"rationale\": \"The described scene adheres to real-world physics: gravity, contact, and object permanence are respected. The warm lighting and static composition are physically feasible.\"\n    },\n    {\n      \"criterion\": \"AVS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"The dialogue is temporally aligned with the speaker’s actions: opening nod (0-2s), first line with gesture (2-7s), pause with pointing (7-10s), closing line (10-15s). No misaligned lip-sync or premature effects are described. The voice is generated to match the scholarly rhythm from video_1.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"From 2 to 7 seconds, he delivers his first line in a warm, scholarly voice with a gentle open-palm gesture... From 10 to 15 seconds, he delivers the closing line...\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"a male voice speaking in Mandarin Chinese\"\n        }\n      ],\n      \"rationale\": \"The dialogue timing matches the described actions. No audio-visual misalignment is indicated, and the voice is consistent with the speaker’s identity and delivery style.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt maintains strong internal consistency with the original instruction, preserving subject identity, background elements, and visual style. The scholar’s appearance, the map-covered study wall, and warm golden grading are consistently described across shots. Minor issues include a slight mismatch in camera motion (original prompt implies static, enhanced allows slow push-in) and unexplained retention of the speaker’s microphone (not in evidence), but these do not materially affect coherence. No contradictions or attribute drift are present.",
+  "usage": {
+    "completion_tokens": 1485,
+    "prompt_tokens": 3799,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 5284
+  }
+}

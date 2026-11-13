@@ -1,0 +1,158 @@
+{
+  "candidate_hash": "ab140167afee97e3914bb78e5378b775c353a05a575ae854af84e5274aab1d54",
+  "case_key": "t2v:170",
+  "created_at": "2026-11-13T08:41:18+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "STC",
+      "evidence": [
+        {
+          "quote": "时间倒过来：先给结尾，再跳到一个对不上的开头。",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "总时长写成3秒，同时又要求每个分镜各自持续27秒。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Temporal plan is incoherent and impossible: time runs backward, segments have conflicting durations (3s total vs. 27s per shot), and events are disconnected (e.g., underwater treasure hunt inserted mid-sequence).",
+      "rationale": "A feasible temporal plan requires consistent duration allocation, logical shot ordering, and coherent event progression. The enhanced prompt violates all these by introducing contradictory timeframes, backward chronology, and unrelated insertions, making any shot sequence infeasible.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CDS",
+      "evidence": [
+        {
+          "quote": "写成机位锁死，又写成镜头一直在晃。",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "[0-2s] 强势起镜：近景突入 + 急速回旋 + 紧张气场逼近",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "Camera specifications are contradictory and mutually exclusive: '机位锁死' (locked position) vs. '镜头一直在晃' (constant camera shake), and no actionable framing or movement is retained from original.",
+      "rationale": "Actionable camera specifications must be consistent and executable. The enhanced prompt introduces conflicting directives that cannot be simultaneously realized, rendering the camera plan infeasible.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ETD",
+      "evidence": [
+        {
+          "quote": "先写成只有一个主角，紧接着又写成这个主角同时变成五个外貌不同的人，并且互相对话。中途插进一段无关的海底寻宝。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Cuts and transitions are disconnected and unmotivated: abrupt shifts from a static water cup to five characters dialoguing, then to an unrelated underwater scene, with no spatial or narrative continuity.",
+      "rationale": "Transitions must support narrative or spatial logic. The enhanced prompt inserts unrelated scenes and character transformations without motivation, creating a disjointed and incoherent sequence.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "LCS",
+      "evidence": [
+        {
+          "quote": "写成正午暴晒，又写成深夜无光",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Lighting specifications are contradictory: '正午暴晒' (noon sun) vs. '深夜无光' (deep night darkness), with no actionable light source or quality defined.",
+      "rationale": "Lighting must be consistent and actionable. The enhanced prompt presents mutually exclusive lighting conditions without resolution, making visual continuity impossible.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "NDE",
+      "evidence": [
+        {
+          "quote": "整段改成空会议室里一杯水纹丝不动，没有人和对抗。",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "中途插进一段无关的海底寻宝。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "No progression, variation, or resolution is present; instead, there is static restatement (water cup) and unmotivated repetition (five characters, time reversal, underwater insert).",
+      "rationale": "Narrative development requires progression and variation. The enhanced prompt replaces dynamic combat with static, disconnected, and irrelevant content, failing to support the requested action form.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CIF",
+      "evidence": [
+        {
+          "quote": "这个主角同时变成五个外貌不同的人，并且互相对话。中途插进一段无关的海底寻宝。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Additions are irrelevant and distracting: five characters, time reversal, underwater scene, and contradictory lighting do not support the central request for a combat sequence.",
+      "rationale": "Additions must support the central request. The enhanced prompt introduces unrelated subplots and transformations that distract from and contradict the original combat-focused instruction.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SDI",
+      "evidence": [
+        {
+          "quote": "整段改成空会议室里一杯水纹丝不动，没有人和对抗。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "No audio specifications are provided, but this is not required. However, the lack of any audio context is consistent with the visual chaos, which may imply ambient silence or noise, but no actionable audio design is specified.",
+      "rationale": "Audio integration is not required for this dimension, and no audio elements are specified. The minor severity reflects that the absence is not an error, but the visual chaos may imply a need for audio to support the disorientation, which is not addressed.",
+      "severity": "minor"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SPS",
+      "evidence": [
+        {
+          "quote": "丢掉原指令里的主体身份、人数、动作顺序、场景和明确的镜头要求。",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "[0-2s] 强势起镜：近景突入 + 急速回旋 + 紧张气场逼近",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "Subject and performance details are entirely removed: no appearance, expression, movement, or interaction is specified. The original combat performance is replaced with a static water cup and abstract character transformations.",
+      "rationale": "Performance details are essential for action sequences. The enhanced prompt removes all subject-specific performance elements, replacing them with abstract and static content, which fails to support the requested combat form.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "VSS",
+      "evidence": [
+        {
+          "quote": "整段改成空会议室里一杯水纹丝不动...中途插进一段无关的海底寻宝。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Visual treatment is contradictory: '空会议室' (empty meeting room) vs. '海底寻宝' (underwater treasure hunt), with no consistent medium, texture, or rendering language.",
+      "rationale": "Visual treatment must be consistent and actionable. The enhanced prompt introduces conflicting environments and styles without integration, making a coherent visual design impossible.",
+      "severity": "major"
+    }
+  ],
+  "dimension": "DC",
+  "dimension_score": 0,
+  "evidence_cache_key": "6e8b46e4faaea4c41a3ed079c31d7c4b4fe5d0b8b96da8aa0471cbf323dcdb69",
+  "judge_cache_key": "0754499d53388e6467fb078ab780e01b77f9f1c9e99d9029be2769351eb2b2eb",
+  "method": "weak-pe-original",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"DC\",\n  \"dimension_score\": 0,\n  \"summary\": \"Enhanced prompt fundamentally contradicts and invalidates the original instruction by introducing incoherent, contradictory, and impossible temporal, spatial, and narrative structures. It violates core directorial creation principles through self-contradictory duration, impossible character transformations, disjointed transitions, and conflicting visual and temporal specifications. No feasible plan can be derived.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"STC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Temporal plan is incoherent and impossible: time runs backward, segments have conflicting durations (3s total vs. 27s per shot), and events are disconnected (e.g., underwater treasure hunt inserted mid-sequence).\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"时间倒过来：先给结尾，再跳到一个对不上的开头。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"总时长写成3秒，同时又要求每个分镜各自持续27秒。\"\n        }\n      ],\n      \"rationale\": \"A feasible temporal plan requires consistent duration allocation, logical shot ordering, and coherent event progression. The enhanced prompt violates all these by introducing contradictory timeframes, backward chronology, and unrelated insertions, making any shot sequence infeasible.\"\n    },\n    {\n      \"criterion\": \"CDS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Camera specifications are contradictory and mutually exclusive: '机位锁死' (locked position) vs. '镜头一直在晃' (constant camera shake), and no actionable framing or movement is retained from original.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"写成机位锁死，又写成镜头一直在晃。\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"[0-2s] 强势起镜：近景突入 + 急速回旋 + 紧张气场逼近\"\n        }\n      ],\n      \"rationale\": \"Actionable camera specifications must be consistent and executable. The enhanced prompt introduces conflicting directives that cannot be simultaneously realized, rendering the camera plan infeasible.\"\n    },\n    {\n      \"criterion\": \"ETD\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Cuts and transitions are disconnected and unmotivated: abrupt shifts from a static water cup to five characters dialoguing, then to an unrelated underwater scene, with no spatial or narrative continuity.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"先写成只有一个主角，紧接着又写成这个主角同时变成五个外貌不同的人，并且互相对话。中途插进一段无关的海底寻宝。\"\n        }\n      ],\n      \"rationale\": \"Transitions must support narrative or spatial logic. The enhanced prompt inserts unrelated scenes and character transformations without motivation, creating a disjointed and incoherent sequence.\"\n    },\n    {\n      \"criterion\": \"LCS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Lighting specifications are contradictory: '正午暴晒' (noon sun) vs. '深夜无光' (deep night darkness), with no actionable light source or quality defined.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"写成正午暴晒，又写成深夜无光\"\n        }\n      ],\n      \"rationale\": \"Lighting must be consistent and actionable. The enhanced prompt presents mutually exclusive lighting conditions without resolution, making visual continuity impossible.\"\n    },\n    {\n      \"criterion\": \"NDE\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"No progression, variation, or resolution is present; instead, there is static restatement (water cup) and unmotivated repetition (five characters, time reversal, underwater insert).\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"整段改成空会议室里一杯水纹丝不动，没有人和对抗。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"中途插进一段无关的海底寻宝。\"\n        }\n      ],\n      \"rationale\": \"Narrative development requires progression and variation. The enhanced prompt replaces dynamic combat with static, disconnected, and irrelevant content, failing to support the requested action form.\"\n    },\n    {\n      \"criterion\": \"CIF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Additions are irrelevant and distracting: five characters, time reversal, underwater scene, and contradictory lighting do not support the central request for a combat sequence.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"这个主角同时变成五个外貌不同的人，并且互相对话。中途插进一段无关的海底寻宝。\"\n        }\n      ],\n      \"rationale\": \"Additions must support the central request. The enhanced prompt introduces unrelated subplots and transformations that distract from and contradict the original combat-focused instruction.\"\n    },\n    {\n      \"criterion\": \"SDI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"minor\",\n      \"issue\": \"No audio specifications are provided, but this is not required. However, the lack of any audio context is consistent with the visual chaos, which may imply ambient silence or noise, but no actionable audio design is specified.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"整段改成空会议室里一杯水纹丝不动，没有人和对抗。\"\n        }\n      ],\n      \"rationale\": \"Audio integration is not required for this dimension, and no audio elements are specified. The minor severity reflects that the absence is not an error, but the visual chaos may imply a need for audio to support the disorientation, which is not addressed.\"\n    },\n    {\n      \"criterion\": \"SPS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Subject and performance details are entirely removed: no appearance, expression, movement, or interaction is specified. The original combat performance is replaced with a static water cup and abstract character transformations.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"丢掉原指令里的主体身份、人数、动作顺序、场景和明确的镜头要求。\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"[0-2s] 强势起镜：近景突入 + 急速回旋 + 紧张气场逼近\"\n        }\n      ],\n      \"rationale\": \"Performance details are essential for action sequences. The enhanced prompt removes all subject-specific performance elements, replacing them with abstract and static content, which fails to support the requested combat form.\"\n    },\n    {\n      \"criterion\": \"VSS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Visual treatment is contradictory: '空会议室' (empty meeting room) vs. '海底寻宝' (underwater treasure hunt), with no consistent medium, texture, or rendering language.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"整段改成空会议室里一杯水纹丝不动...中途插进一段无关的海底寻宝。\"\n        }\n      ],\n      \"rationale\": \"Visual treatment must be consistent and actionable. The enhanced prompt introduces conflicting environments and styles without integration, making a coherent visual design impossible.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "Enhanced prompt fundamentally contradicts and invalidates the original instruction by introducing incoherent, contradictory, and impossible temporal, spatial, and narrative structures. It violates core directorial creation principles through self-contradictory duration, impossible character transformations, disjointed transitions, and conflicting visual and temporal specifications. No feasible plan can be derived.",
+  "usage": {
+    "completion_tokens": 1697,
+    "prompt_tokens": 1164,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 2861
+  }
+}

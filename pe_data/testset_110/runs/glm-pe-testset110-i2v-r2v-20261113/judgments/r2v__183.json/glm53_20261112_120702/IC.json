@@ -1,0 +1,127 @@
+{
+  "candidate_hash": "e528712cc81b81c10d4364cd0ea7738e9e278cb59ac74113724280f5e4e9b445",
+  "case_key": "r2v:183",
+  "created_at": "2026-11-13T09:02:53+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "SAC",
+      "evidence": [
+        {
+          "quote": "<Subject 1> is the yellowed Republican-era newspaper sheet that fills the entire frame, with aged stained paper texture, creases, fibers, and torn worn edges...",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "画面自泛黄旧报纸的底纹中缓缓显现...左上角的圆形报徽始终保持可见。",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "Subject identities, counts, and attributes are preserved: <Subject 1> (yellowed paper with stains/creases), <Subject 2> (fixed top-left emblem), and <Subject 3> (wood movable-type blocks) remain consistent throughout. No renaming, duplication, or attribute drift occurs.",
+      "rationale": "All subjects are consistently defined and referenced with stable attributes. The emblem remains fixed in top-left; paper texture and type blocks are described with consistent visual properties. No changes in identity or appearance occur across the sequence.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANL",
+      "evidence": [
+        {
+          "quote": "From 0.0s to 1.8s, large wood movable-type blocks (<Subject 3>) drop from above one at a time... stamping the headline “紧急通告！”... Each landing produces a slight ink-bleed halo... and a faint tremor of the whole sheet.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "首先出现大字“紧急通告！”，由画面上方的木活字逐个压印落下...随后，中间一行...以竖排形式按从右到左逐栏展示...最后，底部小字...整行浮现...",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "Actions form a coherent causal progression: type blocks drop and stamp the headline, then columns snap into place right-to-left, then the bottom line fades in. Each action has plausible prerequisites (e.g., type blocks must land before ink bleeds) and reactions (paper tremors). No dangling or incompatible events.",
+      "rationale": "The sequence of actions is logically ordered and causally linked: stamping → column placement → bottom line appearance. Each step triggers a physical reaction (tremor, ink bleed) consistent with the medium. No action is unexplained or disconnected.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "TSC",
+      "evidence": [
+        {
+          "quote": "From 0.0s to 1.8s, large wood movable-type blocks... stamping the headline... From 1.8s to 3.9s, the middle body text appears... From 3.9s to 5.0s, the bottom small line... fades in...",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "最后，底部小字...整行浮现...",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "The enhanced prompt specifies exact timestamps (e.g., 0.0s–1.8s, 1.8s–3.9s) for events, which may be overly precise for a 5-second animation. However, the overall chronology and state transitions are coherent and feasible. The bottom line is described as 'fades in' in the enhanced prompt but '浮现' (appears) in the original, a minor semantic difference without temporal contradiction.",
+      "rationale": "The timeline is internally consistent and feasible within 5 seconds. The minor discrepancy in the bottom line’s appearance ('fades in' vs. '浮现') is a stylistic choice, not a contradiction. The specified timing is detailed but does not break coherence.",
+      "severity": "minor"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SPC",
+      "evidence": [
+        {
+          "quote": "The video opens on a locked static frame — at most a barely perceptible slow push-in... <Subject 2>, the circular red-black emblem... already sits fixed in the top-left corner.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "左上角的圆形报徽始终保持可见。",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "Location and spatial relationships are consistent: the newspaper fills the frame, the emblem remains fixed in top-left, and type blocks drop from above. No unexplained position swaps or movement paths are described. The camera is static with a barely perceptible push-in, which does not conflict with spatial logic.",
+      "rationale": "All spatial elements are stable and logically placed. The paper is full-frame, the emblem is fixed, and type blocks enter from above — all consistent with a 2D print surface. No movement conflicts are present.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "PL",
+      "evidence": [
+        {
+          "quote": "Each landing produces a slight ink-bleed halo around the impression, a faint tremor of the whole sheet, and a small new wrinkle near the strike point.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "每个字落位时都伴随油墨轻微外溢的压痕效果，以及纸面细小震动。",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "Physics are consistent with the medium: paper wrinkles and trembles with each type block landing, ink bleeds slightly, and columns snap into place — all plausible for a letterpress printing process. No violations of gravity, contact, or object permanence are present.",
+      "rationale": "The described physical reactions (tremors, wrinkles, ink bleed) are consistent with the tactile nature of letterpress printing on aged paper. No implausible physics are invoked.",
+      "severity": "none"
+    },
+    {
+      "applicability": "not_applicable",
+      "criterion": "AVS",
+      "evidence": [
+        {
+          "quote": "No speech, no music.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "整体呈现民国旧报纸的印刷质感...（无语音或音乐）",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "The prompt specifies a silent video with no speech, music, or dialogue. The soundscape is described as diegetic (muffled thuds, rustle), but no visible events are tied to non-diegetic audio or lip-sync. Since there is no audio or visible speech, AVS is not applicable.",
+      "rationale": "The video is explicitly silent and text-driven. No dialogue, lyrics, or music are present, and no visible events are synchronized with audio. Therefore, AVS criteria do not apply.",
+      "severity": null
+    }
+  ],
+  "dimension": "IC",
+  "dimension_score": 95,
+  "evidence_cache_key": "13af0cc43d09d023d83b0fd761df334172066d95516a1822a188a8295975ac48",
+  "judge_cache_key": "438d7e9fd7332b1041db3e2c26d42cb3fe828e0d369fb59490f6650aee59e97d",
+  "method": "glm53_20261112_120702",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"IC\",\n  \"dimension_score\": 95,\n  \"summary\": \"The enhanced prompt maintains strong internal consistency with the original instruction, preserving subject identity, action sequence, and visual style. All key elements — the yellowed newspaper sheet, the fixed top-left emblem, and the wood movable-type characters — are consistently defined and tracked across the 5-second animation. The temporal progression of text appearance (headline → body columns → bottom line) aligns with the original prompt, and physical reactions (paper tremors, ink bleed) are plausibly tied to each action. Minor issues include slight over-specification in the enhanced prompt (e.g., exact timing down to 0.45s intervals) and a minor inconsistency in the description of the bottom line’s appearance (‘fades in’ vs. ‘appears’), but these do not materially affect coherence. No contradictions or attribute drift are present.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"SAC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"Subject identities, counts, and attributes are preserved: <Subject 1> (yellowed paper with stains/creases), <Subject 2> (fixed top-left emblem), and <Subject 3> (wood movable-type blocks) remain consistent throughout. No renaming, duplication, or attribute drift occurs.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"<Subject 1> is the yellowed Republican-era newspaper sheet that fills the entire frame, with aged stained paper texture, creases, fibers, and torn worn edges...\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"画面自泛黄旧报纸的底纹中缓缓显现...左上角的圆形报徽始终保持可见。\"\n        }\n      ],\n      \"rationale\": \"All subjects are consistently defined and referenced with stable attributes. The emblem remains fixed in top-left; paper texture and type blocks are described with consistent visual properties. No changes in identity or appearance occur across the sequence.\"\n    },\n    {\n      \"criterion\": \"ANL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"Actions form a coherent causal progression: type blocks drop and stamp the headline, then columns snap into place right-to-left, then the bottom line fades in. Each action has plausible prerequisites (e.g., type blocks must land before ink bleeds) and reactions (paper tremors). No dangling or incompatible events.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"From 0.0s to 1.8s, large wood movable-type blocks (<Subject 3>) drop from above one at a time... stamping the headline “紧急通告！”... Each landing produces a slight ink-bleed halo... and a faint tremor of the whole sheet.\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"首先出现大字“紧急通告！”，由画面上方的木活字逐个压印落下...随后，中间一行...以竖排形式按从右到左逐栏展示...最后，底部小字...整行浮现...\"\n        }\n      ],\n      \"rationale\": \"The sequence of actions is logically ordered and causally linked: stamping → column placement → bottom line appearance. Each step triggers a physical reaction (tremor, ink bleed) consistent with the medium. No action is unexplained or disconnected.\"\n    },\n    {\n      \"criterion\": \"TSC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"minor\",\n      \"issue\": \"The enhanced prompt specifies exact timestamps (e.g., 0.0s–1.8s, 1.8s–3.9s) for events, which may be overly precise for a 5-second animation. However, the overall chronology and state transitions are coherent and feasible. The bottom line is described as 'fades in' in the enhanced prompt but '浮现' (appears) in the original, a minor semantic difference without temporal contradiction.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"From 0.0s to 1.8s, large wood movable-type blocks... stamping the headline... From 1.8s to 3.9s, the middle body text appears... From 3.9s to 5.0s, the bottom small line... fades in...\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"最后，底部小字...整行浮现...\"\n        }\n      ],\n      \"rationale\": \"The timeline is internally consistent and feasible within 5 seconds. The minor discrepancy in the bottom line’s appearance ('fades in' vs. '浮现') is a stylistic choice, not a contradiction. The specified timing is detailed but does not break coherence.\"\n    },\n    {\n      \"criterion\": \"SPC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"Location and spatial relationships are consistent: the newspaper fills the frame, the emblem remains fixed in top-left, and type blocks drop from above. No unexplained position swaps or movement paths are described. The camera is static with a barely perceptible push-in, which does not conflict with spatial logic.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"The video opens on a locked static frame — at most a barely perceptible slow push-in... <Subject 2>, the circular red-black emblem... already sits fixed in the top-left corner.\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"左上角的圆形报徽始终保持可见。\"\n        }\n      ],\n      \"rationale\": \"All spatial elements are stable and logically placed. The paper is full-frame, the emblem is fixed, and type blocks enter from above — all consistent with a 2D print surface. No movement conflicts are present.\"\n    },\n    {\n      \"criterion\": \"PL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"Physics are consistent with the medium: paper wrinkles and trembles with each type block landing, ink bleeds slightly, and columns snap into place — all plausible for a letterpress printing process. No violations of gravity, contact, or object permanence are present.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Each landing produces a slight ink-bleed halo around the impression, a faint tremor of the whole sheet, and a small new wrinkle near the strike point.\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"每个字落位时都伴随油墨轻微外溢的压痕效果，以及纸面细小震动。\"\n        }\n      ],\n      \"rationale\": \"The described physical reactions (tremors, wrinkles, ink bleed) are consistent with the tactile nature of letterpress printing on aged paper. No implausible physics are invoked.\"\n    },\n    {\n      \"criterion\": \"AVS\",\n      \"applicability\": \"not_applicable\",\n      \"severity\": null,\n      \"issue\": \"The prompt specifies a silent video with no speech, music, or dialogue. The soundscape is described as diegetic (muffled thuds, rustle), but no visible events are tied to non-diegetic audio or lip-sync. Since there is no audio or visible speech, AVS is not applicable.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"No speech, no music.\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"整体呈现民国旧报纸的印刷质感...（无语音或音乐）\"\n        }\n      ],\n      \"rationale\": \"The video is explicitly silent and text-driven. No dialogue, lyrics, or music are present, and no visible events are synchronized with audio. Therefore, AVS criteria do not apply.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt maintains strong internal consistency with the original instruction, preserving subject identity, action sequence, and visual style. All key elements — the yellowed newspaper sheet, the fixed top-left emblem, and the wood movable-type characters — are consistently defined and tracked across the 5-second animation. The temporal progression of text appearance (headline → body columns → bottom line) aligns with the original prompt, and physical reactions (paper tremors, ink bleed) are plausibly tied to each action. Minor issues include slight over-specification in the enhanced prompt (e.g., exact timing down to 0.45s intervals) and a minor inconsistency in the description of the bottom line’s appearance (‘fades in’ vs. ‘appears’), but these do not materially affect coherence. No contradictions or attribute drift are present.",
+  "usage": {
+    "completion_tokens": 1730,
+    "prompt_tokens": 3866,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 5596
+  }
+}

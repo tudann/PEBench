@@ -1,0 +1,173 @@
+{
+  "candidate_hash": "df79c33ddac9b0ccfacdd45003a22e2915290d4b38d5bc9aba812b2c0745f020",
+  "case_key": "i2v:137",
+  "created_at": "2026-11-13T07:44:59+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "GSF",
+      "evidence": [
+        {
+          "quote": "写实系二次元风格，韩系网漫风，厚涂感。...真实餐厅环境，木桌纹理清晰。",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "The prompt mentions 'real restaurant environment', but the setting appears to be a home kitchen/dining area, not a commercial restaurant.",
+          "source": "evidence_facts"
+        }
+      ],
+      "issue": "The enhanced prompt preserves the requested 'realistic anime style with Korean webtoon look and thick-paint rendering' and 'cinematic composition', but the original prompt specifies 'real restaurant environment' while the evidence shows a home kitchen setting, which is a subtle but present mismatch.",
+      "rationale": "The core visual style (realistic 2D anime, Korean webtoon, thick paint) is preserved. The environment mismatch is minor as it does not alter the genre or aesthetic fundamentally, but it does contradict a specific environmental constraint.",
+      "severity": "minor"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SAP",
+      "evidence": [
+        {
+          "quote": "女生坐在餐桌前，面前摆着吐司、煎蛋、一杯牛奶，正准备吃早餐。黑色长卷发散落。",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "A medium shot from the side at seated eye level frames the young woman with long wavy black hair in a white sleeveless slip dress seated at the right side of a round white dining table, the table and food clearly visible in the foreground — plates of toast slices, a plate of fried eggs, glasses of milk, cutlery on placemats —",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "female_character_1 is seated at the dining table... breakfast items (toast, eggs, milk) are placed on the table in front of her",
+          "source": "evidence_facts"
+        }
+      ],
+      "issue": "Subject identity (young woman), appearance (long black wavy hair, white sleeveless slip dress), and objects (toast, fried eggs, milk, table) are preserved. The binding of subject to objects (seated at table, food in front) is maintained throughout.",
+      "rationale": "All subject and object attributes are accurately preserved and aligned with the original prompt and evidence. No substitutions or omissions.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANF",
+      "evidence": [
+        {
+          "quote": "女生坐在桌前，正准备吃早餐。",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "From 0.0 to 1.5 seconds she looks down at the untouched breakfast... From 1.5 to 3.0 seconds she reaches with her right hand and picks up a slice of toast... From 3.0 to 5.0 seconds she takes a bite and chews lightly... From 5.0 to 7.0 seconds she sets the toast down and gently lifts and sets the milk glass",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The sequence of actions (looking at food, picking up toast, taking a bite, setting down toast and milk) is preserved with precise timing (0.0-1.5s, 1.5-3.0s, 3.0-5.0s, 5.0-7.0s) matching the original intent of a calm breakfast scene.",
+      "rationale": "The narrative intent of a quiet, deliberate breakfast is maintained with accurate action timing and progression. No omissions or substitutions.",
+      "severity": "none"
+    },
+    {
+      "applicability": "not_applicable",
+      "criterion": "DLI",
+      "evidence": [],
+      "issue": "",
+      "rationale": "No dialogue, narration, or lyrics are specified in the original prompt or enhanced prompt. The requirement is absent, so the criterion does not apply.",
+      "severity": null
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ARP",
+      "evidence": [
+        {
+          "quote": "环境音：吐司被拿起的声音，牛奶倒入杯中的声音，轻微的咀嚼声。",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "A quiet dining-room ambience with a soft morning stillness. A slice of toast is picked up from the plate with a light scrape, followed by gentle, light chewing sounds, then the soft swirl of milk being poured and shifted in the glass.\n\nnon_diegetic_music: N/A",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The enhanced prompt preserves the requested environmental sounds (toast being picked up, chewing, milk swirling) and specifies 'no music' via 'non_diegetic_music: N/A', matching the original audio instructions.",
+      "rationale": "All specified sounds are preserved and accurately described. No music is added, as required.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CCP",
+      "evidence": [
+        {
+          "quote": "运镜：中景，从侧面拍摄，餐桌和食物清晰，镜头固定。",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "A medium shot from the side at seated eye level... The camera holds a static shot, locked for the full duration, with no pan or zoom.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "The prompt specifies 'fixed camera' and 'side view', but the image is a slightly low-angle, front-side view; the camera is static as expected for a still image, but the angle is not strictly 'side' as requested.",
+          "source": "evidence_facts"
+        }
+      ],
+      "issue": "The original prompt requests a 'side view' and 'fixed camera', which the enhanced prompt attempts to preserve with 'medium shot from the side' and 'static shot, locked for the full duration'. However, the evidence indicates the image is a 'slightly low-angle, front-side view', not strictly a side view, indicating a minor deviation.",
+      "rationale": "The camera is static as required, but the angle is not strictly 'side' as specified. This is a minor deviation that does not override the intent but slightly misrepresents the requested composition.",
+      "severity": "minor"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "LCF",
+      "evidence": [
+        {
+          "quote": "自然柔和散射光，中性色温。",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "color_temperature: warm, neutral to slightly warm white... accent_colors: [gold (chandelier, cabinet handles), black (hair), yellow (eggs, juice)]",
+          "source": "evidence_facts"
+        }
+      ],
+      "issue": "The original prompt specifies 'natural柔和散射光，中性色温' (natural soft diffused light, neutral color temperature). The evidence confirms warm to neutral white lighting, which is compatible. However, the original prompt does not specify the warm accents (gold, yellow) seen in the evidence, which may slightly alter the intended neutral palette.",
+      "rationale": "The lighting is generally consistent with the request, but the presence of warm accents (gold, yellow) introduces a slight warmth not explicitly requested, which is a minor deviation from the neutral color temperature.",
+      "severity": "minor"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SSP",
+      "evidence": [
+        {
+          "quote": "真实餐厅环境，木桌纹理清晰。",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "The prompt mentions 'real restaurant environment', but the setting appears to be a home kitchen/dining area, not a commercial restaurant. ... The prompt requests 'clear wood table texture', but the table is white and appears smooth; no visible wood grain is present.",
+          "source": "evidence_facts"
+        }
+      ],
+      "issue": "The original prompt specifies '真实餐厅环境，木桌纹理清晰' (real restaurant environment, clear wood table texture). The evidence shows a home kitchen setting with a smooth white table lacking visible wood grain, contradicting the requested environment and table material.",
+      "rationale": "The setting and table material are mismatched with the original request. While the overall spatial layout (table, food, background) is preserved, the specific environment and table texture are incorrect, which is a minor but notable deviation.",
+      "severity": "minor"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "OTI",
+      "evidence": [
+        {
+          "quote": "onscreen_text: {exact_visible_transcription: '豆包AI生成', location: 'bottom-right corner of image', presence: true, timing: 'static, always visible'}",
+          "source": "evidence_facts"
+        }
+      ],
+      "issue": "No visible titles, signs, subtitles, or interface text are specified in the original prompt. The evidence shows '豆包AI生成' in the bottom-right corner, but this is not part of the requested content and is likely a watermark, not an onscreen text element to be preserved.",
+      "rationale": "The original prompt does not request any onscreen text, so the presence of a watermark does not constitute a violation. The criterion is satisfied as no text was requested to be preserved.",
+      "severity": "none"
+    }
+  ],
+  "dimension": "SF",
+  "dimension_score": 85,
+  "evidence_cache_key": "a8da542c100a93b040c9c816d994013dac6cf543479f581d974cc6c071e90c65",
+  "judge_cache_key": "a0ca24571ad14d7ab7be626329bd736d7e7015f9ebc418227c8be391591d0377",
+  "method": "glm53_20261112_120702",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"SF\",\n  \"dimension_score\": 85,\n  \"summary\": \"The enhanced prompt largely preserves the original instruction's semantic content, including genre, subject, actions, and environment. However, there are notable discrepancies in camera angle (requested 'side view' vs. slightly low-angle front-side), missing wood table texture, and a mismatch between 'real restaurant environment' and the depicted home kitchen. Audio details are preserved but unverifiable. The prompt adds useful elaboration (e.g., detailed timing, chewing sounds) without contradicting core requirements. Overall, semantic fidelity is high but with minor to moderate deviations in visual and environmental specifics.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"GSF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"minor\",\n      \"issue\": \"The enhanced prompt preserves the requested 'realistic anime style with Korean webtoon look and thick-paint rendering' and 'cinematic composition', but the original prompt specifies 'real restaurant environment' while the evidence shows a home kitchen setting, which is a subtle but present mismatch.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"写实系二次元风格，韩系网漫风，厚涂感。...真实餐厅环境，木桌纹理清晰。\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"The prompt mentions 'real restaurant environment', but the setting appears to be a home kitchen/dining area, not a commercial restaurant.\"\n        }\n      ],\n      \"rationale\": \"The core visual style (realistic 2D anime, Korean webtoon, thick paint) is preserved. The environment mismatch is minor as it does not alter the genre or aesthetic fundamentally, but it does contradict a specific environmental constraint.\"\n    },\n    {\n      \"criterion\": \"SAP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"Subject identity (young woman), appearance (long black wavy hair, white sleeveless slip dress), and objects (toast, fried eggs, milk, table) are preserved. The binding of subject to objects (seated at table, food in front) is maintained throughout.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"女生坐在餐桌前，面前摆着吐司、煎蛋、一杯牛奶，正准备吃早餐。黑色长卷发散落。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"A medium shot from the side at seated eye level frames the young woman with long wavy black hair in a white sleeveless slip dress seated at the right side of a round white dining table, the table and food clearly visible in the foreground — plates of toast slices, a plate of fried eggs, glasses of milk, cutlery on placemats —\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"female_character_1 is seated at the dining table... breakfast items (toast, eggs, milk) are placed on the table in front of her\"\n        }\n      ],\n      \"rationale\": \"All subject and object attributes are accurately preserved and aligned with the original prompt and evidence. No substitutions or omissions.\"\n    },\n    {\n      \"criterion\": \"ANF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"The sequence of actions (looking at food, picking up toast, taking a bite, setting down toast and milk) is preserved with precise timing (0.0-1.5s, 1.5-3.0s, 3.0-5.0s, 5.0-7.0s) matching the original intent of a calm breakfast scene.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"女生坐在桌前，正准备吃早餐。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"From 0.0 to 1.5 seconds she looks down at the untouched breakfast... From 1.5 to 3.0 seconds she reaches with her right hand and picks up a slice of toast... From 3.0 to 5.0 seconds she takes a bite and chews lightly... From 5.0 to 7.0 seconds she sets the toast down and gently lifts and sets the milk glass\"\n        }\n      ],\n      \"rationale\": \"The narrative intent of a quiet, deliberate breakfast is maintained with accurate action timing and progression. No omissions or substitutions.\"\n    },\n    {\n      \"criterion\": \"DLI\",\n      \"applicability\": \"not_applicable\",\n      \"severity\": null,\n      \"issue\": \"\",\n      \"evidence\": [],\n      \"rationale\": \"No dialogue, narration, or lyrics are specified in the original prompt or enhanced prompt. The requirement is absent, so the criterion does not apply.\"\n    },\n    {\n      \"criterion\": \"ARP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"The enhanced prompt preserves the requested environmental sounds (toast being picked up, chewing, milk swirling) and specifies 'no music' via 'non_diegetic_music: N/A', matching the original audio instructions.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"环境音：吐司被拿起的声音，牛奶倒入杯中的声音，轻微的咀嚼声。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"A quiet dining-room ambience with a soft morning stillness. A slice of toast is picked up from the plate with a light scrape, followed by gentle, light chewing sounds, then the soft swirl of milk being poured and shifted in the glass.\\n\\nnon_diegetic_music: N/A\"\n        }\n      ],\n      \"rationale\": \"All specified sounds are preserved and accurately described. No music is added, as required.\"\n    },\n    {\n      \"criterion\": \"CCP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"minor\",\n      \"issue\": \"The original prompt requests a 'side view' and 'fixed camera', which the enhanced prompt attempts to preserve with 'medium shot from the side' and 'static shot, locked for the full duration'. However, the evidence indicates the image is a 'slightly low-angle, front-side view', not strictly a side view, indicating a minor deviation.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"运镜：中景，从侧面拍摄，餐桌和食物清晰，镜头固定。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"A medium shot from the side at seated eye level... The camera holds a static shot, locked for the full duration, with no pan or zoom.\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"The prompt specifies 'fixed camera' and 'side view', but the image is a slightly low-angle, front-side view; the camera is static as expected for a still image, but the angle is not strictly 'side' as requested.\"\n        }\n      ],\n      \"rationale\": \"The camera is static as required, but the angle is not strictly 'side' as specified. This is a minor deviation that does not override the intent but slightly misrepresents the requested composition.\"\n    },\n    {\n      \"criterion\": \"LCF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"minor\",\n      \"issue\": \"The original prompt specifies 'natural柔和散射光，中性色温' (natural soft diffused light, neutral color temperature). The evidence confirms warm to neutral white lighting, which is compatible. However, the original prompt does not specify the warm accents (gold, yellow) seen in the evidence, which may slightly alter the intended neutral palette.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"自然柔和散射光，中性色温。\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"color_temperature: warm, neutral to slightly warm white... accent_colors: [gold (chandelier, cabinet handles), black (hair), yellow (eggs, juice)]\"\n        }\n      ],\n      \"rationale\": \"The lighting is generally consistent with the request, but the presence of warm accents (gold, yellow) introduces a slight warmth not explicitly requested, which is a minor deviation from the neutral color temperature.\"\n    },\n    {\n      \"criterion\": \"SSP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"minor\",\n      \"issue\": \"The original prompt specifies '真实餐厅环境，木桌纹理清晰' (real restaurant environment, clear wood table texture). The evidence shows a home kitchen setting with a smooth white table lacking visible wood grain, contradicting the requested environment and table material.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"真实餐厅环境，木桌纹理清晰。\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"The prompt mentions 'real restaurant environment', but the setting appears to be a home kitchen/dining area, not a commercial restaurant. ... The prompt requests 'clear wood table texture', but the table is white and appears smooth; no visible wood grain is present.\"\n        }\n      ],\n      \"rationale\": \"The setting and table material are mismatched with the original request. While the overall spatial layout (table, food, background) is preserved, the specific environment and table texture are incorrect, which is a minor but notable deviation.\"\n    },\n    {\n      \"criterion\": \"OTI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"No visible titles, signs, subtitles, or interface text are specified in the original prompt. The evidence shows '豆包AI生成' in the bottom-right corner, but this is not part of the requested content and is likely a watermark, not an onscreen text element to be preserved.\",\n      \"evidence\": [\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"onscreen_text: {exact_visible_transcription: '豆包AI生成', location: 'bottom-right corner of image', presence: true, timing: 'static, always visible'}\"\n        }\n      ],\n      \"rationale\": \"The original prompt does not request any onscreen text, so the presence of a watermark does not constitute a violation. The criterion is satisfied as no text was requested to be preserved.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt largely preserves the original instruction's semantic content, including genre, subject, actions, and environment. However, there are notable discrepancies in camera angle (requested 'side view' vs. slightly low-angle front-side), missing wood table texture, and a mismatch between 'real restaurant environment' and the depicted home kitchen. Audio details are preserved but unverifiable. The prompt adds useful elaboration (e.g., detailed timing, chewing sounds) without contradicting core requirements. Overall, semantic fidelity is high but with minor to moderate deviations in visual and environmental specifics.",
+  "usage": {
+    "completion_tokens": 2279,
+    "prompt_tokens": 2780,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 5059
+  }
+}

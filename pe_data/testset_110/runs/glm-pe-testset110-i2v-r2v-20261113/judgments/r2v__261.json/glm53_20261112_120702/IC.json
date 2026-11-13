@@ -1,0 +1,128 @@
+{
+  "candidate_hash": "add9ddeed6935bfb8ddfb0e103e28b2be297bea370e9c886560612f1416e4ae4",
+  "case_key": "r2v:261",
+  "created_at": "2026-11-13T09:14:14+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "SAC",
+      "evidence": [
+        {
+          "quote": "<Subject 1> is the host from <Video 1>: a South Asian man with short dark hair and a full beard, wearing a blue button-up shirt with sleeves rolled to the forearms, a wristwatch and bracelet on his left wrist...",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "man with dark hair and a beard, wearing a blue button-up shirt",
+          "source": "evidence_facts"
+        }
+      ],
+      "issue": "",
+      "rationale": "Subject 1’s identity, appearance, and accessories are consistently preserved across the entire video. Subject 2 (prawn kebabs on asparagus skewers with dipping sauce) and Subject 3 (studio kitchen set) are also fully preserved and match the evidence. No renaming, duplication, or attribute drift occurs.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANL",
+      "evidence": [
+        {
+          "quote": "From 0 to 7 seconds, he grills prawn kebabs on asparagus skewers on a hot griddle... At 00:07.000... arranges them on the black plate... At 00:12.000... raises the finished plate... presents the finished <Subject 2> to camera",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "A cooking-show style video featuring the man from Video 1 as he grills food and then plates the finished dish.",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "Actions form a coherent causal progression: grilling → plating → presentation. Each action has plausible prerequisites (e.g., grilling before plating) and reactions (e.g., sizzling sound during grilling, quieting during plating). The final presentation is a direct continuation of the prior steps, with no dangling or incompatible events.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "TSC",
+      "evidence": [
+        {
+          "quote": "At 00:12.000, the push-in settles as <Subject 1> raises the finished plate... through the final frame at 15 seconds",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "A cooking-show style video featuring the man from Video 1 as he grills food and then plates the finished dish.",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "The enhanced prompt specifies a precise 12–15s presentation pose, while the original prompt does not specify timing or duration of the final reveal. This is a minor over-specification but does not contradict the original instruction.",
+      "rationale": "The timeline is internally consistent within the enhanced prompt (0–7s grilling, 7–12s plating, 12–15s presentation). The only issue is the addition of precise timestamps not in the original prompt, which is a minor elaboration and does not affect the feasibility or coherence of the sequence.",
+      "severity": "minor"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SPC",
+      "evidence": [
+        {
+          "quote": "A single continuous medium shot frames <Subject 1>... standing behind the white countertop at the stovetop... camera holds static... then begins a small slow push-in... settles as <Subject 1> raises the finished plate",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "static camera",
+          "shot_scale": "medium shot",
+          "source": "evidence_facts"
+        }
+      ],
+      "issue": "",
+      "rationale": "The spatial layout is consistent: host remains behind the countertop, camera motion is continuous and plausible (static → slow push-in). The plate is raised toward the camera in a natural trajectory. No unexplained position swaps or impossible movement paths are described.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "PL",
+      "evidence": [
+        {
+          "quote": "the prawns sizzle, pick up golden char marks, and glisten as he turns them with tongs",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "sizzle of prawns on the hot griddle",
+          "source": "evidence_facts"
+        }
+      ],
+      "issue": "",
+      "rationale": "Physical behaviors (sizzling, char marks, tongs turning food) are consistent with real-world cooking. The plate-lift motion is feasible and matches the evidence. No violations of gravity, contact, or object permanence are present.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "AVS",
+      "evidence": [
+        {
+          "quote": "Diegetic kitchen sound: the sizzle of prawns... softening to the gentle sounds of plating... Light, upbeat cooking-show background music running under the entire clip",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "A cooking-show style video featuring the man from Video 1 as he grills food and then plates the finished dish.",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "The enhanced prompt includes detailed diegetic and non-diegetic audio cues (sizzle, clink, music lift) not mentioned in the original prompt. While plausible, these are elaborations not required by the original instruction.",
+      "rationale": "The audio cues are semantically aligned with the visual events (sizzle during grilling, quieting during plating, music lift during reveal). However, since the original prompt does not specify audio, this is a minor elaboration rather than a misalignment.",
+      "severity": "minor"
+    }
+  ],
+  "dimension": "IC",
+  "dimension_score": 95,
+  "evidence_cache_key": "289d3eccac84eafbd746bff1199cce1faa229632513e19fff1700368e452d7e1",
+  "judge_cache_key": "438d7e9fd7332b1041db3e2c26d42cb3fe828e0d369fb59490f6650aee59e97d",
+  "method": "glm53_20261112_120702",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"IC\",\n  \"dimension_score\": 95,\n  \"summary\": \"The enhanced prompt maintains strong internal consistency with the original instruction, preserving subject identity, actions, environment, and temporal progression. The host, dish, and kitchen set are consistently defined and referenced across shots. The sequence of grilling, plating, and presentation aligns with the original prompt and evidence. Minor issues include slight over-specification of audio cues not in the original prompt and a minor mismatch in the final presentation timing (original prompt does not specify 12–15s reveal), but these do not materially affect coherence. No contradictions or attribute drift are present.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"SAC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"<Subject 1> is the host from <Video 1>: a South Asian man with short dark hair and a full beard, wearing a blue button-up shirt with sleeves rolled to the forearms, a wristwatch and bracelet on his left wrist...\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"man with dark hair and a beard, wearing a blue button-up shirt\"\n        }\n      ],\n      \"rationale\": \"Subject 1’s identity, appearance, and accessories are consistently preserved across the entire video. Subject 2 (prawn kebabs on asparagus skewers with dipping sauce) and Subject 3 (studio kitchen set) are also fully preserved and match the evidence. No renaming, duplication, or attribute drift occurs.\"\n    },\n    {\n      \"criterion\": \"ANL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"From 0 to 7 seconds, he grills prawn kebabs on asparagus skewers on a hot griddle... At 00:07.000... arranges them on the black plate... At 00:12.000... raises the finished plate... presents the finished <Subject 2> to camera\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"A cooking-show style video featuring the man from Video 1 as he grills food and then plates the finished dish.\"\n        }\n      ],\n      \"rationale\": \"Actions form a coherent causal progression: grilling → plating → presentation. Each action has plausible prerequisites (e.g., grilling before plating) and reactions (e.g., sizzling sound during grilling, quieting during plating). The final presentation is a direct continuation of the prior steps, with no dangling or incompatible events.\"\n    },\n    {\n      \"criterion\": \"TSC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"minor\",\n      \"issue\": \"The enhanced prompt specifies a precise 12–15s presentation pose, while the original prompt does not specify timing or duration of the final reveal. This is a minor over-specification but does not contradict the original instruction.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"At 00:12.000, the push-in settles as <Subject 1> raises the finished plate... through the final frame at 15 seconds\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"A cooking-show style video featuring the man from Video 1 as he grills food and then plates the finished dish.\"\n        }\n      ],\n      \"rationale\": \"The timeline is internally consistent within the enhanced prompt (0–7s grilling, 7–12s plating, 12–15s presentation). The only issue is the addition of precise timestamps not in the original prompt, which is a minor elaboration and does not affect the feasibility or coherence of the sequence.\"\n    },\n    {\n      \"criterion\": \"SPC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"A single continuous medium shot frames <Subject 1>... standing behind the white countertop at the stovetop... camera holds static... then begins a small slow push-in... settles as <Subject 1> raises the finished plate\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"static camera\", \"shot_scale\": \"medium shot\"\n        }\n      ],\n      \"rationale\": \"The spatial layout is consistent: host remains behind the countertop, camera motion is continuous and plausible (static → slow push-in). The plate is raised toward the camera in a natural trajectory. No unexplained position swaps or impossible movement paths are described.\"\n    },\n    {\n      \"criterion\": \"PL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"the prawns sizzle, pick up golden char marks, and glisten as he turns them with tongs\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"sizzle of prawns on the hot griddle\"\n        }\n      ],\n      \"rationale\": \"Physical behaviors (sizzling, char marks, tongs turning food) are consistent with real-world cooking. The plate-lift motion is feasible and matches the evidence. No violations of gravity, contact, or object permanence are present.\"\n    },\n    {\n      \"criterion\": \"AVS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"minor\",\n      \"issue\": \"The enhanced prompt includes detailed diegetic and non-diegetic audio cues (sizzle, clink, music lift) not mentioned in the original prompt. While plausible, these are elaborations not required by the original instruction.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Diegetic kitchen sound: the sizzle of prawns... softening to the gentle sounds of plating... Light, upbeat cooking-show background music running under the entire clip\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"A cooking-show style video featuring the man from Video 1 as he grills food and then plates the finished dish.\"\n        }\n      ],\n      \"rationale\": \"The audio cues are semantically aligned with the visual events (sizzle during grilling, quieting during plating, music lift during reveal). However, since the original prompt does not specify audio, this is a minor elaboration rather than a misalignment.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt maintains strong internal consistency with the original instruction, preserving subject identity, actions, environment, and temporal progression. The host, dish, and kitchen set are consistently defined and referenced across shots. The sequence of grilling, plating, and presentation aligns with the original prompt and evidence. Minor issues include slight over-specification of audio cues not in the original prompt and a minor mismatch in the final presentation timing (original prompt does not specify 12–15s reveal), but these do not materially affect coherence. No contradictions or attribute drift are present.",
+  "usage": {
+    "completion_tokens": 1473,
+    "prompt_tokens": 2641,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 4114
+  }
+}

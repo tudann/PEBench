@@ -1,0 +1,178 @@
+{
+  "candidate_hash": "bee8f2765d942e4b1204cefc675fda9fb070337f31f1b878bc2cc8fd10139a54",
+  "case_key": "r2v:106",
+  "created_at": "2026-11-13T08:31:17+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "STC",
+      "evidence": [
+        {
+          "quote": "总时长写成3秒，同时又要求每个分镜各自持续27秒。",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "时间倒过来：先给结尾，再跳到一个对不上的开头。",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "中途插进一段无关的宫廷选妃。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt specifies a 3-second total duration while requiring each shot to last 27 seconds, creating an impossible temporal structure. It also reverses the narrative order by starting with the ending and jumping to a mismatched beginning, and inserts an unrelated subplot (courtly selection of concubines) without continuity. The sequence is incoherent and unfeasible.",
+      "rationale": "A feasible temporal plan requires consistent duration allocation, logical shot ordering, and narrative continuity. The prompt violates all these by introducing contradictory time constraints, reversed chronology, and unrelated content, making the sequence impossible to execute.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CDS",
+      "evidence": [
+        {
+          "quote": "写成机位锁死，又写成镜头一直在晃。",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "镜头1（0-5秒）·努力爬上座椅\n中景，车内视角。",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "The prompt contradicts itself on camera movement (locked vs. constantly shaking) and shot scale (full-body vs. unspecified). It also replaces the original detailed framing and composition with vague, conflicting instructions, eliminating actionable specifications for framing, angle, lens, or focus.",
+      "rationale": "Actionable camera specifications are essential for directorial creation. The prompt’s self-contradictory instructions (locked vs. shaking) and omission of any concrete framing details render the camera plan infeasible and unactionable.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ETD",
+      "evidence": [
+        {
+          "quote": "中途插进一段无关的宫廷选妃。",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "时间倒过来：先给结尾，再跳到一个对不上的开头。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt introduces disconnected shots (e.g., sudden insertion of a courtly selection scene) and contradictory transitions (time reversal, mismatched beginnings). There is no continuity or motivation for cuts, and the sequence lacks spatial or narrative coherence.",
+      "rationale": "Effective transitions require continuity, motivation, and progression. The prompt’s abrupt, unrelated insertions and reversed chronology destroy any temporal or spatial coherence, making transitions meaningless and disruptive.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "LCS",
+      "evidence": [
+        {
+          "quote": "写成正午暴晒，又写成深夜无光；",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "柔和漫反射光照，无明显硬阴影，空气感清透",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "The prompt contradicts the original lighting (bright, soft, daytime) by demanding both '正午暴晒' (noon sun) and '深夜无光' (deep night, no light) simultaneously. This creates an impossible lighting condition with no actionable specification for light source, direction, or quality.",
+      "rationale": "Lighting specifications must be consistent and actionable. The prompt’s contradictory lighting conditions (bright noon vs. pitch-black night) make it impossible to define a coherent lighting plan, violating the criterion.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "NDE",
+      "evidence": [
+        {
+          "quote": "紧接着又写成这个主角同时变成五个外貌不同的人，并且互相对话。",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "中途插进一段无关的宫廷选妃。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt replaces a coherent narrative progression (waiting for bus → climbing → looking out window) with a chaotic, self-contradictory sequence involving multiple identities, time reversal, and unrelated subplots. There is no progression, variation, or resolution — only static, unmotivated repetition and contradiction.",
+      "rationale": "Narrative development requires progression, variation, and resolution. The prompt’s chaotic, contradictory structure lacks any meaningful development, rendering the content form (a 15-second animated sequence) incoherent and unactionable.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CIF",
+      "evidence": [
+        {
+          "quote": "紧接着又写成这个主角同时变成五个外貌不同的人，并且互相对话。",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "中途插进一段无关的宫廷选妃。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt adds irrelevant, distracting, and contradictory elements (five identities, courtly selection, time reversal) that directly undermine the central request for a single-character, 15-second animated bus scene. These additions are not supportive but actively sabotage the original intent.",
+      "rationale": "Additions must support the central request. The prompt’s additions are not only irrelevant but directly contradict the original’s simplicity, coherence, and focus, making them a major distraction and failure of the criterion.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SDI",
+      "evidence": [
+        {
+          "quote": "实拍晚间新闻口播，主播坐着念稿",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt does not specify any audio elements (speech, music, effects, ambience), which is acceptable since the original prompt also lacked such specifications. However, the requirement for a news anchor’s speech is introduced but not elaborated, leaving audio integration under-specified.",
+      "rationale": "While audio is not required for every prompt, the introduction of a news anchor without specifying speech content, timing, or intensity creates a minor gap. However, since the original prompt also lacked audio, this is not a major failure.",
+      "severity": "minor"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SPS",
+      "evidence": [
+        {
+          "quote": "丢掉原指令里的主体身份、人数、动作顺序、场景和明确的镜头要求。",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "紧接着又写成这个主角同时变成五个外貌不同的人，并且互相对话。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt replaces the original detailed subject performance (climbing, sitting, looking out window) with contradictory identities (one character becoming five) and actions (mutual dialogue). It also changes the subject from an animated character to a news anchor, completely altering the subject’s appearance, pose, expression, and movement.",
+      "rationale": "Subject and performance details must be coherent and actionable. The prompt’s contradictory and impossible subject transformations (one to five identities) and action changes (from animated character to news anchor) make the performance specification infeasible.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "VSS",
+      "evidence": [
+        {
+          "quote": "不要拍「生成单镜头。(吉卜力宫崎骏动画风格:1.4)，日系童话治愈感插画风...」。整段改成实拍晚间新闻口播",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "吉卜力宫崎骏动画风格:1.4)，日系童话治愈感插画风",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "The prompt replaces the original detailed visual style (Ghibli, kawaii, hand-painted, soft lighting) with a contradictory, unspecified style (realistic news broadcast). It also changes the medium (animation to live-action) and visual treatment without actionable specifications for rendering, texture, or production design.",
+      "rationale": "Visual style and medium must be clearly specified. The prompt’s abrupt switch from animation to live-action without any actionable details for the new style renders the visual treatment specification incoherent and unactionable.",
+      "severity": "major"
+    }
+  ],
+  "dimension": "DC",
+  "dimension_score": 0,
+  "evidence_cache_key": "57ac62b4400eb50caed2f41d11b14560f6f84a5e8f6d113f9ea8a57efa0a8f3c",
+  "judge_cache_key": "0754499d53388e6467fb078ab780e01b77f9f1c9e99d9029be2769351eb2b2eb",
+  "method": "weak-pe-original",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"DC\",\n  \"dimension_score\": 0,\n  \"summary\": \"The enhanced prompt is a deliberate, incoherent sabotage of the original instruction, introducing contradictory requirements, impossible temporal structures, and nonsensical visual and narrative elements. It violates every core criterion of directorial creation by replacing a coherent 15-second animated sequence with a logically inconsistent, self-contradictory, and technically infeasible plan. The prompt actively undermines the original intent, rendering it unactionable for any production or generation system.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"STC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt specifies a 3-second total duration while requiring each shot to last 27 seconds, creating an impossible temporal structure. It also reverses the narrative order by starting with the ending and jumping to a mismatched beginning, and inserts an unrelated subplot (courtly selection of concubines) without continuity. The sequence is incoherent and unfeasible.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"总时长写成3秒，同时又要求每个分镜各自持续27秒。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"时间倒过来：先给结尾，再跳到一个对不上的开头。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"中途插进一段无关的宫廷选妃。\"\n        }\n      ],\n      \"rationale\": \"A feasible temporal plan requires consistent duration allocation, logical shot ordering, and narrative continuity. The prompt violates all these by introducing contradictory time constraints, reversed chronology, and unrelated content, making the sequence impossible to execute.\"\n    },\n    {\n      \"criterion\": \"CDS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt contradicts itself on camera movement (locked vs. constantly shaking) and shot scale (full-body vs. unspecified). It also replaces the original detailed framing and composition with vague, conflicting instructions, eliminating actionable specifications for framing, angle, lens, or focus.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"写成机位锁死，又写成镜头一直在晃。\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"镜头1（0-5秒）·努力爬上座椅\\n中景，车内视角。\"\n        }\n      ],\n      \"rationale\": \"Actionable camera specifications are essential for directorial creation. The prompt’s self-contradictory instructions (locked vs. shaking) and omission of any concrete framing details render the camera plan infeasible and unactionable.\"\n    },\n    {\n      \"criterion\": \"ETD\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt introduces disconnected shots (e.g., sudden insertion of a courtly selection scene) and contradictory transitions (time reversal, mismatched beginnings). There is no continuity or motivation for cuts, and the sequence lacks spatial or narrative coherence.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"中途插进一段无关的宫廷选妃。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"时间倒过来：先给结尾，再跳到一个对不上的开头。\"\n        }\n      ],\n      \"rationale\": \"Effective transitions require continuity, motivation, and progression. The prompt’s abrupt, unrelated insertions and reversed chronology destroy any temporal or spatial coherence, making transitions meaningless and disruptive.\"\n    },\n    {\n      \"criterion\": \"LCS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt contradicts the original lighting (bright, soft, daytime) by demanding both '正午暴晒' (noon sun) and '深夜无光' (deep night, no light) simultaneously. This creates an impossible lighting condition with no actionable specification for light source, direction, or quality.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"写成正午暴晒，又写成深夜无光；\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"柔和漫反射光照，无明显硬阴影，空气感清透\"\n        }\n      ],\n      \"rationale\": \"Lighting specifications must be consistent and actionable. The prompt’s contradictory lighting conditions (bright noon vs. pitch-black night) make it impossible to define a coherent lighting plan, violating the criterion.\"\n    },\n    {\n      \"criterion\": \"NDE\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt replaces a coherent narrative progression (waiting for bus → climbing → looking out window) with a chaotic, self-contradictory sequence involving multiple identities, time reversal, and unrelated subplots. There is no progression, variation, or resolution — only static, unmotivated repetition and contradiction.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"紧接着又写成这个主角同时变成五个外貌不同的人，并且互相对话。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"中途插进一段无关的宫廷选妃。\"\n        }\n      ],\n      \"rationale\": \"Narrative development requires progression, variation, and resolution. The prompt’s chaotic, contradictory structure lacks any meaningful development, rendering the content form (a 15-second animated sequence) incoherent and unactionable.\"\n    },\n    {\n      \"criterion\": \"CIF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt adds irrelevant, distracting, and contradictory elements (five identities, courtly selection, time reversal) that directly undermine the central request for a single-character, 15-second animated bus scene. These additions are not supportive but actively sabotage the original intent.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"紧接着又写成这个主角同时变成五个外貌不同的人，并且互相对话。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"中途插进一段无关的宫廷选妃。\"\n        }\n      ],\n      \"rationale\": \"Additions must support the central request. The prompt’s additions are not only irrelevant but directly contradict the original’s simplicity, coherence, and focus, making them a major distraction and failure of the criterion.\"\n    },\n    {\n      \"criterion\": \"SDI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"minor\",\n      \"issue\": \"The prompt does not specify any audio elements (speech, music, effects, ambience), which is acceptable since the original prompt also lacked such specifications. However, the requirement for a news anchor’s speech is introduced but not elaborated, leaving audio integration under-specified.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"实拍晚间新闻口播，主播坐着念稿\"\n        }\n      ],\n      \"rationale\": \"While audio is not required for every prompt, the introduction of a news anchor without specifying speech content, timing, or intensity creates a minor gap. However, since the original prompt also lacked audio, this is not a major failure.\"\n    },\n    {\n      \"criterion\": \"SPS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt replaces the original detailed subject performance (climbing, sitting, looking out window) with contradictory identities (one character becoming five) and actions (mutual dialogue). It also changes the subject from an animated character to a news anchor, completely altering the subject’s appearance, pose, expression, and movement.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"丢掉原指令里的主体身份、人数、动作顺序、场景和明确的镜头要求。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"紧接着又写成这个主角同时变成五个外貌不同的人，并且互相对话。\"\n        }\n      ],\n      \"rationale\": \"Subject and performance details must be coherent and actionable. The prompt’s contradictory and impossible subject transformations (one to five identities) and action changes (from animated character to news anchor) make the performance specification infeasible.\"\n    },\n    {\n      \"criterion\": \"VSS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt replaces the original detailed visual style (Ghibli, kawaii, hand-painted, soft lighting) with a contradictory, unspecified style (realistic news broadcast). It also changes the medium (animation to live-action) and visual treatment without actionable specifications for rendering, texture, or production design.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"不要拍「生成单镜头。(吉卜力宫崎骏动画风格:1.4)，日系童话治愈感插画风...」。整段改成实拍晚间新闻口播\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"吉卜力宫崎骏动画风格:1.4)，日系童话治愈感插画风\"\n        }\n      ],\n      \"rationale\": \"Visual style and medium must be clearly specified. The prompt’s abrupt switch from animation to live-action without any actionable details for the new style renders the visual treatment specification incoherent and unactionable.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt is a deliberate, incoherent sabotage of the original instruction, introducing contradictory requirements, impossible temporal structures, and nonsensical visual and narrative elements. It violates every core criterion of directorial creation by replacing a coherent 15-second animated sequence with a logically inconsistent, self-contradictory, and technically infeasible plan. The prompt actively undermines the original intent, rendering it unactionable for any production or generation system.",
+  "usage": {
+    "completion_tokens": 2103,
+    "prompt_tokens": 2649,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 4752
+  }
+}

@@ -1,0 +1,166 @@
+{
+  "candidate_hash": "340a97d86ebba9d424b28452545aa587eb5f2e616f274e4b794a06b8ff847bbe",
+  "case_key": "i2v:237",
+  "created_at": "2026-11-13T07:56:10+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "STC",
+      "evidence": [
+        {
+          "quote": "Set the total runtime to 2 seconds, while also making every shot last 19 seconds.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Reverse the timeline: show the ending first, then cut to a beginning that does not match.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt contains mutually exclusive temporal constraints: total runtime set to 2 seconds while every shot is required to last 19 seconds, making the timeline infeasible. Additionally, it demands a reversed timeline (ending first, then beginning) and an abrupt cut to a soccer celebration, which creates a disconnected and illogical sequence.",
+      "rationale": "A feasible temporal plan requires consistent duration allocation and logical shot ordering. The 2-second vs. 19-second contradiction is mathematically impossible, and the reversed timeline with mismatched beginning violates continuity and narrative coherence.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CDS",
+      "evidence": [
+        {
+          "quote": "Describe that same moment as harsh noon sun and as a lightless night, and as both a locked camera and a camera that never stops shaking.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt contradicts itself on camera specifications: it demands both a locked camera and a camera that never stops shaking, which are mutually exclusive. It also drops all explicit camera instructions from the original, leaving no actionable framing or movement plan.",
+      "rationale": "Camera specifications must be consistent and actionable. The simultaneous requirement for a locked camera and constant shaking is physically impossible and renders the shot plan incoherent.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ETD",
+      "evidence": [
+        {
+          "quote": "Cut away in the middle to a soccer celebration.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Reverse the timeline: show the ending first, then cut to a beginning that does not match.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt mandates cuts to unrelated content (soccer celebration) without continuity or motivation, and requires a reversed timeline with a mismatched beginning, creating disconnected and unmotivated transitions.",
+      "rationale": "Transitions must support narrative, spatial, or rhythmic progression. The soccer cut and reversed timeline with mismatched beginning lack continuity and motivation, violating temporal and spatial coherence.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "LCS",
+      "evidence": [
+        {
+          "quote": "Describe that same moment as harsh noon sun and as a lightless night...",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt demands contradictory lighting conditions for the same moment: harsh noon sun and lightless night, which are mutually exclusive and impossible to realize simultaneously.",
+      "rationale": "Lighting specifications must be consistent and feasible. The simultaneous requirement for bright noon sun and complete darkness is physically impossible and invalidates the lighting plan.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "NDE",
+      "evidence": [
+        {
+          "quote": "Replace the whole video with a looping snowy landscape with no characters and no plot.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Reverse the timeline: show the ending first, then cut to a beginning that does not match.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt lacks any progression, variation, or resolution. It replaces the original narrative with a static snowy landscape, then introduces contradictory elements (five talking protagonists, reversed timeline, soccer cut) without any narrative arc or development.",
+      "rationale": "Narrative development requires progression and resolution. The prompt’s content is static, contradictory, and lacks any meaningful arc or escalation, rendering it inadequate for a narrative video.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CIF",
+      "evidence": [
+        {
+          "quote": "First state that there is one protagonist, then state that this same protagonist appears simultaneously as five different-looking people who talk to each other.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Cut away in the middle to a soccer celebration.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt adds numerous contradictory and irrelevant elements (five talking protagonists, soccer celebration, reversed timeline) that distract from and contradict the original request, which was a slow, expressive dance sequence. These additions are not supportive but actively undermine the central request.",
+      "rationale": "Additions must support the central request. The prompt introduces elements that are illogical, contradictory, and irrelevant to the original dance sequence, creating a distraction and undermining coherence.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SDI",
+      "evidence": [
+        {
+          "quote": "مع تصاعد إيقاع الدف، تصبح حركات الخصر أكثر وضوحًا وانسجامًا مع الإيقاع.",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "The prompt does not specify any audio elements (speech, music, effects, ambience), which is acceptable as the criterion does not require every audio type. However, the absence of audio specification is notable given the original prompt’s mention of drum rhythm.",
+      "rationale": "While the original prompt included audio (drum rhythm), the enhanced prompt drops all audio references. Since SDI does not require every audio type, this is a minor issue, but it represents a significant omission from the original context.",
+      "severity": "minor"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SPS",
+      "evidence": [
+        {
+          "quote": "Ignore the person, clothing, pose, and setting in the first frame, and replace them with a stranger of the opposite age and gender in a white studio.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "First state that there is one protagonist, then state that this same protagonist appears simultaneously as five different-looking people who talk to each other.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt ignores the original subject, clothing, pose, and setting, replacing them with a stranger of opposite age and gender in a white studio. It also introduces five talking protagonists, which contradicts the original single dancer and removes all performance details (expression, movement, gesture).",
+      "rationale": "Subject and performance details are essential for a narrative video. The prompt completely disregards the original dancer’s appearance, expression, and movement, replacing them with contradictory and unspecified characters, which invalidates the performance specification.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "VSS",
+      "evidence": [
+        {
+          "quote": "Replace the whole video with a looping snowy landscape with no characters and no plot.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Describe that same moment as harsh noon sun and as a lightless night...",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt replaces the original cultural, festive setting with a looping snowy landscape and a white studio, and introduces contradictory visual treatments (snowy landscape vs. harsh noon sun vs. lightless night). There is no consistent medium, texture, or visual style specified.",
+      "rationale": "Visual style and production design must be consistent and actionable. The prompt’s contradictory settings and lighting conditions make it impossible to define a coherent visual treatment, rendering the specification invalid.",
+      "severity": "major"
+    }
+  ],
+  "dimension": "DC",
+  "dimension_score": 0,
+  "evidence_cache_key": "c166dc2f6b24fc0cf3a90beda4ab9d284d92ddc930e84dc3f7125297ea7b7411",
+  "judge_cache_key": "0754499d53388e6467fb078ab780e01b77f9f1c9e99d9029be2769351eb2b2eb",
+  "method": "weak-pe-original",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"DC\",\n  \"dimension_score\": 0,\n  \"summary\": \"The enhanced prompt is incoherent and self-contradictory, rendering it impossible to generate a feasible video. It contains mutually exclusive temporal constraints (2 seconds total runtime vs. 19-second shots), contradictory visual instructions (snowy landscape with no characters vs. five talking protagonists), and invalid camera specifications (locked camera vs. never-stopping shake). The prompt also disregards the original content entirely, replacing it with illogical, impossible, and conflicting directives that violate all aspects of directorial creation.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"STC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt contains mutually exclusive temporal constraints: total runtime set to 2 seconds while every shot is required to last 19 seconds, making the timeline infeasible. Additionally, it demands a reversed timeline (ending first, then beginning) and an abrupt cut to a soccer celebration, which creates a disconnected and illogical sequence.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Set the total runtime to 2 seconds, while also making every shot last 19 seconds.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Reverse the timeline: show the ending first, then cut to a beginning that does not match.\"\n        }\n      ],\n      \"rationale\": \"A feasible temporal plan requires consistent duration allocation and logical shot ordering. The 2-second vs. 19-second contradiction is mathematically impossible, and the reversed timeline with mismatched beginning violates continuity and narrative coherence.\"\n    },\n    {\n      \"criterion\": \"CDS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt contradicts itself on camera specifications: it demands both a locked camera and a camera that never stops shaking, which are mutually exclusive. It also drops all explicit camera instructions from the original, leaving no actionable framing or movement plan.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Describe that same moment as harsh noon sun and as a lightless night, and as both a locked camera and a camera that never stops shaking.\"\n        }\n      ],\n      \"rationale\": \"Camera specifications must be consistent and actionable. The simultaneous requirement for a locked camera and constant shaking is physically impossible and renders the shot plan incoherent.\"\n    },\n    {\n      \"criterion\": \"ETD\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt mandates cuts to unrelated content (soccer celebration) without continuity or motivation, and requires a reversed timeline with a mismatched beginning, creating disconnected and unmotivated transitions.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Cut away in the middle to a soccer celebration.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Reverse the timeline: show the ending first, then cut to a beginning that does not match.\"\n        }\n      ],\n      \"rationale\": \"Transitions must support narrative, spatial, or rhythmic progression. The soccer cut and reversed timeline with mismatched beginning lack continuity and motivation, violating temporal and spatial coherence.\"\n    },\n    {\n      \"criterion\": \"LCS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt demands contradictory lighting conditions for the same moment: harsh noon sun and lightless night, which are mutually exclusive and impossible to realize simultaneously.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Describe that same moment as harsh noon sun and as a lightless night...\"\n        }\n      ],\n      \"rationale\": \"Lighting specifications must be consistent and feasible. The simultaneous requirement for bright noon sun and complete darkness is physically impossible and invalidates the lighting plan.\"\n    },\n    {\n      \"criterion\": \"NDE\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt lacks any progression, variation, or resolution. It replaces the original narrative with a static snowy landscape, then introduces contradictory elements (five talking protagonists, reversed timeline, soccer cut) without any narrative arc or development.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Replace the whole video with a looping snowy landscape with no characters and no plot.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Reverse the timeline: show the ending first, then cut to a beginning that does not match.\"\n        }\n      ],\n      \"rationale\": \"Narrative development requires progression and resolution. The prompt’s content is static, contradictory, and lacks any meaningful arc or escalation, rendering it inadequate for a narrative video.\"\n    },\n    {\n      \"criterion\": \"CIF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt adds numerous contradictory and irrelevant elements (five talking protagonists, soccer celebration, reversed timeline) that distract from and contradict the original request, which was a slow, expressive dance sequence. These additions are not supportive but actively undermine the central request.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"First state that there is one protagonist, then state that this same protagonist appears simultaneously as five different-looking people who talk to each other.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Cut away in the middle to a soccer celebration.\"\n        }\n      ],\n      \"rationale\": \"Additions must support the central request. The prompt introduces elements that are illogical, contradictory, and irrelevant to the original dance sequence, creating a distraction and undermining coherence.\"\n    },\n    {\n      \"criterion\": \"SDI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"minor\",\n      \"issue\": \"The prompt does not specify any audio elements (speech, music, effects, ambience), which is acceptable as the criterion does not require every audio type. However, the absence of audio specification is notable given the original prompt’s mention of drum rhythm.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"مع تصاعد إيقاع الدف، تصبح حركات الخصر أكثر وضوحًا وانسجامًا مع الإيقاع.\"\n        }\n      ],\n      \"rationale\": \"While the original prompt included audio (drum rhythm), the enhanced prompt drops all audio references. Since SDI does not require every audio type, this is a minor issue, but it represents a significant omission from the original context.\"\n    },\n    {\n      \"criterion\": \"SPS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt ignores the original subject, clothing, pose, and setting, replacing them with a stranger of opposite age and gender in a white studio. It also introduces five talking protagonists, which contradicts the original single dancer and removes all performance details (expression, movement, gesture).\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Ignore the person, clothing, pose, and setting in the first frame, and replace them with a stranger of the opposite age and gender in a white studio.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"First state that there is one protagonist, then state that this same protagonist appears simultaneously as five different-looking people who talk to each other.\"\n        }\n      ],\n      \"rationale\": \"Subject and performance details are essential for a narrative video. The prompt completely disregards the original dancer’s appearance, expression, and movement, replacing them with contradictory and unspecified characters, which invalidates the performance specification.\"\n    },\n    {\n      \"criterion\": \"VSS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt replaces the original cultural, festive setting with a looping snowy landscape and a white studio, and introduces contradictory visual treatments (snowy landscape vs. harsh noon sun vs. lightless night). There is no consistent medium, texture, or visual style specified.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Replace the whole video with a looping snowy landscape with no characters and no plot.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Describe that same moment as harsh noon sun and as a lightless night...\"\n        }\n      ],\n      \"rationale\": \"Visual style and production design must be consistent and actionable. The prompt’s contradictory settings and lighting conditions make it impossible to define a coherent visual treatment, rendering the specification invalid.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt is incoherent and self-contradictory, rendering it impossible to generate a feasible video. It contains mutually exclusive temporal constraints (2 seconds total runtime vs. 19-second shots), contradictory visual instructions (snowy landscape with no characters vs. five talking protagonists), and invalid camera specifications (locked camera vs. never-stopping shake). The prompt also disregards the original content entirely, replacing it with illogical, impossible, and conflicting directives that violate all aspects of directorial creation.",
+  "usage": {
+    "completion_tokens": 1902,
+    "prompt_tokens": 2929,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 4831
+  }
+}

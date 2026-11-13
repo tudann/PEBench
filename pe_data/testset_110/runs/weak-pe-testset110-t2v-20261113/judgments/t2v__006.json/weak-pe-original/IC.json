@@ -1,0 +1,103 @@
+{
+  "candidate_hash": "46f4af7ff7db6587e498d844b6ed28157422ecc6a8640f4943286acfb5135196",
+  "case_key": "t2v:006",
+  "created_at": "2026-11-13T07:05:22+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "SAC",
+      "evidence": [
+        {
+          "quote": "First state that there is one protagonist, then state that this same protagonist appears simultaneously as five different-looking people who talk to each other.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Subject identity and count are contradictory: the prompt states there is one protagonist who simultaneously appears as five different-looking people talking to each other, which violates identity stability and count consistency.",
+      "rationale": "A single protagonist cannot simultaneously exist as five distinct individuals without violating identity and count consistency. This is a fundamental contradiction in subject representation.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANL",
+      "evidence": [
+        {
+          "quote": "Cut away in the middle to a soccer celebration.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Actions are incoherent and causally disconnected: typing in an office is abruptly replaced by a soccer celebration, with no causal link or plausible transition between these events.",
+      "rationale": "The action sequence lacks any causal or procedural progression. Typing in an office has no logical connection to a soccer celebration, and the cut is described as abrupt with no transition or motivation, making the action sequence incoherent.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "TSC",
+      "evidence": [
+        {
+          "quote": "Reverse the timeline: show the ending first, then cut to a beginning that does not match. Set the total runtime to 3 seconds, while also making every shot last 27 seconds.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Timeline is reversed and durationally infeasible: the prompt demands showing the ending first, then a beginning that does not match, while also setting total runtime to 3 seconds and every shot to 27 seconds, which is mathematically impossible.",
+      "rationale": "A 3-second total runtime cannot accommodate shots lasting 27 seconds each. Additionally, reversing the timeline and then cutting to a non-matching beginning creates a chronology that is logically inconsistent and unresolvable.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SPC",
+      "evidence": [
+        {
+          "quote": "Describe that same moment as harsh noon sun and as a lightless night, and as both a locked camera and a camera that never stops shaking.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Spatial and camera logic is violated: the prompt describes the same moment as both a locked camera and a camera that never stops shaking, which is physically impossible for the same shot.",
+      "rationale": "A camera cannot simultaneously be locked and never stop shaking. These are mutually exclusive physical states. The prompt forces contradictory spatial and camera conditions on the same moment, violating spatial consistency.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "PL",
+      "evidence": [
+        {
+          "quote": "Describe that same moment as harsh noon sun and as a lightless night...",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Physics and object permanence are violated: the same moment is described as both harsh noon sun and lightless night, which contradicts real-world physical laws.",
+      "rationale": "A moment cannot simultaneously be noon sun and lightless night. This violates the principle of object permanence and real-world physics, as lighting conditions are mutually exclusive in the same temporal and spatial context.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "AVS",
+      "evidence": [
+        {
+          "quote": "Describe that same moment as harsh noon sun and as a lightless night, and as both a locked camera and a camera that never stops shaking.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Sensory and temporal alignment is impossible: the prompt demands simultaneous contradictory sensory states (e.g., light and darkness, motion and stillness) without any narrative or technical justification.",
+      "rationale": "The prompt forces conflicting sensory and visual states to coexist without any explanation or context, making alignment between visual, temporal, and sensory elements impossible. This creates a fundamental misalignment in the video’s sensory presentation.",
+      "severity": "major"
+    }
+  ],
+  "dimension": "IC",
+  "dimension_score": 0,
+  "evidence_cache_key": "0cffb540c6e5ca9648686d2817cfb1ecbcf60420fe2f92681993cf6777bbcb30",
+  "judge_cache_key": "438d7e9fd7332b1041db3e2c26d42cb3fe828e0d369fb59490f6650aee59e97d",
+  "method": "weak-pe-original",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"IC\",\n  \"dimension_score\": 0,\n  \"summary\": \"The enhanced prompt contains severe internal inconsistencies across all criteria: subject identity and count are contradictory (one protagonist appearing as five), actions are incoherent and causally impossible, timeline is reversed and durationally infeasible, spatial and physical logic is violated, and sensory descriptions conflict (e.g., noon sun vs. lightless night). The prompt is self-contradictory and physically impossible, rendering it internally inconsistent.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"SAC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Subject identity and count are contradictory: the prompt states there is one protagonist who simultaneously appears as five different-looking people talking to each other, which violates identity stability and count consistency.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"First state that there is one protagonist, then state that this same protagonist appears simultaneously as five different-looking people who talk to each other.\"\n        }\n      ],\n      \"rationale\": \"A single protagonist cannot simultaneously exist as five distinct individuals without violating identity and count consistency. This is a fundamental contradiction in subject representation.\"\n    },\n    {\n      \"criterion\": \"ANL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Actions are incoherent and causally disconnected: typing in an office is abruptly replaced by a soccer celebration, with no causal link or plausible transition between these events.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Cut away in the middle to a soccer celebration.\"\n        }\n      ],\n      \"rationale\": \"The action sequence lacks any causal or procedural progression. Typing in an office has no logical connection to a soccer celebration, and the cut is described as abrupt with no transition or motivation, making the action sequence incoherent.\"\n    },\n    {\n      \"criterion\": \"TSC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Timeline is reversed and durationally infeasible: the prompt demands showing the ending first, then a beginning that does not match, while also setting total runtime to 3 seconds and every shot to 27 seconds, which is mathematically impossible.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Reverse the timeline: show the ending first, then cut to a beginning that does not match. Set the total runtime to 3 seconds, while also making every shot last 27 seconds.\"\n        }\n      ],\n      \"rationale\": \"A 3-second total runtime cannot accommodate shots lasting 27 seconds each. Additionally, reversing the timeline and then cutting to a non-matching beginning creates a chronology that is logically inconsistent and unresolvable.\"\n    },\n    {\n      \"criterion\": \"SPC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Spatial and camera logic is violated: the prompt describes the same moment as both a locked camera and a camera that never stops shaking, which is physically impossible for the same shot.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Describe that same moment as harsh noon sun and as a lightless night, and as both a locked camera and a camera that never stops shaking.\"\n        }\n      ],\n      \"rationale\": \"A camera cannot simultaneously be locked and never stop shaking. These are mutually exclusive physical states. The prompt forces contradictory spatial and camera conditions on the same moment, violating spatial consistency.\"\n    },\n    {\n      \"criterion\": \"PL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Physics and object permanence are violated: the same moment is described as both harsh noon sun and lightless night, which contradicts real-world physical laws.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Describe that same moment as harsh noon sun and as a lightless night...\"\n        }\n      ],\n      \"rationale\": \"A moment cannot simultaneously be noon sun and lightless night. This violates the principle of object permanence and real-world physics, as lighting conditions are mutually exclusive in the same temporal and spatial context.\"\n    },\n    {\n      \"criterion\": \"AVS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Sensory and temporal alignment is impossible: the prompt demands simultaneous contradictory sensory states (e.g., light and darkness, motion and stillness) without any narrative or technical justification.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Describe that same moment as harsh noon sun and as a lightless night, and as both a locked camera and a camera that never stops shaking.\"\n        }\n      ],\n      \"rationale\": \"The prompt forces conflicting sensory and visual states to coexist without any explanation or context, making alignment between visual, temporal, and sensory elements impossible. This creates a fundamental misalignment in the video’s sensory presentation.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt contains severe internal inconsistencies across all criteria: subject identity and count are contradictory (one protagonist appearing as five), actions are incoherent and causally impossible, timeline is reversed and durationally infeasible, spatial and physical logic is violated, and sensory descriptions conflict (e.g., noon sun vs. lightless night). The prompt is self-contradictory and physically impossible, rendering it internally inconsistent.",
+  "usage": {
+    "completion_tokens": 1115,
+    "prompt_tokens": 1059,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 2174
+  }
+}

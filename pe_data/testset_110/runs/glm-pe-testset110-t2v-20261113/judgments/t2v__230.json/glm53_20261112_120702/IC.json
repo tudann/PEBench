@@ -1,0 +1,127 @@
+{
+  "candidate_hash": "13077a2747d8b3bdabeeba81691fcab397ee8132536e43fb94c2beb1e430b6a5",
+  "case_key": "t2v:230",
+  "created_at": "2026-11-13T08:17:44+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "SAC",
+      "evidence": [
+        {
+          "quote": "体型骇人的超大泥鳅状生物",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "a horrifyingly oversized loach-like creature (体型骇人的超大泥鳅状生物)",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "Subject identity and appearance are preserved: the creature is consistently described as an oversized loach-like entity with thick, textured skin and a ridged fin-like crest. The loader is consistently orange-yellow, and the crowd is described as 20–30 onlookers. No renaming, duplication, or attribute drift occurs.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANL",
+      "evidence": [
+        {
+          "quote": "装载机正以其前端铲斗，吃力地将一条长度远超车身、表皮粗厚并覆有明显纹理的巨型鳝形生物从翻腾的泥水里缓慢提起",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "the loader strains to hoist it from the churning muddy water in its front bucket. The creature thrashes violently in the bucket",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "Actions are causally coherent: the loader attempts to lift the creature, which thrashes in response. The crowd reacts with shock and excitement, and their actions (recording, shouting) are plausible reactions to the event. No dangling or incompatible actions are introduced.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "TSC",
+      "evidence": [
+        {
+          "quote": "镜头以平视高度的大全景开场...镜头开始以缓慢速度向左横移...最终，镜头在完整呈现人群、机械与庞然生物同处一景的对峙瞬间后缓缓收住",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "In one continuous, unbroken camera movement... the camera pans left at slow speed... the camera eases to a stop for the final beat",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "Chronology and duration are consistent with the 15-second shot. The sequence begins with a static wide shot, transitions into a slow pan left to reveal the crowd, and ends with a static hold. No overlapping or infeasible timestamps or state resets are present.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SPC",
+      "evidence": [
+        {
+          "quote": "镜头以平视高度的大全景开场...画面采用居中构图，将位于坑内核心位置的装载机以及它所钩起的猎物作为视觉中心",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "eye-level extreme wide shot with deep depth of field and centered composition opens on a wide, oval, waterlogged excavation pit... the camera pans left at slow speed, gradually revealing twenty to thirty onlookers spaced along the pit rim",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "Spatial layout is consistent: the pit is oval, the loader is at the edge, the creature is in the center, and the crowd is along the rim. The pan left reveals the crowd without violating screen direction or relative positioning. No unexplained swaps or impossible trajectories.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "PL",
+      "evidence": [
+        {
+          "quote": "巨物在铲斗内疯狂摆动躯体，背部隆起的鳍状结构随之抖动起伏，展现出惊人的挣扎力量",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "The creature thrashes violently in the bucket, its dorsal fin rippling and undulating, hurling sheets of mud and water into the air",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "Physics are plausible within the sci-fi exotic-wonder context: the creature’s thrashing causes mud and water to splash, consistent with its size and the bucket’s containment. The loader’s strain is believable given the creature’s size. No violations of gravity, contact, or object permanence.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "AVS",
+      "evidence": [
+        {
+          "quote": "A man in the crowd with a sharp, startled voice (S1) exclaims: <d>[Chinese] 天哪，那是什么东西？！</d> Beside him, a woman urging the others on (S2) shouts: <d>[Chinese] 快拍快拍，别停！</d>",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "围观者之间不断爆发出的惊呼、议论与零星快门提示音",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "The enhanced prompt introduces labeled speakers (S1, S2) and direct dialogue quotes not present in the original, which may imply a more structured audio layer than the original’s ambient crowd noise.",
+      "rationale": "The original prompt describes ambient crowd noise without specific dialogue or speaker identification. The enhanced prompt adds two specific lines with speaker labels, which is a minor elaboration. While not contradictory, it introduces a more structured audio layer than implied in the original, which may affect alignment if not rendered as ambient. However, since the dialogue is consistent with the scene and does not conflict with the original’s intent, the issue is minor.",
+      "severity": "minor"
+    }
+  ],
+  "dimension": "IC",
+  "dimension_score": 95,
+  "evidence_cache_key": "d0d5de6c7a112bddfa3a1c2d267764170e4525ace3a6ec649974dcdeb73b9259",
+  "judge_cache_key": "438d7e9fd7332b1041db3e2c26d42cb3fe828e0d369fb59490f6650aee59e97d",
+  "method": "glm53_20261112_120702",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"IC\",\n  \"dimension_score\": 95,\n  \"summary\": \"The enhanced prompt maintains strong internal consistency with the original instruction, preserving all key visual, auditory, and narrative elements. Subject identity, actions, chronology, spatial layout, and physics are coherent and consistent across the single shot. Minor issues include slight elaboration in the description of the creature’s dorsal fin and the crowd’s reactions, but these do not contradict or destabilize the original intent. No contradictions, omissions, or infeasible sequences are present. The only minor deviation is the addition of speaker labels (S1, S2) and direct dialogue quotes, which are not in the original but are compatible with the scene and do not alter the core narrative or visual plan.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"SAC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"体型骇人的超大泥鳅状生物\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"a horrifyingly oversized loach-like creature (体型骇人的超大泥鳅状生物)\"\n        }\n      ],\n      \"rationale\": \"Subject identity and appearance are preserved: the creature is consistently described as an oversized loach-like entity with thick, textured skin and a ridged fin-like crest. The loader is consistently orange-yellow, and the crowd is described as 20–30 onlookers. No renaming, duplication, or attribute drift occurs.\"\n    },\n    {\n      \"criterion\": \"ANL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"装载机正以其前端铲斗，吃力地将一条长度远超车身、表皮粗厚并覆有明显纹理的巨型鳝形生物从翻腾的泥水里缓慢提起\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"the loader strains to hoist it from the churning muddy water in its front bucket. The creature thrashes violently in the bucket\"\n        }\n      ],\n      \"rationale\": \"Actions are causally coherent: the loader attempts to lift the creature, which thrashes in response. The crowd reacts with shock and excitement, and their actions (recording, shouting) are plausible reactions to the event. No dangling or incompatible actions are introduced.\"\n    },\n    {\n      \"criterion\": \"TSC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"镜头以平视高度的大全景开场...镜头开始以缓慢速度向左横移...最终，镜头在完整呈现人群、机械与庞然生物同处一景的对峙瞬间后缓缓收住\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"In one continuous, unbroken camera movement... the camera pans left at slow speed... the camera eases to a stop for the final beat\"\n        }\n      ],\n      \"rationale\": \"Chronology and duration are consistent with the 15-second shot. The sequence begins with a static wide shot, transitions into a slow pan left to reveal the crowd, and ends with a static hold. No overlapping or infeasible timestamps or state resets are present.\"\n    },\n    {\n      \"criterion\": \"SPC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"镜头以平视高度的大全景开场...画面采用居中构图，将位于坑内核心位置的装载机以及它所钩起的猎物作为视觉中心\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"eye-level extreme wide shot with deep depth of field and centered composition opens on a wide, oval, waterlogged excavation pit... the camera pans left at slow speed, gradually revealing twenty to thirty onlookers spaced along the pit rim\"\n        }\n      ],\n      \"rationale\": \"Spatial layout is consistent: the pit is oval, the loader is at the edge, the creature is in the center, and the crowd is along the rim. The pan left reveals the crowd without violating screen direction or relative positioning. No unexplained swaps or impossible trajectories.\"\n    },\n    {\n      \"criterion\": \"PL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"巨物在铲斗内疯狂摆动躯体，背部隆起的鳍状结构随之抖动起伏，展现出惊人的挣扎力量\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"The creature thrashes violently in the bucket, its dorsal fin rippling and undulating, hurling sheets of mud and water into the air\"\n        }\n      ],\n      \"rationale\": \"Physics are plausible within the sci-fi exotic-wonder context: the creature’s thrashing causes mud and water to splash, consistent with its size and the bucket’s containment. The loader’s strain is believable given the creature’s size. No violations of gravity, contact, or object permanence.\"\n    },\n    {\n      \"criterion\": \"AVS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"minor\",\n      \"issue\": \"The enhanced prompt introduces labeled speakers (S1, S2) and direct dialogue quotes not present in the original, which may imply a more structured audio layer than the original’s ambient crowd noise.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"A man in the crowd with a sharp, startled voice (S1) exclaims: <d>[Chinese] 天哪，那是什么东西？！</d> Beside him, a woman urging the others on (S2) shouts: <d>[Chinese] 快拍快拍，别停！</d>\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"围观者之间不断爆发出的惊呼、议论与零星快门提示音\"\n        }\n      ],\n      \"rationale\": \"The original prompt describes ambient crowd noise without specific dialogue or speaker identification. The enhanced prompt adds two specific lines with speaker labels, which is a minor elaboration. While not contradictory, it introduces a more structured audio layer than implied in the original, which may affect alignment if not rendered as ambient. However, since the dialogue is consistent with the scene and does not conflict with the original’s intent, the issue is minor.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt maintains strong internal consistency with the original instruction, preserving all key visual, auditory, and narrative elements. Subject identity, actions, chronology, spatial layout, and physics are coherent and consistent across the single shot. Minor issues include slight elaboration in the description of the creature’s dorsal fin and the crowd’s reactions, but these do not contradict or destabilize the original intent. No contradictions, omissions, or infeasible sequences are present. The only minor deviation is the addition of speaker labels (S1, S2) and direct dialogue quotes, which are not in the original but are compatible with the scene and do not alter the core narrative or visual plan.",
+  "usage": {
+    "completion_tokens": 1479,
+    "prompt_tokens": 1852,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 3331
+  }
+}

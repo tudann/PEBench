@@ -1,0 +1,123 @@
+{
+  "candidate_hash": "d0148e2820748542cb4fb36172a846b36b4cae5745f4b5176d584e16b6c922c3",
+  "case_key": "i2v:260",
+  "created_at": "2026-11-13T08:01:48+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "SAC",
+      "evidence": [
+        {
+          "quote": "猫（四川女娃口音）：老师我想换座位",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "不要使用首帧里的人物、服装、姿态和场景，改成白棚里另一位年龄和性别都相反的陌生人。...这个主角同时变成五个外貌不同的人，并且互相对话。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "主体身份、数量、外观、服装和场景被彻底替换和矛盾化。原始主体为猫和狗，增强提示要求改为白棚中的陌生人，且同一主体同时变为五人，身份、性别、年龄均不一致，违反主体稳定性和唯一性。",
+      "rationale": "原始主体为明确的猫和狗，增强提示要求替换为陌生人并同时分裂为五人，导致主体身份、数量和外观完全不一致，违反SAC核心要求。",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANL",
+      "evidence": [
+        {
+          "quote": "0-2.5s 猫：老师我想换座位\n2.5-5s 画外音老师：为什么呀\n5-7.5s 猫：我旁边坐了一只傻狗",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "中途插进一段无关的海底寻宝。时间倒过来：先给结尾，再跳到一个对不上的开头。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "动作序列完全断裂，无因果或逻辑连接。原始为连贯对话剧情，增强提示插入海底寻宝、时间倒流、角色互换等无关事件，导致动作无绑定、无反应、无分辨率。",
+      "rationale": "原始动作是连贯的对话剧情，增强提示引入无关联事件和倒叙，破坏动作的因果链和角色互动逻辑，导致ANL严重失效。",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "TSC",
+      "evidence": [
+        {
+          "quote": "时长控制在15秒",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "总时长写成3秒，同时又要求每个分镜各自持续27秒。时间倒过来：先给结尾，再跳到一个对不上的开头。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "时间线完全混乱。原始时长15秒，增强提示要求总时长3秒但每个分镜27秒，且要求时间倒流、开头结尾错位，导致时间分配和事件顺序不可行。",
+      "rationale": "3秒与27秒分镜在时长上矛盾，且时间倒流与错位开头导致事件顺序无法成立，TSC维度完全失效。",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SPC",
+      "evidence": [
+        {
+          "quote": "坐在木质课桌前，教室场景",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "白底产品目录被风吹过，只剩模糊色块。...改成白棚里另一位年龄和性别都相反的陌生人。...镜头一直在晃。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "空间设定完全矛盾。原始为教室场景，增强提示要求白底产品目录、白棚、海底等多重不连贯场景，且镜头要求从锁死到晃动，空间位置和运动路径无法衔接。",
+      "rationale": "原始场景为教室，增强提示要求白棚、海底、模糊色块等，空间设定无连续性，镜头运动矛盾，SPC严重破坏。",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "PL",
+      "evidence": [
+        {
+          "quote": "这个主角同时变成五个外貌不同的人，并且互相对话。时间倒过来：先给结尾，再跳到一个对不上的开头。中途插进一段无关的海底寻宝。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "物理规则被系统性违背。同一主体同时变为五人，时间倒流，场景在白棚、海底、模糊色块间跳跃，无合理物理或逻辑解释，违反物体永久性、身份唯一性和因果律。",
+      "rationale": "主体分裂、时间倒流、场景跳跃等设定在现实物理中不可行，且无虚构世界规则支持，PL维度严重失效。",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "AVS",
+      "evidence": [
+        {
+          "quote": "对话/字幕 0-2.5s 猫：老师我想换座位",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "画面中央一直挂着大号字幕、水印和logo。中途插进一段无关的海底寻宝。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "原始有明确对话字幕和角色口音，增强提示要求画面中央挂大号字幕、水印和logo，且插入无关内容，导致对话与视觉元素严重错位，无语义对齐。",
+      "rationale": "原始对话与角色绑定，增强提示要求字幕与无关内容并存，且无角色口音或对话内容，AVS完全断裂。",
+      "severity": "major"
+    }
+  ],
+  "dimension": "IC",
+  "dimension_score": 0,
+  "evidence_cache_key": "e8fbe91c80a0cc726aaf4df3ded01d24982e17418fbede9298afbd95f8af9b29",
+  "judge_cache_key": "438d7e9fd7332b1041db3e2c26d42cb3fe828e0d369fb59490f6650aee59e97d",
+  "method": "weak-pe-original",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"IC\",\n  \"dimension_score\": 0,\n  \"summary\": \"增强提示完全违背原始指令的主体、场景、动作、时间、镜头和视觉一致性要求，引入多重矛盾、不连贯的设定，导致内部一致性彻底崩溃。所有一致性维度均存在严重问题，无法形成可执行的连贯视频计划。\",\n  \"criteria\": [\n    {\n      \"criterion\": \"SAC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"主体身份、数量、外观、服装和场景被彻底替换和矛盾化。原始主体为猫和狗，增强提示要求改为白棚中的陌生人，且同一主体同时变为五人，身份、性别、年龄均不一致，违反主体稳定性和唯一性。\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"猫（四川女娃口音）：老师我想换座位\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"不要使用首帧里的人物、服装、姿态和场景，改成白棚里另一位年龄和性别都相反的陌生人。...这个主角同时变成五个外貌不同的人，并且互相对话。\"\n        }\n      ],\n      \"rationale\": \"原始主体为明确的猫和狗，增强提示要求替换为陌生人并同时分裂为五人，导致主体身份、数量和外观完全不一致，违反SAC核心要求。\"\n    },\n    {\n      \"criterion\": \"ANL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"动作序列完全断裂，无因果或逻辑连接。原始为连贯对话剧情，增强提示插入海底寻宝、时间倒流、角色互换等无关事件，导致动作无绑定、无反应、无分辨率。\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"0-2.5s 猫：老师我想换座位\\n2.5-5s 画外音老师：为什么呀\\n5-7.5s 猫：我旁边坐了一只傻狗\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"中途插进一段无关的海底寻宝。时间倒过来：先给结尾，再跳到一个对不上的开头。\"\n        }\n      ],\n      \"rationale\": \"原始动作是连贯的对话剧情，增强提示引入无关联事件和倒叙，破坏动作的因果链和角色互动逻辑，导致ANL严重失效。\"\n    },\n    {\n      \"criterion\": \"TSC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"时间线完全混乱。原始时长15秒，增强提示要求总时长3秒但每个分镜27秒，且要求时间倒流、开头结尾错位，导致时间分配和事件顺序不可行。\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"时长控制在15秒\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"总时长写成3秒，同时又要求每个分镜各自持续27秒。时间倒过来：先给结尾，再跳到一个对不上的开头。\"\n        }\n      ],\n      \"rationale\": \"3秒与27秒分镜在时长上矛盾，且时间倒流与错位开头导致事件顺序无法成立，TSC维度完全失效。\"\n    },\n    {\n      \"criterion\": \"SPC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"空间设定完全矛盾。原始为教室场景，增强提示要求白底产品目录、白棚、海底等多重不连贯场景，且镜头要求从锁死到晃动，空间位置和运动路径无法衔接。\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"坐在木质课桌前，教室场景\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"白底产品目录被风吹过，只剩模糊色块。...改成白棚里另一位年龄和性别都相反的陌生人。...镜头一直在晃。\"\n        }\n      ],\n      \"rationale\": \"原始场景为教室，增强提示要求白棚、海底、模糊色块等，空间设定无连续性，镜头运动矛盾，SPC严重破坏。\"\n    },\n    {\n      \"criterion\": \"PL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"物理规则被系统性违背。同一主体同时变为五人，时间倒流，场景在白棚、海底、模糊色块间跳跃，无合理物理或逻辑解释，违反物体永久性、身份唯一性和因果律。\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"这个主角同时变成五个外貌不同的人，并且互相对话。时间倒过来：先给结尾，再跳到一个对不上的开头。中途插进一段无关的海底寻宝。\"\n        }\n      ],\n      \"rationale\": \"主体分裂、时间倒流、场景跳跃等设定在现实物理中不可行，且无虚构世界规则支持，PL维度严重失效。\"\n    },\n    {\n      \"criterion\": \"AVS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"原始有明确对话字幕和角色口音，增强提示要求画面中央挂大号字幕、水印和logo，且插入无关内容，导致对话与视觉元素严重错位，无语义对齐。\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"对话/字幕 0-2.5s 猫：老师我想换座位\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"画面中央一直挂着大号字幕、水印和logo。中途插进一段无关的海底寻宝。\"\n        }\n      ],\n      \"rationale\": \"原始对话与角色绑定，增强提示要求字幕与无关内容并存，且无角色口音或对话内容，AVS完全断裂。\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "增强提示完全违背原始指令的主体、场景、动作、时间、镜头和视觉一致性要求，引入多重矛盾、不连贯的设定，导致内部一致性彻底崩溃。所有一致性维度均存在严重问题，无法形成可执行的连贯视频计划。",
+  "usage": {
+    "completion_tokens": 1383,
+    "prompt_tokens": 2437,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 3820
+  }
+}

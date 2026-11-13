@@ -1,0 +1,182 @@
+{
+  "candidate_hash": "a4b0c0ed2d3ab59bf3b2d2ac5d52340928a8ee2f2f3408883012cc50cba45277",
+  "case_key": "r2v:080",
+  "created_at": "2026-11-13T08:38:11+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "GSF",
+      "evidence": [
+        {
+          "quote": "<Picture 1> is the character reference sheet for <Subject 1>, providing his identity, face, hairstyle, stubble, and white-shirt/black-slacks outfit in Korean WEBTOON illustration style.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "primary_style: Korean_WEBTOON, secondary_styles: [clean_line_art, soft_shading]",
+          "source": "evidence_facts"
+        }
+      ],
+      "issue": "The enhanced prompt specifies 'Korean WEBTOON illustration style' and adds 'clean_line_art, soft_shading' as secondary styles, which are not explicitly mentioned in the original prompt. While compatible, this adds detail not requested.",
+      "rationale": "The original prompt specifies '韩系WEBTOON漫画风' (Korean WEBTOON comic style), which is preserved. The added secondary styles are elaborations that do not contradict or replace the core style, but are not strictly required by the original. This is a minor enhancement, not a material deviation.",
+      "severity": "minor"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SAP",
+      "evidence": [
+        {
+          "quote": "<Subject 1> is Chen Kai, the 38-year-old male office worker defined by <Picture 1>: neat black hair, brown eyes, light stubble and goatee, faint forehead lines, tired expression, white button-up shirt, black belt, and black slacks.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "identity: 陈凯 (Chen Kai), visible_appearance: clothing: white long-sleeve dress shirt, black trousers, black belt, hair: black, neatly styled with side-swept bangs, facial_hair: light stubble on chin and upper lip",
+          "source": "evidence_facts"
+        }
+      ],
+      "issue": "All subject identities, appearances, and attributes are preserved. Chen Kai’s appearance is locked to <Picture 1> across all shots, HR and Zhou Ming are correctly defined with their roles and visual traits.",
+      "rationale": "The enhanced prompt explicitly anchors Chen Kai’s appearance to the reference image and preserves all key attributes. HR and Zhou Ming are correctly defined with their roles and visual characteristics. No substitutions or omissions.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANF",
+      "evidence": [
+        {
+          "quote": "镜头1（0-4秒）...手机屏幕忽然亮起，显示房贷自动扣款成功...镜头2（4-7秒）...HR站在桌边，把裁员通知书放到桌上...镜头3（7-11秒）...陈凯起身...镜头4（11-15秒）...陈凯抱着纸箱走出大楼...",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "[Shot 1] ...phone screen lights up showing the mortgage auto-deduction success notification. [Shot 2] ...HR staff member...placing the layoff notice down. [Shot 3] ...Chen Kai rises from his chair... [Shot 4] ...Chen Kai carries a cardboard box out of the building...",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The sequence of events, actions, and narrative intent are preserved: mortgage success → layoff notice → confrontation with HR and Zhou Ming → exit with box → frozen on street → hook text. All actions and interactions are correctly ordered and described.",
+      "rationale": "The enhanced prompt maintains the exact event sequence and narrative progression from the original. All key actions (e.g., raising head, clenching fist, standing frozen) are preserved with correct timing and context.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "DLI",
+      "evidence": [
+        {
+          "quote": "旁白（低沉）\n38岁这年，房贷刚刚扣完，公司就决定不要我了。\nHR（冷淡）\n公司感谢你的贡献，但因为岗位优化，你被裁了。\n陈凯\n是不是搞错了？我在这做了十二年。\nHR\n决定已经下来了。\n陈凯（低声）\n公司淘汰的不是我……是年龄。",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "<d>[Chinese] 38岁这年，房贷刚刚扣完，公司就决定不要我了。</d>\n<d>[Chinese] 公司感谢你的贡献，但因为岗位优化，你被裁了。</d>\n<d>[Chinese] 是不是搞错了？我在这做了十二年。</d>\n<d>[Chinese] 决定已经下来了。</d>\n<d>[Chinese] 公司淘汰的不是我……是年龄。</d>",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "All dialogue, narration, and speaker attributions are preserved exactly as in the original, including wording, language (Chinese), and delivery (e.g., 'low, heavy piano score', 'flat, cold female-or-neutral office voice').",
+      "rationale": "The enhanced prompt reproduces all dialogue and narration verbatim, including speaker attribution and delivery cues. No paraphrasing or translation occurs.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ARP",
+      "evidence": [
+        {
+          "quote": "BGM\n低沉钢琴\n压迫感环境底噪\n音效\n纸张落桌声（增强）\n背景音瞬间压低\n音乐\n心跳声逐渐增强",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "A low, heavy solo-piano score...oppressive ambient undertones...amplified paper-on-desk impact...a rising stylized heartbeat...city traffic and crowd ambience",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "All requested sounds are preserved: low piano score, oppressive ambient hum, paper-on-desk sound with background ducking, rising heartbeat, city traffic and crowd ambience. Silence is not requested, so no issue.",
+      "rationale": "The enhanced prompt accurately maps all sound elements from the original, including specific effects and their timing. No substitutions or omissions.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CCP",
+      "evidence": [
+        {
+          "quote": "镜头中景缓缓推进...纸张落桌特写，伴随轻微镜头晃动...镜头从男主摇移到玻璃办公室内...镜头缓慢后拉",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "medium shot slowly pushes in...close-up shows the paper landing on the desk with a slight camera shake...camera pans from him across to the glass-walled office...camera slowly pulls back",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Camera movements and shot design are preserved: push-in (Shot 1), cut to close-up with shake (Shot 2), pan (Shot 3), pull-back (Shot 4). Shot count, scale, and movement are consistent with original.",
+      "rationale": "The enhanced prompt explicitly matches the original camera instructions for each shot, including movement type, timing, and scale. No override or contradiction.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "LCF",
+      "evidence": [
+        {
+          "quote": "冷白色灯光笼罩着写字楼开放办公区...冷色调",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "cold desaturated office tones",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "color_temperature: neutral to slightly warm",
+          "source": "evidence_facts"
+        }
+      ],
+      "issue": "The original prompt specifies 'cold white fluorescent light' and 'cold desaturated office tones', but the evidence from the image describes 'neutral to slightly warm' lighting. The enhanced prompt describes 'cold desaturated office tones', which aligns with the original, but the evidence suggests a potential mismatch in the reference asset.",
+      "rationale": "The enhanced prompt correctly preserves the requested lighting (cold, desaturated) as per the original. The evidence from the image may reflect studio lighting, which is not the intended scene lighting. This is a minor issue due to asset limitation, not a failure in the prompt.",
+      "severity": "minor"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SSP",
+      "evidence": [
+        {
+          "quote": "写字楼开放办公区...玻璃办公室...街头红绿灯交替映在他脸上",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "open-plan office...glass-walled office...street, where red and green traffic lights alternate across his face",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Setting, background, and spatial relations are preserved: open-plan office (Shots 1–3), glass-walled office (Shot 3), street with traffic (Shot 4). Key objects (family photo, phone, layoff notice, cardboard box) are placed correctly.",
+      "rationale": "The enhanced prompt accurately describes the setting and spatial layout for each shot, matching the original. No changes to location or object placement.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "OTI",
+      "evidence": [
+        {
+          "quote": "结尾钩子字幕\n第2集：体面，被生活撕碎",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "the hook text appears on screen character by character: “第2集：体面，被生活撕碎”",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The hook text “第2集：体面，被生活撕碎” is preserved exactly as in the original, including wording, language, and timing (end of Shot 4).",
+      "rationale": "The text is preserved verbatim, with correct placement and timing. No substitution or paraphrasing.",
+      "severity": "none"
+    }
+  ],
+  "dimension": "SF",
+  "dimension_score": 95,
+  "evidence_cache_key": "50aff9c04c32428849e270823a14f291f55b37b4aa96c564da7d60136f16d151",
+  "judge_cache_key": "a0ca24571ad14d7ab7be626329bd736d7e7015f9ebc418227c8be391591d0377",
+  "method": "glm53_20261112_120702",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"SF\",\n  \"dimension_score\": 95,\n  \"summary\": \"The enhanced prompt preserves the core semantic elements of the original instruction with high fidelity. It accurately retains the genre (Korean WEBTOON-style cinematic short), subject identities and appearances (Chen Kai, HR, Zhou Ming), key props, actions, dialogue, camera movements, lighting, setting, and sound design. Minor elaborations (e.g., detailed character description, explicit shot timing) are compatible and do not contradict the original. The only notable issue is a slight over-specification of visual style (e.g., 'clean_line_art' not in original) and a minor omission in the original's 'cold desaturated office tones' being described as 'neutral to slightly warm' in the evidence, but this does not materially alter the request. Overall, semantic fidelity is strong.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"GSF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"minor\",\n      \"issue\": \"The enhanced prompt specifies 'Korean WEBTOON illustration style' and adds 'clean_line_art, soft_shading' as secondary styles, which are not explicitly mentioned in the original prompt. While compatible, this adds detail not requested.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"<Picture 1> is the character reference sheet for <Subject 1>, providing his identity, face, hairstyle, stubble, and white-shirt/black-slacks outfit in Korean WEBTOON illustration style.\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"primary_style: Korean_WEBTOON, secondary_styles: [clean_line_art, soft_shading]\"\n        }\n      ],\n      \"rationale\": \"The original prompt specifies '韩系WEBTOON漫画风' (Korean WEBTOON comic style), which is preserved. The added secondary styles are elaborations that do not contradict or replace the core style, but are not strictly required by the original. This is a minor enhancement, not a material deviation.\"\n    },\n    {\n      \"criterion\": \"SAP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"All subject identities, appearances, and attributes are preserved. Chen Kai’s appearance is locked to <Picture 1> across all shots, HR and Zhou Ming are correctly defined with their roles and visual traits.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"<Subject 1> is Chen Kai, the 38-year-old male office worker defined by <Picture 1>: neat black hair, brown eyes, light stubble and goatee, faint forehead lines, tired expression, white button-up shirt, black belt, and black slacks.\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"identity: 陈凯 (Chen Kai), visible_appearance: clothing: white long-sleeve dress shirt, black trousers, black belt, hair: black, neatly styled with side-swept bangs, facial_hair: light stubble on chin and upper lip\"\n        }\n      ],\n      \"rationale\": \"The enhanced prompt explicitly anchors Chen Kai’s appearance to the reference image and preserves all key attributes. HR and Zhou Ming are correctly defined with their roles and visual characteristics. No substitutions or omissions.\"\n    },\n    {\n      \"criterion\": \"ANF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"The sequence of events, actions, and narrative intent are preserved: mortgage success → layoff notice → confrontation with HR and Zhou Ming → exit with box → frozen on street → hook text. All actions and interactions are correctly ordered and described.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"镜头1（0-4秒）...手机屏幕忽然亮起，显示房贷自动扣款成功...镜头2（4-7秒）...HR站在桌边，把裁员通知书放到桌上...镜头3（7-11秒）...陈凯起身...镜头4（11-15秒）...陈凯抱着纸箱走出大楼...\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"[Shot 1] ...phone screen lights up showing the mortgage auto-deduction success notification. [Shot 2] ...HR staff member...placing the layoff notice down. [Shot 3] ...Chen Kai rises from his chair... [Shot 4] ...Chen Kai carries a cardboard box out of the building...\"\n        }\n      ],\n      \"rationale\": \"The enhanced prompt maintains the exact event sequence and narrative progression from the original. All key actions (e.g., raising head, clenching fist, standing frozen) are preserved with correct timing and context.\"\n    },\n    {\n      \"criterion\": \"DLI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"All dialogue, narration, and speaker attributions are preserved exactly as in the original, including wording, language (Chinese), and delivery (e.g., 'low, heavy piano score', 'flat, cold female-or-neutral office voice').\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"旁白（低沉）\\n38岁这年，房贷刚刚扣完，公司就决定不要我了。\\nHR（冷淡）\\n公司感谢你的贡献，但因为岗位优化，你被裁了。\\n陈凯\\n是不是搞错了？我在这做了十二年。\\nHR\\n决定已经下来了。\\n陈凯（低声）\\n公司淘汰的不是我……是年龄。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"<d>[Chinese] 38岁这年，房贷刚刚扣完，公司就决定不要我了。</d>\\n<d>[Chinese] 公司感谢你的贡献，但因为岗位优化，你被裁了。</d>\\n<d>[Chinese] 是不是搞错了？我在这做了十二年。</d>\\n<d>[Chinese] 决定已经下来了。</d>\\n<d>[Chinese] 公司淘汰的不是我……是年龄。</d>\"\n        }\n      ],\n      \"rationale\": \"The enhanced prompt reproduces all dialogue and narration verbatim, including speaker attribution and delivery cues. No paraphrasing or translation occurs.\"\n    },\n    {\n      \"criterion\": \"ARP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"All requested sounds are preserved: low piano score, oppressive ambient hum, paper-on-desk sound with background ducking, rising heartbeat, city traffic and crowd ambience. Silence is not requested, so no issue.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"BGM\\n低沉钢琴\\n压迫感环境底噪\\n音效\\n纸张落桌声（增强）\\n背景音瞬间压低\\n音乐\\n心跳声逐渐增强\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"A low, heavy solo-piano score...oppressive ambient undertones...amplified paper-on-desk impact...a rising stylized heartbeat...city traffic and crowd ambience\"\n        }\n      ],\n      \"rationale\": \"The enhanced prompt accurately maps all sound elements from the original, including specific effects and their timing. No substitutions or omissions.\"\n    },\n    {\n      \"criterion\": \"CCP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"Camera movements and shot design are preserved: push-in (Shot 1), cut to close-up with shake (Shot 2), pan (Shot 3), pull-back (Shot 4). Shot count, scale, and movement are consistent with original.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"镜头中景缓缓推进...纸张落桌特写，伴随轻微镜头晃动...镜头从男主摇移到玻璃办公室内...镜头缓慢后拉\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"medium shot slowly pushes in...close-up shows the paper landing on the desk with a slight camera shake...camera pans from him across to the glass-walled office...camera slowly pulls back\"\n        }\n      ],\n      \"rationale\": \"The enhanced prompt explicitly matches the original camera instructions for each shot, including movement type, timing, and scale. No override or contradiction.\"\n    },\n    {\n      \"criterion\": \"LCF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"minor\",\n      \"issue\": \"The original prompt specifies 'cold white fluorescent light' and 'cold desaturated office tones', but the evidence from the image describes 'neutral to slightly warm' lighting. The enhanced prompt describes 'cold desaturated office tones', which aligns with the original, but the evidence suggests a potential mismatch in the reference asset.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"冷白色灯光笼罩着写字楼开放办公区...冷色调\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"cold desaturated office tones\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"color_temperature: neutral to slightly warm\"\n        }\n      ],\n      \"rationale\": \"The enhanced prompt correctly preserves the requested lighting (cold, desaturated) as per the original. The evidence from the image may reflect studio lighting, which is not the intended scene lighting. This is a minor issue due to asset limitation, not a failure in the prompt.\"\n    },\n    {\n      \"criterion\": \"SSP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"Setting, background, and spatial relations are preserved: open-plan office (Shots 1–3), glass-walled office (Shot 3), street with traffic (Shot 4). Key objects (family photo, phone, layoff notice, cardboard box) are placed correctly.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"写字楼开放办公区...玻璃办公室...街头红绿灯交替映在他脸上\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"open-plan office...glass-walled office...street, where red and green traffic lights alternate across his face\"\n        }\n      ],\n      \"rationale\": \"The enhanced prompt accurately describes the setting and spatial layout for each shot, matching the original. No changes to location or object placement.\"\n    },\n    {\n      \"criterion\": \"OTI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"The hook text “第2集：体面，被生活撕碎” is preserved exactly as in the original, including wording, language, and timing (end of Shot 4).\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"结尾钩子字幕\\n第2集：体面，被生活撕碎\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"the hook text appears on screen character by character: “第2集：体面，被生活撕碎”\"\n        }\n      ],\n      \"rationale\": \"The text is preserved verbatim, with correct placement and timing. No substitution or paraphrasing.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt preserves the core semantic elements of the original instruction with high fidelity. It accurately retains the genre (Korean WEBTOON-style cinematic short), subject identities and appearances (Chen Kai, HR, Zhou Ming), key props, actions, dialogue, camera movements, lighting, setting, and sound design. Minor elaborations (e.g., detailed character description, explicit shot timing) are compatible and do not contradict the original. The only notable issue is a slight over-specification of visual style (e.g., 'clean_line_art' not in original) and a minor omission in the original's 'cold desaturated office tones' being described as 'neutral to slightly warm' in the evidence, but this does not materially alter the request. Overall, semantic fidelity is strong.",
+  "usage": {
+    "completion_tokens": 2485,
+    "prompt_tokens": 3928,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 6413
+  }
+}

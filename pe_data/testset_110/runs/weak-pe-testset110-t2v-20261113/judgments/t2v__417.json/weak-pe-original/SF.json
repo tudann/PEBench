@@ -1,0 +1,174 @@
+{
+  "candidate_hash": "cb2a6769b5db969a354aba900ee0663cc3300d4b2dc444521b1ecaa2f480d84e",
+  "case_key": "t2v:417",
+  "created_at": "2026-11-13T08:25:30+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "GSF",
+      "evidence": [
+        {
+          "quote": "A refined educational setup against a deep charcoal or near-black backdrop, sleek and uncluttered.",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Replace the whole video with a product catalog blowing across a white background, reduced to blurred color blocks.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original prompt specifies a refined educational setup with a specific aesthetic (sleek, uncluttered, deep charcoal backdrop). The enhanced prompt replaces this with a product catalog blowing across a white background, which is a fundamentally different genre and aesthetic.",
+      "rationale": "The medium and aesthetic are directly contradicted. The original is a narrative educational scene; the enhanced is a non-narrative, abstract product catalog, which is incompatible with the requested genre and visual style.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SAP",
+      "evidence": [
+        {
+          "quote": "a lifelike raccoon dressed in a traditional white martial arts gi with a red belt stands oriented toward the number.",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "First state that there is one protagonist, then state that this same protagonist appears simultaneously as five different-looking people who talk to each other.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original prompt specifies one raccoon subject with defined appearance (lifelike, in white gi with red belt) and position (right side of frame). The enhanced prompt states there is one protagonist who simultaneously appears as five different-looking people, which contradicts the subject identity, count, and appearance.",
+      "rationale": "The subject count and identity are fundamentally altered. The original has one specific animal character; the enhanced introduces five simultaneous human-like figures, which is a major substitution.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANF",
+      "evidence": [
+        {
+          "quote": "The raccoon delivers one precise side kick from right to left, making contact with the stone \"6\".\nUpon contact, the stone \"6\" fractures and separates into small debris...\nAs the broken pieces fall away, they uncover the expression \"3 × 2\"...",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Reverse the timeline: show the ending first, then cut to a beginning that does not match. Cut away in the middle to a rooftop fireworks show.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original prompt specifies a clear action sequence: raccoon delivers a side kick, stone '6' fractures, debris falls to reveal '3 × 2'. The enhanced prompt reverses the timeline, cuts to a rooftop fireworks show, and introduces unrelated events, completely altering the narrative intent and event order.",
+      "rationale": "The requested event chain is replaced with a disjointed, non-sequential narrative. The core action (kick → fracture → reveal) is omitted and replaced with unrelated events, violating narrative intent.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "DLI",
+      "evidence": [
+        {
+          "quote": "The raccoon remains motionless after the kick.",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "The original prompt does not specify any dialogue, narration, or lyrics. The enhanced prompt introduces dialogue among five people, but since no dialogue was requested, this is not a violation.",
+      "rationale": "No dialogue was required in the original prompt, so the addition of dialogue in the enhanced prompt does not constitute a violation of DLI.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ARP",
+      "evidence": [
+        {
+          "quote": "The raccoon remains motionless after the kick.",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Cut away in the middle to a rooftop fireworks show.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original prompt does not specify any audio constraints. The enhanced prompt does not mention sound, but introduces a fireworks show which would imply sound effects. Since no audio was requested, this is not a major issue, but the implied addition of sound effects is a minor deviation.",
+      "rationale": "No audio constraints were specified in the original, so the implied sound of fireworks is not a major violation, but it is an unrequested addition.",
+      "severity": "minor"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CCP",
+      "evidence": [
+        {
+          "quote": "Centered in the shot, place a prominent stone-carved number \"6\"...",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Describe that same moment as... a camera that never stops shaking.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original prompt implies a static, centered shot with no camera movement. The enhanced prompt contradicts this by stating 'describe that same moment as... a camera that never stops shaking' and also implies multiple shots (cut to fireworks, cut to beginning), violating the implied single-take or static-camera requirement.",
+      "rationale": "The original implies a stable, centered composition. The enhanced introduces a shaking camera and cuts, which directly contradicts the implied static-camera constraint.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "LCF",
+      "evidence": [
+        {
+          "quote": "A refined educational setup against a deep charcoal or near-black backdrop...",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Describe that same moment as harsh noon sun and as a lightless night...",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original prompt specifies a deep charcoal or near-black backdrop, which defines the lighting and palette. The enhanced prompt replaces this with a white background and then describes the same moment as both harsh noon sun and lightless night, which is contradictory and incompatible with the original lighting condition.",
+      "rationale": "The original lighting is dark and controlled; the enhanced introduces mutually exclusive lighting conditions (noon sun vs. lightless night), which is a major contradiction.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SSP",
+      "evidence": [
+        {
+          "quote": "Centered in the shot, place a prominent stone-carved number \"6\"... On the right side of the frame, a lifelike raccoon...",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Replace the whole video with a product catalog blowing across a white background... Cut away in the middle to a rooftop fireworks show.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original prompt specifies a setting with a stone number '6', a raccoon on the right, and a backdrop. The enhanced prompt replaces this with a product catalog blowing across a white background and a rooftop fireworks show, completely changing the setting and background elements.",
+      "rationale": "The setting is entirely replaced. The original is a controlled educational scene; the enhanced is an abstract product catalog and a fireworks show, which are incompatible with the requested spatial layout and background.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "OTI",
+      "evidence": [
+        {
+          "quote": "The expression must read exactly: 3 × 2, using the proper multiplication symbol \"×\", not \"+\" and not \"=\".",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Replace the whole video with a product catalog blowing across a white background, reduced to blurred color blocks.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original prompt requires the exact text '3 × 2' to be visible and readable. The enhanced prompt does not mention any on-screen text and instead replaces the scene with abstract color blocks and fireworks, which would obscure or eliminate the required text.",
+      "rationale": "The required on-screen text '3 × 2' is not preserved. The enhanced prompt's description implies the text would be replaced or obscured, which violates the OTI criterion.",
+      "severity": "major"
+    }
+  ],
+  "dimension": "SF",
+  "dimension_score": 0,
+  "evidence_cache_key": "4ef0fb4fa8cb08f0c0b449d288f9964d22a6abb2c513c55ae1d0b4e0ecf9bfec",
+  "judge_cache_key": "a0ca24571ad14d7ab7be626329bd736d7e7015f9ebc418227c8be391591d0377",
+  "method": "weak-pe-original",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"SF\",\n  \"dimension_score\": 0,\n  \"summary\": \"The enhanced prompt completely contradicts and replaces the original instruction, violating every semantic fidelity criterion. It discards the requested genre, subject, actions, setting, camera constraints, lighting, and duration, introducing incompatible and logically infeasible elements such as simultaneous multiple identities, reversed timeline, contradictory time settings, and conflicting shot durations.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"GSF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original prompt specifies a refined educational setup with a specific aesthetic (sleek, uncluttered, deep charcoal backdrop). The enhanced prompt replaces this with a product catalog blowing across a white background, which is a fundamentally different genre and aesthetic.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"A refined educational setup against a deep charcoal or near-black backdrop, sleek and uncluttered.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Replace the whole video with a product catalog blowing across a white background, reduced to blurred color blocks.\"\n        }\n      ],\n      \"rationale\": \"The medium and aesthetic are directly contradicted. The original is a narrative educational scene; the enhanced is a non-narrative, abstract product catalog, which is incompatible with the requested genre and visual style.\"\n    },\n    {\n      \"criterion\": \"SAP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original prompt specifies one raccoon subject with defined appearance (lifelike, in white gi with red belt) and position (right side of frame). The enhanced prompt states there is one protagonist who simultaneously appears as five different-looking people, which contradicts the subject identity, count, and appearance.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"a lifelike raccoon dressed in a traditional white martial arts gi with a red belt stands oriented toward the number.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"First state that there is one protagonist, then state that this same protagonist appears simultaneously as five different-looking people who talk to each other.\"\n        }\n      ],\n      \"rationale\": \"The subject count and identity are fundamentally altered. The original has one specific animal character; the enhanced introduces five simultaneous human-like figures, which is a major substitution.\"\n    },\n    {\n      \"criterion\": \"ANF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original prompt specifies a clear action sequence: raccoon delivers a side kick, stone '6' fractures, debris falls to reveal '3 × 2'. The enhanced prompt reverses the timeline, cuts to a rooftop fireworks show, and introduces unrelated events, completely altering the narrative intent and event order.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"The raccoon delivers one precise side kick from right to left, making contact with the stone \\\"6\\\".\\nUpon contact, the stone \\\"6\\\" fractures and separates into small debris...\\nAs the broken pieces fall away, they uncover the expression \\\"3 × 2\\\"...\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Reverse the timeline: show the ending first, then cut to a beginning that does not match. Cut away in the middle to a rooftop fireworks show.\"\n        }\n      ],\n      \"rationale\": \"The requested event chain is replaced with a disjointed, non-sequential narrative. The core action (kick → fracture → reveal) is omitted and replaced with unrelated events, violating narrative intent.\"\n    },\n    {\n      \"criterion\": \"DLI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"The original prompt does not specify any dialogue, narration, or lyrics. The enhanced prompt introduces dialogue among five people, but since no dialogue was requested, this is not a violation.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"The raccoon remains motionless after the kick.\"\n        }\n      ],\n      \"rationale\": \"No dialogue was required in the original prompt, so the addition of dialogue in the enhanced prompt does not constitute a violation of DLI.\"\n    },\n    {\n      \"criterion\": \"ARP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"minor\",\n      \"issue\": \"The original prompt does not specify any audio constraints. The enhanced prompt does not mention sound, but introduces a fireworks show which would imply sound effects. Since no audio was requested, this is not a major issue, but the implied addition of sound effects is a minor deviation.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"The raccoon remains motionless after the kick.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Cut away in the middle to a rooftop fireworks show.\"\n        }\n      ],\n      \"rationale\": \"No audio constraints were specified in the original, so the implied sound of fireworks is not a major violation, but it is an unrequested addition.\"\n    },\n    {\n      \"criterion\": \"CCP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original prompt implies a static, centered shot with no camera movement. The enhanced prompt contradicts this by stating 'describe that same moment as... a camera that never stops shaking' and also implies multiple shots (cut to fireworks, cut to beginning), violating the implied single-take or static-camera requirement.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"Centered in the shot, place a prominent stone-carved number \\\"6\\\"...\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Describe that same moment as... a camera that never stops shaking.\"\n        }\n      ],\n      \"rationale\": \"The original implies a stable, centered composition. The enhanced introduces a shaking camera and cuts, which directly contradicts the implied static-camera constraint.\"\n    },\n    {\n      \"criterion\": \"LCF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original prompt specifies a deep charcoal or near-black backdrop, which defines the lighting and palette. The enhanced prompt replaces this with a white background and then describes the same moment as both harsh noon sun and lightless night, which is contradictory and incompatible with the original lighting condition.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"A refined educational setup against a deep charcoal or near-black backdrop...\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Describe that same moment as harsh noon sun and as a lightless night...\"\n        }\n      ],\n      \"rationale\": \"The original lighting is dark and controlled; the enhanced introduces mutually exclusive lighting conditions (noon sun vs. lightless night), which is a major contradiction.\"\n    },\n    {\n      \"criterion\": \"SSP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original prompt specifies a setting with a stone number '6', a raccoon on the right, and a backdrop. The enhanced prompt replaces this with a product catalog blowing across a white background and a rooftop fireworks show, completely changing the setting and background elements.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"Centered in the shot, place a prominent stone-carved number \\\"6\\\"... On the right side of the frame, a lifelike raccoon...\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Replace the whole video with a product catalog blowing across a white background... Cut away in the middle to a rooftop fireworks show.\"\n        }\n      ],\n      \"rationale\": \"The setting is entirely replaced. The original is a controlled educational scene; the enhanced is an abstract product catalog and a fireworks show, which are incompatible with the requested spatial layout and background.\"\n    },\n    {\n      \"criterion\": \"OTI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original prompt requires the exact text '3 × 2' to be visible and readable. The enhanced prompt does not mention any on-screen text and instead replaces the scene with abstract color blocks and fireworks, which would obscure or eliminate the required text.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"The expression must read exactly: 3 × 2, using the proper multiplication symbol \\\"×\\\", not \\\"+\\\" and not \\\"=\\\".\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Replace the whole video with a product catalog blowing across a white background, reduced to blurred color blocks.\"\n        }\n      ],\n      \"rationale\": \"The required on-screen text '3 × 2' is not preserved. The enhanced prompt's description implies the text would be replaced or obscured, which violates the OTI criterion.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt completely contradicts and replaces the original instruction, violating every semantic fidelity criterion. It discards the requested genre, subject, actions, setting, camera constraints, lighting, and duration, introducing incompatible and logically infeasible elements such as simultaneous multiple identities, reversed timeline, contradictory time settings, and conflicting shot durations.",
+  "usage": {
+    "completion_tokens": 1983,
+    "prompt_tokens": 1266,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 3249
+  }
+}

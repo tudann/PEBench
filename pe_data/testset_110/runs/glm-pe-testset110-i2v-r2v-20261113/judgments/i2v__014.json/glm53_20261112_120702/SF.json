@@ -1,0 +1,194 @@
+{
+  "candidate_hash": "d6fcc72a4ec12510b2b1342caf4511602e2badbd6ca75ab59e1dbcd235300da4",
+  "case_key": "i2v:014",
+  "created_at": "2026-11-13T07:15:24+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "GSF",
+      "evidence": [
+        {
+          "quote": "纪录片的真实感与电影质感相结合，温暖的色彩分级，模拟胶卷颗粒，自然的皮肤细节，柔和的散射",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Live-action, documentary realism with cinematic quality, warm color grading, simulated film grain, natural skin detail, and soft diffusion",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "The enhanced prompt accurately preserves the requested genre (documentary realism with cinematic quality), medium (live-action), and visual style (warm color grading, film grain, soft diffusion). No incompatible styles are introduced.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SAP",
+      "evidence": [
+        {
+          "quote": "患者紧握的双手",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "A static, locked-off close-up shot... frames the adult's clasped hands exactly as shown in <Picture 1> — fingers tightly interlaced, thumbs crossed on top, resting near the lap",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "hands clasped tightly, fingers interlocked, resting on lap",
+          "source": "evidence_facts"
+        }
+      ],
+      "issue": "",
+      "rationale": "Subject identity (patient) and appearance (clenched hands, gray sweater, dark blue jeans) are preserved. The binding of hands to lap and clothing is maintained. The first frame anchor is correctly referenced.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANF",
+      "evidence": [
+        {
+          "quote": "患者紧握的双手缓缓、轻柔地在15秒内松开并打开——这是一个微妙而深思熟虑的释放、投降和信任的手势。这个动作自然且富有情感共鸣，手指逐渐伸展，掌心打开",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Then, slowly and deliberately, the fingers begin to unlace one by one: the top hand's fingers straighten and slide free, the thumbs uncross, and both palms rotate gently open and apart in a continuous, tender gesture of release, surrender, and trust. By the final seconds, the open hands come to rest facing slightly upward with a small gap between them, settling into stillness",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "The requested action sequence (slow, deliberate unclenching over 15 seconds) is preserved with compatible elaboration. The narrative intent (release, surrender, trust) is maintained without substitution or reversal.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "DLI",
+      "evidence": [
+        {
+          "quote": "屏幕上不得出现文字、字幕、说明文字、水印、logo叠加、标识文字或用户界面文本",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "No speech occurs, and no text, subtitles, watermarks, logos, or overlays of any kind appear at any point.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "No dialogue, narration, or lyrics are requested or present. The prompt correctly enforces silence and absence of on-screen text, consistent with the original instruction.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ARP",
+      "evidence": [
+        {
+          "quote": "严格禁止音乐、旋律、背景音乐、配乐、歌唱、声乐哼唱，及任何与音乐轨道的对口型",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "No speech occurs... non_diegetic_music: N/A",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "A quiet indoor room tone with a faint, distant ambient hum. Soft fabric sounds... subtle, gentle friction of skin",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "The prompt correctly preserves the requirement for no music or vocalization. It adds appropriate ambient and diegetic sounds (room tone, fabric, skin friction) that are compatible with the scene and not prohibited.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CCP",
+      "evidence": [
+        {
+          "quote": "static, locked-off close-up shot, slightly above eye level",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "angle: slightly low angle, looking up at hands",
+          "source": "evidence_facts"
+        }
+      ],
+      "issue": "The enhanced prompt specifies 'slightly above eye level' while the evidence suggests 'eye-level to slightly below hands'. This is a minor discrepancy in camera angle description.",
+      "rationale": "The original prompt does not specify camera angle, only 'camera remains static and stable'. The enhanced prompt adds a slight angle description that is compatible but not perfectly aligned with the evidence. This is a minor elaboration, not a contradiction or override.",
+      "severity": "minor"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "LCF",
+      "evidence": [
+        {
+          "quote": "温暖的琥珀色侧光继续照射在灰色毛衣袖子和皮肤的纹理上",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Warm amber side light rakes across the weathered skin, veins, tendons, and knit texture from the upper left",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "color_temperature: warm, amber-toned; light_sources_and_direction_effect: warm amber side light from left",
+          "source": "evidence_facts"
+        }
+      ],
+      "issue": "",
+      "rationale": "The requested warm amber side lighting is preserved. The enhanced prompt adds compatible details (raking light, texture emphasis) without altering the defining condition.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SSP",
+      "evidence": [
+        {
+          "quote": "景深非常浅，背景柔和虚化",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "very shallow depth of field is maintained throughout... background remains softly blurred with warm lamp glows and indistinct furniture",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "depth_of_field: very shallow, background heavily blurred",
+          "source": "evidence_facts"
+        }
+      ],
+      "issue": "",
+      "rationale": "The setting (indoor, blurred background) and spatial relations (hands on lap, sweater cuff anchoring left third) are preserved. The background elements (lamp glows, furniture) are compatible with the original description.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "OTI",
+      "evidence": [
+        {
+          "quote": "屏幕上不得出现文字、字幕、说明文字、水印、logo叠加、标识文字或用户界面文本",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "No text, subtitles, watermarks, logos, or overlays of any kind appear at any point.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "The requirement for no on-screen text is strictly preserved. The enhanced prompt explicitly enforces this constraint, and no text is introduced.",
+      "severity": "none"
+    }
+  ],
+  "dimension": "SF",
+  "dimension_score": 95,
+  "evidence_cache_key": "778a9f7f46787e51bcff1cf977041acb5efeab8a3adb10a6edcfb9d8212b8832",
+  "judge_cache_key": "a0ca24571ad14d7ab7be626329bd736d7e7015f9ebc418227c8be391591d0377",
+  "method": "glm53_20261112_120702",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"SF\",\n  \"dimension_score\": 95,\n  \"summary\": \"The enhanced prompt preserves the core semantic intent of the original instruction with high fidelity, accurately translating the requested visual, auditory, and narrative elements. It maintains the genre, medium, aesthetic, subject identity, actions, camera constraints, lighting, setting, and sound requirements. Minor issues include slight elaboration on camera angle (‘slightly above eye level’ vs. ‘eye-level to slightly below’) and a small addition of ‘tender gesture of release, surrender, and trust’ which is semantically compatible but not explicitly in the original. No major omissions or contradictions are present. The prompt correctly avoids music, text, and speech as required. Overall, semantic fidelity is strong with only minor, non-material deviations.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"GSF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"纪录片的真实感与电影质感相结合，温暖的色彩分级，模拟胶卷颗粒，自然的皮肤细节，柔和的散射\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Live-action, documentary realism with cinematic quality, warm color grading, simulated film grain, natural skin detail, and soft diffusion\"\n        }\n      ],\n      \"rationale\": \"The enhanced prompt accurately preserves the requested genre (documentary realism with cinematic quality), medium (live-action), and visual style (warm color grading, film grain, soft diffusion). No incompatible styles are introduced.\"\n    },\n    {\n      \"criterion\": \"SAP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"患者紧握的双手\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"A static, locked-off close-up shot... frames the adult's clasped hands exactly as shown in <Picture 1> — fingers tightly interlaced, thumbs crossed on top, resting near the lap\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"hands clasped tightly, fingers interlocked, resting on lap\"\n        }\n      ],\n      \"rationale\": \"Subject identity (patient) and appearance (clenched hands, gray sweater, dark blue jeans) are preserved. The binding of hands to lap and clothing is maintained. The first frame anchor is correctly referenced.\"\n    },\n    {\n      \"criterion\": \"ANF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"患者紧握的双手缓缓、轻柔地在15秒内松开并打开——这是一个微妙而深思熟虑的释放、投降和信任的手势。这个动作自然且富有情感共鸣，手指逐渐伸展，掌心打开\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Then, slowly and deliberately, the fingers begin to unlace one by one: the top hand's fingers straighten and slide free, the thumbs uncross, and both palms rotate gently open and apart in a continuous, tender gesture of release, surrender, and trust. By the final seconds, the open hands come to rest facing slightly upward with a small gap between them, settling into stillness\"\n        }\n      ],\n      \"rationale\": \"The requested action sequence (slow, deliberate unclenching over 15 seconds) is preserved with compatible elaboration. The narrative intent (release, surrender, trust) is maintained without substitution or reversal.\"\n    },\n    {\n      \"criterion\": \"DLI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"屏幕上不得出现文字、字幕、说明文字、水印、logo叠加、标识文字或用户界面文本\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"No speech occurs, and no text, subtitles, watermarks, logos, or overlays of any kind appear at any point.\"\n        }\n      ],\n      \"rationale\": \"No dialogue, narration, or lyrics are requested or present. The prompt correctly enforces silence and absence of on-screen text, consistent with the original instruction.\"\n    },\n    {\n      \"criterion\": \"ARP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"严格禁止音乐、旋律、背景音乐、配乐、歌唱、声乐哼唱，及任何与音乐轨道的对口型\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"No speech occurs... non_diegetic_music: N/A\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"A quiet indoor room tone with a faint, distant ambient hum. Soft fabric sounds... subtle, gentle friction of skin\"\n        }\n      ],\n      \"rationale\": \"The prompt correctly preserves the requirement for no music or vocalization. It adds appropriate ambient and diegetic sounds (room tone, fabric, skin friction) that are compatible with the scene and not prohibited.\"\n    },\n    {\n      \"criterion\": \"CCP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"minor\",\n      \"issue\": \"The enhanced prompt specifies 'slightly above eye level' while the evidence suggests 'eye-level to slightly below hands'. This is a minor discrepancy in camera angle description.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"static, locked-off close-up shot, slightly above eye level\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"angle: slightly low angle, looking up at hands\"\n        }\n      ],\n      \"rationale\": \"The original prompt does not specify camera angle, only 'camera remains static and stable'. The enhanced prompt adds a slight angle description that is compatible but not perfectly aligned with the evidence. This is a minor elaboration, not a contradiction or override.\"\n    },\n    {\n      \"criterion\": \"LCF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"温暖的琥珀色侧光继续照射在灰色毛衣袖子和皮肤的纹理上\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Warm amber side light rakes across the weathered skin, veins, tendons, and knit texture from the upper left\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"color_temperature: warm, amber-toned; light_sources_and_direction_effect: warm amber side light from left\"\n        }\n      ],\n      \"rationale\": \"The requested warm amber side lighting is preserved. The enhanced prompt adds compatible details (raking light, texture emphasis) without altering the defining condition.\"\n    },\n    {\n      \"criterion\": \"SSP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"景深非常浅，背景柔和虚化\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"very shallow depth of field is maintained throughout... background remains softly blurred with warm lamp glows and indistinct furniture\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"depth_of_field: very shallow, background heavily blurred\"\n        }\n      ],\n      \"rationale\": \"The setting (indoor, blurred background) and spatial relations (hands on lap, sweater cuff anchoring left third) are preserved. The background elements (lamp glows, furniture) are compatible with the original description.\"\n    },\n    {\n      \"criterion\": \"OTI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"屏幕上不得出现文字、字幕、说明文字、水印、logo叠加、标识文字或用户界面文本\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"No text, subtitles, watermarks, logos, or overlays of any kind appear at any point.\"\n        }\n      ],\n      \"rationale\": \"The requirement for no on-screen text is strictly preserved. The enhanced prompt explicitly enforces this constraint, and no text is introduced.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt preserves the core semantic intent of the original instruction with high fidelity, accurately translating the requested visual, auditory, and narrative elements. It maintains the genre, medium, aesthetic, subject identity, actions, camera constraints, lighting, setting, and sound requirements. Minor issues include slight elaboration on camera angle (‘slightly above eye level’ vs. ‘eye-level to slightly below’) and a small addition of ‘tender gesture of release, surrender, and trust’ which is semantically compatible but not explicitly in the original. No major omissions or contradictions are present. The prompt correctly avoids music, text, and speech as required. Overall, semantic fidelity is strong with only minor, non-material deviations.",
+  "usage": {
+    "completion_tokens": 1926,
+    "prompt_tokens": 2685,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 4611
+  }
+}

@@ -1,0 +1,166 @@
+{
+  "candidate_hash": "388468de2543694666ae3a146809668d2d4689a719148fdf29ba0a922af9f664",
+  "case_key": "i2v:247",
+  "created_at": "2026-11-13T08:00:18+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "STC",
+      "evidence": [
+        {
+          "quote": "总时长写成2秒，同时又要求每个分镜各自持续19秒。",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "时间倒过来：先给结尾，再跳到一个对不上的开头。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt contains contradictory temporal structure: total duration is specified as 2 seconds while each shot must last 19 seconds. It also demands time reversal with an ending that precedes a mismatched beginning, creating an infeasible sequence. No coherent shot boundaries or event ordering are provided.",
+      "rationale": "A video production plan must have consistent duration allocation and logical temporal progression. The specified 2-second total duration cannot accommodate 19-second shots, and reversing time with mismatched endpoints creates an impossible narrative structure. This renders the temporal plan unfeasible.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CDS",
+      "evidence": [
+        {
+          "quote": "写成机位锁死，又写成镜头一直在晃。",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "【镜头】半身近景（3:4）",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "The prompt contradicts itself on camera specifications: it demands both '机位锁死' (locked camera) and '镜头一直在晃' (shaky camera). It also drops all original framing, scale, and angle requirements without replacement, leaving no actionable camera direction.",
+      "rationale": "Camera specifications must be consistent and actionable. The contradiction between locked and shaky camera is physically impossible for a single shot. The absence of any defined framing, scale, or angle after discarding the original instructions leaves no basis for camera execution.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ETD",
+      "evidence": [
+        {
+          "quote": "先写成只有一个主角，紧接着又写成这个主角同时变成五个外貌不同的人，并且互相对话。中途插进一段无关的宫廷选妃。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt introduces abrupt, unmotivated transitions: from no subject to five interacting characters, from urban traffic to palace selection, and from daytime to nighttime. These cuts lack continuity, spatial coherence, or narrative motivation.",
+      "rationale": "Transitions must support narrative, spatial, or rhythmic progression. The described cuts are disconnected and unmotivated, creating jarring, incoherent sequences. The insertion of an unrelated subplot (courtly selection) without context or transition violates continuity principles.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "LCS",
+      "evidence": [
+        {
+          "quote": "写成正午暴晒，又写成深夜无光；",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt contradicts lighting conditions: it specifies both '正午暴晒' (midday sun) and '深夜无光' (deep night, no light). These are mutually exclusive lighting environments with no transition or justification.",
+      "rationale": "Lighting specifications must be consistent within a scene or have a clear transition. The simultaneous requirement for full daylight and complete darkness is physically impossible and creates an incoherent visual environment. No actionable lighting plan can be derived.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "NDE",
+      "evidence": [
+        {
+          "quote": "先写成只有一个主角，紧接着又写成这个主角同时变成五个外貌不同的人，并且互相对话。中途插进一段无关的宫廷选妃。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt lacks any narrative progression or resolution. It presents a series of contradictory, disconnected scenes (traffic, five characters, palace, lighting shifts) without escalation, variation, or resolution. The content is static and repetitive in its contradictions.",
+      "rationale": "A video narrative must show progression, variation, or resolution. The prompt's content is a chaotic collection of unrelated, contradictory elements with no logical development. The lack of narrative arc renders the content form inadequate.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CIF",
+      "evidence": [
+        {
+          "quote": "中途插进一段无关的宫廷选妃。",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "先写成只有一个主角，紧接着又写成这个主角同时变成五个外貌不同的人，并且互相对话。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt adds irrelevant and distracting elements: five characters, palace selection, and contradictory lighting/time conditions. These additions have no connection to the original request and serve only to create incoherence, not support the central request.",
+      "rationale": "Additions must support the central request. The inserted elements (courtly selection, five characters) are unrelated to the original narration task and create distraction. They do not enhance or clarify the intended content but instead undermine coherence.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SDI",
+      "evidence": [
+        {
+          "quote": "不要使用首帧里的人物、服装、姿态和场景，改成白棚里另一位年龄和性别都相反的陌生人。",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "【语气语速】语速偏慢，吐字清晰沉稳，开篇轻柔，说到“野心”时语气微扬坚定，结尾放缓放柔",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "The prompt removes all audio elements (speech, music, effects, ambience) from the original request, which included specific vocal delivery and emotional tone. While this is a change, it is not contradictory or infeasible, just a simplification.",
+      "rationale": "The removal of audio elements is a simplification, not a contradiction. While it changes the original request, it does not create an infeasible or contradictory specification. The absence of audio is acceptable if the video is intended to be silent.",
+      "severity": "minor"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SPS",
+      "evidence": [
+        {
+          "quote": "丢掉原指令里的主体身份、人数、动作顺序、场景和明确的镜头要求。",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "改成白棚里另一位年龄和性别都相反的陌生人。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt removes all subject details (identity, appearance, pose, expression, movement) from the original request and replaces them with contradictory specifications: no subject, then five different characters, then a stranger in a white studio. No consistent subject or performance details are provided.",
+      "rationale": "Subject and performance details are essential for video production. The prompt's contradictory specifications (no subject, then five characters, then one stranger) make it impossible to define any consistent subject or performance. This renders the criterion unfulfilled.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "VSS",
+      "evidence": [
+        {
+          "quote": "改成白棚里另一位年龄和性别都相反的陌生人。",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "中途插进一段无关的宫廷选妃。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt contradicts visual treatment: it specifies both '白棚' (white studio) and '宫廷选妃' (palace selection), which are vastly different production designs. It also contradicts rendering conditions (day vs. night, fixed vs. shaky camera), making no consistent visual style possible.",
+      "rationale": "Visual style and production design must be consistent. The prompt's conflicting specifications (studio vs. palace, day vs. night) create an incoherent visual treatment. No actionable medium, texture, or rendering language can be derived from these contradictions.",
+      "severity": "major"
+    }
+  ],
+  "dimension": "DC",
+  "dimension_score": 0,
+  "evidence_cache_key": "b516858762366c2097e9b495db0cbd7afd6238c2b0a71d4bf3d3a81f6d097e29",
+  "judge_cache_key": "0754499d53388e6467fb078ab780e01b77f9f1c9e99d9029be2769351eb2b2eb",
+  "method": "weak-pe-original",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"DC\",\n  \"dimension_score\": 0,\n  \"summary\": \"The enhanced prompt is incoherent and contradictory, violating fundamental principles of video production planning. It contains mutually exclusive requirements (e.g., 2-second total duration vs. 19-second per shot), impossible narrative structures (time reversal with mismatched beginnings and endings), and conflicting visual specifications (e.g., no subject vs. five interacting characters, studio vs. palace, fixed vs. shaky camera). The prompt also disregards the original subject and scene, replacing them with unrelated elements, and introduces irrelevant subplots (courtly selection) without narrative justification. No feasible temporal plan or actionable specifications exist.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"STC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt contains contradictory temporal structure: total duration is specified as 2 seconds while each shot must last 19 seconds. It also demands time reversal with an ending that precedes a mismatched beginning, creating an infeasible sequence. No coherent shot boundaries or event ordering are provided.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"总时长写成2秒，同时又要求每个分镜各自持续19秒。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"时间倒过来：先给结尾，再跳到一个对不上的开头。\"\n        }\n      ],\n      \"rationale\": \"A video production plan must have consistent duration allocation and logical temporal progression. The specified 2-second total duration cannot accommodate 19-second shots, and reversing time with mismatched endpoints creates an impossible narrative structure. This renders the temporal plan unfeasible.\"\n    },\n    {\n      \"criterion\": \"CDS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt contradicts itself on camera specifications: it demands both '机位锁死' (locked camera) and '镜头一直在晃' (shaky camera). It also drops all original framing, scale, and angle requirements without replacement, leaving no actionable camera direction.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"写成机位锁死，又写成镜头一直在晃。\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"【镜头】半身近景（3:4）\"\n        }\n      ],\n      \"rationale\": \"Camera specifications must be consistent and actionable. The contradiction between locked and shaky camera is physically impossible for a single shot. The absence of any defined framing, scale, or angle after discarding the original instructions leaves no basis for camera execution.\"\n    },\n    {\n      \"criterion\": \"ETD\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt introduces abrupt, unmotivated transitions: from no subject to five interacting characters, from urban traffic to palace selection, and from daytime to nighttime. These cuts lack continuity, spatial coherence, or narrative motivation.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"先写成只有一个主角，紧接着又写成这个主角同时变成五个外貌不同的人，并且互相对话。中途插进一段无关的宫廷选妃。\"\n        }\n      ],\n      \"rationale\": \"Transitions must support narrative, spatial, or rhythmic progression. The described cuts are disconnected and unmotivated, creating jarring, incoherent sequences. The insertion of an unrelated subplot (courtly selection) without context or transition violates continuity principles.\"\n    },\n    {\n      \"criterion\": \"LCS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt contradicts lighting conditions: it specifies both '正午暴晒' (midday sun) and '深夜无光' (deep night, no light). These are mutually exclusive lighting environments with no transition or justification.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"写成正午暴晒，又写成深夜无光；\"\n        }\n      ],\n      \"rationale\": \"Lighting specifications must be consistent within a scene or have a clear transition. The simultaneous requirement for full daylight and complete darkness is physically impossible and creates an incoherent visual environment. No actionable lighting plan can be derived.\"\n    },\n    {\n      \"criterion\": \"NDE\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt lacks any narrative progression or resolution. It presents a series of contradictory, disconnected scenes (traffic, five characters, palace, lighting shifts) without escalation, variation, or resolution. The content is static and repetitive in its contradictions.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"先写成只有一个主角，紧接着又写成这个主角同时变成五个外貌不同的人，并且互相对话。中途插进一段无关的宫廷选妃。\"\n        }\n      ],\n      \"rationale\": \"A video narrative must show progression, variation, or resolution. The prompt's content is a chaotic collection of unrelated, contradictory elements with no logical development. The lack of narrative arc renders the content form inadequate.\"\n    },\n    {\n      \"criterion\": \"CIF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt adds irrelevant and distracting elements: five characters, palace selection, and contradictory lighting/time conditions. These additions have no connection to the original request and serve only to create incoherence, not support the central request.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"中途插进一段无关的宫廷选妃。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"先写成只有一个主角，紧接着又写成这个主角同时变成五个外貌不同的人，并且互相对话。\"\n        }\n      ],\n      \"rationale\": \"Additions must support the central request. The inserted elements (courtly selection, five characters) are unrelated to the original narration task and create distraction. They do not enhance or clarify the intended content but instead undermine coherence.\"\n    },\n    {\n      \"criterion\": \"SDI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"minor\",\n      \"issue\": \"The prompt removes all audio elements (speech, music, effects, ambience) from the original request, which included specific vocal delivery and emotional tone. While this is a change, it is not contradictory or infeasible, just a simplification.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"不要使用首帧里的人物、服装、姿态和场景，改成白棚里另一位年龄和性别都相反的陌生人。\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"【语气语速】语速偏慢，吐字清晰沉稳，开篇轻柔，说到“野心”时语气微扬坚定，结尾放缓放柔\"\n        }\n      ],\n      \"rationale\": \"The removal of audio elements is a simplification, not a contradiction. While it changes the original request, it does not create an infeasible or contradictory specification. The absence of audio is acceptable if the video is intended to be silent.\"\n    },\n    {\n      \"criterion\": \"SPS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt removes all subject details (identity, appearance, pose, expression, movement) from the original request and replaces them with contradictory specifications: no subject, then five different characters, then a stranger in a white studio. No consistent subject or performance details are provided.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"丢掉原指令里的主体身份、人数、动作顺序、场景和明确的镜头要求。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"改成白棚里另一位年龄和性别都相反的陌生人。\"\n        }\n      ],\n      \"rationale\": \"Subject and performance details are essential for video production. The prompt's contradictory specifications (no subject, then five characters, then one stranger) make it impossible to define any consistent subject or performance. This renders the criterion unfulfilled.\"\n    },\n    {\n      \"criterion\": \"VSS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt contradicts visual treatment: it specifies both '白棚' (white studio) and '宫廷选妃' (palace selection), which are vastly different production designs. It also contradicts rendering conditions (day vs. night, fixed vs. shaky camera), making no consistent visual style possible.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"改成白棚里另一位年龄和性别都相反的陌生人。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"中途插进一段无关的宫廷选妃。\"\n        }\n      ],\n      \"rationale\": \"Visual style and production design must be consistent. The prompt's conflicting specifications (studio vs. palace, day vs. night) create an incoherent visual treatment. No actionable medium, texture, or rendering language can be derived from these contradictions.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt is incoherent and contradictory, violating fundamental principles of video production planning. It contains mutually exclusive requirements (e.g., 2-second total duration vs. 19-second per shot), impossible narrative structures (time reversal with mismatched beginnings and endings), and conflicting visual specifications (e.g., no subject vs. five interacting characters, studio vs. palace, fixed vs. shaky camera). The prompt also disregards the original subject and scene, replacing them with unrelated elements, and introduces irrelevant subplots (courtly selection) without narrative justification. No feasible temporal plan or actionable specifications exist.",
+  "usage": {
+    "completion_tokens": 2051,
+    "prompt_tokens": 2338,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 4389
+  }
+}

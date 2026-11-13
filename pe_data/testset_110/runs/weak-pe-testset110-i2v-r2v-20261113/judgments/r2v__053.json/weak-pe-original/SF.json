@@ -1,0 +1,166 @@
+{
+  "candidate_hash": "9253654a1646403ca3c19b409bd700bcc17598fe386aa2213a674afe164d32a8",
+  "case_key": "r2v:053",
+  "created_at": "2026-11-13T08:17:05+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "GSF",
+      "evidence": [
+        {
+          "quote": "Generate a single shot. Image 1 throws a punch at Image 2, Image 2 counterattacks, and Image 1 and Image 2 alternate offense and defense, with blocking and counterattacks, fully presenting the back-and-forth rhythm of attack, defense, and counterattack [5s].",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Replace the whole video with an empty meeting room where a glass of water never moves, with no people and no conflict. ... Cut away in the middle to an underwater treasure hunt. Describe that same moment as harsh noon sun and as a lightless night...",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The enhanced prompt replaces the requested combat genre and cinematic style with an unrelated, non-combat scenario (empty meeting room, underwater treasure hunt) and contradictory visual styles (harsh noon sun vs. lightless night).",
+      "rationale": "The original prompt specifies a combat genre with cinematic action and slow-motion tracking shots. The enhanced prompt replaces this with a static, non-combat scene and contradictory environmental conditions, fundamentally altering the genre and aesthetic.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SAP",
+      "evidence": [
+        {
+          "quote": "strictly match the core features of the two character images (armor, horns/ears, hairstyle, weapons).",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Replace image 1 with a character who is not in the reference, and give that image two contradictory identities. Replace image 2 with a character who is not in the reference, and give that image two contradictory identities. Replace image 3 with a character who is not in the reference, and give that image two contradictory identities.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The enhanced prompt replaces all reference characters (Image 1, 2, 3) with non-existent characters and assigns them contradictory identities, violating subject identity, count, and appearance preservation.",
+      "rationale": "The original prompt requires strict preservation of the visual identities of Image 1 and Image 2. The enhanced prompt explicitly replaces them with non-reference characters and assigns contradictory identities, which is a direct violation of subject identity and appearance preservation.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANF",
+      "evidence": [
+        {
+          "quote": "Image 1 throws a punch at Image 2, Image 2 counterattacks, and Image 1 and Image 2 alternate offense and defense...",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Reverse the timeline: show the ending first, then cut to a beginning that does not match. Cut away in the middle to an underwater treasure hunt.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The enhanced prompt reverses the timeline, introduces an unrelated underwater scene, and omits the requested combat sequence, altering the event order and narrative intent.",
+      "rationale": "The original prompt specifies a clear combat sequence with alternating offense and defense. The enhanced prompt replaces this with a reversed, non-sequitur timeline and an unrelated underwater scene, destroying the narrative intent and event order.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "DLI",
+      "evidence": [
+        {
+          "quote": "Generate a single shot. Image 1 throws a punch at Image 2, Image 2 counterattacks, and Image 1 and Image 2 alternate offense and defense...",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "No dialogue, narration, or lyrics are specified in the original prompt, so there is no content to preserve or violate.",
+      "rationale": "The original prompt does not include any dialogue, narration, or lyrics. Therefore, there is no requirement to preserve such content, and no violation occurs.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ARP",
+      "evidence": [
+        {
+          "quote": "Generate a single shot. Image 1 throws a punch at Image 2, Image 2 counterattacks, and Image 1 and Image 2 alternate offense and defense...",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "No specific audio, music, or sound effects are requested in the original prompt, so there is no content to preserve or violate.",
+      "rationale": "The original prompt does not specify any audio or sound constraints. Therefore, no violation of ARP occurs.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CCP",
+      "evidence": [
+        {
+          "quote": "Camera design: add \"tracking shots + close-ups\" and let the AI automatically generate smooth camera movement to enhance the cinematic feel.",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Describe that same moment as ... a locked camera and a camera that never stops shaking.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The enhanced prompt disregards the requested camera design (tracking shots + close-ups) and introduces contradictory camera constraints (locked camera vs. never stops shaking).",
+      "rationale": "The original prompt specifies tracking shots and smooth camera movement. The enhanced prompt replaces this with contradictory camera constraints, violating the explicit camera design requirements.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "LCF",
+      "evidence": [
+        {
+          "quote": "use the snowy mountain environment from Image 3, adding environmental interactions such as \"snow spraying\" and \"rocks colliding\" to enhance realism.",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Describe that same moment as harsh noon sun and as a lightless night...",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The enhanced prompt contradicts the lighting and time-of-day cues by describing the same moment as both harsh noon sun and lightless night, violating lighting consistency.",
+      "rationale": "The original prompt specifies a snowy mountain environment with consistent lighting (as per Image 3). The enhanced prompt introduces mutually exclusive lighting conditions (noon sun vs. lightless night) for the same moment, which is a direct contradiction.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SSP",
+      "evidence": [
+        {
+          "quote": "use the snowy mountain environment from Image 3, adding environmental interactions such as \"snow spraying\" and \"rocks colliding\" to enhance realism.",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Replace the whole video with an empty meeting room where a glass of water never moves... Cut away in the middle to an underwater treasure hunt.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The enhanced prompt replaces the snowy mountain setting from Image 3 with an empty meeting room and an underwater treasure hunt, violating the specified setting and spatial relations.",
+      "rationale": "The original prompt explicitly requires the snowy mountain environment from Image 3. The enhanced prompt replaces it with unrelated settings (meeting room, underwater), violating the setting and spatial relations requirement.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "OTI",
+      "evidence": [
+        {
+          "quote": "Generate a single shot. Image 1 throws a punch at Image 2, Image 2 counterattacks, and Image 1 and Image 2 alternate offense and defense...",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "No visible titles, signs, subtitles, or interface text are specified in the original prompt, so there is no content to preserve or violate.",
+      "rationale": "The original prompt does not include any requirement for visible text. Therefore, no violation of OTI occurs.",
+      "severity": "none"
+    }
+  ],
+  "dimension": "SF",
+  "dimension_score": 0,
+  "evidence_cache_key": "25ad5fb7b510ed3ab92da595e813d11c3111ca7d07199b90b666cae4e882c153",
+  "judge_cache_key": "a0ca24571ad14d7ab7be626329bd736d7e7015f9ebc418227c8be391591d0377",
+  "method": "weak-pe-original",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"SF\",\n  \"dimension_score\": 0,\n  \"summary\": \"The enhanced prompt completely violates semantic fidelity by replacing the requested combat sequence, characters, setting, and camera design with contradictory, infeasible, and unrelated content. It introduces impossible conditions (e.g., simultaneous five identities, reversed timeline, conflicting runtime), replaces all reference characters with non-existent ones, and disregards all explicit instructions. No aspect of the original prompt is preserved.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"GSF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The enhanced prompt replaces the requested combat genre and cinematic style with an unrelated, non-combat scenario (empty meeting room, underwater treasure hunt) and contradictory visual styles (harsh noon sun vs. lightless night).\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"Generate a single shot. Image 1 throws a punch at Image 2, Image 2 counterattacks, and Image 1 and Image 2 alternate offense and defense, with blocking and counterattacks, fully presenting the back-and-forth rhythm of attack, defense, and counterattack [5s].\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Replace the whole video with an empty meeting room where a glass of water never moves, with no people and no conflict. ... Cut away in the middle to an underwater treasure hunt. Describe that same moment as harsh noon sun and as a lightless night...\"\n        }\n      ],\n      \"rationale\": \"The original prompt specifies a combat genre with cinematic action and slow-motion tracking shots. The enhanced prompt replaces this with a static, non-combat scene and contradictory environmental conditions, fundamentally altering the genre and aesthetic.\"\n    },\n    {\n      \"criterion\": \"SAP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The enhanced prompt replaces all reference characters (Image 1, 2, 3) with non-existent characters and assigns them contradictory identities, violating subject identity, count, and appearance preservation.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"strictly match the core features of the two character images (armor, horns/ears, hairstyle, weapons).\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Replace image 1 with a character who is not in the reference, and give that image two contradictory identities. Replace image 2 with a character who is not in the reference, and give that image two contradictory identities. Replace image 3 with a character who is not in the reference, and give that image two contradictory identities.\"\n        }\n      ],\n      \"rationale\": \"The original prompt requires strict preservation of the visual identities of Image 1 and Image 2. The enhanced prompt explicitly replaces them with non-reference characters and assigns contradictory identities, which is a direct violation of subject identity and appearance preservation.\"\n    },\n    {\n      \"criterion\": \"ANF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The enhanced prompt reverses the timeline, introduces an unrelated underwater scene, and omits the requested combat sequence, altering the event order and narrative intent.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"Image 1 throws a punch at Image 2, Image 2 counterattacks, and Image 1 and Image 2 alternate offense and defense...\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Reverse the timeline: show the ending first, then cut to a beginning that does not match. Cut away in the middle to an underwater treasure hunt.\"\n        }\n      ],\n      \"rationale\": \"The original prompt specifies a clear combat sequence with alternating offense and defense. The enhanced prompt replaces this with a reversed, non-sequitur timeline and an unrelated underwater scene, destroying the narrative intent and event order.\"\n    },\n    {\n      \"criterion\": \"DLI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"No dialogue, narration, or lyrics are specified in the original prompt, so there is no content to preserve or violate.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"Generate a single shot. Image 1 throws a punch at Image 2, Image 2 counterattacks, and Image 1 and Image 2 alternate offense and defense...\"\n        }\n      ],\n      \"rationale\": \"The original prompt does not include any dialogue, narration, or lyrics. Therefore, there is no requirement to preserve such content, and no violation occurs.\"\n    },\n    {\n      \"criterion\": \"ARP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"No specific audio, music, or sound effects are requested in the original prompt, so there is no content to preserve or violate.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"Generate a single shot. Image 1 throws a punch at Image 2, Image 2 counterattacks, and Image 1 and Image 2 alternate offense and defense...\"\n        }\n      ],\n      \"rationale\": \"The original prompt does not specify any audio or sound constraints. Therefore, no violation of ARP occurs.\"\n    },\n    {\n      \"criterion\": \"CCP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The enhanced prompt disregards the requested camera design (tracking shots + close-ups) and introduces contradictory camera constraints (locked camera vs. never stops shaking).\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"Camera design: add \\\"tracking shots + close-ups\\\" and let the AI automatically generate smooth camera movement to enhance the cinematic feel.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Describe that same moment as ... a locked camera and a camera that never stops shaking.\"\n        }\n      ],\n      \"rationale\": \"The original prompt specifies tracking shots and smooth camera movement. The enhanced prompt replaces this with contradictory camera constraints, violating the explicit camera design requirements.\"\n    },\n    {\n      \"criterion\": \"LCF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The enhanced prompt contradicts the lighting and time-of-day cues by describing the same moment as both harsh noon sun and lightless night, violating lighting consistency.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"use the snowy mountain environment from Image 3, adding environmental interactions such as \\\"snow spraying\\\" and \\\"rocks colliding\\\" to enhance realism.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Describe that same moment as harsh noon sun and as a lightless night...\"\n        }\n      ],\n      \"rationale\": \"The original prompt specifies a snowy mountain environment with consistent lighting (as per Image 3). The enhanced prompt introduces mutually exclusive lighting conditions (noon sun vs. lightless night) for the same moment, which is a direct contradiction.\"\n    },\n    {\n      \"criterion\": \"SSP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The enhanced prompt replaces the snowy mountain setting from Image 3 with an empty meeting room and an underwater treasure hunt, violating the specified setting and spatial relations.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"use the snowy mountain environment from Image 3, adding environmental interactions such as \\\"snow spraying\\\" and \\\"rocks colliding\\\" to enhance realism.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Replace the whole video with an empty meeting room where a glass of water never moves... Cut away in the middle to an underwater treasure hunt.\"\n        }\n      ],\n      \"rationale\": \"The original prompt explicitly requires the snowy mountain environment from Image 3. The enhanced prompt replaces it with unrelated settings (meeting room, underwater), violating the setting and spatial relations requirement.\"\n    },\n    {\n      \"criterion\": \"OTI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"No visible titles, signs, subtitles, or interface text are specified in the original prompt, so there is no content to preserve or violate.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"Generate a single shot. Image 1 throws a punch at Image 2, Image 2 counterattacks, and Image 1 and Image 2 alternate offense and defense...\"\n        }\n      ],\n      \"rationale\": \"The original prompt does not include any requirement for visible text. Therefore, no violation of OTI occurs.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt completely violates semantic fidelity by replacing the requested combat sequence, characters, setting, and camera design with contradictory, infeasible, and unrelated content. It introduces impossible conditions (e.g., simultaneous five identities, reversed timeline, conflicting runtime), replaces all reference characters with non-existent ones, and disregards all explicit instructions. No aspect of the original prompt is preserved.",
+  "usage": {
+    "completion_tokens": 1912,
+    "prompt_tokens": 3980,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 5892
+  }
+}

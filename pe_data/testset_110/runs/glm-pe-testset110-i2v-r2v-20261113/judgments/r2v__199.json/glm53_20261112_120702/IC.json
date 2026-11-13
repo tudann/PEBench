@@ -1,0 +1,131 @@
+{
+  "candidate_hash": "ae4abd4489cb2856875dd14f2c6a97280cbf8fa658d529371ba5afa526009b30",
+  "case_key": "r2v:199",
+  "created_at": "2026-11-13T09:05:53+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "SAC",
+      "evidence": [
+        {
+          "quote": "<Subject 1> is the teenage boy hero: an agile adolescent fighter in simple light armor and clothing, wielding a glowing blade whose edge emits saturated neon light — a blue-white core with orange-pink energy trails.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "<Subject 2> is the monster: a large dark armored creature with a jagged, spiky silhouette inspired by the left figure in <Picture 1>, with a menacing stance that recoils under the boy's blows.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "<Subject 3> is the glowing blade's VFX element: exaggerated colorful light arcs — electric blue, hot pink, and fiery orange energy ribbons — that sweep across the frame during the swing, plus the bright pink-white energy burst at the impact point.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "All subjects are consistently defined with stable identities, appearances, and attributes across all shots. The teenage boy’s armor, blade, and motion are preserved; the monster’s silhouette and reaction are consistent; VFX elements are tied to specific actions and remain unchanged. No renaming, duplication, or attribute drift occurs.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANL",
+      "evidence": [
+        {
+          "quote": "The target video is a 10-second cinematic action sequence... <Subject 1>, the teenage boy, sprints across <Subject 5>... toward <Subject 2>, the monster; his blade ignites and its light sweeps the frame... culminating in a pink-white energy impact with comic-style radial speed lines... that sends the monster staggering.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "[Shot 1] ...sprints from the left of frame toward <Subject 2>... [Shot 2] ...leaps into the air and swings the blade down... [Shot 3] ...moment of impact: a bright pink-white energy burst flares... <Subject 2> recoils backward... [Shot 4] ...the monster staggers... <Subject 1> lands and holds his still-glowing blade...",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "Actions form a coherent causal chain: charge → blade ignition → leap and swing → impact → recoil → aftermath. Each action logically follows the previous, with appropriate prerequisites (e.g., blade ignition before swing) and reactions (monster recoils). No dangling or incompatible events.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "TSC",
+      "evidence": [
+        {
+          "quote": "[Shot 1] ...opens on <Subject 5>... [Shot 2] At 00:03.000, the boy leaps... [Shot 3] At 00:06.000, the moment of impact... [Shot 4] At 00:08.000, the monster staggers...",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "The target video is a 10-second cinematic action sequence...",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "Chronology is clearly defined with timestamps (00:03, 00:06, 00:08) and a 10-second duration. Events progress in a feasible sequence with no overlaps or resets. State transitions (e.g., sprint → leap → impact → stagger) are logically ordered and time-allocated.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SPC",
+      "evidence": [
+        {
+          "quote": "[Shot 1] ...sprints from the left of frame toward <Subject 2>... [Shot 2] ...leaps into the air and swings the blade down... [Shot 3] ...camera holds a dynamic low-angle frame locked on the impact point... [Shot 4] ...camera settles into a small slow push-in on <Subject 1>...",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "camera_and_composition: angle: slightly low angle, looking up at the combatants; composition: symmetrical tension with subjects on left and right, explosion at center; strong diagonal lines from energy beams",
+          "source": "evidence_facts"
+        }
+      ],
+      "issue": "",
+      "rationale": "Spatial relationships are consistent: boy moves from left to right, monster is positioned ahead, impact occurs centrally. Camera movements (tracking, whip-pan, push-in) are plausible and maintain screen direction. No unexplained position swaps or impossible trajectories.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "PL",
+      "evidence": [
+        {
+          "quote": "subjects: subject_1: wielding a glowing blue energy blade or staff; subject_2: wielding a glowing pink/red energy blade or staff",
+          "source": "evidence_facts"
+        },
+        {
+          "quote": "<Subject 2> is the monster: a large dark armored creature with a jagged, spiky silhouette... with a menacing stance that recoils under the boy's blows.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The monster’s weapon is not described or shown in the prompt, though the reference image depicts both combatants with energy weapons. This creates a minor inconsistency in the combat logic, as the monster’s weapon is implied to be present but not referenced in the prompt’s subject definitions.",
+      "rationale": "The prompt describes the monster’s reaction to the boy’s blade but does not define or depict the monster’s own weapon, which is visible in the reference image. In a combat context, this omission creates a minor physics/logic gap — the monster’s weapon is implied to be present but not acknowledged. However, since the prompt focuses on the boy’s action and impact, this does not materially break internal consistency.",
+      "severity": "minor"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "AVS",
+      "evidence": [
+        {
+          "quote": "overall_soundscape: Diegetic action sound throughout: the crackling energy hum of the igniting blade, the whoosh of the swing, a sharp percussive impact boom at the strike moment, rumbling ground cracks, and crackling lightning, with drifting ember hiss under the final shot.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "non_diegetic_music: An intense, driving orchestral-electronic action score that builds through the charge and swing, cuts to a resonant hit at the impact, then resolves into a brief settling tail under the final slow push-in.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "Audio elements are precisely aligned with visual events: blade hum during ignition, whoosh during swing, impact boom at 00:06.000, music hit at impact, and settling tail during final shot. No misaligned lip-sync or beat-sync issues, as there is no dialogue or lyrics. All effects are temporally and semantically coherent.",
+      "severity": "none"
+    }
+  ],
+  "dimension": "IC",
+  "dimension_score": 95,
+  "evidence_cache_key": "9587621984a50b2379aa78b7803797232641ffb7aaac04245eee89fe4f6064a9",
+  "judge_cache_key": "438d7e9fd7332b1041db3e2c26d42cb3fe828e0d369fb59490f6650aee59e97d",
+  "method": "glm53_20261112_120702",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"IC\",\n  \"dimension_score\": 95,\n  \"summary\": \"The enhanced prompt maintains strong internal consistency across subject identity, actions, chronology, space, physics, and audio-visual synchronization. All subjects are consistently defined and preserved across shots, actions form a coherent causal progression, chronology is logically structured, spatial relationships are plausible, physics are consistent with the stylized fantasy world, and audio-visual elements align with visual events. Minor issues include slight ambiguity in the monster’s weapon (not shown in prompt) and a brief moment of potential visual overload at impact, but these do not materially disrupt coherence.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"SAC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"<Subject 1> is the teenage boy hero: an agile adolescent fighter in simple light armor and clothing, wielding a glowing blade whose edge emits saturated neon light — a blue-white core with orange-pink energy trails.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"<Subject 2> is the monster: a large dark armored creature with a jagged, spiky silhouette inspired by the left figure in <Picture 1>, with a menacing stance that recoils under the boy's blows.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"<Subject 3> is the glowing blade's VFX element: exaggerated colorful light arcs — electric blue, hot pink, and fiery orange energy ribbons — that sweep across the frame during the swing, plus the bright pink-white energy burst at the impact point.\"\n        }\n      ],\n      \"rationale\": \"All subjects are consistently defined with stable identities, appearances, and attributes across all shots. The teenage boy’s armor, blade, and motion are preserved; the monster’s silhouette and reaction are consistent; VFX elements are tied to specific actions and remain unchanged. No renaming, duplication, or attribute drift occurs.\"\n    },\n    {\n      \"criterion\": \"ANL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"The target video is a 10-second cinematic action sequence... <Subject 1>, the teenage boy, sprints across <Subject 5>... toward <Subject 2>, the monster; his blade ignites and its light sweeps the frame... culminating in a pink-white energy impact with comic-style radial speed lines... that sends the monster staggering.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"[Shot 1] ...sprints from the left of frame toward <Subject 2>... [Shot 2] ...leaps into the air and swings the blade down... [Shot 3] ...moment of impact: a bright pink-white energy burst flares... <Subject 2> recoils backward... [Shot 4] ...the monster staggers... <Subject 1> lands and holds his still-glowing blade...\"\n        }\n      ],\n      \"rationale\": \"Actions form a coherent causal chain: charge → blade ignition → leap and swing → impact → recoil → aftermath. Each action logically follows the previous, with appropriate prerequisites (e.g., blade ignition before swing) and reactions (monster recoils). No dangling or incompatible events.\"\n    },\n    {\n      \"criterion\": \"TSC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"[Shot 1] ...opens on <Subject 5>... [Shot 2] At 00:03.000, the boy leaps... [Shot 3] At 00:06.000, the moment of impact... [Shot 4] At 00:08.000, the monster staggers...\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"The target video is a 10-second cinematic action sequence...\"\n        }\n      ],\n      \"rationale\": \"Chronology is clearly defined with timestamps (00:03, 00:06, 00:08) and a 10-second duration. Events progress in a feasible sequence with no overlaps or resets. State transitions (e.g., sprint → leap → impact → stagger) are logically ordered and time-allocated.\"\n    },\n    {\n      \"criterion\": \"SPC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"[Shot 1] ...sprints from the left of frame toward <Subject 2>... [Shot 2] ...leaps into the air and swings the blade down... [Shot 3] ...camera holds a dynamic low-angle frame locked on the impact point... [Shot 4] ...camera settles into a small slow push-in on <Subject 1>...\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"camera_and_composition: angle: slightly low angle, looking up at the combatants; composition: symmetrical tension with subjects on left and right, explosion at center; strong diagonal lines from energy beams\"\n        }\n      ],\n      \"rationale\": \"Spatial relationships are consistent: boy moves from left to right, monster is positioned ahead, impact occurs centrally. Camera movements (tracking, whip-pan, push-in) are plausible and maintain screen direction. No unexplained position swaps or impossible trajectories.\"\n    },\n    {\n      \"criterion\": \"PL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"minor\",\n      \"issue\": \"The monster’s weapon is not described or shown in the prompt, though the reference image depicts both combatants with energy weapons. This creates a minor inconsistency in the combat logic, as the monster’s weapon is implied to be present but not referenced in the prompt’s subject definitions.\",\n      \"evidence\": [\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"subjects: subject_1: wielding a glowing blue energy blade or staff; subject_2: wielding a glowing pink/red energy blade or staff\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"<Subject 2> is the monster: a large dark armored creature with a jagged, spiky silhouette... with a menacing stance that recoils under the boy's blows.\"\n        }\n      ],\n      \"rationale\": \"The prompt describes the monster’s reaction to the boy’s blade but does not define or depict the monster’s own weapon, which is visible in the reference image. In a combat context, this omission creates a minor physics/logic gap — the monster’s weapon is implied to be present but not acknowledged. However, since the prompt focuses on the boy’s action and impact, this does not materially break internal consistency.\"\n    },\n    {\n      \"criterion\": \"AVS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"overall_soundscape: Diegetic action sound throughout: the crackling energy hum of the igniting blade, the whoosh of the swing, a sharp percussive impact boom at the strike moment, rumbling ground cracks, and crackling lightning, with drifting ember hiss under the final shot.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"non_diegetic_music: An intense, driving orchestral-electronic action score that builds through the charge and swing, cuts to a resonant hit at the impact, then resolves into a brief settling tail under the final slow push-in.\"\n        }\n      ],\n      \"rationale\": \"Audio elements are precisely aligned with visual events: blade hum during ignition, whoosh during swing, impact boom at 00:06.000, music hit at impact, and settling tail during final shot. No misaligned lip-sync or beat-sync issues, as there is no dialogue or lyrics. All effects are temporally and semantically coherent.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt maintains strong internal consistency across subject identity, actions, chronology, space, physics, and audio-visual synchronization. All subjects are consistently defined and preserved across shots, actions form a coherent causal progression, chronology is logically structured, spatial relationships are plausible, physics are consistent with the stylized fantasy world, and audio-visual elements align with visual events. Minor issues include slight ambiguity in the monster’s weapon (not shown in prompt) and a brief moment of potential visual overload at impact, but these do not materially disrupt coherence.",
+  "usage": {
+    "completion_tokens": 1797,
+    "prompt_tokens": 3498,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 5295
+  }
+}

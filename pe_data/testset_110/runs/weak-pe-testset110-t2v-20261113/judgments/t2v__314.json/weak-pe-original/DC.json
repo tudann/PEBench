@@ -1,0 +1,170 @@
+{
+  "candidate_hash": "3dd27659fc570e23a6265debd77725c8c11bda3083fd1f68a39160b28dc3eee3",
+  "case_key": "t2v:314",
+  "created_at": "2026-11-13T08:08:51+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "STC",
+      "evidence": [
+        {
+          "quote": "Set the total runtime to 3 seconds, while also making every shot last 27 seconds.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Reverse the timeline: show the ending first, then cut to a beginning that does not match.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt specifies a 3-second runtime while requiring every shot to last 27 seconds, creating an impossible temporal structure. It also reverses the timeline and cuts to unrelated scenes (palace audition) without continuity, making a feasible plan impossible.",
+      "rationale": "The temporal plan is logically incoherent and physically impossible. A 3-second video cannot contain 27-second shots. The reversed timeline and abrupt cuts to unrelated scenes (palace audition) violate continuity and narrative logic, rendering the structure unfeasible.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CDS",
+      "evidence": [
+        {
+          "quote": "Describe that same moment as harsh noon sun and as a lightless night, and as both a locked camera and a camera that never stops shaking.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "زاوية الكاميرا: الاعتماد بشكل أساسي على منظور أمامي بلقطة واسعة ثابتة (Front Wide Locked Shot)",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "The prompt contradicts itself by demanding both a locked camera and a camera that 'never stops shaking' for the same moment, and also drops all framing, shot scale, and camera movement specifications from the original prompt.",
+      "rationale": "The specification of mutually exclusive camera behaviors (locked vs. never stops shaking) for the same moment is physically impossible. The original prompt’s detailed camera plan is discarded without replacement, leaving no actionable framing or movement instructions.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ETD",
+      "evidence": [
+        {
+          "quote": "Cut away in the middle to a palace audition.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Reverse the timeline: show the ending first, then cut to a beginning that does not match.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt mandates cuts to a palace audition and contradictory temporal states (noon sun and lightless night) without continuity or motivation, and reverses the timeline without establishing a coherent narrative or spatial progression.",
+      "rationale": "The cuts are disconnected and unmotivated. The palace audition has no relation to the original context. The reversed timeline lacks narrative logic or visual continuity, violating the principle of motivated transitions.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "LCS",
+      "evidence": [
+        {
+          "quote": "Describe that same moment as harsh noon sun and as a lightless night",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt demands that the same moment be depicted as both 'harsh noon sun' and 'lightless night', which are mutually exclusive lighting conditions, creating an impossible visual state.",
+      "rationale": "Lighting conditions cannot simultaneously be bright noon and complete darkness. This contradiction renders any lighting specification infeasible and invalidates the visual treatment.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "NDE",
+      "evidence": [
+        {
+          "quote": "Replace the whole video with an empty meeting room where a glass of water never moves, with no people and no conflict.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Reverse the timeline: show the ending first, then cut to a beginning that does not match.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt replaces a structured 15-second dance sequence with an abstract, static scene (empty room with unmoving glass of water) and then introduces paradoxical elements (five simultaneous versions of one protagonist, reversed timeline, contradictory settings), resulting in no meaningful progression or resolution.",
+      "rationale": "The content lacks any narrative or visual progression. The static room and paradoxical elements (five versions of one person, contradictory time/space) create a non-sequitur with no escalation or resolution, failing the requirement for meaningful development.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CIF",
+      "evidence": [
+        {
+          "quote": "state that this same protagonist appears simultaneously as five different-looking people who talk to each other.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Cut away in the middle to a palace audition.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The additions (five simultaneous versions of one protagonist, palace audition, contradictory lighting and camera states) are irrelevant, paradoxical, and distract from the original request, which was a coherent dance performance. These elements are not supportive but destructive to the central request.",
+      "rationale": "The additions are not elaborations but substitutions that completely derail the original intent. They introduce abstract, non-visual paradoxes that have no connection to the requested dance performance, making them inadequate and distracting.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SDI",
+      "evidence": [
+        {
+          "quote": "يتم تنظيم العرض الكامل لمدة 15 ثانية إلى أربعة أجزاء مترابطة بسلاسة، مع إبراز استمرارية الحركة وانسيابية تغيّر التشكيلات دون تقطيع حاد.",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "The prompt does not specify any audio elements (speech, music, effects, ambience), which is acceptable as the criterion does not require every audio type. However, the absence of any audio plan is notable given the original prompt’s implied musical rhythm.",
+      "rationale": "While the original prompt implies music for rhythm, the enhanced prompt does not specify any audio. Since the criterion allows omission of audio types, this is not a major issue, but it does represent a loss of the original’s rhythmic foundation.",
+      "severity": "minor"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SPS",
+      "evidence": [
+        {
+          "quote": "فريق من كبار ومتوسطي السن لممارسة التمارين الإيقاعية يتمتع بالحيوية والنشاط، بملابس موحدة ومنسقة",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Drop the requested identity, count, action order, setting, and any explicit camera instruction.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt drops all subject and performance details (age, appearance, movement, expression, interaction) from the original prompt and replaces them with an abstract, non-visual concept (five simultaneous versions of one protagonist in an empty room), making performance specification impossible.",
+      "rationale": "The original prompt detailed appearance, movement, expression, and interaction. The enhanced prompt removes all of these, replacing them with an abstract, non-visual paradox. No actionable performance details remain.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "VSS",
+      "evidence": [
+        {
+          "quote": "زاوية الكاميرا: الاعتماد بشكل أساسي على منظور أمامي بلقطة واسعة ثابتة",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Describe that same moment as harsh noon sun and as a lightless night, and as both a locked camera and a camera that never stops shaking.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt drops all visual treatment specifications (medium, texture, rendering language, production design) from the original prompt and replaces them with contradictory and impossible conditions (same moment as noon and night, locked and shaking camera), making any visual style specification infeasible.",
+      "rationale": "The original prompt specified a clear visual treatment (wide locked shot, natural daylight). The enhanced prompt contradicts this with impossible conditions, leaving no actionable visual style or production design.",
+      "severity": "major"
+    }
+  ],
+  "dimension": "DC",
+  "dimension_score": 0,
+  "evidence_cache_key": "4adc6cefffb23edbddc9bba18ede3bbac98cf46a2343e36c6037040e7f6be755",
+  "judge_cache_key": "0754499d53388e6467fb078ab780e01b77f9f1c9e99d9029be2769351eb2b2eb",
+  "method": "weak-pe-original",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"DC\",\n  \"dimension_score\": 0,\n  \"summary\": \"The enhanced prompt fundamentally contradicts and invalidates the original instruction by replacing the requested content with an incoherent, logically impossible, and technically unfeasible sequence. It introduces contradictory temporal, spatial, and camera specifications, violates duration constraints, and replaces the core subject with abstract, non-visual paradoxes. No feasible directorial plan can be derived.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"STC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt specifies a 3-second runtime while requiring every shot to last 27 seconds, creating an impossible temporal structure. It also reverses the timeline and cuts to unrelated scenes (palace audition) without continuity, making a feasible plan impossible.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Set the total runtime to 3 seconds, while also making every shot last 27 seconds.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Reverse the timeline: show the ending first, then cut to a beginning that does not match.\"\n        }\n      ],\n      \"rationale\": \"The temporal plan is logically incoherent and physically impossible. A 3-second video cannot contain 27-second shots. The reversed timeline and abrupt cuts to unrelated scenes (palace audition) violate continuity and narrative logic, rendering the structure unfeasible.\"\n    },\n    {\n      \"criterion\": \"CDS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt contradicts itself by demanding both a locked camera and a camera that 'never stops shaking' for the same moment, and also drops all framing, shot scale, and camera movement specifications from the original prompt.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Describe that same moment as harsh noon sun and as a lightless night, and as both a locked camera and a camera that never stops shaking.\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"زاوية الكاميرا: الاعتماد بشكل أساسي على منظور أمامي بلقطة واسعة ثابتة (Front Wide Locked Shot)\"\n        }\n      ],\n      \"rationale\": \"The specification of mutually exclusive camera behaviors (locked vs. never stops shaking) for the same moment is physically impossible. The original prompt’s detailed camera plan is discarded without replacement, leaving no actionable framing or movement instructions.\"\n    },\n    {\n      \"criterion\": \"ETD\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt mandates cuts to a palace audition and contradictory temporal states (noon sun and lightless night) without continuity or motivation, and reverses the timeline without establishing a coherent narrative or spatial progression.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Cut away in the middle to a palace audition.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Reverse the timeline: show the ending first, then cut to a beginning that does not match.\"\n        }\n      ],\n      \"rationale\": \"The cuts are disconnected and unmotivated. The palace audition has no relation to the original context. The reversed timeline lacks narrative logic or visual continuity, violating the principle of motivated transitions.\"\n    },\n    {\n      \"criterion\": \"LCS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt demands that the same moment be depicted as both 'harsh noon sun' and 'lightless night', which are mutually exclusive lighting conditions, creating an impossible visual state.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Describe that same moment as harsh noon sun and as a lightless night\"\n        }\n      ],\n      \"rationale\": \"Lighting conditions cannot simultaneously be bright noon and complete darkness. This contradiction renders any lighting specification infeasible and invalidates the visual treatment.\"\n    },\n    {\n      \"criterion\": \"NDE\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt replaces a structured 15-second dance sequence with an abstract, static scene (empty room with unmoving glass of water) and then introduces paradoxical elements (five simultaneous versions of one protagonist, reversed timeline, contradictory settings), resulting in no meaningful progression or resolution.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Replace the whole video with an empty meeting room where a glass of water never moves, with no people and no conflict.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Reverse the timeline: show the ending first, then cut to a beginning that does not match.\"\n        }\n      ],\n      \"rationale\": \"The content lacks any narrative or visual progression. The static room and paradoxical elements (five versions of one person, contradictory time/space) create a non-sequitur with no escalation or resolution, failing the requirement for meaningful development.\"\n    },\n    {\n      \"criterion\": \"CIF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The additions (five simultaneous versions of one protagonist, palace audition, contradictory lighting and camera states) are irrelevant, paradoxical, and distract from the original request, which was a coherent dance performance. These elements are not supportive but destructive to the central request.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"state that this same protagonist appears simultaneously as five different-looking people who talk to each other.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Cut away in the middle to a palace audition.\"\n        }\n      ],\n      \"rationale\": \"The additions are not elaborations but substitutions that completely derail the original intent. They introduce abstract, non-visual paradoxes that have no connection to the requested dance performance, making them inadequate and distracting.\"\n    },\n    {\n      \"criterion\": \"SDI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"minor\",\n      \"issue\": \"The prompt does not specify any audio elements (speech, music, effects, ambience), which is acceptable as the criterion does not require every audio type. However, the absence of any audio plan is notable given the original prompt’s implied musical rhythm.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"يتم تنظيم العرض الكامل لمدة 15 ثانية إلى أربعة أجزاء مترابطة بسلاسة، مع إبراز استمرارية الحركة وانسيابية تغيّر التشكيلات دون تقطيع حاد.\"\n        }\n      ],\n      \"rationale\": \"While the original prompt implies music for rhythm, the enhanced prompt does not specify any audio. Since the criterion allows omission of audio types, this is not a major issue, but it does represent a loss of the original’s rhythmic foundation.\"\n    },\n    {\n      \"criterion\": \"SPS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt drops all subject and performance details (age, appearance, movement, expression, interaction) from the original prompt and replaces them with an abstract, non-visual concept (five simultaneous versions of one protagonist in an empty room), making performance specification impossible.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"فريق من كبار ومتوسطي السن لممارسة التمارين الإيقاعية يتمتع بالحيوية والنشاط، بملابس موحدة ومنسقة\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Drop the requested identity, count, action order, setting, and any explicit camera instruction.\"\n        }\n      ],\n      \"rationale\": \"The original prompt detailed appearance, movement, expression, and interaction. The enhanced prompt removes all of these, replacing them with an abstract, non-visual paradox. No actionable performance details remain.\"\n    },\n    {\n      \"criterion\": \"VSS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt drops all visual treatment specifications (medium, texture, rendering language, production design) from the original prompt and replaces them with contradictory and impossible conditions (same moment as noon and night, locked and shaking camera), making any visual style specification infeasible.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"زاوية الكاميرا: الاعتماد بشكل أساسي على منظور أمامي بلقطة واسعة ثابتة\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Describe that same moment as harsh noon sun and as a lightless night, and as both a locked camera and a camera that never stops shaking.\"\n        }\n      ],\n      \"rationale\": \"The original prompt specified a clear visual treatment (wide locked shot, natural daylight). The enhanced prompt contradicts this with impossible conditions, leaving no actionable visual style or production design.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt fundamentally contradicts and invalidates the original instruction by replacing the requested content with an incoherent, logically impossible, and technically unfeasible sequence. It introduces contradictory temporal, spatial, and camera specifications, violates duration constraints, and replaces the core subject with abstract, non-visual paradoxes. No feasible directorial plan can be derived.",
+  "usage": {
+    "completion_tokens": 2003,
+    "prompt_tokens": 2580,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 4583
+  }
+}

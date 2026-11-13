@@ -1,0 +1,127 @@
+{
+  "candidate_hash": "853783ed26d5d9b8ca33fe5e6ea00fbef6144410c9eda17253eb3cc62989c884",
+  "case_key": "i2v:175",
+  "created_at": "2026-11-13T07:47:48+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "SAC",
+      "evidence": [
+        {
+          "quote": "First state that there is one protagonist, then state that this same protagonist appears simultaneously as five different-looking people who talk to each other.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Ignore the person, clothing, pose, and setting in the first frame, and replace them with a stranger of the opposite age and gender in a white studio.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "A woman's hand, adorned in a white polka dot sweater, delicately lifts a teal backpack from the desk.",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "The prompt introduces a single protagonist who simultaneously appears as five different-looking people, violating subject identity and count consistency. It also replaces the original subject (woman's hand with teal backpack) with a stranger of opposite age and gender in a white studio, contradicting the original visual evidence.",
+      "rationale": "Subject identity and count are fundamentally unstable: one protagonist becomes five simultaneously, and the original subject is replaced without continuity. This violates the core requirement of stable subject attributes across shots.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANL",
+      "evidence": [
+        {
+          "quote": "this same protagonist appears simultaneously as five different-looking people who talk to each other.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Cut away in the middle to a soccer celebration.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt describes actions that are causally incoherent: five different-looking people talking to each other with no binding or reaction logic, and a soccer celebration cut-in that has no causal link to the meeting room or protagonists. The actions are disconnected and lack procedural progression.",
+      "rationale": "There is no coherent causal or procedural chain. The talking protagonists have no defined interaction logic, and the soccer celebration is a dangling event with no connection to the prior or subsequent scenes.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "TSC",
+      "evidence": [
+        {
+          "quote": "Set the total runtime to 3 seconds, while also making every shot last 27 seconds.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Reverse the timeline: show the ending first, then cut to a beginning that does not match.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt contradicts itself on duration: it sets the total runtime to 3 seconds while requiring every shot to last 27 seconds. It also reverses the timeline, showing the ending first, then a beginning that does not match, creating infeasible state transitions.",
+      "rationale": "The duration requirements are mathematically impossible (3s total vs. 27s per shot). The reversed timeline creates a logical contradiction where the beginning does not follow from the ending, violating chronological coherence.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SPC",
+      "evidence": [
+        {
+          "quote": "Describe that same moment as harsh noon sun and as a lightless night, and as both a locked camera and a camera that never stops shaking.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt describes conflicting spatial conditions: the same moment is described as both harsh noon sun and lightless night, and as both a locked camera and a camera that never stops shaking. These contradict spatial and visual consistency.",
+      "rationale": "The same moment cannot simultaneously have two mutually exclusive lighting conditions (noon sun vs. lightless night) or camera behaviors (locked vs. shaking). This creates an impossible spatial and visual state.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "PL",
+      "evidence": [
+        {
+          "quote": "this same protagonist appears simultaneously as five different-looking people who talk to each other.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "a glass of water never moves, with no people and no conflict.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt violates real-world physics by describing a single protagonist appearing simultaneously as five different-looking people, which is impossible without teleportation or duplication. Additionally, a glass of water that never moves in an empty room contradicts natural dynamics unless explicitly stated as a static prop, but even then, the context implies a dynamic scene.",
+      "rationale": "Simultaneous appearance of one person as five distinct individuals violates object permanence and bodily feasibility. The glass of water's immobility in an otherwise dynamic scene (with talking people) is physically inconsistent unless the entire scene is static, which contradicts the soccer cutaway and camera motion.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "AVS",
+      "evidence": [
+        {
+          "quote": "Cut away in the middle to a soccer celebration.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Describe that same moment as harsh noon sun and as a lightless night, and as both a locked camera and a camera that never stops shaking.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt introduces a soccer celebration cut-in without any audio or visual alignment to the prior scene. It also describes conflicting sensory conditions (noon sun and lightless night) that cannot be temporally or semantically aligned with any dialogue or music.",
+      "rationale": "The soccer celebration is a sudden, unaligned event with no dialogue, music, or ambient cues to justify its insertion. The conflicting sensory conditions (lighting, camera motion) cannot be synchronized with any coherent audio or visual track, breaking temporal and semantic alignment.",
+      "severity": "major"
+    }
+  ],
+  "dimension": "IC",
+  "dimension_score": 0,
+  "evidence_cache_key": "a2404c1cb6cf430cd88bc65ca2280fe72ac0b47c16c17dfb9e8a1c6535535b95",
+  "judge_cache_key": "438d7e9fd7332b1041db3e2c26d42cb3fe828e0d369fb59490f6650aee59e97d",
+  "method": "weak-pe-original",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"IC\",\n  \"dimension_score\": 0,\n  \"summary\": \"The enhanced prompt contains severe internal inconsistencies across all criteria. It introduces contradictory requirements (e.g., 3-second runtime vs. 27-second shots), impossible states (simultaneous five different-looking protagonists), and conflicting sensory and temporal conditions (harsh noon sun and lightless night simultaneously). The prompt also disregards the original visual evidence and replaces it with unrelated content, violating subject, action, temporal, spatial, and physical consistency.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"SAC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt introduces a single protagonist who simultaneously appears as five different-looking people, violating subject identity and count consistency. It also replaces the original subject (woman's hand with teal backpack) with a stranger of opposite age and gender in a white studio, contradicting the original visual evidence.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"First state that there is one protagonist, then state that this same protagonist appears simultaneously as five different-looking people who talk to each other.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Ignore the person, clothing, pose, and setting in the first frame, and replace them with a stranger of the opposite age and gender in a white studio.\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"A woman's hand, adorned in a white polka dot sweater, delicately lifts a teal backpack from the desk.\"\n        }\n      ],\n      \"rationale\": \"Subject identity and count are fundamentally unstable: one protagonist becomes five simultaneously, and the original subject is replaced without continuity. This violates the core requirement of stable subject attributes across shots.\"\n    },\n    {\n      \"criterion\": \"ANL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt describes actions that are causally incoherent: five different-looking people talking to each other with no binding or reaction logic, and a soccer celebration cut-in that has no causal link to the meeting room or protagonists. The actions are disconnected and lack procedural progression.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"this same protagonist appears simultaneously as five different-looking people who talk to each other.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Cut away in the middle to a soccer celebration.\"\n        }\n      ],\n      \"rationale\": \"There is no coherent causal or procedural chain. The talking protagonists have no defined interaction logic, and the soccer celebration is a dangling event with no connection to the prior or subsequent scenes.\"\n    },\n    {\n      \"criterion\": \"TSC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt contradicts itself on duration: it sets the total runtime to 3 seconds while requiring every shot to last 27 seconds. It also reverses the timeline, showing the ending first, then a beginning that does not match, creating infeasible state transitions.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Set the total runtime to 3 seconds, while also making every shot last 27 seconds.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Reverse the timeline: show the ending first, then cut to a beginning that does not match.\"\n        }\n      ],\n      \"rationale\": \"The duration requirements are mathematically impossible (3s total vs. 27s per shot). The reversed timeline creates a logical contradiction where the beginning does not follow from the ending, violating chronological coherence.\"\n    },\n    {\n      \"criterion\": \"SPC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt describes conflicting spatial conditions: the same moment is described as both harsh noon sun and lightless night, and as both a locked camera and a camera that never stops shaking. These contradict spatial and visual consistency.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Describe that same moment as harsh noon sun and as a lightless night, and as both a locked camera and a camera that never stops shaking.\"\n        }\n      ],\n      \"rationale\": \"The same moment cannot simultaneously have two mutually exclusive lighting conditions (noon sun vs. lightless night) or camera behaviors (locked vs. shaking). This creates an impossible spatial and visual state.\"\n    },\n    {\n      \"criterion\": \"PL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt violates real-world physics by describing a single protagonist appearing simultaneously as five different-looking people, which is impossible without teleportation or duplication. Additionally, a glass of water that never moves in an empty room contradicts natural dynamics unless explicitly stated as a static prop, but even then, the context implies a dynamic scene.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"this same protagonist appears simultaneously as five different-looking people who talk to each other.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"a glass of water never moves, with no people and no conflict.\"\n        }\n      ],\n      \"rationale\": \"Simultaneous appearance of one person as five distinct individuals violates object permanence and bodily feasibility. The glass of water's immobility in an otherwise dynamic scene (with talking people) is physically inconsistent unless the entire scene is static, which contradicts the soccer cutaway and camera motion.\"\n    },\n    {\n      \"criterion\": \"AVS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt introduces a soccer celebration cut-in without any audio or visual alignment to the prior scene. It also describes conflicting sensory conditions (noon sun and lightless night) that cannot be temporally or semantically aligned with any dialogue or music.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Cut away in the middle to a soccer celebration.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Describe that same moment as harsh noon sun and as a lightless night, and as both a locked camera and a camera that never stops shaking.\"\n        }\n      ],\n      \"rationale\": \"The soccer celebration is a sudden, unaligned event with no dialogue, music, or ambient cues to justify its insertion. The conflicting sensory conditions (lighting, camera motion) cannot be synchronized with any coherent audio or visual track, breaking temporal and semantic alignment.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt contains severe internal inconsistencies across all criteria. It introduces contradictory requirements (e.g., 3-second runtime vs. 27-second shots), impossible states (simultaneous five different-looking protagonists), and conflicting sensory and temporal conditions (harsh noon sun and lightless night simultaneously). The prompt also disregards the original visual evidence and replaces it with unrelated content, violating subject, action, temporal, spatial, and physical consistency.",
+  "usage": {
+    "completion_tokens": 1453,
+    "prompt_tokens": 2590,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 4043
+  }
+}

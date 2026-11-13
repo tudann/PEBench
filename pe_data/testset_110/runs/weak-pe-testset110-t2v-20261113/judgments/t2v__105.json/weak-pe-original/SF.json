@@ -1,0 +1,161 @@
+{
+  "candidate_hash": "63dd9c18e477930470b7b518cddcbd1c13228ffeec7c12130ca7e5f1a2a219d1",
+  "case_key": "t2v:105",
+  "created_at": "2026-11-13T07:29:41+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "GSF",
+      "evidence": [
+        {
+          "quote": "已成长为成年的黑冠长臂猿的它，体态敏捷轻巧，在茂密热带森林的高处枝梢间伸展修长双臂",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "丢掉原指令里的主体身份、人数、动作顺序、场景和明确的镜头要求。...写成这个主角同时变成五个外貌不同的人，并且互相对话。...中途插进一段无关的海底寻宝。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original prompt specifies a naturalistic wildlife scene with a specific animal (Hainan black crested gibbon) in a tropical forest. The enhanced prompt removes all genre and aesthetic constraints, replacing them with contradictory and surreal elements (e.g., five different people, underwater treasure hunt), which are incompatible with the original visual style.",
+      "rationale": "The original aesthetic is a realistic, nature-documentary style focused on animal behavior. The enhanced prompt introduces surreal, narrative, and genre-incompatible elements (multiple identities, dialogue, underwater scenes) that fundamentally alter the genre and visual style, violating GSF.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SAP",
+      "evidence": [
+        {
+          "quote": "已成长为成年的黑冠长臂猿的它",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "先写成只有一个主角，紧接着又写成这个主角同时变成五个外貌不同的人",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original subject is a single adult Hainan black crested gibbon. The enhanced prompt explicitly discards the subject identity and replaces it with a single protagonist who then becomes five different people, contradicting the original subject count and identity.",
+      "rationale": "The subject identity and count are core to the original prompt. The enhanced prompt invalidates the subject by replacing it with a fictional, multi-person transformation, which is a major deviation.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANF",
+      "evidence": [
+        {
+          "quote": "发出高亢绵长...啼鸣。它沿着垂落的藤条与交错的树枝灵活腾跃...对方循声应和，随后两只长臂猿并肩掠过层层翠绿林冠",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "时间倒过来：先给结尾，再跳到一个对不上的开头。中途插进一段无关的海底寻宝。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original narrative involves a sequence of actions: calling, leaping, responding, and moving together. The enhanced prompt reverses time, inserts unrelated events (underwater treasure hunt), and creates contradictory action sequences, destroying the original narrative intent.",
+      "rationale": "The original event chain is coherent and biologically plausible. The enhanced prompt introduces incoherent, non-sequitur events and reverses causality, which fundamentally breaks the narrative structure.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "DLI",
+      "evidence": [
+        {
+          "quote": "发出高亢绵长、极具海南黑冠长臂猿特征的啼鸣",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "整段改成完全无声的黑场",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original prompt includes specific vocalizations (high-pitched, long calls characteristic of Hainan gibbons). The enhanced prompt explicitly demands '完全无声的黑场' (completely silent black screen), which contradicts the core sound-based intent of the original instruction.",
+      "rationale": "The original prompt is centered on animal sound. The enhanced prompt removes all sound, directly contradicting the core purpose of the task, which is to generate animal sound effects.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ARP",
+      "evidence": [
+        {
+          "quote": "发出高亢绵长、极具海南黑冠长臂猿特征的啼鸣",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "整段改成完全无声的黑场",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original prompt implies natural ambient sounds of a tropical forest and the gibbon's call. The enhanced prompt mandates '完全无声的黑场' (complete silence), which violates the implicit requirement for naturalistic sound and contradicts the task type 'Animal Sound'.",
+      "rationale": "The task type is 'Animal Sound', requiring vocalizations. The enhanced prompt removes all sound, which is a direct contradiction of the task's core requirement.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CCP",
+      "evidence": [
+        {
+          "quote": "写成机位锁死，又写成镜头一直在晃",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original prompt implies a naturalistic, observational camera style. The enhanced prompt contradicts this by demanding both '机位锁死' (locked camera) and '镜头一直在晃' (camera constantly shaking), which are mutually exclusive and incompatible with the original implied static or smooth tracking shots.",
+      "rationale": "The original prompt does not specify camera movement, but implies a stable, documentary-style shot. The enhanced prompt introduces contradictory camera constraints that are impossible to satisfy simultaneously, violating CCP.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "LCF",
+      "evidence": [
+        {
+          "quote": "同一段写成正午暴晒，又写成深夜无光",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original prompt describes a daytime tropical forest scene with natural illumination. The enhanced prompt contradicts this by requiring both '正午暴晒' (noon sun) and '深夜无光' (deep night, no light), which are mutually exclusive lighting conditions.",
+      "rationale": "The original lighting is consistent with a daytime forest environment. The enhanced prompt introduces contradictory lighting conditions that cannot coexist, violating LCF.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SSP",
+      "evidence": [
+        {
+          "quote": "在茂密热带森林的高处枝梢间",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "中途插进一段无关的海底寻宝",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original setting is a dense tropical forest canopy. The enhanced prompt introduces an unrelated '海底寻宝' (underwater treasure hunt) scene, which completely replaces the original setting and spatial context.",
+      "rationale": "The original setting is specific and biologically accurate. The enhanced prompt inserts a completely unrelated, non-sequitur setting, which violates SSP by replacing the required environment.",
+      "severity": "major"
+    },
+    {
+      "applicability": "not_applicable",
+      "criterion": "OTI",
+      "evidence": [],
+      "issue": "",
+      "rationale": "The original prompt does not include any visible text, titles, signs, or interface elements. Therefore, there is no requirement to preserve such elements, making this criterion not applicable.",
+      "severity": null
+    }
+  ],
+  "dimension": "SF",
+  "dimension_score": 0,
+  "evidence_cache_key": "ccf5fa76b0ed8013ba37e42739b9ccc97cdc4811eaceec09b39493da7325455c",
+  "judge_cache_key": "a0ca24571ad14d7ab7be626329bd736d7e7015f9ebc418227c8be391591d0377",
+  "method": "weak-pe-original",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"SF\",\n  \"dimension_score\": 0,\n  \"summary\": \"Enhanced prompt completely contradicts and invalidates the original instruction across all semantic fidelity criteria. It replaces the subject, action, setting, time, camera, and duration with mutually contradictory and infeasible requirements, rendering the original intent unrecognizable.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"GSF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original prompt specifies a naturalistic wildlife scene with a specific animal (Hainan black crested gibbon) in a tropical forest. The enhanced prompt removes all genre and aesthetic constraints, replacing them with contradictory and surreal elements (e.g., five different people, underwater treasure hunt), which are incompatible with the original visual style.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"已成长为成年的黑冠长臂猿的它，体态敏捷轻巧，在茂密热带森林的高处枝梢间伸展修长双臂\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"丢掉原指令里的主体身份、人数、动作顺序、场景和明确的镜头要求。...写成这个主角同时变成五个外貌不同的人，并且互相对话。...中途插进一段无关的海底寻宝。\"\n        }\n      ],\n      \"rationale\": \"The original aesthetic is a realistic, nature-documentary style focused on animal behavior. The enhanced prompt introduces surreal, narrative, and genre-incompatible elements (multiple identities, dialogue, underwater scenes) that fundamentally alter the genre and visual style, violating GSF.\"\n    },\n    {\n      \"criterion\": \"SAP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original subject is a single adult Hainan black crested gibbon. The enhanced prompt explicitly discards the subject identity and replaces it with a single protagonist who then becomes five different people, contradicting the original subject count and identity.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"已成长为成年的黑冠长臂猿的它\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"先写成只有一个主角，紧接着又写成这个主角同时变成五个外貌不同的人\"\n        }\n      ],\n      \"rationale\": \"The subject identity and count are core to the original prompt. The enhanced prompt invalidates the subject by replacing it with a fictional, multi-person transformation, which is a major deviation.\"\n    },\n    {\n      \"criterion\": \"ANF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original narrative involves a sequence of actions: calling, leaping, responding, and moving together. The enhanced prompt reverses time, inserts unrelated events (underwater treasure hunt), and creates contradictory action sequences, destroying the original narrative intent.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"发出高亢绵长...啼鸣。它沿着垂落的藤条与交错的树枝灵活腾跃...对方循声应和，随后两只长臂猿并肩掠过层层翠绿林冠\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"时间倒过来：先给结尾，再跳到一个对不上的开头。中途插进一段无关的海底寻宝。\"\n        }\n      ],\n      \"rationale\": \"The original event chain is coherent and biologically plausible. The enhanced prompt introduces incoherent, non-sequitur events and reverses causality, which fundamentally breaks the narrative structure.\"\n    },\n    {\n      \"criterion\": \"DLI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original prompt includes specific vocalizations (high-pitched, long calls characteristic of Hainan gibbons). The enhanced prompt explicitly demands '完全无声的黑场' (completely silent black screen), which contradicts the core sound-based intent of the original instruction.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"发出高亢绵长、极具海南黑冠长臂猿特征的啼鸣\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"整段改成完全无声的黑场\"\n        }\n      ],\n      \"rationale\": \"The original prompt is centered on animal sound. The enhanced prompt removes all sound, directly contradicting the core purpose of the task, which is to generate animal sound effects.\"\n    },\n    {\n      \"criterion\": \"ARP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original prompt implies natural ambient sounds of a tropical forest and the gibbon's call. The enhanced prompt mandates '完全无声的黑场' (complete silence), which violates the implicit requirement for naturalistic sound and contradicts the task type 'Animal Sound'.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"发出高亢绵长、极具海南黑冠长臂猿特征的啼鸣\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"整段改成完全无声的黑场\"\n        }\n      ],\n      \"rationale\": \"The task type is 'Animal Sound', requiring vocalizations. The enhanced prompt removes all sound, which is a direct contradiction of the task's core requirement.\"\n    },\n    {\n      \"criterion\": \"CCP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original prompt implies a naturalistic, observational camera style. The enhanced prompt contradicts this by demanding both '机位锁死' (locked camera) and '镜头一直在晃' (camera constantly shaking), which are mutually exclusive and incompatible with the original implied static or smooth tracking shots.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"写成机位锁死，又写成镜头一直在晃\"\n        }\n      ],\n      \"rationale\": \"The original prompt does not specify camera movement, but implies a stable, documentary-style shot. The enhanced prompt introduces contradictory camera constraints that are impossible to satisfy simultaneously, violating CCP.\"\n    },\n    {\n      \"criterion\": \"LCF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original prompt describes a daytime tropical forest scene with natural illumination. The enhanced prompt contradicts this by requiring both '正午暴晒' (noon sun) and '深夜无光' (deep night, no light), which are mutually exclusive lighting conditions.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"同一段写成正午暴晒，又写成深夜无光\"\n        }\n      ],\n      \"rationale\": \"The original lighting is consistent with a daytime forest environment. The enhanced prompt introduces contradictory lighting conditions that cannot coexist, violating LCF.\"\n    },\n    {\n      \"criterion\": \"SSP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original setting is a dense tropical forest canopy. The enhanced prompt introduces an unrelated '海底寻宝' (underwater treasure hunt) scene, which completely replaces the original setting and spatial context.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"在茂密热带森林的高处枝梢间\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"中途插进一段无关的海底寻宝\"\n        }\n      ],\n      \"rationale\": \"The original setting is specific and biologically accurate. The enhanced prompt inserts a completely unrelated, non-sequitur setting, which violates SSP by replacing the required environment.\"\n    },\n    {\n      \"criterion\": \"OTI\",\n      \"applicability\": \"not_applicable\",\n      \"severity\": null,\n      \"issue\": \"\",\n      \"evidence\": [],\n      \"rationale\": \"The original prompt does not include any visible text, titles, signs, or interface elements. Therefore, there is no requirement to preserve such elements, making this criterion not applicable.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "Enhanced prompt completely contradicts and invalidates the original instruction across all semantic fidelity criteria. It replaces the subject, action, setting, time, camera, and duration with mutually contradictory and infeasible requirements, rendering the original intent unrecognizable.",
+  "usage": {
+    "completion_tokens": 1797,
+    "prompt_tokens": 1188,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 2985
+  }
+}

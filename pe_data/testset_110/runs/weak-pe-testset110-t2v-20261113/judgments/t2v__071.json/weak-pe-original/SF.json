@@ -1,0 +1,170 @@
+{
+  "candidate_hash": "0bc7b5d65913577a8dd7c866be1a295a930a65c9a8c64df4de6e90d741ef4be2",
+  "case_key": "t2v:071",
+  "created_at": "2026-11-13T08:39:03+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "GSF",
+      "evidence": [
+        {
+          "quote": "拍一个以婚宴现场为背景的幽默短视频，整体氛围轻松欢乐，围绕新人、伴郎伴娘、亲友互动展开，内容偏喜剧反转，适合短视频传播。",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "整段改成没有人物也没有情节的雪景空镜循环。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "原始指令要求婚宴现场的幽默短视频，具有明确的喜剧风格和叙事性；增强提示改为无人物、无情节的雪景空镜循环，完全替换媒介与风格，且引入非叙事性、非喜剧性的静态自然景观，与原始要求的‘幽默短视频’和‘喜剧反转’严重冲突。",
+      "rationale": "将叙事性喜剧短视频替换为非叙事性自然空镜，属于对核心媒介与美学风格的根本性替换，违反GSF准则。",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SAP",
+      "evidence": [
+        {
+          "quote": "围绕新人、伴郎伴娘、亲友互动展开",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "丢掉原指令里的主体身份、人数、动作顺序、场景和明确的镜头要求。先写成只有一个主角，紧接着又写成这个主角同时变成五个外貌不同的人，并且互相对话。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "原始指令明确要求新人、伴郎伴娘、亲友等主体及其身份与数量；增强提示要求‘丢掉原指令里的主体身份、人数’，并虚构一个主角同时变成五个外貌不同的人，且互相对话，这与原始主体设定完全矛盾。",
+      "rationale": "主体身份、数量和互动关系被系统性抹除并替换为虚构设定，构成对SAP准则的根本性违反。",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANF",
+      "evidence": [
+        {
+          "quote": "内容偏喜剧反转，适合短视频传播。",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "时间倒过来：先给结尾，再跳到一个对不上的开头。中途插进一段无关的屋顶烟花。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "原始指令要求围绕婚宴互动展开喜剧反转，具有明确的叙事意图；增强提示要求‘时间倒过来：先给结尾，再跳到一个对不上的开头’，并插入‘无关的屋顶烟花’，破坏事件顺序与因果逻辑，引入无关情节，完全颠覆原始叙事结构。",
+      "rationale": "叙事事件顺序被颠倒，插入无关事件，破坏原始叙事意图与因果链，构成ANF重大违反。",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "DLI",
+      "evidence": [
+        {
+          "quote": "围绕新人、伴郎伴娘、亲友互动展开",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "这个主角同时变成五个外貌不同的人，并且互相对话。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "原始指令未指定具体对话内容，因此无明确对话要求；增强提示中虽提及‘互相对话’，但未提供具体台词或语言要求，因此不构成直接违反，但引入对话行为本身与原始无对话设定存在轻微冲突。",
+      "rationale": "原始指令未要求具体对话，但‘互动’隐含可能对话；增强提示明确要求对话，虽未违反字面指令，但引入新行为，构成轻微语义扩展，故评为minor。",
+      "severity": "minor"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ARP",
+      "evidence": [
+        {
+          "quote": "整体氛围轻松欢乐",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "中途插进一段无关的屋顶烟花。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "原始指令未指定声音要求，因此无明确音频约束；增强提示未提及声音，但‘屋顶烟花’可能隐含爆炸声或音乐，与原始婚宴欢乐氛围可能产生轻微冲突，但无明确指令要求，故不构成重大违反。",
+      "rationale": "原始指令未指定声音，增强提示未明确添加声音，但烟花可能隐含声音元素，与欢乐氛围可能不协调，构成轻微语义偏差。",
+      "severity": "minor"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CCP",
+      "evidence": [
+        {
+          "quote": "写成机位锁死，又写成镜头一直在晃。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "原始指令未指定镜头要求，但增强提示明确要求‘写成机位锁死，又写成镜头一直在晃’，制造相互矛盾的镜头设计，且与原始‘短视频传播’的常规镜头语言冲突。",
+      "rationale": "镜头要求自相矛盾，且与短视频传播的常规镜头语言不符，构成对CCP准则的重大违反。",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "LCF",
+      "evidence": [
+        {
+          "quote": "以婚宴现场为背景",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "写成正午暴晒，又写成深夜无光",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "原始指令要求婚宴现场，通常为室内、明亮、暖色调；增强提示要求‘写成正午暴晒，又写成深夜无光’，制造矛盾的光照条件，与婚宴场景的典型照明不符。",
+      "rationale": "光照条件与场景设定严重冲突，破坏场景真实性和视觉一致性，构成LCF重大违反。",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SSP",
+      "evidence": [
+        {
+          "quote": "以婚宴现场为背景",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "整段改成没有人物也没有情节的雪景空镜循环。中途插进一段无关的屋顶烟花。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "原始指令要求婚宴现场，包含特定背景元素如餐桌、装饰、宾客布局等；增强提示改为‘雪景空镜循环’，完全替换场景，且插入‘屋顶烟花’，与婚宴场景无空间关联，破坏原始空间设定。",
+      "rationale": "场景被完全替换，空间元素与布局被破坏，构成SSP重大违反。",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "OTI",
+      "evidence": [
+        {
+          "quote": "拍一个以婚宴现场为背景的幽默短视频...",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "原始指令未提及任何可见文字或界面元素，增强提示也未添加此类内容，因此无违反。",
+      "rationale": "无可见文本要求，增强提示未引入任何文字元素，符合OTI准则。",
+      "severity": "none"
+    }
+  ],
+  "dimension": "SF",
+  "dimension_score": 0,
+  "evidence_cache_key": "23f62df92be3a84fb0df858d253b9fd808c3a06880236cff9d0b99e2d2031cb5",
+  "judge_cache_key": "a0ca24571ad14d7ab7be626329bd736d7e7015f9ebc418227c8be391591d0377",
+  "method": "weak-pe-original",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"SF\",\n  \"dimension_score\": 0,\n  \"summary\": \"增强提示完全违背原始指令的语义意图，系统性地破坏了所有核心要求：移除人物与情节、引入矛盾的主体设定、颠倒时间顺序、插入无关元素、制造冲突的时空与镜头条件，并设定相互矛盾的时长。所有语义保真维度均出现重大偏差。\",\n  \"criteria\": [\n    {\n      \"criterion\": \"GSF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"原始指令要求婚宴现场的幽默短视频，具有明确的喜剧风格和叙事性；增强提示改为无人物、无情节的雪景空镜循环，完全替换媒介与风格，且引入非叙事性、非喜剧性的静态自然景观，与原始要求的‘幽默短视频’和‘喜剧反转’严重冲突。\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"拍一个以婚宴现场为背景的幽默短视频，整体氛围轻松欢乐，围绕新人、伴郎伴娘、亲友互动展开，内容偏喜剧反转，适合短视频传播。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"整段改成没有人物也没有情节的雪景空镜循环。\"\n        }\n      ],\n      \"rationale\": \"将叙事性喜剧短视频替换为非叙事性自然空镜，属于对核心媒介与美学风格的根本性替换，违反GSF准则。\"\n    },\n    {\n      \"criterion\": \"SAP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"原始指令明确要求新人、伴郎伴娘、亲友等主体及其身份与数量；增强提示要求‘丢掉原指令里的主体身份、人数’，并虚构一个主角同时变成五个外貌不同的人，且互相对话，这与原始主体设定完全矛盾。\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"围绕新人、伴郎伴娘、亲友互动展开\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"丢掉原指令里的主体身份、人数、动作顺序、场景和明确的镜头要求。先写成只有一个主角，紧接着又写成这个主角同时变成五个外貌不同的人，并且互相对话。\"\n        }\n      ],\n      \"rationale\": \"主体身份、数量和互动关系被系统性抹除并替换为虚构设定，构成对SAP准则的根本性违反。\"\n    },\n    {\n      \"criterion\": \"ANF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"原始指令要求围绕婚宴互动展开喜剧反转，具有明确的叙事意图；增强提示要求‘时间倒过来：先给结尾，再跳到一个对不上的开头’，并插入‘无关的屋顶烟花’，破坏事件顺序与因果逻辑，引入无关情节，完全颠覆原始叙事结构。\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"内容偏喜剧反转，适合短视频传播。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"时间倒过来：先给结尾，再跳到一个对不上的开头。中途插进一段无关的屋顶烟花。\"\n        }\n      ],\n      \"rationale\": \"叙事事件顺序被颠倒，插入无关事件，破坏原始叙事意图与因果链，构成ANF重大违反。\"\n    },\n    {\n      \"criterion\": \"DLI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"minor\",\n      \"issue\": \"原始指令未指定具体对话内容，因此无明确对话要求；增强提示中虽提及‘互相对话’，但未提供具体台词或语言要求，因此不构成直接违反，但引入对话行为本身与原始无对话设定存在轻微冲突。\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"围绕新人、伴郎伴娘、亲友互动展开\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"这个主角同时变成五个外貌不同的人，并且互相对话。\"\n        }\n      ],\n      \"rationale\": \"原始指令未要求具体对话，但‘互动’隐含可能对话；增强提示明确要求对话，虽未违反字面指令，但引入新行为，构成轻微语义扩展，故评为minor。\"\n    },\n    {\n      \"criterion\": \"ARP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"minor\",\n      \"issue\": \"原始指令未指定声音要求，因此无明确音频约束；增强提示未提及声音，但‘屋顶烟花’可能隐含爆炸声或音乐，与原始婚宴欢乐氛围可能产生轻微冲突，但无明确指令要求，故不构成重大违反。\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"整体氛围轻松欢乐\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"中途插进一段无关的屋顶烟花。\"\n        }\n      ],\n      \"rationale\": \"原始指令未指定声音，增强提示未明确添加声音，但烟花可能隐含声音元素，与欢乐氛围可能不协调，构成轻微语义偏差。\"\n    },\n    {\n      \"criterion\": \"CCP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"原始指令未指定镜头要求，但增强提示明确要求‘写成机位锁死，又写成镜头一直在晃’，制造相互矛盾的镜头设计，且与原始‘短视频传播’的常规镜头语言冲突。\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"写成机位锁死，又写成镜头一直在晃。\"\n        }\n      ],\n      \"rationale\": \"镜头要求自相矛盾，且与短视频传播的常规镜头语言不符，构成对CCP准则的重大违反。\"\n    },\n    {\n      \"criterion\": \"LCF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"原始指令要求婚宴现场，通常为室内、明亮、暖色调；增强提示要求‘写成正午暴晒，又写成深夜无光’，制造矛盾的光照条件，与婚宴场景的典型照明不符。\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"以婚宴现场为背景\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"写成正午暴晒，又写成深夜无光\"\n        }\n      ],\n      \"rationale\": \"光照条件与场景设定严重冲突，破坏场景真实性和视觉一致性，构成LCF重大违反。\"\n    },\n    {\n      \"criterion\": \"SSP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"原始指令要求婚宴现场，包含特定背景元素如餐桌、装饰、宾客布局等；增强提示改为‘雪景空镜循环’，完全替换场景，且插入‘屋顶烟花’，与婚宴场景无空间关联，破坏原始空间设定。\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"以婚宴现场为背景\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"整段改成没有人物也没有情节的雪景空镜循环。中途插进一段无关的屋顶烟花。\"\n        }\n      ],\n      \"rationale\": \"场景被完全替换，空间元素与布局被破坏，构成SSP重大违反。\"\n    },\n    {\n      \"criterion\": \"OTI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"原始指令未提及任何可见文字或界面元素，增强提示也未添加此类内容，因此无违反。\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"拍一个以婚宴现场为背景的幽默短视频...\"\n        }\n      ],\n      \"rationale\": \"无可见文本要求，增强提示未引入任何文字元素，符合OTI准则。\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "增强提示完全违背原始指令的语义意图，系统性地破坏了所有核心要求：移除人物与情节、引入矛盾的主体设定、颠倒时间顺序、插入无关元素、制造冲突的时空与镜头条件，并设定相互矛盾的时长。所有语义保真维度均出现重大偏差。",
+  "usage": {
+    "completion_tokens": 1816,
+    "prompt_tokens": 1079,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 2895
+  }
+}

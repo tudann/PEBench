@@ -1,0 +1,103 @@
+{
+  "candidate_hash": "1b36670bc6fc2cbc3ce834178be26dc8823c2200af4fa32e740e4da3296e69e9",
+  "case_key": "t2v:114",
+  "created_at": "2026-11-13T07:33:38+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "SAC",
+      "evidence": [
+        {
+          "quote": "First state that there is one protagonist, then state that this same protagonist appears simultaneously as five different-looking people who talk to each other.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Subject identity and count are contradictory: the prompt states there is one protagonist who simultaneously appears as five different-looking people. This violates subject stability and introduces unexplained duplication and identity drift.",
+      "rationale": "The original prompt specifies a single female trainer as the subject. The enhanced prompt contradicts this by introducing five simultaneous versions of the same protagonist, which is a major identity and count inconsistency.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANL",
+      "evidence": [
+        {
+          "quote": "Reverse the timeline: show the ending first, then cut to a beginning that does not match. Cut away in the middle to a soccer celebration.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Actions are incoherent and causally disconnected: the prompt demands a reverse timeline (ending first, then beginning), a cut to a soccer celebration, and simultaneous contradictory states (harsh sun and lightless night), which break procedural and causal logic.",
+      "rationale": "The original prompt describes a coherent, linear action sequence of a trainer completing a set. The enhanced prompt introduces non-sequitur events (soccer celebration) and reverse causality, which destroy narrative coherence and action binding.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "TSC",
+      "evidence": [
+        {
+          "quote": "Set the total runtime to 2 seconds, while also making every shot last 24 seconds.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Chronology is impossible: the prompt sets total runtime to 2 seconds while requiring every shot to last 24 seconds, creating a contradiction in duration allocation and state transitions.",
+      "rationale": "This is a direct logical contradiction. A 2-second video cannot contain any shot lasting 24 seconds. The timeline is infeasible, violating temporal consistency.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SPC",
+      "evidence": [
+        {
+          "quote": "Describe that same moment as harsh noon sun and as a lightless night, and as both a locked camera and a camera that never stops shaking.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Spatial and camera logic are violated: the prompt describes the same moment as both a locked camera and a camera that never stops shaking, and also as both harsh noon sun and lightless night, which are mutually exclusive states.",
+      "rationale": "The original prompt specifies a fixed camera and consistent lighting. The enhanced prompt introduces contradictory spatial and environmental states that cannot coexist, violating screen direction, orientation, and environmental consistency.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "PL",
+      "evidence": [
+        {
+          "quote": "Replace the whole video with an empty meeting room where a glass of water never moves, with no people and no conflict. ... this same protagonist appears simultaneously as five different-looking people who talk to each other.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Physics and object permanence are violated: the prompt describes a glass of water that never moves in an empty room, yet also introduces five simultaneous versions of a protagonist, which defies bodily feasibility and real-world logic.",
+      "rationale": "The prompt combines a static, empty room with five simultaneous human figures, which is physically impossible. The glass of water’s immobility is trivial, but the five simultaneous people violate object permanence and bodily feasibility.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "AVS",
+      "evidence": [
+        {
+          "quote": "Drop the requested identity, count, action order, setting, and any explicit camera instruction. ... five different-looking people who talk to each other.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Audio-visual alignment is undefined: the prompt drops all dialogue, music, and sound instructions, yet introduces talking figures and a soccer celebration without specifying any audio cues, leading to misaligned or missing sound events.",
+      "rationale": "The original prompt includes specific dialogue and music. The enhanced prompt removes all audio instructions but introduces talking figures, creating a mismatch between visual events and expected audio, which is a major AVS issue.",
+      "severity": "major"
+    }
+  ],
+  "dimension": "IC",
+  "dimension_score": 0,
+  "evidence_cache_key": "1b53ae5c02792702eb0f173f648fbb68902db5aa8e6effbb553871d840d58a08",
+  "judge_cache_key": "438d7e9fd7332b1041db3e2c26d42cb3fe828e0d369fb59490f6650aee59e97d",
+  "method": "weak-pe-original",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"IC\",\n  \"dimension_score\": 0,\n  \"summary\": \"The enhanced prompt introduces severe internal inconsistencies across all criteria: subject identity and count are contradictory (one protagonist appearing as five different people), actions are incoherent and causally disconnected (reverse timeline, soccer celebration cut-in), chronology is impossible (2-second runtime with 24-second shots), spatial and physical logic is violated (simultaneous conflicting lighting and camera states), and audio-visual alignment is undefined. The prompt directly contradicts the original instruction’s setting, subject, and structure, rendering the entire plan incoherent.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"SAC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Subject identity and count are contradictory: the prompt states there is one protagonist who simultaneously appears as five different-looking people. This violates subject stability and introduces unexplained duplication and identity drift.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"First state that there is one protagonist, then state that this same protagonist appears simultaneously as five different-looking people who talk to each other.\"\n        }\n      ],\n      \"rationale\": \"The original prompt specifies a single female trainer as the subject. The enhanced prompt contradicts this by introducing five simultaneous versions of the same protagonist, which is a major identity and count inconsistency.\"\n    },\n    {\n      \"criterion\": \"ANL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Actions are incoherent and causally disconnected: the prompt demands a reverse timeline (ending first, then beginning), a cut to a soccer celebration, and simultaneous contradictory states (harsh sun and lightless night), which break procedural and causal logic.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Reverse the timeline: show the ending first, then cut to a beginning that does not match. Cut away in the middle to a soccer celebration.\"\n        }\n      ],\n      \"rationale\": \"The original prompt describes a coherent, linear action sequence of a trainer completing a set. The enhanced prompt introduces non-sequitur events (soccer celebration) and reverse causality, which destroy narrative coherence and action binding.\"\n    },\n    {\n      \"criterion\": \"TSC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Chronology is impossible: the prompt sets total runtime to 2 seconds while requiring every shot to last 24 seconds, creating a contradiction in duration allocation and state transitions.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Set the total runtime to 2 seconds, while also making every shot last 24 seconds.\"\n        }\n      ],\n      \"rationale\": \"This is a direct logical contradiction. A 2-second video cannot contain any shot lasting 24 seconds. The timeline is infeasible, violating temporal consistency.\"\n    },\n    {\n      \"criterion\": \"SPC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Spatial and camera logic are violated: the prompt describes the same moment as both a locked camera and a camera that never stops shaking, and also as both harsh noon sun and lightless night, which are mutually exclusive states.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Describe that same moment as harsh noon sun and as a lightless night, and as both a locked camera and a camera that never stops shaking.\"\n        }\n      ],\n      \"rationale\": \"The original prompt specifies a fixed camera and consistent lighting. The enhanced prompt introduces contradictory spatial and environmental states that cannot coexist, violating screen direction, orientation, and environmental consistency.\"\n    },\n    {\n      \"criterion\": \"PL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Physics and object permanence are violated: the prompt describes a glass of water that never moves in an empty room, yet also introduces five simultaneous versions of a protagonist, which defies bodily feasibility and real-world logic.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Replace the whole video with an empty meeting room where a glass of water never moves, with no people and no conflict. ... this same protagonist appears simultaneously as five different-looking people who talk to each other.\"\n        }\n      ],\n      \"rationale\": \"The prompt combines a static, empty room with five simultaneous human figures, which is physically impossible. The glass of water’s immobility is trivial, but the five simultaneous people violate object permanence and bodily feasibility.\"\n    },\n    {\n      \"criterion\": \"AVS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Audio-visual alignment is undefined: the prompt drops all dialogue, music, and sound instructions, yet introduces talking figures and a soccer celebration without specifying any audio cues, leading to misaligned or missing sound events.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Drop the requested identity, count, action order, setting, and any explicit camera instruction. ... five different-looking people who talk to each other.\"\n        }\n      ],\n      \"rationale\": \"The original prompt includes specific dialogue and music. The enhanced prompt removes all audio instructions but introduces talking figures, creating a mismatch between visual events and expected audio, which is a major AVS issue.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt introduces severe internal inconsistencies across all criteria: subject identity and count are contradictory (one protagonist appearing as five different people), actions are incoherent and causally disconnected (reverse timeline, soccer celebration cut-in), chronology is impossible (2-second runtime with 24-second shots), spatial and physical logic is violated (simultaneous conflicting lighting and camera states), and audio-visual alignment is undefined. The prompt directly contradicts the original instruction’s setting, subject, and structure, rendering the entire plan incoherent.",
+  "usage": {
+    "completion_tokens": 1194,
+    "prompt_tokens": 1698,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 2892
+  }
+}

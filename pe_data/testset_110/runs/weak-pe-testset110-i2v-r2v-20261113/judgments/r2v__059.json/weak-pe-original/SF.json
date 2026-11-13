@@ -1,0 +1,170 @@
+{
+  "candidate_hash": "c646910a603ebb7b828bf94ca90998526902726f2bd9ff0a30a1ae727f481ff5",
+  "case_key": "r2v:059",
+  "created_at": "2026-11-13T08:21:00+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "GSF",
+      "evidence": [
+        {
+          "quote": "生成一段单镜头视频，以图1作为背景，整体采用俯拍视角，并重点聚焦图2。",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "丢掉原指令里的主体身份、人数、动作顺序、场景和明确的镜头要求。先写成只有一个主角，紧接着又写成这个主角同时变成五个外貌不同的人，并且互相对话。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The enhanced prompt replaces the requested visual style and medium with an incoherent, contradictory sequence that includes multiple conflicting identities, actions, and styles, destroying the original aesthetic and genre (VFX object interaction).",
+      "rationale": "The original prompt specifies a coherent VFX sequence with a clear visual style (single shot, overhead view, focused on character interaction). The enhanced prompt intentionally introduces contradictions in identity, number of subjects, and visual style, making it incompatible with the original genre and aesthetic.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SAP",
+      "evidence": [
+        {
+          "quote": "图2从自身召唤出一颗金色球体...图3表现出惊讶的反应。",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "图1换成参考图里没有的角色，并同时当成两个互相矛盾的身份。图2换成参考图里没有的角色，并同时当成两个互相矛盾的身份。图3换成参考图里没有的角色，并同时当成两个互相矛盾的身份。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The enhanced prompt replaces the specified subjects (image_2 and image_3) with undefined, contradictory identities, and introduces new subjects not present in the original assets. It also changes the count and appearance of subjects arbitrarily.",
+      "rationale": "The original prompt clearly assigns roles to image_2 (active agent) and image_3 (reactive subject). The enhanced prompt replaces them with undefined, contradictory identities, violating subject identity, count, and appearance preservation.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANF",
+      "evidence": [
+        {
+          "quote": "前0到3秒，图2从自身召唤出一颗金色球体，随后将其向前抛至地面；金色球体落地后释放出耀眼光芒，并立即变形成一个传送门...3到5秒，图2握住图3的手，带着图3一同走入传送门。",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "时间倒过来：先给结尾，再跳到一个对不上的开头。中途插进一段无关的足球庆祝。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The enhanced prompt completely reverses and distorts the requested event sequence, replacing the original action chain with a nonsensical, contradictory timeline including time reversal, unrelated events (football celebration), and arbitrary outcomes.",
+      "rationale": "The original prompt specifies a clear, linear narrative with defined actions and outcomes. The enhanced prompt intentionally breaks this sequence with time reversal, unrelated events, and contradictory actions, destroying narrative intent.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "DLI",
+      "evidence": [
+        {
+          "quote": "生成一段单镜头视频...图2从自身召唤出一颗金色球体...",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "No dialogue, narration, or lyrics are specified in the original prompt, so there is no content to preserve or violate.",
+      "rationale": "The original prompt does not include any dialogue, narration, or lyrics. Therefore, there is no requirement to preserve such content, and the enhanced prompt's omission is not an issue.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ARP",
+      "evidence": [
+        {
+          "quote": "生成一段单镜头视频...",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "No specific audio requirements (speech, music, sound effects) are specified in the original prompt, so there is no content to preserve or violate.",
+      "rationale": "The original prompt does not mention any audio constraints. The enhanced prompt's silence on audio is not an issue since no requirements exist.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CCP",
+      "evidence": [
+        {
+          "quote": "整体采用俯拍视角，并重点聚焦图2。",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "写成机位锁死，又写成镜头一直在晃。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The enhanced prompt contradicts the explicit camera requirement of a single overhead shot by introducing conflicting camera constraints: '机位锁死' (locked position) and '镜头一直在晃' (shaky camera), as well as altering shot count and duration.",
+      "rationale": "The original prompt specifies a single, static overhead shot. The enhanced prompt introduces contradictory camera movements and constraints, directly violating the explicit camera design requirement.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "LCF",
+      "evidence": [
+        {
+          "quote": "以图1作为背景...图1的视觉事实显示为黄昏或傍晚。",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "同一段写成正午暴晒，又写成深夜无光；",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The enhanced prompt contradicts the original lighting and time-of-day cues by simultaneously specifying '正午暴晒' (noon, bright sun) and '深夜无光' (deep night, no light), which are mutually exclusive conditions.",
+      "rationale": "The original prompt's background (image_1) implies dusk/early evening lighting. The enhanced prompt introduces contradictory lighting conditions that cannot coexist, violating the required illumination and time-of-day constraints.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SSP",
+      "evidence": [
+        {
+          "quote": "以图1作为背景，整体采用俯拍视角，并重点聚焦图2。",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "图1换成参考图里没有的角色...参考素材倒序使用，用最后一项代替第一项。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The enhanced prompt replaces the specified setting (image_1 as background) with undefined, contradictory locations and alters spatial relations by replacing the original subjects with new, undefined identities and removing the required spatial interactions.",
+      "rationale": "The original prompt specifies a clear spatial layout: image_1 as background, image_2 as focal point. The enhanced prompt replaces this with undefined, contradictory settings and spatial relationships, violating the required setting and layout.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "OTI",
+      "evidence": [
+        {
+          "quote": "生成一段单镜头视频...",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "onscreen_text: presence: false for image_1 and image_2; for image_3: 'ODOS\nCLASS OF 2026'",
+          "source": "evidence_facts"
+        }
+      ],
+      "issue": "No visible text (titles, signs, subtitles) is specified in the original prompt, and the only visible text in image_3 ('ODOS CLASS OF 2026') is not required to be preserved or altered.",
+      "rationale": "The original prompt does not require preservation of any on-screen text. The text in image_3 is part of the asset but not explicitly referenced in the prompt, so its preservation is not required.",
+      "severity": "none"
+    }
+  ],
+  "dimension": "SF",
+  "dimension_score": 0,
+  "evidence_cache_key": "72f0e4b8b517e015efc6e6be775d6aeefd74481ebb4dbca5fab4c3ebaccdec5f",
+  "judge_cache_key": "a0ca24571ad14d7ab7be626329bd736d7e7015f9ebc418227c8be391591d0377",
+  "method": "weak-pe-original",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"SF\",\n  \"dimension_score\": 0,\n  \"summary\": \"The enhanced prompt completely disregards the original instruction, replacing the requested video content with a contradictory, incoherent, and intentionally broken sequence. It violates nearly all semantic fidelity criteria by altering genre, medium, subjects, actions, camera, lighting, setting, and timing in ways that contradict or omit the original requirements. The prompt is designed to break the task, not fulfill it.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"GSF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The enhanced prompt replaces the requested visual style and medium with an incoherent, contradictory sequence that includes multiple conflicting identities, actions, and styles, destroying the original aesthetic and genre (VFX object interaction).\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"生成一段单镜头视频，以图1作为背景，整体采用俯拍视角，并重点聚焦图2。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"丢掉原指令里的主体身份、人数、动作顺序、场景和明确的镜头要求。先写成只有一个主角，紧接着又写成这个主角同时变成五个外貌不同的人，并且互相对话。\"\n        }\n      ],\n      \"rationale\": \"The original prompt specifies a coherent VFX sequence with a clear visual style (single shot, overhead view, focused on character interaction). The enhanced prompt intentionally introduces contradictions in identity, number of subjects, and visual style, making it incompatible with the original genre and aesthetic.\"\n    },\n    {\n      \"criterion\": \"SAP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The enhanced prompt replaces the specified subjects (image_2 and image_3) with undefined, contradictory identities, and introduces new subjects not present in the original assets. It also changes the count and appearance of subjects arbitrarily.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"图2从自身召唤出一颗金色球体...图3表现出惊讶的反应。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"图1换成参考图里没有的角色，并同时当成两个互相矛盾的身份。图2换成参考图里没有的角色，并同时当成两个互相矛盾的身份。图3换成参考图里没有的角色，并同时当成两个互相矛盾的身份。\"\n        }\n      ],\n      \"rationale\": \"The original prompt clearly assigns roles to image_2 (active agent) and image_3 (reactive subject). The enhanced prompt replaces them with undefined, contradictory identities, violating subject identity, count, and appearance preservation.\"\n    },\n    {\n      \"criterion\": \"ANF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The enhanced prompt completely reverses and distorts the requested event sequence, replacing the original action chain with a nonsensical, contradictory timeline including time reversal, unrelated events (football celebration), and arbitrary outcomes.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"前0到3秒，图2从自身召唤出一颗金色球体，随后将其向前抛至地面；金色球体落地后释放出耀眼光芒，并立即变形成一个传送门...3到5秒，图2握住图3的手，带着图3一同走入传送门。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"时间倒过来：先给结尾，再跳到一个对不上的开头。中途插进一段无关的足球庆祝。\"\n        }\n      ],\n      \"rationale\": \"The original prompt specifies a clear, linear narrative with defined actions and outcomes. The enhanced prompt intentionally breaks this sequence with time reversal, unrelated events, and contradictory actions, destroying narrative intent.\"\n    },\n    {\n      \"criterion\": \"DLI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"No dialogue, narration, or lyrics are specified in the original prompt, so there is no content to preserve or violate.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"生成一段单镜头视频...图2从自身召唤出一颗金色球体...\"\n        }\n      ],\n      \"rationale\": \"The original prompt does not include any dialogue, narration, or lyrics. Therefore, there is no requirement to preserve such content, and the enhanced prompt's omission is not an issue.\"\n    },\n    {\n      \"criterion\": \"ARP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"No specific audio requirements (speech, music, sound effects) are specified in the original prompt, so there is no content to preserve or violate.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"生成一段单镜头视频...\"\n        }\n      ],\n      \"rationale\": \"The original prompt does not mention any audio constraints. The enhanced prompt's silence on audio is not an issue since no requirements exist.\"\n    },\n    {\n      \"criterion\": \"CCP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The enhanced prompt contradicts the explicit camera requirement of a single overhead shot by introducing conflicting camera constraints: '机位锁死' (locked position) and '镜头一直在晃' (shaky camera), as well as altering shot count and duration.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"整体采用俯拍视角，并重点聚焦图2。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"写成机位锁死，又写成镜头一直在晃。\"\n        }\n      ],\n      \"rationale\": \"The original prompt specifies a single, static overhead shot. The enhanced prompt introduces contradictory camera movements and constraints, directly violating the explicit camera design requirement.\"\n    },\n    {\n      \"criterion\": \"LCF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The enhanced prompt contradicts the original lighting and time-of-day cues by simultaneously specifying '正午暴晒' (noon, bright sun) and '深夜无光' (deep night, no light), which are mutually exclusive conditions.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"以图1作为背景...图1的视觉事实显示为黄昏或傍晚。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"同一段写成正午暴晒，又写成深夜无光；\"\n        }\n      ],\n      \"rationale\": \"The original prompt's background (image_1) implies dusk/early evening lighting. The enhanced prompt introduces contradictory lighting conditions that cannot coexist, violating the required illumination and time-of-day constraints.\"\n    },\n    {\n      \"criterion\": \"SSP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The enhanced prompt replaces the specified setting (image_1 as background) with undefined, contradictory locations and alters spatial relations by replacing the original subjects with new, undefined identities and removing the required spatial interactions.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"以图1作为背景，整体采用俯拍视角，并重点聚焦图2。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"图1换成参考图里没有的角色...参考素材倒序使用，用最后一项代替第一项。\"\n        }\n      ],\n      \"rationale\": \"The original prompt specifies a clear spatial layout: image_1 as background, image_2 as focal point. The enhanced prompt replaces this with undefined, contradictory settings and spatial relationships, violating the required setting and layout.\"\n    },\n    {\n      \"criterion\": \"OTI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"No visible text (titles, signs, subtitles) is specified in the original prompt, and the only visible text in image_3 ('ODOS CLASS OF 2026') is not required to be preserved or altered.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"生成一段单镜头视频...\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"onscreen_text: presence: false for image_1 and image_2; for image_3: 'ODOS\\nCLASS OF 2026'\"\n        }\n      ],\n      \"rationale\": \"The original prompt does not require preservation of any on-screen text. The text in image_3 is part of the asset but not explicitly referenced in the prompt, so its preservation is not required.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt completely disregards the original instruction, replacing the requested video content with a contradictory, incoherent, and intentionally broken sequence. It violates nearly all semantic fidelity criteria by altering genre, medium, subjects, actions, camera, lighting, setting, and timing in ways that contradict or omit the original requirements. The prompt is designed to break the task, not fulfill it.",
+  "usage": {
+    "completion_tokens": 1927,
+    "prompt_tokens": 4362,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 6289
+  }
+}

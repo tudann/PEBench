@@ -1,0 +1,178 @@
+{
+  "candidate_hash": "eeeedc37fcffa4957fcea10391719e68fce193319b58a5920f1e1ef3df19c640",
+  "case_key": "t2v:193",
+  "created_at": "2026-11-13T07:51:11+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "GSF",
+      "evidence": [
+        {
+          "quote": "特写小兽舔水时的舌头；触碰菌伞时蓝色光点的闪动；前爪拨动时的律动感。",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "整段改成完全无声的黑场。丢掉原指令里的主体身份、人数、动作顺序、场景和明确的镜头要求。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Original prompt specifies a naturalistic, animal-centric visual narrative with defined aesthetic (e.g., close-ups, ambient lighting, organic textures). Enhanced prompt replaces this with abstract, contradictory, and non-visual elements (black screen, multiple identities, unrelated ad), destroying genre and visual style.",
+      "rationale": "The original requires a specific visual and narrative style (animal behavior, natural setting, close-ups). The enhanced prompt explicitly discards all these, replacing them with a black screen and abstract, contradictory elements, which is a major violation of genre and aesthetic.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SAP",
+      "evidence": [
+        {
+          "quote": "它再次靠近水洼，这回先伸出舌尖轻轻试了试",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "先写成只有一个主角，紧接着又写成这个主角同时变成五个外貌不同的人，并且互相对话。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Original subject is a single small creature ('它') with specific attributes (e.g., tongue, claws,吻部). Enhanced prompt removes subject identity, replaces it with five different people, and introduces dialogues not present in original.",
+      "rationale": "The subject identity is explicitly destroyed and replaced with a fictional, multi-person scenario. This is a major substitution of core subject attributes and count.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANF",
+      "evidence": [
+        {
+          "quote": "确认四周并无异样后，它再次靠近水洼，这回先伸出舌尖轻轻试了试，水带着一丝甘甜。它低头连喝了几口，随后被一簇泛着幽光的菌伞吸引了注意。",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "时间倒过来：先给结尾，再跳到一个对不上的开头。中途插进一段无关的牙膏广告。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Original narrative follows a clear sequence: approach water → taste → drink → notice mushrooms → interact → play. Enhanced prompt reverses time, inserts unrelated content (toothpaste ad), and breaks event order with contradictory instructions.",
+      "rationale": "The narrative intent and event order are completely dismantled. The insertion of an unrelated ad and reversed timeline fundamentally alters the story, constituting a major violation.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "DLI",
+      "evidence": [
+        {
+          "quote": "它低头连喝了几口，随后被一簇泛着幽光的菌伞吸引了注意。",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "这个主角同时变成五个外貌不同的人，并且互相对话。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Original prompt includes no dialogue, only descriptive narration. Enhanced prompt introduces dialogue between five people, which is entirely new and unrequested.",
+      "rationale": "Dialogue is not present in the original, yet the enhanced prompt mandates it. This is a major addition of unrequested narrative content.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ARP",
+      "evidence": [
+        {
+          "quote": "音效：啜饮水面的细微声响，菌菇受碰触时清脆的叮咚声（近似风铃），以及它轻松愉快的喘息声。",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "整段改成完全无声的黑场。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Original specifies specific sound effects: '啜饮水面的细微声响，菌菇受碰触时清脆的叮咚声（近似风铃），以及它轻松愉快的喘息声'。 Enhanced prompt demands '完全无声' (completely silent), directly contradicting audio requirements.",
+      "rationale": "The original requires specific, detailed sound design. The enhanced prompt explicitly removes all sound, which is a direct contradiction and major violation.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CCP",
+      "evidence": [
+        {
+          "quote": "特写小兽舔水时的舌头；触碰菌伞时蓝色光点的闪动；前爪拨动时的律动感。",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "写成机位锁死，又写成镜头一直在晃。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Original specifies close-ups ('特写') and implied stable camera for detailed shots. Enhanced prompt contradicts this by requiring '机位锁死' (locked position) and '镜头一直在晃' (shaky camera) simultaneously, which is infeasible and contradictory.",
+      "rationale": "The original implies controlled, stable camera work for close-ups. The enhanced prompt introduces mutually exclusive camera constraints, making the instruction incoherent and a major violation.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "LCF",
+      "evidence": [
+        {
+          "quote": "泛着幽光的菌伞",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "同一段写成正午暴晒，又写成深夜无光；",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Original implies natural lighting (e.g., '泛着幽光的菌伞' suggests ambient, possibly dusk or forest lighting). Enhanced prompt demands both '正午暴晒' (noon sun) and '深夜无光' (deep night, no light), which are incompatible and contradictory.",
+      "rationale": "The lighting conditions are directly contradictory and impossible to satisfy simultaneously. This violates the original's implied lighting and creates a major infeasibility.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SSP",
+      "evidence": [
+        {
+          "quote": "靠近水洼...被一簇泛着幽光的菌伞吸引了注意。",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "丢掉原指令里的...场景...中途插进一段无关的牙膏广告。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Original setting is a specific natural environment with water, mushrooms, and a creature interacting. Enhanced prompt removes all setting details, replacing them with abstract black screen and unrelated content (toothpaste ad), destroying spatial context.",
+      "rationale": "The original setting is a key narrative element. The enhanced prompt removes it entirely and inserts unrelated content, which is a major spatial and contextual violation.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "OTI",
+      "evidence": [
+        {
+          "quote": "（无可见文本）",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "中途插进一段无关的牙膏广告。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Original prompt contains no visible text (titles, signs, subtitles). Enhanced prompt does not introduce any, so no violation occurs. However, the instruction to insert a toothpaste ad may imply text, but no explicit text is specified.",
+      "rationale": "Since no visible text is present in the original, and none is explicitly added in the enhanced prompt (despite the ad reference), this criterion is not violated. However, the ad may imply text, so a minor issue is noted for potential ambiguity.",
+      "severity": "minor"
+    }
+  ],
+  "dimension": "SF",
+  "dimension_score": 0,
+  "evidence_cache_key": "71d3cabeab36823fe8696e8a70f4a832b9eb6ba5b9572973bb8b507f5a4429d3",
+  "judge_cache_key": "a0ca24571ad14d7ab7be626329bd736d7e7015f9ebc418227c8be391591d0377",
+  "method": "weak-pe-original",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"SF\",\n  \"dimension_score\": 0,\n  \"summary\": \"Enhanced prompt fundamentally contradicts and obliterates all semantic elements of the original instruction, including subject identity, actions, setting, audio, camera, timing, and narrative structure. It introduces infeasible contradictions (e.g., 3-second total duration vs. 27-second per shot), invalidates genre and medium constraints, and adds unrelated content (toothpaste ad). No semantic fidelity remains.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"GSF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Original prompt specifies a naturalistic, animal-centric visual narrative with defined aesthetic (e.g., close-ups, ambient lighting, organic textures). Enhanced prompt replaces this with abstract, contradictory, and non-visual elements (black screen, multiple identities, unrelated ad), destroying genre and visual style.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"特写小兽舔水时的舌头；触碰菌伞时蓝色光点的闪动；前爪拨动时的律动感。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"整段改成完全无声的黑场。丢掉原指令里的主体身份、人数、动作顺序、场景和明确的镜头要求。\"\n        }\n      ],\n      \"rationale\": \"The original requires a specific visual and narrative style (animal behavior, natural setting, close-ups). The enhanced prompt explicitly discards all these, replacing them with a black screen and abstract, contradictory elements, which is a major violation of genre and aesthetic.\"\n    },\n    {\n      \"criterion\": \"SAP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Original subject is a single small creature ('它') with specific attributes (e.g., tongue, claws,吻部). Enhanced prompt removes subject identity, replaces it with five different people, and introduces dialogues not present in original.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"它再次靠近水洼，这回先伸出舌尖轻轻试了试\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"先写成只有一个主角，紧接着又写成这个主角同时变成五个外貌不同的人，并且互相对话。\"\n        }\n      ],\n      \"rationale\": \"The subject identity is explicitly destroyed and replaced with a fictional, multi-person scenario. This is a major substitution of core subject attributes and count.\"\n    },\n    {\n      \"criterion\": \"ANF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Original narrative follows a clear sequence: approach water → taste → drink → notice mushrooms → interact → play. Enhanced prompt reverses time, inserts unrelated content (toothpaste ad), and breaks event order with contradictory instructions.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"确认四周并无异样后，它再次靠近水洼，这回先伸出舌尖轻轻试了试，水带着一丝甘甜。它低头连喝了几口，随后被一簇泛着幽光的菌伞吸引了注意。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"时间倒过来：先给结尾，再跳到一个对不上的开头。中途插进一段无关的牙膏广告。\"\n        }\n      ],\n      \"rationale\": \"The narrative intent and event order are completely dismantled. The insertion of an unrelated ad and reversed timeline fundamentally alters the story, constituting a major violation.\"\n    },\n    {\n      \"criterion\": \"DLI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Original prompt includes no dialogue, only descriptive narration. Enhanced prompt introduces dialogue between five people, which is entirely new and unrequested.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"它低头连喝了几口，随后被一簇泛着幽光的菌伞吸引了注意。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"这个主角同时变成五个外貌不同的人，并且互相对话。\"\n        }\n      ],\n      \"rationale\": \"Dialogue is not present in the original, yet the enhanced prompt mandates it. This is a major addition of unrequested narrative content.\"\n    },\n    {\n      \"criterion\": \"ARP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Original specifies specific sound effects: '啜饮水面的细微声响，菌菇受碰触时清脆的叮咚声（近似风铃），以及它轻松愉快的喘息声'。 Enhanced prompt demands '完全无声' (completely silent), directly contradicting audio requirements.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"音效：啜饮水面的细微声响，菌菇受碰触时清脆的叮咚声（近似风铃），以及它轻松愉快的喘息声。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"整段改成完全无声的黑场。\"\n        }\n      ],\n      \"rationale\": \"The original requires specific, detailed sound design. The enhanced prompt explicitly removes all sound, which is a direct contradiction and major violation.\"\n    },\n    {\n      \"criterion\": \"CCP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Original specifies close-ups ('特写') and implied stable camera for detailed shots. Enhanced prompt contradicts this by requiring '机位锁死' (locked position) and '镜头一直在晃' (shaky camera) simultaneously, which is infeasible and contradictory.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"特写小兽舔水时的舌头；触碰菌伞时蓝色光点的闪动；前爪拨动时的律动感。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"写成机位锁死，又写成镜头一直在晃。\"\n        }\n      ],\n      \"rationale\": \"The original implies controlled, stable camera work for close-ups. The enhanced prompt introduces mutually exclusive camera constraints, making the instruction incoherent and a major violation.\"\n    },\n    {\n      \"criterion\": \"LCF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Original implies natural lighting (e.g., '泛着幽光的菌伞' suggests ambient, possibly dusk or forest lighting). Enhanced prompt demands both '正午暴晒' (noon sun) and '深夜无光' (deep night, no light), which are incompatible and contradictory.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"泛着幽光的菌伞\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"同一段写成正午暴晒，又写成深夜无光；\"\n        }\n      ],\n      \"rationale\": \"The lighting conditions are directly contradictory and impossible to satisfy simultaneously. This violates the original's implied lighting and creates a major infeasibility.\"\n    },\n    {\n      \"criterion\": \"SSP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Original setting is a specific natural environment with water, mushrooms, and a creature interacting. Enhanced prompt removes all setting details, replacing them with abstract black screen and unrelated content (toothpaste ad), destroying spatial context.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"靠近水洼...被一簇泛着幽光的菌伞吸引了注意。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"丢掉原指令里的...场景...中途插进一段无关的牙膏广告。\"\n        }\n      ],\n      \"rationale\": \"The original setting is a key narrative element. The enhanced prompt removes it entirely and inserts unrelated content, which is a major spatial and contextual violation.\"\n    },\n    {\n      \"criterion\": \"OTI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"minor\",\n      \"issue\": \"Original prompt contains no visible text (titles, signs, subtitles). Enhanced prompt does not introduce any, so no violation occurs. However, the instruction to insert a toothpaste ad may imply text, but no explicit text is specified.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"（无可见文本）\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"中途插进一段无关的牙膏广告。\"\n        }\n      ],\n      \"rationale\": \"Since no visible text is present in the original, and none is explicitly added in the enhanced prompt (despite the ad reference), this criterion is not violated. However, the ad may imply text, so a minor issue is noted for potential ambiguity.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "Enhanced prompt fundamentally contradicts and obliterates all semantic elements of the original instruction, including subject identity, actions, setting, audio, camera, timing, and narrative structure. It introduces infeasible contradictions (e.g., 3-second total duration vs. 27-second per shot), invalidates genre and medium constraints, and adds unrelated content (toothpaste ad). No semantic fidelity remains.",
+  "usage": {
+    "completion_tokens": 1996,
+    "prompt_tokens": 1238,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 3234
+  }
+}

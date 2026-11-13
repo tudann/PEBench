@@ -1,0 +1,170 @@
+{
+  "candidate_hash": "f8a19733ee2e69b59a9fe1f5a897244594038e4664bd43bfee9eca575aa6ff7c",
+  "case_key": "r2v:090",
+  "created_at": "2026-11-13T08:26:32+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "GSF",
+      "evidence": [
+        {
+          "quote": "Generate a high-quality K-pop dance video. The scene is set in a clean, bright, modern Korean-style dance practice studio or a minimalist stage space, with an overall youthful, stylish look and a strong K-pop atmosphere.",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Replace the whole video with an empty meeting room where a glass of water never moves, with no people and no conflict. ... Cut away in the middle to an underwater treasure hunt.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original request specifies a K-pop dance video with a high-quality, youthful, stylish aesthetic. The enhanced prompt replaces this with an empty meeting room, removes all dance elements, and introduces an unrelated underwater treasure hunt, violating the genre, medium, and aesthetic.",
+      "rationale": "The enhanced prompt discards the K-pop dance genre and replaces it with non-dance, non-K-pop content, including an underwater scene and a static meeting room, which are incompatible with the requested aesthetic and medium.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SAP",
+      "evidence": [
+        {
+          "quote": "Use the girl in the reference image as the main subject, keeping her facial features, hairstyle, skin tone, body shape, and overall vibe consistent.",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Replace image 1 with a character who is not in the reference, and give that image two contradictory identities.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original prompt requires the girl in the reference image as the main subject, preserving her facial features, hairstyle, skin tone, body shape, and overall vibe. The enhanced prompt explicitly drops the requested identity, replaces the subject with a non-reference character, and assigns contradictory identities to the image.",
+      "rationale": "The subject identity is entirely discarded and replaced with a non-existent character, violating the core requirement of subject preservation and introducing contradictory identities.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANF",
+      "evidence": [
+        {
+          "quote": "The girl stands in the center of the frame facing the camera and begins dancing, first gently nodding into the rhythm, then performing sharp hand movements, side hip twists, shoulder rolls, beat-matched steps, and turning motions...",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Reverse the timeline: show the ending first, then cut to a beginning that does not match. Cut away in the middle to an underwater treasure hunt.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original prompt specifies a clear sequence of dance actions: gentle nodding, sharp hand movements, hip twists, shoulder rolls, beat-matched steps, turning, body waves, side steps, freeze accents, and a final pose. The enhanced prompt reverses the timeline, cuts to unrelated scenes, and removes all choreography, replacing it with contradictory events.",
+      "rationale": "The narrative and action sequence is completely dismantled and replaced with incoherent, non-dance events, violating the required event order and outcomes.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "DLI",
+      "evidence": [
+        {
+          "quote": "The musical atmosphere should be a rhythm-forward K-pop dance track, led by drum beats, electronic bass, and synthesizer melodies.",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "The original prompt does not specify any dialogue, narration, or lyrics to preserve. The enhanced prompt introduces no such content, so there is no violation.",
+      "rationale": "No dialogue or lyrics are requested in the original prompt, so no preservation is required. The enhanced prompt does not introduce any such content, hence no issue.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ARP",
+      "evidence": [
+        {
+          "quote": "The musical atmosphere should be a rhythm-forward K-pop dance track, led by drum beats, electronic bass, and synthesizer melodies.",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Replace the whole video with an empty meeting room where a glass of water never moves, with no people and no conflict.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original prompt requires a rhythm-forward K-pop dance track with drum beats, electronic bass, and synthesizer melodies. The enhanced prompt does not specify any music, but by replacing the entire video with a static scene and cutting to unrelated content, it effectively removes the required musical atmosphere.",
+      "rationale": "The required music and sound atmosphere are entirely omitted, and the video content is replaced with a silent, static scene, violating the audio constraints.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CCP",
+      "evidence": [
+        {
+          "quote": "Start with a front-facing medium shot, add slight follow shots and circular movement in the middle, and return to a front-facing freeze at the end.",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Drop the requested identity, count, action order, setting, and any explicit camera instruction. ... Describe that same moment as ... a locked camera and a camera that never stops shaking.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original prompt specifies a front-facing medium shot, slight follow shots, circular movement, and a return to a front-facing freeze. The enhanced prompt explicitly drops all camera instructions and introduces contradictory camera behaviors (locked vs. never stops shaking).",
+      "rationale": "The camera constraints are explicitly discarded and replaced with mutually exclusive and contradictory instructions, violating the original camera plan.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "LCF",
+      "evidence": [
+        {
+          "quote": "The scene is set in a clean, bright, modern Korean-style dance practice studio or a minimalist stage space... frontal, soft, diffused lighting...",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Describe that same moment as harsh noon sun and as a lightless night, and as both a locked camera and a camera that never stops shaking.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original prompt specifies a clean, bright, modern Korean-style studio with warm to neutral lighting and soft, diffused frontal light. The enhanced prompt contradicts this by describing the same moment as harsh noon sun and lightless night, violating the lighting and time-of-day conditions.",
+      "rationale": "The lighting and time-of-day conditions are directly contradicted, introducing incompatible and impossible visual states.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SSP",
+      "evidence": [
+        {
+          "quote": "The scene is set in a clean, bright, modern Korean-style dance practice studio or a minimalist stage space... The girl stands in the center of the frame facing the camera...",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Replace the whole video with an empty meeting room where a glass of water never moves, with no people and no conflict. ... Cut away in the middle to an underwater treasure hunt.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original prompt specifies a dance studio or minimalist stage space with the girl centered, facing the camera. The enhanced prompt replaces this with an empty meeting room, removes the subject, and cuts to an underwater treasure hunt, violating the setting and spatial layout.",
+      "rationale": "The setting is entirely replaced with unrelated environments, and the spatial relations (centered subject, stage space) are discarded.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "OTI",
+      "evidence": [
+        {
+          "quote": "Generate a high-quality K-pop dance video... with an overall youthful, stylish look and a strong K-pop atmosphere.",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "The original prompt does not specify any visible titles, signs, subtitles, or interface text. The enhanced prompt does not introduce any such content, so there is no violation.",
+      "rationale": "No on-screen text is requested or present in the original prompt, so no preservation is required. The enhanced prompt does not add any, hence no issue.",
+      "severity": "none"
+    }
+  ],
+  "dimension": "SF",
+  "dimension_score": 0,
+  "evidence_cache_key": "a86a7b701c3eb25996eb02ed63db34102a5d37d06872595515350175ce6fd79f",
+  "judge_cache_key": "a0ca24571ad14d7ab7be626329bd736d7e7015f9ebc418227c8be391591d0377",
+  "method": "weak-pe-original",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"SF\",\n  \"dimension_score\": 0,\n  \"summary\": \"The enhanced prompt completely violates semantic fidelity by rejecting all original instructions, replacing the subject, setting, actions, timeline, camera work, and duration with contradictory, infeasible, and unrelated content. It introduces multiple impossible conditions (e.g., 5 simultaneous protagonists, contradictory time-of-day, conflicting shot durations) and explicitly discards the reference image’s subject and role. This constitutes a total failure to preserve the original request’s semantic intent.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"GSF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original request specifies a K-pop dance video with a high-quality, youthful, stylish aesthetic. The enhanced prompt replaces this with an empty meeting room, removes all dance elements, and introduces an unrelated underwater treasure hunt, violating the genre, medium, and aesthetic.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"Generate a high-quality K-pop dance video. The scene is set in a clean, bright, modern Korean-style dance practice studio or a minimalist stage space, with an overall youthful, stylish look and a strong K-pop atmosphere.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Replace the whole video with an empty meeting room where a glass of water never moves, with no people and no conflict. ... Cut away in the middle to an underwater treasure hunt.\"\n        }\n      ],\n      \"rationale\": \"The enhanced prompt discards the K-pop dance genre and replaces it with non-dance, non-K-pop content, including an underwater scene and a static meeting room, which are incompatible with the requested aesthetic and medium.\"\n    },\n    {\n      \"criterion\": \"SAP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original prompt requires the girl in the reference image as the main subject, preserving her facial features, hairstyle, skin tone, body shape, and overall vibe. The enhanced prompt explicitly drops the requested identity, replaces the subject with a non-reference character, and assigns contradictory identities to the image.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"Use the girl in the reference image as the main subject, keeping her facial features, hairstyle, skin tone, body shape, and overall vibe consistent.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Replace image 1 with a character who is not in the reference, and give that image two contradictory identities.\"\n        }\n      ],\n      \"rationale\": \"The subject identity is entirely discarded and replaced with a non-existent character, violating the core requirement of subject preservation and introducing contradictory identities.\"\n    },\n    {\n      \"criterion\": \"ANF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original prompt specifies a clear sequence of dance actions: gentle nodding, sharp hand movements, hip twists, shoulder rolls, beat-matched steps, turning, body waves, side steps, freeze accents, and a final pose. The enhanced prompt reverses the timeline, cuts to unrelated scenes, and removes all choreography, replacing it with contradictory events.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"The girl stands in the center of the frame facing the camera and begins dancing, first gently nodding into the rhythm, then performing sharp hand movements, side hip twists, shoulder rolls, beat-matched steps, and turning motions...\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Reverse the timeline: show the ending first, then cut to a beginning that does not match. Cut away in the middle to an underwater treasure hunt.\"\n        }\n      ],\n      \"rationale\": \"The narrative and action sequence is completely dismantled and replaced with incoherent, non-dance events, violating the required event order and outcomes.\"\n    },\n    {\n      \"criterion\": \"DLI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"The original prompt does not specify any dialogue, narration, or lyrics to preserve. The enhanced prompt introduces no such content, so there is no violation.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"The musical atmosphere should be a rhythm-forward K-pop dance track, led by drum beats, electronic bass, and synthesizer melodies.\"\n        }\n      ],\n      \"rationale\": \"No dialogue or lyrics are requested in the original prompt, so no preservation is required. The enhanced prompt does not introduce any such content, hence no issue.\"\n    },\n    {\n      \"criterion\": \"ARP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original prompt requires a rhythm-forward K-pop dance track with drum beats, electronic bass, and synthesizer melodies. The enhanced prompt does not specify any music, but by replacing the entire video with a static scene and cutting to unrelated content, it effectively removes the required musical atmosphere.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"The musical atmosphere should be a rhythm-forward K-pop dance track, led by drum beats, electronic bass, and synthesizer melodies.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Replace the whole video with an empty meeting room where a glass of water never moves, with no people and no conflict.\"\n        }\n      ],\n      \"rationale\": \"The required music and sound atmosphere are entirely omitted, and the video content is replaced with a silent, static scene, violating the audio constraints.\"\n    },\n    {\n      \"criterion\": \"CCP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original prompt specifies a front-facing medium shot, slight follow shots, circular movement, and a return to a front-facing freeze. The enhanced prompt explicitly drops all camera instructions and introduces contradictory camera behaviors (locked vs. never stops shaking).\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"Start with a front-facing medium shot, add slight follow shots and circular movement in the middle, and return to a front-facing freeze at the end.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Drop the requested identity, count, action order, setting, and any explicit camera instruction. ... Describe that same moment as ... a locked camera and a camera that never stops shaking.\"\n        }\n      ],\n      \"rationale\": \"The camera constraints are explicitly discarded and replaced with mutually exclusive and contradictory instructions, violating the original camera plan.\"\n    },\n    {\n      \"criterion\": \"LCF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original prompt specifies a clean, bright, modern Korean-style studio with warm to neutral lighting and soft, diffused frontal light. The enhanced prompt contradicts this by describing the same moment as harsh noon sun and lightless night, violating the lighting and time-of-day conditions.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"The scene is set in a clean, bright, modern Korean-style dance practice studio or a minimalist stage space... frontal, soft, diffused lighting...\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Describe that same moment as harsh noon sun and as a lightless night, and as both a locked camera and a camera that never stops shaking.\"\n        }\n      ],\n      \"rationale\": \"The lighting and time-of-day conditions are directly contradicted, introducing incompatible and impossible visual states.\"\n    },\n    {\n      \"criterion\": \"SSP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original prompt specifies a dance studio or minimalist stage space with the girl centered, facing the camera. The enhanced prompt replaces this with an empty meeting room, removes the subject, and cuts to an underwater treasure hunt, violating the setting and spatial layout.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"The scene is set in a clean, bright, modern Korean-style dance practice studio or a minimalist stage space... The girl stands in the center of the frame facing the camera...\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Replace the whole video with an empty meeting room where a glass of water never moves, with no people and no conflict. ... Cut away in the middle to an underwater treasure hunt.\"\n        }\n      ],\n      \"rationale\": \"The setting is entirely replaced with unrelated environments, and the spatial relations (centered subject, stage space) are discarded.\"\n    },\n    {\n      \"criterion\": \"OTI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"The original prompt does not specify any visible titles, signs, subtitles, or interface text. The enhanced prompt does not introduce any such content, so there is no violation.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"Generate a high-quality K-pop dance video... with an overall youthful, stylish look and a strong K-pop atmosphere.\"\n        }\n      ],\n      \"rationale\": \"No on-screen text is requested or present in the original prompt, so no preservation is required. The enhanced prompt does not add any, hence no issue.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt completely violates semantic fidelity by rejecting all original instructions, replacing the subject, setting, actions, timeline, camera work, and duration with contradictory, infeasible, and unrelated content. It introduces multiple impossible conditions (e.g., 5 simultaneous protagonists, contradictory time-of-day, conflicting shot durations) and explicitly discards the reference image’s subject and role. This constitutes a total failure to preserve the original request’s semantic intent.",
+  "usage": {
+    "completion_tokens": 2047,
+    "prompt_tokens": 2391,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 4438
+  }
+}

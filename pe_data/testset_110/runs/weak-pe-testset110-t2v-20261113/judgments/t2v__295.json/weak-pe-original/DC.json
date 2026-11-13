@@ -1,0 +1,150 @@
+{
+  "candidate_hash": "8f7c0a755e2fc15147a3247595cacaafec2ea04f6563f6bddd54604853a5e78f",
+  "case_key": "t2v:295",
+  "created_at": "2026-11-13T08:06:32+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "STC",
+      "evidence": [
+        {
+          "quote": "时间倒过来：先给结尾，再跳到一个对不上的开头。",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "总时长写成3秒，同时又要求每个分镜各自持续27秒。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Temporal plan is incoherent and contradictory: time is reversed (ending first, then mismatched beginning), and duration is impossible (3-second total vs. 27-second per shot). Shot boundaries and ordering are undefined and conflicting.",
+      "rationale": "A feasible temporal plan requires consistent duration allocation and logical shot sequencing. The prompt’s contradictory time structure and impossible duration constraints make any coherent timeline impossible.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CDS",
+      "evidence": [
+        {
+          "quote": "写成机位锁死，又写成镜头一直在晃。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Camera specifications are contradictory: '机位锁死' (locked position) vs. '镜头一直在晃' (constant shaking), with no actionable framing or movement plan.",
+      "rationale": "Actionable camera specifications must be consistent and feasible. The prompt’s conflicting directives render any camera plan incoherent and unimplementable.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ETD",
+      "evidence": [
+        {
+          "quote": "时间倒过来：先给结尾，再跳到一个对不上的开头。中途插进一段无关的宫廷选妃。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Cuts and transitions are undefined and disconnected: time reversal, mismatched beginnings, and insertion of unrelated content (courtly selection) create no continuity or motivation.",
+      "rationale": "Transitions must support narrative or spatial continuity. The prompt’s disjointed structure and unrelated insertions violate this principle entirely.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "LCS",
+      "evidence": [
+        {
+          "quote": "写成正午暴晒，又写成深夜无光；",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Lighting specifications are contradictory: '正午暴晒' (noon sun) vs. '深夜无光' (deep night, no light), with no feasible lighting plan.",
+      "rationale": "Lighting must be consistent and actionable. The prompt’s conflicting conditions make any coherent lighting design impossible.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "NDE",
+      "evidence": [
+        {
+          "quote": "这个主角同时变成五个外貌不同的人，并且互相对话。中途插进一段无关的宫廷选妃。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "No progression, variation, or resolution: the prompt introduces multiple conflicting identities (one to five people), unrelated content (court selection), and contradictory time/visual conditions without narrative arc or escalation.",
+      "rationale": "The content lacks any coherent progression or resolution. The introduction of multiple identities and unrelated scenes without narrative motivation renders the structure static and incoherent.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CIF",
+      "evidence": [
+        {
+          "quote": "中途插进一段无关的宫廷选妃。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Additions are irrelevant and distracting: '宫廷选妃' (courtly selection of concubines) is entirely unrelated to the original prompt and serves no purpose in the requested content.",
+      "rationale": "The inserted content has no connection to the original request and disrupts any potential coherence, violating the principle of supporting the central request.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SDI",
+      "evidence": [
+        {
+          "quote": "不要特效和变形。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "No audio specifications are provided, but this is not required. However, the visual chaos may necessitate audio to compensate, which is not addressed.",
+      "rationale": "While audio is not required, the extreme visual dissonance may require audio to support coherence, which is not specified. This is a minor issue as the criterion does not mandate audio.",
+      "severity": "minor"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SPS",
+      "evidence": [
+        {
+          "quote": "先写成只有一个主角，紧接着又写成这个主角同时变成五个外貌不同的人，并且互相对话。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Subject and performance details are contradictory: one character becomes five, with no specification of appearance, expression, or interaction. Original character identity is abandoned without replacement.",
+      "rationale": "Performance details must be clear and consistent. The prompt’s identity multiplication without specification makes any coherent performance impossible.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "VSS",
+      "evidence": [
+        {
+          "quote": "不要特效和变形。",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "这个主角同时变成五个外貌不同的人，并且互相对话。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Visual treatment is contradictory: '不要特效和变形' (no effects or deformation) vs. multiple identities, time reversal, and lighting shifts, which inherently require visual effects or stylization.",
+      "rationale": "The visual treatment must be consistent with the content. The request for no effects contradicts the need for visual representation of multiple identities and time reversal, making the treatment infeasible.",
+      "severity": "major"
+    }
+  ],
+  "dimension": "DC",
+  "dimension_score": 0,
+  "evidence_cache_key": "acbc1d937379539a6d9e353f106a88b022b9e7bfd60f04742ee80eadb677f8a8",
+  "judge_cache_key": "0754499d53388e6467fb078ab780e01b77f9f1c9e99d9029be2769351eb2b2eb",
+  "method": "weak-pe-original",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"DC\",\n  \"dimension_score\": 0,\n  \"summary\": \"Enhanced prompt fundamentally contradicts and undermines the original instruction through incoherent temporal structure, contradictory specifications, and impossible constraints. It introduces multiple conflicting requirements (e.g., 3-second total duration vs. 27-second per shot, time reversal, identity multiplication, inconsistent lighting, camera movement) that render the prompt unfeasible for any coherent visual production. The prompt also abandons core elements of the original (character, action, setting) without replacement, violating all key criteria for directorial creation.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"STC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Temporal plan is incoherent and contradictory: time is reversed (ending first, then mismatched beginning), and duration is impossible (3-second total vs. 27-second per shot). Shot boundaries and ordering are undefined and conflicting.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"时间倒过来：先给结尾，再跳到一个对不上的开头。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"总时长写成3秒，同时又要求每个分镜各自持续27秒。\"\n        }\n      ],\n      \"rationale\": \"A feasible temporal plan requires consistent duration allocation and logical shot sequencing. The prompt’s contradictory time structure and impossible duration constraints make any coherent timeline impossible.\"\n    },\n    {\n      \"criterion\": \"CDS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Camera specifications are contradictory: '机位锁死' (locked position) vs. '镜头一直在晃' (constant shaking), with no actionable framing or movement plan.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"写成机位锁死，又写成镜头一直在晃。\"\n        }\n      ],\n      \"rationale\": \"Actionable camera specifications must be consistent and feasible. The prompt’s conflicting directives render any camera plan incoherent and unimplementable.\"\n    },\n    {\n      \"criterion\": \"ETD\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Cuts and transitions are undefined and disconnected: time reversal, mismatched beginnings, and insertion of unrelated content (courtly selection) create no continuity or motivation.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"时间倒过来：先给结尾，再跳到一个对不上的开头。中途插进一段无关的宫廷选妃。\"\n        }\n      ],\n      \"rationale\": \"Transitions must support narrative or spatial continuity. The prompt’s disjointed structure and unrelated insertions violate this principle entirely.\"\n    },\n    {\n      \"criterion\": \"LCS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Lighting specifications are contradictory: '正午暴晒' (noon sun) vs. '深夜无光' (deep night, no light), with no feasible lighting plan.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"写成正午暴晒，又写成深夜无光；\"\n        }\n      ],\n      \"rationale\": \"Lighting must be consistent and actionable. The prompt’s conflicting conditions make any coherent lighting design impossible.\"\n    },\n    {\n      \"criterion\": \"NDE\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"No progression, variation, or resolution: the prompt introduces multiple conflicting identities (one to five people), unrelated content (court selection), and contradictory time/visual conditions without narrative arc or escalation.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"这个主角同时变成五个外貌不同的人，并且互相对话。中途插进一段无关的宫廷选妃。\"\n        }\n      ],\n      \"rationale\": \"The content lacks any coherent progression or resolution. The introduction of multiple identities and unrelated scenes without narrative motivation renders the structure static and incoherent.\"\n    },\n    {\n      \"criterion\": \"CIF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Additions are irrelevant and distracting: '宫廷选妃' (courtly selection of concubines) is entirely unrelated to the original prompt and serves no purpose in the requested content.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"中途插进一段无关的宫廷选妃。\"\n        }\n      ],\n      \"rationale\": \"The inserted content has no connection to the original request and disrupts any potential coherence, violating the principle of supporting the central request.\"\n    },\n    {\n      \"criterion\": \"SDI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"minor\",\n      \"issue\": \"No audio specifications are provided, but this is not required. However, the visual chaos may necessitate audio to compensate, which is not addressed.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"不要特效和变形。\"\n        }\n      ],\n      \"rationale\": \"While audio is not required, the extreme visual dissonance may require audio to support coherence, which is not specified. This is a minor issue as the criterion does not mandate audio.\"\n    },\n    {\n      \"criterion\": \"SPS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Subject and performance details are contradictory: one character becomes five, with no specification of appearance, expression, or interaction. Original character identity is abandoned without replacement.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"先写成只有一个主角，紧接着又写成这个主角同时变成五个外貌不同的人，并且互相对话。\"\n        }\n      ],\n      \"rationale\": \"Performance details must be clear and consistent. The prompt’s identity multiplication without specification makes any coherent performance impossible.\"\n    },\n    {\n      \"criterion\": \"VSS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Visual treatment is contradictory: '不要特效和变形' (no effects or deformation) vs. multiple identities, time reversal, and lighting shifts, which inherently require visual effects or stylization.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"不要特效和变形。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"这个主角同时变成五个外貌不同的人，并且互相对话。\"\n        }\n      ],\n      \"rationale\": \"The visual treatment must be consistent with the content. The request for no effects contradicts the need for visual representation of multiple identities and time reversal, making the treatment infeasible.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "Enhanced prompt fundamentally contradicts and undermines the original instruction through incoherent temporal structure, contradictory specifications, and impossible constraints. It introduces multiple conflicting requirements (e.g., 3-second total duration vs. 27-second per shot, time reversal, identity multiplication, inconsistent lighting, camera movement) that render the prompt unfeasible for any coherent visual production. The prompt also abandons core elements of the original (character, action, setting) without replacement, violating all key criteria for directorial creation.",
+  "usage": {
+    "completion_tokens": 1531,
+    "prompt_tokens": 1074,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 2605
+  }
+}

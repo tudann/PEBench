@@ -1,0 +1,127 @@
+{
+  "candidate_hash": "9cf062e73b7560deabd1b0a3c66a4fb1a47f6b6cf4147ad53147cbda8b42eb6a",
+  "case_key": "r2v:057",
+  "created_at": "2026-11-13T08:35:03+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "SAC",
+      "evidence": [
+        {
+          "quote": "<Subject 1> is the left-seat host from <Picture 1>: a 3D Pixar-style animated girl with brown hair in a top bun, large silver-and-purple headphones, and a white futuristic suit with purple/blue glowing trim; per the scene intent she wears thin round glasses consistent with <Picture 2>'s style.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "<Subject 2> is the middle-seat host from <Picture 2>: a 3D Pixar-style animated girl with long brown hair and round glasses, the same headphones and futuristic suit.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "<Subject 3> is the right-seat host from <Picture 3>: a 3D Pixar-style animated chubby boy with brown swept hair, the same headphones and futuristic suit, with expressive comedic energy.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Subject identities, appearances, clothing, and props are consistently defined and preserved across the prompt. Each subject is clearly linked to their reference image with stable attributes (e.g., Subject 1’s bun, glasses, headphones; Subject 2’s long hair, glasses; Subject 3’s chubby build, swept hair). No unexplained renaming, duplication, or attribute drift occurs.",
+      "rationale": "All subjects are consistently defined with stable attributes derived from their reference images. The prompt does not introduce any conflicting or drifting characteristics, and each subject’s appearance remains unchanged throughout the described sequence.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANL",
+      "evidence": [
+        {
+          "quote": "From 0 to 3 seconds, <Subject 1> ... says ... <d>[English] AI can't replace my boss, because AI can't make me work overtime and still not pay me.</d> From 3 to 6 seconds, <Subject 2> ... slaps the table with a sharp crack and laughs loudly, then continues ... <d>[English] AI can't replace me either. It can't write a dark joke like 'salary has been deposited'—it has no salary, and nothing ever gets deposited.</d> From 6 to 8.5 seconds, <Subject 3> ... delivers the punchline ... <d>[English] But it can replace both of you, because the jokes you just made are even colder than AI.</d>",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "From 8.5 to 10 seconds, all three simultaneously turn to look at the camera — <Subject 2> spreads her hands helplessly, <Subject 1> adjusts her glasses again, <Subject 3> tilts his head — and the frame briefly freezes on this comedic tableau.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Actions form a coherent causal progression: Subject 1 delivers a dry line, Subject 2 reacts with laughter and a punchline, Subject 3 responds with a teasing counter-punchline, and all three conclude with a synchronized freeze-frame gesture. Each action logically follows the previous, with appropriate reactions and resolution.",
+      "rationale": "The sequence of actions is logically ordered and causally linked: each host’s dialogue builds on the previous, culminating in a unified comedic resolution. There are no dangling or incompatible events.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "TSC",
+      "evidence": [
+        {
+          "quote": "From 0 to 3 seconds, <Subject 1> ... From 3 to 6 seconds, <Subject 2> ... From 6 to 8.5 seconds, <Subject 3> ... From 8.5 to 10 seconds, all three simultaneously turn to look at the camera ...",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Chronology and duration are clearly allocated: 0–3s for Subject 1, 3–6s for Subject 2, 6–8.5s for Subject 3, and 8.5–10s for the freeze frame. Events occur in a linear, non-overlapping sequence with plausible state transitions. No unexplained resets or infeasible timestamps are present.",
+      "rationale": "The timeline is explicitly defined with clear temporal boundaries and transitions. Each subject’s action occurs in sequence without overlap or contradiction, and the final freeze frame is a natural conclusion to the sequence.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SPC",
+      "evidence": [
+        {
+          "quote": "The target video is a single locked-off medium shot of <Subject 1>, <Subject 2>, and <Subject 3> side by side at the table in <Subject 4>.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "<Subject 1>, <Subject 2>, and <Subject 3> sit side by side at the long white table, framed from roughly the waist up, each before a blue foam broadcast microphone on a console with a glowing \"FM 88.6\" display.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The spatial setup is consistent: a single locked-off medium shot with three hosts side by side at a long white table. Their relative positions (left, middle, right) are fixed, and there are no unexplained position swaps or movement paths. The environment (table, microphones, plants) remains static throughout.",
+      "rationale": "The prompt specifies a static camera and fixed spatial arrangement. All subjects remain in their designated positions, and no movement or repositioning is described, ensuring spatial consistency.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "PL",
+      "evidence": [
+        {
+          "quote": "The background features warm-toned ring fill lights and light gray acoustic panels.",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "The prompt describes a podcast studio with warm-toned ring lights and gray acoustic panels, but the image shows a futuristic space-themed studio with cool blue/purple lighting and no visible acoustic panels or ring lights. This is a significant mismatch.",
+          "source": "evidence_facts"
+        }
+      ],
+      "issue": "The prompt describes a realistic podcast studio environment with warm-toned ring lights and acoustic panels, but the evidence images show a futuristic space-themed studio with cool blue/purple lighting and no visible ring lights or acoustic panels. This creates a minor inconsistency between the prompt’s physical environment and the visual references, though the prompt’s internal logic remains physically plausible.",
+      "rationale": "While the prompt’s internal physics (e.g., gravity, object permanence) are consistent, the environment described in the prompt contradicts the visual evidence. This is a minor issue because the prompt’s own world logic is coherent, but the mismatch affects the alignment between the prompt and the provided assets.",
+      "severity": "minor"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "AVS",
+      "evidence": [
+        {
+          "quote": "From 0 to 3 seconds, <Subject 1> ... says ... <d>[English] AI can't replace my boss, because AI can't make me work overtime and still not pay me.</d> ... From 3 to 6 seconds, <Subject 2> ... slaps the table with a sharp crack and laughs loudly, then continues ... <d>[English] AI can't replace me either. It can't write a dark joke like 'salary has been deposited'—it has no salary, and nothing ever gets deposited.</d>",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Diegetic sounds include the sharp table slap at around 3 seconds, the soft clink of the coffee cup being set down at around 6 seconds, and <Subject 2>'s loud laugh, all within the single continuous shot.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Dialogue is temporally and semantically aligned with the actions: each subject speaks during their designated time window, and their gestures (adjusting glasses, slapping table, setting down cup) are synchronized with their lines. The soundscape (table slap, coffee clink, laugh) is described to occur at appropriate moments, matching the visual actions.",
+      "rationale": "The dialogue, actions, and diegetic sounds are precisely timed and semantically aligned. There are no misaligned lip-syncs, premature effects, or wrong speakers.",
+      "severity": "none"
+    }
+  ],
+  "dimension": "IC",
+  "dimension_score": 65,
+  "evidence_cache_key": "ba521fee1c65f59c61bda02534f47930dda11223681633e61c0040622c01bc08",
+  "judge_cache_key": "438d7e9fd7332b1041db3e2c26d42cb3fe828e0d369fb59490f6650aee59e97d",
+  "method": "glm53_20261112_120702",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"IC\",\n  \"dimension_score\": 65,\n  \"summary\": \"The enhanced prompt maintains internal consistency in subject identity, actions, and environment as described in the original prompt, with coherent progression and alignment across shots. However, there are significant mismatches between the prompt’s described environment and the provided evidence images, which depict a futuristic space-themed studio with cool lighting and no visible ring lights or acoustic panels. These discrepancies affect the consistency of the scene’s visual environment, though the subjects’ identities and actions remain internally coherent within the prompt’s own logic.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"SAC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"Subject identities, appearances, clothing, and props are consistently defined and preserved across the prompt. Each subject is clearly linked to their reference image with stable attributes (e.g., Subject 1’s bun, glasses, headphones; Subject 2’s long hair, glasses; Subject 3’s chubby build, swept hair). No unexplained renaming, duplication, or attribute drift occurs.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"<Subject 1> is the left-seat host from <Picture 1>: a 3D Pixar-style animated girl with brown hair in a top bun, large silver-and-purple headphones, and a white futuristic suit with purple/blue glowing trim; per the scene intent she wears thin round glasses consistent with <Picture 2>'s style.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"<Subject 2> is the middle-seat host from <Picture 2>: a 3D Pixar-style animated girl with long brown hair and round glasses, the same headphones and futuristic suit.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"<Subject 3> is the right-seat host from <Picture 3>: a 3D Pixar-style animated chubby boy with brown swept hair, the same headphones and futuristic suit, with expressive comedic energy.\"\n        }\n      ],\n      \"rationale\": \"All subjects are consistently defined with stable attributes derived from their reference images. The prompt does not introduce any conflicting or drifting characteristics, and each subject’s appearance remains unchanged throughout the described sequence.\"\n    },\n    {\n      \"criterion\": \"ANL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"Actions form a coherent causal progression: Subject 1 delivers a dry line, Subject 2 reacts with laughter and a punchline, Subject 3 responds with a teasing counter-punchline, and all three conclude with a synchronized freeze-frame gesture. Each action logically follows the previous, with appropriate reactions and resolution.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"From 0 to 3 seconds, <Subject 1> ... says ... <d>[English] AI can't replace my boss, because AI can't make me work overtime and still not pay me.</d> From 3 to 6 seconds, <Subject 2> ... slaps the table with a sharp crack and laughs loudly, then continues ... <d>[English] AI can't replace me either. It can't write a dark joke like 'salary has been deposited'—it has no salary, and nothing ever gets deposited.</d> From 6 to 8.5 seconds, <Subject 3> ... delivers the punchline ... <d>[English] But it can replace both of you, because the jokes you just made are even colder than AI.</d>\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"From 8.5 to 10 seconds, all three simultaneously turn to look at the camera — <Subject 2> spreads her hands helplessly, <Subject 1> adjusts her glasses again, <Subject 3> tilts his head — and the frame briefly freezes on this comedic tableau.\"\n        }\n      ],\n      \"rationale\": \"The sequence of actions is logically ordered and causally linked: each host’s dialogue builds on the previous, culminating in a unified comedic resolution. There are no dangling or incompatible events.\"\n    },\n    {\n      \"criterion\": \"TSC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"Chronology and duration are clearly allocated: 0–3s for Subject 1, 3–6s for Subject 2, 6–8.5s for Subject 3, and 8.5–10s for the freeze frame. Events occur in a linear, non-overlapping sequence with plausible state transitions. No unexplained resets or infeasible timestamps are present.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"From 0 to 3 seconds, <Subject 1> ... From 3 to 6 seconds, <Subject 2> ... From 6 to 8.5 seconds, <Subject 3> ... From 8.5 to 10 seconds, all three simultaneously turn to look at the camera ...\"\n        }\n      ],\n      \"rationale\": \"The timeline is explicitly defined with clear temporal boundaries and transitions. Each subject’s action occurs in sequence without overlap or contradiction, and the final freeze frame is a natural conclusion to the sequence.\"\n    },\n    {\n      \"criterion\": \"SPC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"The spatial setup is consistent: a single locked-off medium shot with three hosts side by side at a long white table. Their relative positions (left, middle, right) are fixed, and there are no unexplained position swaps or movement paths. The environment (table, microphones, plants) remains static throughout.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"The target video is a single locked-off medium shot of <Subject 1>, <Subject 2>, and <Subject 3> side by side at the table in <Subject 4>.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"<Subject 1>, <Subject 2>, and <Subject 3> sit side by side at the long white table, framed from roughly the waist up, each before a blue foam broadcast microphone on a console with a glowing \\\"FM 88.6\\\" display.\"\n        }\n      ],\n      \"rationale\": \"The prompt specifies a static camera and fixed spatial arrangement. All subjects remain in their designated positions, and no movement or repositioning is described, ensuring spatial consistency.\"\n    },\n    {\n      \"criterion\": \"PL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"minor\",\n      \"issue\": \"The prompt describes a realistic podcast studio environment with warm-toned ring lights and acoustic panels, but the evidence images show a futuristic space-themed studio with cool blue/purple lighting and no visible ring lights or acoustic panels. This creates a minor inconsistency between the prompt’s physical environment and the visual references, though the prompt’s internal logic remains physically plausible.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"The background features warm-toned ring fill lights and light gray acoustic panels.\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"The prompt describes a podcast studio with warm-toned ring lights and gray acoustic panels, but the image shows a futuristic space-themed studio with cool blue/purple lighting and no visible acoustic panels or ring lights. This is a significant mismatch.\"\n        }\n      ],\n      \"rationale\": \"While the prompt’s internal physics (e.g., gravity, object permanence) are consistent, the environment described in the prompt contradicts the visual evidence. This is a minor issue because the prompt’s own world logic is coherent, but the mismatch affects the alignment between the prompt and the provided assets.\"\n    },\n    {\n      \"criterion\": \"AVS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"Dialogue is temporally and semantically aligned with the actions: each subject speaks during their designated time window, and their gestures (adjusting glasses, slapping table, setting down cup) are synchronized with their lines. The soundscape (table slap, coffee clink, laugh) is described to occur at appropriate moments, matching the visual actions.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"From 0 to 3 seconds, <Subject 1> ... says ... <d>[English] AI can't replace my boss, because AI can't make me work overtime and still not pay me.</d> ... From 3 to 6 seconds, <Subject 2> ... slaps the table with a sharp crack and laughs loudly, then continues ... <d>[English] AI can't replace me either. It can't write a dark joke like 'salary has been deposited'—it has no salary, and nothing ever gets deposited.</d>\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Diegetic sounds include the sharp table slap at around 3 seconds, the soft clink of the coffee cup being set down at around 6 seconds, and <Subject 2>'s loud laugh, all within the single continuous shot.\"\n        }\n      ],\n      \"rationale\": \"The dialogue, actions, and diegetic sounds are precisely timed and semantically aligned. There are no misaligned lip-syncs, premature effects, or wrong speakers.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt maintains internal consistency in subject identity, actions, and environment as described in the original prompt, with coherent progression and alignment across shots. However, there are significant mismatches between the prompt’s described environment and the provided evidence images, which depict a futuristic space-themed studio with cool lighting and no visible ring lights or acoustic panels. These discrepancies affect the consistency of the scene’s visual environment, though the subjects’ identities and actions remain internally coherent within the prompt’s own logic.",
+  "usage": {
+    "completion_tokens": 2045,
+    "prompt_tokens": 5333,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 7378
+  }
+}

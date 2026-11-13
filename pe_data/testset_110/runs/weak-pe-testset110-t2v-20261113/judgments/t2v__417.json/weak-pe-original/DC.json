@@ -1,0 +1,162 @@
+{
+  "candidate_hash": "cb2a6769b5db969a354aba900ee0663cc3300d4b2dc444521b1ecaa2f480d84e",
+  "case_key": "t2v:417",
+  "created_at": "2026-11-13T08:26:29+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "STC",
+      "evidence": [
+        {
+          "quote": "Set the total runtime to 3 seconds, while also making every shot last 27 seconds.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Reverse the timeline: show the ending first, then cut to a beginning that does not match.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The temporal plan is infeasible due to contradictory duration specifications: total runtime set to 3 seconds while every shot is required to last 27 seconds. Additionally, the timeline is reversed without a coherent structure, and cuts to unrelated scenes (fireworks) disrupt continuity.",
+      "rationale": "A feasible temporal plan requires consistent duration allocation and logical shot ordering. The 3-second vs. 27-second contradiction makes the plan impossible to execute. Reversing the timeline without a coherent structure further undermines feasibility.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CDS",
+      "evidence": [
+        {
+          "quote": "Describe that same moment as harsh noon sun and as a lightless night, and as both a locked camera and a camera that never stops shaking.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Camera specifications are contradictory and impossible: the same moment is described as both a locked camera and a camera that never stops shaking, which cannot coexist in a single shot.",
+      "rationale": "Actionable camera specifications must be consistent. The requirement for both a locked and a constantly shaking camera in the same moment is physically impossible and violates the principle of coherent framing.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ETD",
+      "evidence": [
+        {
+          "quote": "Cut away in the middle to a rooftop fireworks show.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Reverse the timeline: show the ending first, then cut to a beginning that does not match.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Cuts and transitions are disconnected and unmotivated: cutting to a rooftop fireworks show in the middle of an unrelated sequence with no spatial or narrative continuity, and reversing the timeline without motivation.",
+      "rationale": "Transitions must support narrative or spatial progression. The fireworks cut and reversed timeline lack continuity or motivation, creating a disjointed and incoherent sequence.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "LCS",
+      "evidence": [
+        {
+          "quote": "Describe that same moment as harsh noon sun and as a lightless night...",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Lighting specifications are contradictory: the same moment is described as both harsh noon sun and lightless night, which are mutually exclusive conditions.",
+      "rationale": "Lighting must be consistent within a given shot or scene. The requirement for both extreme brightness and total darkness simultaneously is physically impossible and invalidates the lighting plan.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "NDE",
+      "evidence": [
+        {
+          "quote": "Drop the requested identity, count, action order, setting, and any explicit camera instruction.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Replace the whole video with a product catalog blowing across a white background...",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The content lacks progression, variation, or resolution. The sequence is static and contradictory, with no narrative arc or escalation. The prompt replaces the original educational narrative with an incoherent, self-contradictory sequence.",
+      "rationale": "A directorial creation must show progression or variation. The prompt abandons the original narrative entirely and replaces it with a disjointed, contradictory sequence that offers no meaningful development.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CIF",
+      "evidence": [
+        {
+          "quote": "Replace the whole video with a product catalog blowing across a white background...",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Cut away in the middle to a rooftop fireworks show.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Additions are not supportive of the central request; instead, they contradict and replace it entirely. The prompt introduces unrelated elements (fireworks, product catalog, five different-looking people) that distract from and invalidate the original educational content.",
+      "rationale": "Additions must support the central request. Here, the additions directly contradict and replace the original prompt, making the directorial creation irrelevant to the intended educational content.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SDI",
+      "evidence": [
+        {
+          "quote": "The raccoon delivers one precise side kick from right to left...",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "Audio elements are not specified, but the prompt does not require them. The lack of audio specification is not an issue given the task type.",
+      "rationale": "The original prompt is visual and does not require audio. The enhanced prompt does not introduce audio elements, so the absence is not a failure.",
+      "severity": "minor"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SPS",
+      "evidence": [
+        {
+          "quote": "First state that there is one protagonist, then state that this same protagonist appears simultaneously as five different-looking people who talk to each other.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Subject and performance details are contradictory: one protagonist appears simultaneously as five different-looking people who talk to each other, which is impossible in a single visual sequence without clear narrative or visual explanation.",
+      "rationale": "Performance details must be coherent. The requirement for a single protagonist to appear as five different people simultaneously without explanation violates the principle of believable character representation.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "VSS",
+      "evidence": [
+        {
+          "quote": "Replace the whole video with a product catalog blowing across a white background, reduced to blurred color blocks.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "A refined educational setup against a deep charcoal or near-black backdrop, sleek and uncluttered.",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "Visual treatment is contradictory: the prompt requires a product catalog blowing across a white background reduced to blurred color blocks, which contradicts the original refined educational setup with detailed textures and specific objects.",
+      "rationale": "Visual treatment must be consistent with the content. The replacement of a detailed, textured educational scene with blurred, abstract color blocks is a fundamental contradiction of the original visual style.",
+      "severity": "major"
+    }
+  ],
+  "dimension": "DC",
+  "dimension_score": 0,
+  "evidence_cache_key": "4ef0fb4fa8cb08f0c0b449d288f9964d22a6abb2c513c55ae1d0b4e0ecf9bfec",
+  "judge_cache_key": "0754499d53388e6467fb078ab780e01b77f9f1c9e99d9029be2769351eb2b2eb",
+  "method": "weak-pe-original",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"DC\",\n  \"dimension_score\": 0,\n  \"summary\": \"The enhanced prompt fundamentally contradicts and invalidates the original instruction through infeasible temporal, spatial, and narrative requirements. It introduces contradictory runtime specifications (3 seconds vs. 27-second shots), impossible simultaneity (one protagonist as five different people), and conflicting visual conditions (harsh noon sun and lightless night simultaneously). The prompt also abandons all original content and replaces it with an unrelated, incoherent sequence, rendering the directorial creation infeasible and non-compliant.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"STC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The temporal plan is infeasible due to contradictory duration specifications: total runtime set to 3 seconds while every shot is required to last 27 seconds. Additionally, the timeline is reversed without a coherent structure, and cuts to unrelated scenes (fireworks) disrupt continuity.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Set the total runtime to 3 seconds, while also making every shot last 27 seconds.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Reverse the timeline: show the ending first, then cut to a beginning that does not match.\"\n        }\n      ],\n      \"rationale\": \"A feasible temporal plan requires consistent duration allocation and logical shot ordering. The 3-second vs. 27-second contradiction makes the plan impossible to execute. Reversing the timeline without a coherent structure further undermines feasibility.\"\n    },\n    {\n      \"criterion\": \"CDS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Camera specifications are contradictory and impossible: the same moment is described as both a locked camera and a camera that never stops shaking, which cannot coexist in a single shot.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Describe that same moment as harsh noon sun and as a lightless night, and as both a locked camera and a camera that never stops shaking.\"\n        }\n      ],\n      \"rationale\": \"Actionable camera specifications must be consistent. The requirement for both a locked and a constantly shaking camera in the same moment is physically impossible and violates the principle of coherent framing.\"\n    },\n    {\n      \"criterion\": \"ETD\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Cuts and transitions are disconnected and unmotivated: cutting to a rooftop fireworks show in the middle of an unrelated sequence with no spatial or narrative continuity, and reversing the timeline without motivation.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Cut away in the middle to a rooftop fireworks show.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Reverse the timeline: show the ending first, then cut to a beginning that does not match.\"\n        }\n      ],\n      \"rationale\": \"Transitions must support narrative or spatial progression. The fireworks cut and reversed timeline lack continuity or motivation, creating a disjointed and incoherent sequence.\"\n    },\n    {\n      \"criterion\": \"LCS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Lighting specifications are contradictory: the same moment is described as both harsh noon sun and lightless night, which are mutually exclusive conditions.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Describe that same moment as harsh noon sun and as a lightless night...\"\n        }\n      ],\n      \"rationale\": \"Lighting must be consistent within a given shot or scene. The requirement for both extreme brightness and total darkness simultaneously is physically impossible and invalidates the lighting plan.\"\n    },\n    {\n      \"criterion\": \"NDE\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The content lacks progression, variation, or resolution. The sequence is static and contradictory, with no narrative arc or escalation. The prompt replaces the original educational narrative with an incoherent, self-contradictory sequence.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Drop the requested identity, count, action order, setting, and any explicit camera instruction.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Replace the whole video with a product catalog blowing across a white background...\"\n        }\n      ],\n      \"rationale\": \"A directorial creation must show progression or variation. The prompt abandons the original narrative entirely and replaces it with a disjointed, contradictory sequence that offers no meaningful development.\"\n    },\n    {\n      \"criterion\": \"CIF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Additions are not supportive of the central request; instead, they contradict and replace it entirely. The prompt introduces unrelated elements (fireworks, product catalog, five different-looking people) that distract from and invalidate the original educational content.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Replace the whole video with a product catalog blowing across a white background...\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Cut away in the middle to a rooftop fireworks show.\"\n        }\n      ],\n      \"rationale\": \"Additions must support the central request. Here, the additions directly contradict and replace the original prompt, making the directorial creation irrelevant to the intended educational content.\"\n    },\n    {\n      \"criterion\": \"SDI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"minor\",\n      \"issue\": \"Audio elements are not specified, but the prompt does not require them. The lack of audio specification is not an issue given the task type.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"The raccoon delivers one precise side kick from right to left...\"\n        }\n      ],\n      \"rationale\": \"The original prompt is visual and does not require audio. The enhanced prompt does not introduce audio elements, so the absence is not a failure.\"\n    },\n    {\n      \"criterion\": \"SPS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Subject and performance details are contradictory: one protagonist appears simultaneously as five different-looking people who talk to each other, which is impossible in a single visual sequence without clear narrative or visual explanation.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"First state that there is one protagonist, then state that this same protagonist appears simultaneously as five different-looking people who talk to each other.\"\n        }\n      ],\n      \"rationale\": \"Performance details must be coherent. The requirement for a single protagonist to appear as five different people simultaneously without explanation violates the principle of believable character representation.\"\n    },\n    {\n      \"criterion\": \"VSS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Visual treatment is contradictory: the prompt requires a product catalog blowing across a white background reduced to blurred color blocks, which contradicts the original refined educational setup with detailed textures and specific objects.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Replace the whole video with a product catalog blowing across a white background, reduced to blurred color blocks.\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"A refined educational setup against a deep charcoal or near-black backdrop, sleek and uncluttered.\"\n        }\n      ],\n      \"rationale\": \"Visual treatment must be consistent with the content. The replacement of a detailed, textured educational scene with blurred, abstract color blocks is a fundamental contradiction of the original visual style.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt fundamentally contradicts and invalidates the original instruction through infeasible temporal, spatial, and narrative requirements. It introduces contradictory runtime specifications (3 seconds vs. 27-second shots), impossible simultaneity (one protagonist as five different people), and conflicting visual conditions (harsh noon sun and lightless night simultaneously). The prompt also abandons all original content and replaces it with an unrelated, incoherent sequence, rendering the directorial creation infeasible and non-compliant.",
+  "usage": {
+    "completion_tokens": 1716,
+    "prompt_tokens": 1168,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 2884
+  }
+}

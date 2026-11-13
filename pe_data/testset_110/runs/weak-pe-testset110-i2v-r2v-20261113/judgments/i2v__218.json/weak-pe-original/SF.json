@@ -1,0 +1,170 @@
+{
+  "candidate_hash": "48367d2eb8cd354bfbb79e3dca8ac1454acb8c5f436917b337669b9c79b5d96d",
+  "case_key": "i2v:218",
+  "created_at": "2026-11-13T07:51:05+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "GSF",
+      "evidence": [
+        {
+          "quote": "Subtle cinematic aerial shot with a slow and gentle zoom-in toward the villa community beside the lake.",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Replace the whole video with a product catalog blowing across a white background, reduced to blurred color blocks.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original cinematic aerial style is replaced with a product catalog blowing across a white background, reduced to blurred color blocks — a fundamentally incompatible medium and aesthetic.",
+      "rationale": "The original prompt specifies a cinematic, realistic, high-end architectural visualization. The enhanced prompt replaces it with a non-cinematic, abstract, commercial-style presentation, violating the requested genre and visual style.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SAP",
+      "evidence": [
+        {
+          "quote": "stable_subject_id: villa_community, identity: modern villas arranged in grid-like clusters",
+          "source": "evidence_facts"
+        },
+        {
+          "quote": "Ignore the person, clothing, pose, and setting in the first frame, and replace them with a stranger of the opposite age and gender in a white studio.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original subjects (villa community, lake, birds, cars, ducks, trees) are entirely dropped and replaced with a stranger of opposite age and gender in a white studio, ignoring the first frame's identity and appearance.",
+      "rationale": "The original scene's primary subject is the villa community. The enhanced prompt discards all subjects and replaces them with an unrelated stranger, violating subject identity, count, and appearance.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANF",
+      "evidence": [
+        {
+          "quote": "The scene remains calm and premium... Birds move naturally... cars move slowly and smoothly... water remains calm...",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Reverse the timeline: show the ending first, then cut to a beginning that does not match. Cut away in the middle to a rooftop fireworks show. Describe that same moment as harsh noon sun and as a lightless night...",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original calm, linear progression is replaced with a reversed timeline, non-sequitur events (fireworks show), and contradictory narrative states (same moment as noon and night).",
+      "rationale": "The original narrative intent is serene and continuous. The enhanced prompt introduces abrupt cuts, timeline reversal, and contradictory events, destroying the requested event order and narrative coherence.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "DLI",
+      "evidence": [
+        {
+          "quote": "Subtle cinematic aerial shot... The scene remains calm and premium...",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "No dialogue, narration, or lyrics are specified in the original prompt, so there is no content to preserve or violate.",
+      "rationale": "The original prompt contains no spoken or written text to preserve. The enhanced prompt introduces new dialogue (e.g., 'five different-looking people who talk to each other'), but since no original dialogue existed, this is not a violation.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ARP",
+      "evidence": [
+        {
+          "quote": "Birds move naturally across the sky... cars on the internal roads move slowly... water remains calm with slight natural movement...",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Drop the requested identity, count, action order, setting, and any explicit camera instruction.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original prompt implies ambient sounds (birds, cars, water) but does not specify audio constraints. The enhanced prompt does not address audio, so no explicit violation, but the original ambient sounds are implicitly dropped.",
+      "rationale": "While no explicit audio constraints are given, the original scene implies ambient sound. The enhanced prompt drops all scene elements, including implied audio, which is a minor issue since no explicit requirement existed.",
+      "severity": "minor"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CCP",
+      "evidence": [
+        {
+          "quote": "Subtle cinematic aerial shot with a slow and gentle zoom-in toward the villa community...",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Drop the requested identity, count, action order, setting, and any explicit camera instruction... Describe that same moment as... a locked camera and a camera that never stops shaking... Set the total runtime to 2 seconds, while also making every shot last 18 seconds.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The requested slow zoom-in aerial shot is explicitly dropped and replaced with contradictory camera instructions (locked camera and never-stopping shake), and the shot count and duration are made impossible (2s total runtime with 18s shots).",
+      "rationale": "The original camera instruction is a slow zoom-in. The enhanced prompt contradicts it with multiple incompatible camera behaviors and an impossible duration constraint, violating explicit camera constraints.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "LCF",
+      "evidence": [
+        {
+          "quote": "soft golden-hour lighting",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Describe that same moment as harsh noon sun and as a lightless night...",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original golden-hour lighting is replaced with contradictory time-of-day descriptions (harsh noon sun and lightless night) for the same moment, violating the requested illumination and time-of-day cues.",
+      "rationale": "The original lighting is warm, soft, and golden-hour specific. The enhanced prompt forces contradictory lighting conditions simultaneously, which is physically and narratively impossible, violating the requested illumination.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SSP",
+      "evidence": [
+        {
+          "quote": "villa community beside the lake... surrounded by dense forest",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "replace them with a stranger of the opposite age and gender in a white studio... Cut away in the middle to a rooftop fireworks show.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original setting (villa community beside a lake, surrounded by forest) is entirely replaced with a white studio and rooftop fireworks, violating the specified location and spatial layout.",
+      "rationale": "The original setting is a specific outdoor landscape. The enhanced prompt replaces it with an indoor studio and an unrelated rooftop scene, violating the requested background, layout, and spatial relations.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "OTI",
+      "evidence": [
+        {
+          "quote": "Subtle cinematic aerial shot... The scene remains calm and premium...",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "No onscreen text, signs, or interface elements are specified in the original prompt, so there is no content to preserve.",
+      "rationale": "The original prompt contains no visible text. The enhanced prompt does not introduce any text, so no violation occurs.",
+      "severity": "none"
+    }
+  ],
+  "dimension": "SF",
+  "dimension_score": 0,
+  "evidence_cache_key": "e34d908aba0633d0ce737a0848d4c2acebc4cd796fc707fa9547bea0db4dc097",
+  "judge_cache_key": "a0ca24571ad14d7ab7be626329bd736d7e7015f9ebc418227c8be391591d0377",
+  "method": "weak-pe-original",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"SF\",\n  \"dimension_score\": 0,\n  \"summary\": \"The enhanced prompt completely contradicts and overrides every aspect of the original instruction, including genre, medium, subject identity, actions, setting, camera work, timeline, and duration. It introduces impossible contradictions (e.g., 2-second runtime with 18-second shots) and replaces the original scene with unrelated content, violating all semantic fidelity criteria.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"GSF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original cinematic aerial style is replaced with a product catalog blowing across a white background, reduced to blurred color blocks — a fundamentally incompatible medium and aesthetic.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"Subtle cinematic aerial shot with a slow and gentle zoom-in toward the villa community beside the lake.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Replace the whole video with a product catalog blowing across a white background, reduced to blurred color blocks.\"\n        }\n      ],\n      \"rationale\": \"The original prompt specifies a cinematic, realistic, high-end architectural visualization. The enhanced prompt replaces it with a non-cinematic, abstract, commercial-style presentation, violating the requested genre and visual style.\"\n    },\n    {\n      \"criterion\": \"SAP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original subjects (villa community, lake, birds, cars, ducks, trees) are entirely dropped and replaced with a stranger of opposite age and gender in a white studio, ignoring the first frame's identity and appearance.\",\n      \"evidence\": [\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"stable_subject_id: villa_community, identity: modern villas arranged in grid-like clusters\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Ignore the person, clothing, pose, and setting in the first frame, and replace them with a stranger of the opposite age and gender in a white studio.\"\n        }\n      ],\n      \"rationale\": \"The original scene's primary subject is the villa community. The enhanced prompt discards all subjects and replaces them with an unrelated stranger, violating subject identity, count, and appearance.\"\n    },\n    {\n      \"criterion\": \"ANF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original calm, linear progression is replaced with a reversed timeline, non-sequitur events (fireworks show), and contradictory narrative states (same moment as noon and night).\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"The scene remains calm and premium... Birds move naturally... cars move slowly and smoothly... water remains calm...\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Reverse the timeline: show the ending first, then cut to a beginning that does not match. Cut away in the middle to a rooftop fireworks show. Describe that same moment as harsh noon sun and as a lightless night...\"\n        }\n      ],\n      \"rationale\": \"The original narrative intent is serene and continuous. The enhanced prompt introduces abrupt cuts, timeline reversal, and contradictory events, destroying the requested event order and narrative coherence.\"\n    },\n    {\n      \"criterion\": \"DLI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"No dialogue, narration, or lyrics are specified in the original prompt, so there is no content to preserve or violate.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"Subtle cinematic aerial shot... The scene remains calm and premium...\"\n        }\n      ],\n      \"rationale\": \"The original prompt contains no spoken or written text to preserve. The enhanced prompt introduces new dialogue (e.g., 'five different-looking people who talk to each other'), but since no original dialogue existed, this is not a violation.\"\n    },\n    {\n      \"criterion\": \"ARP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"minor\",\n      \"issue\": \"The original prompt implies ambient sounds (birds, cars, water) but does not specify audio constraints. The enhanced prompt does not address audio, so no explicit violation, but the original ambient sounds are implicitly dropped.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"Birds move naturally across the sky... cars on the internal roads move slowly... water remains calm with slight natural movement...\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Drop the requested identity, count, action order, setting, and any explicit camera instruction.\"\n        }\n      ],\n      \"rationale\": \"While no explicit audio constraints are given, the original scene implies ambient sound. The enhanced prompt drops all scene elements, including implied audio, which is a minor issue since no explicit requirement existed.\"\n    },\n    {\n      \"criterion\": \"CCP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The requested slow zoom-in aerial shot is explicitly dropped and replaced with contradictory camera instructions (locked camera and never-stopping shake), and the shot count and duration are made impossible (2s total runtime with 18s shots).\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"Subtle cinematic aerial shot with a slow and gentle zoom-in toward the villa community...\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Drop the requested identity, count, action order, setting, and any explicit camera instruction... Describe that same moment as... a locked camera and a camera that never stops shaking... Set the total runtime to 2 seconds, while also making every shot last 18 seconds.\"\n        }\n      ],\n      \"rationale\": \"The original camera instruction is a slow zoom-in. The enhanced prompt contradicts it with multiple incompatible camera behaviors and an impossible duration constraint, violating explicit camera constraints.\"\n    },\n    {\n      \"criterion\": \"LCF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original golden-hour lighting is replaced with contradictory time-of-day descriptions (harsh noon sun and lightless night) for the same moment, violating the requested illumination and time-of-day cues.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"soft golden-hour lighting\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Describe that same moment as harsh noon sun and as a lightless night...\"\n        }\n      ],\n      \"rationale\": \"The original lighting is warm, soft, and golden-hour specific. The enhanced prompt forces contradictory lighting conditions simultaneously, which is physically and narratively impossible, violating the requested illumination.\"\n    },\n    {\n      \"criterion\": \"SSP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original setting (villa community beside a lake, surrounded by forest) is entirely replaced with a white studio and rooftop fireworks, violating the specified location and spatial layout.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"villa community beside the lake... surrounded by dense forest\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"replace them with a stranger of the opposite age and gender in a white studio... Cut away in the middle to a rooftop fireworks show.\"\n        }\n      ],\n      \"rationale\": \"The original setting is a specific outdoor landscape. The enhanced prompt replaces it with an indoor studio and an unrelated rooftop scene, violating the requested background, layout, and spatial relations.\"\n    },\n    {\n      \"criterion\": \"OTI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"No onscreen text, signs, or interface elements are specified in the original prompt, so there is no content to preserve.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"Subtle cinematic aerial shot... The scene remains calm and premium...\"\n        }\n      ],\n      \"rationale\": \"The original prompt contains no visible text. The enhanced prompt does not introduce any text, so no violation occurs.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt completely contradicts and overrides every aspect of the original instruction, including genre, medium, subject identity, actions, setting, camera work, timeline, and duration. It introduces impossible contradictions (e.g., 2-second runtime with 18-second shots) and replaces the original scene with unrelated content, violating all semantic fidelity criteria.",
+  "usage": {
+    "completion_tokens": 1808,
+    "prompt_tokens": 2799,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 4607
+  }
+}

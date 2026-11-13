@@ -1,0 +1,151 @@
+{
+  "candidate_hash": "ae4abd4489cb2856875dd14f2c6a97280cbf8fa658d529371ba5afa526009b30",
+  "case_key": "r2v:199",
+  "created_at": "2026-11-13T09:05:22+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "GSF",
+      "evidence": [
+        {
+          "quote": "Using the style of the visual effects in this image as a reference",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "<Picture 1> is the style/VFX reference for the entire video — it defines the hyper-saturated neon color language... It is not a character identity reference.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "The enhanced prompt correctly identifies and preserves the requested visual effects style — hyper-saturated neon colors, energy impacts, particle effects — without misinterpreting the reference image as a character model. The medium remains cinematic VFX, consistent with the original instruction.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SAP",
+      "evidence": [
+        {
+          "quote": "held/worn_items: [glowing pink/red energy blade or staff]",
+          "source": "evidence_facts"
+        },
+        {
+          "quote": "<Subject 2> is the monster: a large dark armored creature with a jagged, spiky silhouette... with a menacing stance that recoils under the boy's blows.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The monster’s weapon in the reference image is described as glowing pink/red, while the enhanced prompt does not specify its color, potentially leading to a mismatch if rendered. However, the monster’s silhouette and role as a recoiling combatant are preserved.",
+      "rationale": "The monster’s identity, silhouette, and behavior are preserved. The weapon color is not specified in the original prompt, so the omission is not a major issue, though it introduces a minor potential inconsistency with the reference image’s visual details.",
+      "severity": "minor"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANF",
+      "evidence": [
+        {
+          "quote": "a teenage boy charges at a monster with his blade, and the blade’s light sweeps across the frame in exaggerated colorful arcs; at the moment of impact, comic-style speed lines appear.",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "The target video is a 10-second cinematic action sequence... <Subject 1> sprints... toward <Subject 2>... his blade ignites... sweeps the frame... culminating in a pink-white energy impact with comic-style radial speed lines.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "The sequence of events — charge, blade activation, sweeping light arcs, impact with speed lines — is preserved in correct order and narrative intent. No substitutions or omissions affect the core action chain.",
+      "severity": "none"
+    },
+    {
+      "applicability": "not_applicable",
+      "criterion": "DLI",
+      "evidence": [],
+      "issue": "",
+      "rationale": "No dialogue, narration, or lyrics are requested in the original prompt, and none are included in the enhanced prompt. Therefore, this criterion does not apply.",
+      "severity": null
+    },
+    {
+      "applicability": "not_applicable",
+      "criterion": "ARP",
+      "evidence": [],
+      "issue": "",
+      "rationale": "No specific speech, music, or sound constraints are requested in the original prompt. The enhanced prompt adds a soundscape description, but since no constraints were given, this is elaboration, not a violation. Criterion not applicable.",
+      "severity": null
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CCP",
+      "evidence": [
+        {
+          "quote": "generate a narrative video: a teenage boy charges at a monster with his blade...",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "[Shot 1] A low-angle wide tracking shot... [Shot 2] ...fast whip-pan... [Shot 3] ...dynamic low-angle frame locked on the impact point... [Shot 4] ...small slow push-in",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original prompt does not specify camera movement or shot count. The enhanced prompt introduces detailed camera motions (tracking, whip-pan, push-in) and shot breakdowns, which are compatible but not required by the original instruction.",
+      "rationale": "The added camera details are cinematic elaborations that enhance the scene without contradicting the original request. Since no camera constraints were specified, this is a minor over-specification, not a material issue.",
+      "severity": "minor"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "LCF",
+      "evidence": [
+        {
+          "quote": "Using the style of the visual effects in this image as a reference",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "hyper-saturated neon color language (electric blue vs. hot orange-red), the energy-impact look, particle density, and the snowy volcanic environment mood",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "The lighting, color palette, and environmental mood are preserved and explicitly tied to the reference image. The bright blue sky, molten lava veins, and glowing particles are maintained, consistent with the original instruction.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SSP",
+      "evidence": [
+        {
+          "quote": "a teenage boy charges at a monster",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "sprints across <Subject 5>, the molten-cracked snowy terrain, toward <Subject 2>, the monster",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "The setting — snowy volcanic mountainside — and spatial relationship — boy charging toward monster — are preserved. The environment elements (lava veins, lightning, sparks) are retained in correct relative positions.",
+      "severity": "none"
+    },
+    {
+      "applicability": "not_applicable",
+      "criterion": "OTI",
+      "evidence": [],
+      "issue": "",
+      "rationale": "No visible titles, signs, subtitles, or interface text are requested in the original prompt, and none are included in the enhanced prompt. Criterion not applicable.",
+      "severity": null
+    }
+  ],
+  "dimension": "SF",
+  "dimension_score": 95,
+  "evidence_cache_key": "9587621984a50b2379aa78b7803797232641ffb7aaac04245eee89fe4f6064a9",
+  "judge_cache_key": "a0ca24571ad14d7ab7be626329bd736d7e7015f9ebc418227c8be391591d0377",
+  "method": "glm53_20261112_120702",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"SF\",\n  \"dimension_score\": 95,\n  \"summary\": \"The enhanced prompt preserves the core semantic intent of the original instruction with high fidelity, accurately translating the requested action sequence, visual style, and VFX elements. It correctly interprets the reference image as a style guide rather than a character template, and elaborates on the scene with compatible cinematic details. Minor issues include slight over-specification of camera motion not requested in the original, and a small deviation in the monster’s weapon color (pink/red in image vs. unspecified in prompt), but these do not materially alter the narrative or visual intent. No dialogue, text, or audio constraints were requested, so their absence is appropriate.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"GSF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"Using the style of the visual effects in this image as a reference\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"<Picture 1> is the style/VFX reference for the entire video — it defines the hyper-saturated neon color language... It is not a character identity reference.\"\n        }\n      ],\n      \"rationale\": \"The enhanced prompt correctly identifies and preserves the requested visual effects style — hyper-saturated neon colors, energy impacts, particle effects — without misinterpreting the reference image as a character model. The medium remains cinematic VFX, consistent with the original instruction.\"\n    },\n    {\n      \"criterion\": \"SAP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"minor\",\n      \"issue\": \"The monster’s weapon in the reference image is described as glowing pink/red, while the enhanced prompt does not specify its color, potentially leading to a mismatch if rendered. However, the monster’s silhouette and role as a recoiling combatant are preserved.\",\n      \"evidence\": [\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"held/worn_items: [glowing pink/red energy blade or staff]\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"<Subject 2> is the monster: a large dark armored creature with a jagged, spiky silhouette... with a menacing stance that recoils under the boy's blows.\"\n        }\n      ],\n      \"rationale\": \"The monster’s identity, silhouette, and behavior are preserved. The weapon color is not specified in the original prompt, so the omission is not a major issue, though it introduces a minor potential inconsistency with the reference image’s visual details.\"\n    },\n    {\n      \"criterion\": \"ANF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"a teenage boy charges at a monster with his blade, and the blade’s light sweeps across the frame in exaggerated colorful arcs; at the moment of impact, comic-style speed lines appear.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"The target video is a 10-second cinematic action sequence... <Subject 1> sprints... toward <Subject 2>... his blade ignites... sweeps the frame... culminating in a pink-white energy impact with comic-style radial speed lines.\"\n        }\n      ],\n      \"rationale\": \"The sequence of events — charge, blade activation, sweeping light arcs, impact with speed lines — is preserved in correct order and narrative intent. No substitutions or omissions affect the core action chain.\"\n    },\n    {\n      \"criterion\": \"DLI\",\n      \"applicability\": \"not_applicable\",\n      \"severity\": null,\n      \"issue\": \"\",\n      \"evidence\": [],\n      \"rationale\": \"No dialogue, narration, or lyrics are requested in the original prompt, and none are included in the enhanced prompt. Therefore, this criterion does not apply.\"\n    },\n    {\n      \"criterion\": \"ARP\",\n      \"applicability\": \"not_applicable\",\n      \"severity\": null,\n      \"issue\": \"\",\n      \"evidence\": [],\n      \"rationale\": \"No specific speech, music, or sound constraints are requested in the original prompt. The enhanced prompt adds a soundscape description, but since no constraints were given, this is elaboration, not a violation. Criterion not applicable.\"\n    },\n    {\n      \"criterion\": \"CCP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"minor\",\n      \"issue\": \"The original prompt does not specify camera movement or shot count. The enhanced prompt introduces detailed camera motions (tracking, whip-pan, push-in) and shot breakdowns, which are compatible but not required by the original instruction.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"generate a narrative video: a teenage boy charges at a monster with his blade...\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"[Shot 1] A low-angle wide tracking shot... [Shot 2] ...fast whip-pan... [Shot 3] ...dynamic low-angle frame locked on the impact point... [Shot 4] ...small slow push-in\"\n        }\n      ],\n      \"rationale\": \"The added camera details are cinematic elaborations that enhance the scene without contradicting the original request. Since no camera constraints were specified, this is a minor over-specification, not a material issue.\"\n    },\n    {\n      \"criterion\": \"LCF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"Using the style of the visual effects in this image as a reference\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"hyper-saturated neon color language (electric blue vs. hot orange-red), the energy-impact look, particle density, and the snowy volcanic environment mood\"\n        }\n      ],\n      \"rationale\": \"The lighting, color palette, and environmental mood are preserved and explicitly tied to the reference image. The bright blue sky, molten lava veins, and glowing particles are maintained, consistent with the original instruction.\"\n    },\n    {\n      \"criterion\": \"SSP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"a teenage boy charges at a monster\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"sprints across <Subject 5>, the molten-cracked snowy terrain, toward <Subject 2>, the monster\"\n        }\n      ],\n      \"rationale\": \"The setting — snowy volcanic mountainside — and spatial relationship — boy charging toward monster — are preserved. The environment elements (lava veins, lightning, sparks) are retained in correct relative positions.\"\n    },\n    {\n      \"criterion\": \"OTI\",\n      \"applicability\": \"not_applicable\",\n      \"severity\": null,\n      \"issue\": \"\",\n      \"evidence\": [],\n      \"rationale\": \"No visible titles, signs, subtitles, or interface text are requested in the original prompt, and none are included in the enhanced prompt. Criterion not applicable.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt preserves the core semantic intent of the original instruction with high fidelity, accurately translating the requested action sequence, visual style, and VFX elements. It correctly interprets the reference image as a style guide rather than a character template, and elaborates on the scene with compatible cinematic details. Minor issues include slight over-specification of camera motion not requested in the original, and a small deviation in the monster’s weapon color (pink/red in image vs. unspecified in prompt), but these do not materially alter the narrative or visual intent. No dialogue, text, or audio constraints were requested, so their absence is appropriate.",
+  "usage": {
+    "completion_tokens": 1589,
+    "prompt_tokens": 3622,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 5211
+  }
+}

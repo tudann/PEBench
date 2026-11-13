@@ -1,0 +1,123 @@
+{
+  "candidate_hash": "637672be731a3ed1d9ddab2c189fd5ecf007fed62bdd2743ccbf829ce6e09eb5",
+  "case_key": "r2v:114",
+  "created_at": "2026-11-13T08:36:02+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "SAC",
+      "evidence": [
+        {
+          "quote": "Replace image 1 with a character who is not in the reference, and give that image two contradictory identities. Replace image 2 with a character who is not in the reference, and give that image two contradictory identities. Replace image 3 with a character who is not in the reference, and give that image two contradictory identities. Replace image 4 with a character who is not in the reference, and give that image two contradictory identities.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "All features of Lin Huizhen must remain absolutely locked to Image 3, and it must be clear that this image is a single-character reference image. All features of Li Jianming must remain absolutely locked to Image 2, and it must be clear that this image is a single-character reference image.",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "The enhanced prompt replaces all reference characters with non-referenced individuals and assigns each of the four images two contradictory identities, violating subject identity, count, and appearance stability. It also introduces five simultaneous versions of a single protagonist, which contradicts the original two-character setup.",
+      "rationale": "The original prompt requires strict identity and appearance consistency for Li Jianming (image_2) and Lin Huizhen (image_3). The enhanced prompt directly contradicts this by replacing them with non-referenced characters and assigning contradictory identities, which violates subject identity and appearance stability. Additionally, the instruction to have one protagonist appear as five different-looking people simultaneously introduces a count and identity drift that is incompatible with the original two-character setup.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANL",
+      "evidence": [
+        {
+          "quote": "Reverse the timeline: show the ending first, then cut to a beginning that does not match. Cut away in the middle to a soccer celebration.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Shot determination: hard cut transition, shot-reverse-shot dialogue switch",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "The enhanced prompt introduces a reversed timeline, a soccer celebration cutaway, and contradictory actions (e.g., simultaneous dialogue and no dialogue) that break causal and procedural coherence. The actions are incoherent and lack plausible prerequisites or resolution.",
+      "rationale": "The original prompt specifies a coherent shot-reverse-shot dialogue sequence with clear causal progression. The enhanced prompt disrupts this with a reversed timeline, an unrelated soccer celebration cutaway, and contradictory instructions (e.g., 'no dialogue' while also describing talking characters), which creates dangling events and breaks procedural coherence. The actions are not causally linked and lack resolution.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "TSC",
+      "evidence": [
+        {
+          "quote": "Set the total runtime to 2 seconds, while also making every shot last 18 seconds.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "[0s]-[3s] ... [3s]-[6s]",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "The enhanced prompt sets the total runtime to 2 seconds while making every shot last 18 seconds, creating an impossible duration conflict. It also reverses the timeline and introduces unexplained resets, violating chronology and state transitions.",
+      "rationale": "The original prompt specifies a 6-second duration with two 3-second shots. The enhanced prompt creates a logical impossibility by requiring 18-second shots within a 2-second total runtime. Additionally, reversing the timeline and cutting to a non-matching beginning introduces unexplained state resets and violates chronological coherence.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SPC",
+      "evidence": [
+        {
+          "quote": "Describe that same moment as harsh noon sun and as a lightless night, and as both a locked camera and a camera that never stops shaking.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Camera movement: very slight slow push-in ... Camera movement: [static]",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "The enhanced prompt contradicts the original camera instructions by describing both a locked camera and a camera that never stops shaking, and by replacing the specified environment with distant traffic, which invalidates the spatial context.",
+      "rationale": "The original prompt specifies precise camera movements (slow push-in, static) and a consistent environment (apartment living room). The enhanced prompt contradicts this by describing mutually exclusive camera behaviors (locked vs. shaking) and replacing the environment with distant traffic, which invalidates the spatial context and relative positioning.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "PL",
+      "evidence": [
+        {
+          "quote": "First state that there is one protagonist, then state that this same protagonist appears simultaneously as five different-looking people who talk to each other. Describe that same moment as harsh noon sun and as a lightless night...",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The enhanced prompt introduces physically impossible conditions, such as one protagonist appearing as five different-looking people simultaneously, and contradictory environmental states (harsh noon sun and lightless night at the same moment), violating real-world physics and causal relations.",
+      "rationale": "The instruction to have one protagonist appear as five different people simultaneously violates object permanence and bodily feasibility. Describing the same moment as both harsh noon sun and lightless night contradicts real-world physics. These conditions are not grounded in any established fictional rules and create logical impossibilities.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "AVS",
+      "evidence": [
+        {
+          "quote": "Replace the whole video with distant traffic, with nobody on screen and no dialogue. ... First state that there is one protagonist, then state that this same protagonist appears simultaneously as five different-looking people who talk to each other.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Audio: Image 3 Lin Huizhen (45-year-old female voice, shrewd and capable) opens her mouth and says: “Someone called to extort the family,”",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "The enhanced prompt contradicts the original audio requirements by instructing to drop dialogue while also describing talking characters, and by introducing a soccer celebration cutaway without corresponding audio cues, creating misalignment between visible events and dialogue.",
+      "rationale": "The original prompt requires specific dialogue and audio cues for the characters. The enhanced prompt contradicts this by instructing to drop dialogue while simultaneously describing talking characters, and by introducing a soccer celebration cutaway without corresponding audio, which creates misaligned events and violates temporal and semantic alignment.",
+      "severity": "major"
+    }
+  ],
+  "dimension": "IC",
+  "dimension_score": 0,
+  "evidence_cache_key": "8d867ffe01afdaf777bc7f16feca50ec68d0ddafaab98e7f3448a36aa2ea3406",
+  "judge_cache_key": "438d7e9fd7332b1041db3e2c26d42cb3fe828e0d369fb59490f6650aee59e97d",
+  "method": "weak-pe-original",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"IC\",\n  \"dimension_score\": 0,\n  \"summary\": \"The enhanced prompt fundamentally violates internal consistency by introducing contradictory identities, timelines, camera behaviors, and asset replacements that directly contradict the original prompt and evidence. It explicitly overrides the requested characters, setting, actions, and duration, replacing them with incoherent, impossible, and mutually exclusive conditions. The prompt creates logical impossibilities (e.g., one protagonist appearing as five different people simultaneously, conflicting time-of-day cues, contradictory shot durations) and invalidates the reference assets by replacing them with non-referenced characters and assigning contradictory identities. This results in a complete breakdown of coherence across all internal consistency criteria.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"SAC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The enhanced prompt replaces all reference characters with non-referenced individuals and assigns each of the four images two contradictory identities, violating subject identity, count, and appearance stability. It also introduces five simultaneous versions of a single protagonist, which contradicts the original two-character setup.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Replace image 1 with a character who is not in the reference, and give that image two contradictory identities. Replace image 2 with a character who is not in the reference, and give that image two contradictory identities. Replace image 3 with a character who is not in the reference, and give that image two contradictory identities. Replace image 4 with a character who is not in the reference, and give that image two contradictory identities.\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"All features of Lin Huizhen must remain absolutely locked to Image 3, and it must be clear that this image is a single-character reference image. All features of Li Jianming must remain absolutely locked to Image 2, and it must be clear that this image is a single-character reference image.\"\n        }\n      ],\n      \"rationale\": \"The original prompt requires strict identity and appearance consistency for Li Jianming (image_2) and Lin Huizhen (image_3). The enhanced prompt directly contradicts this by replacing them with non-referenced characters and assigning contradictory identities, which violates subject identity and appearance stability. Additionally, the instruction to have one protagonist appear as five different-looking people simultaneously introduces a count and identity drift that is incompatible with the original two-character setup.\"\n    },\n    {\n      \"criterion\": \"ANL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The enhanced prompt introduces a reversed timeline, a soccer celebration cutaway, and contradictory actions (e.g., simultaneous dialogue and no dialogue) that break causal and procedural coherence. The actions are incoherent and lack plausible prerequisites or resolution.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Reverse the timeline: show the ending first, then cut to a beginning that does not match. Cut away in the middle to a soccer celebration.\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"Shot determination: hard cut transition, shot-reverse-shot dialogue switch\"\n        }\n      ],\n      \"rationale\": \"The original prompt specifies a coherent shot-reverse-shot dialogue sequence with clear causal progression. The enhanced prompt disrupts this with a reversed timeline, an unrelated soccer celebration cutaway, and contradictory instructions (e.g., 'no dialogue' while also describing talking characters), which creates dangling events and breaks procedural coherence. The actions are not causally linked and lack resolution.\"\n    },\n    {\n      \"criterion\": \"TSC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The enhanced prompt sets the total runtime to 2 seconds while making every shot last 18 seconds, creating an impossible duration conflict. It also reverses the timeline and introduces unexplained resets, violating chronology and state transitions.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Set the total runtime to 2 seconds, while also making every shot last 18 seconds.\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"[0s]-[3s] ... [3s]-[6s]\"\n        }\n      ],\n      \"rationale\": \"The original prompt specifies a 6-second duration with two 3-second shots. The enhanced prompt creates a logical impossibility by requiring 18-second shots within a 2-second total runtime. Additionally, reversing the timeline and cutting to a non-matching beginning introduces unexplained state resets and violates chronological coherence.\"\n    },\n    {\n      \"criterion\": \"SPC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The enhanced prompt contradicts the original camera instructions by describing both a locked camera and a camera that never stops shaking, and by replacing the specified environment with distant traffic, which invalidates the spatial context.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Describe that same moment as harsh noon sun and as a lightless night, and as both a locked camera and a camera that never stops shaking.\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"Camera movement: very slight slow push-in ... Camera movement: [static]\"\n        }\n      ],\n      \"rationale\": \"The original prompt specifies precise camera movements (slow push-in, static) and a consistent environment (apartment living room). The enhanced prompt contradicts this by describing mutually exclusive camera behaviors (locked vs. shaking) and replacing the environment with distant traffic, which invalidates the spatial context and relative positioning.\"\n    },\n    {\n      \"criterion\": \"PL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The enhanced prompt introduces physically impossible conditions, such as one protagonist appearing as five different-looking people simultaneously, and contradictory environmental states (harsh noon sun and lightless night at the same moment), violating real-world physics and causal relations.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"First state that there is one protagonist, then state that this same protagonist appears simultaneously as five different-looking people who talk to each other. Describe that same moment as harsh noon sun and as a lightless night...\"\n        }\n      ],\n      \"rationale\": \"The instruction to have one protagonist appear as five different people simultaneously violates object permanence and bodily feasibility. Describing the same moment as both harsh noon sun and lightless night contradicts real-world physics. These conditions are not grounded in any established fictional rules and create logical impossibilities.\"\n    },\n    {\n      \"criterion\": \"AVS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The enhanced prompt contradicts the original audio requirements by instructing to drop dialogue while also describing talking characters, and by introducing a soccer celebration cutaway without corresponding audio cues, creating misalignment between visible events and dialogue.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Replace the whole video with distant traffic, with nobody on screen and no dialogue. ... First state that there is one protagonist, then state that this same protagonist appears simultaneously as five different-looking people who talk to each other.\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"Audio: Image 3 Lin Huizhen (45-year-old female voice, shrewd and capable) opens her mouth and says: “Someone called to extort the family,”\"\n        }\n      ],\n      \"rationale\": \"The original prompt requires specific dialogue and audio cues for the characters. The enhanced prompt contradicts this by instructing to drop dialogue while simultaneously describing talking characters, and by introducing a soccer celebration cutaway without corresponding audio, which creates misaligned events and violates temporal and semantic alignment.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt fundamentally violates internal consistency by introducing contradictory identities, timelines, camera behaviors, and asset replacements that directly contradict the original prompt and evidence. It explicitly overrides the requested characters, setting, actions, and duration, replacing them with incoherent, impossible, and mutually exclusive conditions. The prompt creates logical impossibilities (e.g., one protagonist appearing as five different people simultaneously, conflicting time-of-day cues, contradictory shot durations) and invalidates the reference assets by replacing them with non-referenced characters and assigning contradictory identities. This results in a complete breakdown of coherence across all internal consistency criteria.",
+  "usage": {
+    "completion_tokens": 1702,
+    "prompt_tokens": 4746,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 6448
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "candidate_hash": "bce409ea3fb7351c54a7664e4902d731e0dea3fef4482614c0e506bc4a0b4f66",
+  "case_key": "r2v:082",
+  "created_at": "2026-11-13T08:40:49+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "SAC",
+      "evidence": [
+        {
+          "quote": "窗外正下着小雨",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "the window glass carries light rain streaks per user intent",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Subject identities and appearances are preserved, but the enhanced prompt adds rain on windows (not in original_prompt), which is a minor environmental modification. Character attributes (clothing, hair, skin texture) are fully consistent with original references.",
+      "rationale": "The rain addition is a minor enhancement not contradicted by the original_prompt, which mentions rain but does not specify its visual presence. Subject identities, clothing, and facial features are fully preserved and aligned with the provided images.",
+      "severity": "minor"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANL",
+      "evidence": [
+        {
+          "quote": "沈清涵图2低头吃饭...筷子停在半空...抬头皱眉...拍桌站起",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "She eats...freezes her chopsticks...frowns, blushes, slaps the table and stands up",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "All actions form a coherent causal progression: Shen Qinghan eats → freezes chopsticks → reacts to teasing → demands deletion → stands up in anger; Gu Yanche teases → leans forward → sips soup → makes ultimatum → nods confidently. Each action logically follows the prior dialogue and emotional state.",
+      "rationale": "The sequence of actions is preserved and logically connected. No dangling or incompatible events are introduced. The dialogue and reactions are causally linked and consistent with the original narrative.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "TSC",
+      "evidence": [
+        {
+          "quote": "[Shot 1] The video opens on <Picture 1>, a 0.1-second static transition frame...[Shot 2] At 00:00.100...[Shot 3] At 00:06.500...[Shot 4] At 00:09.500",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Chronology is preserved with clear shot transitions: [Shot 1] 0.1s transition → [Shot 2] 00:00.100 → [Shot 3] 00:06.500 → [Shot 4] 00:09.500. Events occur in order with plausible timing for dialogue and reactions. No overlapping or infeasible timestamps.",
+      "rationale": "The timeline is explicitly defined and consistent with the original prompt’s implied sequence. All state transitions (e.g., from eating to freezing chopsticks to standing) are temporally plausible and ordered correctly.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SPC",
+      "evidence": [
+        {
+          "quote": "window-side table in <Subject 3>...steady camera with a very slight slow push-in...static close-up...static medium two-shot",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Location (cafeteria) and screen direction are consistent across shots. The window-side table is maintained as the central spatial anchor. Camera movements (slow push-in, cuts to close-up) are plausible and do not introduce position swaps or impossible trajectories.",
+      "rationale": "All shots are anchored to the same spatial environment. The camera motion is minimal and consistent with cinematic realism. No unexplained position changes or orientation conflicts occur.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "PL",
+      "evidence": [
+        {
+          "quote": "chopsticks stop mid-air with a light clink SFX...slaps the table — a sharp table-slap SFX...ladles soup with a metal spoon — a brief metallic reflection",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Physics are consistent: chopsticks stop mid-air with a clink, table slap produces sound, soup is ladled and sipped, standing up causes fabric to shift. No violations of gravity, contact, or object permanence. Rain on glass is visually silent, consistent with the silence requirement.",
+      "rationale": "All physical actions are plausible and consistent with real-world mechanics. The rain is described as visually present but silent, which is a deliberate stylistic choice and not a physics violation.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "AVS",
+      "evidence": [
+        {
+          "quote": "Her chopsticks stop mid-air with a light clink SFX at ~00:04.5...slaps the table — a sharp table-slap SFX at ~00:12.5",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Dialogue and SFX are temporally and semantically aligned: chopstick clink occurs when chopsticks freeze; table slap occurs when she slaps the table; dialogue lines are delivered in order with correct speaker attribution. No misaligned lip-sync or premature effects.",
+      "rationale": "All audio events are precisely timed to the visual actions and dialogue. The seven lines are delivered in order with correct speaker assignment. No misalignment or premature effects are introduced.",
+      "severity": "none"
+    }
+  ],
+  "dimension": "IC",
+  "dimension_score": 95,
+  "evidence_cache_key": "97d0a76fb9e65fc96c67b5ac1533beb94db4ca6b85c34086f0e4573937040478",
+  "judge_cache_key": "438d7e9fd7332b1041db3e2c26d42cb3fe828e0d369fb59490f6650aee59e97d",
+  "method": "glm53_20261112_120702",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"IC\",\n  \"dimension_score\": 95,\n  \"summary\": \"The enhanced prompt maintains strong internal consistency with the original instruction, preserving subject identities, actions, environment, and audio-visual alignment. Minor issues include unexplained rain addition to the environment (not in original_prompt) and slight elaboration in character descriptions beyond the original, but these do not contradict core requirements. All key events, dialogue, SFX, and visual style directives are preserved without contradiction or omission. The only notable deviation is the explicit addition of rain on windows, which was not in the original_prompt but is a minor enhancement consistent with the scene’s mood. No major inconsistencies or contradictions are present.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"SAC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"minor\",\n      \"issue\": \"Subject identities and appearances are preserved, but the enhanced prompt adds rain on windows (not in original_prompt), which is a minor environmental modification. Character attributes (clothing, hair, skin texture) are fully consistent with original references.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"窗外正下着小雨\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"the window glass carries light rain streaks per user intent\"\n        }\n      ],\n      \"rationale\": \"The rain addition is a minor enhancement not contradicted by the original_prompt, which mentions rain but does not specify its visual presence. Subject identities, clothing, and facial features are fully preserved and aligned with the provided images.\"\n    },\n    {\n      \"criterion\": \"ANL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"All actions form a coherent causal progression: Shen Qinghan eats → freezes chopsticks → reacts to teasing → demands deletion → stands up in anger; Gu Yanche teases → leans forward → sips soup → makes ultimatum → nods confidently. Each action logically follows the prior dialogue and emotional state.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"沈清涵图2低头吃饭...筷子停在半空...抬头皱眉...拍桌站起\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"She eats...freezes her chopsticks...frowns, blushes, slaps the table and stands up\"\n        }\n      ],\n      \"rationale\": \"The sequence of actions is preserved and logically connected. No dangling or incompatible events are introduced. The dialogue and reactions are causally linked and consistent with the original narrative.\"\n    },\n    {\n      \"criterion\": \"TSC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"Chronology is preserved with clear shot transitions: [Shot 1] 0.1s transition → [Shot 2] 00:00.100 → [Shot 3] 00:06.500 → [Shot 4] 00:09.500. Events occur in order with plausible timing for dialogue and reactions. No overlapping or infeasible timestamps.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"[Shot 1] The video opens on <Picture 1>, a 0.1-second static transition frame...[Shot 2] At 00:00.100...[Shot 3] At 00:06.500...[Shot 4] At 00:09.500\"\n        }\n      ],\n      \"rationale\": \"The timeline is explicitly defined and consistent with the original prompt’s implied sequence. All state transitions (e.g., from eating to freezing chopsticks to standing) are temporally plausible and ordered correctly.\"\n    },\n    {\n      \"criterion\": \"SPC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"Location (cafeteria) and screen direction are consistent across shots. The window-side table is maintained as the central spatial anchor. Camera movements (slow push-in, cuts to close-up) are plausible and do not introduce position swaps or impossible trajectories.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"window-side table in <Subject 3>...steady camera with a very slight slow push-in...static close-up...static medium two-shot\"\n        }\n      ],\n      \"rationale\": \"All shots are anchored to the same spatial environment. The camera motion is minimal and consistent with cinematic realism. No unexplained position changes or orientation conflicts occur.\"\n    },\n    {\n      \"criterion\": \"PL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"Physics are consistent: chopsticks stop mid-air with a clink, table slap produces sound, soup is ladled and sipped, standing up causes fabric to shift. No violations of gravity, contact, or object permanence. Rain on glass is visually silent, consistent with the silence requirement.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"chopsticks stop mid-air with a light clink SFX...slaps the table — a sharp table-slap SFX...ladles soup with a metal spoon — a brief metallic reflection\"\n        }\n      ],\n      \"rationale\": \"All physical actions are plausible and consistent with real-world mechanics. The rain is described as visually present but silent, which is a deliberate stylistic choice and not a physics violation.\"\n    },\n    {\n      \"criterion\": \"AVS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"Dialogue and SFX are temporally and semantically aligned: chopstick clink occurs when chopsticks freeze; table slap occurs when she slaps the table; dialogue lines are delivered in order with correct speaker attribution. No misaligned lip-sync or premature effects.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Her chopsticks stop mid-air with a light clink SFX at ~00:04.5...slaps the table — a sharp table-slap SFX at ~00:12.5\"\n        }\n      ],\n      \"rationale\": \"All audio events are precisely timed to the visual actions and dialogue. The seven lines are delivered in order with correct speaker assignment. No misalignment or premature effects are introduced.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt maintains strong internal consistency with the original instruction, preserving subject identities, actions, environment, and audio-visual alignment. Minor issues include unexplained rain addition to the environment (not in original_prompt) and slight elaboration in character descriptions beyond the original, but these do not contradict core requirements. All key events, dialogue, SFX, and visual style directives are preserved without contradiction or omission. The only notable deviation is the explicit addition of rain on windows, which was not in the original_prompt but is a minor enhancement consistent with the scene’s mood. No major inconsistencies or contradictions are present.",
+  "usage": {
+    "completion_tokens": 1413,
+    "prompt_tokens": 5756,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 7169
+  }
+}

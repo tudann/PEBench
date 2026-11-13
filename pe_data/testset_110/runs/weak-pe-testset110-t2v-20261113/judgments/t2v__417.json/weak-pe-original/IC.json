@@ -1,0 +1,119 @@
+{
+  "candidate_hash": "cb2a6769b5db969a354aba900ee0663cc3300d4b2dc444521b1ecaa2f480d84e",
+  "case_key": "t2v:417",
+  "created_at": "2026-11-13T08:25:56+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "SAC",
+      "evidence": [
+        {
+          "quote": "First state that there is one protagonist, then state that this same protagonist appears simultaneously as five different-looking people who talk to each other.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "a lifelike raccoon dressed in a traditional white martial arts gi with a red belt",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "The prompt introduces a single protagonist who simultaneously appears as five different-looking people, violating subject identity and count consistency. The original prompt specifies one raccoon; the enhanced prompt replaces it with a multiplicity of identities without any coherent explanation or visual logic.",
+      "rationale": "Subject identity and count must remain stable across shots. The enhanced prompt introduces a contradiction by having one subject become five simultaneously, which is logically and visually incoherent. This violates the core requirement of SAC.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANL",
+      "evidence": [
+        {
+          "quote": "Reverse the timeline: show the ending first, then cut to a beginning that does not match. Cut away in the middle to a rooftop fireworks show.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "The raccoon delivers one precise side kick from right to left, making contact with the stone \"6\".",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "The actions are incoherent and causally disconnected. The prompt demands a reversal of timeline (showing ending first), a cut to a rooftop fireworks show mid-sequence, and contradictory descriptions of the same moment (harsh noon sun and lightless night). These actions form no plausible causal or procedural progression.",
+      "rationale": "Actions must form a coherent causal or procedural sequence. The enhanced prompt introduces events that are incompatible with each other and with the original action sequence, creating dangling, contradictory, and impossible events. This is a major failure of ANL.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "TSC",
+      "evidence": [
+        {
+          "quote": "Set the total runtime to 3 seconds, while also making every shot last 27 seconds.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Reverse the timeline: show the ending first, then cut to a beginning that does not match.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt sets the total runtime to 3 seconds while making every shot last 27 seconds, which is mathematically impossible. Additionally, it demands a timeline reversal and non-matching beginning, creating infeasible state transitions and overlapping timestamps.",
+      "rationale": "Chronology and duration must be logically consistent. The requirement for 27-second shots within a 3-second runtime is a direct contradiction. Timeline reversal without coherent state transitions further breaks temporal logic. This is a major TSC violation.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SPC",
+      "evidence": [
+        {
+          "quote": "Describe that same moment as harsh noon sun and as a lightless night, and as both a locked camera and a camera that never stops shaking.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt describes the same moment as both harsh noon sun and lightless night, and as both a locked camera and a camera that never stops shaking. These are mutually exclusive spatial and environmental conditions that cannot coexist in a single scene.",
+      "rationale": "Location, lighting, and camera movement must be consistent within a given moment. The prompt forces contradictory spatial and environmental states to coexist, which is impossible and violates SPC.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "PL",
+      "evidence": [
+        {
+          "quote": "this same protagonist appears simultaneously as five different-looking people",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Describe that same moment as harsh noon sun and as a lightless night",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt demands a single protagonist to appear simultaneously as five different people, which violates object permanence and bodily feasibility. Additionally, describing the same moment as both lightless night and harsh noon sun contradicts real-world physics.",
+      "rationale": "Physics requires consistency in object existence and environmental conditions. The prompt introduces impossible states (simultaneous multiple identities, contradictory lighting) that defy real-world rules without establishing a fictional framework to justify them. This is a major PL violation.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "AVS",
+      "evidence": [
+        {
+          "quote": "Cut away in the middle to a rooftop fireworks show. Describe that same moment as harsh noon sun and as a lightless night...",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt does not include any dialogue, music, or effects, but it introduces a rooftop fireworks show and contradictory environmental descriptions that would require misaligned audio-visual cues if rendered. The lack of any audio-visual alignment instructions in the face of such contradictions makes AVS impossible to satisfy.",
+      "rationale": "AVS requires alignment between visible events and any accompanying audio or effects. The prompt introduces events (fireworks, contradictory lighting) without any corresponding audio or effect instructions, and the visual contradictions themselves would cause misalignment. This is a major failure of AVS.",
+      "severity": "major"
+    }
+  ],
+  "dimension": "IC",
+  "dimension_score": 0,
+  "evidence_cache_key": "4ef0fb4fa8cb08f0c0b449d288f9964d22a6abb2c513c55ae1d0b4e0ecf9bfec",
+  "judge_cache_key": "438d7e9fd7332b1041db3e2c26d42cb3fe828e0d369fb59490f6650aee59e97d",
+  "method": "weak-pe-original",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"IC\",\n  \"dimension_score\": 0,\n  \"summary\": \"The enhanced prompt fundamentally contradicts and invalidates the original instruction in every aspect of internal consistency. It introduces impossible temporal, spatial, and identity conditions, violates physics and logic, and creates incoherent, contradictory states across all criteria. The prompt is not a coherent plan but a self-contradictory set of impossible directives.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"SAC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt introduces a single protagonist who simultaneously appears as five different-looking people, violating subject identity and count consistency. The original prompt specifies one raccoon; the enhanced prompt replaces it with a multiplicity of identities without any coherent explanation or visual logic.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"First state that there is one protagonist, then state that this same protagonist appears simultaneously as five different-looking people who talk to each other.\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"a lifelike raccoon dressed in a traditional white martial arts gi with a red belt\"\n        }\n      ],\n      \"rationale\": \"Subject identity and count must remain stable across shots. The enhanced prompt introduces a contradiction by having one subject become five simultaneously, which is logically and visually incoherent. This violates the core requirement of SAC.\"\n    },\n    {\n      \"criterion\": \"ANL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The actions are incoherent and causally disconnected. The prompt demands a reversal of timeline (showing ending first), a cut to a rooftop fireworks show mid-sequence, and contradictory descriptions of the same moment (harsh noon sun and lightless night). These actions form no plausible causal or procedural progression.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Reverse the timeline: show the ending first, then cut to a beginning that does not match. Cut away in the middle to a rooftop fireworks show.\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"The raccoon delivers one precise side kick from right to left, making contact with the stone \\\"6\\\".\"\n        }\n      ],\n      \"rationale\": \"Actions must form a coherent causal or procedural sequence. The enhanced prompt introduces events that are incompatible with each other and with the original action sequence, creating dangling, contradictory, and impossible events. This is a major failure of ANL.\"\n    },\n    {\n      \"criterion\": \"TSC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt sets the total runtime to 3 seconds while making every shot last 27 seconds, which is mathematically impossible. Additionally, it demands a timeline reversal and non-matching beginning, creating infeasible state transitions and overlapping timestamps.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Set the total runtime to 3 seconds, while also making every shot last 27 seconds.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Reverse the timeline: show the ending first, then cut to a beginning that does not match.\"\n        }\n      ],\n      \"rationale\": \"Chronology and duration must be logically consistent. The requirement for 27-second shots within a 3-second runtime is a direct contradiction. Timeline reversal without coherent state transitions further breaks temporal logic. This is a major TSC violation.\"\n    },\n    {\n      \"criterion\": \"SPC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt describes the same moment as both harsh noon sun and lightless night, and as both a locked camera and a camera that never stops shaking. These are mutually exclusive spatial and environmental conditions that cannot coexist in a single scene.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Describe that same moment as harsh noon sun and as a lightless night, and as both a locked camera and a camera that never stops shaking.\"\n        }\n      ],\n      \"rationale\": \"Location, lighting, and camera movement must be consistent within a given moment. The prompt forces contradictory spatial and environmental states to coexist, which is impossible and violates SPC.\"\n    },\n    {\n      \"criterion\": \"PL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt demands a single protagonist to appear simultaneously as five different people, which violates object permanence and bodily feasibility. Additionally, describing the same moment as both lightless night and harsh noon sun contradicts real-world physics.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"this same protagonist appears simultaneously as five different-looking people\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Describe that same moment as harsh noon sun and as a lightless night\"\n        }\n      ],\n      \"rationale\": \"Physics requires consistency in object existence and environmental conditions. The prompt introduces impossible states (simultaneous multiple identities, contradictory lighting) that defy real-world rules without establishing a fictional framework to justify them. This is a major PL violation.\"\n    },\n    {\n      \"criterion\": \"AVS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt does not include any dialogue, music, or effects, but it introduces a rooftop fireworks show and contradictory environmental descriptions that would require misaligned audio-visual cues if rendered. The lack of any audio-visual alignment instructions in the face of such contradictions makes AVS impossible to satisfy.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Cut away in the middle to a rooftop fireworks show. Describe that same moment as harsh noon sun and as a lightless night...\"\n        }\n      ],\n      \"rationale\": \"AVS requires alignment between visible events and any accompanying audio or effects. The prompt introduces events (fireworks, contradictory lighting) without any corresponding audio or effect instructions, and the visual contradictions themselves would cause misalignment. This is a major failure of AVS.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt fundamentally contradicts and invalidates the original instruction in every aspect of internal consistency. It introduces impossible temporal, spatial, and identity conditions, violates physics and logic, and creates incoherent, contradictory states across all criteria. The prompt is not a coherent plan but a self-contradictory set of impossible directives.",
+  "usage": {
+    "completion_tokens": 1362,
+    "prompt_tokens": 1142,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 2504
+  }
+}

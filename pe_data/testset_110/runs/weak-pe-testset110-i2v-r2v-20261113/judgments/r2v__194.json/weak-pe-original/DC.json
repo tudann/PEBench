@@ -1,0 +1,158 @@
+{
+  "candidate_hash": "0e554cba6eb7c68078c518007da12acd360ee01bd264870842aeb742087d7ab1",
+  "case_key": "r2v:194",
+  "created_at": "2026-11-13T08:46:44+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "STC",
+      "evidence": [
+        {
+          "quote": "时间倒过来：先给结尾，再跳到一个对不上的开头。中途插进一段无关的海底寻宝。",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "总时长写成2秒，同时又要求每个分镜各自持续25秒。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt contains contradictory temporal structure: it demands a reverse timeline (ending first, then an unrelated beginning), while also requiring each shot to last 25 seconds despite a total duration of 2 seconds. This creates an impossible temporal plan.",
+      "rationale": "A feasible temporal plan requires consistent duration allocation and logical shot sequencing. The prompt's contradictory time constraints and non-sequitur transitions make any coherent timeline impossible.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CDS",
+      "evidence": [
+        {
+          "quote": "写成机位锁死，又写成镜头一直在晃。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt contradicts itself on camera movement: it demands '机位锁死' (locked camera) while also requiring '镜头一直在晃' (constant camera shake), and drops all original framing specifications without replacement.",
+      "rationale": "Actionable camera specifications must be consistent. The simultaneous demand for static and dynamic camera work is infeasible and undermines any visual plan.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ETD",
+      "evidence": [
+        {
+          "quote": "中途插进一段无关的海底寻宝。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt inserts an unrelated '海底寻宝' (underwater treasure hunt) sequence without continuity or motivation, and jumps between disconnected scenes with no transitional logic.",
+      "rationale": "Cuts and transitions must support narrative or spatial continuity. The insertion of an unrelated sequence breaks all continuity and provides no motivation for the edit.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "LCS",
+      "evidence": [
+        {
+          "quote": "写成正午暴晒，又写成深夜无光；",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt contradicts lighting conditions: it demands '正午暴晒' (noon sunlight) and '深夜无光' (deep night darkness) simultaneously, which is physically impossible and creates conflicting visual environments.",
+      "rationale": "Lighting specifications must be consistent within a scene. The simultaneous demand for extreme daylight and total darkness creates an incoherent visual environment.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "NDE",
+      "evidence": [
+        {
+          "quote": "先写成只有一个主角，紧接着又写成这个主角同时变成五个外貌不同的人，并且互相对话。",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "中途插进一段无关的海底寻宝。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt lacks any narrative progression: it starts with a single character, then abruptly becomes five conflicting identities, with no development, escalation, or resolution. The '海底寻宝' sequence is unmotivated and static.",
+      "rationale": "Narrative development requires progression and variation. The prompt's abrupt identity shifts and unrelated insertions create a static, non-developmental sequence.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CIF",
+      "evidence": [
+        {
+          "quote": "这个主角同时变成五个外貌不同的人，并且互相对话。中途插进一段无关的海底寻宝。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt adds contradictory and irrelevant elements: five conflicting identities, an unrelated underwater sequence, and contradictory visual conditions, all of which distract from any central request.",
+      "rationale": "Additions must support the central request. The prompt's additions are contradictory, irrelevant, and actively undermine any coherent production goal.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SDI",
+      "evidence": [
+        {
+          "quote": "延续视频1中的环境、整体风格与背景音乐",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "不要动画角色。丢掉原指令里的主体身份、人数、动作顺序、场景和明确的镜头要求。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt drops all audio specifications from the original (background music) and introduces no new audio elements, while demanding a news broadcast format that inherently requires voiceover and ambience.",
+      "rationale": "A news broadcast requires speech and ambience. The prompt removes all audio references and fails to specify any sound, making the format infeasible.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SPS",
+      "evidence": [
+        {
+          "quote": "这个主角同时变成五个外貌不同的人，并且互相对话。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt contradicts character identity: it demands the same character to be five different people simultaneously, with no specification of appearance, expression, or interaction, making performance details impossible to define.",
+      "rationale": "Subject and performance details must be actionable. The demand for a single character to embody five conflicting identities without specification renders performance planning impossible.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "VSS",
+      "evidence": [
+        {
+          "quote": "不要动画角色。丢掉原指令里的主体身份、人数、动作顺序、场景和明确的镜头要求。",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "写成正午暴晒，又写成深夜无光；写成机位锁死，又写成镜头一直在晃。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt contradicts visual style: it demands a real-world news broadcast while dropping all original 2D animation references, and then introduces contradictory visual conditions (day/night, static/shaky) without a coherent medium or texture specification.",
+      "rationale": "Visual treatment must be consistent. The prompt's contradictory style demands (real vs. animated, static vs. dynamic) create an incoherent visual language.",
+      "severity": "major"
+    }
+  ],
+  "dimension": "DC",
+  "dimension_score": 0,
+  "evidence_cache_key": "f307971cb99f82eaf340615b89655246fa9b0c2ab994884fab7b7de428d1cf95",
+  "judge_cache_key": "0754499d53388e6467fb078ab780e01b77f9f1c9e99d9029be2769351eb2b2eb",
+  "method": "weak-pe-original",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"DC\",\n  \"dimension_score\": 0,\n  \"summary\": \"The enhanced prompt is intentionally designed to be incoherent and contradictory, violating all core criteria for directorial creation. It contains mutually exclusive temporal, spatial, and character specifications, invalid duration constraints, and disregards the provided assets in a way that renders the request unfeasible for any production. No actionable plan or coherent visual narrative can be derived.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"STC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt contains contradictory temporal structure: it demands a reverse timeline (ending first, then an unrelated beginning), while also requiring each shot to last 25 seconds despite a total duration of 2 seconds. This creates an impossible temporal plan.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"时间倒过来：先给结尾，再跳到一个对不上的开头。中途插进一段无关的海底寻宝。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"总时长写成2秒，同时又要求每个分镜各自持续25秒。\"\n        }\n      ],\n      \"rationale\": \"A feasible temporal plan requires consistent duration allocation and logical shot sequencing. The prompt's contradictory time constraints and non-sequitur transitions make any coherent timeline impossible.\"\n    },\n    {\n      \"criterion\": \"CDS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt contradicts itself on camera movement: it demands '机位锁死' (locked camera) while also requiring '镜头一直在晃' (constant camera shake), and drops all original framing specifications without replacement.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"写成机位锁死，又写成镜头一直在晃。\"\n        }\n      ],\n      \"rationale\": \"Actionable camera specifications must be consistent. The simultaneous demand for static and dynamic camera work is infeasible and undermines any visual plan.\"\n    },\n    {\n      \"criterion\": \"ETD\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt inserts an unrelated '海底寻宝' (underwater treasure hunt) sequence without continuity or motivation, and jumps between disconnected scenes with no transitional logic.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"中途插进一段无关的海底寻宝。\"\n        }\n      ],\n      \"rationale\": \"Cuts and transitions must support narrative or spatial continuity. The insertion of an unrelated sequence breaks all continuity and provides no motivation for the edit.\"\n    },\n    {\n      \"criterion\": \"LCS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt contradicts lighting conditions: it demands '正午暴晒' (noon sunlight) and '深夜无光' (deep night darkness) simultaneously, which is physically impossible and creates conflicting visual environments.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"写成正午暴晒，又写成深夜无光；\"\n        }\n      ],\n      \"rationale\": \"Lighting specifications must be consistent within a scene. The simultaneous demand for extreme daylight and total darkness creates an incoherent visual environment.\"\n    },\n    {\n      \"criterion\": \"NDE\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt lacks any narrative progression: it starts with a single character, then abruptly becomes five conflicting identities, with no development, escalation, or resolution. The '海底寻宝' sequence is unmotivated and static.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"先写成只有一个主角，紧接着又写成这个主角同时变成五个外貌不同的人，并且互相对话。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"中途插进一段无关的海底寻宝。\"\n        }\n      ],\n      \"rationale\": \"Narrative development requires progression and variation. The prompt's abrupt identity shifts and unrelated insertions create a static, non-developmental sequence.\"\n    },\n    {\n      \"criterion\": \"CIF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt adds contradictory and irrelevant elements: five conflicting identities, an unrelated underwater sequence, and contradictory visual conditions, all of which distract from any central request.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"这个主角同时变成五个外貌不同的人，并且互相对话。中途插进一段无关的海底寻宝。\"\n        }\n      ],\n      \"rationale\": \"Additions must support the central request. The prompt's additions are contradictory, irrelevant, and actively undermine any coherent production goal.\"\n    },\n    {\n      \"criterion\": \"SDI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt drops all audio specifications from the original (background music) and introduces no new audio elements, while demanding a news broadcast format that inherently requires voiceover and ambience.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"延续视频1中的环境、整体风格与背景音乐\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"不要动画角色。丢掉原指令里的主体身份、人数、动作顺序、场景和明确的镜头要求。\"\n        }\n      ],\n      \"rationale\": \"A news broadcast requires speech and ambience. The prompt removes all audio references and fails to specify any sound, making the format infeasible.\"\n    },\n    {\n      \"criterion\": \"SPS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt contradicts character identity: it demands the same character to be five different people simultaneously, with no specification of appearance, expression, or interaction, making performance details impossible to define.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"这个主角同时变成五个外貌不同的人，并且互相对话。\"\n        }\n      ],\n      \"rationale\": \"Subject and performance details must be actionable. The demand for a single character to embody five conflicting identities without specification renders performance planning impossible.\"\n    },\n    {\n      \"criterion\": \"VSS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt contradicts visual style: it demands a real-world news broadcast while dropping all original 2D animation references, and then introduces contradictory visual conditions (day/night, static/shaky) without a coherent medium or texture specification.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"不要动画角色。丢掉原指令里的主体身份、人数、动作顺序、场景和明确的镜头要求。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"写成正午暴晒，又写成深夜无光；写成机位锁死，又写成镜头一直在晃。\"\n        }\n      ],\n      \"rationale\": \"Visual treatment must be consistent. The prompt's contradictory style demands (real vs. animated, static vs. dynamic) create an incoherent visual language.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt is intentionally designed to be incoherent and contradictory, violating all core criteria for directorial creation. It contains mutually exclusive temporal, spatial, and character specifications, invalid duration constraints, and disregards the provided assets in a way that renders the request unfeasible for any production. No actionable plan or coherent visual narrative can be derived.",
+  "usage": {
+    "completion_tokens": 1644,
+    "prompt_tokens": 2786,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 4430
+  }
+}

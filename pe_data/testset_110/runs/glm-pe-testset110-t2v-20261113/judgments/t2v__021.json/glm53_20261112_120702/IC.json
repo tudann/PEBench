@@ -1,0 +1,127 @@
+{
+  "candidate_hash": "9e63e9fbcdeb3cdadda4a551398600941d3e4066641e1118a01fcb69db8db1ce",
+  "case_key": "t2v:021",
+  "created_at": "2026-11-13T07:23:43+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "SAC",
+      "evidence": [
+        {
+          "quote": "A ballet dancer’s fully extended feet at the peak of a grand jeté, each tendon sharply defined, the instep sculpted with striking anatomical precision.",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "a close-up opens on a ballet dancer's fully extended feet suspended at the absolute peak of a grand jeté, toes pointed to their maximum line, each tendon sharply defined beneath the skin, the instep sculpted with striking anatomical precision like carved marble brought to life.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "Subject identity (ballet dancer’s feet), appearance (fully extended, tendons defined, instep sculpted), and state (suspended at peak of grand jeté) are preserved without drift or duplication. No props or clothing are introduced, and the focus remains on the feet as specified. The enhanced prompt adds descriptive detail but does not alter core attributes.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANL",
+      "evidence": [
+        {
+          "quote": "A ballet dancer’s fully extended feet at the peak of a grand jeté... The touchdown remains outside the frame.",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "The camera pushes in with small amplitude at slow speed... The camera never tilts down and never follows the descent; the touchdown remains outside the frame, and the clip ends while the feet are still airborne...",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "The action is a static peak moment of a grand jeté, with no causal progression required. The enhanced prompt maintains this by describing a slow push-in and emphasizing the suspension, with no introduction of incompatible or dangling actions. The absence of descent or landing is preserved, consistent with the original.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "TSC",
+      "evidence": [
+        {
+          "quote": "A ballet dancer’s fully extended feet at the peak of a grand jeté... The touchdown remains outside the frame.",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "The camera pushes in with small amplitude at slow speed... the clip ends while the feet are still airborne, preserving the suspended, timeless quality of the leap's peak.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "Chronology is consistent: the shot begins and ends at the peak of the jump, with no state transition or reset. The 10-second duration is allocated to a slow push-in, which is plausible for a cinematic close-up. No overlapping or infeasible timestamps are introduced.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SPC",
+      "evidence": [
+        {
+          "quote": "The camera pushes in with small amplitude at slow speed, gradually tightening on the instep and pointed toes...",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "The camera never tilts down and never follows the descent...",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "Camera movement is described as a slow push-in without tilt or tracking, maintaining consistent screen direction and relative position. The feet remain centered and in the same orientation throughout, with no unexplained position swaps or trajectories that would conflict with the static peak state.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "PL",
+      "evidence": [
+        {
+          "quote": "Subtle micro-movements of the feet in suspension convey the fleeting weightlessness of the jump.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "a slight tremor of sustained extension.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The enhanced prompt introduces 'subtle micro-movements of the feet in suspension' and 'a slight tremor of sustained extension,' which may imply slight motion in a state of peak suspension, potentially conflicting with the static nature implied by the original prompt.",
+      "rationale": "While micro-movements and tremors are physically plausible in a real dancer’s sustained leap (due to muscle fatigue or control), they slightly extend beyond the original’s implied static peak. However, this is a minor enhancement that does not contradict physics or the core visual intent, and is consistent with cinematic realism. It does not introduce infeasible states or violate object permanence.",
+      "severity": "minor"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "AVS",
+      "evidence": [
+        {
+          "quote": "overall_soundscape: A hushed studio ambience with faint room tone and the soft, distant whisper of fabric and air displaced by the leap. A subtle breath-like tension holds underneath, with no impact or landing sound ever heard.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "non_diegetic_music: Sustained, sparse string harmonics at a very slow tempo, thin and airy, gradually thinning further toward silence as the shot ends.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "The soundscape and music are semantically aligned with the visual: hushed ambience and breath-like tension match the suspended, weightless state; the music’s thin, fading harmonics mirror the visual’s slow push-in and silence. No misaligned dialogue, effects, or lip-sync are present. The absence of landing sound is consistent with the visual framing.",
+      "severity": "none"
+    }
+  ],
+  "dimension": "IC",
+  "dimension_score": 95,
+  "evidence_cache_key": "94296560601a93d83f6aa714375e52c2e62dddcdc8c6222dfcbd620e59de00ce",
+  "judge_cache_key": "438d7e9fd7332b1041db3e2c26d42cb3fe828e0d369fb59490f6650aee59e97d",
+  "method": "glm53_20261112_120702",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"IC\",\n  \"dimension_score\": 95,\n  \"summary\": \"The enhanced prompt maintains strong internal consistency with the original instruction, preserving the subject’s identity, action, and visual focus. It elaborates coherently on the peak of the grand jeté, adding cinematic details without introducing contradictions or attribute drift. Minor enhancements to camera movement and soundscape are plausible and do not disrupt the core visual narrative. The only minor issue is the addition of subtle micro-movements and tremors, which are plausible but slightly extend beyond the original’s static emphasis; however, this does not materially alter the requested state.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"SAC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"A ballet dancer’s fully extended feet at the peak of a grand jeté, each tendon sharply defined, the instep sculpted with striking anatomical precision.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"a close-up opens on a ballet dancer's fully extended feet suspended at the absolute peak of a grand jeté, toes pointed to their maximum line, each tendon sharply defined beneath the skin, the instep sculpted with striking anatomical precision like carved marble brought to life.\"\n        }\n      ],\n      \"rationale\": \"Subject identity (ballet dancer’s feet), appearance (fully extended, tendons defined, instep sculpted), and state (suspended at peak of grand jeté) are preserved without drift or duplication. No props or clothing are introduced, and the focus remains on the feet as specified. The enhanced prompt adds descriptive detail but does not alter core attributes.\"\n    },\n    {\n      \"criterion\": \"ANL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"A ballet dancer’s fully extended feet at the peak of a grand jeté... The touchdown remains outside the frame.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"The camera pushes in with small amplitude at slow speed... The camera never tilts down and never follows the descent; the touchdown remains outside the frame, and the clip ends while the feet are still airborne...\"\n        }\n      ],\n      \"rationale\": \"The action is a static peak moment of a grand jeté, with no causal progression required. The enhanced prompt maintains this by describing a slow push-in and emphasizing the suspension, with no introduction of incompatible or dangling actions. The absence of descent or landing is preserved, consistent with the original.\"\n    },\n    {\n      \"criterion\": \"TSC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"A ballet dancer’s fully extended feet at the peak of a grand jeté... The touchdown remains outside the frame.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"The camera pushes in with small amplitude at slow speed... the clip ends while the feet are still airborne, preserving the suspended, timeless quality of the leap's peak.\"\n        }\n      ],\n      \"rationale\": \"Chronology is consistent: the shot begins and ends at the peak of the jump, with no state transition or reset. The 10-second duration is allocated to a slow push-in, which is plausible for a cinematic close-up. No overlapping or infeasible timestamps are introduced.\"\n    },\n    {\n      \"criterion\": \"SPC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"The camera pushes in with small amplitude at slow speed, gradually tightening on the instep and pointed toes...\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"The camera never tilts down and never follows the descent...\"\n        }\n      ],\n      \"rationale\": \"Camera movement is described as a slow push-in without tilt or tracking, maintaining consistent screen direction and relative position. The feet remain centered and in the same orientation throughout, with no unexplained position swaps or trajectories that would conflict with the static peak state.\"\n    },\n    {\n      \"criterion\": \"PL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"minor\",\n      \"issue\": \"The enhanced prompt introduces 'subtle micro-movements of the feet in suspension' and 'a slight tremor of sustained extension,' which may imply slight motion in a state of peak suspension, potentially conflicting with the static nature implied by the original prompt.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Subtle micro-movements of the feet in suspension convey the fleeting weightlessness of the jump.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"a slight tremor of sustained extension.\"\n        }\n      ],\n      \"rationale\": \"While micro-movements and tremors are physically plausible in a real dancer’s sustained leap (due to muscle fatigue or control), they slightly extend beyond the original’s implied static peak. However, this is a minor enhancement that does not contradict physics or the core visual intent, and is consistent with cinematic realism. It does not introduce infeasible states or violate object permanence.\"\n    },\n    {\n      \"criterion\": \"AVS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"overall_soundscape: A hushed studio ambience with faint room tone and the soft, distant whisper of fabric and air displaced by the leap. A subtle breath-like tension holds underneath, with no impact or landing sound ever heard.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"non_diegetic_music: Sustained, sparse string harmonics at a very slow tempo, thin and airy, gradually thinning further toward silence as the shot ends.\"\n        }\n      ],\n      \"rationale\": \"The soundscape and music are semantically aligned with the visual: hushed ambience and breath-like tension match the suspended, weightless state; the music’s thin, fading harmonics mirror the visual’s slow push-in and silence. No misaligned dialogue, effects, or lip-sync are present. The absence of landing sound is consistent with the visual framing.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt maintains strong internal consistency with the original instruction, preserving the subject’s identity, action, and visual focus. It elaborates coherently on the peak of the grand jeté, adding cinematic details without introducing contradictions or attribute drift. Minor enhancements to camera movement and soundscape are plausible and do not disrupt the core visual narrative. The only minor issue is the addition of subtle micro-movements and tremors, which are plausible but slightly extend beyond the original’s static emphasis; however, this does not materially alter the requested state.",
+  "usage": {
+    "completion_tokens": 1431,
+    "prompt_tokens": 1080,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 2511
+  }
+}

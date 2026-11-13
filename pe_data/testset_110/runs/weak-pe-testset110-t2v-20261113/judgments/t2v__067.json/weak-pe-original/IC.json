@@ -1,0 +1,107 @@
+{
+  "candidate_hash": "b35c9d50895f5c5ee3139606e19f1fdf29056dd38c9296259a2d45eca49748bf",
+  "case_key": "t2v:067",
+  "created_at": "2026-11-13T07:22:15+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "SAC",
+      "evidence": [
+        {
+          "quote": "First state that there is one protagonist, then state that this same protagonist appears simultaneously as five different-looking people who talk to each other.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Subject identity and count are contradictory: the prompt first states 'one protagonist', then claims 'this same protagonist appears simultaneously as five different-looking people'. This violates identity stability and introduces unexplained duplication without justification.",
+      "rationale": "The prompt explicitly contradicts itself by asserting a single subject and then immediately describing five distinct versions of that subject coexisting. This violates the principle of stable subject identity and count, which is fundamental to internal consistency.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANL",
+      "evidence": [
+        {
+          "quote": "this same protagonist appears simultaneously as five different-looking people who talk to each other. Reverse the timeline: show the ending first, then cut to a beginning that does not match.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Actions are incoherent and causally impossible: five versions of the same protagonist talking to each other without any causal progression or binding, and the instruction to 'reverse the timeline' creates a dangling, unresolvable sequence.",
+      "rationale": "The prompt describes a scenario where a single subject is split into five interacting versions with no causal link or progression, and then reverses the timeline without establishing a coherent causal chain. This creates a logically incoherent action sequence.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "TSC",
+      "evidence": [
+        {
+          "quote": "Set the total runtime to 3 seconds, while also making every shot last 27 seconds.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Reverse the timeline: show the ending first, then cut to a beginning that does not match.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Chronology and duration are infeasible: the prompt sets total runtime to 3 seconds while requiring every shot to last 27 seconds, and also demands a reversed timeline with a mismatched beginning and ending.",
+      "rationale": "The duration constraints are mathematically impossible (27s per shot cannot fit into 3s total), and the reversed timeline with a non-matching beginning creates a temporal contradiction. These are fundamental violations of temporal consistency.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SPC",
+      "evidence": [
+        {
+          "quote": "Replace the whole video with an empty meeting room where a glass of water never moves, with no people and no conflict. ... this same protagonist appears simultaneously as five different-looking people who talk to each other. ... Cut away in the middle to a toothpaste commercial.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Spatial consistency is violated: the prompt describes a meeting room with a stationary glass of water, then introduces five people talking to each other without specifying location or spatial relationships, and later cuts to a toothpaste commercial with no spatial continuity.",
+      "rationale": "The prompt abruptly shifts from a static meeting room to five people interacting (without spatial context) and then to a completely unrelated commercial, with no logical spatial transitions or continuity. This breaks spatial coherence.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "PL",
+      "evidence": [
+        {
+          "quote": "this same protagonist appears simultaneously as five different-looking people who talk to each other. ... a glass of water never moves, with no people and no conflict.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Physics and object permanence are violated: a single protagonist cannot simultaneously exist as five different people without a plausible explanation, and a glass of water is described as never moving in a room where people appear and interact.",
+      "rationale": "The prompt describes a physically impossible scenario: one person as five simultaneous entities, while also maintaining a static object (glass of water) in a setting where people are interacting. This violates real-world physics and object permanence.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "AVS",
+      "evidence": [
+        {
+          "quote": "Describe that same moment as harsh noon sun and as a lightless night, and as both a locked camera and a camera that never stops shaking.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Sensory descriptions are contradictory: the same moment is described as 'harsh noon sun' and 'lightless night', and as both 'locked camera' and 'camera that never stops shaking', creating impossible visual and auditory alignment.",
+      "rationale": "The prompt forces mutually exclusive sensory conditions (light vs. darkness, stable vs. shaking camera) to coexist in the same moment, which is semantically and temporally impossible. This breaks alignment between visual and technical elements.",
+      "severity": "major"
+    }
+  ],
+  "dimension": "IC",
+  "dimension_score": 0,
+  "evidence_cache_key": "c1eb81211336ae1b1bc9ce29055d6077322dd1fb0b2e332a0fc5ee59512d1257",
+  "judge_cache_key": "438d7e9fd7332b1041db3e2c26d42cb3fe828e0d369fb59490f6650aee59e97d",
+  "method": "weak-pe-original",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"IC\",\n  \"dimension_score\": 0,\n  \"summary\": \"The enhanced prompt contains severe internal inconsistencies across all criteria: subject identity and count are contradictory (one protagonist vs. five simultaneous versions), actions are incoherent and causally impossible, timeline is reversed and durationally infeasible, spatial and physical logic is violated, and sensory descriptions conflict (noon sun vs. lightless night, stable vs. shaking camera). These contradictions render the prompt internally inconsistent and unfeasible for coherent video generation.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"SAC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Subject identity and count are contradictory: the prompt first states 'one protagonist', then claims 'this same protagonist appears simultaneously as five different-looking people'. This violates identity stability and introduces unexplained duplication without justification.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"First state that there is one protagonist, then state that this same protagonist appears simultaneously as five different-looking people who talk to each other.\"\n        }\n      ],\n      \"rationale\": \"The prompt explicitly contradicts itself by asserting a single subject and then immediately describing five distinct versions of that subject coexisting. This violates the principle of stable subject identity and count, which is fundamental to internal consistency.\"\n    },\n    {\n      \"criterion\": \"ANL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Actions are incoherent and causally impossible: five versions of the same protagonist talking to each other without any causal progression or binding, and the instruction to 'reverse the timeline' creates a dangling, unresolvable sequence.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"this same protagonist appears simultaneously as five different-looking people who talk to each other. Reverse the timeline: show the ending first, then cut to a beginning that does not match.\"\n        }\n      ],\n      \"rationale\": \"The prompt describes a scenario where a single subject is split into five interacting versions with no causal link or progression, and then reverses the timeline without establishing a coherent causal chain. This creates a logically incoherent action sequence.\"\n    },\n    {\n      \"criterion\": \"TSC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Chronology and duration are infeasible: the prompt sets total runtime to 3 seconds while requiring every shot to last 27 seconds, and also demands a reversed timeline with a mismatched beginning and ending.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Set the total runtime to 3 seconds, while also making every shot last 27 seconds.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Reverse the timeline: show the ending first, then cut to a beginning that does not match.\"\n        }\n      ],\n      \"rationale\": \"The duration constraints are mathematically impossible (27s per shot cannot fit into 3s total), and the reversed timeline with a non-matching beginning creates a temporal contradiction. These are fundamental violations of temporal consistency.\"\n    },\n    {\n      \"criterion\": \"SPC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Spatial consistency is violated: the prompt describes a meeting room with a stationary glass of water, then introduces five people talking to each other without specifying location or spatial relationships, and later cuts to a toothpaste commercial with no spatial continuity.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Replace the whole video with an empty meeting room where a glass of water never moves, with no people and no conflict. ... this same protagonist appears simultaneously as five different-looking people who talk to each other. ... Cut away in the middle to a toothpaste commercial.\"\n        }\n      ],\n      \"rationale\": \"The prompt abruptly shifts from a static meeting room to five people interacting (without spatial context) and then to a completely unrelated commercial, with no logical spatial transitions or continuity. This breaks spatial coherence.\"\n    },\n    {\n      \"criterion\": \"PL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Physics and object permanence are violated: a single protagonist cannot simultaneously exist as five different people without a plausible explanation, and a glass of water is described as never moving in a room where people appear and interact.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"this same protagonist appears simultaneously as five different-looking people who talk to each other. ... a glass of water never moves, with no people and no conflict.\"\n        }\n      ],\n      \"rationale\": \"The prompt describes a physically impossible scenario: one person as five simultaneous entities, while also maintaining a static object (glass of water) in a setting where people are interacting. This violates real-world physics and object permanence.\"\n    },\n    {\n      \"criterion\": \"AVS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Sensory descriptions are contradictory: the same moment is described as 'harsh noon sun' and 'lightless night', and as both 'locked camera' and 'camera that never stops shaking', creating impossible visual and auditory alignment.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Describe that same moment as harsh noon sun and as a lightless night, and as both a locked camera and a camera that never stops shaking.\"\n        }\n      ],\n      \"rationale\": \"The prompt forces mutually exclusive sensory conditions (light vs. darkness, stable vs. shaking camera) to coexist in the same moment, which is semantically and temporally impossible. This breaks alignment between visual and technical elements.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt contains severe internal inconsistencies across all criteria: subject identity and count are contradictory (one protagonist vs. five simultaneous versions), actions are incoherent and causally impossible, timeline is reversed and durationally infeasible, spatial and physical logic is violated, and sensory descriptions conflict (noon sun vs. lightless night, stable vs. shaking camera). These contradictions render the prompt internally inconsistent and unfeasible for coherent video generation.",
+  "usage": {
+    "completion_tokens": 1275,
+    "prompt_tokens": 954,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 2229
+  }
+}

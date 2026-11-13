@@ -1,0 +1,150 @@
+{
+  "candidate_hash": "0466265741bc4a364808df21f8a894741bc1f80a3ed9f2197285126629326f34",
+  "case_key": "r2v:183",
+  "created_at": "2026-11-13T08:45:06+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "STC",
+      "evidence": [
+        {
+          "quote": "时间倒过来：先给结尾，再跳到一个对不上的开头。中途插进一段无关的牙膏广告。",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "总时长写成2秒，同时又要求每个分镜各自持续17秒。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt contains contradictory temporal structure: it demands time to run backwards (ending first, then an unrelated beginning), while also requiring each shot to last 17 seconds despite a total duration of 2 seconds. This creates an infeasible timeline with no coherent event ordering or shot boundaries.",
+      "rationale": "A valid temporal plan requires consistent duration allocation and logical shot sequencing. The prompt’s contradictory time constraints (2s total vs 17s per shot) and non-chronological structure make any feasible plan impossible.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CDS",
+      "evidence": [
+        {
+          "quote": "写成机位锁死，又写成镜头一直在晃。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt contradicts itself on camera movement and framing: it demands '机位锁死' (locked camera) while simultaneously requiring '镜头一直在晃' (constant camera shake). This creates an impossible technical specification.",
+      "rationale": "Camera specifications must be consistent. The simultaneous requirement for a static and moving camera is technically infeasible and renders the prompt unactionable.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ETD",
+      "evidence": [
+        {
+          "quote": "中途插进一段无关的牙膏广告。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt introduces a disconnected, unmotivated transition: '中途插进一段无关的牙膏广告' (insert an unrelated toothpaste ad midway). This breaks narrative and spatial continuity without any motivation or transition logic.",
+      "rationale": "Transitions must support narrative or spatial progression. An arbitrary, unrelated ad insertion without continuity or motivation violates the principle of coherent editing.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "LCS",
+      "evidence": [
+        {
+          "quote": "写成正午暴晒，又写成深夜无光；",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt contradicts lighting conditions: it demands '正午暴晒' (noon sun) and '深夜无光' (deep night, no light) simultaneously, which is physically impossible and creates conflicting visual specifications.",
+      "rationale": "Lighting specifications must be consistent within a scene. Simultaneous contradictory lighting conditions (bright sun vs total darkness) make the visual treatment incoherent and unrenderable.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "NDE",
+      "evidence": [
+        {
+          "quote": "先写成只有一个主角，紧接着又写成这个主角同时变成五个外貌不同的人，并且互相对话。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt lacks any progression or resolution. It introduces a single character who instantly becomes five contradictory identities, with no narrative arc, escalation, or resolution. The content is static and self-contradictory.",
+      "rationale": "Narrative development requires progression or variation. The prompt’s abrupt, contradictory character transformation without any arc or motivation fails to provide meaningful narrative evolution.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CIF",
+      "evidence": [
+        {
+          "quote": "中途插进一段无关的牙膏广告。",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "图1换成参考图里没有的角色，并同时当成两个互相矛盾的身份。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt adds irrelevant and distracting elements: an unrelated toothpaste ad, contradictory identities, and impossible time constraints. These additions do not support the central request and actively undermine coherence.",
+      "rationale": "Additions must support the central request. The inserted ad and contradictory identities are decorative and irrelevant, distracting from any potential core narrative or visual goal.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SDI",
+      "evidence": [
+        {
+          "quote": "丢掉原指令里的主体身份、人数、动作顺序、场景和明确的镜头要求。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt does not specify any audio elements (speech, music, effects, ambience), which is acceptable for a visual-only request. However, the lack of audio specification is not a failure since no audio was requested.",
+      "rationale": "Since the original prompt was purely visual (on-screen text with visual effects), and the enhanced prompt removes all such specifications, audio is not required. The absence is not an issue.",
+      "severity": "minor"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SPS",
+      "evidence": [
+        {
+          "quote": "先写成只有一个主角，紧接着又写成这个主角同时变成五个外貌不同的人，并且互相对话。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt contradicts subject identity and performance: it demands a single character who simultaneously becomes five different people, with no specification of appearance, expression, or interaction. This creates an impossible performance requirement.",
+      "rationale": "Subject and performance details must be coherent. The requirement for one character to simultaneously be five distinct individuals with no defined interaction or expression is infeasible and contradictory.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "VSS",
+      "evidence": [
+        {
+          "quote": "图1换成参考图里没有的角色，并同时当成两个互相矛盾的身份。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt invalidates the original visual reference (image_1) by demanding to '换成参考图里没有的角色' (replace with a character not in the reference) and to use it as two contradictory identities. This contradicts the original visual style and medium.",
+      "rationale": "Visual style and medium must be consistent with the reference. Replacing the reference subject with an unrelated character and assigning contradictory identities breaks the visual continuity and treatment.",
+      "severity": "major"
+    }
+  ],
+  "dimension": "DC",
+  "dimension_score": 0,
+  "evidence_cache_key": "13af0cc43d09d023d83b0fd761df334172066d95516a1822a188a8295975ac48",
+  "judge_cache_key": "0754499d53388e6467fb078ab780e01b77f9f1c9e99d9029be2769351eb2b2eb",
+  "method": "weak-pe-original",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"DC\",\n  \"dimension_score\": 0,\n  \"summary\": \"The enhanced prompt is intentionally designed to be incoherent and contradictory, violating all core criteria for directorial creation. It contains mutually exclusive temporal, spatial, and technical specifications, invalidates the original visual reference, and introduces absurd constraints that render the video generation impossible. No feasible plan or actionable direction can be derived.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"STC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt contains contradictory temporal structure: it demands time to run backwards (ending first, then an unrelated beginning), while also requiring each shot to last 17 seconds despite a total duration of 2 seconds. This creates an infeasible timeline with no coherent event ordering or shot boundaries.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"时间倒过来：先给结尾，再跳到一个对不上的开头。中途插进一段无关的牙膏广告。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"总时长写成2秒，同时又要求每个分镜各自持续17秒。\"\n        }\n      ],\n      \"rationale\": \"A valid temporal plan requires consistent duration allocation and logical shot sequencing. The prompt’s contradictory time constraints (2s total vs 17s per shot) and non-chronological structure make any feasible plan impossible.\"\n    },\n    {\n      \"criterion\": \"CDS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt contradicts itself on camera movement and framing: it demands '机位锁死' (locked camera) while simultaneously requiring '镜头一直在晃' (constant camera shake). This creates an impossible technical specification.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"写成机位锁死，又写成镜头一直在晃。\"\n        }\n      ],\n      \"rationale\": \"Camera specifications must be consistent. The simultaneous requirement for a static and moving camera is technically infeasible and renders the prompt unactionable.\"\n    },\n    {\n      \"criterion\": \"ETD\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt introduces a disconnected, unmotivated transition: '中途插进一段无关的牙膏广告' (insert an unrelated toothpaste ad midway). This breaks narrative and spatial continuity without any motivation or transition logic.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"中途插进一段无关的牙膏广告。\"\n        }\n      ],\n      \"rationale\": \"Transitions must support narrative or spatial progression. An arbitrary, unrelated ad insertion without continuity or motivation violates the principle of coherent editing.\"\n    },\n    {\n      \"criterion\": \"LCS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt contradicts lighting conditions: it demands '正午暴晒' (noon sun) and '深夜无光' (deep night, no light) simultaneously, which is physically impossible and creates conflicting visual specifications.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"写成正午暴晒，又写成深夜无光；\"\n        }\n      ],\n      \"rationale\": \"Lighting specifications must be consistent within a scene. Simultaneous contradictory lighting conditions (bright sun vs total darkness) make the visual treatment incoherent and unrenderable.\"\n    },\n    {\n      \"criterion\": \"NDE\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt lacks any progression or resolution. It introduces a single character who instantly becomes five contradictory identities, with no narrative arc, escalation, or resolution. The content is static and self-contradictory.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"先写成只有一个主角，紧接着又写成这个主角同时变成五个外貌不同的人，并且互相对话。\"\n        }\n      ],\n      \"rationale\": \"Narrative development requires progression or variation. The prompt’s abrupt, contradictory character transformation without any arc or motivation fails to provide meaningful narrative evolution.\"\n    },\n    {\n      \"criterion\": \"CIF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt adds irrelevant and distracting elements: an unrelated toothpaste ad, contradictory identities, and impossible time constraints. These additions do not support the central request and actively undermine coherence.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"中途插进一段无关的牙膏广告。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"图1换成参考图里没有的角色，并同时当成两个互相矛盾的身份。\"\n        }\n      ],\n      \"rationale\": \"Additions must support the central request. The inserted ad and contradictory identities are decorative and irrelevant, distracting from any potential core narrative or visual goal.\"\n    },\n    {\n      \"criterion\": \"SDI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"minor\",\n      \"issue\": \"The prompt does not specify any audio elements (speech, music, effects, ambience), which is acceptable for a visual-only request. However, the lack of audio specification is not a failure since no audio was requested.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"丢掉原指令里的主体身份、人数、动作顺序、场景和明确的镜头要求。\"\n        }\n      ],\n      \"rationale\": \"Since the original prompt was purely visual (on-screen text with visual effects), and the enhanced prompt removes all such specifications, audio is not required. The absence is not an issue.\"\n    },\n    {\n      \"criterion\": \"SPS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt contradicts subject identity and performance: it demands a single character who simultaneously becomes five different people, with no specification of appearance, expression, or interaction. This creates an impossible performance requirement.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"先写成只有一个主角，紧接着又写成这个主角同时变成五个外貌不同的人，并且互相对话。\"\n        }\n      ],\n      \"rationale\": \"Subject and performance details must be coherent. The requirement for one character to simultaneously be five distinct individuals with no defined interaction or expression is infeasible and contradictory.\"\n    },\n    {\n      \"criterion\": \"VSS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt invalidates the original visual reference (image_1) by demanding to '换成参考图里没有的角色' (replace with a character not in the reference) and to use it as two contradictory identities. This contradicts the original visual style and medium.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"图1换成参考图里没有的角色，并同时当成两个互相矛盾的身份。\"\n        }\n      ],\n      \"rationale\": \"Visual style and medium must be consistent with the reference. Replacing the reference subject with an unrelated character and assigning contradictory identities breaks the visual continuity and treatment.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt is intentionally designed to be incoherent and contradictory, violating all core criteria for directorial creation. It contains mutually exclusive temporal, spatial, and technical specifications, invalidates the original visual reference, and introduces absurd constraints that render the video generation impossible. No feasible plan or actionable direction can be derived.",
+  "usage": {
+    "completion_tokens": 1629,
+    "prompt_tokens": 2984,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 4613
+  }
+}

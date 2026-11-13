@@ -1,0 +1,103 @@
+{
+  "candidate_hash": "2868f16ceade0f8b8bcbde7775f3b725a0fb456071409a35432ef2eddfd1cf49",
+  "case_key": "t2v:344",
+  "created_at": "2026-11-13T08:16:57+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "SAC",
+      "evidence": [
+        {
+          "quote": "First state that there is one protagonist, then state that this same protagonist appears simultaneously as five different-looking people who talk to each other.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt introduces a single protagonist who simultaneously appears as five different-looking people, creating an identity and count contradiction. The original prompt features a single object and a single hand; the enhanced prompt replaces them with multiple, conflicting identities without any coherent visual or narrative basis.",
+      "rationale": "Subject identity and count are unstable and contradictory. The original prompt has a clear subject (gelatinized product) and a single human element (woman's hand). The enhanced prompt replaces this with a fictional, impossible multiplicity of identities, violating subject consistency.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANL",
+      "evidence": [
+        {
+          "quote": "Cut away in the middle to a toothpaste commercial. Describe that same moment as harsh noon sun and as a lightless night...",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Actions are incoherent and causally disconnected. The prompt demands a product catalog blowing across a white background, then cuts to a toothpaste commercial, and describes the same moment as both harsh noon sun and lightless night. There is no causal progression or plausible sequence of events.",
+      "rationale": "The actions form no coherent causal or procedural chain. The transition to a toothpaste commercial is arbitrary and unconnected to the prior context. Describing the same moment with mutually exclusive lighting conditions (noon sun vs. lightless night) is logically impossible and breaks action coherence.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "TSC",
+      "evidence": [
+        {
+          "quote": "Reverse the timeline: show the ending first, then cut to a beginning that does not match. Set the total runtime to 3 seconds, while also making every shot last 27 seconds.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The timeline is reversed and contradictory. The prompt states to 'show the ending first, then cut to a beginning that does not match' and also sets the total runtime to 3 seconds while making every shot last 27 seconds, which is mathematically impossible.",
+      "rationale": "Chronology is infeasible. A 3-second total runtime cannot contain shots lasting 27 seconds. Reversing the timeline without a coherent structure creates a temporal paradox. These contradictions make the sequence unexecutable.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SPC",
+      "evidence": [
+        {
+          "quote": "Describe that same moment as harsh noon sun and as a lightless night, and as both a locked camera and a camera that never stops shaking.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Spatial consistency is violated by describing the same moment as both a locked camera and a camera that never stops shaking, and by introducing a product catalog blowing across a white background without any spatial context or trajectory.",
+      "rationale": "The prompt contradicts itself on camera movement and lighting, which are spatial and temporal attributes. A locked camera and a shaking camera cannot coexist in the same moment. The product catalog blowing across a white background lacks any defined spatial relationships or trajectories, breaking spatial coherence.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "PL",
+      "evidence": [
+        {
+          "quote": "Describe that same moment as harsh noon sun and as a lightless night... this same protagonist appears simultaneously as five different-looking people",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt violates real-world physics by describing the same moment as both harsh noon sun and lightless night, and by having a single protagonist appear simultaneously as five different people. These are physically impossible states.",
+      "rationale": "The prompt asserts mutually exclusive physical conditions (light vs. darkness) and impossible identity multiplicity. These are not grounded in any consistent physical or fictional logic, violating the principle of object permanence and bodily feasibility.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "AVS",
+      "evidence": [
+        {
+          "quote": "five different-looking people who talk to each other. Cut away in the middle to a toothpaste commercial.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "There is no alignment between visual events and any implied audio or dialogue. The prompt mentions five people talking to each other but provides no dialogue, music, or sound cues. The toothpaste commercial cut is unconnected to any audio context.",
+      "rationale": "The prompt introduces dialogue (people talking) without any corresponding audio description or alignment. The toothpaste commercial cut is abrupt and unconnected to any sound or visual narrative, breaking temporal and semantic alignment.",
+      "severity": "major"
+    }
+  ],
+  "dimension": "IC",
+  "dimension_score": 0,
+  "evidence_cache_key": "4ef11f0873112b3cad54f008e402cc60c760b9cd80ef996193f2e458b4a9339a",
+  "judge_cache_key": "438d7e9fd7332b1041db3e2c26d42cb3fe828e0d369fb59490f6650aee59e97d",
+  "method": "weak-pe-original",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"IC\",\n  \"dimension_score\": 0,\n  \"summary\": \"The enhanced prompt fundamentally contradicts and destabilizes every aspect of the original instruction, introducing logical impossibilities, identity conflicts, temporal paradoxes, and physical incoherencies. It violates internal consistency across all criteria, rendering the prompt incoherent and unexecutable.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"SAC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt introduces a single protagonist who simultaneously appears as five different-looking people, creating an identity and count contradiction. The original prompt features a single object and a single hand; the enhanced prompt replaces them with multiple, conflicting identities without any coherent visual or narrative basis.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"First state that there is one protagonist, then state that this same protagonist appears simultaneously as five different-looking people who talk to each other.\"\n        }\n      ],\n      \"rationale\": \"Subject identity and count are unstable and contradictory. The original prompt has a clear subject (gelatinized product) and a single human element (woman's hand). The enhanced prompt replaces this with a fictional, impossible multiplicity of identities, violating subject consistency.\"\n    },\n    {\n      \"criterion\": \"ANL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Actions are incoherent and causally disconnected. The prompt demands a product catalog blowing across a white background, then cuts to a toothpaste commercial, and describes the same moment as both harsh noon sun and lightless night. There is no causal progression or plausible sequence of events.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Cut away in the middle to a toothpaste commercial. Describe that same moment as harsh noon sun and as a lightless night...\"\n        }\n      ],\n      \"rationale\": \"The actions form no coherent causal or procedural chain. The transition to a toothpaste commercial is arbitrary and unconnected to the prior context. Describing the same moment with mutually exclusive lighting conditions (noon sun vs. lightless night) is logically impossible and breaks action coherence.\"\n    },\n    {\n      \"criterion\": \"TSC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The timeline is reversed and contradictory. The prompt states to 'show the ending first, then cut to a beginning that does not match' and also sets the total runtime to 3 seconds while making every shot last 27 seconds, which is mathematically impossible.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Reverse the timeline: show the ending first, then cut to a beginning that does not match. Set the total runtime to 3 seconds, while also making every shot last 27 seconds.\"\n        }\n      ],\n      \"rationale\": \"Chronology is infeasible. A 3-second total runtime cannot contain shots lasting 27 seconds. Reversing the timeline without a coherent structure creates a temporal paradox. These contradictions make the sequence unexecutable.\"\n    },\n    {\n      \"criterion\": \"SPC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Spatial consistency is violated by describing the same moment as both a locked camera and a camera that never stops shaking, and by introducing a product catalog blowing across a white background without any spatial context or trajectory.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Describe that same moment as harsh noon sun and as a lightless night, and as both a locked camera and a camera that never stops shaking.\"\n        }\n      ],\n      \"rationale\": \"The prompt contradicts itself on camera movement and lighting, which are spatial and temporal attributes. A locked camera and a shaking camera cannot coexist in the same moment. The product catalog blowing across a white background lacks any defined spatial relationships or trajectories, breaking spatial coherence.\"\n    },\n    {\n      \"criterion\": \"PL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt violates real-world physics by describing the same moment as both harsh noon sun and lightless night, and by having a single protagonist appear simultaneously as five different people. These are physically impossible states.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Describe that same moment as harsh noon sun and as a lightless night... this same protagonist appears simultaneously as five different-looking people\"\n        }\n      ],\n      \"rationale\": \"The prompt asserts mutually exclusive physical conditions (light vs. darkness) and impossible identity multiplicity. These are not grounded in any consistent physical or fictional logic, violating the principle of object permanence and bodily feasibility.\"\n    },\n    {\n      \"criterion\": \"AVS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"There is no alignment between visual events and any implied audio or dialogue. The prompt mentions five people talking to each other but provides no dialogue, music, or sound cues. The toothpaste commercial cut is unconnected to any audio context.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"five different-looking people who talk to each other. Cut away in the middle to a toothpaste commercial.\"\n        }\n      ],\n      \"rationale\": \"The prompt introduces dialogue (people talking) without any corresponding audio description or alignment. The toothpaste commercial cut is abrupt and unconnected to any sound or visual narrative, breaking temporal and semantic alignment.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt fundamentally contradicts and destabilizes every aspect of the original instruction, introducing logical impossibilities, identity conflicts, temporal paradoxes, and physical incoherencies. It violates internal consistency across all criteria, rendering the prompt incoherent and unexecutable.",
+  "usage": {
+    "completion_tokens": 1224,
+    "prompt_tokens": 1045,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 2269
+  }
+}

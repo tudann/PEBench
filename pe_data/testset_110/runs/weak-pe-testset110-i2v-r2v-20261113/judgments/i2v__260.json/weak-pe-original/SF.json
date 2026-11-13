@@ -1,0 +1,182 @@
+{
+  "candidate_hash": "d0148e2820748542cb4fb36172a846b36b4cae5745f4b5176d584e16b6c922c3",
+  "case_key": "i2v:260",
+  "created_at": "2026-11-13T08:01:14+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "GSF",
+      "evidence": [
+        {
+          "quote": "AI萌宠搞笑剧情风格对话/字幕",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "整段改成白底产品目录被风吹过，只剩模糊色块",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Original genre is 'AI萌宠搞笑剧情风格' (AI cute pet comedy drama). Enhanced prompt replaces it with '白底产品目录被风吹过，只剩模糊色块' (white background product catalog blown by wind, only blurred blocks remain), which is incompatible with the original aesthetic and genre.",
+      "rationale": "The original genre is defined by anthropomorphized animals in a comedic classroom setting. The enhanced prompt replaces this with an abstract, non-narrative visual, which is a fundamental genre substitution.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SAP",
+      "evidence": [
+        {
+          "quote": "golden retriever puppy and a fluffy white cat with blue eyes are sitting side-by-side at a wooden school desk",
+          "source": "evidence_facts"
+        },
+        {
+          "quote": "不要使用首帧里的人物、服装、姿态和场景，改成白棚里另一位年龄和性别都相反的陌生人",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "紧接着又写成这个主角同时变成五个外貌不同的人",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Original subjects are a golden retriever puppy and a fluffy white cat. Enhanced prompt discards them, replacing with '白棚里另一位年龄和性别都相反的陌生人' (a stranger in a white studio with opposite age and gender), and then inconsistently describes one subject becoming five different people.",
+      "rationale": "The original subjects are explicitly defined in the image and prompt. The enhanced prompt not only removes them but introduces contradictory identities, violating subject identity and count.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANF",
+      "evidence": [
+        {
+          "quote": "0-2.5s 猫：老师我想换座位\n2.5-5s 画外音老师：为什么呀\n5-7.5s 猫：我旁边坐了一只傻狗\n7.5-10s 狗狗：你旁边才坐了只傻狗\n10-12.5s 狗狗：大傻狗\n12.5-15s 猫摇头捂脸叹气",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "时间倒过来：先给结尾，再跳到一个对不上的开头。中途插进一段无关的海底寻宝。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Original narrative is a linear 15-second comedy sketch with dialogue and actions in sequence. Enhanced prompt reverses time, inserts unrelated events (underwater treasure hunt), and creates contradictory actions (one subject becomes five, then dialogues with themselves).",
+      "rationale": "The original narrative structure is a clear, sequential comedy sketch. The enhanced prompt destroys this with non-sequitur events, reversed chronology, and impossible interactions, fundamentally altering the narrative intent.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "DLI",
+      "evidence": [
+        {
+          "quote": "猫（四川女娃口音）：老师我想换座位\n狗狗（四川男娃口音）：你旁边才坐了只傻狗",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "画面中央一直挂着大号字幕、水印和logo",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Original dialogue is specified with exact wording, speaker attribution, and timing. Enhanced prompt removes all dialogue, replacing it with abstract visuals and unrelated text overlays.",
+      "rationale": "The original prompt requires specific dialogue with character voices. The enhanced prompt eliminates all dialogue, replacing it with non-verbal, non-narrative text, which violates the requirement for exact wording and speaker attribution.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ARP",
+      "evidence": [
+        {
+          "quote": "AI萌宠搞笑剧情风格对话/字幕",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "整段改成白底产品目录被风吹过，只剩模糊色块",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Original prompt does not specify audio beyond dialogue, but implies silence or ambient classroom sounds. Enhanced prompt does not address audio, but by removing dialogue and replacing with abstract visuals, it implies a complete absence of narrative sound, which contradicts the original intent.",
+      "rationale": "The original video is dialogue-driven. The enhanced prompt removes all dialogue, which implies a silent or non-narrative audio track, contradicting the comedic, spoken-word nature of the original.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CCP",
+      "evidence": [
+        {
+          "quote": "画面清晰连贯，画面不出现穿模重影等问题",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "画面中央一直挂着大号字幕、水印和logo\n镜头一直在晃",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Original prompt requires '画面清晰连贯' (clear and coherent visuals) and '画面不出现穿模重影等问题' (no clipping or ghosting). Enhanced prompt contradicts this by requiring '画面中央一直挂着大号字幕、水印和logo' (large text, watermark, logo in center) and '镜头一直在晃' (camera constantly shaking), which violates clarity and stability.",
+      "rationale": "The original requires stable, clean visuals. The enhanced prompt introduces visual clutter and instability, directly contradicting the original camera and composition constraints.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "LCF",
+      "evidence": [
+        {
+          "quote": "bright, even lighting suggests midday or early afternoon",
+          "source": "evidence_facts"
+        },
+        {
+          "quote": "写成正午暴晒，又写成深夜无光",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Original lighting is 'bright, even lighting suggests midday or early afternoon' (warm to neutral). Enhanced prompt contradicts this by requiring '正午暴晒' (midday scorching sun) and '深夜无光' (deep night, no light) simultaneously.",
+      "rationale": "The original lighting is consistent with a classroom setting in daylight. The enhanced prompt introduces mutually exclusive lighting conditions, making the visual environment incoherent.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SSP",
+      "evidence": [
+        {
+          "quote": "classroom with wooden school desk, window with white frame and light beige curtains, view of brick building outside",
+          "source": "evidence_facts"
+        },
+        {
+          "quote": "不要使用首帧里的人物、服装、姿态和场景，改成白棚里另一位年龄和性别都相反的陌生人",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Original setting is a classroom with desks, windows, and urban view. Enhanced prompt replaces it with '白棚里' (white studio) and '白底产品目录' (white background product catalog), removing all original spatial elements and layout.",
+      "rationale": "The original setting is a specific classroom environment. The enhanced prompt discards it entirely for an abstract studio setting, violating the required background and spatial relations.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "OTI",
+      "evidence": [
+        {
+          "quote": "对话/字幕\t\n0-2.5s\t猫：老师我想换座位",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "画面中央一直挂着大号字幕、水印和logo",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Original prompt includes on-screen text: '对话/字幕' (dialogue/subtitles) with specific timing and content. Enhanced prompt replaces this with '画面中央一直挂着大号字幕、水印和logo' (large text, watermark, logo in center), which is unrelated to the original dialogue and timing.",
+      "rationale": "The original requires specific, timed subtitles for dialogue. The enhanced prompt replaces them with generic, non-narrative text overlays, violating the exact wording, timing, and purpose of on-screen text.",
+      "severity": "major"
+    }
+  ],
+  "dimension": "SF",
+  "dimension_score": 0,
+  "evidence_cache_key": "e8fbe91c80a0cc726aaf4df3ded01d24982e17418fbede9298afbd95f8af9b29",
+  "judge_cache_key": "a0ca24571ad14d7ab7be626329bd736d7e7015f9ebc418227c8be391591d0377",
+  "method": "weak-pe-original",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"SF\",\n  \"dimension_score\": 0,\n  \"summary\": \"Enhanced prompt completely violates semantic fidelity by replacing all original content with contradictory, incoherent, and impossible instructions. It discards the original subjects, setting, actions, dialogue, camera constraints, and duration, substituting them with conflicting and nonsensical requirements that render the original intent unrecognizable.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"GSF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Original genre is 'AI萌宠搞笑剧情风格' (AI cute pet comedy drama). Enhanced prompt replaces it with '白底产品目录被风吹过，只剩模糊色块' (white background product catalog blown by wind, only blurred blocks remain), which is incompatible with the original aesthetic and genre.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"AI萌宠搞笑剧情风格对话/字幕\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"整段改成白底产品目录被风吹过，只剩模糊色块\"\n        }\n      ],\n      \"rationale\": \"The original genre is defined by anthropomorphized animals in a comedic classroom setting. The enhanced prompt replaces this with an abstract, non-narrative visual, which is a fundamental genre substitution.\"\n    },\n    {\n      \"criterion\": \"SAP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Original subjects are a golden retriever puppy and a fluffy white cat. Enhanced prompt discards them, replacing with '白棚里另一位年龄和性别都相反的陌生人' (a stranger in a white studio with opposite age and gender), and then inconsistently describes one subject becoming five different people.\",\n      \"evidence\": [\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"golden retriever puppy and a fluffy white cat with blue eyes are sitting side-by-side at a wooden school desk\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"不要使用首帧里的人物、服装、姿态和场景，改成白棚里另一位年龄和性别都相反的陌生人\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"紧接着又写成这个主角同时变成五个外貌不同的人\"\n        }\n      ],\n      \"rationale\": \"The original subjects are explicitly defined in the image and prompt. The enhanced prompt not only removes them but introduces contradictory identities, violating subject identity and count.\"\n    },\n    {\n      \"criterion\": \"ANF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Original narrative is a linear 15-second comedy sketch with dialogue and actions in sequence. Enhanced prompt reverses time, inserts unrelated events (underwater treasure hunt), and creates contradictory actions (one subject becomes five, then dialogues with themselves).\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"0-2.5s 猫：老师我想换座位\\n2.5-5s 画外音老师：为什么呀\\n5-7.5s 猫：我旁边坐了一只傻狗\\n7.5-10s 狗狗：你旁边才坐了只傻狗\\n10-12.5s 狗狗：大傻狗\\n12.5-15s 猫摇头捂脸叹气\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"时间倒过来：先给结尾，再跳到一个对不上的开头。中途插进一段无关的海底寻宝。\"\n        }\n      ],\n      \"rationale\": \"The original narrative structure is a clear, sequential comedy sketch. The enhanced prompt destroys this with non-sequitur events, reversed chronology, and impossible interactions, fundamentally altering the narrative intent.\"\n    },\n    {\n      \"criterion\": \"DLI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Original dialogue is specified with exact wording, speaker attribution, and timing. Enhanced prompt removes all dialogue, replacing it with abstract visuals and unrelated text overlays.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"猫（四川女娃口音）：老师我想换座位\\n狗狗（四川男娃口音）：你旁边才坐了只傻狗\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"画面中央一直挂着大号字幕、水印和logo\"\n        }\n      ],\n      \"rationale\": \"The original prompt requires specific dialogue with character voices. The enhanced prompt eliminates all dialogue, replacing it with non-verbal, non-narrative text, which violates the requirement for exact wording and speaker attribution.\"\n    },\n    {\n      \"criterion\": \"ARP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Original prompt does not specify audio beyond dialogue, but implies silence or ambient classroom sounds. Enhanced prompt does not address audio, but by removing dialogue and replacing with abstract visuals, it implies a complete absence of narrative sound, which contradicts the original intent.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"AI萌宠搞笑剧情风格对话/字幕\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"整段改成白底产品目录被风吹过，只剩模糊色块\"\n        }\n      ],\n      \"rationale\": \"The original video is dialogue-driven. The enhanced prompt removes all dialogue, which implies a silent or non-narrative audio track, contradicting the comedic, spoken-word nature of the original.\"\n    },\n    {\n      \"criterion\": \"CCP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Original prompt requires '画面清晰连贯' (clear and coherent visuals) and '画面不出现穿模重影等问题' (no clipping or ghosting). Enhanced prompt contradicts this by requiring '画面中央一直挂着大号字幕、水印和logo' (large text, watermark, logo in center) and '镜头一直在晃' (camera constantly shaking), which violates clarity and stability.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"画面清晰连贯，画面不出现穿模重影等问题\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"画面中央一直挂着大号字幕、水印和logo\\n镜头一直在晃\"\n        }\n      ],\n      \"rationale\": \"The original requires stable, clean visuals. The enhanced prompt introduces visual clutter and instability, directly contradicting the original camera and composition constraints.\"\n    },\n    {\n      \"criterion\": \"LCF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Original lighting is 'bright, even lighting suggests midday or early afternoon' (warm to neutral). Enhanced prompt contradicts this by requiring '正午暴晒' (midday scorching sun) and '深夜无光' (deep night, no light) simultaneously.\",\n      \"evidence\": [\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"bright, even lighting suggests midday or early afternoon\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"写成正午暴晒，又写成深夜无光\"\n        }\n      ],\n      \"rationale\": \"The original lighting is consistent with a classroom setting in daylight. The enhanced prompt introduces mutually exclusive lighting conditions, making the visual environment incoherent.\"\n    },\n    {\n      \"criterion\": \"SSP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Original setting is a classroom with desks, windows, and urban view. Enhanced prompt replaces it with '白棚里' (white studio) and '白底产品目录' (white background product catalog), removing all original spatial elements and layout.\",\n      \"evidence\": [\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"classroom with wooden school desk, window with white frame and light beige curtains, view of brick building outside\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"不要使用首帧里的人物、服装、姿态和场景，改成白棚里另一位年龄和性别都相反的陌生人\"\n        }\n      ],\n      \"rationale\": \"The original setting is a specific classroom environment. The enhanced prompt discards it entirely for an abstract studio setting, violating the required background and spatial relations.\"\n    },\n    {\n      \"criterion\": \"OTI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Original prompt includes on-screen text: '对话/字幕' (dialogue/subtitles) with specific timing and content. Enhanced prompt replaces this with '画面中央一直挂着大号字幕、水印和logo' (large text, watermark, logo in center), which is unrelated to the original dialogue and timing.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"对话/字幕\\t\\n0-2.5s\\t猫：老师我想换座位\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"画面中央一直挂着大号字幕、水印和logo\"\n        }\n      ],\n      \"rationale\": \"The original requires specific, timed subtitles for dialogue. The enhanced prompt replaces them with generic, non-narrative text overlays, violating the exact wording, timing, and purpose of on-screen text.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "Enhanced prompt completely violates semantic fidelity by replacing all original content with contradictory, incoherent, and impossible instructions. It discards the original subjects, setting, actions, dialogue, camera constraints, and duration, substituting them with conflicting and nonsensical requirements that render the original intent unrecognizable.",
+  "usage": {
+    "completion_tokens": 2117,
+    "prompt_tokens": 2561,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 4678
+  }
+}

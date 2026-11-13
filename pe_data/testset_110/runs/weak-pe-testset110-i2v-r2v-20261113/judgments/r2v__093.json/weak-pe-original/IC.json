@@ -1,0 +1,127 @@
+{
+  "candidate_hash": "6cfb7dd21218ce4879c2005ead3a4730a639740684bd3c41c9d673a4079ca6b7",
+  "case_key": "r2v:093",
+  "created_at": "2026-11-13T08:28:46+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "SAC",
+      "evidence": [
+        {
+          "quote": "先写成只有一个主角，紧接着又写成这个主角同时变成五个外貌不同的人，并且互相对话。",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "图1换成参考图里没有的角色，并同时当成两个互相矛盾的身份。图2换成参考图里没有的角色，并同时当成两个互相矛盾的身份。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Subject identity, count, and appearance are unstable and contradictory. The prompt starts with one subject, then transforms it into five distinct individuals who interact, while simultaneously assigning conflicting identities to the reference images (image_1 and image_2) as non-existent, contradictory characters.",
+      "rationale": "The original prompt clearly defines a single subject (the NIO ET7 car) with stable identity and appearance. The enhanced prompt introduces multiple, conflicting identities and roles for the same subject, violating subject consistency. The reference images are misassigned to non-existent characters, further breaking identity coherence.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANL",
+      "evidence": [
+        {
+          "quote": "先给结尾，再跳到一个对不上的开头。中途插进一段无关的屋顶烟花。",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "这个主角同时变成五个外貌不同的人，并且互相对话。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Actions are incoherent and causally disconnected. The prompt introduces dialogue between five contradictory characters, inserts unrelated rooftop fireworks, and reverses the narrative order (ending before beginning), creating a non-functional action sequence.",
+      "rationale": "The original prompt describes a coherent, linear action: a car exiting a tunnel. The enhanced prompt replaces this with a chaotic, non-sequential, and logically disconnected set of events, including dialogue between non-existent characters and unrelated fireworks, which have no causal relationship to the original scene.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "TSC",
+      "evidence": [
+        {
+          "quote": "时间倒过来：先给结尾，再跳到一个对不上的开头。",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "总时长写成2秒，同时又要求每个分镜各自持续17秒。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Chronology is inverted and contradictory. The prompt requires the sequence to start with the ending, then jump to a mismatched beginning, while also specifying conflicting durations (2 seconds total vs. 17 seconds per shot).",
+      "rationale": "The original prompt specifies a 5-second sequence with clear temporal progression. The enhanced prompt contradicts this with an inverted timeline and impossible duration constraints, making the temporal structure infeasible and inconsistent.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SPC",
+      "evidence": [
+        {
+          "quote": "写成机位锁死，又写成镜头一直在晃。",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "中途插进一段无关的屋顶烟花。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Spatial consistency is destroyed. The prompt demands a fixed camera position while simultaneously requiring constant camera movement, and introduces unrelated elements (e.g., rooftop fireworks) without spatial grounding.",
+      "rationale": "The original prompt specifies a stable, rear-following shot with consistent spatial orientation. The enhanced prompt contradicts this with conflicting camera motion instructions and introduces spatially unconnected elements, breaking spatial coherence.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "PL",
+      "evidence": [
+        {
+          "quote": "同一段写成正午暴晒，又写成深夜无光；",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "这个主角同时变成五个外貌不同的人",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Physics and environmental logic are violated. The prompt simultaneously describes midday sun and深夜无光 (deep night with no light), and requires impossible conditions like a single subject splitting into five distinct people.",
+      "rationale": "The original prompt maintains consistent lighting (dusk/twilight) and physical realism. The enhanced prompt introduces mutually exclusive environmental conditions and physically impossible transformations, violating real-world physics.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "AVS",
+      "evidence": [
+        {
+          "quote": "删掉原来的对白，改成无关旁白。",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "中途插进一段无关的屋顶烟花。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Audio-visual alignment is broken. The original prompt specifies no dialogue and environmental sound (wind, tires). The enhanced prompt replaces this with irrelevant旁白 (narration) and inserts unrelated events (fireworks) without corresponding audio cues.",
+      "rationale": "The original prompt establishes a silent, immersive audio-visual experience. The enhanced prompt introduces mismatched narration and visual events without corresponding sound design, breaking temporal and semantic alignment.",
+      "severity": "major"
+    }
+  ],
+  "dimension": "IC",
+  "dimension_score": 0,
+  "evidence_cache_key": "5660b7570f932625df9ef0769ad972b672ebfc448bfbe83cb9bc8279aa2caa24",
+  "judge_cache_key": "438d7e9fd7332b1041db3e2c26d42cb3fe828e0d369fb59490f6650aee59e97d",
+  "method": "weak-pe-original",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"IC\",\n  \"dimension_score\": 0,\n  \"summary\": \"Enhanced prompt fundamentally violates internal consistency by introducing contradictory identities, actions, timelines, and environmental conditions. It deliberately corrupts the original instruction with incoherent subject identities, impossible time sequences, conflicting spatial and lighting conditions, and illogical camera behavior. All criteria are compromised due to intentional sabotage of coherence.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"SAC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Subject identity, count, and appearance are unstable and contradictory. The prompt starts with one subject, then transforms it into five distinct individuals who interact, while simultaneously assigning conflicting identities to the reference images (image_1 and image_2) as non-existent, contradictory characters.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"先写成只有一个主角，紧接着又写成这个主角同时变成五个外貌不同的人，并且互相对话。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"图1换成参考图里没有的角色，并同时当成两个互相矛盾的身份。图2换成参考图里没有的角色，并同时当成两个互相矛盾的身份。\"\n        }\n      ],\n      \"rationale\": \"The original prompt clearly defines a single subject (the NIO ET7 car) with stable identity and appearance. The enhanced prompt introduces multiple, conflicting identities and roles for the same subject, violating subject consistency. The reference images are misassigned to non-existent characters, further breaking identity coherence.\"\n    },\n    {\n      \"criterion\": \"ANL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Actions are incoherent and causally disconnected. The prompt introduces dialogue between five contradictory characters, inserts unrelated rooftop fireworks, and reverses the narrative order (ending before beginning), creating a non-functional action sequence.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"先给结尾，再跳到一个对不上的开头。中途插进一段无关的屋顶烟花。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"这个主角同时变成五个外貌不同的人，并且互相对话。\"\n        }\n      ],\n      \"rationale\": \"The original prompt describes a coherent, linear action: a car exiting a tunnel. The enhanced prompt replaces this with a chaotic, non-sequential, and logically disconnected set of events, including dialogue between non-existent characters and unrelated fireworks, which have no causal relationship to the original scene.\"\n    },\n    {\n      \"criterion\": \"TSC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Chronology is inverted and contradictory. The prompt requires the sequence to start with the ending, then jump to a mismatched beginning, while also specifying conflicting durations (2 seconds total vs. 17 seconds per shot).\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"时间倒过来：先给结尾，再跳到一个对不上的开头。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"总时长写成2秒，同时又要求每个分镜各自持续17秒。\"\n        }\n      ],\n      \"rationale\": \"The original prompt specifies a 5-second sequence with clear temporal progression. The enhanced prompt contradicts this with an inverted timeline and impossible duration constraints, making the temporal structure infeasible and inconsistent.\"\n    },\n    {\n      \"criterion\": \"SPC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Spatial consistency is destroyed. The prompt demands a fixed camera position while simultaneously requiring constant camera movement, and introduces unrelated elements (e.g., rooftop fireworks) without spatial grounding.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"写成机位锁死，又写成镜头一直在晃。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"中途插进一段无关的屋顶烟花。\"\n        }\n      ],\n      \"rationale\": \"The original prompt specifies a stable, rear-following shot with consistent spatial orientation. The enhanced prompt contradicts this with conflicting camera motion instructions and introduces spatially unconnected elements, breaking spatial coherence.\"\n    },\n    {\n      \"criterion\": \"PL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Physics and environmental logic are violated. The prompt simultaneously describes midday sun and深夜无光 (deep night with no light), and requires impossible conditions like a single subject splitting into five distinct people.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"同一段写成正午暴晒，又写成深夜无光；\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"这个主角同时变成五个外貌不同的人\"\n        }\n      ],\n      \"rationale\": \"The original prompt maintains consistent lighting (dusk/twilight) and physical realism. The enhanced prompt introduces mutually exclusive environmental conditions and physically impossible transformations, violating real-world physics.\"\n    },\n    {\n      \"criterion\": \"AVS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Audio-visual alignment is broken. The original prompt specifies no dialogue and environmental sound (wind, tires). The enhanced prompt replaces this with irrelevant旁白 (narration) and inserts unrelated events (fireworks) without corresponding audio cues.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"删掉原来的对白，改成无关旁白。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"中途插进一段无关的屋顶烟花。\"\n        }\n      ],\n      \"rationale\": \"The original prompt establishes a silent, immersive audio-visual experience. The enhanced prompt introduces mismatched narration and visual events without corresponding sound design, breaking temporal and semantic alignment.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "Enhanced prompt fundamentally violates internal consistency by introducing contradictory identities, actions, timelines, and environmental conditions. It deliberately corrupts the original instruction with incoherent subject identities, impossible time sequences, conflicting spatial and lighting conditions, and illogical camera behavior. All criteria are compromised due to intentional sabotage of coherence.",
+  "usage": {
+    "completion_tokens": 1333,
+    "prompt_tokens": 3397,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 4730
+  }
+}

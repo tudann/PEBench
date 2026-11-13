@@ -1,0 +1,119 @@
+{
+  "candidate_hash": "25c162369acc3f198f836f516b93e5f06efebd2790e0047ddff0ef5c3b5be370",
+  "case_key": "t2v:295",
+  "created_at": "2026-11-13T08:22:54+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "SAC",
+      "evidence": [
+        {
+          "quote": "主角缓缓取下太阳镜，直视镜头露出张扬冷笑（Flash Glance）",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "The protagonist stands centered, sunglasses on, coat tugged by wind. In extreme slow motion he deliberately removes his sunglasses, revealing cold, arrogant eyes, and stares directly into the lens with a flaunting, chilling smirk — the \"Flash Glance.\"",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "Subject identity (protagonist), appearance (sunglasses, coat), and key action (removing sunglasses, Flash Glance) are preserved exactly. No attribute drift or duplication occurs. The enhanced prompt adds environmental details (wind, lens flare) but does not alter the subject’s core attributes.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANL",
+      "evidence": [
+        {
+          "quote": "一辆越野皮卡猛然朝他撞来。他纹丝不动，迎面抬腿一记正踢。",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "the truck is about to hit him, but he does not move an inch. Calmly he lifts one leg into a straight front kick meeting the oncoming hood.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "The action sequence is coherent: truck approaches → protagonist remains still → executes front kick → truck is launched. The causal chain is preserved and logically ordered. The kick’s effect is exaggerated but consistent with the over-the-top genre, and no dangling or incompatible actions are introduced.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "TSC",
+      "evidence": [
+        {
+          "quote": "[Shot 1] ... [Shot 2] At 00:03.000, ... [Shot 3] At 00:06.000, ... [Shot 4] At 00:09.000, ... [Shot 5] At 00:12.000, ...",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "Chronology is explicitly defined with timestamps (00:03, 00:06, 00:09, 00:12) that align with the 15-second duration. Events progress in a linear, feasible order: setup → approach → impact → explosion → aftermath. No overlapping or infeasible state transitions are present.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SPC",
+      "evidence": [
+        {
+          "quote": "The camera holds nearly static with only a small slow push-in toward his face. ... the shot cuts to an off-road pickup truck roaring into frame at full speed behind him... the camera cuts back to a medium shot: the truck is about to hit him... the shot cuts to a low wide angle: the truck tumbles end over end... the camera cuts to a medium-wide shot: the protagonist stands unmoved amid the storm of falling wreckage...",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "Camera movements and shot transitions are clearly defined and consistent. The protagonist remains centered and stationary throughout, with the truck approaching from behind. The spatial relationships (behind, front kick, debris falling around) are logically maintained across cuts. No unexplained position swaps or impossible trajectories are introduced.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "PL",
+      "evidence": [
+        {
+          "quote": "皮卡触碰到他鞋尖的一刹那，仿佛模型车般被笔直踹上半空，在空中连续翻转，车身碎片四处爆散。",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "On contact, a single dramatic impact frame freezes the instant the truck touches his shoe tip — then it is launched straight up into the sky as if it were a lightweight toy model car...",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The truck is launched into the air as if it were a lightweight toy model car, defying real-world physics of mass and force. However, this is consistent with the over-the-top action genre and is explicitly framed as a spectacle.",
+      "rationale": "The physics violation (launching a heavy truck with a single kick) is intentional and consistent with the original prompt’s description of a 'spectacle' and 'model car' effect. Within the genre, this is a deliberate fantasy element, not a contradiction. The severity is minor because it is a stylistic choice, not a breakdown in internal logic.",
+      "severity": "minor"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "AVS",
+      "evidence": [
+        {
+          "quote": "A deep truck-engine roar builds and rushes toward the camera, then a colossal metallic impact with a sharp shockwave crack. Metal panels, glass, and debris clatter and rain down across the pavement while bystanders shout wordlessly and tumble, all under a low wind and settling-dust ambience.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Heavy percussion-driven orchestral action score at a driving tempo, dropping to a near-silent suspended note at the impact frame, then swelling with brass and low strings as the debris falls, ending on a single confident hit.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "The soundscape and music are temporally and semantically aligned with the visual events: engine roar during approach, impact sound at the kick, debris sounds during explosion, and music swell during aftermath. No misaligned dialogue, lip-sync, or beat-sync issues are present. The ambient sounds (wind, dust) match the visual environment.",
+      "severity": "none"
+    }
+  ],
+  "dimension": "IC",
+  "dimension_score": 95,
+  "evidence_cache_key": "acbc1d937379539a6d9e353f106a88b022b9e7bfd60f04742ee80eadb677f8a8",
+  "judge_cache_key": "438d7e9fd7332b1041db3e2c26d42cb3fe828e0d369fb59490f6650aee59e97d",
+  "method": "glm53_20261112_120702",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"IC\",\n  \"dimension_score\": 95,\n  \"summary\": \"The enhanced prompt maintains strong internal consistency with the original instruction, preserving subject identity, action sequence, and visual spectacle. Minor issues include slight elaboration beyond the original (e.g., lens flare, wind, bystanders) and a brief suspension of physics in the truck’s launch, but these are consistent within the over-the-top action genre. No contradictions or attribute drift are present. The timeline is coherent and matches the 15-second duration. The only notable issue is a minor over-specification of environmental details not in the original, which does not affect core consistency.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"SAC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"主角缓缓取下太阳镜，直视镜头露出张扬冷笑（Flash Glance）\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"The protagonist stands centered, sunglasses on, coat tugged by wind. In extreme slow motion he deliberately removes his sunglasses, revealing cold, arrogant eyes, and stares directly into the lens with a flaunting, chilling smirk — the \\\"Flash Glance.\\\"\"\n        }\n      ],\n      \"rationale\": \"Subject identity (protagonist), appearance (sunglasses, coat), and key action (removing sunglasses, Flash Glance) are preserved exactly. No attribute drift or duplication occurs. The enhanced prompt adds environmental details (wind, lens flare) but does not alter the subject’s core attributes.\"\n    },\n    {\n      \"criterion\": \"ANL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"一辆越野皮卡猛然朝他撞来。他纹丝不动，迎面抬腿一记正踢。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"the truck is about to hit him, but he does not move an inch. Calmly he lifts one leg into a straight front kick meeting the oncoming hood.\"\n        }\n      ],\n      \"rationale\": \"The action sequence is coherent: truck approaches → protagonist remains still → executes front kick → truck is launched. The causal chain is preserved and logically ordered. The kick’s effect is exaggerated but consistent with the over-the-top genre, and no dangling or incompatible actions are introduced.\"\n    },\n    {\n      \"criterion\": \"TSC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"[Shot 1] ... [Shot 2] At 00:03.000, ... [Shot 3] At 00:06.000, ... [Shot 4] At 00:09.000, ... [Shot 5] At 00:12.000, ...\"\n        }\n      ],\n      \"rationale\": \"Chronology is explicitly defined with timestamps (00:03, 00:06, 00:09, 00:12) that align with the 15-second duration. Events progress in a linear, feasible order: setup → approach → impact → explosion → aftermath. No overlapping or infeasible state transitions are present.\"\n    },\n    {\n      \"criterion\": \"SPC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"The camera holds nearly static with only a small slow push-in toward his face. ... the shot cuts to an off-road pickup truck roaring into frame at full speed behind him... the camera cuts back to a medium shot: the truck is about to hit him... the shot cuts to a low wide angle: the truck tumbles end over end... the camera cuts to a medium-wide shot: the protagonist stands unmoved amid the storm of falling wreckage...\"\n        }\n      ],\n      \"rationale\": \"Camera movements and shot transitions are clearly defined and consistent. The protagonist remains centered and stationary throughout, with the truck approaching from behind. The spatial relationships (behind, front kick, debris falling around) are logically maintained across cuts. No unexplained position swaps or impossible trajectories are introduced.\"\n    },\n    {\n      \"criterion\": \"PL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"minor\",\n      \"issue\": \"The truck is launched into the air as if it were a lightweight toy model car, defying real-world physics of mass and force. However, this is consistent with the over-the-top action genre and is explicitly framed as a spectacle.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"皮卡触碰到他鞋尖的一刹那，仿佛模型车般被笔直踹上半空，在空中连续翻转，车身碎片四处爆散。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"On contact, a single dramatic impact frame freezes the instant the truck touches his shoe tip — then it is launched straight up into the sky as if it were a lightweight toy model car...\"\n        }\n      ],\n      \"rationale\": \"The physics violation (launching a heavy truck with a single kick) is intentional and consistent with the original prompt’s description of a 'spectacle' and 'model car' effect. Within the genre, this is a deliberate fantasy element, not a contradiction. The severity is minor because it is a stylistic choice, not a breakdown in internal logic.\"\n    },\n    {\n      \"criterion\": \"AVS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"A deep truck-engine roar builds and rushes toward the camera, then a colossal metallic impact with a sharp shockwave crack. Metal panels, glass, and debris clatter and rain down across the pavement while bystanders shout wordlessly and tumble, all under a low wind and settling-dust ambience.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Heavy percussion-driven orchestral action score at a driving tempo, dropping to a near-silent suspended note at the impact frame, then swelling with brass and low strings as the debris falls, ending on a single confident hit.\"\n        }\n      ],\n      \"rationale\": \"The soundscape and music are temporally and semantically aligned with the visual events: engine roar during approach, impact sound at the kick, debris sounds during explosion, and music swell during aftermath. No misaligned dialogue, lip-sync, or beat-sync issues are present. The ambient sounds (wind, dust) match the visual environment.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt maintains strong internal consistency with the original instruction, preserving subject identity, action sequence, and visual spectacle. Minor issues include slight elaboration beyond the original (e.g., lens flare, wind, bystanders) and a brief suspension of physics in the truck’s launch, but these are consistent within the over-the-top action genre. No contradictions or attribute drift are present. The timeline is coherent and matches the 15-second duration. The only notable issue is a minor over-specification of environmental details not in the original, which does not affect core consistency.",
+  "usage": {
+    "completion_tokens": 1517,
+    "prompt_tokens": 1434,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 2951
+  }
+}

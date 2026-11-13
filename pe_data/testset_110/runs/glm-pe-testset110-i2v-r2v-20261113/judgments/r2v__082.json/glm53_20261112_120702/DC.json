@@ -1,0 +1,162 @@
+{
+  "candidate_hash": "bce409ea3fb7351c54a7664e4902d731e0dea3fef4482614c0e506bc4a0b4f66",
+  "case_key": "r2v:082",
+  "created_at": "2026-11-13T08:41:28+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "STC",
+      "evidence": [
+        {
+          "quote": "[Shot 1] The video opens on <Picture 1>, a 0.1-second static transition frame... [Shot 2] At 00:00.100, the shot cuts to a medium shot... [Shot 3] At 00:06.500, the shot cuts to a static close-up... [Shot 4] At 00:09.500, the shot cuts back to a static medium two-shot...",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "The prompt organizes the 15-second video into four clearly defined shots with precise temporal boundaries and durations (0.1s, ~6.4s, ~3s, ~5.5s), matching the original instruction. Each shot has a defined start time and transition, ensuring a feasible temporal plan with adequate event and shot boundaries.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CDS",
+      "evidence": [
+        {
+          "quote": "steady camera with a very slight slow push-in; light rain streaks silently down the glass behind the two characters.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "static close-up of <Subject 1>'s face... static medium two-shot at the window-side table",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "The prompt specifies actionable camera parameters: shot scale (medium, close-up), angle (eye-level implied), viewpoint (static, steady), camera movement (slight slow push-in), and visual focus (characters, rain on glass). These are consistent with the original instruction for '运镜平稳、清晰' and '徕卡 M10 拍摄'.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ETD",
+      "evidence": [
+        {
+          "quote": "The video opens on <Picture 1>, a 0.1-second static transition frame... then the scene moves to a window-side table... [Shot 3] At 00:06.500, the shot cuts to a static close-up... [Shot 4] At 00:09.500, the shot cuts back to a static medium two-shot...",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "Cuts are clearly timed and motivated by narrative progression: transition → medium two-shot → close-up for emotional emphasis → return to two-shot for dialogue continuation. Transitions are clean and support spatial and narrative continuity without repetition or disconnection.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "LCS",
+      "evidence": [
+        {
+          "quote": "photorealistic live-action cinematic short with a Leica M10 look — crisp, steady, richly grained, natural color; absolutely no anime, cartoon, 3D-render, or over-smoothed appearance",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "skin shows pores, fine hairs, slight asymmetry, and real eye highlights; fabrics show cotton weave and knit texture, the window glass carries wet rain droplets",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "The prompt specifies lighting and color style (natural color, film grain), visual texture (pores, fabric weave, rain droplets), and realism cues consistent with the original instruction for '3D 真人写实电影感' and '材质表现'. No light source direction is specified, but the environment (cafeteria with windows) implies natural daylight, which is acceptable.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "NDE",
+      "evidence": [
+        {
+          "quote": "Seven verbatim Chinese dialogue lines are delivered in order... <Subject 1>... frowns, blushes, slaps the table and stands up... <Subject 2>... leans forward, eyes bright... nods shamelessly.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "The prompt provides clear progression: initial calm → teasing → emotional reaction → escalation → confrontation → resolution. Character actions and dialogue escalate naturally, with no static restatement or unmotivated repetition. The narrative arc is complete and coherent.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CIF",
+      "evidence": [
+        {
+          "quote": "[Shot 2] At 00:00.100, the shot cuts to a medium shot... [Shot 3] At 00:06.500, the shot cuts to a static close-up... [Shot 4] At 00:09.500, the shot cuts back to a static medium two-shot...",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Slight over-specification of exact frame timings (e.g., 00:00.100, 00:06.500) may be unnecessary for generation and could be considered padding, though not distracting.",
+      "rationale": "The precise timestamps are not strictly necessary for the generation system and may be considered minor padding. However, they do not distract from the central request and may aid in precise timing for video editing. This is a minor issue.",
+      "severity": "minor"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SDI",
+      "evidence": [
+        {
+          "quote": "only two discrete SFX (a light chopstick-pause clink and a table slap); there is no music, no ambience, no narration, no subtitles, and no on-screen text.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "The only audible sounds are the seven verbatim dialogue lines and two discrete SFX...",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "The prompt strictly adheres to the original instruction for silence, specifying only the required dialogue and two SFX. It integrates audio with visual timing (e.g., 'clink at ~00:04.5', 'slap at ~00:12.5') and character delivery (teasing voice, sharp tone). No unnecessary audio is included.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SPS",
+      "evidence": [
+        {
+          "quote": "<Subject 1> Shen Qinghan... eats at the window-side cafeteria table, freezes her chopsticks mid-air, frowns, blushes, slaps the table and stands up.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "<Subject 2> Gu Yanche... sits opposite her, chin propped on hand watching her, leans forward with bright eyes, sips soup slowly, and nods shamelessly.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "The prompt provides detailed subject performance: specific actions (eating, freezing chopsticks, slapping table), expressions (frowning, blushing, eyes bright), gestures (chin propped, leaning forward), and vocal delivery (teasing voice, sharp tone). All align with the original instruction.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "VSS",
+      "evidence": [
+        {
+          "quote": "photorealistic live-action cinematic short with a Leica M10 look — crisp, steady, richly grained, natural color; absolutely no anime, cartoon, 3D-render, or over-smoothed appearance",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "skin shows pores, fine hairs, slight asymmetry, and real eye highlights; fabrics show cotton weave and knit texture, the window glass carries wet rain droplets",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "The prompt specifies medium (live-action), texture (pores, fabric weave, rain droplets), rendering language (Leica M10 style, film grain), and visual treatment (natural color, no smoothing). These match the original instruction for '3D 真人写实电影感' and '细节要求'.",
+      "severity": "none"
+    }
+  ],
+  "dimension": "DC",
+  "dimension_score": 95,
+  "evidence_cache_key": "97d0a76fb9e65fc96c67b5ac1533beb94db4ca6b85c34086f0e4573937040478",
+  "judge_cache_key": "0754499d53388e6467fb078ab780e01b77f9f1c9e99d9029be2769351eb2b2eb",
+  "method": "glm53_20261112_120702",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"DC\",\n  \"dimension_score\": 95,\n  \"summary\": \"The enhanced prompt provides a highly detailed, actionable, and coherent cinematic plan for a 15-second photorealistic live-action scene with precise shot breakdowns, character actions, dialogue timing, and visual/audio specifications. It fully preserves the original intent while adding structured temporal organization, camera directions, and technical realism cues. Minor issues include slight over-specification in some areas (e.g., exact frame timing) and a minor contradiction in the rain depiction (absent in image_1 but required in prompt), but these do not materially affect feasibility or fidelity. The prompt is well-aligned with the original instruction and assets, with no major omissions or contradictions.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"STC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"[Shot 1] The video opens on <Picture 1>, a 0.1-second static transition frame... [Shot 2] At 00:00.100, the shot cuts to a medium shot... [Shot 3] At 00:06.500, the shot cuts to a static close-up... [Shot 4] At 00:09.500, the shot cuts back to a static medium two-shot...\"\n        }\n      ],\n      \"rationale\": \"The prompt organizes the 15-second video into four clearly defined shots with precise temporal boundaries and durations (0.1s, ~6.4s, ~3s, ~5.5s), matching the original instruction. Each shot has a defined start time and transition, ensuring a feasible temporal plan with adequate event and shot boundaries.\"\n    },\n    {\n      \"criterion\": \"CDS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"steady camera with a very slight slow push-in; light rain streaks silently down the glass behind the two characters.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"static close-up of <Subject 1>'s face... static medium two-shot at the window-side table\"\n        }\n      ],\n      \"rationale\": \"The prompt specifies actionable camera parameters: shot scale (medium, close-up), angle (eye-level implied), viewpoint (static, steady), camera movement (slight slow push-in), and visual focus (characters, rain on glass). These are consistent with the original instruction for '运镜平稳、清晰' and '徕卡 M10 拍摄'.\"\n    },\n    {\n      \"criterion\": \"ETD\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"The video opens on <Picture 1>, a 0.1-second static transition frame... then the scene moves to a window-side table... [Shot 3] At 00:06.500, the shot cuts to a static close-up... [Shot 4] At 00:09.500, the shot cuts back to a static medium two-shot...\"\n        }\n      ],\n      \"rationale\": \"Cuts are clearly timed and motivated by narrative progression: transition → medium two-shot → close-up for emotional emphasis → return to two-shot for dialogue continuation. Transitions are clean and support spatial and narrative continuity without repetition or disconnection.\"\n    },\n    {\n      \"criterion\": \"LCS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"photorealistic live-action cinematic short with a Leica M10 look — crisp, steady, richly grained, natural color; absolutely no anime, cartoon, 3D-render, or over-smoothed appearance\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"skin shows pores, fine hairs, slight asymmetry, and real eye highlights; fabrics show cotton weave and knit texture, the window glass carries wet rain droplets\"\n        }\n      ],\n      \"rationale\": \"The prompt specifies lighting and color style (natural color, film grain), visual texture (pores, fabric weave, rain droplets), and realism cues consistent with the original instruction for '3D 真人写实电影感' and '材质表现'. No light source direction is specified, but the environment (cafeteria with windows) implies natural daylight, which is acceptable.\"\n    },\n    {\n      \"criterion\": \"NDE\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Seven verbatim Chinese dialogue lines are delivered in order... <Subject 1>... frowns, blushes, slaps the table and stands up... <Subject 2>... leans forward, eyes bright... nods shamelessly.\"\n        }\n      ],\n      \"rationale\": \"The prompt provides clear progression: initial calm → teasing → emotional reaction → escalation → confrontation → resolution. Character actions and dialogue escalate naturally, with no static restatement or unmotivated repetition. The narrative arc is complete and coherent.\"\n    },\n    {\n      \"criterion\": \"CIF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"minor\",\n      \"issue\": \"Slight over-specification of exact frame timings (e.g., 00:00.100, 00:06.500) may be unnecessary for generation and could be considered padding, though not distracting.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"[Shot 2] At 00:00.100, the shot cuts to a medium shot... [Shot 3] At 00:06.500, the shot cuts to a static close-up... [Shot 4] At 00:09.500, the shot cuts back to a static medium two-shot...\"\n        }\n      ],\n      \"rationale\": \"The precise timestamps are not strictly necessary for the generation system and may be considered minor padding. However, they do not distract from the central request and may aid in precise timing for video editing. This is a minor issue.\"\n    },\n    {\n      \"criterion\": \"SDI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"only two discrete SFX (a light chopstick-pause clink and a table slap); there is no music, no ambience, no narration, no subtitles, and no on-screen text.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"The only audible sounds are the seven verbatim dialogue lines and two discrete SFX...\"\n        }\n      ],\n      \"rationale\": \"The prompt strictly adheres to the original instruction for silence, specifying only the required dialogue and two SFX. It integrates audio with visual timing (e.g., 'clink at ~00:04.5', 'slap at ~00:12.5') and character delivery (teasing voice, sharp tone). No unnecessary audio is included.\"\n    },\n    {\n      \"criterion\": \"SPS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"<Subject 1> Shen Qinghan... eats at the window-side cafeteria table, freezes her chopsticks mid-air, frowns, blushes, slaps the table and stands up.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"<Subject 2> Gu Yanche... sits opposite her, chin propped on hand watching her, leans forward with bright eyes, sips soup slowly, and nods shamelessly.\"\n        }\n      ],\n      \"rationale\": \"The prompt provides detailed subject performance: specific actions (eating, freezing chopsticks, slapping table), expressions (frowning, blushing, eyes bright), gestures (chin propped, leaning forward), and vocal delivery (teasing voice, sharp tone). All align with the original instruction.\"\n    },\n    {\n      \"criterion\": \"VSS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"photorealistic live-action cinematic short with a Leica M10 look — crisp, steady, richly grained, natural color; absolutely no anime, cartoon, 3D-render, or over-smoothed appearance\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"skin shows pores, fine hairs, slight asymmetry, and real eye highlights; fabrics show cotton weave and knit texture, the window glass carries wet rain droplets\"\n        }\n      ],\n      \"rationale\": \"The prompt specifies medium (live-action), texture (pores, fabric weave, rain droplets), rendering language (Leica M10 style, film grain), and visual treatment (natural color, no smoothing). These match the original instruction for '3D 真人写实电影感' and '细节要求'.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt provides a highly detailed, actionable, and coherent cinematic plan for a 15-second photorealistic live-action scene with precise shot breakdowns, character actions, dialogue timing, and visual/audio specifications. It fully preserves the original intent while adding structured temporal organization, camera directions, and technical realism cues. Minor issues include slight over-specification in some areas (e.g., exact frame timing) and a minor contradiction in the rain depiction (absent in image_1 but required in prompt), but these do not materially affect feasibility or fidelity. The prompt is well-aligned with the original instruction and assets, with no major omissions or contradictions.",
+  "usage": {
+    "completion_tokens": 2108,
+    "prompt_tokens": 5782,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 7890
+  }
+}

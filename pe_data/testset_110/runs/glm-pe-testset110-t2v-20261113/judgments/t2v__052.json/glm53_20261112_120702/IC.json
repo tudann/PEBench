@@ -1,0 +1,127 @@
+{
+  "candidate_hash": "1e6b831a01ec588b43cadf950a79d3b422d731950f1c41c2fd60cba1ab27b0a3",
+  "case_key": "t2v:052",
+  "created_at": "2026-11-13T07:28:33+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "SAC",
+      "evidence": [
+        {
+          "quote": "画面正中浮现一个硕大的、鎏金质感的“骏”字",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "a massive gilded Chinese character “骏” materializes dead center, its metallic gold surface gleaming",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "Subject identity (the character '骏') and appearance (gilded, metallic) are preserved across shots. The sheep and horse silhouettes in the final frame are consistently described as side-profiles facing each other, matching the original's '嵌入一只羊与一匹马的侧影元素'. No unexplained renaming or attribute drift occurs.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANL",
+      "evidence": [
+        {
+          "quote": "头一桩，家里和，家运渐旺；第二桩，前路旺，伯乐提携；第三桩，身心宁，平顺少忧！",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "头一桩，家里和，家运渐旺；第二桩，前路旺，伯乐提携；第三桩，身心宁，平顺少忧！",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "Actions form a coherent causal progression: the narrator introduces the theme, then sequentially presents three auspicious outcomes (family harmony, career growth, peace of mind), culminating in a call to action. Each action is bound to the narrative and supported by visual metaphors. No dangling or incompatible events.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "TSC",
+      "evidence": [
+        {
+          "quote": "画面3（10-15秒）",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "At 00:10.000, the shot cuts to the final freeze frame",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The enhanced prompt specifies a precise cut at 00:10.000 for Shot 3, while the original describes a 10-15s duration for the final shot. This is a minor timing adjustment that does not affect the overall structure or state transitions.",
+      "rationale": "The timing adjustment is minor and does not cause infeasible overlaps or unexplained resets. The final shot still holds for the remainder of the 15-second duration, and the state transition from montage to freeze frame is plausible and consistent.",
+      "severity": "minor"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SPC",
+      "evidence": [
+        {
+          "quote": "画面正中浮现一个硕大的、鎏金质感的“骏”字",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "a massive gilded Chinese character “骏” materializes dead center",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "Spatial consistency is maintained: the '骏' character is centered in Shot 1, the montage transitions via cuts (not camera movement), and the final '吉' character is centered on a plaque. No unexplained position swaps or impossible trajectories are introduced.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "PL",
+      "evidence": [
+        {
+          "quote": "成群飞驰的金色骏马掠过",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "a herd of golden horses gallops across the frame in waves with motion-blurred streaks of gold light",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "The fantastical elements (golden horses, glowing characters) are consistent with the festive, symbolic tone of the video. There are no violations of physics or object permanence within the established fictional logic. The motion blur and camera push are plausible visual effects.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "AVS",
+      "evidence": [
+        {
+          "quote": "旁白（高昂、有力）： “79年属羊的注意了！到了马年后半程，你的好运局，已经全面开启了！”",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "A powerful, high-spirited male-style narrator (S1) says in an off-screen voiceover: <d>[Chinese] 79年属羊的注意了！到了马年后半程，你的好运局，已经全面开启了！</d>",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "Dialogue is temporally and semantically aligned with the visuals: the narrator's lines match the on-screen text and visual transitions. The off-screen voiceover is consistent across all shots. No misaligned lip-sync or premature effects are present.",
+      "severity": "none"
+    }
+  ],
+  "dimension": "IC",
+  "dimension_score": 95,
+  "evidence_cache_key": "d857b34324ff2f4988539e4c7aba5e982c29c0e81392dce9cc8649f595b4e8b2",
+  "judge_cache_key": "438d7e9fd7332b1041db3e2c26d42cb3fe828e0d369fb59490f6650aee59e97d",
+  "method": "glm53_20261112_120702",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"IC\",\n  \"dimension_score\": 95,\n  \"summary\": \"The enhanced prompt maintains strong internal consistency with the original instruction, preserving subject identity, action progression, chronology, spatial logic, and audio-visual alignment. Minor issues include slight elaboration in visual description (e.g., 'motion-blurred streaks of gold light') not in original, and a minor timing adjustment (00:10.000 vs. 10-15s), but these do not materially alter the plan or cause contradictions. No major inconsistencies or attribute drifts are present.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"SAC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"画面正中浮现一个硕大的、鎏金质感的“骏”字\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"a massive gilded Chinese character “骏” materializes dead center, its metallic gold surface gleaming\"\n        }\n      ],\n      \"rationale\": \"Subject identity (the character '骏') and appearance (gilded, metallic) are preserved across shots. The sheep and horse silhouettes in the final frame are consistently described as side-profiles facing each other, matching the original's '嵌入一只羊与一匹马的侧影元素'. No unexplained renaming or attribute drift occurs.\"\n    },\n    {\n      \"criterion\": \"ANL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"头一桩，家里和，家运渐旺；第二桩，前路旺，伯乐提携；第三桩，身心宁，平顺少忧！\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"头一桩，家里和，家运渐旺；第二桩，前路旺，伯乐提携；第三桩，身心宁，平顺少忧！\"\n        }\n      ],\n      \"rationale\": \"Actions form a coherent causal progression: the narrator introduces the theme, then sequentially presents three auspicious outcomes (family harmony, career growth, peace of mind), culminating in a call to action. Each action is bound to the narrative and supported by visual metaphors. No dangling or incompatible events.\"\n    },\n    {\n      \"criterion\": \"TSC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"minor\",\n      \"issue\": \"The enhanced prompt specifies a precise cut at 00:10.000 for Shot 3, while the original describes a 10-15s duration for the final shot. This is a minor timing adjustment that does not affect the overall structure or state transitions.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"画面3（10-15秒）\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"At 00:10.000, the shot cuts to the final freeze frame\"\n        }\n      ],\n      \"rationale\": \"The timing adjustment is minor and does not cause infeasible overlaps or unexplained resets. The final shot still holds for the remainder of the 15-second duration, and the state transition from montage to freeze frame is plausible and consistent.\"\n    },\n    {\n      \"criterion\": \"SPC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"画面正中浮现一个硕大的、鎏金质感的“骏”字\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"a massive gilded Chinese character “骏” materializes dead center\"\n        }\n      ],\n      \"rationale\": \"Spatial consistency is maintained: the '骏' character is centered in Shot 1, the montage transitions via cuts (not camera movement), and the final '吉' character is centered on a plaque. No unexplained position swaps or impossible trajectories are introduced.\"\n    },\n    {\n      \"criterion\": \"PL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"成群飞驰的金色骏马掠过\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"a herd of golden horses gallops across the frame in waves with motion-blurred streaks of gold light\"\n        }\n      ],\n      \"rationale\": \"The fantastical elements (golden horses, glowing characters) are consistent with the festive, symbolic tone of the video. There are no violations of physics or object permanence within the established fictional logic. The motion blur and camera push are plausible visual effects.\"\n    },\n    {\n      \"criterion\": \"AVS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"旁白（高昂、有力）： “79年属羊的注意了！到了马年后半程，你的好运局，已经全面开启了！”\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"A powerful, high-spirited male-style narrator (S1) says in an off-screen voiceover: <d>[Chinese] 79年属羊的注意了！到了马年后半程，你的好运局，已经全面开启了！</d>\"\n        }\n      ],\n      \"rationale\": \"Dialogue is temporally and semantically aligned with the visuals: the narrator's lines match the on-screen text and visual transitions. The off-screen voiceover is consistent across all shots. No misaligned lip-sync or premature effects are present.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt maintains strong internal consistency with the original instruction, preserving subject identity, action progression, chronology, spatial logic, and audio-visual alignment. Minor issues include slight elaboration in visual description (e.g., 'motion-blurred streaks of gold light') not in original, and a minor timing adjustment (00:10.000 vs. 10-15s), but these do not materially alter the plan or cause contradictions. No major inconsistencies or attribute drifts are present.",
+  "usage": {
+    "completion_tokens": 1317,
+    "prompt_tokens": 1796,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 3113
+  }
+}

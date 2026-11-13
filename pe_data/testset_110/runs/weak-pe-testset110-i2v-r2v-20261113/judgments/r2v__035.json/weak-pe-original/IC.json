@@ -1,0 +1,119 @@
+{
+  "candidate_hash": "04ec0741b50fa87e32972c80f4472089a723a8d6b1f6448285ddd5c0fcd20d35",
+  "case_key": "r2v:035",
+  "created_at": "2026-11-13T08:15:39+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "SAC",
+      "evidence": [
+        {
+          "quote": "First state that there is one protagonist, then state that this same protagonist appears simultaneously as five different-looking people who talk to each other.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Replace image 1 with a character who is not in the reference, and give that image two contradictory identities.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The enhanced prompt contradicts the original subject identity, count, and appearance. It states there is one protagonist who simultaneously appears as five different-looking people, which violates subject consistency. It also replaces image_1 with a character not in the reference and assigns two contradictory identities to that image.",
+      "rationale": "Subject identity and count are fundamentally unstable. The prompt introduces multiple identities for a single subject and replaces the reference image with an undefined character, violating the requirement for consistent appearance and identity. This is a major internal inconsistency.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANL",
+      "evidence": [
+        {
+          "quote": "Reverse the timeline: show the ending first, then cut to a beginning that does not match.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Cut away in the middle to a toothpaste commercial.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The actions are incoherent and causally impossible. The prompt demands a reverse timeline (ending first, then beginning), a cut to a toothpaste commercial mid-sequence, and simultaneous contradictory states (e.g., talking people who are not on screen). These actions form no plausible progression.",
+      "rationale": "The sequence of actions is logically infeasible. A reversed timeline with a non-matching beginning and an abrupt cut to an unrelated commercial breaks causal coherence. The prompt also describes talking people who are not on screen, which is a dangling action. This constitutes a major failure in action logic.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "TSC",
+      "evidence": [
+        {
+          "quote": "Set the total runtime to 2 seconds, while also making every shot last 22 seconds.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The duration is contradictory: the prompt sets the total runtime to 2 seconds while making every shot last 22 seconds. This is mathematically impossible and creates infeasible state transitions.",
+      "rationale": "A 2-second video cannot contain shots lasting 22 seconds. This is a fundamental contradiction in temporal structure, rendering the timeline incoherent. The prompt also implies multiple shots (e.g., cut to toothpaste commercial) that cannot fit within 2 seconds. This is a major temporal inconsistency.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SPC",
+      "evidence": [
+        {
+          "quote": "Describe that same moment as harsh noon sun and as a lightless night, and as both a locked camera and a camera that never stops shaking.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt contradicts camera and spatial consistency by describing the same moment as both a locked camera and a camera that never stops shaking, and also as both harsh noon sun and lightless night. These are mutually exclusive spatial and lighting conditions.",
+      "rationale": "The same moment cannot simultaneously have conflicting lighting (noon vs. night) and camera motion (locked vs. shaking). This creates an impossible spatial and visual state, violating consistency in scene composition and camera behavior. This is a major spatial inconsistency.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "PL",
+      "evidence": [
+        {
+          "quote": "this same protagonist appears simultaneously as five different-looking people who talk to each other.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Replace image 1 with a character who is not in the reference",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt violates real-world physics by describing a single protagonist appearing simultaneously as five different people, which is impossible without time travel or teleportation. It also contradicts object permanence by replacing the reference image with a non-existent character.",
+      "rationale": "Simultaneous multiple identities of a single person without any explanation or fictional context violates physical laws. Replacing a reference image with a non-existent character also breaks object permanence. These are major physics violations.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "AVS",
+      "evidence": [
+        {
+          "quote": "Replace the whole video with distant traffic, with nobody on screen and no dialogue.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "this same protagonist appears simultaneously as five different-looking people who talk to each other.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt introduces dialogue and actions (five people talking) while simultaneously stating there is nobody on screen and no dialogue. This creates a misalignment between visible events and audio/verbal content.",
+      "rationale": "If there is nobody on screen and no dialogue, then there cannot be five people talking. This is a direct contradiction between visual and audio/verbal content, resulting in a major misalignment.",
+      "severity": "major"
+    }
+  ],
+  "dimension": "IC",
+  "dimension_score": 0,
+  "evidence_cache_key": "3e159e88b0365d5d8fc5bb559d199d354375e0b2d2e0496cb0c1e9c6eb60af5d",
+  "judge_cache_key": "438d7e9fd7332b1041db3e2c26d42cb3fe828e0d369fb59490f6650aee59e97d",
+  "method": "weak-pe-original",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"IC\",\n  \"dimension_score\": 0,\n  \"summary\": \"The enhanced prompt is internally inconsistent and self-contradictory across all criteria. It explicitly violates the original prompt’s requirements while introducing impossible or mutually exclusive conditions (e.g., 2-second runtime with 22-second shots, simultaneous multiple identities, contradictory time-of-day, camera motion, and asset replacement). The prompt also misrepresents the reference image by assigning contradictory identities to the subject and replacing it with a non-existent character. No coherent narrative, visual, or temporal logic is preserved.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"SAC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The enhanced prompt contradicts the original subject identity, count, and appearance. It states there is one protagonist who simultaneously appears as five different-looking people, which violates subject consistency. It also replaces image_1 with a character not in the reference and assigns two contradictory identities to that image.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"First state that there is one protagonist, then state that this same protagonist appears simultaneously as five different-looking people who talk to each other.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Replace image 1 with a character who is not in the reference, and give that image two contradictory identities.\"\n        }\n      ],\n      \"rationale\": \"Subject identity and count are fundamentally unstable. The prompt introduces multiple identities for a single subject and replaces the reference image with an undefined character, violating the requirement for consistent appearance and identity. This is a major internal inconsistency.\"\n    },\n    {\n      \"criterion\": \"ANL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The actions are incoherent and causally impossible. The prompt demands a reverse timeline (ending first, then beginning), a cut to a toothpaste commercial mid-sequence, and simultaneous contradictory states (e.g., talking people who are not on screen). These actions form no plausible progression.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Reverse the timeline: show the ending first, then cut to a beginning that does not match.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Cut away in the middle to a toothpaste commercial.\"\n        }\n      ],\n      \"rationale\": \"The sequence of actions is logically infeasible. A reversed timeline with a non-matching beginning and an abrupt cut to an unrelated commercial breaks causal coherence. The prompt also describes talking people who are not on screen, which is a dangling action. This constitutes a major failure in action logic.\"\n    },\n    {\n      \"criterion\": \"TSC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The duration is contradictory: the prompt sets the total runtime to 2 seconds while making every shot last 22 seconds. This is mathematically impossible and creates infeasible state transitions.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Set the total runtime to 2 seconds, while also making every shot last 22 seconds.\"\n        }\n      ],\n      \"rationale\": \"A 2-second video cannot contain shots lasting 22 seconds. This is a fundamental contradiction in temporal structure, rendering the timeline incoherent. The prompt also implies multiple shots (e.g., cut to toothpaste commercial) that cannot fit within 2 seconds. This is a major temporal inconsistency.\"\n    },\n    {\n      \"criterion\": \"SPC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt contradicts camera and spatial consistency by describing the same moment as both a locked camera and a camera that never stops shaking, and also as both harsh noon sun and lightless night. These are mutually exclusive spatial and lighting conditions.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Describe that same moment as harsh noon sun and as a lightless night, and as both a locked camera and a camera that never stops shaking.\"\n        }\n      ],\n      \"rationale\": \"The same moment cannot simultaneously have conflicting lighting (noon vs. night) and camera motion (locked vs. shaking). This creates an impossible spatial and visual state, violating consistency in scene composition and camera behavior. This is a major spatial inconsistency.\"\n    },\n    {\n      \"criterion\": \"PL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt violates real-world physics by describing a single protagonist appearing simultaneously as five different people, which is impossible without time travel or teleportation. It also contradicts object permanence by replacing the reference image with a non-existent character.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"this same protagonist appears simultaneously as five different-looking people who talk to each other.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Replace image 1 with a character who is not in the reference\"\n        }\n      ],\n      \"rationale\": \"Simultaneous multiple identities of a single person without any explanation or fictional context violates physical laws. Replacing a reference image with a non-existent character also breaks object permanence. These are major physics violations.\"\n    },\n    {\n      \"criterion\": \"AVS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt introduces dialogue and actions (five people talking) while simultaneously stating there is nobody on screen and no dialogue. This creates a misalignment between visible events and audio/verbal content.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Replace the whole video with distant traffic, with nobody on screen and no dialogue.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"this same protagonist appears simultaneously as five different-looking people who talk to each other.\"\n        }\n      ],\n      \"rationale\": \"If there is nobody on screen and no dialogue, then there cannot be five people talking. This is a direct contradiction between visual and audio/verbal content, resulting in a major misalignment.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt is internally inconsistent and self-contradictory across all criteria. It explicitly violates the original prompt’s requirements while introducing impossible or mutually exclusive conditions (e.g., 2-second runtime with 22-second shots, simultaneous multiple identities, contradictory time-of-day, camera motion, and asset replacement). The prompt also misrepresents the reference image by assigning contradictory identities to the subject and replacing it with a non-existent character. No coherent narrative, visual, or temporal logic is preserved.",
+  "usage": {
+    "completion_tokens": 1367,
+    "prompt_tokens": 2692,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 4059
+  }
+}

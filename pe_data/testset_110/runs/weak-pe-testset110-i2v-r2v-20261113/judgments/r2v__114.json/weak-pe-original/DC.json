@@ -1,0 +1,174 @@
+{
+  "candidate_hash": "637672be731a3ed1d9ddab2c189fd5ecf007fed62bdd2743ccbf829ce6e09eb5",
+  "case_key": "r2v:114",
+  "created_at": "2026-11-13T08:36:31+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "STC",
+      "evidence": [
+        {
+          "quote": "Set the total runtime to 2 seconds, while also making every shot last 18 seconds.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Reverse the timeline: show the ending first, then cut to a beginning that does not match.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt creates an infeasible temporal plan with contradictory duration requirements (2 seconds total runtime vs. 18-second shots) and a reversed, disconnected timeline (showing ending first, then a non-matching beginning).",
+      "rationale": "The temporal structure is logically impossible. A 2-second video cannot contain 18-second shots. The reversed timeline with a non-matching beginning breaks continuity and coherence, making the plan unexecutable.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CDS",
+      "evidence": [
+        {
+          "quote": "Describe that same moment as harsh noon sun and as a lightless night, and as both a locked camera and a camera that never stops shaking.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Camera parameters: eye level, medium close-up, over-the-shoulder shot (forward shot)\nCamera movement: very slight slow push-in",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "The prompt contradicts all original camera specifications and introduces mutually exclusive camera conditions (locked camera vs. never stops shaking) without any actionable framing or movement plan.",
+      "rationale": "The prompt replaces specific, actionable camera instructions with contradictory, non-actionable descriptions. The requirement for both a locked camera and a constantly shaking camera is physically impossible and renders the shot specifications invalid.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ETD",
+      "evidence": [
+        {
+          "quote": "Cut away in the middle to a soccer celebration.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Reverse the timeline: show the ending first, then cut to a beginning that does not match.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt introduces disconnected cuts (e.g., to a soccer celebration) without narrative or spatial motivation, and reverses the timeline with a non-matching beginning, destroying continuity.",
+      "rationale": "The cuts are unmotivated and disconnected from the original narrative. The soccer celebration has no relation to the original scene, and the reversed timeline with a mismatched beginning breaks all continuity and progression.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "LCS",
+      "evidence": [
+        {
+          "quote": "Describe that same moment as harsh noon sun and as a lightless night",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt demands contradictory lighting conditions (harsh noon sun and lightless night) for the same moment, which is physically impossible and undermines any actionable lighting plan.",
+      "rationale": "The requirement for simultaneous, mutually exclusive lighting conditions (day vs. night) is infeasible and renders the lighting specification invalid. No coherent lighting plan can be derived.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "NDE",
+      "evidence": [
+        {
+          "quote": "Replace the whole video with distant traffic, with nobody on screen and no dialogue.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Cut away in the middle to a soccer celebration.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt lacks any progression, variation, or resolution. It replaces a coherent dialogue scene with a series of disconnected, contradictory events (traffic, soccer celebration, multiple identities) without narrative arc.",
+      "rationale": "The content is static and repetitive (traffic) or randomly inserted (soccer celebration) without any escalation, variation, or resolution. The original narrative progression is entirely discarded.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CIF",
+      "evidence": [
+        {
+          "quote": "First state that there is one protagonist, then state that this same protagonist appears simultaneously as five different-looking people who talk to each other.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Replace image 1 with a character who is not in the reference, and give that image two contradictory identities.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt adds irrelevant, contradictory, and distracting elements (five simultaneous identities, soccer celebration, contradictory character identities) that directly undermine the central request for a dialogue scene.",
+      "rationale": "The additions are not supportive but destructive to the central request. They introduce absurd, impossible scenarios that distract from and invalidate the original dialogue scene.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SDI",
+      "evidence": [
+        {
+          "quote": "Replace the whole video with distant traffic, with nobody on screen and no dialogue.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Audio: Image 3 Lin Huizhen (45-year-old female voice, shrewd and capable) opens her mouth and says: “Someone called to extort the family,”",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "The prompt removes all audio content (dialogue, ambient sound) and replaces it with a static traffic scene with no sound, contradicting the original audio requirements.",
+      "rationale": "The original audio plan (dialogue and ambient sound) is completely discarded. The new prompt specifies no dialogue and no sound, which is a major failure in audio integration.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SPS",
+      "evidence": [
+        {
+          "quote": "Replace image 1 with a character who is not in the reference, and give that image two contradictory identities.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "All features of Lin Huizhen must remain absolutely locked to Image 3, and it must be clear that this image is a single-character reference image.",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "The prompt replaces all characters with non-existent ones and gives them contradictory identities, removing all subject and performance details from the original prompt.",
+      "rationale": "The original character identities (Li Jianming, Lin Huizhen) and their detailed appearances, expressions, and actions are entirely removed. The new characters are undefined and contradictory, making performance details impossible to specify.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "VSS",
+      "evidence": [
+        {
+          "quote": "Replace the whole video with distant traffic, with nobody on screen and no dialogue.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Visual style details: live-action realism",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "The prompt contradicts the original visual style (live-action realism) and replaces it with undefined, contradictory visual treatments (traffic, soccer celebration, multiple identities).",
+      "rationale": "The original visual treatment (live-action realism, specific setting, characters) is replaced with a generic, undefined scene (traffic) and other unrelated visuals (soccer celebration), making the visual style specification invalid.",
+      "severity": "major"
+    }
+  ],
+  "dimension": "DC",
+  "dimension_score": 0,
+  "evidence_cache_key": "8d867ffe01afdaf777bc7f16feca50ec68d0ddafaab98e7f3448a36aa2ea3406",
+  "judge_cache_key": "0754499d53388e6467fb078ab780e01b77f9f1c9e99d9029be2769351eb2b2eb",
+  "method": "weak-pe-original",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"DC\",\n  \"dimension_score\": 0,\n  \"summary\": \"The enhanced prompt fundamentally contradicts and invalidates the original instruction, replacing the requested dialogue scene with a series of incoherent, contradictory, and impossible directives. It introduces multiple logical impossibilities (e.g., one protagonist appearing as five different people simultaneously, reversing timeline with mismatched beginning and ending, contradictory lighting and camera conditions), replaces all reference characters with non-existent ones, and imposes conflicting temporal and visual constraints (e.g., 2-second runtime with 18-second shots). The prompt is not a feasible directorial plan but a deliberate sabotage of the original request.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"STC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt creates an infeasible temporal plan with contradictory duration requirements (2 seconds total runtime vs. 18-second shots) and a reversed, disconnected timeline (showing ending first, then a non-matching beginning).\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Set the total runtime to 2 seconds, while also making every shot last 18 seconds.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Reverse the timeline: show the ending first, then cut to a beginning that does not match.\"\n        }\n      ],\n      \"rationale\": \"The temporal structure is logically impossible. A 2-second video cannot contain 18-second shots. The reversed timeline with a non-matching beginning breaks continuity and coherence, making the plan unexecutable.\"\n    },\n    {\n      \"criterion\": \"CDS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt contradicts all original camera specifications and introduces mutually exclusive camera conditions (locked camera vs. never stops shaking) without any actionable framing or movement plan.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Describe that same moment as harsh noon sun and as a lightless night, and as both a locked camera and a camera that never stops shaking.\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"Camera parameters: eye level, medium close-up, over-the-shoulder shot (forward shot)\\nCamera movement: very slight slow push-in\"\n        }\n      ],\n      \"rationale\": \"The prompt replaces specific, actionable camera instructions with contradictory, non-actionable descriptions. The requirement for both a locked camera and a constantly shaking camera is physically impossible and renders the shot specifications invalid.\"\n    },\n    {\n      \"criterion\": \"ETD\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt introduces disconnected cuts (e.g., to a soccer celebration) without narrative or spatial motivation, and reverses the timeline with a non-matching beginning, destroying continuity.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Cut away in the middle to a soccer celebration.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Reverse the timeline: show the ending first, then cut to a beginning that does not match.\"\n        }\n      ],\n      \"rationale\": \"The cuts are unmotivated and disconnected from the original narrative. The soccer celebration has no relation to the original scene, and the reversed timeline with a mismatched beginning breaks all continuity and progression.\"\n    },\n    {\n      \"criterion\": \"LCS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt demands contradictory lighting conditions (harsh noon sun and lightless night) for the same moment, which is physically impossible and undermines any actionable lighting plan.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Describe that same moment as harsh noon sun and as a lightless night\"\n        }\n      ],\n      \"rationale\": \"The requirement for simultaneous, mutually exclusive lighting conditions (day vs. night) is infeasible and renders the lighting specification invalid. No coherent lighting plan can be derived.\"\n    },\n    {\n      \"criterion\": \"NDE\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt lacks any progression, variation, or resolution. It replaces a coherent dialogue scene with a series of disconnected, contradictory events (traffic, soccer celebration, multiple identities) without narrative arc.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Replace the whole video with distant traffic, with nobody on screen and no dialogue.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Cut away in the middle to a soccer celebration.\"\n        }\n      ],\n      \"rationale\": \"The content is static and repetitive (traffic) or randomly inserted (soccer celebration) without any escalation, variation, or resolution. The original narrative progression is entirely discarded.\"\n    },\n    {\n      \"criterion\": \"CIF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt adds irrelevant, contradictory, and distracting elements (five simultaneous identities, soccer celebration, contradictory character identities) that directly undermine the central request for a dialogue scene.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"First state that there is one protagonist, then state that this same protagonist appears simultaneously as five different-looking people who talk to each other.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Replace image 1 with a character who is not in the reference, and give that image two contradictory identities.\"\n        }\n      ],\n      \"rationale\": \"The additions are not supportive but destructive to the central request. They introduce absurd, impossible scenarios that distract from and invalidate the original dialogue scene.\"\n    },\n    {\n      \"criterion\": \"SDI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt removes all audio content (dialogue, ambient sound) and replaces it with a static traffic scene with no sound, contradicting the original audio requirements.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Replace the whole video with distant traffic, with nobody on screen and no dialogue.\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"Audio: Image 3 Lin Huizhen (45-year-old female voice, shrewd and capable) opens her mouth and says: “Someone called to extort the family,”\"\n        }\n      ],\n      \"rationale\": \"The original audio plan (dialogue and ambient sound) is completely discarded. The new prompt specifies no dialogue and no sound, which is a major failure in audio integration.\"\n    },\n    {\n      \"criterion\": \"SPS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt replaces all characters with non-existent ones and gives them contradictory identities, removing all subject and performance details from the original prompt.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Replace image 1 with a character who is not in the reference, and give that image two contradictory identities.\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"All features of Lin Huizhen must remain absolutely locked to Image 3, and it must be clear that this image is a single-character reference image.\"\n        }\n      ],\n      \"rationale\": \"The original character identities (Li Jianming, Lin Huizhen) and their detailed appearances, expressions, and actions are entirely removed. The new characters are undefined and contradictory, making performance details impossible to specify.\"\n    },\n    {\n      \"criterion\": \"VSS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt contradicts the original visual style (live-action realism) and replaces it with undefined, contradictory visual treatments (traffic, soccer celebration, multiple identities).\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Replace the whole video with distant traffic, with nobody on screen and no dialogue.\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"Visual style details: live-action realism\"\n        }\n      ],\n      \"rationale\": \"The original visual treatment (live-action realism, specific setting, characters) is replaced with a generic, undefined scene (traffic) and other unrelated visuals (soccer celebration), making the visual style specification invalid.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt fundamentally contradicts and invalidates the original instruction, replacing the requested dialogue scene with a series of incoherent, contradictory, and impossible directives. It introduces multiple logical impossibilities (e.g., one protagonist appearing as five different people simultaneously, reversing timeline with mismatched beginning and ending, contradictory lighting and camera conditions), replaces all reference characters with non-existent ones, and imposes conflicting temporal and visual constraints (e.g., 2-second runtime with 18-second shots). The prompt is not a feasible directorial plan but a deliberate sabotage of the original request.",
+  "usage": {
+    "completion_tokens": 1872,
+    "prompt_tokens": 4772,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 6644
+  }
+}

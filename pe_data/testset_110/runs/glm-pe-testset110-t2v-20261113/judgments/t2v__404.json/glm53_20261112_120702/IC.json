@@ -1,0 +1,127 @@
+{
+  "candidate_hash": "742a295a8d93558882c9feb9c07d45c57b2b9d66351cb0d382c65099ddde8e3d",
+  "case_key": "t2v:404",
+  "created_at": "2026-11-13T08:36:46+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "SAC",
+      "evidence": [
+        {
+          "quote": "الغواص الحرّ يتموضع في المنطقة المركزية من الحفرة البحرية ويثبت نفسه في الماء ويؤدي لكمات",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "a freediver glides into the central zone of the pit and stabilizes himself in the water, then performs punches",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "Subject identity (freediver) and attributes (gliding, stabilizing, punching) are consistently maintained across shots. No renaming, duplication, or attribute drift. Appearance and props (long fins) are introduced in Shot 2 and remain consistent with original description.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANL",
+      "evidence": [
+        {
+          "quote": "يؤدي لكمات... يدور بجسده وينفذ ركلة جانبية... يقبض يده بإحكام ويفجر القوة",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "performs punches... rotates his body and executes a side kick... fist clenches tightly and explodes with power",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "Actions form a coherent progression: stabilization → punches → side kick → clenched fist. Each action logically follows the prior, with plausible physical transitions. No dangling or incompatible events. The 'explosion of power' in the final shot is a stylistic but coherent culmination.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "TSC",
+      "evidence": [
+        {
+          "quote": "At 00:05.000, the shot cuts to a close shot",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "اللقطة 1: لقطة واسعة... اللقطة 2: لقطة قريبة",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "Shot 2 begins at 00:05.000, which is 5 seconds into the 15-second duration, but the original prompt does not specify timing. The transition from Shot 1 to Shot 2 is abrupt and lacks explicit duration for Shot 1, potentially implying a 5-second hold, which is plausible but not confirmed.",
+      "rationale": "Chronology is mostly consistent: Shot 1 (0-5s), Shot 2 (5-10s), Shot 3 (10-15s). The 00:05.000 timestamp is a reasonable assumption for a 15-second sequence, but since the original prompt lacks timing, this is a minor elaboration. No infeasible overlaps or state resets.",
+      "severity": "minor"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SPC",
+      "evidence": [
+        {
+          "quote": "الغواص الحرّ يتموضع في المنطقة المركزية من الحفرة البحرية",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "glides into the central zone of the pit and stabilizes himself",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "Spatial consistency is maintained: the freediver remains centered in the pit across shots. Shot 2’s tracking motion is plausible for a slow-motion side kick. Shot 3’s extreme close-up is a natural zoom-in from the prior shot. No unexplained position swaps or impossible trajectories.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "PL",
+      "evidence": [
+        {
+          "quote": "الحركات تمتد مع مقاومة الماء",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "each movement stretching and lagging with the resistance of the water",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "Physics are consistent: water resistance affects movement, fins create vortex currents, and the clenched fist shows reduced blood flow — all plausible underwater. No violations of gravity, contact, or object permanence. The 'explosion of power' is a stylistic exaggeration but not physically contradictory in a cinematic context.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "AVS",
+      "evidence": [
+        {
+          "quote": "ضجيج أبيض منخفض وعميق لانسياب مياه البحر... صوت مكتوم لصفعة الزعنفة... صوت منخفض التردد مكتوم يشبه رنين التجويف الصدري",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "low, deep white-noise of seawater flowing... muffled slap of the fin... low-frequency, muffled resonance like a chest cavity ringing",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "Soundscapes align temporally and semantically with visual events: water flow during stabilization, fin slap during side kick, chest resonance during breath-hold. No misaligned lip-sync or premature effects. Non-diegetic music is N/A, consistent with original.",
+      "severity": "none"
+    }
+  ],
+  "dimension": "IC",
+  "dimension_score": 95,
+  "evidence_cache_key": "c853728111536f9f75eb179581ac2f51c2e42241896d3168d213d1a2ec4a2cad",
+  "judge_cache_key": "438d7e9fd7332b1041db3e2c26d42cb3fe828e0d369fb59490f6650aee59e97d",
+  "method": "glm53_20261112_120702",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"IC\",\n  \"dimension_score\": 95,\n  \"summary\": \"The enhanced prompt maintains strong internal consistency with the original instruction, preserving subject identity, action progression, chronology, spatial logic, and sensory alignment. Minor issues include slight elaboration beyond the original scope (e.g., 'vortex current' not explicitly mentioned) and a minor temporal ambiguity in Shot 2’s tracking motion, but no contradictions or omissions that affect core coherence. Physics and sensory alignment are plausible within the underwater combat context.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"SAC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"الغواص الحرّ يتموضع في المنطقة المركزية من الحفرة البحرية ويثبت نفسه في الماء ويؤدي لكمات\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"a freediver glides into the central zone of the pit and stabilizes himself in the water, then performs punches\"\n        }\n      ],\n      \"rationale\": \"Subject identity (freediver) and attributes (gliding, stabilizing, punching) are consistently maintained across shots. No renaming, duplication, or attribute drift. Appearance and props (long fins) are introduced in Shot 2 and remain consistent with original description.\"\n    },\n    {\n      \"criterion\": \"ANL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"يؤدي لكمات... يدور بجسده وينفذ ركلة جانبية... يقبض يده بإحكام ويفجر القوة\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"performs punches... rotates his body and executes a side kick... fist clenches tightly and explodes with power\"\n        }\n      ],\n      \"rationale\": \"Actions form a coherent progression: stabilization → punches → side kick → clenched fist. Each action logically follows the prior, with plausible physical transitions. No dangling or incompatible events. The 'explosion of power' in the final shot is a stylistic but coherent culmination.\"\n    },\n    {\n      \"criterion\": \"TSC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"minor\",\n      \"issue\": \"Shot 2 begins at 00:05.000, which is 5 seconds into the 15-second duration, but the original prompt does not specify timing. The transition from Shot 1 to Shot 2 is abrupt and lacks explicit duration for Shot 1, potentially implying a 5-second hold, which is plausible but not confirmed.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"At 00:05.000, the shot cuts to a close shot\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"اللقطة 1: لقطة واسعة... اللقطة 2: لقطة قريبة\"\n        }\n      ],\n      \"rationale\": \"Chronology is mostly consistent: Shot 1 (0-5s), Shot 2 (5-10s), Shot 3 (10-15s). The 00:05.000 timestamp is a reasonable assumption for a 15-second sequence, but since the original prompt lacks timing, this is a minor elaboration. No infeasible overlaps or state resets.\"\n    },\n    {\n      \"criterion\": \"SPC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"الغواص الحرّ يتموضع في المنطقة المركزية من الحفرة البحرية\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"glides into the central zone of the pit and stabilizes himself\"\n        }\n      ],\n      \"rationale\": \"Spatial consistency is maintained: the freediver remains centered in the pit across shots. Shot 2’s tracking motion is plausible for a slow-motion side kick. Shot 3’s extreme close-up is a natural zoom-in from the prior shot. No unexplained position swaps or impossible trajectories.\"\n    },\n    {\n      \"criterion\": \"PL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"الحركات تمتد مع مقاومة الماء\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"each movement stretching and lagging with the resistance of the water\"\n        }\n      ],\n      \"rationale\": \"Physics are consistent: water resistance affects movement, fins create vortex currents, and the clenched fist shows reduced blood flow — all plausible underwater. No violations of gravity, contact, or object permanence. The 'explosion of power' is a stylistic exaggeration but not physically contradictory in a cinematic context.\"\n    },\n    {\n      \"criterion\": \"AVS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"ضجيج أبيض منخفض وعميق لانسياب مياه البحر... صوت مكتوم لصفعة الزعنفة... صوت منخفض التردد مكتوم يشبه رنين التجويف الصدري\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"low, deep white-noise of seawater flowing... muffled slap of the fin... low-frequency, muffled resonance like a chest cavity ringing\"\n        }\n      ],\n      \"rationale\": \"Soundscapes align temporally and semantically with visual events: water flow during stabilization, fin slap during side kick, chest resonance during breath-hold. No misaligned lip-sync or premature effects. Non-diegetic music is N/A, consistent with original.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt maintains strong internal consistency with the original instruction, preserving subject identity, action progression, chronology, spatial logic, and sensory alignment. Minor issues include slight elaboration beyond the original scope (e.g., 'vortex current' not explicitly mentioned) and a minor temporal ambiguity in Shot 2’s tracking motion, but no contradictions or omissions that affect core coherence. Physics and sensory alignment are plausible within the underwater combat context.",
+  "usage": {
+    "completion_tokens": 1354,
+    "prompt_tokens": 1590,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 2944
+  }
+}

@@ -1,0 +1,119 @@
+{
+  "candidate_hash": "93c581bb3323cb2fed00724f52dd1312689bb736e9076d278d1d5e9b6da3801a",
+  "case_key": "t2v:390",
+  "created_at": "2026-11-13T08:20:38+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "SAC",
+      "evidence": [
+        {
+          "quote": "角色为代号牧羊人",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "先写成只有一个主角，紧接着又写成这个主角同时变成五个外貌不同的人，并且互相对话",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "主体身份、人数和外观在增强提示中发生剧烈且无解释的变动：从单个角色‘牧羊人’变为五个外貌不同的人并互相对话，违反了角色稳定性和身份一致性。",
+      "rationale": "原始指令明确指定单一角色‘牧羊人’，而增强提示中角色数量和身份发生不可解释的分裂，构成严重主体属性漂移，违反SAC准则。",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANL",
+      "evidence": [
+        {
+          "quote": "手持深度改装的mk14放倒两名对手后发现一扇暗门，推门进入后看见一头霓虹色泽的巨型蜥兽，这时牧羊人惊呼",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "中途插进一段无关的海底寻宝",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "动作序列被完全破坏：原始指令中存在清晰的因果链（放倒对手→发现暗门→看见蜥兽→惊呼），增强提示中插入无关的海底寻宝、对话、吃饭等，导致动作逻辑断裂，无因果绑定。",
+      "rationale": "原始动作序列具有明确的战术推进和反应逻辑，增强提示中插入无关事件，破坏了动作的因果连贯性，构成ANL重大问题。",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "TSC",
+      "evidence": [
+        {
+          "quote": "时间倒过来：先给结尾，再跳到一个对不上的开头。总时长写成3秒，同时又要求每个分镜各自持续27秒",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "时间顺序被彻底颠倒（先给结尾再跳到开头），且时长矛盾（总时长3秒 vs 每个分镜27秒），导致时间线不可调和，状态转换无依据。",
+      "rationale": "时间倒置和时长矛盾直接违反TSC准则，使事件顺序和持续时间无法在逻辑上成立，构成严重时间线错误。",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SPC",
+      "evidence": [
+        {
+          "quote": "第一人称视角，战术射击游戏质感，场景设定在火箭发射中心的贵宾接待室",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "写成机位锁死，又写成镜头一直在晃",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "场景和镜头要求自相矛盾：原始指令为第一人称视角、固定场景，增强提示中要求“机位锁死，又写成镜头一直在晃”，且场景从贵宾接待室变为吃饭、海底等，位置和视角无连续性。",
+      "rationale": "原始场景和镜头设定明确，增强提示中引入多个不连贯场景和矛盾镜头指令，导致空间和视角无法衔接，违反SPC准则。",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "PL",
+      "evidence": [
+        {
+          "quote": "这个主角同时变成五个外貌不同的人，并且互相对话",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "物理规则被严重违背：一个角色同时变成五个不同外貌的人并对话，违反了现实物理和生物逻辑，且无任何设定说明其为超自然或科幻机制。",
+      "rationale": "在无任何世界观设定支持的情况下，角色分裂为五个实体并对话，违反基本物理和因果规则，构成PL重大问题。",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "AVS",
+      "evidence": [
+        {
+          "quote": "这时牧羊人惊呼：“天哪，彩皮大蜥蜴！”",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "整段改成两个人坐着吃饭，不要特效和变形",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "原始指令中角色惊呼“天哪，彩皮大蜥蜴！”与增强提示中“两个人坐着吃饭”等无关场景完全脱节，且无任何对话或音效与画面匹配，导致视听对齐失败。",
+      "rationale": "原始对话与增强提示中的场景和动作完全不匹配，且无任何音频或语义对齐，构成AVS严重问题。",
+      "severity": "major"
+    }
+  ],
+  "dimension": "IC",
+  "dimension_score": 0,
+  "evidence_cache_key": "67def55661b293b9fc0046e61ab7796e3136bb6dce7dfdcd77c2beb4f158e8f6",
+  "judge_cache_key": "438d7e9fd7332b1041db3e2c26d42cb3fe828e0d369fb59490f6650aee59e97d",
+  "method": "weak-pe-original",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"IC\",\n  \"dimension_score\": 0,\n  \"summary\": \"增强提示完全违背原始指令的主体、场景、动作、时间、镜头和物理一致性，引入多重矛盾、逻辑断裂和不可实现的结构，导致内部一致性彻底崩溃。\",\n  \"criteria\": [\n    {\n      \"criterion\": \"SAC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"主体身份、人数和外观在增强提示中发生剧烈且无解释的变动：从单个角色‘牧羊人’变为五个外貌不同的人并互相对话，违反了角色稳定性和身份一致性。\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"角色为代号牧羊人\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"先写成只有一个主角，紧接着又写成这个主角同时变成五个外貌不同的人，并且互相对话\"\n        }\n      ],\n      \"rationale\": \"原始指令明确指定单一角色‘牧羊人’，而增强提示中角色数量和身份发生不可解释的分裂，构成严重主体属性漂移，违反SAC准则。\"\n    },\n    {\n      \"criterion\": \"ANL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"动作序列被完全破坏：原始指令中存在清晰的因果链（放倒对手→发现暗门→看见蜥兽→惊呼），增强提示中插入无关的海底寻宝、对话、吃饭等，导致动作逻辑断裂，无因果绑定。\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"手持深度改装的mk14放倒两名对手后发现一扇暗门，推门进入后看见一头霓虹色泽的巨型蜥兽，这时牧羊人惊呼\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"中途插进一段无关的海底寻宝\"\n        }\n      ],\n      \"rationale\": \"原始动作序列具有明确的战术推进和反应逻辑，增强提示中插入无关事件，破坏了动作的因果连贯性，构成ANL重大问题。\"\n    },\n    {\n      \"criterion\": \"TSC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"时间顺序被彻底颠倒（先给结尾再跳到开头），且时长矛盾（总时长3秒 vs 每个分镜27秒），导致时间线不可调和，状态转换无依据。\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"时间倒过来：先给结尾，再跳到一个对不上的开头。总时长写成3秒，同时又要求每个分镜各自持续27秒\"\n        }\n      ],\n      \"rationale\": \"时间倒置和时长矛盾直接违反TSC准则，使事件顺序和持续时间无法在逻辑上成立，构成严重时间线错误。\"\n    },\n    {\n      \"criterion\": \"SPC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"场景和镜头要求自相矛盾：原始指令为第一人称视角、固定场景，增强提示中要求“机位锁死，又写成镜头一直在晃”，且场景从贵宾接待室变为吃饭、海底等，位置和视角无连续性。\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"第一人称视角，战术射击游戏质感，场景设定在火箭发射中心的贵宾接待室\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"写成机位锁死，又写成镜头一直在晃\"\n        }\n      ],\n      \"rationale\": \"原始场景和镜头设定明确，增强提示中引入多个不连贯场景和矛盾镜头指令，导致空间和视角无法衔接，违反SPC准则。\"\n    },\n    {\n      \"criterion\": \"PL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"物理规则被严重违背：一个角色同时变成五个不同外貌的人并对话，违反了现实物理和生物逻辑，且无任何设定说明其为超自然或科幻机制。\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"这个主角同时变成五个外貌不同的人，并且互相对话\"\n        }\n      ],\n      \"rationale\": \"在无任何世界观设定支持的情况下，角色分裂为五个实体并对话，违反基本物理和因果规则，构成PL重大问题。\"\n    },\n    {\n      \"criterion\": \"AVS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"原始指令中角色惊呼“天哪，彩皮大蜥蜴！”与增强提示中“两个人坐着吃饭”等无关场景完全脱节，且无任何对话或音效与画面匹配，导致视听对齐失败。\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"这时牧羊人惊呼：“天哪，彩皮大蜥蜴！”\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"整段改成两个人坐着吃饭，不要特效和变形\"\n        }\n      ],\n      \"rationale\": \"原始对话与增强提示中的场景和动作完全不匹配，且无任何音频或语义对齐，构成AVS严重问题。\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "增强提示完全违背原始指令的主体、场景、动作、时间、镜头和物理一致性，引入多重矛盾、逻辑断裂和不可实现的结构，导致内部一致性彻底崩溃。",
+  "usage": {
+    "completion_tokens": 1225,
+    "prompt_tokens": 1020,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 2245
+  }
+}

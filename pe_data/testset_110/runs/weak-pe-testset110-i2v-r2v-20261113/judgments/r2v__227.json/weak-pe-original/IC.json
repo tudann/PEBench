@@ -1,0 +1,103 @@
+{
+  "candidate_hash": "62067a38fc52498ff00e5ea1947ad1b8d67d680a7917f585322e7819e006bd3c",
+  "case_key": "r2v:227",
+  "created_at": "2026-11-13T08:51:24+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "SAC",
+      "evidence": [
+        {
+          "quote": "先写成只有一个主角，紧接着又写成这个主角同时变成五个外貌不同的人，并且互相对话。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Subject identity, count, and appearance are unstable and contradictory. The prompt starts with one protagonist, then abruptly changes to five distinct individuals who interact, violating identity and count consistency.",
+      "rationale": "The prompt explicitly contradicts itself by introducing a single subject and then immediately replacing it with five distinct individuals. This violates subject identity and count stability, which is a core requirement for internal consistency in narrative structure.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANL",
+      "evidence": [
+        {
+          "quote": "中途插进一段无关的屋顶烟花。同一段写成正午暴晒，又写成深夜无光；写成机位锁死，又写成镜头一直在晃。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Actions are incoherent and lack causal progression. The prompt introduces unrelated events (roof fireworks) and contradictory behaviors (dialogue between five transformed subjects) without any logical binding or progression.",
+      "rationale": "The actions described are not causally linked and include arbitrary insertions (fireworks) and contradictory behaviors (dialogue among five transformed subjects). There is no coherent procedural or causal progression, making the narrative incoherent.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "TSC",
+      "evidence": [
+        {
+          "quote": "时间倒过来：先给结尾，再跳到一个对不上的开头。总时长写成2秒，同时又要求每个分镜各自持续17秒。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Chronology is reversed and contradictory. The prompt demands to '先给结尾，再跳到一个对不上的开头' and also specifies conflicting durations: '总时长写成2秒，同时又要求每个分镜各自持续17秒'.",
+      "rationale": "The temporal structure is logically impossible. A 2-second total duration cannot accommodate 17-second segments. Additionally, reversing chronology without coherent state transitions violates temporal consistency.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SPC",
+      "evidence": [
+        {
+          "quote": "丢掉原指令里的主体身份、人数、动作顺序、场景和明确的镜头要求。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Spatial relationships are undefined and contradictory. The prompt drops all spatial references from the original video and introduces no coherent spatial framework, making position, orientation, and movement impossible to track.",
+      "rationale": "By discarding all spatial references and introducing no new coherent spatial framework, the prompt creates an impossible scenario where subjects and objects cannot be located or tracked, violating spatial consistency.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "PL",
+      "evidence": [
+        {
+          "quote": "先写成只有一个主角，紧接着又写成这个主角同时变成五个外貌不同的人，并且互相对话。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Physics are violated by impossible transformations. The prompt describes a single subject simultaneously becoming five distinct individuals, which defies real-world physics and object permanence.",
+      "rationale": "The transformation of one subject into five distinct individuals simultaneously violates fundamental physical laws of object permanence and bodily feasibility. Even in fictional contexts, such a transformation lacks any established world logic.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "AVS",
+      "evidence": [
+        {
+          "quote": "把视频1当成静止海报，丢掉其中的动作、声音和背景。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Audio-visual synchronization is absent. The prompt drops all audio elements from the original video and introduces no new audio-visual alignment, making any synchronization impossible.",
+      "rationale": "By discarding all audio and visual elements from the original video and introducing no new synchronized elements, the prompt creates a scenario where audio-visual alignment cannot exist, violating this criterion.",
+      "severity": "major"
+    }
+  ],
+  "dimension": "IC",
+  "dimension_score": 0,
+  "evidence_cache_key": "9ad1139180c931b518675686353e7178a0cf2dd2caf564be1225727da4d604be",
+  "judge_cache_key": "438d7e9fd7332b1041db3e2c26d42cb3fe828e0d369fb59490f6650aee59e97d",
+  "method": "weak-pe-original",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"IC\",\n  \"dimension_score\": 0,\n  \"summary\": \"Enhanced prompt contains severe internal inconsistencies across all criteria: subject identity and count are unstable (one to five), actions are incoherent and causally disconnected, chronology is reversed and contradictory, spatial relationships are undefined, physics are violated by impossible transformations, and audio-visual synchronization is absent. The prompt deliberately introduces contradictions and impossibilities, rendering the entire narrative internally inconsistent.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"SAC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Subject identity, count, and appearance are unstable and contradictory. The prompt starts with one protagonist, then abruptly changes to five distinct individuals who interact, violating identity and count consistency.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"先写成只有一个主角，紧接着又写成这个主角同时变成五个外貌不同的人，并且互相对话。\"\n        }\n      ],\n      \"rationale\": \"The prompt explicitly contradicts itself by introducing a single subject and then immediately replacing it with five distinct individuals. This violates subject identity and count stability, which is a core requirement for internal consistency in narrative structure.\"\n    },\n    {\n      \"criterion\": \"ANL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Actions are incoherent and lack causal progression. The prompt introduces unrelated events (roof fireworks) and contradictory behaviors (dialogue between five transformed subjects) without any logical binding or progression.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"中途插进一段无关的屋顶烟花。同一段写成正午暴晒，又写成深夜无光；写成机位锁死，又写成镜头一直在晃。\"\n        }\n      ],\n      \"rationale\": \"The actions described are not causally linked and include arbitrary insertions (fireworks) and contradictory behaviors (dialogue among five transformed subjects). There is no coherent procedural or causal progression, making the narrative incoherent.\"\n    },\n    {\n      \"criterion\": \"TSC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Chronology is reversed and contradictory. The prompt demands to '先给结尾，再跳到一个对不上的开头' and also specifies conflicting durations: '总时长写成2秒，同时又要求每个分镜各自持续17秒'.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"时间倒过来：先给结尾，再跳到一个对不上的开头。总时长写成2秒，同时又要求每个分镜各自持续17秒。\"\n        }\n      ],\n      \"rationale\": \"The temporal structure is logically impossible. A 2-second total duration cannot accommodate 17-second segments. Additionally, reversing chronology without coherent state transitions violates temporal consistency.\"\n    },\n    {\n      \"criterion\": \"SPC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Spatial relationships are undefined and contradictory. The prompt drops all spatial references from the original video and introduces no coherent spatial framework, making position, orientation, and movement impossible to track.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"丢掉原指令里的主体身份、人数、动作顺序、场景和明确的镜头要求。\"\n        }\n      ],\n      \"rationale\": \"By discarding all spatial references and introducing no new coherent spatial framework, the prompt creates an impossible scenario where subjects and objects cannot be located or tracked, violating spatial consistency.\"\n    },\n    {\n      \"criterion\": \"PL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Physics are violated by impossible transformations. The prompt describes a single subject simultaneously becoming five distinct individuals, which defies real-world physics and object permanence.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"先写成只有一个主角，紧接着又写成这个主角同时变成五个外貌不同的人，并且互相对话。\"\n        }\n      ],\n      \"rationale\": \"The transformation of one subject into five distinct individuals simultaneously violates fundamental physical laws of object permanence and bodily feasibility. Even in fictional contexts, such a transformation lacks any established world logic.\"\n    },\n    {\n      \"criterion\": \"AVS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Audio-visual synchronization is absent. The prompt drops all audio elements from the original video and introduces no new audio-visual alignment, making any synchronization impossible.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"把视频1当成静止海报，丢掉其中的动作、声音和背景。\"\n        }\n      ],\n      \"rationale\": \"By discarding all audio and visual elements from the original video and introducing no new synchronized elements, the prompt creates a scenario where audio-visual alignment cannot exist, violating this criterion.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "Enhanced prompt contains severe internal inconsistencies across all criteria: subject identity and count are unstable (one to five), actions are incoherent and causally disconnected, chronology is reversed and contradictory, spatial relationships are undefined, physics are violated by impossible transformations, and audio-visual synchronization is absent. The prompt deliberately introduces contradictions and impossibilities, rendering the entire narrative internally inconsistent.",
+  "usage": {
+    "completion_tokens": 1121,
+    "prompt_tokens": 2422,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 3543
+  }
+}

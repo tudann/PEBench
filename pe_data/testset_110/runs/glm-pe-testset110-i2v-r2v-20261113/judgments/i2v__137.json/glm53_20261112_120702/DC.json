@@ -1,0 +1,154 @@
+{
+  "candidate_hash": "df79c33ddac9b0ccfacdd45003a22e2915290d4b38d5bc9aba812b2c0745f020",
+  "case_key": "i2v:137",
+  "created_at": "2026-11-13T07:46:13+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "STC",
+      "evidence": [
+        {
+          "quote": "From 0.0 to 1.5 seconds she looks down at the untouched breakfast... From 1.5 to 3.0 seconds she reaches with her right hand and picks up a slice of toast... From 3.0 to 5.0 seconds she takes a bite and chews lightly... From 5.0 to 7.0 seconds she sets the toast down and gently lifts and sets the milk glass...",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt organizes content into a feasible 7-second temporal plan with clear shot boundaries and duration allocation: 0-1.5s (looking down), 1.5-3.0s (picking toast), 3.0-5.0s (chewing), 5.0-7.0s (setting toast and milk). Each phase is clearly defined and sequential.",
+      "rationale": "The temporal structure is coherent, with distinct phases and precise timing that align with the 7-second duration. No gaps or overlaps are present, and the sequence supports a natural progression of the breakfast scene.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CDS",
+      "evidence": [
+        {
+          "quote": "A medium shot from the side at seated eye level frames the young woman...",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "The prompt specifies 'fixed camera' and 'side view', but the image is a slightly low-angle, front-side view...",
+          "source": "evidence_facts"
+        }
+      ],
+      "issue": "The prompt specifies a medium shot from the side at seated eye level, static camera, no pan or zoom. However, the evidence asset shows a slightly low-angle, front-side view, not strictly a side view as requested. This is a minor deviation in camera angle.",
+      "rationale": "While the camera is correctly specified as static and medium shot, the angle discrepancy between 'side' (prompt) and 'slightly low-angle, front-side' (evidence) is a minor issue. It does not prevent feasibility but slightly misaligns with the original instruction.",
+      "severity": "minor"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ETD",
+      "evidence": [
+        {
+          "quote": "The camera holds a static shot, locked for the full duration, with no pan or zoom.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt describes a single continuous static shot with no cuts or transitions, which is appropriate for the requested scene. The progression is linear and motivated by the character’s actions, with no disconnected or unmotivated transitions.",
+      "rationale": "The lack of cuts is intentional and appropriate for a simple, focused scene. The transitions between actions are implied by the character’s movements, not by camera cuts, which is consistent with the request.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "LCS",
+      "evidence": [
+        {
+          "quote": "自然柔和散射光，中性色温",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "color_temperature: warm, neutral to slightly warm white",
+          "source": "evidence_facts"
+        }
+      ],
+      "issue": "The prompt references 'natural柔和散射光，中性色温' (natural soft diffused light, neutral color temperature) from the original, but the enhanced prompt does not explicitly specify light sources, direction, or quality. The evidence asset confirms warm, diffused lighting from chandelier and recessed lights, which is not fully aligned with the requested neutral color temperature.",
+      "rationale": "The lighting description in the enhanced prompt is implied but not explicitly detailed. The evidence shows a warm tone, which slightly contradicts the requested neutral color temperature. This is a minor issue as the overall lighting is still soft and diffused.",
+      "severity": "minor"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "NDE",
+      "evidence": [
+        {
+          "quote": "From 0.0 to 1.5 seconds she looks down... From 1.5 to 3.0 seconds she reaches... From 3.0 to 5.0 seconds she takes a bite... From 5.0 to 7.0 seconds she sets the toast down and gently lifts and sets the milk glass...",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt provides a clear progression: from calm observation to picking up food, eating, and then drinking. The actions escalate naturally and resolve with the character mid-meal, providing a complete narrative arc within the 7-second duration.",
+      "rationale": "The sequence shows a logical progression from anticipation to consumption, with no static repetition. The actions are varied and escalate naturally, supporting the requested content form.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CIF",
+      "evidence": [
+        {
+          "quote": "Realistic anime style with a Korean webtoon look and thick-paint rendering, cinematic composition. A medium shot from the side at seated eye level frames the young woman...",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The enhanced prompt adds only necessary details: character actions, camera specs, lighting, and audio. There is no repetitive padding, template language, or distracting subplots. All additions support the central request of a breakfast scene with realistic anime style.",
+      "rationale": "The additions are focused and relevant. The prompt does not introduce extraneous elements or decorative details that distract from the core scene.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SDI",
+      "evidence": [
+        {
+          "quote": "A quiet dining-room ambience with a soft morning stillness. A slice of toast is picked up from the plate with a light scrape, followed by gentle, light chewing sounds, then the soft swirl of milk being poured and shifted in the glass.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt includes a quiet dining-room ambience with specific environmental sounds: toast being picked up, chewing, and milk swirling. These are well-integrated with the visual timing and character actions, supporting the realism of the scene.",
+      "rationale": "The sounds are tied to specific actions and enhance the realism without being overbearing. The non-diegetic music is correctly marked as N/A, which is appropriate for this scene.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SPS",
+      "evidence": [
+        {
+          "quote": "From 0.0 to 1.5 seconds she looks down at the untouched breakfast with a calm soft smile, blinking and tilting her head slightly. From 1.5 to 3.0 seconds she reaches with her right hand and picks up a slice of toast... From 3.0 to 5.0 seconds she takes a bite and chews lightly, her left hand steadying the plate. From 5.0 to 7.0 seconds she sets the toast down and gently lifts and sets the milk glass...",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt specifies detailed subject performance: calm soft smile, blinking, head tilt, reaching with right hand, chewing, left hand steadying plate, lifting and setting milk glass. These actions are clearly defined and visually timed.",
+      "rationale": "The character’s appearance, expression, gesture, movement, and interaction are all specified with sufficient detail to guide animation. The performance is natural and consistent with the scene.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "VSS",
+      "evidence": [
+        {
+          "quote": "真实餐厅环境，木桌纹理清晰",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "The prompt requests 'clear wood table texture', but the table is white and appears smooth; no visible wood grain is present.",
+          "source": "evidence_facts"
+        }
+      ],
+      "issue": "The prompt specifies 'realistic anime style with a Korean webtoon look and thick-paint rendering, cinematic composition', which aligns with the original. However, the evidence asset shows a white smooth table, while the original prompt requested 'clear wood table texture'. This is a minor discrepancy in production design.",
+      "rationale": "The visual style is correctly specified, but the table material does not match the original request. This is a minor issue as it affects only one element of the production design.",
+      "severity": "minor"
+    }
+  ],
+  "dimension": "DC",
+  "dimension_score": 85,
+  "evidence_cache_key": "a8da542c100a93b040c9c816d994013dac6cf543479f581d974cc6c071e90c65",
+  "judge_cache_key": "0754499d53388e6467fb078ab780e01b77f9f1c9e99d9029be2769351eb2b2eb",
+  "method": "glm53_20261112_120702",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"DC\",\n  \"dimension_score\": 85,\n  \"summary\": \"The enhanced prompt provides a detailed, temporally structured plan with clear shot boundaries, camera specifications, and character actions aligned with the original prompt. It includes actionable framing, lighting, and audio cues, though some minor discrepancies exist in camera angle and environmental details. The prompt avoids padding and maintains focus on the core scene, with sufficient progression and visual treatment. However, the static nature of the evidence asset limits full verification of motion, sound, and camera behavior.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"STC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"The prompt organizes content into a feasible 7-second temporal plan with clear shot boundaries and duration allocation: 0-1.5s (looking down), 1.5-3.0s (picking toast), 3.0-5.0s (chewing), 5.0-7.0s (setting toast and milk). Each phase is clearly defined and sequential.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"From 0.0 to 1.5 seconds she looks down at the untouched breakfast... From 1.5 to 3.0 seconds she reaches with her right hand and picks up a slice of toast... From 3.0 to 5.0 seconds she takes a bite and chews lightly... From 5.0 to 7.0 seconds she sets the toast down and gently lifts and sets the milk glass...\"\n        }\n      ],\n      \"rationale\": \"The temporal structure is coherent, with distinct phases and precise timing that align with the 7-second duration. No gaps or overlaps are present, and the sequence supports a natural progression of the breakfast scene.\"\n    },\n    {\n      \"criterion\": \"CDS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"minor\",\n      \"issue\": \"The prompt specifies a medium shot from the side at seated eye level, static camera, no pan or zoom. However, the evidence asset shows a slightly low-angle, front-side view, not strictly a side view as requested. This is a minor deviation in camera angle.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"A medium shot from the side at seated eye level frames the young woman...\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"The prompt specifies 'fixed camera' and 'side view', but the image is a slightly low-angle, front-side view...\"\n        }\n      ],\n      \"rationale\": \"While the camera is correctly specified as static and medium shot, the angle discrepancy between 'side' (prompt) and 'slightly low-angle, front-side' (evidence) is a minor issue. It does not prevent feasibility but slightly misaligns with the original instruction.\"\n    },\n    {\n      \"criterion\": \"ETD\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"The prompt describes a single continuous static shot with no cuts or transitions, which is appropriate for the requested scene. The progression is linear and motivated by the character’s actions, with no disconnected or unmotivated transitions.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"The camera holds a static shot, locked for the full duration, with no pan or zoom.\"\n        }\n      ],\n      \"rationale\": \"The lack of cuts is intentional and appropriate for a simple, focused scene. The transitions between actions are implied by the character’s movements, not by camera cuts, which is consistent with the request.\"\n    },\n    {\n      \"criterion\": \"LCS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"minor\",\n      \"issue\": \"The prompt references 'natural柔和散射光，中性色温' (natural soft diffused light, neutral color temperature) from the original, but the enhanced prompt does not explicitly specify light sources, direction, or quality. The evidence asset confirms warm, diffused lighting from chandelier and recessed lights, which is not fully aligned with the requested neutral color temperature.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"自然柔和散射光，中性色温\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"color_temperature: warm, neutral to slightly warm white\"\n        }\n      ],\n      \"rationale\": \"The lighting description in the enhanced prompt is implied but not explicitly detailed. The evidence shows a warm tone, which slightly contradicts the requested neutral color temperature. This is a minor issue as the overall lighting is still soft and diffused.\"\n    },\n    {\n      \"criterion\": \"NDE\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"The prompt provides a clear progression: from calm observation to picking up food, eating, and then drinking. The actions escalate naturally and resolve with the character mid-meal, providing a complete narrative arc within the 7-second duration.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"From 0.0 to 1.5 seconds she looks down... From 1.5 to 3.0 seconds she reaches... From 3.0 to 5.0 seconds she takes a bite... From 5.0 to 7.0 seconds she sets the toast down and gently lifts and sets the milk glass...\"\n        }\n      ],\n      \"rationale\": \"The sequence shows a logical progression from anticipation to consumption, with no static repetition. The actions are varied and escalate naturally, supporting the requested content form.\"\n    },\n    {\n      \"criterion\": \"CIF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"The enhanced prompt adds only necessary details: character actions, camera specs, lighting, and audio. There is no repetitive padding, template language, or distracting subplots. All additions support the central request of a breakfast scene with realistic anime style.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Realistic anime style with a Korean webtoon look and thick-paint rendering, cinematic composition. A medium shot from the side at seated eye level frames the young woman...\"\n        }\n      ],\n      \"rationale\": \"The additions are focused and relevant. The prompt does not introduce extraneous elements or decorative details that distract from the core scene.\"\n    },\n    {\n      \"criterion\": \"SDI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"The prompt includes a quiet dining-room ambience with specific environmental sounds: toast being picked up, chewing, and milk swirling. These are well-integrated with the visual timing and character actions, supporting the realism of the scene.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"A quiet dining-room ambience with a soft morning stillness. A slice of toast is picked up from the plate with a light scrape, followed by gentle, light chewing sounds, then the soft swirl of milk being poured and shifted in the glass.\"\n        }\n      ],\n      \"rationale\": \"The sounds are tied to specific actions and enhance the realism without being overbearing. The non-diegetic music is correctly marked as N/A, which is appropriate for this scene.\"\n    },\n    {\n      \"criterion\": \"SPS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"The prompt specifies detailed subject performance: calm soft smile, blinking, head tilt, reaching with right hand, chewing, left hand steadying plate, lifting and setting milk glass. These actions are clearly defined and visually timed.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"From 0.0 to 1.5 seconds she looks down at the untouched breakfast with a calm soft smile, blinking and tilting her head slightly. From 1.5 to 3.0 seconds she reaches with her right hand and picks up a slice of toast... From 3.0 to 5.0 seconds she takes a bite and chews lightly, her left hand steadying the plate. From 5.0 to 7.0 seconds she sets the toast down and gently lifts and sets the milk glass...\"\n        }\n      ],\n      \"rationale\": \"The character’s appearance, expression, gesture, movement, and interaction are all specified with sufficient detail to guide animation. The performance is natural and consistent with the scene.\"\n    },\n    {\n      \"criterion\": \"VSS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"minor\",\n      \"issue\": \"The prompt specifies 'realistic anime style with a Korean webtoon look and thick-paint rendering, cinematic composition', which aligns with the original. However, the evidence asset shows a white smooth table, while the original prompt requested 'clear wood table texture'. This is a minor discrepancy in production design.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"真实餐厅环境，木桌纹理清晰\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"The prompt requests 'clear wood table texture', but the table is white and appears smooth; no visible wood grain is present.\"\n        }\n      ],\n      \"rationale\": \"The visual style is correctly specified, but the table material does not match the original request. This is a minor issue as it affects only one element of the production design.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt provides a detailed, temporally structured plan with clear shot boundaries, camera specifications, and character actions aligned with the original prompt. It includes actionable framing, lighting, and audio cues, though some minor discrepancies exist in camera angle and environmental details. The prompt avoids padding and maintains focus on the core scene, with sufficient progression and visual treatment. However, the static nature of the evidence asset limits full verification of motion, sound, and camera behavior.",
+  "usage": {
+    "completion_tokens": 2088,
+    "prompt_tokens": 2682,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 4770
+  }
+}

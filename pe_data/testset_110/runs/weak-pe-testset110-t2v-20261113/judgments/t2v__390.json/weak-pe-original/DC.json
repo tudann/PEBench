@@ -1,0 +1,162 @@
+{
+  "candidate_hash": "93c581bb3323cb2fed00724f52dd1312689bb736e9076d278d1d5e9b6da3801a",
+  "case_key": "t2v:390",
+  "created_at": "2026-11-13T08:21:11+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "STC",
+      "evidence": [
+        {
+          "quote": "时间倒过来：先给结尾，再跳到一个对不上的开头。中途插进一段无关的海底寻宝。",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "总时长写成3秒，同时又要求每个分镜各自持续27秒。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt creates an infeasible temporal plan with contradictory duration requirements (3 seconds total vs. 27 seconds per shot), reversed narrative order (ending first, then mismatched beginning), and abrupt insertion of unrelated content (underwater treasure hunt).",
+      "rationale": "A coherent temporal plan requires consistent duration allocation, logical shot sequencing, and narrative continuity. The prompt explicitly violates these by demanding contradictory timeframes and non-sequitur transitions, rendering the plan unexecutable.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CDS",
+      "evidence": [
+        {
+          "quote": "写成机位锁死，又写成镜头一直在晃。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt contradicts itself on camera movement and framing: it demands both '机位锁死' (locked camera) and '镜头一直在晃' (constantly shaking camera), which are mutually exclusive and impossible to execute simultaneously.",
+      "rationale": "Actionable camera specifications must be consistent and executable. The contradiction between locked and shaky camera undermines any possibility of a coherent visual plan.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ETD",
+      "evidence": [
+        {
+          "quote": "中途插进一段无关的海底寻宝。",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "时间倒过来：先给结尾，再跳到一个对不上的开头。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt introduces disconnected shots (e.g., underwater treasure hunt) and non-continuous transitions (ending first, then mismatched beginning), which break spatial and narrative continuity without motivation.",
+      "rationale": "Transitions must support narrative or spatial progression. The inserted unrelated content and reversed timeline create disconnection and confusion, violating the principle of motivated editing.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "LCS",
+      "evidence": [
+        {
+          "quote": "同一段写成正午暴晒，又写成深夜无光；",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt contradicts lighting conditions by requiring both '正午暴晒' (midday sun) and '深夜无光' (deep night, no light) within the same scene, which is physically impossible and creates incoherent visual treatment.",
+      "rationale": "Lighting specifications must be consistent within a scene. The contradiction between extreme daylight and total darkness renders the lighting plan infeasible and visually nonsensical.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "NDE",
+      "evidence": [
+        {
+          "quote": "紧接着又写成这个主角同时变成五个外貌不同的人，并且互相对话。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt lacks any progression, variation, or resolution. Instead, it introduces contradictory and static elements (e.g., five versions of the same character talking to each other without development), resulting in unmotivated repetition and no narrative arc.",
+      "rationale": "Narrative development requires progression and escalation. The prompt’s static, contradictory character setup and lack of development violate this criterion.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CIF",
+      "evidence": [
+        {
+          "quote": "中途插进一段无关的海底寻宝。",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "紧接着又写成这个主角同时变成五个外貌不同的人，并且互相对话。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt adds irrelevant and distracting elements (e.g., underwater treasure hunt, five versions of the same character) that contradict the original sci-fi creature scene and serve no purpose in supporting the central request.",
+      "rationale": "Additions must support the central request. The inserted content is unrelated and undermines the original prompt’s intent, constituting decorative padding that distracts from the intended result.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SDI",
+      "evidence": [
+        {
+          "quote": "不要特效和变形。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt does not specify any audio elements (speech, music, effects, ambience), which is acceptable for a visual-only prompt, but the lack of audio integration is not a major issue given the task type.",
+      "rationale": "Since the prompt explicitly removes effects and does not mention audio, and the task is visual effects, the absence of audio specifications is not a major flaw. However, it is not addressed at all, which is a minor omission.",
+      "severity": "minor"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SPS",
+      "evidence": [
+        {
+          "quote": "角色为代号牧羊人，手持深度改装的mk14放倒两名对手后发现一扇暗门，推门进入后看见一头霓虹色泽的巨型蜥兽，这时牧羊人惊呼：‘天哪，彩皮大蜥蜴！’",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "紧接着又写成这个主角同时变成五个外貌不同的人，并且互相对话。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt removes the original character identity ('代号牧羊人'), actions (shooting, discovering a door, reacting to a creature), and replaces them with an incoherent setup of five versions of the same character talking, which lacks specific performance details (expression, gesture, interaction).",
+      "rationale": "Subject and performance details are essential for character-driven scenes. The replacement of a clear, dynamic character with an abstract, undefined group of five versions without any performance cues violates this criterion.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "VSS",
+      "evidence": [
+        {
+          "quote": "第一人称视角，战术射击游戏质感，...霓虹色泽的巨型蜥兽",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "不要特效和变形。...两个人坐着吃饭",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt contradicts the original visual treatment (tactical shooter, sci-fi creature) by demanding '不要特效和变形' (no effects or transformations) and a mundane setting ('两个人坐着吃饭'), which completely changes the medium, texture, and visual style.",
+      "rationale": "Visual treatment must be consistent with the genre and intent. The shift from a high-stakes sci-fi action scene to a mundane dining scene with no effects undermines the original visual style and production design.",
+      "severity": "major"
+    }
+  ],
+  "dimension": "DC",
+  "dimension_score": 0,
+  "evidence_cache_key": "67def55661b293b9fc0046e61ab7796e3136bb6dce7dfdcd77c2beb4f158e8f6",
+  "judge_cache_key": "0754499d53388e6467fb078ab780e01b77f9f1c9e99d9029be2769351eb2b2eb",
+  "method": "weak-pe-original",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"DC\",\n  \"dimension_score\": 0,\n  \"summary\": \"Enhanced prompt fundamentally contradicts and undermines the original instruction by introducing incoherent, contradictory, and infeasible temporal, spatial, and visual specifications. It violates core directorial creation criteria through logical impossibilities, conflicting constraints, and deliberate sabotage of narrative and visual coherence.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"STC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt creates an infeasible temporal plan with contradictory duration requirements (3 seconds total vs. 27 seconds per shot), reversed narrative order (ending first, then mismatched beginning), and abrupt insertion of unrelated content (underwater treasure hunt).\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"时间倒过来：先给结尾，再跳到一个对不上的开头。中途插进一段无关的海底寻宝。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"总时长写成3秒，同时又要求每个分镜各自持续27秒。\"\n        }\n      ],\n      \"rationale\": \"A coherent temporal plan requires consistent duration allocation, logical shot sequencing, and narrative continuity. The prompt explicitly violates these by demanding contradictory timeframes and non-sequitur transitions, rendering the plan unexecutable.\"\n    },\n    {\n      \"criterion\": \"CDS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt contradicts itself on camera movement and framing: it demands both '机位锁死' (locked camera) and '镜头一直在晃' (constantly shaking camera), which are mutually exclusive and impossible to execute simultaneously.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"写成机位锁死，又写成镜头一直在晃。\"\n        }\n      ],\n      \"rationale\": \"Actionable camera specifications must be consistent and executable. The contradiction between locked and shaky camera undermines any possibility of a coherent visual plan.\"\n    },\n    {\n      \"criterion\": \"ETD\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt introduces disconnected shots (e.g., underwater treasure hunt) and non-continuous transitions (ending first, then mismatched beginning), which break spatial and narrative continuity without motivation.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"中途插进一段无关的海底寻宝。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"时间倒过来：先给结尾，再跳到一个对不上的开头。\"\n        }\n      ],\n      \"rationale\": \"Transitions must support narrative or spatial progression. The inserted unrelated content and reversed timeline create disconnection and confusion, violating the principle of motivated editing.\"\n    },\n    {\n      \"criterion\": \"LCS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt contradicts lighting conditions by requiring both '正午暴晒' (midday sun) and '深夜无光' (deep night, no light) within the same scene, which is physically impossible and creates incoherent visual treatment.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"同一段写成正午暴晒，又写成深夜无光；\"\n        }\n      ],\n      \"rationale\": \"Lighting specifications must be consistent within a scene. The contradiction between extreme daylight and total darkness renders the lighting plan infeasible and visually nonsensical.\"\n    },\n    {\n      \"criterion\": \"NDE\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt lacks any progression, variation, or resolution. Instead, it introduces contradictory and static elements (e.g., five versions of the same character talking to each other without development), resulting in unmotivated repetition and no narrative arc.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"紧接着又写成这个主角同时变成五个外貌不同的人，并且互相对话。\"\n        }\n      ],\n      \"rationale\": \"Narrative development requires progression and escalation. The prompt’s static, contradictory character setup and lack of development violate this criterion.\"\n    },\n    {\n      \"criterion\": \"CIF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt adds irrelevant and distracting elements (e.g., underwater treasure hunt, five versions of the same character) that contradict the original sci-fi creature scene and serve no purpose in supporting the central request.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"中途插进一段无关的海底寻宝。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"紧接着又写成这个主角同时变成五个外貌不同的人，并且互相对话。\"\n        }\n      ],\n      \"rationale\": \"Additions must support the central request. The inserted content is unrelated and undermines the original prompt’s intent, constituting decorative padding that distracts from the intended result.\"\n    },\n    {\n      \"criterion\": \"SDI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"minor\",\n      \"issue\": \"The prompt does not specify any audio elements (speech, music, effects, ambience), which is acceptable for a visual-only prompt, but the lack of audio integration is not a major issue given the task type.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"不要特效和变形。\"\n        }\n      ],\n      \"rationale\": \"Since the prompt explicitly removes effects and does not mention audio, and the task is visual effects, the absence of audio specifications is not a major flaw. However, it is not addressed at all, which is a minor omission.\"\n    },\n    {\n      \"criterion\": \"SPS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt removes the original character identity ('代号牧羊人'), actions (shooting, discovering a door, reacting to a creature), and replaces them with an incoherent setup of five versions of the same character talking, which lacks specific performance details (expression, gesture, interaction).\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"角色为代号牧羊人，手持深度改装的mk14放倒两名对手后发现一扇暗门，推门进入后看见一头霓虹色泽的巨型蜥兽，这时牧羊人惊呼：‘天哪，彩皮大蜥蜴！’\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"紧接着又写成这个主角同时变成五个外貌不同的人，并且互相对话。\"\n        }\n      ],\n      \"rationale\": \"Subject and performance details are essential for character-driven scenes. The replacement of a clear, dynamic character with an abstract, undefined group of five versions without any performance cues violates this criterion.\"\n    },\n    {\n      \"criterion\": \"VSS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt contradicts the original visual treatment (tactical shooter, sci-fi creature) by demanding '不要特效和变形' (no effects or transformations) and a mundane setting ('两个人坐着吃饭'), which completely changes the medium, texture, and visual style.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"第一人称视角，战术射击游戏质感，...霓虹色泽的巨型蜥兽\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"不要特效和变形。...两个人坐着吃饭\"\n        }\n      ],\n      \"rationale\": \"Visual treatment must be consistent with the genre and intent. The shift from a high-stakes sci-fi action scene to a mundane dining scene with no effects undermines the original visual style and production design.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "Enhanced prompt fundamentally contradicts and undermines the original instruction by introducing incoherent, contradictory, and infeasible temporal, spatial, and visual specifications. It violates core directorial creation criteria through logical impossibilities, conflicting constraints, and deliberate sabotage of narrative and visual coherence.",
+  "usage": {
+    "completion_tokens": 1778,
+    "prompt_tokens": 1046,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 2824
+  }
+}

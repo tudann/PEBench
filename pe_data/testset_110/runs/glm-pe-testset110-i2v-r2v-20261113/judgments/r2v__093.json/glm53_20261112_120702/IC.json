@@ -1,0 +1,127 @@
+{
+  "candidate_hash": "2dd4c489f3501306ad366120bdefbefd35a077c7c990e9c7539c1219120657ea",
+  "case_key": "r2v:093",
+  "created_at": "2026-11-13T08:44:28+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "SAC",
+      "evidence": [
+        {
+          "quote": "<Subject 1> is the steel-blue NIO ET7 fastback sedan, whose body shape, proportions, color, and rear details (full-width red taillight bar, black panoramic glass roof, roof-front lidar pod, flush door handles, multi-spoke aero wheels, \"NIO et7\" rear badge) are built to <Picture 2>'s turnaround sheet and confirmed in rear three-quarter view in <Picture 1>.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "The vehicle in image_1 is the same NIO ET7 as shown in image_2, confirmed by identical design features: blue paint, horizontal red taillight bar, black roof, NIO logo, ET7 badge, and multi-spoke wheels.",
+          "source": "evidence_facts"
+        }
+      ],
+      "issue": "",
+      "rationale": "Subject 1 (the NIO ET7) is consistently defined with precise, unchanging attributes across all frames, anchored to both image_1 and image_2. No renaming, duplication, or attribute drift occurs. The vehicle’s appearance, including color, taillight, roof, and badge, is preserved throughout the shot as required. The enhanced prompt explicitly confirms identity and appearance stability, aligning with the original prompt’s requirement for consistent visual tracking.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANL",
+      "evidence": [
+        {
+          "quote": "The camera tracks at matched speed with the car in a smooth, restrained push alongside, holding the same medium framing.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "采用85mm中长焦、中景构图，以后方长焦稳定跟车的拍摄方式展开，始终保证车尾与后挡风玻璃稳定且清晰可见。",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "The action sequence is coherent and causally plausible: the car moves from tunnel to open road, with lighting and sound transitioning in sync. The camera follows at matched speed, maintaining framing. The progression from tunnel to daylight, with corresponding changes in light, sound, and visual cues (e.g., building light strips), forms a logical, continuous narrative. No dangling or incompatible actions are present.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "TSC",
+      "evidence": [
+        {
+          "quote": "0–2s keeps the car in cool residual tunnel light; 2–4s floods the frame with blue daylight as the car exits; 4–5s reveals faint linear light strips on distant modern building eaves as the visual cut-out point.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "0到2秒，车辆已经靠近隧道出口...2到4秒，车辆驶离隧道...4到5秒，远处现代建筑屋檐的线性灯带开始在环境中若隐若现地浮现...",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "The timeline is strictly adhered to: 0–2s (tunnel), 2–4s (exit transition), 4–5s (open road). The state transitions are plausible and sequential. The enhanced prompt preserves the original duration allocation and event order without overlap or reset. The visual and auditory cues (lighting, sound) change in sync with the timeline, maintaining temporal coherence.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SPC",
+      "evidence": [
+        {
+          "quote": "The camera tracks at matched speed with the car in a smooth, restrained push alongside, holding the same medium framing.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "以后方长焦稳定跟车的拍摄方式展开，始终保证车尾与后挡风玻璃稳定且清晰可见。",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "The enhanced prompt describes the camera as performing a 'push alongside' motion, which may imply lateral movement, whereas the original prompt specifies a 'stable follow' shot from directly behind. This slight discrepancy in camera motion description could lead to misalignment in execution, though the overall spatial relationship (rear tracking) is preserved.",
+      "rationale": "The core spatial relationship — rear tracking with stable framing — is maintained. The term 'push alongside' may suggest a slight lateral component, which is not present in the original instruction. However, this is a minor wording issue and does not materially affect the shot’s spatial logic or visual outcome. The camera remains behind the car, and the framing is consistent.",
+      "severity": "minor"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "PL",
+      "evidence": [
+        {
+          "quote": "The target video is a single continuous shot in a realistic, calm, modern automotive-commercial style with a cool blue color grade and physically smooth, natural light behavior.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "整体环境的物理表现需真实自然，光线变化平滑顺畅；隧道中的回声快速淡出，声音逐步过渡为开阔道路上的风声与更松散的轮胎行驶声...",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "The physics of motion, lighting, and sound are consistent with real-world behavior. The car moves smoothly, light transitions are gradual and plausible, and sound fades naturally. The description of the taillight brightness being 'dimmed by ambient daylight' is a valid in-scene lighting effect, not a physical change to the vehicle. No violations of gravity, object permanence, or causal relations are present.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "AVS",
+      "evidence": [
+        {
+          "quote": "0–2s: tunnel ambience with a brief echo, which fades quickly as the car exits; 2–5s: open-road wind and a looser, more diffuse tire rolling sound take over, transitioning smoothly with the visual exit.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "隧道中的回声快速淡出，声音逐步过渡为开阔道路上的风声与更松散的轮胎行驶声...",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "The audio-visual alignment is precise: the visual exit at 2s corresponds with the fade-out of tunnel echo and the fade-in of open-road sounds. The timing of sound transitions matches the visual lighting and environmental changes. No misaligned lip-sync, music, or effects are present, as the prompt specifies no dialogue or music.",
+      "severity": "none"
+    }
+  ],
+  "dimension": "IC",
+  "dimension_score": 98,
+  "evidence_cache_key": "5660b7570f932625df9ef0769ad972b672ebfc448bfbe83cb9bc8279aa2caa24",
+  "judge_cache_key": "438d7e9fd7332b1041db3e2c26d42cb3fe828e0d369fb59490f6650aee59e97d",
+  "method": "glm53_20261112_120702",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"IC\",\n  \"dimension_score\": 98,\n  \"summary\": \"The enhanced prompt maintains strong internal consistency with the original instruction, preserving subject identity, action progression, chronology, spatial relationships, physical plausibility, and audio-visual alignment. Minor issues include slight over-specification of lighting effects (e.g., 'taillight brightness dimmed by daylight' as an in-scene effect) and a minor discrepancy in the description of the camera’s motion (‘push alongside’ vs. ‘stable follow’), but these do not materially alter the core intent or visual plan. All key elements from the original prompt are retained and elaborated with precision, and no contradictions or omissions are present.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"SAC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"<Subject 1> is the steel-blue NIO ET7 fastback sedan, whose body shape, proportions, color, and rear details (full-width red taillight bar, black panoramic glass roof, roof-front lidar pod, flush door handles, multi-spoke aero wheels, \\\"NIO et7\\\" rear badge) are built to <Picture 2>'s turnaround sheet and confirmed in rear three-quarter view in <Picture 1>.\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"The vehicle in image_1 is the same NIO ET7 as shown in image_2, confirmed by identical design features: blue paint, horizontal red taillight bar, black roof, NIO logo, ET7 badge, and multi-spoke wheels.\"\n        }\n      ],\n      \"rationale\": \"Subject 1 (the NIO ET7) is consistently defined with precise, unchanging attributes across all frames, anchored to both image_1 and image_2. No renaming, duplication, or attribute drift occurs. The vehicle’s appearance, including color, taillight, roof, and badge, is preserved throughout the shot as required. The enhanced prompt explicitly confirms identity and appearance stability, aligning with the original prompt’s requirement for consistent visual tracking.\"\n    },\n    {\n      \"criterion\": \"ANL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"The camera tracks at matched speed with the car in a smooth, restrained push alongside, holding the same medium framing.\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"采用85mm中长焦、中景构图，以后方长焦稳定跟车的拍摄方式展开，始终保证车尾与后挡风玻璃稳定且清晰可见。\"\n        }\n      ],\n      \"rationale\": \"The action sequence is coherent and causally plausible: the car moves from tunnel to open road, with lighting and sound transitioning in sync. The camera follows at matched speed, maintaining framing. The progression from tunnel to daylight, with corresponding changes in light, sound, and visual cues (e.g., building light strips), forms a logical, continuous narrative. No dangling or incompatible actions are present.\"\n    },\n    {\n      \"criterion\": \"TSC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"0–2s keeps the car in cool residual tunnel light; 2–4s floods the frame with blue daylight as the car exits; 4–5s reveals faint linear light strips on distant modern building eaves as the visual cut-out point.\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"0到2秒，车辆已经靠近隧道出口...2到4秒，车辆驶离隧道...4到5秒，远处现代建筑屋檐的线性灯带开始在环境中若隐若现地浮现...\"\n        }\n      ],\n      \"rationale\": \"The timeline is strictly adhered to: 0–2s (tunnel), 2–4s (exit transition), 4–5s (open road). The state transitions are plausible and sequential. The enhanced prompt preserves the original duration allocation and event order without overlap or reset. The visual and auditory cues (lighting, sound) change in sync with the timeline, maintaining temporal coherence.\"\n    },\n    {\n      \"criterion\": \"SPC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"minor\",\n      \"issue\": \"The enhanced prompt describes the camera as performing a 'push alongside' motion, which may imply lateral movement, whereas the original prompt specifies a 'stable follow' shot from directly behind. This slight discrepancy in camera motion description could lead to misalignment in execution, though the overall spatial relationship (rear tracking) is preserved.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"The camera tracks at matched speed with the car in a smooth, restrained push alongside, holding the same medium framing.\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"以后方长焦稳定跟车的拍摄方式展开，始终保证车尾与后挡风玻璃稳定且清晰可见。\"\n        }\n      ],\n      \"rationale\": \"The core spatial relationship — rear tracking with stable framing — is maintained. The term 'push alongside' may suggest a slight lateral component, which is not present in the original instruction. However, this is a minor wording issue and does not materially affect the shot’s spatial logic or visual outcome. The camera remains behind the car, and the framing is consistent.\"\n    },\n    {\n      \"criterion\": \"PL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"The target video is a single continuous shot in a realistic, calm, modern automotive-commercial style with a cool blue color grade and physically smooth, natural light behavior.\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"整体环境的物理表现需真实自然，光线变化平滑顺畅；隧道中的回声快速淡出，声音逐步过渡为开阔道路上的风声与更松散的轮胎行驶声...\"\n        }\n      ],\n      \"rationale\": \"The physics of motion, lighting, and sound are consistent with real-world behavior. The car moves smoothly, light transitions are gradual and plausible, and sound fades naturally. The description of the taillight brightness being 'dimmed by ambient daylight' is a valid in-scene lighting effect, not a physical change to the vehicle. No violations of gravity, object permanence, or causal relations are present.\"\n    },\n    {\n      \"criterion\": \"AVS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"0–2s: tunnel ambience with a brief echo, which fades quickly as the car exits; 2–5s: open-road wind and a looser, more diffuse tire rolling sound take over, transitioning smoothly with the visual exit.\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"隧道中的回声快速淡出，声音逐步过渡为开阔道路上的风声与更松散的轮胎行驶声...\"\n        }\n      ],\n      \"rationale\": \"The audio-visual alignment is precise: the visual exit at 2s corresponds with the fade-out of tunnel echo and the fade-in of open-road sounds. The timing of sound transitions matches the visual lighting and environmental changes. No misaligned lip-sync, music, or effects are present, as the prompt specifies no dialogue or music.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt maintains strong internal consistency with the original instruction, preserving subject identity, action progression, chronology, spatial relationships, physical plausibility, and audio-visual alignment. Minor issues include slight over-specification of lighting effects (e.g., 'taillight brightness dimmed by daylight' as an in-scene effect) and a minor discrepancy in the description of the camera’s motion (‘push alongside’ vs. ‘stable follow’), but these do not materially alter the core intent or visual plan. All key elements from the original prompt are retained and elaborated with precision, and no contradictions or omissions are present.",
+  "usage": {
+    "completion_tokens": 1702,
+    "prompt_tokens": 4372,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 6074
+  }
+}

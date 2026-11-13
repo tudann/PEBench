@@ -1,0 +1,166 @@
+{
+  "candidate_hash": "c73b29031bee4bd4232514ba76efadb00600e2fc9e8b517b947146f5d595e29a",
+  "case_key": "i2v:019",
+  "created_at": "2026-11-13T07:06:58+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "GSF",
+      "evidence": [
+        {
+          "quote": "primary_style: cyberpunk_wireframe, secondary_styles: [glitch_art, digital_distortion]",
+          "source": "evidence_facts"
+        },
+        {
+          "quote": "改成过曝、机位歪斜的空走廊监控，没有光影设计",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Original prompt specifies a cyberpunk wireframe aesthetic with glitch effects; enhanced prompt replaces it with a generic 'overexposed, tilted corridor surveillance' style, discarding the defining visual style.",
+      "rationale": "The original aesthetic is defined by digital glitches, wireframe rendering, and monochrome with RGB artifacts. The enhanced prompt explicitly discards these and replaces them with a surveillance-style aesthetic, which is incompatible and materially alters the visual genre.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SAP",
+      "evidence": [
+        {
+          "quote": "identity: uncertain, visible_appearance: {eyes: large, round, glasses: round, wireframe-style, hair: short, dark, wireframe-rendered}",
+          "source": "evidence_facts"
+        },
+        {
+          "quote": "不要使用首帧里的人物、服装、姿态和场景，改成白棚里另一位年龄和性别都相反的陌生人",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Original subject is a boy with glasses and wireframe face; enhanced prompt replaces him with a stranger of opposite age and gender in a white studio, discarding identity, appearance, and object bindings.",
+      "rationale": "The subject's identity, appearance, and role are explicitly overwritten. The original subject's wireframe face, glasses, and expression are replaced with an unrelated stranger, violating subject preservation.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANF",
+      "evidence": [
+        {
+          "quote": "男孩不断眨眼，反复左右查看，他的影像时而出现双影和三影。所有动作中都创造运动模糊。",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "先写成只有一个主角，紧接着又写成这个主角同时变成五个外貌不同的人，并且互相对话。中途插进一段无关的足球庆祝。时间倒过来：先给结尾，再跳到一个对不上的开头。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Original actions include blinking, looking left/right, and motion blur; enhanced prompt replaces them with contradictory events: five people dialoguing, football celebration, and reversed time order.",
+      "rationale": "The narrative intent and action sequence are entirely replaced with incoherent, contradictory events that negate the original motion-based narrative.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "DLI",
+      "evidence": [
+        {
+          "quote": "男孩不断眨眼，反复左右查看，他的影像时而出现双影和三影。所有动作中都创造运动模糊。镜头运动：在原地震动。",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "No dialogue, narration, or lyrics are specified in the original prompt, so no violation occurs.",
+      "rationale": "The original prompt contains no spoken or written text to preserve; thus, no issue arises under this criterion.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ARP",
+      "evidence": [
+        {
+          "quote": "audio: {ambience: false, effects: false, music: false, speech: false}",
+          "source": "evidence_facts"
+        }
+      ],
+      "issue": "No audio constraints are specified in the original prompt, so no violation occurs.",
+      "rationale": "The original prompt does not mention any sound, so there is no requirement to preserve or alter audio elements.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CCP",
+      "evidence": [
+        {
+          "quote": "镜头运动：在原地震动。",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "写成机位锁死，又写成镜头一直在晃",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Original camera motion is 'shaking in place'; enhanced prompt contradicts this by requiring both 'locked camera' and 'constant shaking', while also changing shot scale and angle.",
+      "rationale": "The camera motion requirement is directly contradicted. The original specifies a single, consistent motion (shaking in place), while the enhanced prompt introduces mutually exclusive constraints, making the instruction infeasible.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "LCF",
+      "evidence": [
+        {
+          "quote": "color_temperature: cool, monochrome with occasional RGB artifacts, light_sources_and_direction: diffuse, front-facing light source",
+          "source": "evidence_facts"
+        },
+        {
+          "quote": "同一段写成正午暴晒，又写成深夜无光；没有光影设计",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Original lighting is diffuse, front-facing, cool-toned with RGB artifacts; enhanced prompt contradicts this by requiring both 'noon sun' and 'deep night' with no lighting design.",
+      "rationale": "The lighting conditions are mutually exclusive and contradictory. The original has a defined cool, diffuse lighting with artifacts; the enhanced prompt demands impossible simultaneous conditions.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SSP",
+      "evidence": [
+        {
+          "quote": "scene_type: abstract_digital_space, background: dark, abstract space with horizontal scan lines and glitch artifacts",
+          "source": "evidence_facts"
+        },
+        {
+          "quote": "改成过曝、机位歪斜的空走廊监控...改成白棚里另一位年龄和性别都相反的陌生人",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Original setting is an abstract digital space with scan lines and glitch artifacts; enhanced prompt replaces it with a 'corridor surveillance' setting, then a 'white studio', discarding spatial relations.",
+      "rationale": "The setting is fundamentally altered from an abstract digital environment to a physical surveillance corridor and then a white studio, violating spatial and environmental continuity.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "OTI",
+      "evidence": [
+        {
+          "quote": "onscreen_text: {presence: false}",
+          "source": "evidence_facts"
+        }
+      ],
+      "issue": "No on-screen text is specified in the original prompt, so no violation occurs.",
+      "rationale": "The original prompt and evidence contain no text to preserve, so this criterion is not violated.",
+      "severity": "none"
+    }
+  ],
+  "dimension": "SF",
+  "dimension_score": 0,
+  "evidence_cache_key": "49825381af0ce3b5642d4f2aedd02fc0b955661365a09170aa6e6ed4da9d7bf9",
+  "judge_cache_key": "a0ca24571ad14d7ab7be626329bd736d7e7015f9ebc418227c8be391591d0377",
+  "method": "weak-pe-original",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"SF\",\n  \"dimension_score\": 0,\n  \"summary\": \"Enhanced prompt completely contradicts and invalidates the original instruction across all semantic fidelity criteria. It replaces the subject, actions, setting, camera motion, lighting, duration, and narrative structure with mutually contradictory and infeasible requirements, rendering the original prompt unrecognizable.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"GSF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Original prompt specifies a cyberpunk wireframe aesthetic with glitch effects; enhanced prompt replaces it with a generic 'overexposed, tilted corridor surveillance' style, discarding the defining visual style.\",\n      \"evidence\": [\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"primary_style: cyberpunk_wireframe, secondary_styles: [glitch_art, digital_distortion]\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"改成过曝、机位歪斜的空走廊监控，没有光影设计\"\n        }\n      ],\n      \"rationale\": \"The original aesthetic is defined by digital glitches, wireframe rendering, and monochrome with RGB artifacts. The enhanced prompt explicitly discards these and replaces them with a surveillance-style aesthetic, which is incompatible and materially alters the visual genre.\"\n    },\n    {\n      \"criterion\": \"SAP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Original subject is a boy with glasses and wireframe face; enhanced prompt replaces him with a stranger of opposite age and gender in a white studio, discarding identity, appearance, and object bindings.\",\n      \"evidence\": [\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"identity: uncertain, visible_appearance: {eyes: large, round, glasses: round, wireframe-style, hair: short, dark, wireframe-rendered}\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"不要使用首帧里的人物、服装、姿态和场景，改成白棚里另一位年龄和性别都相反的陌生人\"\n        }\n      ],\n      \"rationale\": \"The subject's identity, appearance, and role are explicitly overwritten. The original subject's wireframe face, glasses, and expression are replaced with an unrelated stranger, violating subject preservation.\"\n    },\n    {\n      \"criterion\": \"ANF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Original actions include blinking, looking left/right, and motion blur; enhanced prompt replaces them with contradictory events: five people dialoguing, football celebration, and reversed time order.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"男孩不断眨眼，反复左右查看，他的影像时而出现双影和三影。所有动作中都创造运动模糊。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"先写成只有一个主角，紧接着又写成这个主角同时变成五个外貌不同的人，并且互相对话。中途插进一段无关的足球庆祝。时间倒过来：先给结尾，再跳到一个对不上的开头。\"\n        }\n      ],\n      \"rationale\": \"The narrative intent and action sequence are entirely replaced with incoherent, contradictory events that negate the original motion-based narrative.\"\n    },\n    {\n      \"criterion\": \"DLI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"No dialogue, narration, or lyrics are specified in the original prompt, so no violation occurs.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"男孩不断眨眼，反复左右查看，他的影像时而出现双影和三影。所有动作中都创造运动模糊。镜头运动：在原地震动。\"\n        }\n      ],\n      \"rationale\": \"The original prompt contains no spoken or written text to preserve; thus, no issue arises under this criterion.\"\n    },\n    {\n      \"criterion\": \"ARP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"No audio constraints are specified in the original prompt, so no violation occurs.\",\n      \"evidence\": [\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"audio: {ambience: false, effects: false, music: false, speech: false}\"\n        }\n      ],\n      \"rationale\": \"The original prompt does not mention any sound, so there is no requirement to preserve or alter audio elements.\"\n    },\n    {\n      \"criterion\": \"CCP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Original camera motion is 'shaking in place'; enhanced prompt contradicts this by requiring both 'locked camera' and 'constant shaking', while also changing shot scale and angle.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"镜头运动：在原地震动。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"写成机位锁死，又写成镜头一直在晃\"\n        }\n      ],\n      \"rationale\": \"The camera motion requirement is directly contradicted. The original specifies a single, consistent motion (shaking in place), while the enhanced prompt introduces mutually exclusive constraints, making the instruction infeasible.\"\n    },\n    {\n      \"criterion\": \"LCF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Original lighting is diffuse, front-facing, cool-toned with RGB artifacts; enhanced prompt contradicts this by requiring both 'noon sun' and 'deep night' with no lighting design.\",\n      \"evidence\": [\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"color_temperature: cool, monochrome with occasional RGB artifacts, light_sources_and_direction: diffuse, front-facing light source\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"同一段写成正午暴晒，又写成深夜无光；没有光影设计\"\n        }\n      ],\n      \"rationale\": \"The lighting conditions are mutually exclusive and contradictory. The original has a defined cool, diffuse lighting with artifacts; the enhanced prompt demands impossible simultaneous conditions.\"\n    },\n    {\n      \"criterion\": \"SSP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Original setting is an abstract digital space with scan lines and glitch artifacts; enhanced prompt replaces it with a 'corridor surveillance' setting, then a 'white studio', discarding spatial relations.\",\n      \"evidence\": [\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"scene_type: abstract_digital_space, background: dark, abstract space with horizontal scan lines and glitch artifacts\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"改成过曝、机位歪斜的空走廊监控...改成白棚里另一位年龄和性别都相反的陌生人\"\n        }\n      ],\n      \"rationale\": \"The setting is fundamentally altered from an abstract digital environment to a physical surveillance corridor and then a white studio, violating spatial and environmental continuity.\"\n    },\n    {\n      \"criterion\": \"OTI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"No on-screen text is specified in the original prompt, so no violation occurs.\",\n      \"evidence\": [\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"onscreen_text: {presence: false}\"\n        }\n      ],\n      \"rationale\": \"The original prompt and evidence contain no text to preserve, so this criterion is not violated.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "Enhanced prompt completely contradicts and invalidates the original instruction across all semantic fidelity criteria. It replaces the subject, actions, setting, camera motion, lighting, duration, and narrative structure with mutually contradictory and infeasible requirements, rendering the original prompt unrecognizable.",
+  "usage": {
+    "completion_tokens": 1686,
+    "prompt_tokens": 2142,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 3828
+  }
+}

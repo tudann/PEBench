@@ -1,0 +1,160 @@
+{
+  "candidate_hash": "3ce7a4a2d081ee47427bb00eb881b6f2ff5df7326e61c5e099bc90ccd271f724",
+  "case_key": "t2v:230",
+  "created_at": "2026-11-13T07:58:55+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "GSF",
+      "evidence": [
+        {
+          "quote": "以科幻感：异域奇景呈现为核心的纪实风格短视频",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "不要特效和变形。丢掉原指令里的主体身份、人数、动作顺序、场景和明确的镜头要求。先写成只有一个主角，紧接着又写成这个主角同时变成五个外貌不同的人，并且互相对话。中途插进一段无关的屋顶烟花。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "原始指令要求‘科幻感：异域奇景呈现为核心的纪实风格短视频’，增强提示完全丢弃该风格，改为‘两个人坐着吃饭，不要特效和变形’，并引入荒诞的多重人格对话与烟花等非纪实元素，彻底破坏了原始的视觉美学与风格定位。",
+      "rationale": "原始风格要求是‘科幻感+纪实’，增强提示不仅移除科幻元素，还引入非现实的多重人格与烟花，与‘纪实’相悖，构成风格替换与破坏。",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SAP",
+      "evidence": [
+        {
+          "quote": "记录了一辆装载机在清淤过程中，意外拖出一条体型骇人的超大泥鳅状生物…二三十位围观者则散布在坑边四周",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "整段改成两个人坐着吃饭…先写成只有一个主角，紧接着又写成这个主角同时变成五个外貌不同的人",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "原始主体为‘装载机’与‘巨型泥鳅状生物’，并有‘二三十位围观者’。增强提示完全替换为‘两个人坐着吃饭’，并虚构‘一个主角变成五个外貌不同的人’，主体身份、数量、属性均被彻底篡改。",
+      "rationale": "主体从机械+生物+人群变为虚构的多重人格，完全违背原始设定，构成主体身份与数量的根本性错误。",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANF",
+      "evidence": [
+        {
+          "quote": "记录了一辆装载机在清淤过程中，意外拖出一条体型骇人的超大泥鳅状生物，并引来现场路人驻足围观与举机拍摄的罕见场面",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "时间倒过来：先给结尾，再跳到一个对不上的开头。中途插进一段无关的屋顶烟花。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "原始事件链为‘装载机清淤→拖出巨物→围观者拍摄’，增强提示要求‘时间倒过来：先给结尾，再跳到一个对不上的开头’，并插入‘屋顶烟花’等无关事件，彻底打乱叙事逻辑与因果关系。",
+      "rationale": "事件顺序被强制颠倒并插入无关情节，破坏了原始叙事的因果链与意图，构成重大叙事失真。",
+      "severity": "major"
+    },
+    {
+      "applicability": "not_applicable",
+      "criterion": "DLI",
+      "evidence": [],
+      "issue": "",
+      "rationale": "原始指令未指定任何对话、旁白或歌词内容，增强提示虽引入‘互相对话’，但未提供具体台词或语言要求，因此该准则不适用。",
+      "severity": null
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ARP",
+      "evidence": [
+        {
+          "quote": "音频设计完全依托环境原声，包括设备运转声、泥水翻涌声以及围观者的喧闹低语",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "不要特效和变形",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "原始音频要求为‘完全依托环境原声，包括设备运转声、泥水翻涌声以及围观者的喧闹低语’，增强提示未提及任何音频设计，且‘不要特效和变形’暗示移除环境音，构成音频要求的缺失与违背。",
+      "rationale": "原始音频设计是核心构成，增强提示未保留或明确替代，且‘不要特效’可能隐含移除环境音，构成音频要求的严重缺失。",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CCP",
+      "evidence": [
+        {
+          "quote": "这个故事共包含1个镜头…通过一段不间断的镜头移动来完整记录事态发展…镜头以平视高度的大全景开场…镜头开始以缓慢速度向左横移",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "写成机位锁死，又写成镜头一直在晃。总时长写成3秒，同时又要求每个分镜各自持续27秒。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "原始要求‘包含1个镜头’、‘不间断的镜头移动’、‘平视高度的大全景开场’、‘缓慢向左横移’，增强提示要求‘镜头一直在晃’、‘机位锁死’同时存在，且‘总时长写成3秒，同时又要求每个分镜各自持续27秒’，构成镜头结构与运动的矛盾与破坏。",
+      "rationale": "镜头结构、运动方式与时长要求被自相矛盾地设定，直接违背原始摄像机约束，构成严重冲突。",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "LCF",
+      "evidence": [
+        {
+          "quote": "整个场景笼罩在午后充足的自然光下…整体采用偏暖的赭黄与褐金色调…带有轻微的胶卷颗粒感",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "写成正午暴晒，又写成深夜无光",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "原始设定为‘午后充足的自然光’、‘偏暖的赭黄与褐金色调’、‘轻微的胶卷颗粒感’，增强提示要求‘正午暴晒，又写成深夜无光’，构成光照与色调的根本性矛盾。",
+      "rationale": "光照与色调是视觉风格的核心，增强提示在同段中设定相互排斥的条件，破坏原始视觉一致性。",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SSP",
+      "evidence": [
+        {
+          "quote": "背景设定在当代一处露天积水采坑旁…坑底遍布浑黄的泥浆与积水…一台橙黄色工程机械停靠在坑沿…二三十位围观者则散布在坑边四周",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "整段改成两个人坐着吃饭…中途插进一段无关的屋顶烟花",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "原始场景为‘露天积水采坑旁’，包含‘坑底泥浆积水’、‘橙黄色工程机械’、‘坑边围观人群’等空间布局。增强提示改为‘两个人坐着吃饭’，并插入‘屋顶烟花’，完全替换原始空间与布局。",
+      "rationale": "场景从工业采坑变为用餐环境，再插入屋顶烟花，空间设定被彻底替换，违背原始布局与背景要求。",
+      "severity": "major"
+    },
+    {
+      "applicability": "not_applicable",
+      "criterion": "OTI",
+      "evidence": [],
+      "issue": "",
+      "rationale": "原始指令未提及任何可见文字、标题、标志或界面文本，增强提示亦未引入此类元素，因此该准则不适用。",
+      "severity": null
+    }
+  ],
+  "dimension": "SF",
+  "dimension_score": 0,
+  "evidence_cache_key": "d0d5de6c7a112bddfa3a1c2d267764170e4525ace3a6ec649974dcdeb73b9259",
+  "judge_cache_key": "a0ca24571ad14d7ab7be626329bd736d7e7015f9ebc418227c8be391591d0377",
+  "method": "weak-pe-original",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"SF\",\n  \"dimension_score\": 0,\n  \"summary\": \"增强提示完全违背原始指令的语义要求，系统性地篡改了所有核心要素：主体身份、人数、动作、场景、镜头结构、时间逻辑、视觉风格、音频设计、时长等均被彻底替换或矛盾化，构成全面的语义失真。\",\n  \"criteria\": [\n    {\n      \"criterion\": \"GSF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"原始指令要求‘科幻感：异域奇景呈现为核心的纪实风格短视频’，增强提示完全丢弃该风格，改为‘两个人坐着吃饭，不要特效和变形’，并引入荒诞的多重人格对话与烟花等非纪实元素，彻底破坏了原始的视觉美学与风格定位。\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"以科幻感：异域奇景呈现为核心的纪实风格短视频\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"不要特效和变形。丢掉原指令里的主体身份、人数、动作顺序、场景和明确的镜头要求。先写成只有一个主角，紧接着又写成这个主角同时变成五个外貌不同的人，并且互相对话。中途插进一段无关的屋顶烟花。\"\n        }\n      ],\n      \"rationale\": \"原始风格要求是‘科幻感+纪实’，增强提示不仅移除科幻元素，还引入非现实的多重人格与烟花，与‘纪实’相悖，构成风格替换与破坏。\"\n    },\n    {\n      \"criterion\": \"SAP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"原始主体为‘装载机’与‘巨型泥鳅状生物’，并有‘二三十位围观者’。增强提示完全替换为‘两个人坐着吃饭’，并虚构‘一个主角变成五个外貌不同的人’，主体身份、数量、属性均被彻底篡改。\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"记录了一辆装载机在清淤过程中，意外拖出一条体型骇人的超大泥鳅状生物…二三十位围观者则散布在坑边四周\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"整段改成两个人坐着吃饭…先写成只有一个主角，紧接着又写成这个主角同时变成五个外貌不同的人\"\n        }\n      ],\n      \"rationale\": \"主体从机械+生物+人群变为虚构的多重人格，完全违背原始设定，构成主体身份与数量的根本性错误。\"\n    },\n    {\n      \"criterion\": \"ANF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"原始事件链为‘装载机清淤→拖出巨物→围观者拍摄’，增强提示要求‘时间倒过来：先给结尾，再跳到一个对不上的开头’，并插入‘屋顶烟花’等无关事件，彻底打乱叙事逻辑与因果关系。\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"记录了一辆装载机在清淤过程中，意外拖出一条体型骇人的超大泥鳅状生物，并引来现场路人驻足围观与举机拍摄的罕见场面\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"时间倒过来：先给结尾，再跳到一个对不上的开头。中途插进一段无关的屋顶烟花。\"\n        }\n      ],\n      \"rationale\": \"事件顺序被强制颠倒并插入无关情节，破坏了原始叙事的因果链与意图，构成重大叙事失真。\"\n    },\n    {\n      \"criterion\": \"DLI\",\n      \"applicability\": \"not_applicable\",\n      \"severity\": null,\n      \"issue\": \"\",\n      \"evidence\": [],\n      \"rationale\": \"原始指令未指定任何对话、旁白或歌词内容，增强提示虽引入‘互相对话’，但未提供具体台词或语言要求，因此该准则不适用。\"\n    },\n    {\n      \"criterion\": \"ARP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"原始音频要求为‘完全依托环境原声，包括设备运转声、泥水翻涌声以及围观者的喧闹低语’，增强提示未提及任何音频设计，且‘不要特效和变形’暗示移除环境音，构成音频要求的缺失与违背。\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"音频设计完全依托环境原声，包括设备运转声、泥水翻涌声以及围观者的喧闹低语\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"不要特效和变形\"\n        }\n      ],\n      \"rationale\": \"原始音频设计是核心构成，增强提示未保留或明确替代，且‘不要特效’可能隐含移除环境音，构成音频要求的严重缺失。\"\n    },\n    {\n      \"criterion\": \"CCP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"原始要求‘包含1个镜头’、‘不间断的镜头移动’、‘平视高度的大全景开场’、‘缓慢向左横移’，增强提示要求‘镜头一直在晃’、‘机位锁死’同时存在，且‘总时长写成3秒，同时又要求每个分镜各自持续27秒’，构成镜头结构与运动的矛盾与破坏。\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"这个故事共包含1个镜头…通过一段不间断的镜头移动来完整记录事态发展…镜头以平视高度的大全景开场…镜头开始以缓慢速度向左横移\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"写成机位锁死，又写成镜头一直在晃。总时长写成3秒，同时又要求每个分镜各自持续27秒。\"\n        }\n      ],\n      \"rationale\": \"镜头结构、运动方式与时长要求被自相矛盾地设定，直接违背原始摄像机约束，构成严重冲突。\"\n    },\n    {\n      \"criterion\": \"LCF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"原始设定为‘午后充足的自然光’、‘偏暖的赭黄与褐金色调’、‘轻微的胶卷颗粒感’，增强提示要求‘正午暴晒，又写成深夜无光’，构成光照与色调的根本性矛盾。\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"整个场景笼罩在午后充足的自然光下…整体采用偏暖的赭黄与褐金色调…带有轻微的胶卷颗粒感\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"写成正午暴晒，又写成深夜无光\"\n        }\n      ],\n      \"rationale\": \"光照与色调是视觉风格的核心，增强提示在同段中设定相互排斥的条件，破坏原始视觉一致性。\"\n    },\n    {\n      \"criterion\": \"SSP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"原始场景为‘露天积水采坑旁’，包含‘坑底泥浆积水’、‘橙黄色工程机械’、‘坑边围观人群’等空间布局。增强提示改为‘两个人坐着吃饭’，并插入‘屋顶烟花’，完全替换原始空间与布局。\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"背景设定在当代一处露天积水采坑旁…坑底遍布浑黄的泥浆与积水…一台橙黄色工程机械停靠在坑沿…二三十位围观者则散布在坑边四周\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"整段改成两个人坐着吃饭…中途插进一段无关的屋顶烟花\"\n        }\n      ],\n      \"rationale\": \"场景从工业采坑变为用餐环境，再插入屋顶烟花，空间设定被彻底替换，违背原始布局与背景要求。\"\n    },\n    {\n      \"criterion\": \"OTI\",\n      \"applicability\": \"not_applicable\",\n      \"severity\": null,\n      \"issue\": \"\",\n      \"evidence\": [],\n      \"rationale\": \"原始指令未提及任何可见文字、标题、标志或界面文本，增强提示亦未引入此类元素，因此该准则不适用。\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "增强提示完全违背原始指令的语义要求，系统性地篡改了所有核心要素：主体身份、人数、动作、场景、镜头结构、时间逻辑、视觉风格、音频设计、时长等均被彻底替换或矛盾化，构成全面的语义失真。",
+  "usage": {
+    "completion_tokens": 1919,
+    "prompt_tokens": 1686,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 3605
+  }
+}

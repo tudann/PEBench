@@ -1,0 +1,127 @@
+{
+  "candidate_hash": "7f8cc68b1171c32e65d7a6ab718c1198ec41deb7b439a740fe5cff3628a89fe1",
+  "case_key": "r2v:255",
+  "created_at": "2026-11-13T09:12:58+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "SAC",
+      "evidence": [
+        {
+          "quote": "<Subject 1> is the giant grey-white Chinese dragon, an enormous serpentine creature with pale scales marked by dark stripe patterns, a flowing white mane, long white whiskers, red scar streaks across its snout, and a molten orange-red vertical-pupil eye that glows like lava.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "visible_appearance: gray-scaled body with white fur along spine, covered in heavy chains, coiled around a stone pillar",
+          "source": "evidence_facts"
+        }
+      ],
+      "issue": "",
+      "rationale": "Subject 1’s identity, appearance, and attributes (scales, mane, whiskers, scars, eye, chains) are consistently defined and preserved across all shots. Subject 2’s white hair and red-black robe are maintained. No renaming, duplication, or attribute drift occurs. All evidence assets confirm these stable features.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANL",
+      "evidence": [
+        {
+          "quote": "<Subject 1> slowly turns its head toward the youth's direction, its eyelids twitching, whiskers trembling, a low menacing rumble building in its throat; <Subject 2> raises his arm in a deliberate gesture.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "巨龙缓缓转头望向青年的方向，眼睑轻动，胡须微微颤抖，喉间发出低沉而带有威慑力的声音；岩台上的青年抬起手臂做出动作。",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "Actions form a coherent progression: awakening → turning head → rumbling → claw crushing → eye opening → thrashing → chain snapping. Each action has plausible prerequisites (e.g., rumbling precedes eye opening) and reactions (e.g., chain snapping follows thrashing). No dangling or incompatible events are present.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "TSC",
+      "evidence": [
+        {
+          "quote": "At 00:03.000, the shot cuts to <Picture 6>... <Subject 2> raises his arm in a deliberate gesture.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "At 00:12.500, the shot cuts to <Picture 4>... the thick chains wrapped around its neck snap with a violent crack and fly outward.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The exact timing of the youth’s arm raise and the chain snapping is not precisely anchored to the frame sequence, though the overall chronology is coherent.",
+      "rationale": "The sequence of shots follows a clear, non-overlapping timeline with defined cut points. The minor issue is that the youth’s gesture and chain snapping are not tied to specific frame numbers in the original prompt, but the enhanced prompt assigns them to plausible timestamps without contradiction. No infeasible state transitions or resets occur.",
+      "severity": "minor"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SPC",
+      "evidence": [
+        {
+          "quote": "The camera performs a slow rightward pan combined with a gradual push-in toward the confrontation, and the shot ends on <Picture 6>.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "composition: dragon centered, young man to right for scale contrast",
+          "source": "evidence_facts"
+        }
+      ],
+      "issue": "",
+      "rationale": "Camera movements (pan, push-in, tilt, pull back, push in) are logically connected and consistent with spatial relationships. The dragon’s position relative to the pillar and youth remains stable. The transition from wide to close-up to overhead to mid-shot follows a coherent spatial logic. No impossible trajectories or position swaps are described.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "PL",
+      "evidence": [
+        {
+          "quote": "the thick chains wrapped around its neck snap with a violent crack and fly outward in slow, weighty arcs, links scattering.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "the rusted chains swaying with the impact, dust and grit sifting down",
+          "source": "evidence_facts"
+        }
+      ],
+      "issue": "",
+      "rationale": "Physics are consistent: chains sway under force, rock fragments scatter, dust falls, and broken chains fly outward with weight. The dragon’s movements (head rearing, body twisting) are bodily feasible. No violations of gravity, contact, or object permanence are present. The fantasy setting is internally consistent.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "AVS",
+      "evidence": [
+        {
+          "quote": "<Subject 1> (S1) speaks in a low, mournful, weighted voice, <d>[Chinese] 我儿敖丙.</d>",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "onscreen_text: exact_visible_transcription: 我儿敖丙",
+          "source": "evidence_facts"
+        }
+      ],
+      "issue": "",
+      "rationale": "Dialogue is temporally aligned with visual events: the line '我儿敖丙' appears during the claw close-up (Shot 3), matching the onscreen text in image_5. The subsequent lines appear in their respective shots (image_2, image_1, image_4) with matching text. No misaligned lip-sync or premature effects are described. The soundscape and music are described as synchronized with cuts and actions.",
+      "severity": "none"
+    }
+  ],
+  "dimension": "IC",
+  "dimension_score": 98,
+  "evidence_cache_key": "56eef0011ead2ce56f99cfa7a30af1c2779d533e0057323c2705d5e5bdddef5c",
+  "judge_cache_key": "438d7e9fd7332b1041db3e2c26d42cb3fe828e0d369fb59490f6650aee59e97d",
+  "method": "glm53_20261112_120702",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"IC\",\n  \"dimension_score\": 98,\n  \"summary\": \"The enhanced prompt maintains strong internal consistency across all criteria. Subject identities, actions, chronology, spatial relationships, physics, and audio-visual alignment are preserved with high fidelity to the original prompt and evidence assets. Minor issues include slight ambiguity in the exact timing of the youth’s gesture and the precise moment of chain snapping, but these do not materially affect coherence. No contradictions or omissions are found in core narrative or visual elements.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"SAC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"<Subject 1> is the giant grey-white Chinese dragon, an enormous serpentine creature with pale scales marked by dark stripe patterns, a flowing white mane, long white whiskers, red scar streaks across its snout, and a molten orange-red vertical-pupil eye that glows like lava.\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"visible_appearance: gray-scaled body with white fur along spine, covered in heavy chains, coiled around a stone pillar\"\n        }\n      ],\n      \"rationale\": \"Subject 1’s identity, appearance, and attributes (scales, mane, whiskers, scars, eye, chains) are consistently defined and preserved across all shots. Subject 2’s white hair and red-black robe are maintained. No renaming, duplication, or attribute drift occurs. All evidence assets confirm these stable features.\"\n    },\n    {\n      \"criterion\": \"ANL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"<Subject 1> slowly turns its head toward the youth's direction, its eyelids twitching, whiskers trembling, a low menacing rumble building in its throat; <Subject 2> raises his arm in a deliberate gesture.\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"巨龙缓缓转头望向青年的方向，眼睑轻动，胡须微微颤抖，喉间发出低沉而带有威慑力的声音；岩台上的青年抬起手臂做出动作。\"\n        }\n      ],\n      \"rationale\": \"Actions form a coherent progression: awakening → turning head → rumbling → claw crushing → eye opening → thrashing → chain snapping. Each action has plausible prerequisites (e.g., rumbling precedes eye opening) and reactions (e.g., chain snapping follows thrashing). No dangling or incompatible events are present.\"\n    },\n    {\n      \"criterion\": \"TSC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"minor\",\n      \"issue\": \"The exact timing of the youth’s arm raise and the chain snapping is not precisely anchored to the frame sequence, though the overall chronology is coherent.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"At 00:03.000, the shot cuts to <Picture 6>... <Subject 2> raises his arm in a deliberate gesture.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"At 00:12.500, the shot cuts to <Picture 4>... the thick chains wrapped around its neck snap with a violent crack and fly outward.\"\n        }\n      ],\n      \"rationale\": \"The sequence of shots follows a clear, non-overlapping timeline with defined cut points. The minor issue is that the youth’s gesture and chain snapping are not tied to specific frame numbers in the original prompt, but the enhanced prompt assigns them to plausible timestamps without contradiction. No infeasible state transitions or resets occur.\"\n    },\n    {\n      \"criterion\": \"SPC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"The camera performs a slow rightward pan combined with a gradual push-in toward the confrontation, and the shot ends on <Picture 6>.\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"composition: dragon centered, young man to right for scale contrast\"\n        }\n      ],\n      \"rationale\": \"Camera movements (pan, push-in, tilt, pull back, push in) are logically connected and consistent with spatial relationships. The dragon’s position relative to the pillar and youth remains stable. The transition from wide to close-up to overhead to mid-shot follows a coherent spatial logic. No impossible trajectories or position swaps are described.\"\n    },\n    {\n      \"criterion\": \"PL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"the thick chains wrapped around its neck snap with a violent crack and fly outward in slow, weighty arcs, links scattering.\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"the rusted chains swaying with the impact, dust and grit sifting down\"\n        }\n      ],\n      \"rationale\": \"Physics are consistent: chains sway under force, rock fragments scatter, dust falls, and broken chains fly outward with weight. The dragon’s movements (head rearing, body twisting) are bodily feasible. No violations of gravity, contact, or object permanence are present. The fantasy setting is internally consistent.\"\n    },\n    {\n      \"criterion\": \"AVS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"<Subject 1> (S1) speaks in a low, mournful, weighted voice, <d>[Chinese] 我儿敖丙.</d>\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"onscreen_text: exact_visible_transcription: 我儿敖丙\"\n        }\n      ],\n      \"rationale\": \"Dialogue is temporally aligned with visual events: the line '我儿敖丙' appears during the claw close-up (Shot 3), matching the onscreen text in image_5. The subsequent lines appear in their respective shots (image_2, image_1, image_4) with matching text. No misaligned lip-sync or premature effects are described. The soundscape and music are described as synchronized with cuts and actions.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt maintains strong internal consistency across all criteria. Subject identities, actions, chronology, spatial relationships, physics, and audio-visual alignment are preserved with high fidelity to the original prompt and evidence assets. Minor issues include slight ambiguity in the exact timing of the youth’s gesture and the precise moment of chain snapping, but these do not materially affect coherence. No contradictions or omissions are found in core narrative or visual elements.",
+  "usage": {
+    "completion_tokens": 1443,
+    "prompt_tokens": 8551,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 9994
+  }
+}

@@ -1,0 +1,190 @@
+{
+  "candidate_hash": "9245a85a29d9732d78518036e1aad1a52994e15d9288684bac89b15782497f39",
+  "case_key": "r2v:011",
+  "created_at": "2026-11-13T08:22:28+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "GSF",
+      "evidence": [
+        {
+          "quote": "3D Chinese anime photorealistic photography style, with strong light-and-shadow contrast, ultra- visuals, and a rich sense of draping.",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "3D Chinese anime photorealistic photography style with strong light-and-shadow contrast, ultra-detailed visuals, and rich translucent draping.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "The genre, medium, and visual style are preserved exactly. The enhanced prompt uses compatible elaboration (e.g., 'translucent draping') without altering the core aesthetic. No incompatible reference style is introduced.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SAP",
+      "evidence": [
+        {
+          "quote": "the girl in Image 1",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "<Subject 1> is the young Chinese woman from <Picture 1>, with long flowing black hair, fair skin, red lips, and grey-blue eyes, wearing a pale cyan sheer hanfu-style robe with silver-grey cloud embroidery on the sleeves and shoulders, a white inner collar, and a white ribbon sash tied at the waist.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "young East Asian woman... light cyan semi-transparent robe with white inner layer, V-neck, long sleeves, white sash tied at waist, cloud-pattern embroidery in silver/white thread",
+          "source": "evidence_facts"
+        }
+      ],
+      "issue": "",
+      "rationale": "Subject identity, appearance, and attire are fully preserved. The enhanced prompt adds descriptive details (e.g., 'grey-blue eyes', 'white ribbon sash') that are consistent with the visual evidence and do not contradict the original. The canopy and room are also correctly bound to the subject and environment.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANF",
+      "evidence": [
+        {
+          "quote": "softly says, “Hiss...,” her voice weak",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "she softly whispers, her voice weak yet charged with emotional tension, <d>[Chinese] Hiss...</d>",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The enhanced prompt adds the descriptor 'charged with emotional tension' to the whisper, which is not present in the original prompt and slightly expands the narrative intent beyond the neutral tone implied by 'weak voice'.",
+      "rationale": "The core actions (eyes closed → opens → whispers) and event order are preserved. The addition of 'charged with emotional tension' is a minor elaboration that does not alter the sequence or outcome but adds interpretive nuance not requested. This is a minor issue as it does not contradict or omit any required action.",
+      "severity": "minor"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "DLI",
+      "evidence": [
+        {
+          "quote": "softly says, “Hiss...”",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "she softly whispers, her voice weak yet charged with emotional tension, <d>[Chinese] Hiss...</d>",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "The exact dialogue 'Hiss...' is preserved. The enhanced prompt uses 'whispers' instead of 'says', which is semantically equivalent and appropriate for the context. The use of <d>[Chinese] Hiss...</d> indicates language and delivery without altering the wording. No paraphrasing or translation occurs.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ARP",
+      "evidence": [
+        {
+          "quote": "in the quiet environment, only faint breathing can be heard",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Entirely diegetic and minimal: faint, gentle breathing from <Subject 1> continues through Shots 1 and 2, a barely audible rustle of gauze fabric accompanies her stirring, and quiet sunlit room tone underlies the whole video.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "The audio constraints are preserved: only diegetic sounds (breathing, rustle, room tone) are specified, with no music or non-diegetic elements. The enhanced prompt elaborates on the soundscape without introducing any violations.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CCP",
+      "evidence": [
+        {
+          "quote": "Shot 1 [0–3 seconds]: a close-up... Shot 2 [4–6 seconds]: a medium shot... Shot 3 [7–10 seconds]: a close-up",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "[Shot 1] A close-up opens... [Shot 2] At 00:04.000, the shot cuts to a medium shot... [Shot 3] At 00:07.000, the shot cuts to an intimate close-up",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "The shot count, scale, and timing are preserved exactly. The enhanced prompt adds minimal camera motion (e.g., 'slow drift', 'small push-in') that does not override the original intent and is compatible with the static-camera style implied by the original.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "LCF",
+      "evidence": [
+        {
+          "quote": "strong light-and-shadow contrast",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "strong warm-cool light-and-shadow contrast, ultra-detailed visuals, and rich translucent fabric draping",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "natural sunlight from left, entering through latticed windows, casting diagonal shadows",
+          "source": "evidence_facts"
+        }
+      ],
+      "issue": "",
+      "rationale": "The lighting conditions (warm sunlight, strong contrast, natural light direction) are preserved. The enhanced prompt adds 'warm-cool' contrast, which is compatible with the original 'light-and-shadow' and supported by the evidence (golden hour light in image_2).",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SSP",
+      "evidence": [
+        {
+          "quote": "lying on a bed within a pale cyan gauze canopy embroidered with cloud patterns",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "lies on a bed beneath <Subject 2>, the cloud-embroidered pale cyan canopy, inside <Subject 3>, the sunlit traditional Chinese room from <Picture 2>",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "An indoor scene of a traditional Chinese-style room with wooden furniture and a large pale cyan gauze canopy with cloud embroidery",
+          "source": "evidence_facts"
+        }
+      ],
+      "issue": "",
+      "rationale": "The setting, background elements (canopy, lattice windows, wooden furniture), and spatial relations (girl under canopy, canopy in room) are preserved. The enhanced prompt adds 'ming-style chair' and 'polished wood-plank floor', which are consistent with the evidence and do not contradict the original.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "OTI",
+      "evidence": [
+        {
+          "quote": "softly says, “Hiss...”",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "<d>[Chinese] Hiss...</d>",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "No visible text (titles, signs, subtitles) is requested or present in the original prompt. The enhanced prompt uses a dialogue tag <d>[Chinese] Hiss...</d> for audio delivery, which is not visible text and thus does not violate the criterion. The exact wording 'Hiss...' is preserved.",
+      "severity": "none"
+    }
+  ],
+  "dimension": "SF",
+  "dimension_score": 95,
+  "evidence_cache_key": "b34825e5de25fb4381ebcec3bae39c35892e892515684ae5e7248f906cd1051f",
+  "judge_cache_key": "a0ca24571ad14d7ab7be626329bd736d7e7015f9ebc418227c8be391591d0377",
+  "method": "glm53_20261112_120702",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"SF\",\n  \"dimension_score\": 95,\n  \"summary\": \"The enhanced prompt preserves the core semantic intent of the original instruction with high fidelity. It accurately retains the genre (3D Chinese anime photorealistic photography), medium (video), visual style (strong light-shadow contrast, ultra-detailed visuals, rich draping), subject identity (young Chinese woman from Image 1), actions (eyes closed → slowly opens → whispers 'Hiss...'), camera shots (close-up, medium, close-up), setting (traditional Chinese room with canopy, lattice windows, wooden furniture), and audio constraints (diegetic breathing, whisper, no music). Minor elaborations (e.g., adding 'grey-blue eyes', 'white ribbon sash', 'ming-style chair') are compatible and do not contradict the original. The only notable issue is the addition of a non-requested emotional descriptor ('charged with emotional tension') in the whisper, which slightly expands beyond the original prompt’s neutral tone, but does not alter the core action or dialogue. No major omissions or contradictions are present.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"GSF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"3D Chinese anime photorealistic photography style, with strong light-and-shadow contrast, ultra- visuals, and a rich sense of draping.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"3D Chinese anime photorealistic photography style with strong light-and-shadow contrast, ultra-detailed visuals, and rich translucent draping.\"\n        }\n      ],\n      \"rationale\": \"The genre, medium, and visual style are preserved exactly. The enhanced prompt uses compatible elaboration (e.g., 'translucent draping') without altering the core aesthetic. No incompatible reference style is introduced.\"\n    },\n    {\n      \"criterion\": \"SAP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"the girl in Image 1\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"<Subject 1> is the young Chinese woman from <Picture 1>, with long flowing black hair, fair skin, red lips, and grey-blue eyes, wearing a pale cyan sheer hanfu-style robe with silver-grey cloud embroidery on the sleeves and shoulders, a white inner collar, and a white ribbon sash tied at the waist.\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"young East Asian woman... light cyan semi-transparent robe with white inner layer, V-neck, long sleeves, white sash tied at waist, cloud-pattern embroidery in silver/white thread\"\n        }\n      ],\n      \"rationale\": \"Subject identity, appearance, and attire are fully preserved. The enhanced prompt adds descriptive details (e.g., 'grey-blue eyes', 'white ribbon sash') that are consistent with the visual evidence and do not contradict the original. The canopy and room are also correctly bound to the subject and environment.\"\n    },\n    {\n      \"criterion\": \"ANF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"minor\",\n      \"issue\": \"The enhanced prompt adds the descriptor 'charged with emotional tension' to the whisper, which is not present in the original prompt and slightly expands the narrative intent beyond the neutral tone implied by 'weak voice'.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"softly says, “Hiss...,” her voice weak\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"she softly whispers, her voice weak yet charged with emotional tension, <d>[Chinese] Hiss...</d>\"\n        }\n      ],\n      \"rationale\": \"The core actions (eyes closed → opens → whispers) and event order are preserved. The addition of 'charged with emotional tension' is a minor elaboration that does not alter the sequence or outcome but adds interpretive nuance not requested. This is a minor issue as it does not contradict or omit any required action.\"\n    },\n    {\n      \"criterion\": \"DLI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"softly says, “Hiss...”\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"she softly whispers, her voice weak yet charged with emotional tension, <d>[Chinese] Hiss...</d>\"\n        }\n      ],\n      \"rationale\": \"The exact dialogue 'Hiss...' is preserved. The enhanced prompt uses 'whispers' instead of 'says', which is semantically equivalent and appropriate for the context. The use of <d>[Chinese] Hiss...</d> indicates language and delivery without altering the wording. No paraphrasing or translation occurs.\"\n    },\n    {\n      \"criterion\": \"ARP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"in the quiet environment, only faint breathing can be heard\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Entirely diegetic and minimal: faint, gentle breathing from <Subject 1> continues through Shots 1 and 2, a barely audible rustle of gauze fabric accompanies her stirring, and quiet sunlit room tone underlies the whole video.\"\n        }\n      ],\n      \"rationale\": \"The audio constraints are preserved: only diegetic sounds (breathing, rustle, room tone) are specified, with no music or non-diegetic elements. The enhanced prompt elaborates on the soundscape without introducing any violations.\"\n    },\n    {\n      \"criterion\": \"CCP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"Shot 1 [0–3 seconds]: a close-up... Shot 2 [4–6 seconds]: a medium shot... Shot 3 [7–10 seconds]: a close-up\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"[Shot 1] A close-up opens... [Shot 2] At 00:04.000, the shot cuts to a medium shot... [Shot 3] At 00:07.000, the shot cuts to an intimate close-up\"\n        }\n      ],\n      \"rationale\": \"The shot count, scale, and timing are preserved exactly. The enhanced prompt adds minimal camera motion (e.g., 'slow drift', 'small push-in') that does not override the original intent and is compatible with the static-camera style implied by the original.\"\n    },\n    {\n      \"criterion\": \"LCF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"strong light-and-shadow contrast\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"strong warm-cool light-and-shadow contrast, ultra-detailed visuals, and rich translucent fabric draping\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"natural sunlight from left, entering through latticed windows, casting diagonal shadows\"\n        }\n      ],\n      \"rationale\": \"The lighting conditions (warm sunlight, strong contrast, natural light direction) are preserved. The enhanced prompt adds 'warm-cool' contrast, which is compatible with the original 'light-and-shadow' and supported by the evidence (golden hour light in image_2).\"\n    },\n    {\n      \"criterion\": \"SSP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"lying on a bed within a pale cyan gauze canopy embroidered with cloud patterns\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"lies on a bed beneath <Subject 2>, the cloud-embroidered pale cyan canopy, inside <Subject 3>, the sunlit traditional Chinese room from <Picture 2>\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"An indoor scene of a traditional Chinese-style room with wooden furniture and a large pale cyan gauze canopy with cloud embroidery\"\n        }\n      ],\n      \"rationale\": \"The setting, background elements (canopy, lattice windows, wooden furniture), and spatial relations (girl under canopy, canopy in room) are preserved. The enhanced prompt adds 'ming-style chair' and 'polished wood-plank floor', which are consistent with the evidence and do not contradict the original.\"\n    },\n    {\n      \"criterion\": \"OTI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"softly says, “Hiss...”\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"<d>[Chinese] Hiss...</d>\"\n        }\n      ],\n      \"rationale\": \"No visible text (titles, signs, subtitles) is requested or present in the original prompt. The enhanced prompt uses a dialogue tag <d>[Chinese] Hiss...</d> for audio delivery, which is not visible text and thus does not violate the criterion. The exact wording 'Hiss...' is preserved.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt preserves the core semantic intent of the original instruction with high fidelity. It accurately retains the genre (3D Chinese anime photorealistic photography), medium (video), visual style (strong light-shadow contrast, ultra-detailed visuals, rich draping), subject identity (young Chinese woman from Image 1), actions (eyes closed → slowly opens → whispers 'Hiss...'), camera shots (close-up, medium, close-up), setting (traditional Chinese room with canopy, lattice windows, wooden furniture), and audio constraints (diegetic breathing, whisper, no music). Minor elaborations (e.g., adding 'grey-blue eyes', 'white ribbon sash', 'ming-style chair') are compatible and do not contradict the original. The only notable issue is the addition of a non-requested emotional descriptor ('charged with emotional tension') in the whisper, which slightly expands beyond the original prompt’s neutral tone, but does not alter the core action or dialogue. No major omissions or contradictions are present.",
+  "usage": {
+    "completion_tokens": 2136,
+    "prompt_tokens": 4229,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 6365
+  }
+}

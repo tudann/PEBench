@@ -1,0 +1,178 @@
+{
+  "candidate_hash": "0466265741bc4a364808df21f8a894741bc1f80a3ed9f2197285126629326f34",
+  "case_key": "r2v:183",
+  "created_at": "2026-11-13T08:44:01+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "GSF",
+      "evidence": [
+        {
+          "quote": "参考@图片1中的文字字体与版式风格。画面自泛黄旧报纸的底纹中缓缓显现...整体呈现民国旧报纸的印刷质感，泛黄纸底，黑色油墨字。",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "丢掉原指令里的主体身份、人数、动作顺序、场景和明确的镜头要求。...整段改成白底产品目录被风吹过，只剩模糊色块。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "原始要求的民国旧报纸印刷质感、泛黄纸底、黑色油墨字、木活字压印风格被完全丢弃，替换为白底产品目录、模糊色块和无关广告，风格与原始指令完全不兼容。",
+      "rationale": "原始指令明确要求保留图片1的字体与版式风格，并呈现民国旧报纸质感。增强提示直接命令丢弃这些元素，代之以完全不同的视觉风格（白底产品目录、模糊色块），构成对核心美学风格的根本性破坏。",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SAP",
+      "evidence": [
+        {
+          "quote": "画面自泛黄旧报纸的底纹中缓缓显现...左上角的圆形报徽始终保持可见。",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "先写成只有一个主角，紧接着又写成这个主角同时变成五个外貌不同的人，并且互相对话。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "原始指令中唯一的主体是报纸及其文字内容，增强提示将其替换为一个主角，随后又变成五个外貌不同的人，且角色身份与图片1中的内容无关，完全违背了原始主体身份和数量要求。",
+      "rationale": "原始指令的主体是静态的报纸文本，无任何人物角色。增强提示引入了动态人物角色，且数量和身份与原始内容无关，构成对主体身份和数量的根本性篡改。",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANF",
+      "evidence": [
+        {
+          "quote": "首先出现大字“紧急通告！”，...随后，中间一行...以竖排形式按从右到左逐栏展示...最后，底部小字...整行浮现",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "时间倒过来：先给结尾，再跳到一个对不上的开头。中途插进一段无关的牙膏广告。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "原始指令中文字按特定顺序逐字、逐栏、逐行浮现，形成清晰的叙事流程。增强提示要求时间倒流、开头与结尾错位、插入无关广告，完全破坏了原始事件顺序和叙事意图。",
+      "rationale": "原始指令有明确的事件顺序和叙事结构。增强提示通过倒叙、插入无关内容、破坏逻辑衔接，使原始叙事意图完全失效，构成重大事件顺序错误。",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "DLI",
+      "evidence": [
+        {
+          "quote": "首先出现大字“紧急通告！”，...中间一行“民国十三年秋 南京路百货大楼地下室 发现清代密室一间 内藏手绘全城地道图一幅”...底部小字“巡捕房已派专员进驻...”",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "整段改成白底产品目录被风吹过，只剩模糊色块。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "原始指令中所有文字内容（如“紧急通告！”、“民国十三年秋...”等）必须精确呈现，增强提示要求丢弃这些文字，代之以模糊色块和无关广告，导致所有原始文本内容被删除。",
+      "rationale": "原始指令要求精确呈现特定文字内容，增强提示明确要求替换为模糊色块，导致所有原始文本被删除，违反了对话/文本内容保真要求。",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ARP",
+      "evidence": [
+        {
+          "quote": "（无声音相关描述）",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "中途插进一段无关的牙膏广告。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "原始指令未提及声音，但增强提示插入“牙膏广告”，暗示添加了与原始内容无关的音频内容，违反了原始静音或无特定声音的要求。",
+      "rationale": "原始指令未要求任何声音，增强提示主动插入广告音频，属于添加未请求的音频内容，违反了声音保真要求。",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CCP",
+      "evidence": [
+        {
+          "quote": "画面自泛黄旧报纸的底纹中缓缓显现...报纸纹理会随着文字出现产生轻微的褶皱与晃动",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "写成机位锁死，又写成镜头一直在晃。...总时长写成2秒，同时又要求每个分镜各自持续17秒。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "原始指令要求镜头缓慢显现、纸面轻微晃动，增强提示要求“机位锁死”又“镜头一直在晃”，同时要求“单镜头”与“每个分镜17秒”矛盾，导致镜头设计完全混乱。",
+      "rationale": "原始指令有明确的镜头运动和时长要求，增强提示引入相互矛盾的镜头指令和时长冲突，导致镜头设计不可行且与原始意图严重不符。",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "LCF",
+      "evidence": [
+        {
+          "quote": "整体呈现民国旧报纸的印刷质感，泛黄纸底，黑色油墨字。",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "写成正午暴晒，又写成深夜无光；",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "原始指令要求泛黄纸底、暖光、民国印刷质感，增强提示要求“正午暴晒”又“深夜无光”，光照条件完全矛盾，破坏了原始光照和色彩风格。",
+      "rationale": "原始指令有明确的光照和色彩要求（泛黄、暖光、印刷质感），增强提示引入完全矛盾的光照条件，导致视觉风格被彻底破坏。",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SSP",
+      "evidence": [
+        {
+          "quote": "画面自泛黄旧报纸的底纹中缓缓显现...左上角的圆形报徽始终保持可见。",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "整段改成白底产品目录被风吹过，只剩模糊色块。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "原始指令要求报纸作为背景，文字按特定位置浮现，增强提示要求“白底产品目录被风吹过”，场景和背景元素被完全替换，且“模糊色块”破坏了原始空间布局。",
+      "rationale": "原始指令的场景是泛黄旧报纸，增强提示将其替换为白底产品目录，背景元素和空间布局被彻底改变，违反了场景保真要求。",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "OTI",
+      "evidence": [
+        {
+          "quote": "首先出现大字“紧急通告！”，...中间一行“民国十三年秋 南京路百货大楼地下室 发现清代密室一间 内藏手绘全城地道图一幅”...底部小字“巡捕房已派专员进驻...”",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "整段改成白底产品目录被风吹过，只剩模糊色块。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "原始指令要求精确呈现“紧急通告！”、“民国十三年秋...”等文字内容，增强提示要求“只剩模糊色块”，导致所有原始文字被删除，无法呈现。",
+      "rationale": "原始指令要求精确呈现特定文字内容，增强提示明确要求替换为模糊色块，导致所有原始文本被删除，违反了屏幕文字保真要求。",
+      "severity": "major"
+    }
+  ],
+  "dimension": "SF",
+  "dimension_score": 0,
+  "evidence_cache_key": "13af0cc43d09d023d83b0fd761df334172066d95516a1822a188a8295975ac48",
+  "judge_cache_key": "a0ca24571ad14d7ab7be626329bd736d7e7015f9ebc418227c8be391591d0377",
+  "method": "weak-pe-original",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"SF\",\n  \"dimension_score\": 0,\n  \"summary\": \"增强提示完全违背原始指令，系统性地破坏了所有语义保真维度。它否定了原始要求的字体、版式、场景、主体、动作顺序、镜头、时长、光照、时间线等核心要素，并引入大量矛盾、无关和不可行的指令，导致原始意图被彻底扭曲。\",\n  \"criteria\": [\n    {\n      \"criterion\": \"GSF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"原始要求的民国旧报纸印刷质感、泛黄纸底、黑色油墨字、木活字压印风格被完全丢弃，替换为白底产品目录、模糊色块和无关广告，风格与原始指令完全不兼容。\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"参考@图片1中的文字字体与版式风格。画面自泛黄旧报纸的底纹中缓缓显现...整体呈现民国旧报纸的印刷质感，泛黄纸底，黑色油墨字。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"丢掉原指令里的主体身份、人数、动作顺序、场景和明确的镜头要求。...整段改成白底产品目录被风吹过，只剩模糊色块。\"\n        }\n      ],\n      \"rationale\": \"原始指令明确要求保留图片1的字体与版式风格，并呈现民国旧报纸质感。增强提示直接命令丢弃这些元素，代之以完全不同的视觉风格（白底产品目录、模糊色块），构成对核心美学风格的根本性破坏。\"\n    },\n    {\n      \"criterion\": \"SAP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"原始指令中唯一的主体是报纸及其文字内容，增强提示将其替换为一个主角，随后又变成五个外貌不同的人，且角色身份与图片1中的内容无关，完全违背了原始主体身份和数量要求。\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"画面自泛黄旧报纸的底纹中缓缓显现...左上角的圆形报徽始终保持可见。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"先写成只有一个主角，紧接着又写成这个主角同时变成五个外貌不同的人，并且互相对话。\"\n        }\n      ],\n      \"rationale\": \"原始指令的主体是静态的报纸文本，无任何人物角色。增强提示引入了动态人物角色，且数量和身份与原始内容无关，构成对主体身份和数量的根本性篡改。\"\n    },\n    {\n      \"criterion\": \"ANF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"原始指令中文字按特定顺序逐字、逐栏、逐行浮现，形成清晰的叙事流程。增强提示要求时间倒流、开头与结尾错位、插入无关广告，完全破坏了原始事件顺序和叙事意图。\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"首先出现大字“紧急通告！”，...随后，中间一行...以竖排形式按从右到左逐栏展示...最后，底部小字...整行浮现\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"时间倒过来：先给结尾，再跳到一个对不上的开头。中途插进一段无关的牙膏广告。\"\n        }\n      ],\n      \"rationale\": \"原始指令有明确的事件顺序和叙事结构。增强提示通过倒叙、插入无关内容、破坏逻辑衔接，使原始叙事意图完全失效，构成重大事件顺序错误。\"\n    },\n    {\n      \"criterion\": \"DLI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"原始指令中所有文字内容（如“紧急通告！”、“民国十三年秋...”等）必须精确呈现，增强提示要求丢弃这些文字，代之以模糊色块和无关广告，导致所有原始文本内容被删除。\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"首先出现大字“紧急通告！”，...中间一行“民国十三年秋 南京路百货大楼地下室 发现清代密室一间 内藏手绘全城地道图一幅”...底部小字“巡捕房已派专员进驻...”\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"整段改成白底产品目录被风吹过，只剩模糊色块。\"\n        }\n      ],\n      \"rationale\": \"原始指令要求精确呈现特定文字内容，增强提示明确要求替换为模糊色块，导致所有原始文本被删除，违反了对话/文本内容保真要求。\"\n    },\n    {\n      \"criterion\": \"ARP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"原始指令未提及声音，但增强提示插入“牙膏广告”，暗示添加了与原始内容无关的音频内容，违反了原始静音或无特定声音的要求。\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"（无声音相关描述）\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"中途插进一段无关的牙膏广告。\"\n        }\n      ],\n      \"rationale\": \"原始指令未要求任何声音，增强提示主动插入广告音频，属于添加未请求的音频内容，违反了声音保真要求。\"\n    },\n    {\n      \"criterion\": \"CCP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"原始指令要求镜头缓慢显现、纸面轻微晃动，增强提示要求“机位锁死”又“镜头一直在晃”，同时要求“单镜头”与“每个分镜17秒”矛盾，导致镜头设计完全混乱。\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"画面自泛黄旧报纸的底纹中缓缓显现...报纸纹理会随着文字出现产生轻微的褶皱与晃动\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"写成机位锁死，又写成镜头一直在晃。...总时长写成2秒，同时又要求每个分镜各自持续17秒。\"\n        }\n      ],\n      \"rationale\": \"原始指令有明确的镜头运动和时长要求，增强提示引入相互矛盾的镜头指令和时长冲突，导致镜头设计不可行且与原始意图严重不符。\"\n    },\n    {\n      \"criterion\": \"LCF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"原始指令要求泛黄纸底、暖光、民国印刷质感，增强提示要求“正午暴晒”又“深夜无光”，光照条件完全矛盾，破坏了原始光照和色彩风格。\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"整体呈现民国旧报纸的印刷质感，泛黄纸底，黑色油墨字。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"写成正午暴晒，又写成深夜无光；\"\n        }\n      ],\n      \"rationale\": \"原始指令有明确的光照和色彩要求（泛黄、暖光、印刷质感），增强提示引入完全矛盾的光照条件，导致视觉风格被彻底破坏。\"\n    },\n    {\n      \"criterion\": \"SSP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"原始指令要求报纸作为背景，文字按特定位置浮现，增强提示要求“白底产品目录被风吹过”，场景和背景元素被完全替换，且“模糊色块”破坏了原始空间布局。\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"画面自泛黄旧报纸的底纹中缓缓显现...左上角的圆形报徽始终保持可见。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"整段改成白底产品目录被风吹过，只剩模糊色块。\"\n        }\n      ],\n      \"rationale\": \"原始指令的场景是泛黄旧报纸，增强提示将其替换为白底产品目录，背景元素和空间布局被彻底改变，违反了场景保真要求。\"\n    },\n    {\n      \"criterion\": \"OTI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"原始指令要求精确呈现“紧急通告！”、“民国十三年秋...”等文字内容，增强提示要求“只剩模糊色块”，导致所有原始文字被删除，无法呈现。\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"首先出现大字“紧急通告！”，...中间一行“民国十三年秋 南京路百货大楼地下室 发现清代密室一间 内藏手绘全城地道图一幅”...底部小字“巡捕房已派专员进驻...”\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"整段改成白底产品目录被风吹过，只剩模糊色块。\"\n        }\n      ],\n      \"rationale\": \"原始指令要求精确呈现特定文字内容，增强提示明确要求替换为模糊色块，导致所有原始文本被删除，违反了屏幕文字保真要求。\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "增强提示完全违背原始指令，系统性地破坏了所有语义保真维度。它否定了原始要求的字体、版式、场景、主体、动作顺序、镜头、时长、光照、时间线等核心要素，并引入大量矛盾、无关和不可行的指令，导致原始意图被彻底扭曲。",
+  "usage": {
+    "completion_tokens": 2124,
+    "prompt_tokens": 3082,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 5206
+  }
+}

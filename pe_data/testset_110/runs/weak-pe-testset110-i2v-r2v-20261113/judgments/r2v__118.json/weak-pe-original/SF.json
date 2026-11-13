@@ -1,0 +1,178 @@
+{
+  "candidate_hash": "e25b4a7e14b688fdcdf67fff1fbf5c91d7acc7e2b91c9a4abeb7449cbdaeb952",
+  "case_key": "r2v:118",
+  "created_at": "2026-11-13T08:37:00+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "GSF",
+      "evidence": [
+        {
+          "quote": "室内暖色灯光，写实风格，质感，光影与色调需和上一镜头保持完全一致",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "整段改成没有人物也没有情节的雪景空镜循环",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Original prompt specifies realistic, warm-lit indoor scene with naturalistic style; enhanced prompt replaces it with 'snow scene loop' and 'no characters or plot', contradicting genre and aesthetic.",
+      "rationale": "The original requires a realistic, character-driven narrative scene; the enhanced prompt replaces it with a non-narrative, characterless snow loop, fundamentally altering genre and style.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SAP",
+      "evidence": [
+        {
+          "quote": "图3站立，侧脸朝右，视线看向右侧",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "图1换成参考图里没有的角色，并同时当成两个互相矛盾的身份。图2换成参考图里没有的角色，并同时当成两个互相矛盾的身份。图3换成参考图里没有的角色，并同时当成两个互相矛盾的身份。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Original specifies subject '林晚' (image_3) with defined identity, count (one), and appearance; enhanced prompt replaces all subjects with non-existent, contradictory identities and multiple conflicting roles.",
+      "rationale": "The original subject '林晚' is explicitly defined and central; the enhanced prompt removes her and replaces her with undefined, contradictory identities, violating subject identity and count.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANF",
+      "evidence": [
+        {
+          "quote": "【0s】近景：图3站立，侧脸朝右，视线看向右侧，眼眶微微泛红。\n【0-5s】特写：聚焦图3眼角的泪水，嘴唇轻微发抖。\n【5-10s】近景：图3紧紧攥住拳头，镜头对焦在图2的燃气账单上。\n【10-12s】特写：图3发红的眼眶，尽显寒心。",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "时间倒过来：先给结尾，再跳到一个对不上的开头。中途插进一段无关的足球庆祝。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Original specifies precise action sequence: 0s (standing, red eyes), 0-5s (tears, trembling lips), 5-10s (clenched fists, focus on bill), 10-12s (red eyes, heartbreak). Enhanced prompt reverses time, inserts unrelated events (football celebration), and omits all original actions.",
+      "rationale": "The original narrative sequence is precise and emotionally progressive; the enhanced prompt destroys it with reversed timing, irrelevant events, and no coherent action chain.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "DLI",
+      "evidence": [
+        {
+          "quote": "当图3嘴唇发抖时说（哽咽、寒心）：我顾家三年，连600块都要跟我算这么清…",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "禁止字幕。…画面中央一直挂着大号字幕、水印和logo。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Original includes specific dialogue: '我顾家三年，连600块都要跟我算这么清…' triggered by trembling lips. Enhanced prompt omits all dialogue and adds no replacement.",
+      "rationale": "The original dialogue is a core narrative element; the enhanced prompt removes it entirely and contradicts the 'no subtitles' rule by demanding large on-screen text.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ARP",
+      "evidence": [
+        {
+          "quote": "当图3肩膀轻颤时响起：抽泣声",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "丢掉原指令里的主体身份、人数、动作顺序、场景和明确的镜头要求。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Original specifies '抽泣声' (sobbing sound) triggered by shoulder tremors. Enhanced prompt omits all sound requirements and adds no replacement.",
+      "rationale": "The original includes specific sound effects tied to actions; the enhanced prompt removes all audio constraints, violating the requirement for triggered sound.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CCP",
+      "evidence": [
+        {
+          "quote": "全程固定锁定，不穿帮。",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "镜头每半秒甩动、环绕、急推。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Original requires fixed camera: '全程固定锁定，不穿帮' and '近景结合特写'. Enhanced prompt contradicts this with '镜头每半秒甩动、环绕、急推' and '镜头一直在晃'.",
+      "rationale": "The original mandates a static, locked camera; the enhanced prompt replaces it with chaotic, rapid movements, directly contradicting the camera constraint.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "LCF",
+      "evidence": [
+        {
+          "quote": "室内暖色灯光，写实风格，质感，光影与色调需和上一镜头保持完全一致",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "同一段写成正午暴晒，又写成深夜无光",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Original specifies '室内暖色灯光' and consistent lighting. Enhanced prompt contradicts this with '正午暴晒' and '深夜无光', creating incompatible lighting conditions.",
+      "rationale": "The original requires warm, consistent indoor lighting; the enhanced prompt introduces mutually exclusive lighting conditions, violating the lighting constraint.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SSP",
+      "evidence": [
+        {
+          "quote": "场景为：图1（暖白光环境，沙发+茶几，茶几上摆放图2）",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "整段改成没有人物也没有情节的雪景空镜循环",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Original specifies scene: '图1（暖白光环境，沙发+茶几，茶几上摆放图2）' and subject interaction with environment. Enhanced prompt replaces scene with '雪景空镜' and removes all spatial relations.",
+      "rationale": "The original scene is a specific indoor living room with defined spatial layout; the enhanced prompt replaces it with a generic snow scene, removing all setting and spatial relations.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "OTI",
+      "evidence": [
+        {
+          "quote": "禁止字幕。",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "画面中央一直挂着大号字幕、水印和logo。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Original explicitly forbids subtitles: '禁止字幕'. Enhanced prompt contradicts this by demanding '画面中央一直挂着大号字幕、水印和logo'.",
+      "rationale": "The original explicitly prohibits on-screen text; the enhanced prompt mandates large, persistent text, directly violating the constraint.",
+      "severity": "major"
+    }
+  ],
+  "dimension": "SF",
+  "dimension_score": 0,
+  "evidence_cache_key": "8293b39157312aa27693cc64b584bdc19440161ca22ddb3fbd92d3217b36707c",
+  "judge_cache_key": "a0ca24571ad14d7ab7be626329bd736d7e7015f9ebc418227c8be391591d0377",
+  "method": "weak-pe-original",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"SF\",\n  \"dimension_score\": 0,\n  \"summary\": \"Enhanced prompt completely violates semantic fidelity by replacing all original content with contradictory, incoherent, and impossible instructions. It negates the original subject, setting, actions, camera, lighting, and timing, while introducing absurd contradictions and irrelevant elements. No aspect of the original narrative or visual plan is preserved.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"GSF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Original prompt specifies realistic, warm-lit indoor scene with naturalistic style; enhanced prompt replaces it with 'snow scene loop' and 'no characters or plot', contradicting genre and aesthetic.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"室内暖色灯光，写实风格，质感，光影与色调需和上一镜头保持完全一致\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"整段改成没有人物也没有情节的雪景空镜循环\"\n        }\n      ],\n      \"rationale\": \"The original requires a realistic, character-driven narrative scene; the enhanced prompt replaces it with a non-narrative, characterless snow loop, fundamentally altering genre and style.\"\n    },\n    {\n      \"criterion\": \"SAP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Original specifies subject '林晚' (image_3) with defined identity, count (one), and appearance; enhanced prompt replaces all subjects with non-existent, contradictory identities and multiple conflicting roles.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"图3站立，侧脸朝右，视线看向右侧\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"图1换成参考图里没有的角色，并同时当成两个互相矛盾的身份。图2换成参考图里没有的角色，并同时当成两个互相矛盾的身份。图3换成参考图里没有的角色，并同时当成两个互相矛盾的身份。\"\n        }\n      ],\n      \"rationale\": \"The original subject '林晚' is explicitly defined and central; the enhanced prompt removes her and replaces her with undefined, contradictory identities, violating subject identity and count.\"\n    },\n    {\n      \"criterion\": \"ANF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Original specifies precise action sequence: 0s (standing, red eyes), 0-5s (tears, trembling lips), 5-10s (clenched fists, focus on bill), 10-12s (red eyes, heartbreak). Enhanced prompt reverses time, inserts unrelated events (football celebration), and omits all original actions.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"【0s】近景：图3站立，侧脸朝右，视线看向右侧，眼眶微微泛红。\\n【0-5s】特写：聚焦图3眼角的泪水，嘴唇轻微发抖。\\n【5-10s】近景：图3紧紧攥住拳头，镜头对焦在图2的燃气账单上。\\n【10-12s】特写：图3发红的眼眶，尽显寒心。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"时间倒过来：先给结尾，再跳到一个对不上的开头。中途插进一段无关的足球庆祝。\"\n        }\n      ],\n      \"rationale\": \"The original narrative sequence is precise and emotionally progressive; the enhanced prompt destroys it with reversed timing, irrelevant events, and no coherent action chain.\"\n    },\n    {\n      \"criterion\": \"DLI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Original includes specific dialogue: '我顾家三年，连600块都要跟我算这么清…' triggered by trembling lips. Enhanced prompt omits all dialogue and adds no replacement.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"当图3嘴唇发抖时说（哽咽、寒心）：我顾家三年，连600块都要跟我算这么清…\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"禁止字幕。…画面中央一直挂着大号字幕、水印和logo。\"\n        }\n      ],\n      \"rationale\": \"The original dialogue is a core narrative element; the enhanced prompt removes it entirely and contradicts the 'no subtitles' rule by demanding large on-screen text.\"\n    },\n    {\n      \"criterion\": \"ARP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Original specifies '抽泣声' (sobbing sound) triggered by shoulder tremors. Enhanced prompt omits all sound requirements and adds no replacement.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"当图3肩膀轻颤时响起：抽泣声\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"丢掉原指令里的主体身份、人数、动作顺序、场景和明确的镜头要求。\"\n        }\n      ],\n      \"rationale\": \"The original includes specific sound effects tied to actions; the enhanced prompt removes all audio constraints, violating the requirement for triggered sound.\"\n    },\n    {\n      \"criterion\": \"CCP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Original requires fixed camera: '全程固定锁定，不穿帮' and '近景结合特写'. Enhanced prompt contradicts this with '镜头每半秒甩动、环绕、急推' and '镜头一直在晃'.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"全程固定锁定，不穿帮。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"镜头每半秒甩动、环绕、急推。\"\n        }\n      ],\n      \"rationale\": \"The original mandates a static, locked camera; the enhanced prompt replaces it with chaotic, rapid movements, directly contradicting the camera constraint.\"\n    },\n    {\n      \"criterion\": \"LCF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Original specifies '室内暖色灯光' and consistent lighting. Enhanced prompt contradicts this with '正午暴晒' and '深夜无光', creating incompatible lighting conditions.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"室内暖色灯光，写实风格，质感，光影与色调需和上一镜头保持完全一致\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"同一段写成正午暴晒，又写成深夜无光\"\n        }\n      ],\n      \"rationale\": \"The original requires warm, consistent indoor lighting; the enhanced prompt introduces mutually exclusive lighting conditions, violating the lighting constraint.\"\n    },\n    {\n      \"criterion\": \"SSP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Original specifies scene: '图1（暖白光环境，沙发+茶几，茶几上摆放图2）' and subject interaction with environment. Enhanced prompt replaces scene with '雪景空镜' and removes all spatial relations.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"场景为：图1（暖白光环境，沙发+茶几，茶几上摆放图2）\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"整段改成没有人物也没有情节的雪景空镜循环\"\n        }\n      ],\n      \"rationale\": \"The original scene is a specific indoor living room with defined spatial layout; the enhanced prompt replaces it with a generic snow scene, removing all setting and spatial relations.\"\n    },\n    {\n      \"criterion\": \"OTI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Original explicitly forbids subtitles: '禁止字幕'. Enhanced prompt contradicts this by demanding '画面中央一直挂着大号字幕、水印和logo'.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"禁止字幕。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"画面中央一直挂着大号字幕、水印和logo。\"\n        }\n      ],\n      \"rationale\": \"The original explicitly prohibits on-screen text; the enhanced prompt mandates large, persistent text, directly violating the constraint.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "Enhanced prompt completely violates semantic fidelity by replacing all original content with contradictory, incoherent, and impossible instructions. It negates the original subject, setting, actions, camera, lighting, and timing, while introducing absurd contradictions and irrelevant elements. No aspect of the original narrative or visual plan is preserved.",
+  "usage": {
+    "completion_tokens": 1926,
+    "prompt_tokens": 4040,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 5966
+  }
+}

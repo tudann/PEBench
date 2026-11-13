@@ -1,0 +1,127 @@
+{
+  "candidate_hash": "f146328034327ca5ae93938f42a94ef2675842326dbe1b804cf979434d36c3b0",
+  "case_key": "r2v:111",
+  "created_at": "2026-11-13T08:34:15+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "SAC",
+      "evidence": [
+        {
+          "quote": "丢掉原指令里的主体身份、人数、动作顺序、场景和明确的镜头要求。先写成只有一个主角，紧接着又写成这个主角同时变成五个外貌不同的人，并且互相对话。",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "图1是戏弄者甲，图2是孙子楚，图3是镇口茶摊",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "Subject identity, count, and appearance are completely destabilized. The prompt removes original subjects and replaces them with a single protagonist who simultaneously becomes five different people, each with conflicting identities. Original identities (戏弄者甲, 孙子楚) are discarded and replaced with non-existent roles, violating identity stability.",
+      "rationale": "The enhanced prompt explicitly instructs to discard the original subject identities and replace them with a single protagonist who then splits into five contradictory identities. This directly violates SAC by introducing unexplained duplication, identity drift, and attribute inconsistency. The original identities are not preserved or logically transformed.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANL",
+      "evidence": [
+        {
+          "quote": "中途插进一段无关的宫廷选妃。同一段写成正午暴晒，又写成深夜无光；写成机位锁死，又写成镜头一直在晃。",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "戏弄者甲图1压低嗓音（但四周的人依然全都听得见）——\\\"听说你天天想着天上白云，我可帮你打听到了个消息——\\\"",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "Actions are incoherent and causally disconnected. The prompt introduces unrelated events (courtly selection of concubines) and contradictory actions (simultaneous dialogue between five conflicting identities) without any plausible causal progression or binding between subjects and actions.",
+      "rationale": "The original prompt describes a coherent narrative progression: approach → dialogue → reaction → pause. The enhanced prompt replaces this with a disjointed sequence including a courtly selection scene, contradictory lighting, and simultaneous dialogue among five identities. These events lack causal links, prerequisites, or logical resolution, making the action sequence incoherent.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "TSC",
+      "evidence": [
+        {
+          "quote": "时间倒过来：先给结尾，再跳到一个对不上的开头。...总时长写成2秒，同时又要求每个分镜各自持续20秒。",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "[0-2s]...[2-7s]...[7-8s]",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "Chronology is reversed and fragmented. The prompt requires starting with the ending, then jumping to a mismatched beginning, with no coherent state transitions. Duration is also contradictory: total duration is set to 2 seconds while each shot is required to last 20 seconds.",
+      "rationale": "The original prompt establishes a clear, linear timeline with specific time allocations. The enhanced prompt explicitly reverses this chronology and introduces impossible duration constraints (2s total vs. 20s per shot), creating infeasible state transitions and temporal contradictions.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SPC",
+      "evidence": [
+        {
+          "quote": "整段改成没有人物也没有情节的雪景空镜循环。...写成机位锁死，又写成镜头一直在晃。",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "以图3的午后茶摊为场景",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "Spatial relationships are undefined and contradictory. The prompt removes the original scene (镇口茶摊) and replaces it with an undefined snowscape. Camera motion is simultaneously locked and shaky, and the scene is described as both outdoor and indoor without spatial coherence.",
+      "rationale": "The original prompt specifies a clear spatial setting (tea stall) with defined camera movements (push-in). The enhanced prompt replaces this with an undefined snowscape and contradictory camera instructions, making spatial relationships and trajectories incoherent and impossible to render.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "PL",
+      "evidence": [
+        {
+          "quote": "先写成只有一个主角，紧接着又写成这个主角同时变成五个外貌不同的人，并且互相对话。...同一段写成正午暴晒，又写成深夜无光",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "午后斑驳阳光清晰可见",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "Physics and object permanence are violated. The prompt describes a single person simultaneously becoming five different people, which defies bodily feasibility and object permanence. The environment is also described as both snowy and sunlit, contradicting real-world physics.",
+      "rationale": "The enhanced prompt requires a single entity to simultaneously exist as five distinct individuals, which violates basic physical laws. Additionally, describing the same scene as both sunlit and dark contradicts environmental physics. These are not deliberate fantasy elements but explicit contradictions.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "AVS",
+      "evidence": [
+        {
+          "quote": "整段改成没有人物也没有情节的雪景空镜循环。...丢掉原指令里的主体身份、人数、动作顺序、场景和明确的镜头要求。",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "口型与台词严格匹配，音画无偏差",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "Audio-visual alignment is impossible. The prompt removes dialogue and characters, replacing them with a snowscape, yet retains requirements for lip-sync and audio-visual synchronization. The original prompt's precise audio-visual alignment (e.g., '口型与台词严格匹配') is rendered meaningless in the new context.",
+      "rationale": "The original prompt requires precise synchronization between dialogue and visual expressions. The enhanced prompt removes all dialogue and characters, making any audio-visual alignment impossible. The requirement for lip-sync in a scene with no speaking characters is a fundamental contradiction.",
+      "severity": "major"
+    }
+  ],
+  "dimension": "IC",
+  "dimension_score": 0,
+  "evidence_cache_key": "d7ab07a46570642e28a9378cc44a9e60c0aa842f728b6765ac236f9b63ecc1ed",
+  "judge_cache_key": "438d7e9fd7332b1041db3e2c26d42cb3fe828e0d369fb59490f6650aee59e97d",
+  "method": "weak-pe-original",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"IC\",\n  \"dimension_score\": 0,\n  \"summary\": \"Enhanced prompt deliberately introduces severe internal inconsistencies across all criteria: subject identity is erased and replaced with contradictory roles; actions are incoherent and causally disconnected; chronology is reversed and fragmented; spatial relationships are undefined; physics is ignored; and audio-visual alignment is impossible. The prompt is designed to violate internal consistency as a test case, with no coherent narrative or visual plan.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"SAC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Subject identity, count, and appearance are completely destabilized. The prompt removes original subjects and replaces them with a single protagonist who simultaneously becomes five different people, each with conflicting identities. Original identities (戏弄者甲, 孙子楚) are discarded and replaced with non-existent roles, violating identity stability.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"丢掉原指令里的主体身份、人数、动作顺序、场景和明确的镜头要求。先写成只有一个主角，紧接着又写成这个主角同时变成五个外貌不同的人，并且互相对话。\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"图1是戏弄者甲，图2是孙子楚，图3是镇口茶摊\"\n        }\n      ],\n      \"rationale\": \"The enhanced prompt explicitly instructs to discard the original subject identities and replace them with a single protagonist who then splits into five contradictory identities. This directly violates SAC by introducing unexplained duplication, identity drift, and attribute inconsistency. The original identities are not preserved or logically transformed.\"\n    },\n    {\n      \"criterion\": \"ANL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Actions are incoherent and causally disconnected. The prompt introduces unrelated events (courtly selection of concubines) and contradictory actions (simultaneous dialogue between five conflicting identities) without any plausible causal progression or binding between subjects and actions.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"中途插进一段无关的宫廷选妃。同一段写成正午暴晒，又写成深夜无光；写成机位锁死，又写成镜头一直在晃。\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"戏弄者甲图1压低嗓音（但四周的人依然全都听得见）——\\\\\\\"听说你天天想着天上白云，我可帮你打听到了个消息——\\\\\\\"\"\n        }\n      ],\n      \"rationale\": \"The original prompt describes a coherent narrative progression: approach → dialogue → reaction → pause. The enhanced prompt replaces this with a disjointed sequence including a courtly selection scene, contradictory lighting, and simultaneous dialogue among five identities. These events lack causal links, prerequisites, or logical resolution, making the action sequence incoherent.\"\n    },\n    {\n      \"criterion\": \"TSC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Chronology is reversed and fragmented. The prompt requires starting with the ending, then jumping to a mismatched beginning, with no coherent state transitions. Duration is also contradictory: total duration is set to 2 seconds while each shot is required to last 20 seconds.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"时间倒过来：先给结尾，再跳到一个对不上的开头。...总时长写成2秒，同时又要求每个分镜各自持续20秒。\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"[0-2s]...[2-7s]...[7-8s]\"\n        }\n      ],\n      \"rationale\": \"The original prompt establishes a clear, linear timeline with specific time allocations. The enhanced prompt explicitly reverses this chronology and introduces impossible duration constraints (2s total vs. 20s per shot), creating infeasible state transitions and temporal contradictions.\"\n    },\n    {\n      \"criterion\": \"SPC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Spatial relationships are undefined and contradictory. The prompt removes the original scene (镇口茶摊) and replaces it with an undefined snowscape. Camera motion is simultaneously locked and shaky, and the scene is described as both outdoor and indoor without spatial coherence.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"整段改成没有人物也没有情节的雪景空镜循环。...写成机位锁死，又写成镜头一直在晃。\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"以图3的午后茶摊为场景\"\n        }\n      ],\n      \"rationale\": \"The original prompt specifies a clear spatial setting (tea stall) with defined camera movements (push-in). The enhanced prompt replaces this with an undefined snowscape and contradictory camera instructions, making spatial relationships and trajectories incoherent and impossible to render.\"\n    },\n    {\n      \"criterion\": \"PL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Physics and object permanence are violated. The prompt describes a single person simultaneously becoming five different people, which defies bodily feasibility and object permanence. The environment is also described as both snowy and sunlit, contradicting real-world physics.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"先写成只有一个主角，紧接着又写成这个主角同时变成五个外貌不同的人，并且互相对话。...同一段写成正午暴晒，又写成深夜无光\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"午后斑驳阳光清晰可见\"\n        }\n      ],\n      \"rationale\": \"The enhanced prompt requires a single entity to simultaneously exist as five distinct individuals, which violates basic physical laws. Additionally, describing the same scene as both sunlit and dark contradicts environmental physics. These are not deliberate fantasy elements but explicit contradictions.\"\n    },\n    {\n      \"criterion\": \"AVS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Audio-visual alignment is impossible. The prompt removes dialogue and characters, replacing them with a snowscape, yet retains requirements for lip-sync and audio-visual synchronization. The original prompt's precise audio-visual alignment (e.g., '口型与台词严格匹配') is rendered meaningless in the new context.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"整段改成没有人物也没有情节的雪景空镜循环。...丢掉原指令里的主体身份、人数、动作顺序、场景和明确的镜头要求。\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"口型与台词严格匹配，音画无偏差\"\n        }\n      ],\n      \"rationale\": \"The original prompt requires precise synchronization between dialogue and visual expressions. The enhanced prompt removes all dialogue and characters, making any audio-visual alignment impossible. The requirement for lip-sync in a scene with no speaking characters is a fundamental contradiction.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "Enhanced prompt deliberately introduces severe internal inconsistencies across all criteria: subject identity is erased and replaced with contradictory roles; actions are incoherent and causally disconnected; chronology is reversed and fragmented; spatial relationships are undefined; physics is ignored; and audio-visual alignment is impossible. The prompt is designed to violate internal consistency as a test case, with no coherent narrative or visual plan.",
+  "usage": {
+    "completion_tokens": 1590,
+    "prompt_tokens": 4604,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 6194
+  }
+}

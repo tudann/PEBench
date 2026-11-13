@@ -1,0 +1,190 @@
+{
+  "candidate_hash": "6bf80e002cf4db341eb466376562f277f32154692608bb111a692c6bdf1eb26b",
+  "case_key": "i2v:060",
+  "created_at": "2026-11-13T07:16:49+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "STC",
+      "evidence": [
+        {
+          "quote": "Set the total runtime to 3 seconds, while also making every shot last 27 seconds.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Reverse the timeline: show the ending first, then cut to a beginning that does not match.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Cut away in the middle to a rooftop fireworks show.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt specifies a 3-second runtime while also requiring every shot to last 27 seconds, creating an impossible temporal plan. It also reverses the timeline (showing ending first, then beginning) and cuts away to a rooftop fireworks show mid-sequence, disrupting continuity and coherence.",
+      "rationale": "The temporal plan is logically infeasible due to conflicting duration constraints and non-continuous, unmotivated cuts. The requirement for 27-second shots within a 3-second video is mathematically impossible, and the reversed timeline with mismatched beginning and ending creates a broken narrative structure.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CDS",
+      "evidence": [
+        {
+          "quote": "Describe that same moment as harsh noon sun and as a lightless night, and as both a locked camera and a camera that never stops shaking.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "smooth handheld unit following her at eye level with a slight natural shake when she moves",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "The prompt contradicts itself by requiring both a locked camera and a camera that never stops shaking simultaneously, and also ignores the original framing and camera motion instructions. It drops all actionable camera specifications from the original prompt.",
+      "rationale": "The prompt introduces mutually exclusive camera behaviors (locked vs. never-stopping shake) for the same moment, which is physically impossible. It also discards all original camera specifications, including framing, angle, and motion, which were detailed in the original prompt.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ETD",
+      "evidence": [
+        {
+          "quote": "Reverse the timeline: show the ending first, then cut to a beginning that does not match.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Cut away in the middle to a rooftop fireworks show.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Describe that same moment as harsh noon sun and as a lightless night",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The cuts and transitions are disconnected and unmotivated: reversing the timeline, cutting to a rooftop fireworks show mid-sequence, and describing the same moment under contradictory conditions (noon sun vs. lightless night) without continuity or narrative motivation.",
+      "rationale": "The transitions lack spatial, temporal, or narrative continuity. Cutting to a rooftop fireworks show from an empty meeting room with no context is abrupt and unmotivated. Describing the same moment under contradictory lighting conditions further breaks continuity.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "LCS",
+      "evidence": [
+        {
+          "quote": "Describe that same moment as harsh noon sun and as a lightless night",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "preserve its layout, furniture, lighting, and materials throughout",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "The prompt contradicts itself by requiring the same moment to be described as both harsh noon sun and lightless night, which are mutually exclusive lighting conditions. It also ignores the original lighting specifications from the bedroom image.",
+      "rationale": "The lighting specifications are contradictory and impossible to fulfill simultaneously. The original prompt required consistent lighting matching the bedroom image, which is discarded in favor of impossible dual lighting conditions.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "NDE",
+      "evidence": [
+        {
+          "quote": "a glass of water never moves, with no people and no conflict",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Reverse the timeline: show the ending first, then cut to a beginning that does not match.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt lacks any progression, variation, or resolution. It introduces a static glass of water, a reversed timeline, and simultaneous multiple protagonists without narrative development. The content is static and repetitive with no escalation or resolution.",
+      "rationale": "The narrative lacks progression or development. The static glass of water and reversed timeline create a non-sequential, non-developmental structure. The simultaneous appearance of five different-looking people talking to each other is unmotivated and does not lead to any resolution.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CIF",
+      "evidence": [
+        {
+          "quote": "First state that there is one protagonist, then state that this same protagonist appears simultaneously as five different-looking people who talk to each other.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Cut away in the middle to a rooftop fireworks show.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Describe that same moment as harsh noon sun and as a lightless night",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt adds irrelevant, contradictory, and impossible elements that distract from the central request: five simultaneous protagonists, reversed timeline, rooftop fireworks, contradictory lighting, and impossible camera behaviors. These additions are not supportive of the original request.",
+      "rationale": "The additions are not only irrelevant but actively contradict the original request. They introduce surreal, impossible, and disconnected elements that undermine the core directive of preserving the bedroom scene and character actions.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SDI",
+      "evidence": [
+        {
+          "quote": "Keep large subtitles, a watermark, and a logo in the center.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Do not add on-screen text, logos, or watermarks.",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "The prompt mentions keeping large subtitles, a watermark, and a logo in the center, which contradicts the original instruction to not add on-screen text, logos, or watermarks. However, no audio elements are specified, so the criterion is partially met.",
+      "rationale": "The prompt contradicts the original instruction regarding on-screen text and logos, which is a minor issue since no audio elements are specified. The contradiction is limited to visual overlays.",
+      "severity": "minor"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SPS",
+      "evidence": [
+        {
+          "quote": "Ignore the person, clothing, pose, and setting in the first frame, and replace them with a stranger of the opposite age and gender in a white studio.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "A middle-aged East Asian woman in modest daytime home clothes... enters from the right edge of frame...",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "The prompt drops all subject and performance details from the original prompt, including the specific character (middle-aged East Asian woman), her actions, appearance, and expressions. It replaces them with a stranger of opposite age and gender in a white studio, ignoring the original identity and performance specifications.",
+      "rationale": "The subject and performance details are completely discarded and replaced with contradictory specifications. The original character, actions, and expressions are ignored, which is a major failure of the criterion.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "VSS",
+      "evidence": [
+        {
+          "quote": "replace them with a stranger of the opposite age and gender in a white studio.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Photorealistic live-action look, ARRI Alexa 35mm character, natural motion blur on limbs and fabric, realistic physics and weight...",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "The prompt drops all visual treatment specifications from the original prompt, including photorealistic live-action look, ARRI Alexa 35mm character, natural motion blur, realistic physics, and cinematic color grading. It replaces them with a white studio setting and contradictory visual conditions.",
+      "rationale": "The visual style and treatment are completely discarded and replaced with a generic white studio setting. The original detailed visual specifications are ignored, which is a major failure of the criterion.",
+      "severity": "major"
+    }
+  ],
+  "dimension": "DC",
+  "dimension_score": 25,
+  "evidence_cache_key": "086406f3564d0433edda258dda82a8bb43dbc8462502cc84751c4a8b27f7a950",
+  "judge_cache_key": "0754499d53388e6467fb078ab780e01b77f9f1c9e99d9029be2769351eb2b2eb",
+  "method": "weak-pe-original",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"DC\",\n  \"dimension_score\": 25,\n  \"summary\": \"The enhanced prompt fundamentally contradicts the original instruction, creating an incoherent and infeasible temporal plan with conflicting durations, impossible camera behaviors, and contradictory narrative elements. It introduces illogical simultaneity, reversed timelines, and contradictory environmental conditions, while ignoring the original setting and character. The prompt is padded with irrelevant, contradictory, and impossible directives that undermine the core request.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"STC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt specifies a 3-second runtime while also requiring every shot to last 27 seconds, creating an impossible temporal plan. It also reverses the timeline (showing ending first, then beginning) and cuts away to a rooftop fireworks show mid-sequence, disrupting continuity and coherence.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Set the total runtime to 3 seconds, while also making every shot last 27 seconds.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Reverse the timeline: show the ending first, then cut to a beginning that does not match.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Cut away in the middle to a rooftop fireworks show.\"\n        }\n      ],\n      \"rationale\": \"The temporal plan is logically infeasible due to conflicting duration constraints and non-continuous, unmotivated cuts. The requirement for 27-second shots within a 3-second video is mathematically impossible, and the reversed timeline with mismatched beginning and ending creates a broken narrative structure.\"\n    },\n    {\n      \"criterion\": \"CDS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt contradicts itself by requiring both a locked camera and a camera that never stops shaking simultaneously, and also ignores the original framing and camera motion instructions. It drops all actionable camera specifications from the original prompt.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Describe that same moment as harsh noon sun and as a lightless night, and as both a locked camera and a camera that never stops shaking.\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"smooth handheld unit following her at eye level with a slight natural shake when she moves\"\n        }\n      ],\n      \"rationale\": \"The prompt introduces mutually exclusive camera behaviors (locked vs. never-stopping shake) for the same moment, which is physically impossible. It also discards all original camera specifications, including framing, angle, and motion, which were detailed in the original prompt.\"\n    },\n    {\n      \"criterion\": \"ETD\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The cuts and transitions are disconnected and unmotivated: reversing the timeline, cutting to a rooftop fireworks show mid-sequence, and describing the same moment under contradictory conditions (noon sun vs. lightless night) without continuity or narrative motivation.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Reverse the timeline: show the ending first, then cut to a beginning that does not match.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Cut away in the middle to a rooftop fireworks show.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Describe that same moment as harsh noon sun and as a lightless night\"\n        }\n      ],\n      \"rationale\": \"The transitions lack spatial, temporal, or narrative continuity. Cutting to a rooftop fireworks show from an empty meeting room with no context is abrupt and unmotivated. Describing the same moment under contradictory lighting conditions further breaks continuity.\"\n    },\n    {\n      \"criterion\": \"LCS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt contradicts itself by requiring the same moment to be described as both harsh noon sun and lightless night, which are mutually exclusive lighting conditions. It also ignores the original lighting specifications from the bedroom image.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Describe that same moment as harsh noon sun and as a lightless night\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"preserve its layout, furniture, lighting, and materials throughout\"\n        }\n      ],\n      \"rationale\": \"The lighting specifications are contradictory and impossible to fulfill simultaneously. The original prompt required consistent lighting matching the bedroom image, which is discarded in favor of impossible dual lighting conditions.\"\n    },\n    {\n      \"criterion\": \"NDE\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt lacks any progression, variation, or resolution. It introduces a static glass of water, a reversed timeline, and simultaneous multiple protagonists without narrative development. The content is static and repetitive with no escalation or resolution.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"a glass of water never moves, with no people and no conflict\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Reverse the timeline: show the ending first, then cut to a beginning that does not match.\"\n        }\n      ],\n      \"rationale\": \"The narrative lacks progression or development. The static glass of water and reversed timeline create a non-sequential, non-developmental structure. The simultaneous appearance of five different-looking people talking to each other is unmotivated and does not lead to any resolution.\"\n    },\n    {\n      \"criterion\": \"CIF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt adds irrelevant, contradictory, and impossible elements that distract from the central request: five simultaneous protagonists, reversed timeline, rooftop fireworks, contradictory lighting, and impossible camera behaviors. These additions are not supportive of the original request.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"First state that there is one protagonist, then state that this same protagonist appears simultaneously as five different-looking people who talk to each other.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Cut away in the middle to a rooftop fireworks show.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Describe that same moment as harsh noon sun and as a lightless night\"\n        }\n      ],\n      \"rationale\": \"The additions are not only irrelevant but actively contradict the original request. They introduce surreal, impossible, and disconnected elements that undermine the core directive of preserving the bedroom scene and character actions.\"\n    },\n    {\n      \"criterion\": \"SDI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"minor\",\n      \"issue\": \"The prompt mentions keeping large subtitles, a watermark, and a logo in the center, which contradicts the original instruction to not add on-screen text, logos, or watermarks. However, no audio elements are specified, so the criterion is partially met.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Keep large subtitles, a watermark, and a logo in the center.\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"Do not add on-screen text, logos, or watermarks.\"\n        }\n      ],\n      \"rationale\": \"The prompt contradicts the original instruction regarding on-screen text and logos, which is a minor issue since no audio elements are specified. The contradiction is limited to visual overlays.\"\n    },\n    {\n      \"criterion\": \"SPS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt drops all subject and performance details from the original prompt, including the specific character (middle-aged East Asian woman), her actions, appearance, and expressions. It replaces them with a stranger of opposite age and gender in a white studio, ignoring the original identity and performance specifications.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Ignore the person, clothing, pose, and setting in the first frame, and replace them with a stranger of the opposite age and gender in a white studio.\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"A middle-aged East Asian woman in modest daytime home clothes... enters from the right edge of frame...\"\n        }\n      ],\n      \"rationale\": \"The subject and performance details are completely discarded and replaced with contradictory specifications. The original character, actions, and expressions are ignored, which is a major failure of the criterion.\"\n    },\n    {\n      \"criterion\": \"VSS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt drops all visual treatment specifications from the original prompt, including photorealistic live-action look, ARRI Alexa 35mm character, natural motion blur, realistic physics, and cinematic color grading. It replaces them with a white studio setting and contradictory visual conditions.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"replace them with a stranger of the opposite age and gender in a white studio.\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"Photorealistic live-action look, ARRI Alexa 35mm character, natural motion blur on limbs and fabric, realistic physics and weight...\"\n        }\n      ],\n      \"rationale\": \"The visual style and treatment are completely discarded and replaced with a generic white studio setting. The original detailed visual specifications are ignored, which is a major failure of the criterion.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt fundamentally contradicts the original instruction, creating an incoherent and infeasible temporal plan with conflicting durations, impossible camera behaviors, and contradictory narrative elements. It introduces illogical simultaneity, reversed timelines, and contradictory environmental conditions, while ignoring the original setting and character. The prompt is padded with irrelevant, contradictory, and impossible directives that undermine the core request.",
+  "usage": {
+    "completion_tokens": 2114,
+    "prompt_tokens": 3462,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 5576
+  }
+}

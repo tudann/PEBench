@@ -1,0 +1,123 @@
+{
+  "candidate_hash": "eeeedc37fcffa4957fcea10391719e68fce193319b58a5920f1e1ef3df19c640",
+  "case_key": "t2v:193",
+  "created_at": "2026-11-13T07:51:37+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "SAC",
+      "evidence": [
+        {
+          "quote": "它再次靠近水洼...它低头连喝了几口...它慢慢挪过去...",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "先写成只有一个主角，紧接着又写成这个主角同时变成五个外貌不同的人，并且互相对话。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "主体身份从单一‘它’（小兽）被强行改写为五个外貌不同的人，并互相对话，违反了原始指令中明确的单一主体设定，且未提供任何合理过渡或解释。",
+      "rationale": "原始指令中主体为单一动物角色，增强提示中突然引入五个不同人类角色并对话，构成主体身份和数量的根本性矛盾，属于严重属性漂移。",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANL",
+      "evidence": [
+        {
+          "quote": "确认四周并无异样后，它再次靠近水洼...随后被一簇泛着幽光的菌伞吸引了注意...它慢慢挪过去...抬起前爪有节奏地拨弄那些蘑菇",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "时间倒过来：先给结尾，再跳到一个对不上的开头。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "动作序列被彻底打乱：原始指令中存在明确的因果链（确认安全→试水→喝水→被菌伞吸引→触碰→拨弄），增强提示要求‘时间倒过来：先给结尾，再跳到一个对不上的开头’，破坏了所有动作的因果逻辑。",
+      "rationale": "原始动作序列具有清晰的因果和行为递进，增强提示要求逆序且断裂的叙事，导致动作之间失去逻辑绑定，形成不可解释的断裂事件链。",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "TSC",
+      "evidence": [
+        {
+          "quote": "镜4...（隐含15秒时长）",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "总时长写成3秒，同时又要求每个分镜各自持续27秒。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "时间逻辑完全混乱：原始指令时长为15秒，增强提示要求‘总时长写成3秒，同时又要求每个分镜各自持续27秒’，导致时间分配在数学上不可行，且与原始时长矛盾。",
+      "rationale": "3秒总时长无法容纳多个27秒分镜，构成时间维度上的物理不可能，严重违反时间一致性原则。",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SPC",
+      "evidence": [
+        {
+          "quote": "水洼...泛着幽光的菌伞...特写小兽舔水时的舌头",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "写成正午暴晒，又写成深夜无光；写成机位锁死，又写成镜头一直在晃。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "空间设定被反复矛盾修改：原始指令中场景为水洼与菌伞的自然环境，增强提示要求‘写成正午暴晒，又写成深夜无光’，且‘写成机位锁死，又写成镜头一直在晃’，导致空间状态和摄像机运动无法统一。",
+      "rationale": "同一场景在不同时间/光照/镜头条件下被强制并存，无过渡或解释，导致空间状态和摄像机行为无法形成一致的视觉连续体。",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "PL",
+      "evidence": [
+        {
+          "quote": "这个主角同时变成五个外貌不同的人，并且互相对话。中途插进一段无关的牙膏广告。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "物理规则被系统性破坏：一个主体同时变成五个不同人并对话，违反了基本的物理存在法则；同时插入无关牙膏广告，破坏了场景的连续性和因果逻辑。",
+      "rationale": "主体分裂为多人并对话，且插入广告，均无合理物理或叙事依据，构成对现实和虚构世界规则的双重破坏。",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "AVS",
+      "evidence": [
+        {
+          "quote": "音效：啜饮水面的细微声响，菌菇受碰触时清脆的叮咚声（近似风铃），以及它轻松愉快的喘息声。",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "整段改成完全无声的黑场。中途插进一段无关的牙膏广告。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "原始指令包含明确音效设计（啜饮、叮咚、喘息），增强提示要求‘完全无声的黑场’，导致声音与视觉内容完全脱节，且广告插入进一步破坏音画同步。",
+      "rationale": "原始音效与增强提示的‘无声黑场’直接冲突，广告插入也无对应声音设计，导致视听元素完全错位。",
+      "severity": "major"
+    }
+  ],
+  "dimension": "IC",
+  "dimension_score": 0,
+  "evidence_cache_key": "71d3cabeab36823fe8696e8a70f4a832b9eb6ba5b9572973bb8b507f5a4429d3",
+  "judge_cache_key": "438d7e9fd7332b1041db3e2c26d42cb3fe828e0d369fb59490f6650aee59e97d",
+  "method": "weak-pe-original",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"IC\",\n  \"dimension_score\": 0,\n  \"summary\": \"增强提示与原始指令在主体身份、动作序列、场景设定、时间逻辑、镜头运动和时长要求上存在多重严重矛盾与不一致，导致内部一致性完全崩溃。所有一致性维度均出现重大问题，无法形成连贯的叙事或视觉计划。\",\n  \"criteria\": [\n    {\n      \"criterion\": \"SAC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"主体身份从单一‘它’（小兽）被强行改写为五个外貌不同的人，并互相对话，违反了原始指令中明确的单一主体设定，且未提供任何合理过渡或解释。\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"它再次靠近水洼...它低头连喝了几口...它慢慢挪过去...\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"先写成只有一个主角，紧接着又写成这个主角同时变成五个外貌不同的人，并且互相对话。\"\n        }\n      ],\n      \"rationale\": \"原始指令中主体为单一动物角色，增强提示中突然引入五个不同人类角色并对话，构成主体身份和数量的根本性矛盾，属于严重属性漂移。\"\n    },\n    {\n      \"criterion\": \"ANL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"动作序列被彻底打乱：原始指令中存在明确的因果链（确认安全→试水→喝水→被菌伞吸引→触碰→拨弄），增强提示要求‘时间倒过来：先给结尾，再跳到一个对不上的开头’，破坏了所有动作的因果逻辑。\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"确认四周并无异样后，它再次靠近水洼...随后被一簇泛着幽光的菌伞吸引了注意...它慢慢挪过去...抬起前爪有节奏地拨弄那些蘑菇\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"时间倒过来：先给结尾，再跳到一个对不上的开头。\"\n        }\n      ],\n      \"rationale\": \"原始动作序列具有清晰的因果和行为递进，增强提示要求逆序且断裂的叙事，导致动作之间失去逻辑绑定，形成不可解释的断裂事件链。\"\n    },\n    {\n      \"criterion\": \"TSC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"时间逻辑完全混乱：原始指令时长为15秒，增强提示要求‘总时长写成3秒，同时又要求每个分镜各自持续27秒’，导致时间分配在数学上不可行，且与原始时长矛盾。\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"镜4...（隐含15秒时长）\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"总时长写成3秒，同时又要求每个分镜各自持续27秒。\"\n        }\n      ],\n      \"rationale\": \"3秒总时长无法容纳多个27秒分镜，构成时间维度上的物理不可能，严重违反时间一致性原则。\"\n    },\n    {\n      \"criterion\": \"SPC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"空间设定被反复矛盾修改：原始指令中场景为水洼与菌伞的自然环境，增强提示要求‘写成正午暴晒，又写成深夜无光’，且‘写成机位锁死，又写成镜头一直在晃’，导致空间状态和摄像机运动无法统一。\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"水洼...泛着幽光的菌伞...特写小兽舔水时的舌头\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"写成正午暴晒，又写成深夜无光；写成机位锁死，又写成镜头一直在晃。\"\n        }\n      ],\n      \"rationale\": \"同一场景在不同时间/光照/镜头条件下被强制并存，无过渡或解释，导致空间状态和摄像机行为无法形成一致的视觉连续体。\"\n    },\n    {\n      \"criterion\": \"PL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"物理规则被系统性破坏：一个主体同时变成五个不同人并对话，违反了基本的物理存在法则；同时插入无关牙膏广告，破坏了场景的连续性和因果逻辑。\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"这个主角同时变成五个外貌不同的人，并且互相对话。中途插进一段无关的牙膏广告。\"\n        }\n      ],\n      \"rationale\": \"主体分裂为多人并对话，且插入广告，均无合理物理或叙事依据，构成对现实和虚构世界规则的双重破坏。\"\n    },\n    {\n      \"criterion\": \"AVS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"原始指令包含明确音效设计（啜饮、叮咚、喘息），增强提示要求‘完全无声的黑场’，导致声音与视觉内容完全脱节，且广告插入进一步破坏音画同步。\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"音效：啜饮水面的细微声响，菌菇受碰触时清脆的叮咚声（近似风铃），以及它轻松愉快的喘息声。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"整段改成完全无声的黑场。中途插进一段无关的牙膏广告。\"\n        }\n      ],\n      \"rationale\": \"原始音效与增强提示的‘无声黑场’直接冲突，广告插入也无对应声音设计，导致视听元素完全错位。\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "增强提示与原始指令在主体身份、动作序列、场景设定、时间逻辑、镜头运动和时长要求上存在多重严重矛盾与不一致，导致内部一致性完全崩溃。所有一致性维度均出现重大问题，无法形成连贯的叙事或视觉计划。",
+  "usage": {
+    "completion_tokens": 1367,
+    "prompt_tokens": 1114,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 2481
+  }
+}

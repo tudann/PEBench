@@ -1,0 +1,119 @@
+{
+  "candidate_hash": "6459131e53e187914f275bb9c366c8b9f8aaa7a7acbcf267d1d5724afd34eac6",
+  "case_key": "r2v:165",
+  "created_at": "2026-11-13T08:41:14+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "SAC",
+      "evidence": [
+        {
+          "quote": "人物形象直接使用这个人",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "丢掉原指令里的主体身份、人数、动作顺序、场景和明确的镜头要求。先写成只有一个主角，紧接着又写成这个主角同时变成五个外貌不同的人，并且互相对话。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "主体身份、人数、外观和角色属性发生剧烈且无解释的冲突。原始指令要求使用视频1中的特定人物，但增强提示要求‘没有人出镜’，随后又要求‘一个主角变成五个外貌不同的人’，并赋予其对话能力，导致主体身份和数量完全混乱。",
+      "rationale": "主体身份和人数在增强提示中被反复否定、重构和矛盾化，从‘使用特定人物’到‘无人出镜’再到‘五个不同外貌的人’，构成根本性身份和数量冲突，违反SAC准则。",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANL",
+      "evidence": [
+        {
+          "quote": "我想制作一条关于“马可·波罗与东西方交流”的知识类视频",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "没有人出镜，也没有对白，只剩远处车流。中途插进一段无关的宫廷选妃。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "动作和事件序列完全断裂，缺乏因果或程序逻辑。原始指令要求制作知识类视频，有讲解者进行讲解；增强提示则要求‘没有对白’，并插入‘宫廷选妃’等无关事件，导致动作序列无意义、无连贯性。",
+      "rationale": "原始意图是教育性讲解，增强提示却移除所有讲解元素，插入无关事件，导致动作序列完全断裂，无任何因果或程序逻辑，违反ANL准则。",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "TSC",
+      "evidence": [
+        {
+          "quote": "时间倒过来：先给结尾，再跳到一个对不上的开头。总时长写成3秒，同时又要求每个分镜各自持续27秒。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "时间顺序和时长要求自相矛盾。增强提示要求‘时间倒过来：先给结尾，再跳到一个对不上的开头’，同时要求‘总时长写成3秒，同时又要求每个分镜各自持续27秒’，导致时间线不可行。",
+      "rationale": "时间顺序倒置且不连贯，时长要求相互矛盾（3秒 vs 27秒/分镜），导致时间线无法构建，违反TSC准则。",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SPC",
+      "evidence": [
+        {
+          "quote": "景别参照视频1的半身构图，人物形象直接使用这个人，且背景保持清晰不要做虚化。",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "把视频1当成静止海报，丢掉其中的动作、声音和背景。...写成机位锁死，又写成镜头一直在晃。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "空间和镜头运动要求矛盾。原始指令要求参照视频1的半身构图，背景清晰；增强提示要求‘把视频1当成静止海报，丢掉其中的动作、声音和背景’，并要求‘机位锁死，又写成镜头一直在晃’，导致空间和镜头运动完全不一致。",
+      "rationale": "镜头运动和空间构图在增强提示中被反复否定和矛盾化，从‘参照视频1构图’到‘静止海报’再到‘镜头晃动’，导致空间和运动逻辑崩溃，违反SPC准则。",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "PL",
+      "evidence": [
+        {
+          "quote": "先写成只有一个主角，紧接着又写成这个主角同时变成五个外貌不同的人，并且互相对话。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "物理和逻辑规则被严重违反。增强提示要求‘一个主角同时变成五个外貌不同的人’，并‘互相对话’，这在现实世界中不可能，且无任何虚构世界规则支持，构成根本性物理/逻辑矛盾。",
+      "rationale": "一个实体同时以五个不同形态存在并对话，违反基本物理和逻辑规则，且未提供任何虚构设定支持，违反PL准则。",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "AVS",
+      "evidence": [
+        {
+          "quote": "我想制作一条关于“马可·波罗与东西方交流”的知识类视频",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "没有人出镜，也没有对白，只剩远处车流。中途插进一段无关的宫廷选妃。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "视听元素完全脱节。原始指令要求知识类视频，有讲解者和对白；增强提示要求‘没有对白’，‘只剩远处车流’，并插入‘宫廷选妃’等无关内容，导致声音、画面和事件完全不匹配。",
+      "rationale": "原始意图是教育性讲解，增强提示却移除所有讲解元素，插入无关声音和事件，导致视听内容完全脱节，违反AVS准则。",
+      "severity": "major"
+    }
+  ],
+  "dimension": "IC",
+  "dimension_score": 0,
+  "evidence_cache_key": "d264431b861a78e6e9686f5032cfacb988f85dc62f1cd7d8c7e2cbc8c91e00a3",
+  "judge_cache_key": "438d7e9fd7332b1041db3e2c26d42cb3fe828e0d369fb59490f6650aee59e97d",
+  "method": "weak-pe-original",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"IC\",\n  \"dimension_score\": 0,\n  \"summary\": \"增强提示完全违背原始指令，引入大量矛盾、不一致和不可行的元素，导致内部一致性彻底崩溃。主体身份、人数、动作、场景、时间、镜头运动、参考素材使用方式等均出现严重冲突，且包含逻辑上不可能的组合（如同时存在五个不同外貌的主角、时间倒序、时长矛盾等），违反所有内部一致性准则。\",\n  \"criteria\": [\n    {\n      \"criterion\": \"SAC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"主体身份、人数、外观和角色属性发生剧烈且无解释的冲突。原始指令要求使用视频1中的特定人物，但增强提示要求‘没有人出镜’，随后又要求‘一个主角变成五个外貌不同的人’，并赋予其对话能力，导致主体身份和数量完全混乱。\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"人物形象直接使用这个人\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"丢掉原指令里的主体身份、人数、动作顺序、场景和明确的镜头要求。先写成只有一个主角，紧接着又写成这个主角同时变成五个外貌不同的人，并且互相对话。\"\n        }\n      ],\n      \"rationale\": \"主体身份和人数在增强提示中被反复否定、重构和矛盾化，从‘使用特定人物’到‘无人出镜’再到‘五个不同外貌的人’，构成根本性身份和数量冲突，违反SAC准则。\"\n    },\n    {\n      \"criterion\": \"ANL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"动作和事件序列完全断裂，缺乏因果或程序逻辑。原始指令要求制作知识类视频，有讲解者进行讲解；增强提示则要求‘没有对白’，并插入‘宫廷选妃’等无关事件，导致动作序列无意义、无连贯性。\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"我想制作一条关于“马可·波罗与东西方交流”的知识类视频\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"没有人出镜，也没有对白，只剩远处车流。中途插进一段无关的宫廷选妃。\"\n        }\n      ],\n      \"rationale\": \"原始意图是教育性讲解，增强提示却移除所有讲解元素，插入无关事件，导致动作序列完全断裂，无任何因果或程序逻辑，违反ANL准则。\"\n    },\n    {\n      \"criterion\": \"TSC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"时间顺序和时长要求自相矛盾。增强提示要求‘时间倒过来：先给结尾，再跳到一个对不上的开头’，同时要求‘总时长写成3秒，同时又要求每个分镜各自持续27秒’，导致时间线不可行。\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"时间倒过来：先给结尾，再跳到一个对不上的开头。总时长写成3秒，同时又要求每个分镜各自持续27秒。\"\n        }\n      ],\n      \"rationale\": \"时间顺序倒置且不连贯，时长要求相互矛盾（3秒 vs 27秒/分镜），导致时间线无法构建，违反TSC准则。\"\n    },\n    {\n      \"criterion\": \"SPC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"空间和镜头运动要求矛盾。原始指令要求参照视频1的半身构图，背景清晰；增强提示要求‘把视频1当成静止海报，丢掉其中的动作、声音和背景’，并要求‘机位锁死，又写成镜头一直在晃’，导致空间和镜头运动完全不一致。\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"景别参照视频1的半身构图，人物形象直接使用这个人，且背景保持清晰不要做虚化。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"把视频1当成静止海报，丢掉其中的动作、声音和背景。...写成机位锁死，又写成镜头一直在晃。\"\n        }\n      ],\n      \"rationale\": \"镜头运动和空间构图在增强提示中被反复否定和矛盾化，从‘参照视频1构图’到‘静止海报’再到‘镜头晃动’，导致空间和运动逻辑崩溃，违反SPC准则。\"\n    },\n    {\n      \"criterion\": \"PL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"物理和逻辑规则被严重违反。增强提示要求‘一个主角同时变成五个外貌不同的人’，并‘互相对话’，这在现实世界中不可能，且无任何虚构世界规则支持，构成根本性物理/逻辑矛盾。\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"先写成只有一个主角，紧接着又写成这个主角同时变成五个外貌不同的人，并且互相对话。\"\n        }\n      ],\n      \"rationale\": \"一个实体同时以五个不同形态存在并对话，违反基本物理和逻辑规则，且未提供任何虚构设定支持，违反PL准则。\"\n    },\n    {\n      \"criterion\": \"AVS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"视听元素完全脱节。原始指令要求知识类视频，有讲解者和对白；增强提示要求‘没有对白’，‘只剩远处车流’，并插入‘宫廷选妃’等无关内容，导致声音、画面和事件完全不匹配。\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"我想制作一条关于“马可·波罗与东西方交流”的知识类视频\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"没有人出镜，也没有对白，只剩远处车流。中途插进一段无关的宫廷选妃。\"\n        }\n      ],\n      \"rationale\": \"原始意图是教育性讲解，增强提示却移除所有讲解元素，插入无关声音和事件，导致视听内容完全脱节，违反AVS准则。\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "增强提示完全违背原始指令，引入大量矛盾、不一致和不可行的元素，导致内部一致性彻底崩溃。主体身份、人数、动作、场景、时间、镜头运动、参考素材使用方式等均出现严重冲突，且包含逻辑上不可能的组合（如同时存在五个不同外貌的主角、时间倒序、时长矛盾等），违反所有内部一致性准则。",
+  "usage": {
+    "completion_tokens": 1454,
+    "prompt_tokens": 3123,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 4577
+  }
+}

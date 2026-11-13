@@ -1,0 +1,162 @@
+{
+  "candidate_hash": "454415089fd4a2554c5413a803bdabcbaedc1905b104d0a22def41572437ec5e",
+  "case_key": "i2v:138",
+  "created_at": "2026-11-13T07:36:25+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "STC",
+      "evidence": [
+        {
+          "quote": "时间倒过来：先给结尾，再跳到一个对不上的开头。中途插进一段无关的屋顶烟花。",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "总时长写成3秒，同时又要求每个分镜各自持续27秒。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Temporal plan is incoherent and contradictory: time is reversed (ending first, then mismatched beginning), duration is simultaneously 3 seconds and 27 seconds per shot, and events are disconnected (e.g., rooftop fireworks inserted mid-sequence).",
+      "rationale": "A feasible temporal plan requires logical sequence, consistent duration, and coherent event progression. The prompt explicitly violates these by reversing time, inserting unrelated events, and assigning mutually exclusive durations, making any coherent shot sequence impossible.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CDS",
+      "evidence": [
+        {
+          "quote": "镜头每半秒甩动、环绕、急推。",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "写成机位锁死，又写成镜头一直在晃。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Camera specifications are contradictory and infeasible: '镜头每半秒甩动、环绕、急推' conflicts with '机位锁死' and '镜头一直在晃' is incompatible with any stable framing or shot scale.",
+      "rationale": "Actionable camera specifications must be consistent and executable. The prompt simultaneously demands locked and constantly moving camera, which is physically impossible and renders any framing or shot scale specification meaningless.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ETD",
+      "evidence": [
+        {
+          "quote": "先给结尾，再跳到一个对不上的开头。中途插进一段无关的屋顶烟花。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Cuts and transitions are undefined and disconnected: no transitions are specified, but the narrative includes abrupt jumps (e.g., from ending to mismatched beginning, inserting fireworks), creating a disjointed and unmotivated sequence.",
+      "rationale": "Transitions must support narrative or spatial continuity. The prompt introduces abrupt, unmotivated cuts and inserts unrelated content, violating temporal and narrative coherence required for effective editing.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "LCS",
+      "evidence": [
+        {
+          "quote": "写成正午暴晒，又写成深夜无光；",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Lighting specifications are contradictory: '正午暴晒' (midday sun) conflicts with '深夜无光' (deep night, no light), making consistent lighting impossible.",
+      "rationale": "Lighting must be consistent with time of day and environment. The prompt demands mutually exclusive lighting conditions, which cannot coexist in a single scene or sequence, undermining visual coherence.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "NDE",
+      "evidence": [
+        {
+          "quote": "紧接着又写成这个主角同时变成五个外貌不同的人，并且互相对话。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "No narrative progression or variation: the prompt describes a chaotic, self-contradictory sequence with no escalation, resolution, or meaningful development. The character transformation (one to five people) is unmotivated and illogical.",
+      "rationale": "Narrative development requires progression, variation, or resolution. The prompt introduces an impossible character transformation without motivation or purpose, resulting in static, incoherent content.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CIF",
+      "evidence": [
+        {
+          "quote": "中途插进一段无关的屋顶烟花。",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "紧接着又写成这个主角同时变成五个外貌不同的人，并且互相对话。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Additions are deliberately distracting and irrelevant: the prompt includes '屋顶烟花' (rooftop fireworks), character transformations, and contradictory instructions that serve no purpose and actively undermine the central request.",
+      "rationale": "Additions must support the central request. The prompt includes irrelevant, contradictory, and impossible elements that distract from any coherent production goal, violating the principle of focused content creation.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SDI",
+      "evidence": [
+        {
+          "quote": "整段改成实拍晚间新闻口播，主播坐着念稿，不要动画角色。",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "轻快卡通BGM（钢琴+木鱼），“咔哒”晃动声、调皮“喵呜”，结尾1秒疑惑“嗯？”音效。",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "Audio specifications are absent and contradictory: no speech, music, or effects are specified, yet the prompt demands a news broadcast, which inherently requires audio. The original prompt's audio elements are discarded without replacement.",
+      "rationale": "For a news broadcast, audio is essential. The prompt removes the original audio plan without providing a coherent replacement, making the audio design infeasible and contradictory.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SPS",
+      "evidence": [
+        {
+          "quote": "先写成只有一个主角，紧接着又写成这个主角同时变成五个外貌不同的人，并且互相对话。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Subject and performance details are contradictory: the prompt demands a single news anchor, then immediately requires that same anchor to become five different people simultaneously, which is physically impossible and undermines character consistency.",
+      "rationale": "Performance details must be consistent and executable. The prompt demands an impossible transformation, making any coherent subject performance or interaction impossible.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "VSS",
+      "evidence": [
+        {
+          "quote": "整段改成实拍晚间新闻口播，主播坐着念稿，不要动画角色。",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "镜头每半秒甩动、环绕、急推。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Visual style and medium are contradictory: the prompt demands '实拍晚间新闻口播' (live-action news broadcast) but also includes impossible camera movements and lighting, making the visual treatment incoherent and unfeasible.",
+      "rationale": "Visual treatment must be consistent with the medium. The prompt demands a live-action news broadcast, which typically uses stable, controlled camera work, yet mandates extreme, rapid movements, creating an impossible visual style.",
+      "severity": "major"
+    }
+  ],
+  "dimension": "DC",
+  "dimension_score": 0,
+  "evidence_cache_key": "5abfb653c647e19f6fbb9120e0317052857a87d203af5dce817939cfdf3864f0",
+  "judge_cache_key": "0754499d53388e6467fb078ab780e01b77f9f1c9e99d9029be2769351eb2b2eb",
+  "method": "weak-pe-original",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"DC\",\n  \"dimension_score\": 0,\n  \"summary\": \"Enhanced prompt is intentionally designed to be incoherent, contradictory, and infeasible for any production. It violates core directorial creation principles by introducing conflicting temporal sequences, impossible character transformations, contradictory lighting and camera instructions, and physically impossible durations. The prompt actively rejects the original visual content and replaces it with a chaotic, self-contradictory narrative that cannot be rendered into a coherent video. All criteria are severely compromised.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"STC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Temporal plan is incoherent and contradictory: time is reversed (ending first, then mismatched beginning), duration is simultaneously 3 seconds and 27 seconds per shot, and events are disconnected (e.g., rooftop fireworks inserted mid-sequence).\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"时间倒过来：先给结尾，再跳到一个对不上的开头。中途插进一段无关的屋顶烟花。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"总时长写成3秒，同时又要求每个分镜各自持续27秒。\"\n        }\n      ],\n      \"rationale\": \"A feasible temporal plan requires logical sequence, consistent duration, and coherent event progression. The prompt explicitly violates these by reversing time, inserting unrelated events, and assigning mutually exclusive durations, making any coherent shot sequence impossible.\"\n    },\n    {\n      \"criterion\": \"CDS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Camera specifications are contradictory and infeasible: '镜头每半秒甩动、环绕、急推' conflicts with '机位锁死' and '镜头一直在晃' is incompatible with any stable framing or shot scale.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"镜头每半秒甩动、环绕、急推。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"写成机位锁死，又写成镜头一直在晃。\"\n        }\n      ],\n      \"rationale\": \"Actionable camera specifications must be consistent and executable. The prompt simultaneously demands locked and constantly moving camera, which is physically impossible and renders any framing or shot scale specification meaningless.\"\n    },\n    {\n      \"criterion\": \"ETD\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Cuts and transitions are undefined and disconnected: no transitions are specified, but the narrative includes abrupt jumps (e.g., from ending to mismatched beginning, inserting fireworks), creating a disjointed and unmotivated sequence.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"先给结尾，再跳到一个对不上的开头。中途插进一段无关的屋顶烟花。\"\n        }\n      ],\n      \"rationale\": \"Transitions must support narrative or spatial continuity. The prompt introduces abrupt, unmotivated cuts and inserts unrelated content, violating temporal and narrative coherence required for effective editing.\"\n    },\n    {\n      \"criterion\": \"LCS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Lighting specifications are contradictory: '正午暴晒' (midday sun) conflicts with '深夜无光' (deep night, no light), making consistent lighting impossible.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"写成正午暴晒，又写成深夜无光；\"\n        }\n      ],\n      \"rationale\": \"Lighting must be consistent with time of day and environment. The prompt demands mutually exclusive lighting conditions, which cannot coexist in a single scene or sequence, undermining visual coherence.\"\n    },\n    {\n      \"criterion\": \"NDE\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"No narrative progression or variation: the prompt describes a chaotic, self-contradictory sequence with no escalation, resolution, or meaningful development. The character transformation (one to five people) is unmotivated and illogical.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"紧接着又写成这个主角同时变成五个外貌不同的人，并且互相对话。\"\n        }\n      ],\n      \"rationale\": \"Narrative development requires progression, variation, or resolution. The prompt introduces an impossible character transformation without motivation or purpose, resulting in static, incoherent content.\"\n    },\n    {\n      \"criterion\": \"CIF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Additions are deliberately distracting and irrelevant: the prompt includes '屋顶烟花' (rooftop fireworks), character transformations, and contradictory instructions that serve no purpose and actively undermine the central request.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"中途插进一段无关的屋顶烟花。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"紧接着又写成这个主角同时变成五个外貌不同的人，并且互相对话。\"\n        }\n      ],\n      \"rationale\": \"Additions must support the central request. The prompt includes irrelevant, contradictory, and impossible elements that distract from any coherent production goal, violating the principle of focused content creation.\"\n    },\n    {\n      \"criterion\": \"SDI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Audio specifications are absent and contradictory: no speech, music, or effects are specified, yet the prompt demands a news broadcast, which inherently requires audio. The original prompt's audio elements are discarded without replacement.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"整段改成实拍晚间新闻口播，主播坐着念稿，不要动画角色。\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"轻快卡通BGM（钢琴+木鱼），“咔哒”晃动声、调皮“喵呜”，结尾1秒疑惑“嗯？”音效。\"\n        }\n      ],\n      \"rationale\": \"For a news broadcast, audio is essential. The prompt removes the original audio plan without providing a coherent replacement, making the audio design infeasible and contradictory.\"\n    },\n    {\n      \"criterion\": \"SPS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Subject and performance details are contradictory: the prompt demands a single news anchor, then immediately requires that same anchor to become five different people simultaneously, which is physically impossible and undermines character consistency.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"先写成只有一个主角，紧接着又写成这个主角同时变成五个外貌不同的人，并且互相对话。\"\n        }\n      ],\n      \"rationale\": \"Performance details must be consistent and executable. The prompt demands an impossible transformation, making any coherent subject performance or interaction impossible.\"\n    },\n    {\n      \"criterion\": \"VSS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Visual style and medium are contradictory: the prompt demands '实拍晚间新闻口播' (live-action news broadcast) but also includes impossible camera movements and lighting, making the visual treatment incoherent and unfeasible.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"整段改成实拍晚间新闻口播，主播坐着念稿，不要动画角色。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"镜头每半秒甩动、环绕、急推。\"\n        }\n      ],\n      \"rationale\": \"Visual treatment must be consistent with the medium. The prompt demands a live-action news broadcast, which typically uses stable, controlled camera work, yet mandates extreme, rapid movements, creating an impossible visual style.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "Enhanced prompt is intentionally designed to be incoherent, contradictory, and infeasible for any production. It violates core directorial creation principles by introducing conflicting temporal sequences, impossible character transformations, contradictory lighting and camera instructions, and physically impossible durations. The prompt actively rejects the original visual content and replaces it with a chaotic, self-contradictory narrative that cannot be rendered into a coherent video. All criteria are severely compromised.",
+  "usage": {
+    "completion_tokens": 1775,
+    "prompt_tokens": 3205,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 4980
+  }
+}

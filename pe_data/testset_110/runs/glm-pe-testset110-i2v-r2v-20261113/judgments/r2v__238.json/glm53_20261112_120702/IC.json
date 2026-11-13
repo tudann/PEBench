@@ -1,0 +1,131 @@
+{
+  "candidate_hash": "a1d0eff03c37f96714b62418f84c8d381f39a370c81c16c261de3f1562703108",
+  "case_key": "r2v:238",
+  "created_at": "2026-11-13T09:11:32+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "SAC",
+      "evidence": [
+        {
+          "quote": "The character’s appearance remains completely consistent throughout, and the room proportions and perspective stay stable and unified",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "<Subject 1> is the living room, a single continuous space whose layout — beige sofa left, center window with garden view, fireplace right — is identical across <Picture 1>, <Picture 2>, and <Picture 3>",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "The three images depict the same room at different stages: image_1 shows a clean, modern living room; image_2 shows the same room in a state of severe decay; image_3 shows the same room during active renovation. The window, radiator, and general room layout are consistent across all three images",
+          "source": "evidence_facts"
+        }
+      ],
+      "issue": "Subject identity, count, appearance, and props remain consistent across shots. The living room’s layout (sofa left, window center, fireplace right) is preserved across all three images. The three workers in yellow vests appear only in the final phase, matching the prompt. No unexplained renaming, duplication, or attribute drift.",
+      "rationale": "All key objects (sofa, coffee table, fireplace, TV unit) are present in all three images with consistent spatial relationships. The workers appear only in image_3, as specified. No attribute drift or identity changes are observed.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANL",
+      "evidence": [
+        {
+          "quote": "progressive time-lapse decay transforms the space toward <Picture 2>... the same decayed room, now occupied by <Subject 2>, the three cleanup workers... One sweeps debris... one bags waste... one scrubs the fireplace mantel",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "The room is filled with tools, cleaning supplies, and debris, indicating active renovation",
+          "source": "evidence_facts"
+        }
+      ],
+      "issue": "Actions form a coherent causal progression: pristine room → decay → cleanup. The decay is time-lapse driven, with no external interference. The cleanup phase introduces workers who perform logical, purposeful actions (sweeping, bagging, scrubbing) consistent with the state of the room. No dangling or incompatible events.",
+      "rationale": "The sequence of events (pristine → decay → cleanup) is logically ordered and causally coherent. The workers’ actions are directly tied to the room’s state and are consistent with the time-lapse narrative.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "TSC",
+      "evidence": [
+        {
+          "quote": "At 00:09.000, the camera smoothly follows the pan into the final keyframe of <Picture 3>: the same decayed room, now occupied by <Subject 2>",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "It then smoothly follows and transitions to the final frame of Image 3",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "Chronology is mostly coherent: 0.0–4.0s (pristine), 4.0–9.0s (decay), 9.0–15.0s (cleanup). However, the transition from decay to cleanup at 9.0s is abrupt in description; no explicit explanation for the sudden appearance of workers or the start of cleanup. The prompt implies a continuous take, but the workers’ entrance is not visually or narratively foreshadowed.",
+      "rationale": "The timeline is clearly defined, but the sudden appearance of workers at 9.0s lacks a causal or visual bridge. While not a major break in logic, it is a minor discontinuity in the narrative flow.",
+      "severity": "minor"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SPC",
+      "evidence": [
+        {
+          "quote": "the camera begins a slow push-in with a subtle wide-angle drifting orbit... transitions into a horizontal pan... smoothly follows the pan into the final keyframe",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "The window, radiator, and general room layout are consistent across all three images",
+          "source": "evidence_facts"
+        }
+      ],
+      "issue": "Location, screen direction, and relative positions are consistent. The room’s layout remains unchanged across all three images. The camera motion (push-in, pan) is described as continuous and follows a logical path. Workers enter the scene from within the existing space, maintaining spatial coherence.",
+      "rationale": "All spatial relationships are preserved. The camera motion is described as continuous and plausible. Workers appear within the existing room space without violating spatial logic.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "PL",
+      "evidence": [
+        {
+          "quote": "wallpaper peels in curling strips, mold stains spread... the sofa rots and tears... cobwebs accumulate... workers sweep debris, bag waste, scrub the fireplace",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "The room appears neglected and in disrepair... The room is filled with tools, cleaning supplies, and debris, indicating active renovation",
+          "source": "evidence_facts"
+        }
+      ],
+      "issue": "Physics are consistent with real-world expectations: decay progresses naturally (peeling paint, rotting furniture), and cleanup actions (sweeping, scrubbing) are physically plausible. No violations of gravity, object permanence, or bodily feasibility. The time-lapse effect is a stylistic choice, not a physics violation.",
+      "rationale": "All described events are physically plausible within the context of time-lapse decay and cleanup. No impossible or contradictory physical states are introduced.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "AVS",
+      "evidence": [
+        {
+          "quote": "Diegetic birdsong and soft room tone fill the air... layered time-flow whoosh effects, creaking wood, paper rustle... broom sweeping, debris bagging, scrubbing, bucket splashes, vacuum hum",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "No background music, no subtitles, with ambient sound effects and time-flow sound effects",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "The prompt specifies diegetic ambient sound and time-flow effects, but no actual audio is available for verification. The enhanced prompt describes sound alignment (birdsong in pristine phase, decay sounds, cleanup sounds), but since audio is not present, alignment cannot be confirmed. This is a minor issue due to lack of evidence, not a flaw in the prompt’s design.",
+      "rationale": "The prompt includes detailed sound descriptions that align with visual events. However, without audio assets, semantic alignment cannot be verified. This is a minor issue due to data limitations, not a prompt inconsistency.",
+      "severity": "minor"
+    }
+  ],
+  "dimension": "IC",
+  "dimension_score": 95,
+  "evidence_cache_key": "028bf2789a0e9be567cb1487f10c3591febe6b06ea15c364ab73c070c4488ed7",
+  "judge_cache_key": "438d7e9fd7332b1041db3e2c26d42cb3fe828e0d369fb59490f6650aee59e97d",
+  "method": "glm53_20261112_120702",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"IC\",\n  \"dimension_score\": 95,\n  \"summary\": \"The enhanced prompt maintains strong internal consistency across subject identity, actions, chronology, and spatial layout, aligning with the original prompt and evidence. The living room’s layout and key objects remain stable across all three images, with only state changes (pristine → decayed → cleaned). The three workers appear only in the final phase, consistent with the prompt. Camera motion and time-lapse progression are logically sequenced. Minor issues include slight ambiguity in the transition timing between keyframes and a lack of explicit sound alignment verification, but no major contradictions or omissions.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"SAC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"Subject identity, count, appearance, and props remain consistent across shots. The living room’s layout (sofa left, window center, fireplace right) is preserved across all three images. The three workers in yellow vests appear only in the final phase, matching the prompt. No unexplained renaming, duplication, or attribute drift.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"The character’s appearance remains completely consistent throughout, and the room proportions and perspective stay stable and unified\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"<Subject 1> is the living room, a single continuous space whose layout — beige sofa left, center window with garden view, fireplace right — is identical across <Picture 1>, <Picture 2>, and <Picture 3>\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"The three images depict the same room at different stages: image_1 shows a clean, modern living room; image_2 shows the same room in a state of severe decay; image_3 shows the same room during active renovation. The window, radiator, and general room layout are consistent across all three images\"\n        }\n      ],\n      \"rationale\": \"All key objects (sofa, coffee table, fireplace, TV unit) are present in all three images with consistent spatial relationships. The workers appear only in image_3, as specified. No attribute drift or identity changes are observed.\"\n    },\n    {\n      \"criterion\": \"ANL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"Actions form a coherent causal progression: pristine room → decay → cleanup. The decay is time-lapse driven, with no external interference. The cleanup phase introduces workers who perform logical, purposeful actions (sweeping, bagging, scrubbing) consistent with the state of the room. No dangling or incompatible events.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"progressive time-lapse decay transforms the space toward <Picture 2>... the same decayed room, now occupied by <Subject 2>, the three cleanup workers... One sweeps debris... one bags waste... one scrubs the fireplace mantel\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"The room is filled with tools, cleaning supplies, and debris, indicating active renovation\"\n        }\n      ],\n      \"rationale\": \"The sequence of events (pristine → decay → cleanup) is logically ordered and causally coherent. The workers’ actions are directly tied to the room’s state and are consistent with the time-lapse narrative.\"\n    },\n    {\n      \"criterion\": \"TSC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"minor\",\n      \"issue\": \"Chronology is mostly coherent: 0.0–4.0s (pristine), 4.0–9.0s (decay), 9.0–15.0s (cleanup). However, the transition from decay to cleanup at 9.0s is abrupt in description; no explicit explanation for the sudden appearance of workers or the start of cleanup. The prompt implies a continuous take, but the workers’ entrance is not visually or narratively foreshadowed.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"At 00:09.000, the camera smoothly follows the pan into the final keyframe of <Picture 3>: the same decayed room, now occupied by <Subject 2>\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"It then smoothly follows and transitions to the final frame of Image 3\"\n        }\n      ],\n      \"rationale\": \"The timeline is clearly defined, but the sudden appearance of workers at 9.0s lacks a causal or visual bridge. While not a major break in logic, it is a minor discontinuity in the narrative flow.\"\n    },\n    {\n      \"criterion\": \"SPC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"Location, screen direction, and relative positions are consistent. The room’s layout remains unchanged across all three images. The camera motion (push-in, pan) is described as continuous and follows a logical path. Workers enter the scene from within the existing space, maintaining spatial coherence.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"the camera begins a slow push-in with a subtle wide-angle drifting orbit... transitions into a horizontal pan... smoothly follows the pan into the final keyframe\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"The window, radiator, and general room layout are consistent across all three images\"\n        }\n      ],\n      \"rationale\": \"All spatial relationships are preserved. The camera motion is described as continuous and plausible. Workers appear within the existing room space without violating spatial logic.\"\n    },\n    {\n      \"criterion\": \"PL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"Physics are consistent with real-world expectations: decay progresses naturally (peeling paint, rotting furniture), and cleanup actions (sweeping, scrubbing) are physically plausible. No violations of gravity, object permanence, or bodily feasibility. The time-lapse effect is a stylistic choice, not a physics violation.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"wallpaper peels in curling strips, mold stains spread... the sofa rots and tears... cobwebs accumulate... workers sweep debris, bag waste, scrub the fireplace\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"The room appears neglected and in disrepair... The room is filled with tools, cleaning supplies, and debris, indicating active renovation\"\n        }\n      ],\n      \"rationale\": \"All described events are physically plausible within the context of time-lapse decay and cleanup. No impossible or contradictory physical states are introduced.\"\n    },\n    {\n      \"criterion\": \"AVS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"minor\",\n      \"issue\": \"The prompt specifies diegetic ambient sound and time-flow effects, but no actual audio is available for verification. The enhanced prompt describes sound alignment (birdsong in pristine phase, decay sounds, cleanup sounds), but since audio is not present, alignment cannot be confirmed. This is a minor issue due to lack of evidence, not a flaw in the prompt’s design.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Diegetic birdsong and soft room tone fill the air... layered time-flow whoosh effects, creaking wood, paper rustle... broom sweeping, debris bagging, scrubbing, bucket splashes, vacuum hum\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"No background music, no subtitles, with ambient sound effects and time-flow sound effects\"\n        }\n      ],\n      \"rationale\": \"The prompt includes detailed sound descriptions that align with visual events. However, without audio assets, semantic alignment cannot be verified. This is a minor issue due to data limitations, not a prompt inconsistency.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt maintains strong internal consistency across subject identity, actions, chronology, and spatial layout, aligning with the original prompt and evidence. The living room’s layout and key objects remain stable across all three images, with only state changes (pristine → decayed → cleaned). The three workers appear only in the final phase, consistent with the prompt. Camera motion and time-lapse progression are logically sequenced. Minor issues include slight ambiguity in the transition timing between keyframes and a lack of explicit sound alignment verification, but no major contradictions or omissions.",
+  "usage": {
+    "completion_tokens": 1747,
+    "prompt_tokens": 6504,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 8251
+  }
+}

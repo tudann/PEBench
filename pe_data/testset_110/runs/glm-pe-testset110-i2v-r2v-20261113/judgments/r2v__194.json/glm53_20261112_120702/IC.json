@@ -1,0 +1,115 @@
+{
+  "candidate_hash": "1f1353d9d3d82c5de0ee65de10a91941771ff3168e37f7b9f877c64dff349fae",
+  "case_key": "r2v:194",
+  "created_at": "2026-11-13T09:04:23+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "SAC",
+      "evidence": [
+        {
+          "quote": "text: '之后屋主也换了好儿', timing: 'Always visible'",
+          "source": "evidence_facts.assets[0].onscreen_text"
+        },
+        {
+          "quote": "<Picture 1> is the identity and staging reference for <Subject 2> and the table setup in [Shot 2]; its burned-in subtitle is not reproduced.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Subject 2’s identity is preserved, but the prompt omits the burned-in subtitle from <Picture 1>, which is a minor attribute drift in onscreen text. The owl figurine and table spread are fully preserved.",
+      "rationale": "The prompt explicitly states the subtitle is not reproduced, which is a deliberate choice, not an error. However, since the original image includes a visible subtitle, its omission constitutes a minor attribute drift in onscreen text, which is a SAC issue. All other subject attributes (clothing, props, appearance) are consistently preserved.",
+      "severity": "minor"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANL",
+      "evidence": [
+        {
+          "quote": "At 00:05.000, the shot cuts to a static framing on <Subject 2>... She turns toward the old man... replies in a gentle middle-aged female voice... In the closing seconds, <Subject 1> enters the edge of the frame, chuckling lowly, and sets <Subject 3> down on the table beside the lamp while <Subject 2> serves food.",
+          "source": "enhanced_prompt.detailed_description"
+        }
+      ],
+      "issue": "Actions form a coherent progression: Subject 1 completes the owl, expresses pride, then hands it over to Subject 2, who responds warmly and serves food. The sequence is causal and plausible.",
+      "rationale": "The actions are logically connected: completion → pride → handover → reception → serving. There are no dangling or incompatible events. The dialogue and physical actions align causally.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "TSC",
+      "evidence": [
+        {
+          "quote": "Around 0:03, he lifts the owl up beside his face... At 00:05.000, the shot cuts to a static framing on <Subject 2>...",
+          "source": "enhanced_prompt.detailed_description"
+        }
+      ],
+      "issue": "Chronology is preserved: Shot 1 ends at ~0:05, then Shot 2 begins at 00:05.000. The transition is a clean cut, and states are consistent (Subject 1 finishes the owl, then places it on the table in Shot 2).",
+      "rationale": "The timestamped cut at 00:05.000 is precise and matches the duration. No state resets or infeasible overlaps occur. The owl is present in both shots, and its placement in Shot 2 is a natural continuation.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SPC",
+      "evidence": [
+        {
+          "quote": "The scene opens in the same cabin corner as <Video 1>... At 00:05.000, the shot cuts to a static framing on <Subject 2>, seated at the wooden dining table... <Subject 1> enters the edge of the frame...",
+          "source": "enhanced_prompt.detailed_description"
+        },
+        {
+          "quote": "The man and the desk are in the foreground, the curtain and wall are in the midground, and the floor lamp is in the background.",
+          "source": "evidence_facts.assets[1].scene_and_spatial_relations"
+        }
+      ],
+      "issue": "Location and screen direction are consistent: Shot 1 is in the cabin corner with the bench; Shot 2 is at the dining table, with birch trunks and shelves visible in the background, matching the environment from both assets. Subject 1 enters from the edge of the frame in Shot 2, which is a plausible entrance.",
+      "rationale": "The spatial layout is consistent with the original assets. The transition from bench to dining table is a logical cut, and the entrance of Subject 1 from the edge is spatially plausible. No unexplained position swaps or impossible trajectories.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "PL",
+      "evidence": [
+        {
+          "quote": "He lifts the owl up beside his face... sets <Subject 3> down on the table beside the lamp",
+          "source": "enhanced_prompt.detailed_description"
+        }
+      ],
+      "issue": "Physics are consistent: the owl is held and placed without floating or deformation; the table setup remains stable; the characters move naturally within the cabin. No violations of gravity, object permanence, or bodily feasibility.",
+      "rationale": "All physical interactions are plausible within the hand-drawn anime style. The owl is a solid prop, and its movement is consistent with hand-held placement. No fantasy elements are introduced that break established rules.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "AVS",
+      "evidence": [
+        {
+          "quote": "<d>[Chinese] 你看，完成了。</d> He holds the pose, smiling at the figurine... <d>[Chinese] 真好看，晚上一起吃吧。</d>... a soft clink of chopsticks and a low gentle chuckle from the old man sit quietly under the music.",
+          "source": "enhanced_prompt.detailed_description"
+        },
+        {
+          "quote": "<Audio 1> is continued as the complete audience-only score: the same gentle, cozy background music from <Video 1>, soft and unhurried, playing continuously across all 13 seconds with no swell or change in tone.",
+          "source": "enhanced_prompt.non_diegetic_music"
+        }
+      ],
+      "issue": "Dialogue is aligned with speaker and action: Subject 1 speaks at the end of Shot 1, Subject 2 replies in Shot 2. Diegetic sounds (chopstick clink, chuckle) are added in the closing beat, which is plausible. However, the prompt does not specify lip-sync, and the music continues non-diegetically, which is acceptable but not fully specified.",
+      "rationale": "The dialogue is correctly attributed to the speakers and occurs at appropriate moments. The diegetic sounds are added appropriately. The lack of lip-sync specification is a minor issue, as it is not required by the original prompt, but it is a potential AVS gap. The music continuity is correctly maintained.",
+      "severity": "minor"
+    }
+  ],
+  "dimension": "IC",
+  "dimension_score": 95,
+  "evidence_cache_key": "f307971cb99f82eaf340615b89655246fa9b0c2ab994884fab7b7de428d1cf95",
+  "judge_cache_key": "438d7e9fd7332b1041db3e2c26d42cb3fe828e0d369fb59490f6650aee59e97d",
+  "method": "glm53_20261112_120702",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"IC\",\n  \"dimension_score\": 95,\n  \"summary\": \"The enhanced prompt maintains strong internal consistency across subject identity, actions, chronology, space, physics, and audio-visual alignment. Subject attributes, environment, and actions are preserved with minor deviations in audio layering and subtitle handling. No major contradictions or infeasible transitions are present.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"SAC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"minor\",\n      \"issue\": \"Subject 2’s identity is preserved, but the prompt omits the burned-in subtitle from <Picture 1>, which is a minor attribute drift in onscreen text. The owl figurine and table spread are fully preserved.\",\n      \"evidence\": [\n        {\n          \"source\": \"evidence_facts.assets[0].onscreen_text\",\n          \"quote\": \"text: '之后屋主也换了好儿', timing: 'Always visible'\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"<Picture 1> is the identity and staging reference for <Subject 2> and the table setup in [Shot 2]; its burned-in subtitle is not reproduced.\"\n        }\n      ],\n      \"rationale\": \"The prompt explicitly states the subtitle is not reproduced, which is a deliberate choice, not an error. However, since the original image includes a visible subtitle, its omission constitutes a minor attribute drift in onscreen text, which is a SAC issue. All other subject attributes (clothing, props, appearance) are consistently preserved.\"\n    },\n    {\n      \"criterion\": \"ANL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"Actions form a coherent progression: Subject 1 completes the owl, expresses pride, then hands it over to Subject 2, who responds warmly and serves food. The sequence is causal and plausible.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt.detailed_description\",\n          \"quote\": \"At 00:05.000, the shot cuts to a static framing on <Subject 2>... She turns toward the old man... replies in a gentle middle-aged female voice... In the closing seconds, <Subject 1> enters the edge of the frame, chuckling lowly, and sets <Subject 3> down on the table beside the lamp while <Subject 2> serves food.\"\n        }\n      ],\n      \"rationale\": \"The actions are logically connected: completion → pride → handover → reception → serving. There are no dangling or incompatible events. The dialogue and physical actions align causally.\"\n    },\n    {\n      \"criterion\": \"TSC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"Chronology is preserved: Shot 1 ends at ~0:05, then Shot 2 begins at 00:05.000. The transition is a clean cut, and states are consistent (Subject 1 finishes the owl, then places it on the table in Shot 2).\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt.detailed_description\",\n          \"quote\": \"Around 0:03, he lifts the owl up beside his face... At 00:05.000, the shot cuts to a static framing on <Subject 2>...\"\n        }\n      ],\n      \"rationale\": \"The timestamped cut at 00:05.000 is precise and matches the duration. No state resets or infeasible overlaps occur. The owl is present in both shots, and its placement in Shot 2 is a natural continuation.\"\n    },\n    {\n      \"criterion\": \"SPC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"Location and screen direction are consistent: Shot 1 is in the cabin corner with the bench; Shot 2 is at the dining table, with birch trunks and shelves visible in the background, matching the environment from both assets. Subject 1 enters from the edge of the frame in Shot 2, which is a plausible entrance.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt.detailed_description\",\n          \"quote\": \"The scene opens in the same cabin corner as <Video 1>... At 00:05.000, the shot cuts to a static framing on <Subject 2>, seated at the wooden dining table... <Subject 1> enters the edge of the frame...\"\n        },\n        {\n          \"source\": \"evidence_facts.assets[1].scene_and_spatial_relations\",\n          \"quote\": \"The man and the desk are in the foreground, the curtain and wall are in the midground, and the floor lamp is in the background.\"\n        }\n      ],\n      \"rationale\": \"The spatial layout is consistent with the original assets. The transition from bench to dining table is a logical cut, and the entrance of Subject 1 from the edge is spatially plausible. No unexplained position swaps or impossible trajectories.\"\n    },\n    {\n      \"criterion\": \"PL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"Physics are consistent: the owl is held and placed without floating or deformation; the table setup remains stable; the characters move naturally within the cabin. No violations of gravity, object permanence, or bodily feasibility.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt.detailed_description\",\n          \"quote\": \"He lifts the owl up beside his face... sets <Subject 3> down on the table beside the lamp\"\n        }\n      ],\n      \"rationale\": \"All physical interactions are plausible within the hand-drawn anime style. The owl is a solid prop, and its movement is consistent with hand-held placement. No fantasy elements are introduced that break established rules.\"\n    },\n    {\n      \"criterion\": \"AVS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"minor\",\n      \"issue\": \"Dialogue is aligned with speaker and action: Subject 1 speaks at the end of Shot 1, Subject 2 replies in Shot 2. Diegetic sounds (chopstick clink, chuckle) are added in the closing beat, which is plausible. However, the prompt does not specify lip-sync, and the music continues non-diegetically, which is acceptable but not fully specified.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt.detailed_description\",\n          \"quote\": \"<d>[Chinese] 你看，完成了。</d> He holds the pose, smiling at the figurine... <d>[Chinese] 真好看，晚上一起吃吧。</d>... a soft clink of chopsticks and a low gentle chuckle from the old man sit quietly under the music.\"\n        },\n        {\n          \"source\": \"enhanced_prompt.non_diegetic_music\",\n          \"quote\": \"<Audio 1> is continued as the complete audience-only score: the same gentle, cozy background music from <Video 1>, soft and unhurried, playing continuously across all 13 seconds with no swell or change in tone.\"\n        }\n      ],\n      \"rationale\": \"The dialogue is correctly attributed to the speakers and occurs at appropriate moments. The diegetic sounds are added appropriately. The lack of lip-sync specification is a minor issue, as it is not required by the original prompt, but it is a potential AVS gap. The music continuity is correctly maintained.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt maintains strong internal consistency across subject identity, actions, chronology, space, physics, and audio-visual alignment. Subject attributes, environment, and actions are preserved with minor deviations in audio layering and subtitle handling. No major contradictions or infeasible transitions are present.",
+  "usage": {
+    "completion_tokens": 1617,
+    "prompt_tokens": 3922,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 5539
+  }
+}

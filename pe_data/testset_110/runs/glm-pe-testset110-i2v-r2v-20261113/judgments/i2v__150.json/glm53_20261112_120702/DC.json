@@ -1,0 +1,170 @@
+{
+  "candidate_hash": "627560a768837f84ae2fc4ada86b307c5e82038f00212c4e7d1e6f93a802ff52",
+  "case_key": "i2v:150",
+  "created_at": "2026-11-13T07:53:29+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "STC",
+      "evidence": [
+        {
+          "quote": "【总时长：5秒】\n0.0-0.8秒：画面：双手轻轻向上扬起。原石被抛向空中...\n0.8-1.6秒：画面：原石升至最高点，开始下落...\n1.6-3.0秒：画面：光芒开始向上生长...\n3.0-4.1秒：站在原地，凝视着这座金发晶原石城堡...\n4.1-5.0秒：视线抬起，望向大门。手伸向门，推开门。",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "at 0.00 seconds into the target video, <Picture 1> (from [Shot 1]) is fully referenced.\n...The POV holds, gazing at the warm golden castle glowing in the dusk, then walks forward — the gem ground gives crisp footstep echoes; stepping onto the stairs, a golden halo spreads underfoot... The gaze lifts to the door; a hand reaches out and pushes, and the door opens silently...",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "The enhanced prompt maintains a clear, sequential temporal plan with precise timing allocations matching the original prompt’s 5-second structure. Each segment is logically ordered, with events progressing from stone toss to castle formation to entry, and camera movement is continuous and coherent. Shot boundaries are implicitly defined by the timing and action transitions, and the plan is feasible for generation.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CDS",
+      "evidence": [
+        {
+          "quote": "Live-action fantasy, cinematic, first-person POV. The frame opens exactly as in <Picture 1>: slender female hands cupped at bottom center holding a rough golden rutilated quartz raw stone...",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "camera_and_composition: {\"angle\": \"eye-level\", \"shot_scale\": \"medium close-up\", \"view_characteristics\": \"first-person view, centered composition\"}",
+          "source": "evidence_facts"
+        }
+      ],
+      "issue": "",
+      "rationale": "The prompt specifies a first-person POV, eye-level angle, medium close-up shot scale, and continuous camera movement. It details framing (hands centered, crystal in foreground), depth of field (shallow to moderate), and visual focus (crystal and hands). These are actionable specifications for camera and composition, consistent with the evidence from the image.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ETD",
+      "evidence": [
+        {
+          "quote": "The stone reaches its apex and falls, rotating... The light erupts upward like sunlight surging from underground, and a castle of rutilated quartz rapidly condenses... The POV holds, gazing at the warm golden castle... then walks forward... The gaze lifts to the door; a hand reaches out and pushes, and the door opens silently...",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Transitions between segments are implied by action (e.g., stone toss → descent → impact → castle growth) but lack explicit cut or transition cues (e.g., dissolve, match cut, or motion blur). The continuous POV minimizes disconnection, but the absence of transition terminology may lead to ambiguous timing or pacing in generation.",
+      "rationale": "The transitions are motivated by physical action (falling stone, walking, opening door) and maintain spatial continuity. However, the prompt does not specify how cuts or transitions should be rendered (e.g., smooth dissolve, hard cut, or motion blur), which could affect the rhythm. This is a minor issue as the narrative flow is clear and the transitions are logically motivated.",
+      "severity": "minor"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "LCS",
+      "evidence": [
+        {
+          "quote": "a jewel-forest clearing ringed by translucent crystal trees and diamond pillars glowing warm orange, pale purple, and light blue... a tranquil dusk sky with a warm orange horizon glow... golden light ripples outward... warm golden motes drifting in the air like fine golden silk.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "lighting_and_color: {\"color_temperature\": \"cool overall with warm accents (blue/purple background, warm gold from crystal and horizon)\", \"dominant_colors\": [\"blue\", \"purple\", \"gold\", \"white\"], \"light_sources_and_direction\": [\"internal glow of the crystal\", \"glowing crystal trees and flowers\", \"distant horizon glow (sunset/sunrise)\", \"stars in the sky\"]}",
+          "source": "evidence_facts"
+        }
+      ],
+      "issue": "",
+      "rationale": "The prompt specifies multiple light sources (internal crystal glow, crystal trees, horizon glow, stars), color temperature (cool with warm accents), dominant colors (blue, purple, gold), and light quality (glowing, rippling, motes). These are actionable for lighting design and grading, and align with the image’s evidence.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "NDE",
+      "evidence": [
+        {
+          "quote": "0.0-0.8秒：...原石被抛向空中... 0.8-1.6秒：...原石升至最高点，开始下落... 1.6-3.0秒：光芒开始向上生长... 3.0-4.1秒：...迈步走向台阶... 4.1-5.0秒：...推开门。",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "The hands gently lift and toss the raw stone upward... The stone reaches its apex and falls... The light erupts upward... The POV holds, gazing... then walks forward... The gaze lifts to the door; a hand reaches out and pushes, and the door opens silently...",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "The prompt shows clear progression: stone toss → descent → impact → castle growth → approach → entry. Each phase escalates visually and narratively, culminating in the reveal of the interior. There is no static restatement or unmotivated repetition; the sequence builds logically and dynamically.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CIF",
+      "evidence": [
+        {
+          "quote": "its internal golden needles catch the light like a released golden nebula... warm golden motes drifting in the air like fine golden silk.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Some descriptive elaborations (e.g., 'like a released golden nebula', 'like fine golden silk') are poetic and decorative, adding stylistic flair but not essential to the core visual or narrative structure. While they enhance atmosphere, they may be considered unnecessary padding in a generation context.",
+      "rationale": "The additions are stylistic and do not contradict or distract from the central request. They enrich the visual tone but are not strictly necessary for the core action. This is a minor issue as they do not impair the prompt’s functionality.",
+      "severity": "minor"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SDI",
+      "evidence": [
+        {
+          "quote": "overall_soundscape: A soft whoosh accompanies the tossed stone, followed by crisp chime-like refraction tones... A resonant, long crystal \"ding—\" rings out on impact with a low hum... crisp footstep echoes... ending in the silent swing of the opening door.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "音效：原石抛出的风声。空中旋转时光晕折射出的清脆叮铃声。...原石触地的“叮——”声...光波扩散的嗡鸣声。...脚下的宝石地面随着脚步发出清脆的回响。",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "The prompt integrates sound with visual timing: whoosh on toss, chimes during spin, 'ding' on impact, hum during light wave, footstep echoes, and silent door. These are tied to specific actions and enhance immersion without overcomplication. Non-diegetic music is marked N/A, which is appropriate as none is requested.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SPS",
+      "evidence": [
+        {
+          "quote": "slender female hands cupped at bottom center holding a rough golden rutilated quartz raw stone... The hands gently lift and toss the raw stone upward... a hand reaches out and pushes, and the door opens silently...",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "subjects: {\"category\": \"human_body_part\", \"identity\": \"female (inferred from hand shape and nails)\", \"current_pose/state\": \"static, holding the crystal in the center of the frame\", \"visible_appearance\": \"light skin tone, well-groomed nails, palms facing upward, fingers gently curved around the crystal\"}",
+          "source": "evidence_facts"
+        }
+      ],
+      "issue": "",
+      "rationale": "The prompt specifies subject appearance (slender female hands, light skin, well-groomed nails), pose (cupped, lifting, tossing, reaching), movement (gentle lift, toss, walk, push), and interaction (holding, tossing, opening door). These are generation-relevant details that align with the image evidence.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "VSS",
+      "evidence": [
+        {
+          "quote": "Live-action fantasy, cinematic, first-person POV... a castle of rutilated quartz rapidly condenses... walls, floor, and ceiling mixing rough and polished golden surfaces... golden threads suspended inside every block... warm golden motes drifting in the air like fine golden silk.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "media_and_style: {\"primary_style\": \"fantasy_illustration\", \"secondary_styles\": [\"magical_realism\", \"glow_art\", \"high_fantasy\"], \"realism\": \"stylized\"}",
+          "source": "evidence_facts"
+        }
+      ],
+      "issue": "",
+      "rationale": "The prompt specifies medium (live-action fantasy), visual treatment (cinematic, first-person), production design (rutilated quartz castle, gemstone ground, glowing elements), texture (rough mineral skin, smooth crystal faces), and rendering language (glowing, rippling light, suspended threads). These are actionable and consistent with the image’s stylized, high-fantasy aesthetic.",
+      "severity": "none"
+    }
+  ],
+  "dimension": "DC",
+  "dimension_score": 92,
+  "evidence_cache_key": "ee4f1532ecec3d71b7aae4d4ac66a33c2dbab44379c8a9c6d168b465d4f019d2",
+  "judge_cache_key": "0754499d53388e6467fb078ab780e01b77f9f1c9e99d9029be2769351eb2b2eb",
+  "method": "glm53_20261112_120702",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"DC\",\n  \"dimension_score\": 92,\n  \"summary\": \"The enhanced prompt provides a highly detailed, temporally structured, and visually rich first-person cinematic sequence that closely follows the original prompt’s narrative and visual intent. It successfully translates the static image into a dynamic 5-second video plan with clear shot boundaries, camera movement, lighting, and sound design. The prompt is actionable for generation, with minimal omissions and no contradictions. Minor issues include slight over-elaboration in some descriptive elements and a lack of explicit transition cues between segments, but these do not materially affect the core directive. The prompt excels in framing, lighting, subject detail, and visual treatment, with strong integration of audio and visual progression.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"STC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"【总时长：5秒】\\n0.0-0.8秒：画面：双手轻轻向上扬起。原石被抛向空中...\\n0.8-1.6秒：画面：原石升至最高点，开始下落...\\n1.6-3.0秒：画面：光芒开始向上生长...\\n3.0-4.1秒：站在原地，凝视着这座金发晶原石城堡...\\n4.1-5.0秒：视线抬起，望向大门。手伸向门，推开门。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"at 0.00 seconds into the target video, <Picture 1> (from [Shot 1]) is fully referenced.\\n...The POV holds, gazing at the warm golden castle glowing in the dusk, then walks forward — the gem ground gives crisp footstep echoes; stepping onto the stairs, a golden halo spreads underfoot... The gaze lifts to the door; a hand reaches out and pushes, and the door opens silently...\"\n        }\n      ],\n      \"rationale\": \"The enhanced prompt maintains a clear, sequential temporal plan with precise timing allocations matching the original prompt’s 5-second structure. Each segment is logically ordered, with events progressing from stone toss to castle formation to entry, and camera movement is continuous and coherent. Shot boundaries are implicitly defined by the timing and action transitions, and the plan is feasible for generation.\"\n    },\n    {\n      \"criterion\": \"CDS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Live-action fantasy, cinematic, first-person POV. The frame opens exactly as in <Picture 1>: slender female hands cupped at bottom center holding a rough golden rutilated quartz raw stone...\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"camera_and_composition: {\\\"angle\\\": \\\"eye-level\\\", \\\"shot_scale\\\": \\\"medium close-up\\\", \\\"view_characteristics\\\": \\\"first-person view, centered composition\\\"}\"\n        }\n      ],\n      \"rationale\": \"The prompt specifies a first-person POV, eye-level angle, medium close-up shot scale, and continuous camera movement. It details framing (hands centered, crystal in foreground), depth of field (shallow to moderate), and visual focus (crystal and hands). These are actionable specifications for camera and composition, consistent with the evidence from the image.\"\n    },\n    {\n      \"criterion\": \"ETD\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"minor\",\n      \"issue\": \"Transitions between segments are implied by action (e.g., stone toss → descent → impact → castle growth) but lack explicit cut or transition cues (e.g., dissolve, match cut, or motion blur). The continuous POV minimizes disconnection, but the absence of transition terminology may lead to ambiguous timing or pacing in generation.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"The stone reaches its apex and falls, rotating... The light erupts upward like sunlight surging from underground, and a castle of rutilated quartz rapidly condenses... The POV holds, gazing at the warm golden castle... then walks forward... The gaze lifts to the door; a hand reaches out and pushes, and the door opens silently...\"\n        }\n      ],\n      \"rationale\": \"The transitions are motivated by physical action (falling stone, walking, opening door) and maintain spatial continuity. However, the prompt does not specify how cuts or transitions should be rendered (e.g., smooth dissolve, hard cut, or motion blur), which could affect the rhythm. This is a minor issue as the narrative flow is clear and the transitions are logically motivated.\"\n    },\n    {\n      \"criterion\": \"LCS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"a jewel-forest clearing ringed by translucent crystal trees and diamond pillars glowing warm orange, pale purple, and light blue... a tranquil dusk sky with a warm orange horizon glow... golden light ripples outward... warm golden motes drifting in the air like fine golden silk.\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"lighting_and_color: {\\\"color_temperature\\\": \\\"cool overall with warm accents (blue/purple background, warm gold from crystal and horizon)\\\", \\\"dominant_colors\\\": [\\\"blue\\\", \\\"purple\\\", \\\"gold\\\", \\\"white\\\"], \\\"light_sources_and_direction\\\": [\\\"internal glow of the crystal\\\", \\\"glowing crystal trees and flowers\\\", \\\"distant horizon glow (sunset/sunrise)\\\", \\\"stars in the sky\\\"]}\"\n        }\n      ],\n      \"rationale\": \"The prompt specifies multiple light sources (internal crystal glow, crystal trees, horizon glow, stars), color temperature (cool with warm accents), dominant colors (blue, purple, gold), and light quality (glowing, rippling, motes). These are actionable for lighting design and grading, and align with the image’s evidence.\"\n    },\n    {\n      \"criterion\": \"NDE\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"0.0-0.8秒：...原石被抛向空中... 0.8-1.6秒：...原石升至最高点，开始下落... 1.6-3.0秒：光芒开始向上生长... 3.0-4.1秒：...迈步走向台阶... 4.1-5.0秒：...推开门。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"The hands gently lift and toss the raw stone upward... The stone reaches its apex and falls... The light erupts upward... The POV holds, gazing... then walks forward... The gaze lifts to the door; a hand reaches out and pushes, and the door opens silently...\"\n        }\n      ],\n      \"rationale\": \"The prompt shows clear progression: stone toss → descent → impact → castle growth → approach → entry. Each phase escalates visually and narratively, culminating in the reveal of the interior. There is no static restatement or unmotivated repetition; the sequence builds logically and dynamically.\"\n    },\n    {\n      \"criterion\": \"CIF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"minor\",\n      \"issue\": \"Some descriptive elaborations (e.g., 'like a released golden nebula', 'like fine golden silk') are poetic and decorative, adding stylistic flair but not essential to the core visual or narrative structure. While they enhance atmosphere, they may be considered unnecessary padding in a generation context.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"its internal golden needles catch the light like a released golden nebula... warm golden motes drifting in the air like fine golden silk.\"\n        }\n      ],\n      \"rationale\": \"The additions are stylistic and do not contradict or distract from the central request. They enrich the visual tone but are not strictly necessary for the core action. This is a minor issue as they do not impair the prompt’s functionality.\"\n    },\n    {\n      \"criterion\": \"SDI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"overall_soundscape: A soft whoosh accompanies the tossed stone, followed by crisp chime-like refraction tones... A resonant, long crystal \\\"ding—\\\" rings out on impact with a low hum... crisp footstep echoes... ending in the silent swing of the opening door.\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"音效：原石抛出的风声。空中旋转时光晕折射出的清脆叮铃声。...原石触地的“叮——”声...光波扩散的嗡鸣声。...脚下的宝石地面随着脚步发出清脆的回响。\"\n        }\n      ],\n      \"rationale\": \"The prompt integrates sound with visual timing: whoosh on toss, chimes during spin, 'ding' on impact, hum during light wave, footstep echoes, and silent door. These are tied to specific actions and enhance immersion without overcomplication. Non-diegetic music is marked N/A, which is appropriate as none is requested.\"\n    },\n    {\n      \"criterion\": \"SPS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"slender female hands cupped at bottom center holding a rough golden rutilated quartz raw stone... The hands gently lift and toss the raw stone upward... a hand reaches out and pushes, and the door opens silently...\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"subjects: {\\\"category\\\": \\\"human_body_part\\\", \\\"identity\\\": \\\"female (inferred from hand shape and nails)\\\", \\\"current_pose/state\\\": \\\"static, holding the crystal in the center of the frame\\\", \\\"visible_appearance\\\": \\\"light skin tone, well-groomed nails, palms facing upward, fingers gently curved around the crystal\\\"}\"\n        }\n      ],\n      \"rationale\": \"The prompt specifies subject appearance (slender female hands, light skin, well-groomed nails), pose (cupped, lifting, tossing, reaching), movement (gentle lift, toss, walk, push), and interaction (holding, tossing, opening door). These are generation-relevant details that align with the image evidence.\"\n    },\n    {\n      \"criterion\": \"VSS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Live-action fantasy, cinematic, first-person POV... a castle of rutilated quartz rapidly condenses... walls, floor, and ceiling mixing rough and polished golden surfaces... golden threads suspended inside every block... warm golden motes drifting in the air like fine golden silk.\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"media_and_style: {\\\"primary_style\\\": \\\"fantasy_illustration\\\", \\\"secondary_styles\\\": [\\\"magical_realism\\\", \\\"glow_art\\\", \\\"high_fantasy\\\"], \\\"realism\\\": \\\"stylized\\\"}\"\n        }\n      ],\n      \"rationale\": \"The prompt specifies medium (live-action fantasy), visual treatment (cinematic, first-person), production design (rutilated quartz castle, gemstone ground, glowing elements), texture (rough mineral skin, smooth crystal faces), and rendering language (glowing, rippling light, suspended threads). These are actionable and consistent with the image’s stylized, high-fantasy aesthetic.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt provides a highly detailed, temporally structured, and visually rich first-person cinematic sequence that closely follows the original prompt’s narrative and visual intent. It successfully translates the static image into a dynamic 5-second video plan with clear shot boundaries, camera movement, lighting, and sound design. The prompt is actionable for generation, with minimal omissions and no contradictions. Minor issues include slight over-elaboration in some descriptive elements and a lack of explicit transition cues between segments, but these do not materially affect the core directive. The prompt excels in framing, lighting, subject detail, and visual treatment, with strong integration of audio and visual progression.",
+  "usage": {
+    "completion_tokens": 2618,
+    "prompt_tokens": 3419,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 6037
+  }
+}

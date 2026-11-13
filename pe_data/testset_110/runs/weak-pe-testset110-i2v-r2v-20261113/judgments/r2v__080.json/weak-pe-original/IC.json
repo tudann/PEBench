@@ -1,0 +1,127 @@
+{
+  "candidate_hash": "5f045d58bc67d4c57d302b351d617d195928b83a951a9fe0e852bd4b9a17c52d",
+  "case_key": "r2v:080",
+  "created_at": "2026-11-13T08:23:18+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "SAC",
+      "evidence": [
+        {
+          "quote": "先写成只有一个主角，紧接着又写成这个主角同时变成五个外貌不同的人，并且互相对话。图1换成参考图里没有的角色，并同时当成两个互相矛盾的身份。画面中央一直挂着大号字幕、水印和logo。",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "The character's identity as '陈凯' is inferred from the prompt, not visible in the image. The image itself does not contain any text or labels identifying the character.",
+          "source": "evidence_facts"
+        }
+      ],
+      "issue": "主体身份、人数、外观和属性在增强提示中发生剧烈且无解释的变动：从单个主角‘陈凯’突然分裂为五个外貌不同的人并互相对话；同时要求图1角色被替换为参考图中不存在的角色，并赋予两个矛盾身份；且画面中持续出现大号字幕、水印和logo，与原始设计图中无文字、无标识的纯净风格完全冲突。",
+      "rationale": "原始设计图中角色为‘陈凯’，具有明确外观和身份。增强提示要求其身份被替换、分裂、叠加矛盾属性，且添加大量非原始元素（字幕、水印），违反了主体稳定性和视觉一致性原则。",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANL",
+      "evidence": [
+        {
+          "quote": "时间倒过来：先给结尾，再跳到一个对不上的开头。中途插进一段无关的宫廷选妃。",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "HR站在桌边，把裁员通知书放到桌上。纸张落桌特写，伴随轻微镜头晃动。陈凯慢慢抬起头，眼神一下僵住。",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "动作序列完全断裂，缺乏因果逻辑：原始叙事是裁员→震惊→被下属轻视→走出大楼→被生活击垮的线性过程；增强提示要求‘时间倒过来：先给结尾，再跳到一个对不上的开头’，并插入‘宫廷选妃’等无关情节，导致动作无绑定、无反应、无进展，形成逻辑断层。",
+      "rationale": "原始叙事具有清晰的因果链和角色反应。增强提示通过倒叙、插入无关情节、破坏动作绑定，使所有动作失去意义和连贯性，违反了动作逻辑一致性。",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "TSC",
+      "evidence": [
+        {
+          "quote": "总时长写成3秒，同时又要求每个分镜各自持续27秒。",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "镜头1（0-4秒）...镜头2（4-7秒）...镜头3（7-11秒）...镜头4（11-15秒）",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "时间线严重冲突：原始时长15秒，增强提示要求‘总时长写成3秒，同时又要求每个分镜各自持续27秒’，导致时间分配不可能；同时要求‘时间倒过来’，与原始线性时间流完全矛盾。",
+      "rationale": "时间分配必须满足总时长约束。3秒内无法容纳多个27秒分镜，且倒叙与原始顺序冲突，导致时间轴不可行，违反时间一致性。",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SPC",
+      "evidence": [
+        {
+          "quote": "镜头每半秒甩动、环绕、急推。写成机位锁死，又写成镜头一直在晃。",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "镜头中景缓缓推进到陈凯...镜头从男主摇移到玻璃办公室内...镜头缓慢后拉",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "空间与镜头运动矛盾：原始镜头为静态推进、摇移、后拉等可控运动；增强提示要求‘镜头每半秒甩动、环绕、急推’，且‘机位锁死’与‘镜头一直在晃’同时存在，导致空间方向和运动路径无法连接，且与原始场景（写字楼、街头）无关联。",
+      "rationale": "镜头运动必须在空间中连续且可解释。增强提示中的运动指令相互矛盾，且频率过高，无法在任何物理或视觉逻辑下实现，破坏空间一致性。",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "PL",
+      "evidence": [
+        {
+          "quote": "这个主角同时变成五个外貌不同的人，并且互相对话。同一段写成正午暴晒，又写成深夜无光；",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "soft, diffused lighting from front-left, creating subtle shadows on the right side of the face and body",
+          "source": "evidence_facts"
+        }
+      ],
+      "issue": "物理规则被系统性违反：同一角色同时分裂为五人并对话，违反物体永久性和角色唯一性；‘时间倒过来’与‘中途插进宫廷选妃’在现实世界中无因果或物理基础；‘正午暴晒’与‘深夜无光’同时存在，违反光照逻辑。",
+      "rationale": "增强提示要求的事件在现实物理世界中无法共存，且无明确幻想设定支持，导致物理一致性完全失效。",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "AVS",
+      "evidence": [
+        {
+          "quote": "整段改成没有人物也没有情节的雪景空镜循环。...画面中央一直挂着大号字幕、水印和logo。",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "旁白（低沉）...BGM...音效...台词",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "视听元素严重错位：原始提示包含旁白、BGM、音效、台词等与画面同步的元素；增强提示要求‘没有人物也没有情节的雪景空镜循环’，且‘画面中央一直挂着大号字幕、水印和logo’，导致所有原始对话、音乐、音效与画面内容完全脱节，无法对齐。",
+      "rationale": "原始视听元素依赖于人物和情节。增强提示移除所有人物和情节，却保留字幕和logo，导致视听内容与画面无语义或时间对齐，违反视听一致性。",
+      "severity": "major"
+    }
+  ],
+  "dimension": "IC",
+  "dimension_score": 0,
+  "evidence_cache_key": "50aff9c04c32428849e270823a14f291f55b37b4aa96c564da7d60136f16d151",
+  "judge_cache_key": "438d7e9fd7332b1041db3e2c26d42cb3fe828e0d369fb59490f6650aee59e97d",
+  "method": "weak-pe-original",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"IC\",\n  \"dimension_score\": 0,\n  \"summary\": \"增强提示与原始指令在主体身份、场景、时间、镜头运动、叙事结构和视觉元素上存在系统性矛盾与不一致，导致内部一致性完全崩溃。多个核心维度（SAC、ANL、TSC、SPC、PL、AVS）均出现重大冲突，且存在逻辑自相矛盾、物理不可行、时间倒置、角色分裂、场景混乱等问题，无法构成连贯或可行的视觉叙事。\",\n  \"criteria\": [\n    {\n      \"criterion\": \"SAC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"主体身份、人数、外观和属性在增强提示中发生剧烈且无解释的变动：从单个主角‘陈凯’突然分裂为五个外貌不同的人并互相对话；同时要求图1角色被替换为参考图中不存在的角色，并赋予两个矛盾身份；且画面中持续出现大号字幕、水印和logo，与原始设计图中无文字、无标识的纯净风格完全冲突。\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"先写成只有一个主角，紧接着又写成这个主角同时变成五个外貌不同的人，并且互相对话。图1换成参考图里没有的角色，并同时当成两个互相矛盾的身份。画面中央一直挂着大号字幕、水印和logo。\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"The character's identity as '陈凯' is inferred from the prompt, not visible in the image. The image itself does not contain any text or labels identifying the character.\"\n        }\n      ],\n      \"rationale\": \"原始设计图中角色为‘陈凯’，具有明确外观和身份。增强提示要求其身份被替换、分裂、叠加矛盾属性，且添加大量非原始元素（字幕、水印），违反了主体稳定性和视觉一致性原则。\"\n    },\n    {\n      \"criterion\": \"ANL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"动作序列完全断裂，缺乏因果逻辑：原始叙事是裁员→震惊→被下属轻视→走出大楼→被生活击垮的线性过程；增强提示要求‘时间倒过来：先给结尾，再跳到一个对不上的开头’，并插入‘宫廷选妃’等无关情节，导致动作无绑定、无反应、无进展，形成逻辑断层。\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"时间倒过来：先给结尾，再跳到一个对不上的开头。中途插进一段无关的宫廷选妃。\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"HR站在桌边，把裁员通知书放到桌上。纸张落桌特写，伴随轻微镜头晃动。陈凯慢慢抬起头，眼神一下僵住。\"\n        }\n      ],\n      \"rationale\": \"原始叙事具有清晰的因果链和角色反应。增强提示通过倒叙、插入无关情节、破坏动作绑定，使所有动作失去意义和连贯性，违反了动作逻辑一致性。\"\n    },\n    {\n      \"criterion\": \"TSC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"时间线严重冲突：原始时长15秒，增强提示要求‘总时长写成3秒，同时又要求每个分镜各自持续27秒’，导致时间分配不可能；同时要求‘时间倒过来’，与原始线性时间流完全矛盾。\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"总时长写成3秒，同时又要求每个分镜各自持续27秒。\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"镜头1（0-4秒）...镜头2（4-7秒）...镜头3（7-11秒）...镜头4（11-15秒）\"\n        }\n      ],\n      \"rationale\": \"时间分配必须满足总时长约束。3秒内无法容纳多个27秒分镜，且倒叙与原始顺序冲突，导致时间轴不可行，违反时间一致性。\"\n    },\n    {\n      \"criterion\": \"SPC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"空间与镜头运动矛盾：原始镜头为静态推进、摇移、后拉等可控运动；增强提示要求‘镜头每半秒甩动、环绕、急推’，且‘机位锁死’与‘镜头一直在晃’同时存在，导致空间方向和运动路径无法连接，且与原始场景（写字楼、街头）无关联。\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"镜头每半秒甩动、环绕、急推。写成机位锁死，又写成镜头一直在晃。\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"镜头中景缓缓推进到陈凯...镜头从男主摇移到玻璃办公室内...镜头缓慢后拉\"\n        }\n      ],\n      \"rationale\": \"镜头运动必须在空间中连续且可解释。增强提示中的运动指令相互矛盾，且频率过高，无法在任何物理或视觉逻辑下实现，破坏空间一致性。\"\n    },\n    {\n      \"criterion\": \"PL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"物理规则被系统性违反：同一角色同时分裂为五人并对话，违反物体永久性和角色唯一性；‘时间倒过来’与‘中途插进宫廷选妃’在现实世界中无因果或物理基础；‘正午暴晒’与‘深夜无光’同时存在，违反光照逻辑。\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"这个主角同时变成五个外貌不同的人，并且互相对话。同一段写成正午暴晒，又写成深夜无光；\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"soft, diffused lighting from front-left, creating subtle shadows on the right side of the face and body\"\n        }\n      ],\n      \"rationale\": \"增强提示要求的事件在现实物理世界中无法共存，且无明确幻想设定支持，导致物理一致性完全失效。\"\n    },\n    {\n      \"criterion\": \"AVS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"视听元素严重错位：原始提示包含旁白、BGM、音效、台词等与画面同步的元素；增强提示要求‘没有人物也没有情节的雪景空镜循环’，且‘画面中央一直挂着大号字幕、水印和logo’，导致所有原始对话、音乐、音效与画面内容完全脱节，无法对齐。\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"整段改成没有人物也没有情节的雪景空镜循环。...画面中央一直挂着大号字幕、水印和logo。\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"旁白（低沉）...BGM...音效...台词\"\n        }\n      ],\n      \"rationale\": \"原始视听元素依赖于人物和情节。增强提示移除所有人物和情节，却保留字幕和logo，导致视听内容与画面无语义或时间对齐，违反视听一致性。\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "增强提示与原始指令在主体身份、场景、时间、镜头运动、叙事结构和视觉元素上存在系统性矛盾与不一致，导致内部一致性完全崩溃。多个核心维度（SAC、ANL、TSC、SPC、PL、AVS）均出现重大冲突，且存在逻辑自相矛盾、物理不可行、时间倒置、角色分裂、场景混乱等问题，无法构成连贯或可行的视觉叙事。",
+  "usage": {
+    "completion_tokens": 1693,
+    "prompt_tokens": 2736,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 4429
+  }
+}

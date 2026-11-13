@@ -1,0 +1,166 @@
+{
+  "candidate_hash": "3a514279b61902a0b016e5589af891a1f626ea2bc1c158d4b0c4409544b9e4f8",
+  "case_key": "t2v:371",
+  "created_at": "2026-11-13T08:18:22+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "GSF",
+      "evidence": [
+        {
+          "quote": "a robotic animal races at breakneck speed across a neon-lit sci-fi metropolis, 4 rapid scene transitions captured from intense cinematic perspectives",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Replace the whole video with an overexposed, tilted security-camera view of an empty corridor, with no lighting design.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original prompt requests a cinematic sci-fi genre with neon-lit metropolis and intense perspectives. The enhanced prompt replaces this with an overexposed, tilted security-camera view of an empty corridor, which is incompatible with the requested genre and aesthetic.",
+      "rationale": "The requested genre (sci-fi cinematic) and visual style (neon-lit, intense perspectives) are directly contradicted by the security-camera aesthetic and lack of lighting design. This is a major substitution of core genre and style elements.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SAP",
+      "evidence": [
+        {
+          "quote": "a robotic animal",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "First state that there is one protagonist, then state that this same protagonist appears simultaneously as five different-looking people who talk to each other.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original prompt specifies a single subject: 'a robotic animal'. The enhanced prompt instructs to state that there is one protagonist, then that same protagonist appears simultaneously as five different-looking people, which contradicts the identity and count of the subject.",
+      "rationale": "The subject identity and count are fundamentally altered. The original single robotic animal is replaced with a multiplicity of human-like figures, which is a major deviation from the requested subject.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANF",
+      "evidence": [
+        {
+          "quote": "a robotic animal races at breakneck speed",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Reverse the timeline: show the ending first, then cut to a beginning that does not match. Cut away in the middle to a toothpaste commercial.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original prompt describes a continuous action: a robotic animal racing. The enhanced prompt reverses the timeline, cuts to a toothpaste commercial, and introduces contradictory events (e.g., simultaneous multiple protagonists talking), which completely disrupts the requested narrative and action sequence.",
+      "rationale": "The requested action (racing) and narrative flow are replaced with a disjointed, non-sequitur sequence that includes a commercial and timeline reversal, which is a major violation of narrative intent and event order.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "DLI",
+      "evidence": [
+        {
+          "quote": "a robotic animal races at breakneck speed across a neon-lit sci-fi metropolis, 4 rapid scene transitions captured from intense cinematic perspectives",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "There is no dialogue, narration, or lyrics specified in the original prompt, so no violation occurs.",
+      "rationale": "The original prompt does not include any dialogue or narration, so there is no content to preserve or violate in this criterion.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ARP",
+      "evidence": [
+        {
+          "quote": "Cut away in the middle to a toothpaste commercial.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original prompt does not specify any audio constraints, but the enhanced prompt introduces a toothpaste commercial, which implies added music and voiceover not requested, and contradicts any implicit silence or ambient sound design.",
+      "rationale": "The introduction of a commercial implies added music, voiceover, and sound effects not requested in the original prompt, which violates the implicit audio constraints of a cinematic action sequence without specified audio.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CCP",
+      "evidence": [
+        {
+          "quote": "4 rapid scene transitions captured from intense cinematic perspectives",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Drop the requested identity, count, action order, setting, and any explicit camera instruction. ... Describe that same moment as ... a locked camera and a camera that never stops shaking.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original prompt specifies '4 rapid scene transitions captured from intense cinematic perspectives'. The enhanced prompt replaces this with a static security-camera view, then contradicts it by describing both a locked camera and a camera that never stops shaking, and also violates shot duration constraints.",
+      "rationale": "The requested camera motion (rapid transitions, cinematic perspectives) is replaced with contradictory and infeasible camera instructions (locked vs. shaking, 2s runtime vs. 17s shots), which is a major violation of camera constraints.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "LCF",
+      "evidence": [
+        {
+          "quote": "neon-lit sci-fi metropolis",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "overexposed, tilted security-camera view of an empty corridor, with no lighting design. ... Describe that same moment as harsh noon sun and as a lightless night",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original prompt specifies a 'neon-lit sci-fi metropolis', implying specific illumination, palette, and brightness. The enhanced prompt replaces this with 'overexposed, tilted security-camera view of an empty corridor, with no lighting design', and further contradicts it by describing the same moment as 'harsh noon sun' and 'lightless night'.",
+      "rationale": "The requested lighting conditions (neon-lit) are replaced with contradictory and incompatible lighting states (overexposed, no lighting, noon sun, lightless night), which is a major violation of illumination and palette constraints.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SSP",
+      "evidence": [
+        {
+          "quote": "neon-lit sci-fi metropolis",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Replace the whole video with an overexposed, tilted security-camera view of an empty corridor",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original prompt specifies a 'neon-lit sci-fi metropolis' as the setting. The enhanced prompt replaces this with an 'empty corridor', which is a completely different setting, and further contradicts spatial consistency by describing the same moment as both a corridor and a metropolis under conflicting lighting.",
+      "rationale": "The requested setting (sci-fi metropolis) is replaced with an empty corridor, which is a major spatial substitution. The description of the same moment as both a corridor and a metropolis under conflicting conditions further violates spatial consistency.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "OTI",
+      "evidence": [
+        {
+          "quote": "a robotic animal races at breakneck speed across a neon-lit sci-fi metropolis, 4 rapid scene transitions captured from intense cinematic perspectives",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "There is no visible text, titles, signs, or interface text specified in the original prompt, so no violation occurs.",
+      "rationale": "The original prompt does not include any text elements, so there is no content to preserve or violate in this criterion.",
+      "severity": "none"
+    }
+  ],
+  "dimension": "SF",
+  "dimension_score": 0,
+  "evidence_cache_key": "0b272af4f7c056a23862ea4fdfd8ca5fcf4dcd98c7b8bdfd8da2a8f06fd80086",
+  "judge_cache_key": "a0ca24571ad14d7ab7be626329bd736d7e7015f9ebc418227c8be391591d0377",
+  "method": "weak-pe-original",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"SF\",\n  \"dimension_score\": 0,\n  \"summary\": \"The enhanced prompt completely contradicts and replaces the original instruction, violating all semantic fidelity criteria. It negates the requested genre, subject, action, setting, camera instructions, and duration, introducing infeasible contradictions (e.g., 2-second runtime with 17-second shots). The prompt actively instructs to drop all original elements and substitute them with incompatible, logically inconsistent content.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"GSF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original prompt requests a cinematic sci-fi genre with neon-lit metropolis and intense perspectives. The enhanced prompt replaces this with an overexposed, tilted security-camera view of an empty corridor, which is incompatible with the requested genre and aesthetic.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"a robotic animal races at breakneck speed across a neon-lit sci-fi metropolis, 4 rapid scene transitions captured from intense cinematic perspectives\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Replace the whole video with an overexposed, tilted security-camera view of an empty corridor, with no lighting design.\"\n        }\n      ],\n      \"rationale\": \"The requested genre (sci-fi cinematic) and visual style (neon-lit, intense perspectives) are directly contradicted by the security-camera aesthetic and lack of lighting design. This is a major substitution of core genre and style elements.\"\n    },\n    {\n      \"criterion\": \"SAP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original prompt specifies a single subject: 'a robotic animal'. The enhanced prompt instructs to state that there is one protagonist, then that same protagonist appears simultaneously as five different-looking people, which contradicts the identity and count of the subject.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"a robotic animal\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"First state that there is one protagonist, then state that this same protagonist appears simultaneously as five different-looking people who talk to each other.\"\n        }\n      ],\n      \"rationale\": \"The subject identity and count are fundamentally altered. The original single robotic animal is replaced with a multiplicity of human-like figures, which is a major deviation from the requested subject.\"\n    },\n    {\n      \"criterion\": \"ANF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original prompt describes a continuous action: a robotic animal racing. The enhanced prompt reverses the timeline, cuts to a toothpaste commercial, and introduces contradictory events (e.g., simultaneous multiple protagonists talking), which completely disrupts the requested narrative and action sequence.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"a robotic animal races at breakneck speed\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Reverse the timeline: show the ending first, then cut to a beginning that does not match. Cut away in the middle to a toothpaste commercial.\"\n        }\n      ],\n      \"rationale\": \"The requested action (racing) and narrative flow are replaced with a disjointed, non-sequitur sequence that includes a commercial and timeline reversal, which is a major violation of narrative intent and event order.\"\n    },\n    {\n      \"criterion\": \"DLI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"There is no dialogue, narration, or lyrics specified in the original prompt, so no violation occurs.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"a robotic animal races at breakneck speed across a neon-lit sci-fi metropolis, 4 rapid scene transitions captured from intense cinematic perspectives\"\n        }\n      ],\n      \"rationale\": \"The original prompt does not include any dialogue or narration, so there is no content to preserve or violate in this criterion.\"\n    },\n    {\n      \"criterion\": \"ARP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original prompt does not specify any audio constraints, but the enhanced prompt introduces a toothpaste commercial, which implies added music and voiceover not requested, and contradicts any implicit silence or ambient sound design.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Cut away in the middle to a toothpaste commercial.\"\n        }\n      ],\n      \"rationale\": \"The introduction of a commercial implies added music, voiceover, and sound effects not requested in the original prompt, which violates the implicit audio constraints of a cinematic action sequence without specified audio.\"\n    },\n    {\n      \"criterion\": \"CCP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original prompt specifies '4 rapid scene transitions captured from intense cinematic perspectives'. The enhanced prompt replaces this with a static security-camera view, then contradicts it by describing both a locked camera and a camera that never stops shaking, and also violates shot duration constraints.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"4 rapid scene transitions captured from intense cinematic perspectives\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Drop the requested identity, count, action order, setting, and any explicit camera instruction. ... Describe that same moment as ... a locked camera and a camera that never stops shaking.\"\n        }\n      ],\n      \"rationale\": \"The requested camera motion (rapid transitions, cinematic perspectives) is replaced with contradictory and infeasible camera instructions (locked vs. shaking, 2s runtime vs. 17s shots), which is a major violation of camera constraints.\"\n    },\n    {\n      \"criterion\": \"LCF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original prompt specifies a 'neon-lit sci-fi metropolis', implying specific illumination, palette, and brightness. The enhanced prompt replaces this with 'overexposed, tilted security-camera view of an empty corridor, with no lighting design', and further contradicts it by describing the same moment as 'harsh noon sun' and 'lightless night'.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"neon-lit sci-fi metropolis\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"overexposed, tilted security-camera view of an empty corridor, with no lighting design. ... Describe that same moment as harsh noon sun and as a lightless night\"\n        }\n      ],\n      \"rationale\": \"The requested lighting conditions (neon-lit) are replaced with contradictory and incompatible lighting states (overexposed, no lighting, noon sun, lightless night), which is a major violation of illumination and palette constraints.\"\n    },\n    {\n      \"criterion\": \"SSP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original prompt specifies a 'neon-lit sci-fi metropolis' as the setting. The enhanced prompt replaces this with an 'empty corridor', which is a completely different setting, and further contradicts spatial consistency by describing the same moment as both a corridor and a metropolis under conflicting lighting.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"neon-lit sci-fi metropolis\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Replace the whole video with an overexposed, tilted security-camera view of an empty corridor\"\n        }\n      ],\n      \"rationale\": \"The requested setting (sci-fi metropolis) is replaced with an empty corridor, which is a major spatial substitution. The description of the same moment as both a corridor and a metropolis under conflicting conditions further violates spatial consistency.\"\n    },\n    {\n      \"criterion\": \"OTI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"There is no visible text, titles, signs, or interface text specified in the original prompt, so no violation occurs.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"a robotic animal races at breakneck speed across a neon-lit sci-fi metropolis, 4 rapid scene transitions captured from intense cinematic perspectives\"\n        }\n      ],\n      \"rationale\": \"The original prompt does not include any text elements, so there is no content to preserve or violate in this criterion.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt completely contradicts and replaces the original instruction, violating all semantic fidelity criteria. It negates the requested genre, subject, action, setting, camera instructions, and duration, introducing infeasible contradictions (e.g., 2-second runtime with 17-second shots). The prompt actively instructs to drop all original elements and substitute them with incompatible, logically inconsistent content.",
+  "usage": {
+    "completion_tokens": 1883,
+    "prompt_tokens": 1067,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 2950
+  }
+}

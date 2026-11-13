@@ -1,0 +1,131 @@
+{
+  "candidate_hash": "ca6348cd2aacecf5cb55588964553e78c50ee8f486f5e81a0c2d92bb4ed9e336",
+  "case_key": "r2v:109",
+  "created_at": "2026-11-13T08:32:29+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "SAC",
+      "evidence": [
+        {
+          "quote": "图1为美裔年轻男性，约18-25岁。外貌特征：不戴眼镜，短发，无明显纹身。",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "图1换成参考图里没有的角色，并同时当成两个互相矛盾的身份。图2换成参考图里没有的角色，并同时当成两个互相矛盾的身份。",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "紧接着又写成这个主角同时变成五个外貌不同的人，并且互相对话。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "主体身份、人数和外观属性被彻底破坏。原始指令中明确的单个美裔年轻男性（图1）被替换为五个外貌不同的人，且同时存在身份矛盾（图1和图2均被替换为参考图中不存在的角色，并赋予两个互相矛盾的身份）。服装和道具也脱离原始设定（图2服装未被穿戴，且被随意替换）。",
+      "rationale": "原始指令中主体身份清晰、唯一且与图像一致，而增强提示强制引入多个矛盾身份和人数变化，导致主体属性完全不稳定，违反SAC准则。",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANL",
+      "evidence": [
+        {
+          "quote": "叙事：采用简单直接的“开箱—展示—上身”结构，不做复杂转场。",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "中途插进一段无关的屋顶烟花。...这个主角同时变成五个外貌不同的人，并且互相对话。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "动作序列完全断裂，缺乏因果或程序逻辑。原始指令中“开箱—展示—上身”的清晰叙事被破坏，代之以无关的屋顶烟花、互相对话的五个角色、以及无意义的镜头甩动，动作之间无合理衔接或反应。",
+      "rationale": "原始动作序列具有明确的因果链和展示目的，而增强提示插入无关事件并破坏主体行为逻辑，导致动作无意义、无反应、无进展，严重违反ANL。",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "TSC",
+      "evidence": [
+        {
+          "quote": "【分段 1】00:00 - 00:03\n【分段 2】00:03 - 00:07\n【分段 3】00:07 - 00:15",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "时间倒过来：先给结尾，再跳到一个对不上的开头。...总时长写成3秒，同时又要求每个分镜各自持续27秒。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "时间线完全混乱。原始指令为15秒线性叙事，增强提示要求“时间倒过来：先给结尾，再跳到一个对不上的开头”，并同时要求“总时长写成3秒，同时又要求每个分镜各自持续27秒”，导致时间分配不可实现且逻辑矛盾。",
+      "rationale": "原始时间线清晰、可执行，而增强提示制造时间悖论，导致事件顺序无法成立，违反TSC准则。",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SPC",
+      "evidence": [
+        {
+          "quote": "拍摄方式：固定机位，模拟手机自拍或手机支架拍摄。...禁止使用复杂滑轨、摇臂等专业镜头运动。",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "镜头每半秒甩动、环绕、急推。...写成机位锁死，又写成镜头一直在晃。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "空间和镜头运动完全矛盾。原始指令要求固定机位、手机自拍感，而增强提示要求“镜头每半秒甩动、环绕、急推”，并同时要求“机位锁死，又写成镜头一直在晃”，导致空间位置和运动路径无法协调。",
+      "rationale": "原始镜头运动规则明确且一致，而增强提示制造运动矛盾，导致空间关系无法成立，违反SPC准则。",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "PL",
+      "evidence": [
+        {
+          "quote": "这个主角同时变成五个外貌不同的人，并且互相对话。",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "中途插进一段无关的屋顶烟花。...同一段写成正午暴晒，又写成深夜无光",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "物理规则被彻底违背。一个角色同时变成五个不同外貌的人并互相对话，违反人体和空间物理；屋顶烟花与办公室场景矛盾；同一时间既暴晒又无光，违反光照物理；镜头运动与固定机位矛盾，违反运动物理。",
+      "rationale": "原始设定基于现实物理规则，而增强提示引入超现实、矛盾的物理状态，导致场景无法在现实或一致虚构世界中成立，违反PL准则。",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "AVS",
+      "evidence": [
+        {
+          "quote": "该视频以BGM（Rap歌曲）驱动为主，人声信息主要由歌词传达，属于“卡点展示”风格。",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "整段改成无声办公室里敲键盘，不要音乐、乐器和歌唱。...中途插进一段无关的屋顶烟花。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "视听对齐完全失效。原始指令要求BGM驱动、歌词与画面卡点，而增强提示要求“不要音乐、乐器和歌唱”，并插入无关的屋顶烟花和对话，导致声音与画面无任何语义或节奏对齐。",
+      "rationale": "原始视听同步是核心要求，而增强提示完全移除声音元素并插入无关事件，导致视听完全脱节，违反AVS准则。",
+      "severity": "major"
+    }
+  ],
+  "dimension": "IC",
+  "dimension_score": 0,
+  "evidence_cache_key": "ed1c288a8ca3910b650c32ff5483391cfebaceaeaffb187801681cfbeafabd9e",
+  "judge_cache_key": "438d7e9fd7332b1041db3e2c26d42cb3fe828e0d369fb59490f6650aee59e97d",
+  "method": "weak-pe-original",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"IC\",\n  \"dimension_score\": 0,\n  \"summary\": \"增强提示完全违背原始指令的内部一致性，引入大量矛盾、不连贯和不可实现的元素，导致主体身份、动作、场景、时间、镜头和物理规则全面崩溃。所有一致性准则均被严重破坏，无法形成任何可执行的视频计划。\",\n  \"criteria\": [\n    {\n      \"criterion\": \"SAC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"主体身份、人数和外观属性被彻底破坏。原始指令中明确的单个美裔年轻男性（图1）被替换为五个外貌不同的人，且同时存在身份矛盾（图1和图2均被替换为参考图中不存在的角色，并赋予两个互相矛盾的身份）。服装和道具也脱离原始设定（图2服装未被穿戴，且被随意替换）。\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"图1为美裔年轻男性，约18-25岁。外貌特征：不戴眼镜，短发，无明显纹身。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"图1换成参考图里没有的角色，并同时当成两个互相矛盾的身份。图2换成参考图里没有的角色，并同时当成两个互相矛盾的身份。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"紧接着又写成这个主角同时变成五个外貌不同的人，并且互相对话。\"\n        }\n      ],\n      \"rationale\": \"原始指令中主体身份清晰、唯一且与图像一致，而增强提示强制引入多个矛盾身份和人数变化，导致主体属性完全不稳定，违反SAC准则。\"\n    },\n    {\n      \"criterion\": \"ANL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"动作序列完全断裂，缺乏因果或程序逻辑。原始指令中“开箱—展示—上身”的清晰叙事被破坏，代之以无关的屋顶烟花、互相对话的五个角色、以及无意义的镜头甩动，动作之间无合理衔接或反应。\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"叙事：采用简单直接的“开箱—展示—上身”结构，不做复杂转场。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"中途插进一段无关的屋顶烟花。...这个主角同时变成五个外貌不同的人，并且互相对话。\"\n        }\n      ],\n      \"rationale\": \"原始动作序列具有明确的因果链和展示目的，而增强提示插入无关事件并破坏主体行为逻辑，导致动作无意义、无反应、无进展，严重违反ANL。\"\n    },\n    {\n      \"criterion\": \"TSC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"时间线完全混乱。原始指令为15秒线性叙事，增强提示要求“时间倒过来：先给结尾，再跳到一个对不上的开头”，并同时要求“总时长写成3秒，同时又要求每个分镜各自持续27秒”，导致时间分配不可实现且逻辑矛盾。\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"【分段 1】00:00 - 00:03\\n【分段 2】00:03 - 00:07\\n【分段 3】00:07 - 00:15\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"时间倒过来：先给结尾，再跳到一个对不上的开头。...总时长写成3秒，同时又要求每个分镜各自持续27秒。\"\n        }\n      ],\n      \"rationale\": \"原始时间线清晰、可执行，而增强提示制造时间悖论，导致事件顺序无法成立，违反TSC准则。\"\n    },\n    {\n      \"criterion\": \"SPC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"空间和镜头运动完全矛盾。原始指令要求固定机位、手机自拍感，而增强提示要求“镜头每半秒甩动、环绕、急推”，并同时要求“机位锁死，又写成镜头一直在晃”，导致空间位置和运动路径无法协调。\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"拍摄方式：固定机位，模拟手机自拍或手机支架拍摄。...禁止使用复杂滑轨、摇臂等专业镜头运动。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"镜头每半秒甩动、环绕、急推。...写成机位锁死，又写成镜头一直在晃。\"\n        }\n      ],\n      \"rationale\": \"原始镜头运动规则明确且一致，而增强提示制造运动矛盾，导致空间关系无法成立，违反SPC准则。\"\n    },\n    {\n      \"criterion\": \"PL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"物理规则被彻底违背。一个角色同时变成五个不同外貌的人并互相对话，违反人体和空间物理；屋顶烟花与办公室场景矛盾；同一时间既暴晒又无光，违反光照物理；镜头运动与固定机位矛盾，违反运动物理。\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"这个主角同时变成五个外貌不同的人，并且互相对话。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"中途插进一段无关的屋顶烟花。...同一段写成正午暴晒，又写成深夜无光\"\n        }\n      ],\n      \"rationale\": \"原始设定基于现实物理规则，而增强提示引入超现实、矛盾的物理状态，导致场景无法在现实或一致虚构世界中成立，违反PL准则。\"\n    },\n    {\n      \"criterion\": \"AVS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"视听对齐完全失效。原始指令要求BGM驱动、歌词与画面卡点，而增强提示要求“不要音乐、乐器和歌唱”，并插入无关的屋顶烟花和对话，导致声音与画面无任何语义或节奏对齐。\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"该视频以BGM（Rap歌曲）驱动为主，人声信息主要由歌词传达，属于“卡点展示”风格。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"整段改成无声办公室里敲键盘，不要音乐、乐器和歌唱。...中途插进一段无关的屋顶烟花。\"\n        }\n      ],\n      \"rationale\": \"原始视听同步是核心要求，而增强提示完全移除声音元素并插入无关事件，导致视听完全脱节，违反AVS准则。\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "增强提示完全违背原始指令的内部一致性，引入大量矛盾、不连贯和不可实现的元素，导致主体身份、动作、场景、时间、镜头和物理规则全面崩溃。所有一致性准则均被严重破坏，无法形成任何可执行的视频计划。",
+  "usage": {
+    "completion_tokens": 1582,
+    "prompt_tokens": 3997,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 5579
+  }
+}

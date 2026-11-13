@@ -1,0 +1,127 @@
+{
+  "candidate_hash": "e88152dfd5a6f38bf08c8815a84cd642c35efba121b80def2cca0d7ad74c5e5b",
+  "case_key": "t2v:417",
+  "created_at": "2026-11-13T08:38:16+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "SAC",
+      "evidence": [
+        {
+          "quote": "a lifelike raccoon dressed in a traditional white martial arts gi with a red belt",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "a lifelike raccoon dressed in a traditional white martial arts gi with a red belt",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "Subject identity, count, appearance, clothing, and props are preserved exactly. The raccoon remains a single subject with consistent attributes (white gi, red belt) throughout. The stone '6' and revealed '3 × 2' are described with identical material and visual properties. No unexplained renaming, duplication, or attribute drift occurs.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANL",
+      "evidence": [
+        {
+          "quote": "The raccoon delivers one precise side kick... Upon contact, the stone \"6\" fractures... As the broken pieces fall away, they uncover the expression \"3 × 2\"",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "The raccoon shifts its weight and delivers one precise side kick... Upon contact, the stone \"6\" fractures... As the broken pieces fall away, they uncover the expression \"3 × 2\"",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "Actions form a coherent causal progression: kick → fracture → reveal. Prerequisites (raccoon oriented toward number) are met. Binding between subject (raccoon) and action (kick) is plausible. Reaction (fracture) and resolution (reveal of '3 × 2') are logically connected. No dangling or incompatible events.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "TSC",
+      "evidence": [
+        {
+          "quote": "Centered in the shot, place a prominent stone-carved number \"6\"... The raccoon delivers one precise side kick...",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "The camera pushes in with small amplitude at slow speed throughout, staying restrained.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The enhanced prompt adds a slow push-in camera movement throughout the shot, which is not specified in the original prompt. While this does not contradict the original, it introduces a new temporal element not requested, potentially altering the pacing or focus.",
+      "rationale": "The original prompt does not specify camera movement, so the addition of a push-in is an elaboration. It does not conflict with the sequence or duration (15s) and does not cause state inconsistencies. However, it is a minor deviation from the original’s static framing, which may affect the intended visual focus. Not a major issue, but a minor addition.",
+      "severity": "minor"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SPC",
+      "evidence": [
+        {
+          "quote": "On the right side of the frame, a lifelike raccoon... stands oriented toward the number.",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "On the right side of the frame, a lifelike raccoon... stands oriented toward the number.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "Location (right side of frame), orientation (toward the number), and relative position are consistent. The raccoon’s kick from right to left is physically plausible given its orientation. No unexplained position swaps or infeasible trajectories are introduced. The reveal of '3 × 2' occurs in the same spatial location as the stone '6', preserving continuity.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "PL",
+      "evidence": [
+        {
+          "quote": "the stone \"6\" fractures and separates into small debris in a restrained, non-violent manner",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "the stone \"6\" fractures and separates into small debris in a restrained, non-violent manner, the pieces crumbling and drifting downward rather than exploding",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "Physics are consistent: stone fractures plausibly, debris falls under gravity, no explosion. The raccoon’s kick is described as precise and controlled, consistent with martial arts. The reveal of '3 × 2' is instantaneous upon debris clearing, which is acceptable as a visual metaphor. No violations of object permanence or bodily feasibility.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "AVS",
+      "evidence": [
+        {
+          "quote": "overall_soundscape: A quiet room tone with a faint low hum. A crisp fabric snap as the gi moves, a solid dull impact as the foot strikes stone, then the soft patter of small stone fragments falling and settling on the floor.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "The raccoon delivers one precise side kick... Upon contact, the stone \"6\" fractures...",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "The soundscape aligns temporally and semantically with the visual events: fabric snap (gi movement), impact (kick), and falling debris. No misaligned lip-sync or beat-sync issues since there is no dialogue or music. The non-diegetic music is marked N/A, consistent with the quiet, focused scene.",
+      "severity": "none"
+    }
+  ],
+  "dimension": "IC",
+  "dimension_score": 95,
+  "evidence_cache_key": "4ef0fb4fa8cb08f0c0b449d288f9964d22a6abb2c513c55ae1d0b4e0ecf9bfec",
+  "judge_cache_key": "438d7e9fd7332b1041db3e2c26d42cb3fe828e0d369fb59490f6650aee59e97d",
+  "method": "glm53_20261112_120702",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"IC\",\n  \"dimension_score\": 95,\n  \"summary\": \"The enhanced prompt maintains strong internal consistency with the original instruction, preserving subject identity, action sequence, and visual details. Minor elaborations (e.g., camera movement, sound design) are compatible and do not contradict the original. The only notable issue is a slight over-specification of the camera movement (push-in) not mentioned in the original, which is a minor addition rather than a contradiction. All core elements—raccoon, gi, red belt, stone '6', kick, fracture, reveal of '3 × 2'—are preserved with correct attributes and sequence. No contradictions, attribute drift, or infeasible transitions are present.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"SAC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"a lifelike raccoon dressed in a traditional white martial arts gi with a red belt\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"a lifelike raccoon dressed in a traditional white martial arts gi with a red belt\"\n        }\n      ],\n      \"rationale\": \"Subject identity, count, appearance, clothing, and props are preserved exactly. The raccoon remains a single subject with consistent attributes (white gi, red belt) throughout. The stone '6' and revealed '3 × 2' are described with identical material and visual properties. No unexplained renaming, duplication, or attribute drift occurs.\"\n    },\n    {\n      \"criterion\": \"ANL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"The raccoon delivers one precise side kick... Upon contact, the stone \\\"6\\\" fractures... As the broken pieces fall away, they uncover the expression \\\"3 × 2\\\"\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"The raccoon shifts its weight and delivers one precise side kick... Upon contact, the stone \\\"6\\\" fractures... As the broken pieces fall away, they uncover the expression \\\"3 × 2\\\"\"\n        }\n      ],\n      \"rationale\": \"Actions form a coherent causal progression: kick → fracture → reveal. Prerequisites (raccoon oriented toward number) are met. Binding between subject (raccoon) and action (kick) is plausible. Reaction (fracture) and resolution (reveal of '3 × 2') are logically connected. No dangling or incompatible events.\"\n    },\n    {\n      \"criterion\": \"TSC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"minor\",\n      \"issue\": \"The enhanced prompt adds a slow push-in camera movement throughout the shot, which is not specified in the original prompt. While this does not contradict the original, it introduces a new temporal element not requested, potentially altering the pacing or focus.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"Centered in the shot, place a prominent stone-carved number \\\"6\\\"... The raccoon delivers one precise side kick...\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"The camera pushes in with small amplitude at slow speed throughout, staying restrained.\"\n        }\n      ],\n      \"rationale\": \"The original prompt does not specify camera movement, so the addition of a push-in is an elaboration. It does not conflict with the sequence or duration (15s) and does not cause state inconsistencies. However, it is a minor deviation from the original’s static framing, which may affect the intended visual focus. Not a major issue, but a minor addition.\"\n    },\n    {\n      \"criterion\": \"SPC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"On the right side of the frame, a lifelike raccoon... stands oriented toward the number.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"On the right side of the frame, a lifelike raccoon... stands oriented toward the number.\"\n        }\n      ],\n      \"rationale\": \"Location (right side of frame), orientation (toward the number), and relative position are consistent. The raccoon’s kick from right to left is physically plausible given its orientation. No unexplained position swaps or infeasible trajectories are introduced. The reveal of '3 × 2' occurs in the same spatial location as the stone '6', preserving continuity.\"\n    },\n    {\n      \"criterion\": \"PL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"the stone \\\"6\\\" fractures and separates into small debris in a restrained, non-violent manner\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"the stone \\\"6\\\" fractures and separates into small debris in a restrained, non-violent manner, the pieces crumbling and drifting downward rather than exploding\"\n        }\n      ],\n      \"rationale\": \"Physics are consistent: stone fractures plausibly, debris falls under gravity, no explosion. The raccoon’s kick is described as precise and controlled, consistent with martial arts. The reveal of '3 × 2' is instantaneous upon debris clearing, which is acceptable as a visual metaphor. No violations of object permanence or bodily feasibility.\"\n    },\n    {\n      \"criterion\": \"AVS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"overall_soundscape: A quiet room tone with a faint low hum. A crisp fabric snap as the gi moves, a solid dull impact as the foot strikes stone, then the soft patter of small stone fragments falling and settling on the floor.\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"The raccoon delivers one precise side kick... Upon contact, the stone \\\"6\\\" fractures...\"\n        }\n      ],\n      \"rationale\": \"The soundscape aligns temporally and semantically with the visual events: fabric snap (gi movement), impact (kick), and falling debris. No misaligned lip-sync or beat-sync issues since there is no dialogue or music. The non-diegetic music is marked N/A, consistent with the quiet, focused scene.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt maintains strong internal consistency with the original instruction, preserving subject identity, action sequence, and visual details. Minor elaborations (e.g., camera movement, sound design) are compatible and do not contradict the original. The only notable issue is a slight over-specification of the camera movement (push-in) not mentioned in the original, which is a minor addition rather than a contradiction. All core elements—raccoon, gi, red belt, stone '6', kick, fracture, reveal of '3 × 2'—are preserved with correct attributes and sequence. No contradictions, attribute drift, or infeasible transitions are present.",
+  "usage": {
+    "completion_tokens": 1446,
+    "prompt_tokens": 1339,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 2785
+  }
+}

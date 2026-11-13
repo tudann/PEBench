@@ -1,0 +1,107 @@
+{
+  "candidate_hash": "99332d45c944a6bfc4f813bb9ef4a87d0dde4de5ef425c86c2ec1ab1efa21aa0",
+  "case_key": "t2v:394",
+  "created_at": "2026-11-13T08:22:15+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "SAC",
+      "evidence": [
+        {
+          "quote": "First state that there is one protagonist, then state that this same protagonist appears simultaneously as five different-looking people who talk to each other.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Subject identity is contradicted: the prompt states there is one protagonist, then immediately claims this same protagonist appears simultaneously as five different-looking people. This violates identity stability and introduces unexplained duplication.",
+      "rationale": "The prompt explicitly contradicts subject identity by asserting a single protagonist while simultaneously requiring five distinct identities. This is a fundamental identity drift and duplication error, making SAC impossible to satisfy.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANL",
+      "evidence": [
+        {
+          "quote": "Reverse the timeline: show the ending first, then cut to a beginning that does not match. Cut away in the middle to a soccer celebration.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Actions are incoherent and causally impossible: the timeline is reversed (ending first, then beginning), and a soccer celebration is inserted mid-sequence without causal connection. The protagonist’s actions (talking, appearing as five people) are incompatible with the live-action news anchor setup.",
+      "rationale": "The sequence of events is logically broken. Reversing the timeline and inserting an unrelated soccer celebration creates dangling events with no causal binding. The protagonist’s actions (talking as five people) are incompatible with the news anchor role, creating a procedural contradiction.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "TSC",
+      "evidence": [
+        {
+          "quote": "Set the total runtime to 3 seconds, while also making every shot last 27 seconds.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Chronology is infeasible: the total runtime is set to 3 seconds, but every shot is required to last 27 seconds. This creates an impossible temporal constraint.",
+      "rationale": "The requirement for 27-second shots within a 3-second total runtime is mathematically and temporally impossible. This violates basic chronology and duration allocation, making TSC unachievable.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SPC",
+      "evidence": [
+        {
+          "quote": "Describe that same moment as harsh noon sun and as a lightless night, and as both a locked camera and a camera that never stops shaking.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Spatial consistency is violated: the prompt demands contradictory camera behaviors (locked vs. never stops shaking) and contradictory lighting (harsh noon sun vs. lightless night) for the same moment, which cannot coexist in a single spatial context.",
+      "rationale": "The same moment cannot simultaneously have conflicting lighting and camera motion states. This creates an impossible spatial-temporal state transition, violating SPC.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "PL",
+      "evidence": [
+        {
+          "quote": "this same protagonist appears simultaneously as five different-looking people who talk to each other.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Physics are violated: a single protagonist cannot simultaneously appear as five different-looking people without violating object permanence and bodily feasibility. The contradictory lighting and camera states also defy real-world physics.",
+      "rationale": "The requirement for one entity to exist as five distinct physical forms at once violates basic physical laws. Additionally, the simultaneous existence of mutually exclusive lighting and camera conditions defies real-world physics, making PL impossible.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "AVS",
+      "evidence": [
+        {
+          "quote": "Keep the character in the middle of the frame, speaking in [malayalam] with accurate mouth movement...",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Replace the whole video with a live-action news anchor reading a script, with no animated character.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Audio-visual sync is impossible: the prompt drops the animated character and live-action news anchor setup, yet still requires accurate mouth movement for Malayalam dialogue, which cannot be synchronized without a visible speaker.",
+      "rationale": "The original prompt requires mouth movement for a character, but the enhanced prompt removes the character entirely. Without a visible speaker, accurate lip-sync for Malayalam dialogue is impossible, creating a fatal AVS mismatch.",
+      "severity": "major"
+    }
+  ],
+  "dimension": "IC",
+  "dimension_score": 0,
+  "evidence_cache_key": "54d38b9fee4d1df01796d2be275c060eeaa72f8cb3eb38481a84d780f23934b4",
+  "judge_cache_key": "438d7e9fd7332b1041db3e2c26d42cb3fe828e0d369fb59490f6650aee59e97d",
+  "method": "weak-pe-original",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"IC\",\n  \"dimension_score\": 0,\n  \"summary\": \"The enhanced prompt introduces severe internal inconsistencies across all criteria: subject identity is contradicted (one protagonist vs. five simultaneous people), actions are incoherent (timeline reversal, impossible duration), space and time are logically broken (3s runtime vs. 27s shots), physics are violated (simultaneous identities, contradictory lighting), and audio-visual sync is impossible (no animation, yet mouth movement required). The prompt is self-contradictory and infeasible.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"SAC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Subject identity is contradicted: the prompt states there is one protagonist, then immediately claims this same protagonist appears simultaneously as five different-looking people. This violates identity stability and introduces unexplained duplication.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"First state that there is one protagonist, then state that this same protagonist appears simultaneously as five different-looking people who talk to each other.\"\n        }\n      ],\n      \"rationale\": \"The prompt explicitly contradicts subject identity by asserting a single protagonist while simultaneously requiring five distinct identities. This is a fundamental identity drift and duplication error, making SAC impossible to satisfy.\"\n    },\n    {\n      \"criterion\": \"ANL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Actions are incoherent and causally impossible: the timeline is reversed (ending first, then beginning), and a soccer celebration is inserted mid-sequence without causal connection. The protagonist’s actions (talking, appearing as five people) are incompatible with the live-action news anchor setup.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Reverse the timeline: show the ending first, then cut to a beginning that does not match. Cut away in the middle to a soccer celebration.\"\n        }\n      ],\n      \"rationale\": \"The sequence of events is logically broken. Reversing the timeline and inserting an unrelated soccer celebration creates dangling events with no causal binding. The protagonist’s actions (talking as five people) are incompatible with the news anchor role, creating a procedural contradiction.\"\n    },\n    {\n      \"criterion\": \"TSC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Chronology is infeasible: the total runtime is set to 3 seconds, but every shot is required to last 27 seconds. This creates an impossible temporal constraint.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Set the total runtime to 3 seconds, while also making every shot last 27 seconds.\"\n        }\n      ],\n      \"rationale\": \"The requirement for 27-second shots within a 3-second total runtime is mathematically and temporally impossible. This violates basic chronology and duration allocation, making TSC unachievable.\"\n    },\n    {\n      \"criterion\": \"SPC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Spatial consistency is violated: the prompt demands contradictory camera behaviors (locked vs. never stops shaking) and contradictory lighting (harsh noon sun vs. lightless night) for the same moment, which cannot coexist in a single spatial context.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Describe that same moment as harsh noon sun and as a lightless night, and as both a locked camera and a camera that never stops shaking.\"\n        }\n      ],\n      \"rationale\": \"The same moment cannot simultaneously have conflicting lighting and camera motion states. This creates an impossible spatial-temporal state transition, violating SPC.\"\n    },\n    {\n      \"criterion\": \"PL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Physics are violated: a single protagonist cannot simultaneously appear as five different-looking people without violating object permanence and bodily feasibility. The contradictory lighting and camera states also defy real-world physics.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"this same protagonist appears simultaneously as five different-looking people who talk to each other.\"\n        }\n      ],\n      \"rationale\": \"The requirement for one entity to exist as five distinct physical forms at once violates basic physical laws. Additionally, the simultaneous existence of mutually exclusive lighting and camera conditions defies real-world physics, making PL impossible.\"\n    },\n    {\n      \"criterion\": \"AVS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Audio-visual sync is impossible: the prompt drops the animated character and live-action news anchor setup, yet still requires accurate mouth movement for Malayalam dialogue, which cannot be synchronized without a visible speaker.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"Keep the character in the middle of the frame, speaking in [malayalam] with accurate mouth movement...\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Replace the whole video with a live-action news anchor reading a script, with no animated character.\"\n        }\n      ],\n      \"rationale\": \"The original prompt requires mouth movement for a character, but the enhanced prompt removes the character entirely. Without a visible speaker, accurate lip-sync for Malayalam dialogue is impossible, creating a fatal AVS mismatch.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt introduces severe internal inconsistencies across all criteria: subject identity is contradicted (one protagonist vs. five simultaneous people), actions are incoherent (timeline reversal, impossible duration), space and time are logically broken (3s runtime vs. 27s shots), physics are violated (simultaneous identities, contradictory lighting), and audio-visual sync is impossible (no animation, yet mouth movement required). The prompt is self-contradictory and infeasible.",
+  "usage": {
+    "completion_tokens": 1196,
+    "prompt_tokens": 1061,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 2257
+  }
+}

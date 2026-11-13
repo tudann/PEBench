@@ -1,0 +1,170 @@
+{
+  "candidate_hash": "704cb97921ba0f65f741850ec078f460de24119f55d9fb07be75e7a826c18ae9",
+  "case_key": "r2v:199",
+  "created_at": "2026-11-13T08:47:26+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "GSF",
+      "evidence": [
+        {
+          "quote": "Using the style of the visual effects in this image as a reference, generate a narrative video: a teenage boy charges at a monster with his blade, and the blade’s light sweeps across the frame in exaggerated colorful arcs; at the moment of impact, comic-style speed lines appear.",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Replace the whole video with two people sitting and eating, with no effects or transformation. Drop the requested identity, count, action order, setting, and any explicit camera instruction.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "primary_style: fantasy action illustration, secondary_styles: [sci-fi visual effects, anime-inspired combat, dynamic lighting and particle effects]",
+          "source": "evidence_facts"
+        }
+      ],
+      "issue": "The original prompt requests a fantasy action narrative with visual effects inspired by the reference image. The enhanced prompt replaces this with a mundane scene of two people eating, discarding all genre, style, and visual effects references. The reference image’s 'fantasy action illustration' and 'sci-fi visual effects' style are explicitly dropped.",
+      "rationale": "The original request is for a stylized fantasy action sequence with specific visual effects. The enhanced prompt explicitly rejects all of these, replacing them with a generic, non-stylized scene. This is a major violation of genre and aesthetic preservation.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SAP",
+      "evidence": [
+        {
+          "quote": "a teenage boy charges at a monster",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "First state that there is one protagonist, then state that this same protagonist appears simultaneously as five different-looking people who talk to each other.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original prompt specifies a single protagonist (a teenage boy) and an antagonist (a monster). The enhanced prompt replaces this with two unspecified people, then introduces a contradictory identity: one protagonist appearing simultaneously as five different-looking people. The original subjects are entirely discarded.",
+      "rationale": "The subject identity, count, and roles are fundamentally altered. The original single protagonist and monster are replaced with a fictional, contradictory setup that violates the original narrative structure.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANF",
+      "evidence": [
+        {
+          "quote": "a teenage boy charges at a monster with his blade, and the blade’s light sweeps across the frame in exaggerated colorful arcs; at the moment of impact, comic-style speed lines appear.",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Reverse the timeline: show the ending first, then cut to a beginning that does not match. Cut away in the middle to a toothpaste commercial.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original narrative involves a clear action sequence: a boy charging, blade sweeping, impact with speed lines. The enhanced prompt reverses the timeline, cuts to a toothpaste commercial, and introduces unrelated events, completely altering the narrative intent and event order.",
+      "rationale": "The requested action sequence is replaced with a disjointed, non-sequitur narrative. The original event chain is destroyed, making this a major failure in preserving narrative intent and action order.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "DLI",
+      "evidence": [
+        {
+          "quote": "generate a narrative video: a teenage boy charges at a monster with his blade, and the blade’s light sweeps across the frame in exaggerated colorful arcs; at the moment of impact, comic-style speed lines appear.",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "The original prompt does not specify any dialogue, narration, or lyrics. The enhanced prompt also does not introduce any such elements, so there is no violation.",
+      "rationale": "No dialogue or narration was requested in the original prompt, and none is introduced in the enhanced prompt. Therefore, no issue exists under this criterion.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ARP",
+      "evidence": [
+        {
+          "quote": "generate a narrative video: a teenage boy charges at a monster with his blade, and the blade’s light sweeps across the frame in exaggerated colorful arcs; at the moment of impact, comic-style speed lines appear.",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "The original prompt does not specify any audio constraints. The enhanced prompt does not introduce any audio requirements either, so no violation occurs.",
+      "rationale": "No audio elements were specified in the original prompt, and none are added or altered in the enhanced prompt. Thus, no issue is present.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CCP",
+      "evidence": [
+        {
+          "quote": "observed_camera_motion: none (static image), shot_scale: medium-wide",
+          "source": "evidence_facts"
+        },
+        {
+          "quote": "Drop the requested identity, count, action order, setting, and any explicit camera instruction. ... Describe that same moment as ... a locked camera and a camera that never stops shaking.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original prompt does not specify camera constraints, but the reference image implies a static, medium-wide shot. The enhanced prompt explicitly contradicts any camera instruction and introduces mutually exclusive camera behaviors: 'locked camera' and 'camera that never stops shaking'.",
+      "rationale": "The enhanced prompt introduces contradictory camera constraints that cannot coexist, and explicitly overrides any implied or requested camera behavior. This is a major violation of camera constraint preservation.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "LCF",
+      "evidence": [
+        {
+          "quote": "time_of_day_cues: daytime, clear sky, bright blue background, color_temperature: cool (blue sky) contrasted with warm (lava, energy beams)",
+          "source": "evidence_facts"
+        },
+        {
+          "quote": "Describe that same moment as harsh noon sun and as a lightless night, and as both a locked camera and a camera that never stops shaking.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original prompt implies a daytime, bright, high-contrast fantasy scene with dynamic lighting. The enhanced prompt contradicts this by describing the same moment as 'harsh noon sun' and 'lightless night', which are mutually exclusive lighting conditions.",
+      "rationale": "The original lighting conditions are replaced with contradictory, impossible states. This is a major violation of lighting and color fidelity.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SSP",
+      "evidence": [
+        {
+          "quote": "a teenage boy charges at a monster with his blade",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Replace the whole video with two people sitting and eating... Cut away in the middle to a toothpaste commercial.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original prompt specifies a fantasy battlefield setting with a teenage boy and monster. The enhanced prompt replaces this with a generic eating scene, then introduces a toothpaste commercial, and discards the original setting entirely.",
+      "rationale": "The original setting is completely discarded and replaced with unrelated, non-sequitur environments. This is a major failure in preserving spatial and setting constraints.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "OTI",
+      "evidence": [
+        {
+          "quote": "generate a narrative video: a teenage boy charges at a monster with his blade, and the blade’s light sweeps across the frame in exaggerated colorful arcs; at the moment of impact, comic-style speed lines appear.",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "The original prompt does not specify any on-screen text, signs, or subtitles. The enhanced prompt does not introduce any such elements, so no violation occurs.",
+      "rationale": "No text elements were requested in the original prompt, and none are added or altered in the enhanced prompt. Therefore, no issue exists under this criterion.",
+      "severity": "none"
+    }
+  ],
+  "dimension": "SF",
+  "dimension_score": 0,
+  "evidence_cache_key": "9587621984a50b2379aa78b7803797232641ffb7aaac04245eee89fe4f6064a9",
+  "judge_cache_key": "a0ca24571ad14d7ab7be626329bd736d7e7015f9ebc418227c8be391591d0377",
+  "method": "weak-pe-original",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"SF\",\n  \"dimension_score\": 0,\n  \"summary\": \"The enhanced prompt completely contradicts and overrides the original instruction in every semantic dimension. It replaces the requested genre, medium, subject identity, actions, setting, camera constraints, lighting, and duration with mutually contradictory and infeasible requirements. The prompt explicitly instructs to drop all original elements and introduce impossible conditions (e.g., 2-second runtime with 22-second shots, contradictory identities, simultaneous multiple protagonists, reversed timeline, and conflicting environmental states). This constitutes a total failure of semantic fidelity.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"GSF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original prompt requests a fantasy action narrative with visual effects inspired by the reference image. The enhanced prompt replaces this with a mundane scene of two people eating, discarding all genre, style, and visual effects references. The reference image’s 'fantasy action illustration' and 'sci-fi visual effects' style are explicitly dropped.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"Using the style of the visual effects in this image as a reference, generate a narrative video: a teenage boy charges at a monster with his blade, and the blade’s light sweeps across the frame in exaggerated colorful arcs; at the moment of impact, comic-style speed lines appear.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Replace the whole video with two people sitting and eating, with no effects or transformation. Drop the requested identity, count, action order, setting, and any explicit camera instruction.\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"primary_style: fantasy action illustration, secondary_styles: [sci-fi visual effects, anime-inspired combat, dynamic lighting and particle effects]\"\n        }\n      ],\n      \"rationale\": \"The original request is for a stylized fantasy action sequence with specific visual effects. The enhanced prompt explicitly rejects all of these, replacing them with a generic, non-stylized scene. This is a major violation of genre and aesthetic preservation.\"\n    },\n    {\n      \"criterion\": \"SAP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original prompt specifies a single protagonist (a teenage boy) and an antagonist (a monster). The enhanced prompt replaces this with two unspecified people, then introduces a contradictory identity: one protagonist appearing simultaneously as five different-looking people. The original subjects are entirely discarded.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"a teenage boy charges at a monster\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"First state that there is one protagonist, then state that this same protagonist appears simultaneously as five different-looking people who talk to each other.\"\n        }\n      ],\n      \"rationale\": \"The subject identity, count, and roles are fundamentally altered. The original single protagonist and monster are replaced with a fictional, contradictory setup that violates the original narrative structure.\"\n    },\n    {\n      \"criterion\": \"ANF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original narrative involves a clear action sequence: a boy charging, blade sweeping, impact with speed lines. The enhanced prompt reverses the timeline, cuts to a toothpaste commercial, and introduces unrelated events, completely altering the narrative intent and event order.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"a teenage boy charges at a monster with his blade, and the blade’s light sweeps across the frame in exaggerated colorful arcs; at the moment of impact, comic-style speed lines appear.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Reverse the timeline: show the ending first, then cut to a beginning that does not match. Cut away in the middle to a toothpaste commercial.\"\n        }\n      ],\n      \"rationale\": \"The requested action sequence is replaced with a disjointed, non-sequitur narrative. The original event chain is destroyed, making this a major failure in preserving narrative intent and action order.\"\n    },\n    {\n      \"criterion\": \"DLI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"The original prompt does not specify any dialogue, narration, or lyrics. The enhanced prompt also does not introduce any such elements, so there is no violation.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"generate a narrative video: a teenage boy charges at a monster with his blade, and the blade’s light sweeps across the frame in exaggerated colorful arcs; at the moment of impact, comic-style speed lines appear.\"\n        }\n      ],\n      \"rationale\": \"No dialogue or narration was requested in the original prompt, and none is introduced in the enhanced prompt. Therefore, no issue exists under this criterion.\"\n    },\n    {\n      \"criterion\": \"ARP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"The original prompt does not specify any audio constraints. The enhanced prompt does not introduce any audio requirements either, so no violation occurs.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"generate a narrative video: a teenage boy charges at a monster with his blade, and the blade’s light sweeps across the frame in exaggerated colorful arcs; at the moment of impact, comic-style speed lines appear.\"\n        }\n      ],\n      \"rationale\": \"No audio elements were specified in the original prompt, and none are added or altered in the enhanced prompt. Thus, no issue is present.\"\n    },\n    {\n      \"criterion\": \"CCP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original prompt does not specify camera constraints, but the reference image implies a static, medium-wide shot. The enhanced prompt explicitly contradicts any camera instruction and introduces mutually exclusive camera behaviors: 'locked camera' and 'camera that never stops shaking'.\",\n      \"evidence\": [\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"observed_camera_motion: none (static image), shot_scale: medium-wide\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Drop the requested identity, count, action order, setting, and any explicit camera instruction. ... Describe that same moment as ... a locked camera and a camera that never stops shaking.\"\n        }\n      ],\n      \"rationale\": \"The enhanced prompt introduces contradictory camera constraints that cannot coexist, and explicitly overrides any implied or requested camera behavior. This is a major violation of camera constraint preservation.\"\n    },\n    {\n      \"criterion\": \"LCF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original prompt implies a daytime, bright, high-contrast fantasy scene with dynamic lighting. The enhanced prompt contradicts this by describing the same moment as 'harsh noon sun' and 'lightless night', which are mutually exclusive lighting conditions.\",\n      \"evidence\": [\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"time_of_day_cues: daytime, clear sky, bright blue background, color_temperature: cool (blue sky) contrasted with warm (lava, energy beams)\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Describe that same moment as harsh noon sun and as a lightless night, and as both a locked camera and a camera that never stops shaking.\"\n        }\n      ],\n      \"rationale\": \"The original lighting conditions are replaced with contradictory, impossible states. This is a major violation of lighting and color fidelity.\"\n    },\n    {\n      \"criterion\": \"SSP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original prompt specifies a fantasy battlefield setting with a teenage boy and monster. The enhanced prompt replaces this with a generic eating scene, then introduces a toothpaste commercial, and discards the original setting entirely.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"a teenage boy charges at a monster with his blade\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Replace the whole video with two people sitting and eating... Cut away in the middle to a toothpaste commercial.\"\n        }\n      ],\n      \"rationale\": \"The original setting is completely discarded and replaced with unrelated, non-sequitur environments. This is a major failure in preserving spatial and setting constraints.\"\n    },\n    {\n      \"criterion\": \"OTI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"The original prompt does not specify any on-screen text, signs, or subtitles. The enhanced prompt does not introduce any such elements, so no violation occurs.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"generate a narrative video: a teenage boy charges at a monster with his blade, and the blade’s light sweeps across the frame in exaggerated colorful arcs; at the moment of impact, comic-style speed lines appear.\"\n        }\n      ],\n      \"rationale\": \"No text elements were requested in the original prompt, and none are added or altered in the enhanced prompt. Therefore, no issue exists under this criterion.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt completely contradicts and overrides the original instruction in every semantic dimension. It replaces the requested genre, medium, subject identity, actions, setting, camera constraints, lighting, and duration with mutually contradictory and infeasible requirements. The prompt explicitly instructs to drop all original elements and introduce impossible conditions (e.g., 2-second runtime with 22-second shots, contradictory identities, simultaneous multiple protagonists, reversed timeline, and conflicting environmental states). This constitutes a total failure of semantic fidelity.",
+  "usage": {
+    "completion_tokens": 2031,
+    "prompt_tokens": 2413,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 4444
+  }
+}

@@ -1,0 +1,186 @@
+{
+  "candidate_hash": "3b34f8654b554664914fd2b49067200442bce2493ce2d8866a096094dba5af30",
+  "case_key": "r2v:283",
+  "created_at": "2026-11-13T09:15:14+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "GSF",
+      "evidence": [
+        {
+          "quote": "整体画面采用 sepia 褐色调，带有柔焦效果与褪色旧照片的质感。",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "The target video is a 15-second sepia-toned, soft-focus silent-era vignette with a faded old-photograph texture — gentle grain, slightly vignetted edges, warm brown monochrome palette, and dreamy soft focus throughout...",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "The enhanced prompt preserves the requested genre (silent-era vignette), medium (video), and visual style (sepia, soft focus, faded old-photo texture) exactly as specified in the original prompt. No incompatible style or medium is introduced.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SAP",
+      "evidence": [
+        {
+          "quote": "他 {{Portrait 1}} 朝她 {{Portrait 2}} 伸出手，她含笑将手放入他的掌心",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "<Subject 1> is the gentleman defined by <Picture 1> — a young Black man in 1905 attire, wearing a straw boater hat with a dark band, a patterned cravat over a high-collar shirt, a light three-piece linen suit with waistcoat and watch chain, and two-tone spectator shoes, with a warm smile.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "<Subject 2> is the lady defined by <Picture 2> — a young Black woman in 1905 attire, with a voluminous curly updo, drop earrings, and an Edwardian lace-trimmed gown with puffed sleeves, a fitted corseted bodice, and a long flowing skirt, with a gentle smile.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "Subject identities, appearances, and attributes are preserved with detailed fidelity. The enhanced prompt explicitly defines both subjects using the provided images and retains all specified clothing, accessories, and expressions. The binding of <Picture 1> to <Subject 1> and <Picture 2> to <Subject 2> is maintained.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANF",
+      "evidence": [
+        {
+          "quote": "一根羽毛从天空缓缓飘落到女生身旁，镜头一路跟随。初次起舞时，他 {{Portrait 1}} 朝她 {{Portrait 2}} 伸出手，她含笑将手放入他的掌心，随后两人开始旋转。",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "<Subject 3>, a single white feather, drifts down from the sky and settles on the lawn beside the lady, serving as the camera's tracking anchor in the opening shot. ... <Subject 1> then extends his hand, she places her hand in his palm, and the couple begins to spin.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "The sequence of events — feather descent, camera tracking, hand extension, hand placement, and spinning — is preserved in correct order. The narrative intent of a romantic, gentle first dance is maintained. No substitutions or omissions affect the core action chain.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "DLI",
+      "evidence": [
+        {
+          "quote": "配乐是轻快的 Ragtime 钢琴短句。",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "No dialogue, no on-screen text; a light Ragtime piano phrase runs underneath.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "The original prompt does not specify any dialogue or on-screen text, and the enhanced prompt correctly preserves this by explicitly stating 'No dialogue, no on-screen text'. The music is described as a 'light Ragtime piano phrase', matching the original instruction.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ARP",
+      "evidence": [
+        {
+          "quote": "配乐是轻快的 Ragtime 钢琴短句。",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "A light, upbeat Ragtime piano short phrase — jaunty, syncopated, and period-appropriate for 1905 — runs under the entire 15 seconds...",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "The requested non-diegetic music (Ragtime piano) is preserved with compatible elaboration. The enhanced prompt adds descriptive adjectives ('jaunty, syncopated') but does not alter the core requirement. No other sounds are introduced, and silence is maintained as per the silent-era aesthetic.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CCP",
+      "evidence": [
+        {
+          "quote": "一根羽毛从天空缓缓飘落到女生身旁，镜头一路跟随。",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "The camera tracks the feather's descent continuously and smoothly, following it all the way down... The tracking ends as the feather comes to rest.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The enhanced prompt introduces a camera tracking shot for the falling feather, which is not explicitly requested in the original prompt. However, this addition is compatible with the narrative and does not override any explicit camera constraints.",
+      "rationale": "The original prompt implies camera tracking ('镜头一路跟随') for the feather, so the enhanced prompt's explicit tracking shot is a faithful elaboration. The addition of a dissolve transition and a slow push-in in Shot 2 is compatible with the silent-era aesthetic and does not contradict any explicit constraint. The severity is minor because the enhancement is semantically consistent and improves narrative clarity.",
+      "severity": "minor"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "LCF",
+      "evidence": [
+        {
+          "quote": "整体画面采用 sepia 褐色调，带有柔焦效果与褪色旧照片的质感。",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "sepia-toned, soft-focus silent-era vignette with a faded old-photograph texture — gentle grain, slightly vignetted edges, warm brown monochrome palette, and dreamy soft focus throughout...",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "The lighting, color, and texture specifications are preserved exactly. The enhanced prompt elaborates on the visual qualities (grain, vignetting, palette) but does not alter the core conditions. The warm sepia tone and soft focus are maintained throughout.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SSP",
+      "evidence": [
+        {
+          "quote": "1905 年的美国草坪上",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "set on an American lawn in 1905",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "the feather settles on the grass beside <Subject 2>",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "The setting (American lawn in 1905) is preserved. The spatial relationship between the feather and the lady is correctly maintained. The enhanced prompt adds environmental details (tree branches, lawn edges) that are compatible with the setting and do not contradict the original.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "OTI",
+      "evidence": [
+        {
+          "quote": "配乐是轻快的 Ragtime 钢琴短句。",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "No dialogue, no on-screen text",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "The original prompt does not request any visible text, and the enhanced prompt explicitly confirms the absence of on-screen text. No titles, signs, or subtitles are introduced, preserving the silent-era aesthetic.",
+      "severity": "none"
+    }
+  ],
+  "dimension": "SF",
+  "dimension_score": 95,
+  "evidence_cache_key": "e0f4fd465782e18981e93dbc7b10956ea87156371a634f9b795ddfa354c08d50",
+  "judge_cache_key": "a0ca24571ad14d7ab7be626329bd736d7e7015f9ebc418227c8be391591d0377",
+  "method": "glm53_20261112_120702",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"SF\",\n  \"dimension_score\": 95,\n  \"summary\": \"The enhanced prompt preserves the core semantic intent of the original instruction with high fidelity. It accurately retains the genre (silent-era vignette), medium (sepia-toned, soft-focus video), aesthetic (faded old-photo texture), and visual style. Subject identities, actions, and narrative flow are preserved with detailed elaboration. The only minor issue is the addition of a tracking feather as a camera anchor, which is not explicitly requested but is compatible and enhances the visual narrative without contradicting the original. Dialogue, music, and camera constraints are preserved as specified. Lighting, setting, and text constraints are fully respected. The enhancement is semantically faithful with only minor, non-material elaboration.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"GSF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"整体画面采用 sepia 褐色调，带有柔焦效果与褪色旧照片的质感。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"The target video is a 15-second sepia-toned, soft-focus silent-era vignette with a faded old-photograph texture — gentle grain, slightly vignetted edges, warm brown monochrome palette, and dreamy soft focus throughout...\"\n        }\n      ],\n      \"rationale\": \"The enhanced prompt preserves the requested genre (silent-era vignette), medium (video), and visual style (sepia, soft focus, faded old-photo texture) exactly as specified in the original prompt. No incompatible style or medium is introduced.\"\n    },\n    {\n      \"criterion\": \"SAP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"他 {{Portrait 1}} 朝她 {{Portrait 2}} 伸出手，她含笑将手放入他的掌心\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"<Subject 1> is the gentleman defined by <Picture 1> — a young Black man in 1905 attire, wearing a straw boater hat with a dark band, a patterned cravat over a high-collar shirt, a light three-piece linen suit with waistcoat and watch chain, and two-tone spectator shoes, with a warm smile.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"<Subject 2> is the lady defined by <Picture 2> — a young Black woman in 1905 attire, with a voluminous curly updo, drop earrings, and an Edwardian lace-trimmed gown with puffed sleeves, a fitted corseted bodice, and a long flowing skirt, with a gentle smile.\"\n        }\n      ],\n      \"rationale\": \"Subject identities, appearances, and attributes are preserved with detailed fidelity. The enhanced prompt explicitly defines both subjects using the provided images and retains all specified clothing, accessories, and expressions. The binding of <Picture 1> to <Subject 1> and <Picture 2> to <Subject 2> is maintained.\"\n    },\n    {\n      \"criterion\": \"ANF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"一根羽毛从天空缓缓飘落到女生身旁，镜头一路跟随。初次起舞时，他 {{Portrait 1}} 朝她 {{Portrait 2}} 伸出手，她含笑将手放入他的掌心，随后两人开始旋转。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"<Subject 3>, a single white feather, drifts down from the sky and settles on the lawn beside the lady, serving as the camera's tracking anchor in the opening shot. ... <Subject 1> then extends his hand, she places her hand in his palm, and the couple begins to spin.\"\n        }\n      ],\n      \"rationale\": \"The sequence of events — feather descent, camera tracking, hand extension, hand placement, and spinning — is preserved in correct order. The narrative intent of a romantic, gentle first dance is maintained. No substitutions or omissions affect the core action chain.\"\n    },\n    {\n      \"criterion\": \"DLI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"配乐是轻快的 Ragtime 钢琴短句。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"No dialogue, no on-screen text; a light Ragtime piano phrase runs underneath.\"\n        }\n      ],\n      \"rationale\": \"The original prompt does not specify any dialogue or on-screen text, and the enhanced prompt correctly preserves this by explicitly stating 'No dialogue, no on-screen text'. The music is described as a 'light Ragtime piano phrase', matching the original instruction.\"\n    },\n    {\n      \"criterion\": \"ARP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"配乐是轻快的 Ragtime 钢琴短句。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"A light, upbeat Ragtime piano short phrase — jaunty, syncopated, and period-appropriate for 1905 — runs under the entire 15 seconds...\"\n        }\n      ],\n      \"rationale\": \"The requested non-diegetic music (Ragtime piano) is preserved with compatible elaboration. The enhanced prompt adds descriptive adjectives ('jaunty, syncopated') but does not alter the core requirement. No other sounds are introduced, and silence is maintained as per the silent-era aesthetic.\"\n    },\n    {\n      \"criterion\": \"CCP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"minor\",\n      \"issue\": \"The enhanced prompt introduces a camera tracking shot for the falling feather, which is not explicitly requested in the original prompt. However, this addition is compatible with the narrative and does not override any explicit camera constraints.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"一根羽毛从天空缓缓飘落到女生身旁，镜头一路跟随。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"The camera tracks the feather's descent continuously and smoothly, following it all the way down... The tracking ends as the feather comes to rest.\"\n        }\n      ],\n      \"rationale\": \"The original prompt implies camera tracking ('镜头一路跟随') for the feather, so the enhanced prompt's explicit tracking shot is a faithful elaboration. The addition of a dissolve transition and a slow push-in in Shot 2 is compatible with the silent-era aesthetic and does not contradict any explicit constraint. The severity is minor because the enhancement is semantically consistent and improves narrative clarity.\"\n    },\n    {\n      \"criterion\": \"LCF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"整体画面采用 sepia 褐色调，带有柔焦效果与褪色旧照片的质感。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"sepia-toned, soft-focus silent-era vignette with a faded old-photograph texture — gentle grain, slightly vignetted edges, warm brown monochrome palette, and dreamy soft focus throughout...\"\n        }\n      ],\n      \"rationale\": \"The lighting, color, and texture specifications are preserved exactly. The enhanced prompt elaborates on the visual qualities (grain, vignetting, palette) but does not alter the core conditions. The warm sepia tone and soft focus are maintained throughout.\"\n    },\n    {\n      \"criterion\": \"SSP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"1905 年的美国草坪上\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"set on an American lawn in 1905\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"the feather settles on the grass beside <Subject 2>\"\n        }\n      ],\n      \"rationale\": \"The setting (American lawn in 1905) is preserved. The spatial relationship between the feather and the lady is correctly maintained. The enhanced prompt adds environmental details (tree branches, lawn edges) that are compatible with the setting and do not contradict the original.\"\n    },\n    {\n      \"criterion\": \"OTI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"配乐是轻快的 Ragtime 钢琴短句。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"No dialogue, no on-screen text\"\n        }\n      ],\n      \"rationale\": \"The original prompt does not request any visible text, and the enhanced prompt explicitly confirms the absence of on-screen text. No titles, signs, or subtitles are introduced, preserving the silent-era aesthetic.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt preserves the core semantic intent of the original instruction with high fidelity. It accurately retains the genre (silent-era vignette), medium (sepia-toned, soft-focus video), aesthetic (faded old-photo texture), and visual style. Subject identities, actions, and narrative flow are preserved with detailed elaboration. The only minor issue is the addition of a tracking feather as a camera anchor, which is not explicitly requested but is compatible and enhances the visual narrative without contradicting the original. Dialogue, music, and camera constraints are preserved as specified. Lighting, setting, and text constraints are fully respected. The enhancement is semantically faithful with only minor, non-material elaboration.",
+  "usage": {
+    "completion_tokens": 2108,
+    "prompt_tokens": 4238,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 6346
+  }
+}

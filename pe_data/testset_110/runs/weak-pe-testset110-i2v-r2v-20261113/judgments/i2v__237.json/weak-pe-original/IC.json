@@ -1,0 +1,103 @@
+{
+  "candidate_hash": "340a97d86ebba9d424b28452545aa587eb5f2e616f274e4b794a06b8ff847bbe",
+  "case_key": "i2v:237",
+  "created_at": "2026-11-13T07:55:23+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "SAC",
+      "evidence": [
+        {
+          "quote": "First state that there is one protagonist, then state that this same protagonist appears simultaneously as five different-looking people who talk to each other.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Subject identity, count, and appearance are inconsistently defined and impossible to maintain. The prompt states one protagonist who simultaneously appears as five different-looking people, violating identity stability and count consistency.",
+      "rationale": "The prompt creates a logical contradiction: a single protagonist cannot simultaneously exist as five distinct individuals without violating identity and count consistency. This is a major internal inconsistency.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANL",
+      "evidence": [
+        {
+          "quote": "Replace the whole video with a looping snowy landscape with no characters and no plot. ... First state that there is one protagonist, then state that this same protagonist appears simultaneously as five different-looking people who talk to each other.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Actions are incoherent and causally disconnected. The prompt demands a looping snowy landscape with no plot, then introduces talking characters, a soccer celebration, and contradictory sensory descriptions, creating a dangling and incompatible sequence.",
+      "rationale": "The narrative actions are mutually exclusive and causally unconnected. A plotless snowy landscape cannot coexist with talking characters or a soccer celebration without a coherent causal progression, resulting in a major inconsistency.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "TSC",
+      "evidence": [
+        {
+          "quote": "Reverse the timeline: show the ending first, then cut to a beginning that does not match. ... Set the total runtime to 2 seconds, while also making every shot last 19 seconds.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Chronology is impossible. The prompt requires reversing the timeline (showing ending first), then cutting to a non-matching beginning, while also setting total runtime to 2 seconds and every shot to 19 seconds — a mathematical impossibility.",
+      "rationale": "A 2-second video cannot contain any shot lasting 19 seconds. This is a fundamental temporal contradiction, making the timeline infeasible and thus a major inconsistency.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SPC",
+      "evidence": [
+        {
+          "quote": "Describe that same moment as harsh noon sun and as a lightless night, and as both a locked camera and a camera that never stops shaking.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Spatial consistency is violated. The prompt demands showing the same moment as both harsh noon sun and lightless night, and as both a locked camera and a shaking camera — impossible coexisting spatial and sensory conditions.",
+      "rationale": "The same moment cannot simultaneously have contradictory lighting (noon vs. night) and camera motion (locked vs. shaking). This violates spatial and sensory consistency, constituting a major inconsistency.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "PL",
+      "evidence": [
+        {
+          "quote": "Ignore the person, clothing, pose, and setting in the first frame, and replace them with a stranger of the opposite age and gender in a white studio.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Physics and object permanence are violated. The prompt requires replacing the first frame’s subject with a stranger of opposite age and gender in a white studio, while also ignoring the original setting — creating an impossible state transition.",
+      "rationale": "The prompt demands an instantaneous, unexplained replacement of a subject and setting without any causal or physical transition, violating object permanence and real-world physics, which is a major inconsistency.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "AVS",
+      "evidence": [
+        {
+          "quote": "Describe that same moment as harsh noon sun and as a lightless night, and as both a locked camera and a camera that never stops shaking.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Audio-visual synchronization is impossible. The prompt requires describing the same moment with contradictory lighting and camera motion, which would misalign with any audio or visual cues, creating sensory dissonance.",
+      "rationale": "The same moment cannot have conflicting visual conditions (lighting, camera motion) without creating misaligned sensory experiences. This violates AVS consistency, resulting in a major issue.",
+      "severity": "major"
+    }
+  ],
+  "dimension": "IC",
+  "dimension_score": 0,
+  "evidence_cache_key": "c166dc2f6b24fc0cf3a90beda4ab9d284d92ddc930e84dc3f7125297ea7b7411",
+  "judge_cache_key": "438d7e9fd7332b1041db3e2c26d42cb3fe828e0d369fb59490f6650aee59e97d",
+  "method": "weak-pe-original",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"IC\",\n  \"dimension_score\": 0,\n  \"summary\": \"The enhanced prompt contains severe internal inconsistencies across all criteria. It explicitly contradicts the original prompt and evidence, introduces impossible conditions (e.g., 19-second shots in a 2-second video), and violates fundamental logic in subject identity, chronology, physics, and sensory alignment. The prompt is self-contradictory and incoherent, rendering the entire narrative structure invalid.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"SAC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Subject identity, count, and appearance are inconsistently defined and impossible to maintain. The prompt states one protagonist who simultaneously appears as five different-looking people, violating identity stability and count consistency.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"First state that there is one protagonist, then state that this same protagonist appears simultaneously as five different-looking people who talk to each other.\"\n        }\n      ],\n      \"rationale\": \"The prompt creates a logical contradiction: a single protagonist cannot simultaneously exist as five distinct individuals without violating identity and count consistency. This is a major internal inconsistency.\"\n    },\n    {\n      \"criterion\": \"ANL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Actions are incoherent and causally disconnected. The prompt demands a looping snowy landscape with no plot, then introduces talking characters, a soccer celebration, and contradictory sensory descriptions, creating a dangling and incompatible sequence.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Replace the whole video with a looping snowy landscape with no characters and no plot. ... First state that there is one protagonist, then state that this same protagonist appears simultaneously as five different-looking people who talk to each other.\"\n        }\n      ],\n      \"rationale\": \"The narrative actions are mutually exclusive and causally unconnected. A plotless snowy landscape cannot coexist with talking characters or a soccer celebration without a coherent causal progression, resulting in a major inconsistency.\"\n    },\n    {\n      \"criterion\": \"TSC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Chronology is impossible. The prompt requires reversing the timeline (showing ending first), then cutting to a non-matching beginning, while also setting total runtime to 2 seconds and every shot to 19 seconds — a mathematical impossibility.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Reverse the timeline: show the ending first, then cut to a beginning that does not match. ... Set the total runtime to 2 seconds, while also making every shot last 19 seconds.\"\n        }\n      ],\n      \"rationale\": \"A 2-second video cannot contain any shot lasting 19 seconds. This is a fundamental temporal contradiction, making the timeline infeasible and thus a major inconsistency.\"\n    },\n    {\n      \"criterion\": \"SPC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Spatial consistency is violated. The prompt demands showing the same moment as both harsh noon sun and lightless night, and as both a locked camera and a shaking camera — impossible coexisting spatial and sensory conditions.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Describe that same moment as harsh noon sun and as a lightless night, and as both a locked camera and a camera that never stops shaking.\"\n        }\n      ],\n      \"rationale\": \"The same moment cannot simultaneously have contradictory lighting (noon vs. night) and camera motion (locked vs. shaking). This violates spatial and sensory consistency, constituting a major inconsistency.\"\n    },\n    {\n      \"criterion\": \"PL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Physics and object permanence are violated. The prompt requires replacing the first frame’s subject with a stranger of opposite age and gender in a white studio, while also ignoring the original setting — creating an impossible state transition.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Ignore the person, clothing, pose, and setting in the first frame, and replace them with a stranger of the opposite age and gender in a white studio.\"\n        }\n      ],\n      \"rationale\": \"The prompt demands an instantaneous, unexplained replacement of a subject and setting without any causal or physical transition, violating object permanence and real-world physics, which is a major inconsistency.\"\n    },\n    {\n      \"criterion\": \"AVS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Audio-visual synchronization is impossible. The prompt requires describing the same moment with contradictory lighting and camera motion, which would misalign with any audio or visual cues, creating sensory dissonance.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Describe that same moment as harsh noon sun and as a lightless night, and as both a locked camera and a camera that never stops shaking.\"\n        }\n      ],\n      \"rationale\": \"The same moment cannot have conflicting visual conditions (lighting, camera motion) without creating misaligned sensory experiences. This violates AVS consistency, resulting in a major issue.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt contains severe internal inconsistencies across all criteria. It explicitly contradicts the original prompt and evidence, introduces impossible conditions (e.g., 19-second shots in a 2-second video), and violates fundamental logic in subject identity, chronology, physics, and sensory alignment. The prompt is self-contradictory and incoherent, rendering the entire narrative structure invalid.",
+  "usage": {
+    "completion_tokens": 1169,
+    "prompt_tokens": 2903,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 4072
+  }
+}

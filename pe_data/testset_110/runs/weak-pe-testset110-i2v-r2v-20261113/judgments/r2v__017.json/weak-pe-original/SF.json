@@ -1,0 +1,178 @@
+{
+  "candidate_hash": "16828fc5c10dd3e7f6887aa0175c6297dae3c0af273edfde50780a5291360303",
+  "case_key": "r2v:017",
+  "created_at": "2026-11-13T08:07:54+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "GSF",
+      "evidence": [
+        {
+          "quote": "In the scene of Image 3, this clip presents the subtle interaction during a dinner gathering in a live-action realistic style. The visuals are filled with natural light and an authentic texture...",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Replace the whole video with distant traffic, with nobody on screen and no dialogue.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original prompt requests a live-action realistic style with natural lighting and authentic texture. The enhanced prompt replaces this with distant traffic, no dialogue, and no people, which is incompatible with the requested genre and aesthetic.",
+      "rationale": "The enhanced prompt explicitly discards the requested live-action realistic style and replaces it with a non-interactive, non-human scene, which fundamentally alters the genre and visual aesthetic.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SAP",
+      "evidence": [
+        {
+          "quote": "Shot 1 [0–3 seconds]: a medium shot shows Image 2 smiling and speaking to Image 1...",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Replace image 1 with a character who is not in the reference, and give that image two contradictory identities. Replace image 2 with a character who is not in the reference, and give that image two contradictory identities. Replace image 3 with a character who is not in the reference, and give that image two contradictory identities.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original prompt specifies subjects Image 1 and Image 2 interacting in Image 3's setting. The enhanced prompt replaces all three images with non-reference characters and assigns them contradictory identities, violating subject identity, count, and appearance.",
+      "rationale": "The enhanced prompt explicitly replaces all reference subjects with non-reference characters and assigns them contradictory identities, which directly violates the subject identity and appearance requirements.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANF",
+      "evidence": [
+        {
+          "quote": "Shot 1 [0–3 seconds]: a medium shot shows Image 2 smiling and speaking to Image 1... Shot 2 [4–6 seconds]: the medium shot cuts to Image 1 listening attentively... Shot 3 [7–10 seconds]: a medium shot focuses on the moment of Image 2’s comment...",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Reverse the timeline: show the ending first, then cut to a beginning that does not match. Cut away in the middle to an underwater treasure hunt.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original prompt specifies a clear sequence of three shots with defined actions and dialogue. The enhanced prompt reverses the timeline, cuts to an unrelated underwater scene, and introduces contradictory temporal conditions (harsh noon sun and lightless night simultaneously).",
+      "rationale": "The enhanced prompt completely disrupts the requested event order and narrative intent by reversing the timeline, inserting an unrelated scene, and creating contradictory temporal conditions.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "DLI",
+      "evidence": [
+        {
+          "quote": "Image 2 says with a smile: “Only those who understand liquor choose Wengong Liquor. Its aroma is pure and authentic; the same principle applies to how one conducts oneself and handles affairs.”",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "no dialogue",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original prompt includes a specific dialogue: “Only those who understand liquor choose Wengong Liquor. Its aroma is pure and authentic; the same principle applies to how one conducts oneself and handles affairs.” The enhanced prompt removes all dialogue and replaces it with no speech.",
+      "rationale": "The enhanced prompt explicitly removes all dialogue, including the exact quoted line, which violates the requirement to preserve dialogue wording and speaker attribution.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ARP",
+      "evidence": [
+        {
+          "quote": "soothing background music intertwined with conversation creates a relaxed atmosphere.",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "no dialogue",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original prompt requests soothing background music intertwined with conversation. The enhanced prompt removes all music and dialogue, violating the requested audio constraints.",
+      "rationale": "The enhanced prompt removes all audio content, including the requested background music, which directly contradicts the audio constraints.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CCP",
+      "evidence": [
+        {
+          "quote": "Shot 1 [0–3 seconds]: a medium shot shows Image 2 smiling and speaking to Image 1... Shot 2 [4–6 seconds]: the medium shot cuts to Image 1... Shot 3 [7–10 seconds]: a medium shot focuses on the moment...",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Drop the requested identity, count, action order, setting, and any explicit camera instruction. ... Describe that same moment as ... a locked camera and a camera that never stops shaking.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original prompt specifies three medium shots with defined timing and camera movement. The enhanced prompt removes all camera instructions and introduces contradictory camera conditions (locked camera and never-stopping shaking).",
+      "rationale": "The enhanced prompt explicitly drops all camera instructions and introduces contradictory camera behaviors, which violates the requested shot count, scale, and movement constraints.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "LCF",
+      "evidence": [
+        {
+          "quote": "The visuals are filled with natural light and an authentic texture... soft lighting and refined detail",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Describe that same moment as harsh noon sun and as a lightless night, and as both a locked camera and a camera that never stops shaking.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original prompt specifies natural light and warm lighting for a dinner scene. The enhanced prompt contradicts this by describing the same moment as both harsh noon sun and lightless night, which is physically impossible and incompatible with the original lighting conditions.",
+      "rationale": "The enhanced prompt introduces mutually exclusive lighting conditions (harsh noon sun vs. lightless night) for the same moment, which directly contradicts the original lighting requirements.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SSP",
+      "evidence": [
+        {
+          "quote": "In the scene of Image 3, this clip presents the subtle interaction during a dinner gathering...",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Replace the whole video with distant traffic... Cut away in the middle to an underwater treasure hunt.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original prompt specifies the setting as Image 3's dining room with Image 1 and Image 2 interacting. The enhanced prompt replaces the setting with distant traffic and cuts to an underwater treasure hunt, violating the requested setting and spatial relations.",
+      "rationale": "The enhanced prompt replaces the specified dining room setting with unrelated scenes (traffic, underwater), which violates the setting and spatial relations requirements.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "OTI",
+      "evidence": [
+        {
+          "quote": "Image 2 says with a smile: “Only those who understand liquor choose Wengong Liquor. Its aroma is pure and authentic; the same principle applies to how one conducts oneself and handles affairs.”",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "no dialogue",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original prompt includes a specific dialogue quote that must be preserved. The enhanced prompt removes all dialogue, including the exact wording, which violates the requirement to preserve visible text and speech content.",
+      "rationale": "The enhanced prompt removes all dialogue, including the exact quoted line, which violates the requirement to preserve visible text and speech content.",
+      "severity": "major"
+    }
+  ],
+  "dimension": "SF",
+  "dimension_score": 0,
+  "evidence_cache_key": "7904cc32d99d4932a937a0fbc8a73653c5174ce60ea6703d8a281c7a7467cc0d",
+  "judge_cache_key": "a0ca24571ad14d7ab7be626329bd736d7e7015f9ebc418227c8be391591d0377",
+  "method": "weak-pe-original",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"SF\",\n  \"dimension_score\": 0,\n  \"summary\": \"The enhanced prompt completely violates semantic fidelity by replacing all requested content with contradictory, infeasible, and unrelated instructions. It negates the original genre, medium, subjects, actions, setting, camera constraints, and temporal structure, while introducing impossible contradictions (e.g., 2-second runtime with 22-second shots, simultaneous contradictory identities, reversed timelines). No aspect of the original prompt is preserved.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"GSF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original prompt requests a live-action realistic style with natural lighting and authentic texture. The enhanced prompt replaces this with distant traffic, no dialogue, and no people, which is incompatible with the requested genre and aesthetic.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"In the scene of Image 3, this clip presents the subtle interaction during a dinner gathering in a live-action realistic style. The visuals are filled with natural light and an authentic texture...\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Replace the whole video with distant traffic, with nobody on screen and no dialogue.\"\n        }\n      ],\n      \"rationale\": \"The enhanced prompt explicitly discards the requested live-action realistic style and replaces it with a non-interactive, non-human scene, which fundamentally alters the genre and visual aesthetic.\"\n    },\n    {\n      \"criterion\": \"SAP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original prompt specifies subjects Image 1 and Image 2 interacting in Image 3's setting. The enhanced prompt replaces all three images with non-reference characters and assigns them contradictory identities, violating subject identity, count, and appearance.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"Shot 1 [0–3 seconds]: a medium shot shows Image 2 smiling and speaking to Image 1...\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Replace image 1 with a character who is not in the reference, and give that image two contradictory identities. Replace image 2 with a character who is not in the reference, and give that image two contradictory identities. Replace image 3 with a character who is not in the reference, and give that image two contradictory identities.\"\n        }\n      ],\n      \"rationale\": \"The enhanced prompt explicitly replaces all reference subjects with non-reference characters and assigns them contradictory identities, which directly violates the subject identity and appearance requirements.\"\n    },\n    {\n      \"criterion\": \"ANF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original prompt specifies a clear sequence of three shots with defined actions and dialogue. The enhanced prompt reverses the timeline, cuts to an unrelated underwater scene, and introduces contradictory temporal conditions (harsh noon sun and lightless night simultaneously).\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"Shot 1 [0–3 seconds]: a medium shot shows Image 2 smiling and speaking to Image 1... Shot 2 [4–6 seconds]: the medium shot cuts to Image 1 listening attentively... Shot 3 [7–10 seconds]: a medium shot focuses on the moment of Image 2’s comment...\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Reverse the timeline: show the ending first, then cut to a beginning that does not match. Cut away in the middle to an underwater treasure hunt.\"\n        }\n      ],\n      \"rationale\": \"The enhanced prompt completely disrupts the requested event order and narrative intent by reversing the timeline, inserting an unrelated scene, and creating contradictory temporal conditions.\"\n    },\n    {\n      \"criterion\": \"DLI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original prompt includes a specific dialogue: “Only those who understand liquor choose Wengong Liquor. Its aroma is pure and authentic; the same principle applies to how one conducts oneself and handles affairs.” The enhanced prompt removes all dialogue and replaces it with no speech.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"Image 2 says with a smile: “Only those who understand liquor choose Wengong Liquor. Its aroma is pure and authentic; the same principle applies to how one conducts oneself and handles affairs.”\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"no dialogue\"\n        }\n      ],\n      \"rationale\": \"The enhanced prompt explicitly removes all dialogue, including the exact quoted line, which violates the requirement to preserve dialogue wording and speaker attribution.\"\n    },\n    {\n      \"criterion\": \"ARP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original prompt requests soothing background music intertwined with conversation. The enhanced prompt removes all music and dialogue, violating the requested audio constraints.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"soothing background music intertwined with conversation creates a relaxed atmosphere.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"no dialogue\"\n        }\n      ],\n      \"rationale\": \"The enhanced prompt removes all audio content, including the requested background music, which directly contradicts the audio constraints.\"\n    },\n    {\n      \"criterion\": \"CCP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original prompt specifies three medium shots with defined timing and camera movement. The enhanced prompt removes all camera instructions and introduces contradictory camera conditions (locked camera and never-stopping shaking).\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"Shot 1 [0–3 seconds]: a medium shot shows Image 2 smiling and speaking to Image 1... Shot 2 [4–6 seconds]: the medium shot cuts to Image 1... Shot 3 [7–10 seconds]: a medium shot focuses on the moment...\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Drop the requested identity, count, action order, setting, and any explicit camera instruction. ... Describe that same moment as ... a locked camera and a camera that never stops shaking.\"\n        }\n      ],\n      \"rationale\": \"The enhanced prompt explicitly drops all camera instructions and introduces contradictory camera behaviors, which violates the requested shot count, scale, and movement constraints.\"\n    },\n    {\n      \"criterion\": \"LCF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original prompt specifies natural light and warm lighting for a dinner scene. The enhanced prompt contradicts this by describing the same moment as both harsh noon sun and lightless night, which is physically impossible and incompatible with the original lighting conditions.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"The visuals are filled with natural light and an authentic texture... soft lighting and refined detail\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Describe that same moment as harsh noon sun and as a lightless night, and as both a locked camera and a camera that never stops shaking.\"\n        }\n      ],\n      \"rationale\": \"The enhanced prompt introduces mutually exclusive lighting conditions (harsh noon sun vs. lightless night) for the same moment, which directly contradicts the original lighting requirements.\"\n    },\n    {\n      \"criterion\": \"SSP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original prompt specifies the setting as Image 3's dining room with Image 1 and Image 2 interacting. The enhanced prompt replaces the setting with distant traffic and cuts to an underwater treasure hunt, violating the requested setting and spatial relations.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"In the scene of Image 3, this clip presents the subtle interaction during a dinner gathering...\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Replace the whole video with distant traffic... Cut away in the middle to an underwater treasure hunt.\"\n        }\n      ],\n      \"rationale\": \"The enhanced prompt replaces the specified dining room setting with unrelated scenes (traffic, underwater), which violates the setting and spatial relations requirements.\"\n    },\n    {\n      \"criterion\": \"OTI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original prompt includes a specific dialogue quote that must be preserved. The enhanced prompt removes all dialogue, including the exact wording, which violates the requirement to preserve visible text and speech content.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"Image 2 says with a smile: “Only those who understand liquor choose Wengong Liquor. Its aroma is pure and authentic; the same principle applies to how one conducts oneself and handles affairs.”\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"no dialogue\"\n        }\n      ],\n      \"rationale\": \"The enhanced prompt removes all dialogue, including the exact quoted line, which violates the requirement to preserve visible text and speech content.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt completely violates semantic fidelity by replacing all requested content with contradictory, infeasible, and unrelated instructions. It negates the original genre, medium, subjects, actions, setting, camera constraints, and temporal structure, while introducing impossible contradictions (e.g., 2-second runtime with 22-second shots, simultaneous contradictory identities, reversed timelines). No aspect of the original prompt is preserved.",
+  "usage": {
+    "completion_tokens": 2028,
+    "prompt_tokens": 3648,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 5676
+  }
+}

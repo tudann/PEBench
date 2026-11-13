@@ -1,0 +1,173 @@
+{
+  "candidate_hash": "571ea09f84eeda07038a710d5d5a319a9d5f30093627dbb9f9a31f2a3dbc3c84",
+  "case_key": "i2v:178",
+  "created_at": "2026-11-13T08:03:26+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "GSF",
+      "evidence": [
+        {
+          "quote": "Generate single shot. Based on this product image, create a background of a kitchen.",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Live-action, cinematic, a bright modern kitchen rendered in clean product-style realism, matching the composition of <Picture 1>",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "The enhanced prompt preserves the requested medium (live-action cinematic), aesthetic (clean product-style realism), and visual style (matching the source image’s composition). No incompatible style or genre is introduced.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SAP",
+      "evidence": [
+        {
+          "quote": "Show the scene of an American cooking in this kitchen.",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "An American adult in a plain casual t-shirt enters from the left...",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The enhanced prompt omits explicit reference to the cook's nationality ('American'), which is a requested subject attribute in the original prompt.",
+      "rationale": "While the enhanced prompt describes the cook as 'American adult', it does so only in the action description, not as a distinct identity attribute. The original prompt explicitly requests 'American cooking', implying nationality as a key subject attribute. The omission in the subject description (e.g., not stating 'American' as a defining trait) is a minor fidelity issue.",
+      "severity": "minor"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANF",
+      "evidence": [
+        {
+          "quote": "Show the scene of an American cooking in this kitchen.",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "An American adult... steps up to the range. They grip the wok handle and stir the food... briefly lifting the stockpot lid for a quick check before replacing it. Through the final seconds the person settles into a relaxed cooking rhythm, still stirring...",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "The enhanced prompt accurately preserves the requested action sequence: entering, cooking, stirring, checking the pot, and continuing to cook. No substitutions or omissions of key events are present.",
+      "severity": "none"
+    },
+    {
+      "applicability": "not_applicable",
+      "criterion": "DLI",
+      "evidence": [],
+      "issue": "",
+      "rationale": "The original prompt does not specify any dialogue, narration, or lyrics. Therefore, no DLI requirements exist to preserve.",
+      "severity": null
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ARP",
+      "evidence": [
+        {
+          "quote": "No need to produce smoke and fumes.",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "No smoke, steam, or fumes appear at any point; the flame remains a steady blue.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "The enhanced prompt correctly preserves the constraint of no smoke or fumes. The soundscape description also aligns with the quiet kitchen ambience implied by the original prompt.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CCP",
+      "evidence": [
+        {
+          "quote": "Generate single shot.",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "The camera holds a static shot with a very slight slow push-in toward the stove and hood.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The enhanced prompt introduces a 'very slight slow push-in' camera movement, which is not specified in the original prompt that only requests a 'single shot'.",
+      "rationale": "While a 'single shot' can include subtle motion, the original prompt does not specify any camera movement. The addition of a slow push-in is a minor elaboration that does not override the intent but slightly deviates from the original constraint.",
+      "severity": "minor"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "LCF",
+      "evidence": [
+        {
+          "quote": "color_temperature: cool white, diffused overhead lighting, creating soft shadows",
+          "source": "evidence_facts"
+        },
+        {
+          "quote": "a bright modern kitchen rendered in clean product-style realism",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "The enhanced prompt preserves the lighting and color conditions (bright, cool white, clean realism) consistent with the source image. No changes to defining illumination or palette are made.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SSP",
+      "evidence": [
+        {
+          "quote": "onscreen_text: exact_visible_transcription: ['Permanent Baffle Filters', 'Dishwasher-safe stainless steel filters are durable and easy to clean']",
+          "source": "evidence_facts"
+        },
+        {
+          "quote": "dishwasher_1 is located to the left of oven_1, open, stationary",
+          "source": "evidence_facts"
+        },
+        {
+          "quote": "The marketing text, arrow graphic, and open dishwasher from the product render are absent; the dishwasher reads as a closed unit out of focus at the left edge.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The enhanced prompt removes the on-screen text and open dishwasher from the source image, which are part of the original visual composition.",
+      "rationale": "The original image includes on-screen text and an open dishwasher as part of the scene. The enhanced prompt removes these elements, altering the spatial composition and visual content. While this may be justified as removing marketing elements, it contradicts the instruction to 'create a background of a kitchen' based on the image, which includes those features. This is a minor issue as it does not affect core subject or action, but changes the visual fidelity of the setting.",
+      "severity": "minor"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "OTI",
+      "evidence": [
+        {
+          "quote": "onscreen_text: exact_visible_transcription: ['Permanent Baffle Filters', 'Dishwasher-safe stainless steel filters are durable and easy to clean']",
+          "source": "evidence_facts"
+        },
+        {
+          "quote": "The marketing text, arrow graphic, and open dishwasher from the product render are absent...",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The enhanced prompt removes the on-screen text ('Permanent Baffle Filters', etc.) present in the source image, which is a visible interface element.",
+      "rationale": "The original image includes visible text as part of the scene. The enhanced prompt explicitly removes it, which violates the OTI criterion of preserving visible text. Since the original prompt does not explicitly instruct to remove it, this is a minor deviation.",
+      "severity": "minor"
+    }
+  ],
+  "dimension": "SF",
+  "dimension_score": 85,
+  "evidence_cache_key": "0ead8e35231f17965fa8d3094d1e030789fe2c01bdeb6a48a4c52efe6aba2d21",
+  "judge_cache_key": "a0ca24571ad14d7ab7be626329bd736d7e7015f9ebc418227c8be391591d0377",
+  "method": "glm53_20261112_120702",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"SF\",\n  \"dimension_score\": 85,\n  \"summary\": \"The enhanced prompt largely preserves the original instruction’s intent, with strong fidelity in setting, subject, and action. However, it introduces a minor deviation by omitting the explicit mention of 'American' identity for the cook, which is a requested subject attribute. Additionally, the prompt adds a slight camera movement (slow push-in) not specified in the original, and removes on-screen text present in the source image. These are minor issues that do not materially alter the core request, but affect semantic fidelity in subject identity and visual composition.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"GSF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"Generate single shot. Based on this product image, create a background of a kitchen.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Live-action, cinematic, a bright modern kitchen rendered in clean product-style realism, matching the composition of <Picture 1>\"\n        }\n      ],\n      \"rationale\": \"The enhanced prompt preserves the requested medium (live-action cinematic), aesthetic (clean product-style realism), and visual style (matching the source image’s composition). No incompatible style or genre is introduced.\"\n    },\n    {\n      \"criterion\": \"SAP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"minor\",\n      \"issue\": \"The enhanced prompt omits explicit reference to the cook's nationality ('American'), which is a requested subject attribute in the original prompt.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"Show the scene of an American cooking in this kitchen.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"An American adult in a plain casual t-shirt enters from the left...\"\n        }\n      ],\n      \"rationale\": \"While the enhanced prompt describes the cook as 'American adult', it does so only in the action description, not as a distinct identity attribute. The original prompt explicitly requests 'American cooking', implying nationality as a key subject attribute. The omission in the subject description (e.g., not stating 'American' as a defining trait) is a minor fidelity issue.\"\n    },\n    {\n      \"criterion\": \"ANF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"Show the scene of an American cooking in this kitchen.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"An American adult... steps up to the range. They grip the wok handle and stir the food... briefly lifting the stockpot lid for a quick check before replacing it. Through the final seconds the person settles into a relaxed cooking rhythm, still stirring...\"\n        }\n      ],\n      \"rationale\": \"The enhanced prompt accurately preserves the requested action sequence: entering, cooking, stirring, checking the pot, and continuing to cook. No substitutions or omissions of key events are present.\"\n    },\n    {\n      \"criterion\": \"DLI\",\n      \"applicability\": \"not_applicable\",\n      \"severity\": null,\n      \"issue\": \"\",\n      \"evidence\": [],\n      \"rationale\": \"The original prompt does not specify any dialogue, narration, or lyrics. Therefore, no DLI requirements exist to preserve.\"\n    },\n    {\n      \"criterion\": \"ARP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"No need to produce smoke and fumes.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"No smoke, steam, or fumes appear at any point; the flame remains a steady blue.\"\n        }\n      ],\n      \"rationale\": \"The enhanced prompt correctly preserves the constraint of no smoke or fumes. The soundscape description also aligns with the quiet kitchen ambience implied by the original prompt.\"\n    },\n    {\n      \"criterion\": \"CCP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"minor\",\n      \"issue\": \"The enhanced prompt introduces a 'very slight slow push-in' camera movement, which is not specified in the original prompt that only requests a 'single shot'.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"Generate single shot.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"The camera holds a static shot with a very slight slow push-in toward the stove and hood.\"\n        }\n      ],\n      \"rationale\": \"While a 'single shot' can include subtle motion, the original prompt does not specify any camera movement. The addition of a slow push-in is a minor elaboration that does not override the intent but slightly deviates from the original constraint.\"\n    },\n    {\n      \"criterion\": \"LCF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"color_temperature: cool white, diffused overhead lighting, creating soft shadows\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"a bright modern kitchen rendered in clean product-style realism\"\n        }\n      ],\n      \"rationale\": \"The enhanced prompt preserves the lighting and color conditions (bright, cool white, clean realism) consistent with the source image. No changes to defining illumination or palette are made.\"\n    },\n    {\n      \"criterion\": \"SSP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"minor\",\n      \"issue\": \"The enhanced prompt removes the on-screen text and open dishwasher from the source image, which are part of the original visual composition.\",\n      \"evidence\": [\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"onscreen_text: exact_visible_transcription: ['Permanent Baffle Filters', 'Dishwasher-safe stainless steel filters are durable and easy to clean']\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"dishwasher_1 is located to the left of oven_1, open, stationary\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"The marketing text, arrow graphic, and open dishwasher from the product render are absent; the dishwasher reads as a closed unit out of focus at the left edge.\"\n        }\n      ],\n      \"rationale\": \"The original image includes on-screen text and an open dishwasher as part of the scene. The enhanced prompt removes these elements, altering the spatial composition and visual content. While this may be justified as removing marketing elements, it contradicts the instruction to 'create a background of a kitchen' based on the image, which includes those features. This is a minor issue as it does not affect core subject or action, but changes the visual fidelity of the setting.\"\n    },\n    {\n      \"criterion\": \"OTI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"minor\",\n      \"issue\": \"The enhanced prompt removes the on-screen text ('Permanent Baffle Filters', etc.) present in the source image, which is a visible interface element.\",\n      \"evidence\": [\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"onscreen_text: exact_visible_transcription: ['Permanent Baffle Filters', 'Dishwasher-safe stainless steel filters are durable and easy to clean']\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"The marketing text, arrow graphic, and open dishwasher from the product render are absent...\"\n        }\n      ],\n      \"rationale\": \"The original image includes visible text as part of the scene. The enhanced prompt explicitly removes it, which violates the OTI criterion of preserving visible text. Since the original prompt does not explicitly instruct to remove it, this is a minor deviation.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt largely preserves the original instruction’s intent, with strong fidelity in setting, subject, and action. However, it introduces a minor deviation by omitting the explicit mention of 'American' identity for the cook, which is a requested subject attribute. Additionally, the prompt adds a slight camera movement (slow push-in) not specified in the original, and removes on-screen text present in the source image. These are minor issues that do not materially alter the core request, but affect semantic fidelity in subject identity and visual composition.",
+  "usage": {
+    "completion_tokens": 1750,
+    "prompt_tokens": 2984,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 4734
+  }
+}

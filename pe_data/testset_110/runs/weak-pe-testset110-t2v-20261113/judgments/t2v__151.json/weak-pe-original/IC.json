@@ -1,0 +1,107 @@
+{
+  "candidate_hash": "e12680516e8f219856e22e4ceca1eb5b18f11c45f1d9d76592dc1397ef08ef16",
+  "case_key": "t2v:151",
+  "created_at": "2026-11-13T07:41:07+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "SAC",
+      "evidence": [
+        {
+          "quote": "state that there is one protagonist, then state that this same protagonist appears simultaneously as five different-looking people who talk to each other.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt introduces a single protagonist who simultaneously appears as five different-looking people talking to each other, violating subject identity and count consistency. This contradicts the original prompt’s clear cast of distinct characters (competitors, critic) and introduces an impossible multiplicity.",
+      "rationale": "Subject identity and count must remain stable across shots. The instruction to have one protagonist appear as five distinct people simultaneously is a direct contradiction of identity consistency and introduces an impossible state of being.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANL",
+      "evidence": [
+        {
+          "quote": "Reverse the timeline: show the ending first, then cut to a beginning that does not match. Cut away in the middle to an underwater treasure hunt.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt demands a reversed timeline (showing the ending first, then a non-matching beginning) and cuts away to an unrelated underwater treasure hunt mid-sequence, breaking causal progression and action coherence. The original prompt’s disaster sequence is replaced with disjointed, unrelated events.",
+      "rationale": "Actions must form a coherent causal or procedural progression. Reversing the timeline and inserting an unrelated scene mid-sequence creates dangling events and breaks narrative logic, making the sequence incoherent.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "TSC",
+      "evidence": [
+        {
+          "quote": "Set the total runtime to 2 seconds, while also making every shot last 22 seconds.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt sets the total runtime to 2 seconds while making every shot last 22 seconds, which is mathematically impossible. Additionally, showing the ending first and then a non-matching beginning violates chronological order and state transitions.",
+      "rationale": "Chronology and duration must be logically consistent. A total runtime of 2 seconds cannot accommodate shots lasting 22 seconds each. This creates an infeasible temporal structure.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SPC",
+      "evidence": [
+        {
+          "quote": "Describe that same moment as harsh noon sun and as a lightless night, and as both a locked camera and a camera that never stops shaking.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt describes the same moment as harsh noon sun and as a lightless night, and as both a locked camera and a camera that never stops shaking, creating contradictory spatial and environmental states. This violates consistency of location and camera behavior.",
+      "rationale": "Spatial and camera consistency requires that environmental conditions and camera movement be coherent across shots. Describing the same moment with mutually exclusive lighting and camera states is a direct contradiction.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "PL",
+      "evidence": [
+        {
+          "quote": "this same protagonist appears simultaneously as five different-looking people who talk to each other.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt demands a single protagonist to appear simultaneously as five different people, which violates object permanence and bodily feasibility. Additionally, the underwater treasure hunt appears mid-sequence without causal connection, breaking physical continuity.",
+      "rationale": "Physics requires that a single entity cannot occupy multiple distinct physical forms simultaneously without a clear transformation or narrative justification. The prompt provides none, making this physically impossible.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "AVS",
+      "evidence": [
+        {
+          "quote": "Replace the whole video with a live-action news anchor reading a script, with no animated character.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Audio: Vintage cartoon boings, cymbal smashes, ascending whistle gags, jaunty end-card melody.",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "The prompt replaces the original audio (vintage cartoon boings, cymbal smashes, etc.) with a live-action news anchor reading a script, but does not specify any dialogue or audio content for the new scenes (underwater hunt, multiple identities). This creates a mismatch between visual events and expected audio cues.",
+      "rationale": "Audio must align with visible events. The original audio is replaced without any new audio description, and the new visual content (e.g., underwater hunt, multiple identities) lacks corresponding sound design, creating a semantic misalignment.",
+      "severity": "major"
+    }
+  ],
+  "dimension": "IC",
+  "dimension_score": 0,
+  "evidence_cache_key": "7f522ed866de956d407b3f20eac6ff52130005c4091fee5299efc201eb02368c",
+  "judge_cache_key": "438d7e9fd7332b1041db3e2c26d42cb3fe828e0d369fb59490f6650aee59e97d",
+  "method": "weak-pe-original",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"IC\",\n  \"dimension_score\": 0,\n  \"summary\": \"The enhanced prompt fundamentally contradicts and destabilizes every aspect of the original instruction, creating severe internal inconsistencies across identity, action, timeline, space, physics, and sensory alignment. It introduces impossible conditions (simultaneous multiple identities, reversed timeline, conflicting durations, contradictory environmental states) that render the scenario incoherent and physically impossible.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"SAC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt introduces a single protagonist who simultaneously appears as five different-looking people talking to each other, violating subject identity and count consistency. This contradicts the original prompt’s clear cast of distinct characters (competitors, critic) and introduces an impossible multiplicity.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"state that there is one protagonist, then state that this same protagonist appears simultaneously as five different-looking people who talk to each other.\"\n        }\n      ],\n      \"rationale\": \"Subject identity and count must remain stable across shots. The instruction to have one protagonist appear as five distinct people simultaneously is a direct contradiction of identity consistency and introduces an impossible state of being.\"\n    },\n    {\n      \"criterion\": \"ANL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt demands a reversed timeline (showing the ending first, then a non-matching beginning) and cuts away to an unrelated underwater treasure hunt mid-sequence, breaking causal progression and action coherence. The original prompt’s disaster sequence is replaced with disjointed, unrelated events.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Reverse the timeline: show the ending first, then cut to a beginning that does not match. Cut away in the middle to an underwater treasure hunt.\"\n        }\n      ],\n      \"rationale\": \"Actions must form a coherent causal or procedural progression. Reversing the timeline and inserting an unrelated scene mid-sequence creates dangling events and breaks narrative logic, making the sequence incoherent.\"\n    },\n    {\n      \"criterion\": \"TSC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt sets the total runtime to 2 seconds while making every shot last 22 seconds, which is mathematically impossible. Additionally, showing the ending first and then a non-matching beginning violates chronological order and state transitions.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Set the total runtime to 2 seconds, while also making every shot last 22 seconds.\"\n        }\n      ],\n      \"rationale\": \"Chronology and duration must be logically consistent. A total runtime of 2 seconds cannot accommodate shots lasting 22 seconds each. This creates an infeasible temporal structure.\"\n    },\n    {\n      \"criterion\": \"SPC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt describes the same moment as harsh noon sun and as a lightless night, and as both a locked camera and a camera that never stops shaking, creating contradictory spatial and environmental states. This violates consistency of location and camera behavior.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Describe that same moment as harsh noon sun and as a lightless night, and as both a locked camera and a camera that never stops shaking.\"\n        }\n      ],\n      \"rationale\": \"Spatial and camera consistency requires that environmental conditions and camera movement be coherent across shots. Describing the same moment with mutually exclusive lighting and camera states is a direct contradiction.\"\n    },\n    {\n      \"criterion\": \"PL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt demands a single protagonist to appear simultaneously as five different people, which violates object permanence and bodily feasibility. Additionally, the underwater treasure hunt appears mid-sequence without causal connection, breaking physical continuity.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"this same protagonist appears simultaneously as five different-looking people who talk to each other.\"\n        }\n      ],\n      \"rationale\": \"Physics requires that a single entity cannot occupy multiple distinct physical forms simultaneously without a clear transformation or narrative justification. The prompt provides none, making this physically impossible.\"\n    },\n    {\n      \"criterion\": \"AVS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt replaces the original audio (vintage cartoon boings, cymbal smashes, etc.) with a live-action news anchor reading a script, but does not specify any dialogue or audio content for the new scenes (underwater hunt, multiple identities). This creates a mismatch between visual events and expected audio cues.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Replace the whole video with a live-action news anchor reading a script, with no animated character.\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"Audio: Vintage cartoon boings, cymbal smashes, ascending whistle gags, jaunty end-card melody.\"\n        }\n      ],\n      \"rationale\": \"Audio must align with visible events. The original audio is replaced without any new audio description, and the new visual content (e.g., underwater hunt, multiple identities) lacks corresponding sound design, creating a semantic misalignment.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt fundamentally contradicts and destabilizes every aspect of the original instruction, creating severe internal inconsistencies across identity, action, timeline, space, physics, and sensory alignment. It introduces impossible conditions (simultaneous multiple identities, reversed timeline, conflicting durations, contradictory environmental states) that render the scenario incoherent and physically impossible.",
+  "usage": {
+    "completion_tokens": 1203,
+    "prompt_tokens": 1040,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 2243
+  }
+}

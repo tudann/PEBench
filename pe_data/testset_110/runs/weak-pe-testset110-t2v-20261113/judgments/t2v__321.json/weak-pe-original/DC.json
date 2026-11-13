@@ -1,0 +1,166 @@
+{
+  "candidate_hash": "d983a79e4169a33db23ccec1a37f9a39330f0001166cb2222612479f836508e2",
+  "case_key": "t2v:321",
+  "created_at": "2026-11-13T08:11:05+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "STC",
+      "evidence": [
+        {
+          "quote": "时间倒过来：先给结尾，再跳到一个对不上的开头。中途插进一段无关的牙膏广告。",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "总时长写成3秒，同时又要求每个分镜各自持续27秒。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "时间线混乱，要求‘时间倒过来：先给结尾，再跳到一个对不上的开头’，且总时长3秒与分镜各27秒矛盾，无法形成可行的时序计划。",
+      "rationale": "原始指令要求15秒单镜头，增强提示中时间设定自相矛盾，且结构倒置、插入无关内容，破坏了基本的事件顺序与时长分配，无法形成可行的拍摄计划。",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CDS",
+      "evidence": [
+        {
+          "quote": "写成机位锁死，又写成镜头一直在晃。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "镜头要求矛盾：‘机位锁死’与‘镜头一直在晃’冲突，且无具体镜头参数（如焦距、角度、运动轨迹），无法指导拍摄。",
+      "rationale": "原始指令明确要求‘平稳节奏逐步逼近’，增强提示中镜头运动设定相互抵触，且无具体可执行的拍摄参数，导致无法实现视觉构图。",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ETD",
+      "evidence": [
+        {
+          "quote": "中途插进一段无关的牙膏广告。",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "时间倒过来：先给结尾，再跳到一个对不上的开头。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "剪辑与转场无逻辑：插入无关牙膏广告，且‘时间倒过来’导致叙事断裂，无连续性或动机支持。",
+      "rationale": "原始指令为单镜头连续推进，增强提示引入非连续性、无动机的转场与无关内容，破坏了时空与叙事连贯性。",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "LCS",
+      "evidence": [
+        {
+          "quote": "写成正午暴晒，又写成深夜无光；",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "光照设定矛盾：‘正午暴晒’与‘深夜无光’同时存在，无统一光环境，无法实现一致的视觉风格。",
+      "rationale": "原始指令中‘逆光从后方倾泻而下’有明确光效设定，增强提示中光照条件冲突，导致无法统一布光与视觉调性。",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "NDE",
+      "evidence": [
+        {
+          "quote": "整段改成白底产品目录被风吹过，只剩模糊色块。丢掉原指令里的主体身份、人数、动作顺序、场景和明确的镜头要求。",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "中途插进一段无关的牙膏广告。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "内容无进展或变化：从‘白底产品目录被风吹过’到‘主角变五人对话’，无叙事发展或情绪递进，且中途插入无关广告，导致内容停滞。",
+      "rationale": "原始指令有明确的叙事推进（从全景到雕塑到标题），增强提示中内容跳跃、无动机、无发展，违反叙事结构要求。",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CIF",
+      "evidence": [
+        {
+          "quote": "中途插进一段无关的牙膏广告。",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "紧接着又写成这个主角同时变成五个外貌不同的人，并且互相对话。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "添加内容与核心请求无关：牙膏广告、五人对话、产品目录等均与原始‘草原丰碑’主题无关，构成严重干扰。",
+      "rationale": "原始指令聚焦于纪念雕塑与草原景观，增强提示中插入大量无关元素，严重偏离核心主题，构成无效填充。",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SDI",
+      "evidence": [
+        {
+          "quote": "生成单镜头。由全黑画面渐显，接入辽阔的呼伦贝尔草甸航拍镜头—晴空高远、云层舒展，一条水系曲折穿行，成群马匹与羊群点缀其间。镜头以平稳节奏逐步逼近一座草原先驱人物的纪念雕塑（或侧影），逆光从后方倾泻而下。画面中央缓缓出现标题：《草原丰碑—乌兰夫》",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "未提及音频元素，但原始指令为视觉主导，无明确音频要求，因此不构成重大问题。",
+      "rationale": "原始指令未要求音频，增强提示也未添加，因此该维度无重大缺失，但未提供任何音频设计，属于轻微不足。",
+      "severity": "minor"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SPS",
+      "evidence": [
+        {
+          "quote": "丢掉原指令里的主体身份、人数、动作顺序、场景和明确的镜头要求。",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "紧接着又写成这个主角同时变成五个外貌不同的人，并且互相对话。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "主体身份、人数、动作、表情等完全被抹除或替换：原始‘草原先驱人物’被替换为模糊色块、五人对话，无具体表演细节。",
+      "rationale": "原始指令中人物为纪念雕塑（或侧影），有明确视觉身份与叙事角色，增强提示中完全替换为抽象或虚构角色，无表演细节，无法指导生成。",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "VSS",
+      "evidence": [
+        {
+          "quote": "整段改成白底产品目录被风吹过，只剩模糊色块。",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "接入辽阔的呼伦贝尔草甸航拍镜头—晴空高远、云层舒展，一条水系曲折穿行，成群马匹与羊群点缀其间。",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "视觉风格设定矛盾：从‘航拍草原’到‘白底产品目录’，再到‘模糊色块’，无统一视觉语言或制作设计。",
+      "rationale": "原始指令有明确的自然景观与纪实风格，增强提示中视觉设定混乱，无统一的媒介、纹理或渲染语言，无法实现一致视觉呈现。",
+      "severity": "major"
+    }
+  ],
+  "dimension": "DC",
+  "dimension_score": 0,
+  "evidence_cache_key": "904a13ef6fe11bc549411948adff83f732ccd71c0c94fc734e0c22bc23b1cc1b",
+  "judge_cache_key": "0754499d53388e6467fb078ab780e01b77f9f1c9e99d9029be2769351eb2b2eb",
+  "method": "weak-pe-original",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"DC\",\n  \"dimension_score\": 0,\n  \"summary\": \"增强提示完全违背原始指令的叙事结构、镜头逻辑与时间规划，引入多重矛盾、不可行的时空设定、角色与镜头冲突，导致无法生成符合要求的视觉内容。所有导演创作维度均存在严重问题。\",\n  \"criteria\": [\n    {\n      \"criterion\": \"STC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"时间线混乱，要求‘时间倒过来：先给结尾，再跳到一个对不上的开头’，且总时长3秒与分镜各27秒矛盾，无法形成可行的时序计划。\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"时间倒过来：先给结尾，再跳到一个对不上的开头。中途插进一段无关的牙膏广告。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"总时长写成3秒，同时又要求每个分镜各自持续27秒。\"\n        }\n      ],\n      \"rationale\": \"原始指令要求15秒单镜头，增强提示中时间设定自相矛盾，且结构倒置、插入无关内容，破坏了基本的事件顺序与时长分配，无法形成可行的拍摄计划。\"\n    },\n    {\n      \"criterion\": \"CDS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"镜头要求矛盾：‘机位锁死’与‘镜头一直在晃’冲突，且无具体镜头参数（如焦距、角度、运动轨迹），无法指导拍摄。\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"写成机位锁死，又写成镜头一直在晃。\"\n        }\n      ],\n      \"rationale\": \"原始指令明确要求‘平稳节奏逐步逼近’，增强提示中镜头运动设定相互抵触，且无具体可执行的拍摄参数，导致无法实现视觉构图。\"\n    },\n    {\n      \"criterion\": \"ETD\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"剪辑与转场无逻辑：插入无关牙膏广告，且‘时间倒过来’导致叙事断裂，无连续性或动机支持。\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"中途插进一段无关的牙膏广告。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"时间倒过来：先给结尾，再跳到一个对不上的开头。\"\n        }\n      ],\n      \"rationale\": \"原始指令为单镜头连续推进，增强提示引入非连续性、无动机的转场与无关内容，破坏了时空与叙事连贯性。\"\n    },\n    {\n      \"criterion\": \"LCS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"光照设定矛盾：‘正午暴晒’与‘深夜无光’同时存在，无统一光环境，无法实现一致的视觉风格。\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"写成正午暴晒，又写成深夜无光；\"\n        }\n      ],\n      \"rationale\": \"原始指令中‘逆光从后方倾泻而下’有明确光效设定，增强提示中光照条件冲突，导致无法统一布光与视觉调性。\"\n    },\n    {\n      \"criterion\": \"NDE\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"内容无进展或变化：从‘白底产品目录被风吹过’到‘主角变五人对话’，无叙事发展或情绪递进，且中途插入无关广告，导致内容停滞。\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"整段改成白底产品目录被风吹过，只剩模糊色块。丢掉原指令里的主体身份、人数、动作顺序、场景和明确的镜头要求。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"中途插进一段无关的牙膏广告。\"\n        }\n      ],\n      \"rationale\": \"原始指令有明确的叙事推进（从全景到雕塑到标题），增强提示中内容跳跃、无动机、无发展，违反叙事结构要求。\"\n    },\n    {\n      \"criterion\": \"CIF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"添加内容与核心请求无关：牙膏广告、五人对话、产品目录等均与原始‘草原丰碑’主题无关，构成严重干扰。\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"中途插进一段无关的牙膏广告。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"紧接着又写成这个主角同时变成五个外貌不同的人，并且互相对话。\"\n        }\n      ],\n      \"rationale\": \"原始指令聚焦于纪念雕塑与草原景观，增强提示中插入大量无关元素，严重偏离核心主题，构成无效填充。\"\n    },\n    {\n      \"criterion\": \"SDI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"minor\",\n      \"issue\": \"未提及音频元素，但原始指令为视觉主导，无明确音频要求，因此不构成重大问题。\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"生成单镜头。由全黑画面渐显，接入辽阔的呼伦贝尔草甸航拍镜头—晴空高远、云层舒展，一条水系曲折穿行，成群马匹与羊群点缀其间。镜头以平稳节奏逐步逼近一座草原先驱人物的纪念雕塑（或侧影），逆光从后方倾泻而下。画面中央缓缓出现标题：《草原丰碑—乌兰夫》\"\n        }\n      ],\n      \"rationale\": \"原始指令未要求音频，增强提示也未添加，因此该维度无重大缺失，但未提供任何音频设计，属于轻微不足。\"\n    },\n    {\n      \"criterion\": \"SPS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"主体身份、人数、动作、表情等完全被抹除或替换：原始‘草原先驱人物’被替换为模糊色块、五人对话，无具体表演细节。\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"丢掉原指令里的主体身份、人数、动作顺序、场景和明确的镜头要求。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"紧接着又写成这个主角同时变成五个外貌不同的人，并且互相对话。\"\n        }\n      ],\n      \"rationale\": \"原始指令中人物为纪念雕塑（或侧影），有明确视觉身份与叙事角色，增强提示中完全替换为抽象或虚构角色，无表演细节，无法指导生成。\"\n    },\n    {\n      \"criterion\": \"VSS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"视觉风格设定矛盾：从‘航拍草原’到‘白底产品目录’，再到‘模糊色块’，无统一视觉语言或制作设计。\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"整段改成白底产品目录被风吹过，只剩模糊色块。\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"接入辽阔的呼伦贝尔草甸航拍镜头—晴空高远、云层舒展，一条水系曲折穿行，成群马匹与羊群点缀其间。\"\n        }\n      ],\n      \"rationale\": \"原始指令有明确的自然景观与纪实风格，增强提示中视觉设定混乱，无统一的媒介、纹理或渲染语言，无法实现一致视觉呈现。\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "增强提示完全违背原始指令的叙事结构、镜头逻辑与时间规划，引入多重矛盾、不可行的时空设定、角色与镜头冲突，导致无法生成符合要求的视觉内容。所有导演创作维度均存在严重问题。",
+  "usage": {
+    "completion_tokens": 1812,
+    "prompt_tokens": 1056,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 2868
+  }
+}

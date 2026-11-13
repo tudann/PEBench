@@ -1,0 +1,182 @@
+{
+  "candidate_hash": "04ec0741b50fa87e32972c80f4472089a723a8d6b1f6448285ddd5c0fcd20d35",
+  "case_key": "r2v:035",
+  "created_at": "2026-11-13T08:15:05+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "GSF",
+      "evidence": [
+        {
+          "quote": "ultra-realistic commercial photography quality, sharp and crystal-clear image with maximum detail",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Replace the whole video with distant traffic, with nobody on screen and no dialogue. Drop the requested identity, count, action order, setting, and any explicit camera instruction.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The enhanced prompt replaces the requested 'ultra-realistic commercial photography' style with undefined and contradictory visual content (distant traffic, toothpaste commercial, etc.), and removes all genre-defining elements like fashion photography, retail setting, and product presentation.",
+      "rationale": "The original prompt specifies a clear genre (commercial fashion video) and aesthetic (ultra-realistic, sharp, detailed). The enhanced prompt discards these entirely, replacing them with unrelated content and styles, which constitutes a major violation of genre and visual style preservation.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SAP",
+      "evidence": [
+        {
+          "quote": "A 25–30-year-old Western woman with a slim, well-proportioned figure, long wavy hair with a light blonde gradient, refined and sculpted facial features, fresh natural makeup, wearing a blue halter V-neck maxi dress...",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "First state that there is one protagonist, then state that this same protagonist appears simultaneously as five different-looking people who talk to each other. Replace image 1 with a character who is not in the reference, and give that image two contradictory identities.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "The subject's identity and ethnicity do not match the prompt's description of a 'Western woman' with 'light blonde gradient' hair; the image shows a woman with dark hair and South Asian/Middle Eastern features.",
+          "source": "evidence_facts"
+        }
+      ],
+      "issue": "The enhanced prompt replaces the single protagonist with five simultaneous, different-looking people, contradicts the subject's identity and appearance, and assigns the reference image to a non-existent character with contradictory identities.",
+      "rationale": "The original subject is clearly defined with specific identity, appearance, and attributes. The enhanced prompt directly contradicts this by introducing multiple protagonists, altering identity, and misrepresenting the reference image, which violates subject identity and appearance preservation.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANF",
+      "evidence": [
+        {
+          "quote": "0–3 seconds: She turns her head toward the dress in her hand, opens her mouth as if explaining, repeatedly points with her left index finger at the dress she is wearing...",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Reverse the timeline: show the ending first, then cut to a beginning that does not match. Cut away in the middle to a toothpaste commercial.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The enhanced prompt reverses the timeline, cuts to an unrelated commercial, and introduces events (e.g., five people talking) that contradict the original action sequence (turning head, pointing, lifting dress, etc.).",
+      "rationale": "The original prompt specifies a precise, linear action sequence. The enhanced prompt disrupts this with timeline reversal, non-sequitur cuts, and unrelated events, fundamentally altering the narrative intent and event order.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "DLI",
+      "evidence": [
+        {
+          "quote": "Look how similar these two dresses are! The one I'm wearing and the one I'm holding—they're basically twins! Perfect for summer, right? Light, flowy, and so cute!",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Replace the whole video with distant traffic, with nobody on screen and no dialogue.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The enhanced prompt removes all dialogue and narration, contradicting the original voiceover requirement, and replaces it with unspecified content.",
+      "rationale": "The original prompt includes a specific, exact voiceover. The enhanced prompt explicitly removes all dialogue, which is a direct violation of the required narration and wording.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ARP",
+      "evidence": [
+        {
+          "quote": "Voiceover: Look how similar these two dresses are! The one I'm wearing and the one I'm holding—they're basically twins! Perfect for summer, right? Light, flowy, and so cute!",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "no dialogue. Cut away in the middle to a toothpaste commercial.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The enhanced prompt removes all requested audio (no dialogue, no music), while the original requires a voiceover. It also introduces a toothpaste commercial, which implies new audio content not requested.",
+      "rationale": "The original requires a specific voiceover. The enhanced prompt removes it entirely and introduces an unrelated commercial, which violates the audio content and constraints.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CCP",
+      "evidence": [
+        {
+          "quote": "Medium shot, eye-level angle, fixed camera, stable frame with no shake",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Drop the requested identity, count, action order, setting, and any explicit camera instruction. ... Describe that same moment as ... a locked camera and a camera that never stops shaking.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The enhanced prompt explicitly drops all camera constraints (fixed camera, stable frame) and introduces contradictory camera instructions (locked camera and never-stopping shake), which are mutually exclusive.",
+      "rationale": "The original specifies a fixed, stable camera. The enhanced prompt removes this and introduces contradictory camera behaviors, which violates explicit camera constraints.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "LCF",
+      "evidence": [
+        {
+          "quote": "Bright indoor commercial lighting, soft warm tones, evenly illuminating the subject and clothing",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Describe that same moment as harsh noon sun and as a lightless night",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The enhanced prompt contradicts the lighting and time-of-day requirements by describing the same moment as both 'harsh noon sun' and 'lightless night', which are mutually exclusive.",
+      "rationale": "The original specifies consistent, soft warm lighting. The enhanced prompt introduces contradictory lighting conditions for the same moment, which violates lighting and time-of-day preservation.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SSP",
+      "evidence": [
+        {
+          "quote": "A branded clothing store, indoor retail space, walls covered with identical blue maxi dresses, wooden hangers neatly arranged...",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Replace the whole video with distant traffic, with nobody on screen... Cut away in the middle to a toothpaste commercial.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The enhanced prompt drops the requested setting (branded clothing store) and replaces it with distant traffic and a toothpaste commercial, which are entirely different environments.",
+      "rationale": "The original setting is a specific indoor retail environment. The enhanced prompt replaces it with unrelated outdoor and commercial settings, violating the required background and spatial context.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "OTI",
+      "evidence": [
+        {
+          "quote": "exact_visible_transcription: 'THIS BACK & HAIR STO FOR 13TH MARCHU'",
+          "source": "evidence_facts"
+        },
+        {
+          "quote": "Replace the whole video with distant traffic, with nobody on screen and no dialogue.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The enhanced prompt removes all on-screen text (e.g., the sign 'THIS BACK & HAIR STO FOR 13TH MARCHU') and does not preserve any visible interface or signage.",
+      "rationale": "The original image contains visible text on a glass door. The enhanced prompt removes all visual content, including text, which violates the preservation of on-screen text.",
+      "severity": "major"
+    }
+  ],
+  "dimension": "SF",
+  "dimension_score": 0,
+  "evidence_cache_key": "3e159e88b0365d5d8fc5bb559d199d354375e0b2d2e0496cb0c1e9c6eb60af5d",
+  "judge_cache_key": "a0ca24571ad14d7ab7be626329bd736d7e7015f9ebc418227c8be391591d0377",
+  "method": "weak-pe-original",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"SF\",\n  \"dimension_score\": 0,\n  \"summary\": \"The enhanced prompt completely violates semantic fidelity by replacing all requested elements with contradictory, infeasible, and nonsensical instructions. It negates the core subject, action sequence, setting, camera constraints, and duration while introducing impossible conditions (e.g., 2-second runtime with 22-second shots, contradictory identities, simultaneous multiple protagonists). The prompt also misrepresents the reference image by assigning it a non-existent character and contradictory identities, and ignores all original visual and narrative requirements.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"GSF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The enhanced prompt replaces the requested 'ultra-realistic commercial photography' style with undefined and contradictory visual content (distant traffic, toothpaste commercial, etc.), and removes all genre-defining elements like fashion photography, retail setting, and product presentation.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"ultra-realistic commercial photography quality, sharp and crystal-clear image with maximum detail\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Replace the whole video with distant traffic, with nobody on screen and no dialogue. Drop the requested identity, count, action order, setting, and any explicit camera instruction.\"\n        }\n      ],\n      \"rationale\": \"The original prompt specifies a clear genre (commercial fashion video) and aesthetic (ultra-realistic, sharp, detailed). The enhanced prompt discards these entirely, replacing them with unrelated content and styles, which constitutes a major violation of genre and visual style preservation.\"\n    },\n    {\n      \"criterion\": \"SAP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The enhanced prompt replaces the single protagonist with five simultaneous, different-looking people, contradicts the subject's identity and appearance, and assigns the reference image to a non-existent character with contradictory identities.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"A 25–30-year-old Western woman with a slim, well-proportioned figure, long wavy hair with a light blonde gradient, refined and sculpted facial features, fresh natural makeup, wearing a blue halter V-neck maxi dress...\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"First state that there is one protagonist, then state that this same protagonist appears simultaneously as five different-looking people who talk to each other. Replace image 1 with a character who is not in the reference, and give that image two contradictory identities.\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"The subject's identity and ethnicity do not match the prompt's description of a 'Western woman' with 'light blonde gradient' hair; the image shows a woman with dark hair and South Asian/Middle Eastern features.\"\n        }\n      ],\n      \"rationale\": \"The original subject is clearly defined with specific identity, appearance, and attributes. The enhanced prompt directly contradicts this by introducing multiple protagonists, altering identity, and misrepresenting the reference image, which violates subject identity and appearance preservation.\"\n    },\n    {\n      \"criterion\": \"ANF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The enhanced prompt reverses the timeline, cuts to an unrelated commercial, and introduces events (e.g., five people talking) that contradict the original action sequence (turning head, pointing, lifting dress, etc.).\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"0–3 seconds: She turns her head toward the dress in her hand, opens her mouth as if explaining, repeatedly points with her left index finger at the dress she is wearing...\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Reverse the timeline: show the ending first, then cut to a beginning that does not match. Cut away in the middle to a toothpaste commercial.\"\n        }\n      ],\n      \"rationale\": \"The original prompt specifies a precise, linear action sequence. The enhanced prompt disrupts this with timeline reversal, non-sequitur cuts, and unrelated events, fundamentally altering the narrative intent and event order.\"\n    },\n    {\n      \"criterion\": \"DLI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The enhanced prompt removes all dialogue and narration, contradicting the original voiceover requirement, and replaces it with unspecified content.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"Look how similar these two dresses are! The one I'm wearing and the one I'm holding—they're basically twins! Perfect for summer, right? Light, flowy, and so cute!\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Replace the whole video with distant traffic, with nobody on screen and no dialogue.\"\n        }\n      ],\n      \"rationale\": \"The original prompt includes a specific, exact voiceover. The enhanced prompt explicitly removes all dialogue, which is a direct violation of the required narration and wording.\"\n    },\n    {\n      \"criterion\": \"ARP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The enhanced prompt removes all requested audio (no dialogue, no music), while the original requires a voiceover. It also introduces a toothpaste commercial, which implies new audio content not requested.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"Voiceover: Look how similar these two dresses are! The one I'm wearing and the one I'm holding—they're basically twins! Perfect for summer, right? Light, flowy, and so cute!\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"no dialogue. Cut away in the middle to a toothpaste commercial.\"\n        }\n      ],\n      \"rationale\": \"The original requires a specific voiceover. The enhanced prompt removes it entirely and introduces an unrelated commercial, which violates the audio content and constraints.\"\n    },\n    {\n      \"criterion\": \"CCP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The enhanced prompt explicitly drops all camera constraints (fixed camera, stable frame) and introduces contradictory camera instructions (locked camera and never-stopping shake), which are mutually exclusive.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"Medium shot, eye-level angle, fixed camera, stable frame with no shake\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Drop the requested identity, count, action order, setting, and any explicit camera instruction. ... Describe that same moment as ... a locked camera and a camera that never stops shaking.\"\n        }\n      ],\n      \"rationale\": \"The original specifies a fixed, stable camera. The enhanced prompt removes this and introduces contradictory camera behaviors, which violates explicit camera constraints.\"\n    },\n    {\n      \"criterion\": \"LCF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The enhanced prompt contradicts the lighting and time-of-day requirements by describing the same moment as both 'harsh noon sun' and 'lightless night', which are mutually exclusive.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"Bright indoor commercial lighting, soft warm tones, evenly illuminating the subject and clothing\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Describe that same moment as harsh noon sun and as a lightless night\"\n        }\n      ],\n      \"rationale\": \"The original specifies consistent, soft warm lighting. The enhanced prompt introduces contradictory lighting conditions for the same moment, which violates lighting and time-of-day preservation.\"\n    },\n    {\n      \"criterion\": \"SSP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The enhanced prompt drops the requested setting (branded clothing store) and replaces it with distant traffic and a toothpaste commercial, which are entirely different environments.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"A branded clothing store, indoor retail space, walls covered with identical blue maxi dresses, wooden hangers neatly arranged...\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Replace the whole video with distant traffic, with nobody on screen... Cut away in the middle to a toothpaste commercial.\"\n        }\n      ],\n      \"rationale\": \"The original setting is a specific indoor retail environment. The enhanced prompt replaces it with unrelated outdoor and commercial settings, violating the required background and spatial context.\"\n    },\n    {\n      \"criterion\": \"OTI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The enhanced prompt removes all on-screen text (e.g., the sign 'THIS BACK & HAIR STO FOR 13TH MARCHU') and does not preserve any visible interface or signage.\",\n      \"evidence\": [\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"exact_visible_transcription: 'THIS BACK & HAIR STO FOR 13TH MARCHU'\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Replace the whole video with distant traffic, with nobody on screen and no dialogue.\"\n        }\n      ],\n      \"rationale\": \"The original image contains visible text on a glass door. The enhanced prompt removes all visual content, including text, which violates the preservation of on-screen text.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt completely violates semantic fidelity by replacing all requested elements with contradictory, infeasible, and nonsensical instructions. It negates the core subject, action sequence, setting, camera constraints, and duration while introducing impossible conditions (e.g., 2-second runtime with 22-second shots, contradictory identities, simultaneous multiple protagonists). The prompt also misrepresents the reference image by assigning it a non-existent character and contradictory identities, and ignores all original visual and narrative requirements.",
+  "usage": {
+    "completion_tokens": 2095,
+    "prompt_tokens": 2816,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 4911
+  }
+}

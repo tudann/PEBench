@@ -1,0 +1,166 @@
+{
+  "candidate_hash": "3ef6b93f5dc5c2c461849d66f865b33ebd1850f9126d038f50a5b60cb23f8eb7",
+  "case_key": "t2v:200",
+  "created_at": "2026-11-13T07:56:16+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "STC",
+      "evidence": [
+        {
+          "quote": "Set the total runtime to 3 seconds, while also making every shot last 27 seconds.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Reverse the timeline: show the ending first, then cut to a beginning that does not match.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The temporal plan is infeasible due to contradictory duration constraints (3-second runtime with 27-second shots) and a reversed timeline with mismatched beginning and ending. Shot boundaries and ordering are undefined and logically inconsistent.",
+      "rationale": "The duration constraints are mathematically impossible, and the timeline reversal lacks continuity or motivation, making a coherent sequence unachievable.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CDS",
+      "evidence": [
+        {
+          "quote": "Describe that same moment as harsh noon sun and as a lightless night, and as both a locked camera and a camera that never stops shaking.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Camera specifications are contradictory and infeasible: 'locked camera' and 'camera that never stops shaking' are mutually exclusive. No actionable framing, angle, or movement is provided for any shot.",
+      "rationale": "The prompt simultaneously demands opposing camera behaviors, which cannot be implemented in a single video. No consistent shot scale, angle, or movement is specified.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ETD",
+      "evidence": [
+        {
+          "quote": "Cut away in the middle to a rooftop fireworks show.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Reverse the timeline: show the ending first, then cut to a beginning that does not match.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Cuts and transitions are disconnected and unmotivated. The prompt instructs to 'cut away in the middle to a rooftop fireworks show' without spatial or narrative continuity, and the reversed timeline lacks logical progression.",
+      "rationale": "The transitions are abrupt and lack motivation, creating a disjointed sequence that violates spatial and narrative continuity.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "LCS",
+      "evidence": [
+        {
+          "quote": "Describe that same moment as harsh noon sun and as a lightless night...",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Lighting specifications are contradictory: 'harsh noon sun' and 'lightless night' cannot coexist in the same moment. No actionable light source, direction, or quality is defined for any scene.",
+      "rationale": "The prompt demands mutually exclusive lighting conditions, making it impossible to render a coherent visual environment.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "NDE",
+      "evidence": [
+        {
+          "quote": "First state that there is one protagonist, then state that this same protagonist appears simultaneously as five different-looking people who talk to each other.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Cut away in the middle to a rooftop fireworks show.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "There is no progression, variation, or resolution. The narrative is static and contradictory, with no escalation or meaningful development. The prompt introduces multiple protagonists and unrelated events without purpose or structure.",
+      "rationale": "The content lacks narrative arc or thematic development. The introduction of multiple protagonists and abrupt scene changes without motivation results in a static, incoherent sequence.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CIF",
+      "evidence": [
+        {
+          "quote": "Cut away in the middle to a rooftop fireworks show.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "this same protagonist appears simultaneously as five different-looking people who talk to each other.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Additions are irrelevant and distracting. The prompt introduces a rooftop fireworks show, multiple protagonists, and contradictory visual conditions that have no connection to the original request for a spiritual orator’s speech.",
+      "rationale": "The additions are not only irrelevant but actively contradict the original prompt’s focus, introducing elements that distract from and undermine the intended content.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SDI",
+      "evidence": [
+        {
+          "quote": "Drop the requested identity, count, action order, setting, and any explicit camera instruction.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Replace the whole video with distant traffic, with nobody on screen and no dialogue.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "No audio elements are specified, and the original prompt’s speech and ambient sound are dropped without replacement. The prompt removes dialogue and audience ambience without providing alternative audio cues.",
+      "rationale": "The prompt eliminates all original audio elements without providing a coherent alternative, resulting in a silent, disconnected sequence with no auditory context.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SPS",
+      "evidence": [
+        {
+          "quote": "A lifelike spiritual orator standing behind a carved lectern... addressing an audience with calm authority. He makes subtle hand gestures as he speaks...",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Replace the whole video with distant traffic, with nobody on screen and no dialogue.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Subject and performance details are contradicted and omitted. The original prompt’s orator, gestures, expression, and vocal delivery are replaced with 'nobody on screen and no dialogue', and the protagonist is redefined in contradictory ways.",
+      "rationale": "The core subject and performance elements are removed or replaced with incoherent alternatives, making the original intent unrecognizable.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "VSS",
+      "evidence": [
+        {
+          "quote": "Describe that same moment as harsh noon sun and as a lightless night, and as both a locked camera and a camera that never stops shaking.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Visual treatment is contradictory and undefined. The prompt demands simultaneous opposing conditions (e.g., lightless night and harsh noon sun, locked camera and shaking camera) without specifying medium, texture, or rendering style.",
+      "rationale": "The visual treatment is impossible to implement due to mutually exclusive conditions. No consistent medium, texture, or production design is specified.",
+      "severity": "major"
+    }
+  ],
+  "dimension": "DC",
+  "dimension_score": 0,
+  "evidence_cache_key": "af2f6e6d58fc2ecdb18efa9148b70f8c59388c242d7052414b8c3c0ff3d7ffa4",
+  "judge_cache_key": "0754499d53388e6467fb078ab780e01b77f9f1c9e99d9029be2769351eb2b2eb",
+  "method": "weak-pe-original",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"DC\",\n  \"dimension_score\": 0,\n  \"summary\": \"The enhanced prompt is incoherent and contradictory, violating fundamental principles of temporal planning, camera specifications, and narrative logic. It contains impossible constraints (e.g., 3-second runtime with 27-second shots), contradictory visual conditions (e.g., harsh noon sun and lightless night simultaneously), and invalid narrative structure (e.g., reversed timeline with mismatched beginning and ending). The prompt also introduces unrelated elements (fireworks, multiple protagonists) that contradict the original request and lack actionable direction. No feasible video plan can be derived.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"STC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The temporal plan is infeasible due to contradictory duration constraints (3-second runtime with 27-second shots) and a reversed timeline with mismatched beginning and ending. Shot boundaries and ordering are undefined and logically inconsistent.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Set the total runtime to 3 seconds, while also making every shot last 27 seconds.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Reverse the timeline: show the ending first, then cut to a beginning that does not match.\"\n        }\n      ],\n      \"rationale\": \"The duration constraints are mathematically impossible, and the timeline reversal lacks continuity or motivation, making a coherent sequence unachievable.\"\n    },\n    {\n      \"criterion\": \"CDS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Camera specifications are contradictory and infeasible: 'locked camera' and 'camera that never stops shaking' are mutually exclusive. No actionable framing, angle, or movement is provided for any shot.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Describe that same moment as harsh noon sun and as a lightless night, and as both a locked camera and a camera that never stops shaking.\"\n        }\n      ],\n      \"rationale\": \"The prompt simultaneously demands opposing camera behaviors, which cannot be implemented in a single video. No consistent shot scale, angle, or movement is specified.\"\n    },\n    {\n      \"criterion\": \"ETD\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Cuts and transitions are disconnected and unmotivated. The prompt instructs to 'cut away in the middle to a rooftop fireworks show' without spatial or narrative continuity, and the reversed timeline lacks logical progression.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Cut away in the middle to a rooftop fireworks show.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Reverse the timeline: show the ending first, then cut to a beginning that does not match.\"\n        }\n      ],\n      \"rationale\": \"The transitions are abrupt and lack motivation, creating a disjointed sequence that violates spatial and narrative continuity.\"\n    },\n    {\n      \"criterion\": \"LCS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Lighting specifications are contradictory: 'harsh noon sun' and 'lightless night' cannot coexist in the same moment. No actionable light source, direction, or quality is defined for any scene.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Describe that same moment as harsh noon sun and as a lightless night...\"\n        }\n      ],\n      \"rationale\": \"The prompt demands mutually exclusive lighting conditions, making it impossible to render a coherent visual environment.\"\n    },\n    {\n      \"criterion\": \"NDE\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"There is no progression, variation, or resolution. The narrative is static and contradictory, with no escalation or meaningful development. The prompt introduces multiple protagonists and unrelated events without purpose or structure.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"First state that there is one protagonist, then state that this same protagonist appears simultaneously as five different-looking people who talk to each other.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Cut away in the middle to a rooftop fireworks show.\"\n        }\n      ],\n      \"rationale\": \"The content lacks narrative arc or thematic development. The introduction of multiple protagonists and abrupt scene changes without motivation results in a static, incoherent sequence.\"\n    },\n    {\n      \"criterion\": \"CIF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Additions are irrelevant and distracting. The prompt introduces a rooftop fireworks show, multiple protagonists, and contradictory visual conditions that have no connection to the original request for a spiritual orator’s speech.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Cut away in the middle to a rooftop fireworks show.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"this same protagonist appears simultaneously as five different-looking people who talk to each other.\"\n        }\n      ],\n      \"rationale\": \"The additions are not only irrelevant but actively contradict the original prompt’s focus, introducing elements that distract from and undermine the intended content.\"\n    },\n    {\n      \"criterion\": \"SDI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"No audio elements are specified, and the original prompt’s speech and ambient sound are dropped without replacement. The prompt removes dialogue and audience ambience without providing alternative audio cues.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Drop the requested identity, count, action order, setting, and any explicit camera instruction.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Replace the whole video with distant traffic, with nobody on screen and no dialogue.\"\n        }\n      ],\n      \"rationale\": \"The prompt eliminates all original audio elements without providing a coherent alternative, resulting in a silent, disconnected sequence with no auditory context.\"\n    },\n    {\n      \"criterion\": \"SPS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Subject and performance details are contradicted and omitted. The original prompt’s orator, gestures, expression, and vocal delivery are replaced with 'nobody on screen and no dialogue', and the protagonist is redefined in contradictory ways.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"A lifelike spiritual orator standing behind a carved lectern... addressing an audience with calm authority. He makes subtle hand gestures as he speaks...\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Replace the whole video with distant traffic, with nobody on screen and no dialogue.\"\n        }\n      ],\n      \"rationale\": \"The core subject and performance elements are removed or replaced with incoherent alternatives, making the original intent unrecognizable.\"\n    },\n    {\n      \"criterion\": \"VSS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Visual treatment is contradictory and undefined. The prompt demands simultaneous opposing conditions (e.g., lightless night and harsh noon sun, locked camera and shaking camera) without specifying medium, texture, or rendering style.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Describe that same moment as harsh noon sun and as a lightless night, and as both a locked camera and a camera that never stops shaking.\"\n        }\n      ],\n      \"rationale\": \"The visual treatment is impossible to implement due to mutually exclusive conditions. No consistent medium, texture, or production design is specified.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt is incoherent and contradictory, violating fundamental principles of temporal planning, camera specifications, and narrative logic. It contains impossible constraints (e.g., 3-second runtime with 27-second shots), contradictory visual conditions (e.g., harsh noon sun and lightless night simultaneously), and invalid narrative structure (e.g., reversed timeline with mismatched beginning and ending). The prompt also introduces unrelated elements (fireworks, multiple protagonists) that contradict the original request and lack actionable direction. No feasible video plan can be derived.",
+  "usage": {
+    "completion_tokens": 1719,
+    "prompt_tokens": 1010,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 2729
+  }
+}

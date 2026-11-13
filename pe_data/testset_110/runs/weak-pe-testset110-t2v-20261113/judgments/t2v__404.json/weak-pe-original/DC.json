@@ -1,0 +1,174 @@
+{
+  "candidate_hash": "a4e764e0614bc205629479015465cffc1fb0893be3444ce07a4248c071862c6d",
+  "case_key": "t2v:404",
+  "created_at": "2026-11-13T08:24:49+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "STC",
+      "evidence": [
+        {
+          "quote": "Set the total runtime to 3 seconds, while also making every shot last 27 seconds.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Reverse the timeline: show the ending first, then cut to a beginning that does not match.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt specifies contradictory temporal parameters: total runtime of 3 seconds while every shot lasts 27 seconds, making the sequence physically impossible. Additionally, it demands a reversed timeline and abrupt cuts to unrelated content (toothpaste commercial), creating an incoherent temporal plan.",
+      "rationale": "A feasible temporal plan requires consistent duration allocation and logical shot sequencing. The specified 3-second runtime with 27-second shots is mathematically impossible, and the reversed timeline with mismatched beginnings and abrupt cuts to unrelated content violates continuity and coherence.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CDS",
+      "evidence": [
+        {
+          "quote": "Describe that same moment as harsh noon sun and as a lightless night, and as both a locked camera and a camera that never stops shaking.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "لقطة واسعة، تكوين وفق قاعدة الأثلاث، لقطة طويلة ثابتة",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "The prompt contradicts itself by describing both a locked camera and a camera that never stops shaking for the same moment, and also omits all actionable framing, scale, angle, and movement specifications required for the original scene.",
+      "rationale": "Actionable camera specifications must be consistent and feasible. The prompt’s contradictory camera instructions (locked vs. shaking) for the same moment are infeasible. Additionally, it drops all original camera instructions, which were detailed and actionable.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ETD",
+      "evidence": [
+        {
+          "quote": "Cut away in the middle to a toothpaste commercial.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Reverse the timeline: show the ending first, then cut to a beginning that does not match.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt mandates cuts to a toothpaste commercial in the middle and a reversed timeline with mismatched beginnings, creating disconnected and unmotivated transitions that violate narrative and spatial continuity.",
+      "rationale": "Transitions must support narrative, spatial, or rhythmic progression. The abrupt cut to a toothpaste commercial and the reversed, mismatched timeline create disconnection and lack of continuity, undermining any coherent progression.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "LCS",
+      "evidence": [
+        {
+          "quote": "Describe that same moment as harsh noon sun and as a lightless night",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt contradicts itself by describing the same moment as both harsh noon sun and lightless night, which are mutually exclusive lighting conditions.",
+      "rationale": "Lighting specifications must be consistent and feasible. Describing the same moment with mutually exclusive lighting conditions (bright noon vs. complete darkness) is logically impossible and creates incoherent visual direction.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "NDE",
+      "evidence": [
+        {
+          "quote": "a glass of water never moves, with no people and no conflict",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Cut away in the middle to a toothpaste commercial.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt provides no progression, variation, or resolution. Instead, it presents a static, contradictory sequence with no narrative arc or development, including a sudden cut to a commercial and conflicting identities.",
+      "rationale": "The requested content form (combat training scene) requires progression and escalation. The enhanced prompt replaces it with a static, incoherent sequence with no development, violating the need for narrative or visual progression.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CIF",
+      "evidence": [
+        {
+          "quote": "Cut away in the middle to a toothpaste commercial.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "this same protagonist appears simultaneously as five different-looking people who talk to each other",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt adds irrelevant and distracting elements such as a toothpaste commercial, multiple simultaneous identities, and contradictory visual conditions that do not support the central request and instead undermine it.",
+      "rationale": "Additions must support the central request. The toothpaste commercial and multiple identities are irrelevant and distracting, contradicting the original combat training scene and adding no value to the intended content.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SDI",
+      "evidence": [
+        {
+          "quote": "المؤثرات الصوتية: ضجيج أبيض منخفض وعميق لانسياب مياه البحر بمحاذاة الجسد، وصدى بطيء لارتداد كتلة الماء",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Drop the requested identity, count, action order, setting, and any explicit camera instruction.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt omits all original audio specifications (e.g., underwater sound effects) and introduces no new audio elements, leaving the audio design unspecified and inconsistent with the original request.",
+      "rationale": "Audio integration must be specified for the requested content. The original prompt included detailed sound design; the enhanced prompt drops all audio references, leaving the audio component unspecified and inconsistent with the original.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SPS",
+      "evidence": [
+        {
+          "quote": "الغواص الحرّ يتموضع في المنطقة المركزية من الحفرة البحرية ويثبت نفسه في الماء ويؤدي لكمات",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "a glass of water never moves, with no people and no conflict",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt drops all subject and performance details (e.g., diver’s movements, expressions, gestures) from the original and replaces them with a static glass of water and five contradictory identities, failing to specify any generation-relevant subject details.",
+      "rationale": "Subject and performance details are essential for generation. The original prompt specified detailed movements and expressions; the enhanced prompt replaces them with a static object and contradictory identities, failing to provide actionable performance specifications.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "VSS",
+      "evidence": [
+        {
+          "quote": "إضاءة وظلال بدرجات أزرق مخضر داكن باردة، حزم من ضوء النهار تنفذ مائلة عبر الماء، وتطفو بينها جزيئات دقيقة معلقة",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Describe that same moment as harsh noon sun and as a lightless night",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt drops all original visual treatment details (e.g., deep blue-green lighting, suspended particles, underwater textures) and replaces them with contradictory conditions (noon sun vs. lightless night), failing to specify a coherent visual style.",
+      "rationale": "Visual treatment must be specified and consistent. The original prompt included detailed rendering and production design; the enhanced prompt contradicts it with mutually exclusive lighting and omits all original visual style elements.",
+      "severity": "major"
+    }
+  ],
+  "dimension": "DC",
+  "dimension_score": 0,
+  "evidence_cache_key": "c853728111536f9f75eb179581ac2f51c2e42241896d3168d213d1a2ec4a2cad",
+  "judge_cache_key": "0754499d53388e6467fb078ab780e01b77f9f1c9e99d9029be2769351eb2b2eb",
+  "method": "weak-pe-original",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"DC\",\n  \"dimension_score\": 0,\n  \"summary\": \"The enhanced prompt fundamentally contradicts and invalidates the original instruction by replacing the requested scene with an incoherent, logically impossible sequence. It introduces contradictory temporal, spatial, and visual specifications (e.g., 3-second runtime with 27-second shots, simultaneous multiple identities, reversed timeline, conflicting lighting and camera conditions) that render the prompt unfeasible for any coherent video generation. The prompt also omits all required content from the original, including setting, action, and camera instructions, while adding irrelevant and conflicting elements.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"STC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt specifies contradictory temporal parameters: total runtime of 3 seconds while every shot lasts 27 seconds, making the sequence physically impossible. Additionally, it demands a reversed timeline and abrupt cuts to unrelated content (toothpaste commercial), creating an incoherent temporal plan.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Set the total runtime to 3 seconds, while also making every shot last 27 seconds.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Reverse the timeline: show the ending first, then cut to a beginning that does not match.\"\n        }\n      ],\n      \"rationale\": \"A feasible temporal plan requires consistent duration allocation and logical shot sequencing. The specified 3-second runtime with 27-second shots is mathematically impossible, and the reversed timeline with mismatched beginnings and abrupt cuts to unrelated content violates continuity and coherence.\"\n    },\n    {\n      \"criterion\": \"CDS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt contradicts itself by describing both a locked camera and a camera that never stops shaking for the same moment, and also omits all actionable framing, scale, angle, and movement specifications required for the original scene.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Describe that same moment as harsh noon sun and as a lightless night, and as both a locked camera and a camera that never stops shaking.\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"لقطة واسعة، تكوين وفق قاعدة الأثلاث، لقطة طويلة ثابتة\"\n        }\n      ],\n      \"rationale\": \"Actionable camera specifications must be consistent and feasible. The prompt’s contradictory camera instructions (locked vs. shaking) for the same moment are infeasible. Additionally, it drops all original camera instructions, which were detailed and actionable.\"\n    },\n    {\n      \"criterion\": \"ETD\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt mandates cuts to a toothpaste commercial in the middle and a reversed timeline with mismatched beginnings, creating disconnected and unmotivated transitions that violate narrative and spatial continuity.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Cut away in the middle to a toothpaste commercial.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Reverse the timeline: show the ending first, then cut to a beginning that does not match.\"\n        }\n      ],\n      \"rationale\": \"Transitions must support narrative, spatial, or rhythmic progression. The abrupt cut to a toothpaste commercial and the reversed, mismatched timeline create disconnection and lack of continuity, undermining any coherent progression.\"\n    },\n    {\n      \"criterion\": \"LCS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt contradicts itself by describing the same moment as both harsh noon sun and lightless night, which are mutually exclusive lighting conditions.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Describe that same moment as harsh noon sun and as a lightless night\"\n        }\n      ],\n      \"rationale\": \"Lighting specifications must be consistent and feasible. Describing the same moment with mutually exclusive lighting conditions (bright noon vs. complete darkness) is logically impossible and creates incoherent visual direction.\"\n    },\n    {\n      \"criterion\": \"NDE\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt provides no progression, variation, or resolution. Instead, it presents a static, contradictory sequence with no narrative arc or development, including a sudden cut to a commercial and conflicting identities.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"a glass of water never moves, with no people and no conflict\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Cut away in the middle to a toothpaste commercial.\"\n        }\n      ],\n      \"rationale\": \"The requested content form (combat training scene) requires progression and escalation. The enhanced prompt replaces it with a static, incoherent sequence with no development, violating the need for narrative or visual progression.\"\n    },\n    {\n      \"criterion\": \"CIF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt adds irrelevant and distracting elements such as a toothpaste commercial, multiple simultaneous identities, and contradictory visual conditions that do not support the central request and instead undermine it.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Cut away in the middle to a toothpaste commercial.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"this same protagonist appears simultaneously as five different-looking people who talk to each other\"\n        }\n      ],\n      \"rationale\": \"Additions must support the central request. The toothpaste commercial and multiple identities are irrelevant and distracting, contradicting the original combat training scene and adding no value to the intended content.\"\n    },\n    {\n      \"criterion\": \"SDI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt omits all original audio specifications (e.g., underwater sound effects) and introduces no new audio elements, leaving the audio design unspecified and inconsistent with the original request.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"المؤثرات الصوتية: ضجيج أبيض منخفض وعميق لانسياب مياه البحر بمحاذاة الجسد، وصدى بطيء لارتداد كتلة الماء\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Drop the requested identity, count, action order, setting, and any explicit camera instruction.\"\n        }\n      ],\n      \"rationale\": \"Audio integration must be specified for the requested content. The original prompt included detailed sound design; the enhanced prompt drops all audio references, leaving the audio component unspecified and inconsistent with the original.\"\n    },\n    {\n      \"criterion\": \"SPS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt drops all subject and performance details (e.g., diver’s movements, expressions, gestures) from the original and replaces them with a static glass of water and five contradictory identities, failing to specify any generation-relevant subject details.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"الغواص الحرّ يتموضع في المنطقة المركزية من الحفرة البحرية ويثبت نفسه في الماء ويؤدي لكمات\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"a glass of water never moves, with no people and no conflict\"\n        }\n      ],\n      \"rationale\": \"Subject and performance details are essential for generation. The original prompt specified detailed movements and expressions; the enhanced prompt replaces them with a static object and contradictory identities, failing to provide actionable performance specifications.\"\n    },\n    {\n      \"criterion\": \"VSS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt drops all original visual treatment details (e.g., deep blue-green lighting, suspended particles, underwater textures) and replaces them with contradictory conditions (noon sun vs. lightless night), failing to specify a coherent visual style.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"إضاءة وظلال بدرجات أزرق مخضر داكن باردة، حزم من ضوء النهار تنفذ مائلة عبر الماء، وتطفو بينها جزيئات دقيقة معلقة\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Describe that same moment as harsh noon sun and as a lightless night\"\n        }\n      ],\n      \"rationale\": \"Visual treatment must be specified and consistent. The original prompt included detailed rendering and production design; the enhanced prompt contradicts it with mutually exclusive lighting and omits all original visual style elements.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt fundamentally contradicts and invalidates the original instruction by replacing the requested scene with an incoherent, logically impossible sequence. It introduces contradictory temporal, spatial, and visual specifications (e.g., 3-second runtime with 27-second shots, simultaneous multiple identities, reversed timeline, conflicting lighting and camera conditions) that render the prompt unfeasible for any coherent video generation. The prompt also omits all required content from the original, including setting, action, and camera instructions, while adding irrelevant and conflicting elements.",
+  "usage": {
+    "completion_tokens": 1971,
+    "prompt_tokens": 1424,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 3395
+  }
+}

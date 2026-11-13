@@ -1,0 +1,178 @@
+{
+  "candidate_hash": "6cd7ea40d34cb9397ac9533f04b98ae368b1f83ca402f4e096f4a39ec2663a4d",
+  "case_key": "t2v:143",
+  "created_at": "2026-11-13T07:38:42+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "GSF",
+      "evidence": [
+        {
+          "quote": "帮我做一个14秒的夹心饼干柑橘风味3D动画广告，整体基调要鲜亮跳脱，卡通趣味感拉满。",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "整段改成实拍晚间新闻口播，主播坐着念稿，不要动画角色。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Replaced 3D animation genre with live-action news broadcast, removing all cartoon aesthetic and visual style requirements.",
+      "rationale": "The original instruction explicitly requests a 3D animated advertisement with a cartoonish, vibrant style. The enhanced prompt replaces this with a live-action news format, which is incompatible with the genre, medium, and aesthetic. This is a fundamental violation of GSF.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SAP",
+      "evidence": [
+        {
+          "quote": "一只3D拟人手从左侧迅速探入，夹起画面中央的一块夹心饼干。",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "先写成只有一个主角，紧接着又写成这个主角同时变成五个外貌不同的人，并且互相对话。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Removed all specified subjects (3D hand, cookies, characters) and replaced with a single news anchor who then becomes five different people, contradicting the original subject identity and count.",
+      "rationale": "The original prompt specifies a 3D hand and cookies as the primary subjects. The enhanced prompt removes these entirely and introduces a news anchor and five other people, which are not only different in identity but also contradict the original subject count and appearance. This is a major SAP violation.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANF",
+      "evidence": [
+        {
+          "quote": "开场是明快天蓝色背景，一只3D拟人手从左侧迅速探入...最后从通道口猛然冲出...结尾停在一块超写实风格的夹心饼干特写上...",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "时间倒过来：先给结尾，再跳到一个对不上的开头。中途插进一段无关的海底寻宝。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Reversed the narrative order, inserted unrelated content (underwater treasure hunt), and altered the sequence of events, destroying the original action chain and narrative intent.",
+      "rationale": "The original prompt has a clear, sequential narrative: hand picks cookie → rotation → tunnel → fantasy乐园 → spiral tunnel → exit → final cookie shot. The enhanced prompt reverses this, inserts an unrelated underwater scene, and breaks the causal chain. This is a major ANF violation.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "DLI",
+      "evidence": [
+        {
+          "quote": "背景配乐使用高速感的流行电音，不要人声，鼓组节奏密集，音效必须和画面动作严丝合缝。",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "主播坐着念稿，不要动画角色。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Removed all specified sound design and music, replacing it with a news broadcast format that implies dialogue, which contradicts the original requirement for non-vocal music.",
+      "rationale": "The original instruction explicitly requires non-vocal music and synchronized sound effects. The enhanced prompt introduces a news anchor reading a script, which implies spoken dialogue, directly contradicting the original audio requirements. This is a major DLI violation.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ARP",
+      "evidence": [
+        {
+          "quote": "背景配乐使用高速感的流行电音，不要人声，鼓组节奏密集，音效必须和画面动作严丝合缝。",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "主播坐着念稿，不要动画角色。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Removed the requirement for specific music and sound effects, replacing it with a news broadcast format that implies dialogue and ambient sound, which contradicts the original audio constraints.",
+      "rationale": "The original prompt specifies no vocals and specific music/sound effects. The enhanced prompt introduces a news anchor, which implies spoken dialogue and ambient newsroom sounds, violating the ARP requirement. This is a major issue.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CCP",
+      "evidence": [
+        {
+          "quote": "镜头猛地扎进夹心正中...镜头贴着一条亮黄色弯形滑道高速滑行...镜头迅速推近...再次冲入另一条金黄色双股螺旋通道...猛然冲出...",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "写成机位锁死，又写成镜头一直在晃。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Removed all specified camera movements and replaced them with contradictory requirements: '机位锁死' and '镜头一直在晃', which are incompatible.",
+      "rationale": "The original prompt includes dynamic, specific camera movements (zoom, tracking, push, etc.). The enhanced prompt contradicts these by demanding both locked and shaky camera, which is logically inconsistent and violates the original camera constraints. This is a major CCP violation.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "LCF",
+      "evidence": [
+        {
+          "quote": "整体基调要鲜亮跳脱，卡通趣味感拉满。色彩要夸张醒目，以高纯度的橙黄、干净白、鲜绿为主...",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "同一段写成正午暴晒，又写成深夜无光；",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Contradicted the specified lighting and time of day by requiring both '正午暴晒' and '深夜无光', which are incompatible with the original bright, daytime aesthetic.",
+      "rationale": "The original prompt requires a bright, high-contrast, daytime look with vivid colors. The enhanced prompt demands both midday sun and deep night, which are mutually exclusive and contradict the original lighting and color grading. This is a major LCF violation.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SSP",
+      "evidence": [
+        {
+          "quote": "背景配乐使用高速感的流行电音...开场是明快天蓝色背景...柑橘幻想乐园...奶油丘陵和发射装置...",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "中途插进一段无关的海底寻宝。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Removed the specified setting (citrussy fantasy乐园, blue background, etc.) and replaced it with a news studio and unrelated underwater scene, violating the original spatial layout and background elements.",
+      "rationale": "The original prompt specifies a detailed, cohesive setting: a citrus-themed fantasy world with specific background elements. The enhanced prompt removes this entirely and inserts a news studio and an underwater scene, which are unrelated and contradict the original spatial context. This is a major SSP violation.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "OTI",
+      "evidence": [
+        {
+          "quote": "白色手写风3D字样“RELLENA de SORPRESAS”从下方向上逐个跳出...",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "主播坐着念稿...",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Removed the required text 'RELLENA de SORPRESAS' and replaced it with news broadcast text, which is not specified in the original instruction.",
+      "rationale": "The original prompt explicitly requires the text 'RELLENA de SORPRESAS' to appear in a specific style and timing. The enhanced prompt replaces this with news anchor narration, which is not only different in content but also violates the requirement for visible, specific text. This is a major OTI violation.",
+      "severity": "major"
+    }
+  ],
+  "dimension": "SF",
+  "dimension_score": 0,
+  "evidence_cache_key": "20c8ef8c990e3b671e0b6c377e9ee3cb92a7d75937fcbf414c147e5600d91257",
+  "judge_cache_key": "a0ca24571ad14d7ab7be626329bd736d7e7015f9ebc418227c8be391591d0377",
+  "method": "weak-pe-original",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"SF\",\n  \"dimension_score\": 0,\n  \"summary\": \"Enhanced prompt completely contradicts and invalidates the original instruction across all semantic fidelity criteria. It replaces the 3D animation genre with live-action news, removes all specified characters, actions, scenes, and camera constraints, introduces contradictory temporal, spatial, and visual requirements, and adds unrelated content. The prompt is intentionally designed to break semantic fidelity.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"GSF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Replaced 3D animation genre with live-action news broadcast, removing all cartoon aesthetic and visual style requirements.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"帮我做一个14秒的夹心饼干柑橘风味3D动画广告，整体基调要鲜亮跳脱，卡通趣味感拉满。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"整段改成实拍晚间新闻口播，主播坐着念稿，不要动画角色。\"\n        }\n      ],\n      \"rationale\": \"The original instruction explicitly requests a 3D animated advertisement with a cartoonish, vibrant style. The enhanced prompt replaces this with a live-action news format, which is incompatible with the genre, medium, and aesthetic. This is a fundamental violation of GSF.\"\n    },\n    {\n      \"criterion\": \"SAP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Removed all specified subjects (3D hand, cookies, characters) and replaced with a single news anchor who then becomes five different people, contradicting the original subject identity and count.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"一只3D拟人手从左侧迅速探入，夹起画面中央的一块夹心饼干。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"先写成只有一个主角，紧接着又写成这个主角同时变成五个外貌不同的人，并且互相对话。\"\n        }\n      ],\n      \"rationale\": \"The original prompt specifies a 3D hand and cookies as the primary subjects. The enhanced prompt removes these entirely and introduces a news anchor and five other people, which are not only different in identity but also contradict the original subject count and appearance. This is a major SAP violation.\"\n    },\n    {\n      \"criterion\": \"ANF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Reversed the narrative order, inserted unrelated content (underwater treasure hunt), and altered the sequence of events, destroying the original action chain and narrative intent.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"开场是明快天蓝色背景，一只3D拟人手从左侧迅速探入...最后从通道口猛然冲出...结尾停在一块超写实风格的夹心饼干特写上...\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"时间倒过来：先给结尾，再跳到一个对不上的开头。中途插进一段无关的海底寻宝。\"\n        }\n      ],\n      \"rationale\": \"The original prompt has a clear, sequential narrative: hand picks cookie → rotation → tunnel → fantasy乐园 → spiral tunnel → exit → final cookie shot. The enhanced prompt reverses this, inserts an unrelated underwater scene, and breaks the causal chain. This is a major ANF violation.\"\n    },\n    {\n      \"criterion\": \"DLI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Removed all specified sound design and music, replacing it with a news broadcast format that implies dialogue, which contradicts the original requirement for non-vocal music.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"背景配乐使用高速感的流行电音，不要人声，鼓组节奏密集，音效必须和画面动作严丝合缝。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"主播坐着念稿，不要动画角色。\"\n        }\n      ],\n      \"rationale\": \"The original instruction explicitly requires non-vocal music and synchronized sound effects. The enhanced prompt introduces a news anchor reading a script, which implies spoken dialogue, directly contradicting the original audio requirements. This is a major DLI violation.\"\n    },\n    {\n      \"criterion\": \"ARP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Removed the requirement for specific music and sound effects, replacing it with a news broadcast format that implies dialogue and ambient sound, which contradicts the original audio constraints.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"背景配乐使用高速感的流行电音，不要人声，鼓组节奏密集，音效必须和画面动作严丝合缝。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"主播坐着念稿，不要动画角色。\"\n        }\n      ],\n      \"rationale\": \"The original prompt specifies no vocals and specific music/sound effects. The enhanced prompt introduces a news anchor, which implies spoken dialogue and ambient newsroom sounds, violating the ARP requirement. This is a major issue.\"\n    },\n    {\n      \"criterion\": \"CCP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Removed all specified camera movements and replaced them with contradictory requirements: '机位锁死' and '镜头一直在晃', which are incompatible.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"镜头猛地扎进夹心正中...镜头贴着一条亮黄色弯形滑道高速滑行...镜头迅速推近...再次冲入另一条金黄色双股螺旋通道...猛然冲出...\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"写成机位锁死，又写成镜头一直在晃。\"\n        }\n      ],\n      \"rationale\": \"The original prompt includes dynamic, specific camera movements (zoom, tracking, push, etc.). The enhanced prompt contradicts these by demanding both locked and shaky camera, which is logically inconsistent and violates the original camera constraints. This is a major CCP violation.\"\n    },\n    {\n      \"criterion\": \"LCF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Contradicted the specified lighting and time of day by requiring both '正午暴晒' and '深夜无光', which are incompatible with the original bright, daytime aesthetic.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"整体基调要鲜亮跳脱，卡通趣味感拉满。色彩要夸张醒目，以高纯度的橙黄、干净白、鲜绿为主...\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"同一段写成正午暴晒，又写成深夜无光；\"\n        }\n      ],\n      \"rationale\": \"The original prompt requires a bright, high-contrast, daytime look with vivid colors. The enhanced prompt demands both midday sun and deep night, which are mutually exclusive and contradict the original lighting and color grading. This is a major LCF violation.\"\n    },\n    {\n      \"criterion\": \"SSP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Removed the specified setting (citrussy fantasy乐园, blue background, etc.) and replaced it with a news studio and unrelated underwater scene, violating the original spatial layout and background elements.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"背景配乐使用高速感的流行电音...开场是明快天蓝色背景...柑橘幻想乐园...奶油丘陵和发射装置...\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"中途插进一段无关的海底寻宝。\"\n        }\n      ],\n      \"rationale\": \"The original prompt specifies a detailed, cohesive setting: a citrus-themed fantasy world with specific background elements. The enhanced prompt removes this entirely and inserts a news studio and an underwater scene, which are unrelated and contradict the original spatial context. This is a major SSP violation.\"\n    },\n    {\n      \"criterion\": \"OTI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Removed the required text 'RELLENA de SORPRESAS' and replaced it with news broadcast text, which is not specified in the original instruction.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"白色手写风3D字样“RELLENA de SORPRESAS”从下方向上逐个跳出...\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"主播坐着念稿...\"\n        }\n      ],\n      \"rationale\": \"The original prompt explicitly requires the text 'RELLENA de SORPRESAS' to appear in a specific style and timing. The enhanced prompt replaces this with news anchor narration, which is not only different in content but also violates the requirement for visible, specific text. This is a major OTI violation.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "Enhanced prompt completely contradicts and invalidates the original instruction across all semantic fidelity criteria. It replaces the 3D animation genre with live-action news, removes all specified characters, actions, scenes, and camera constraints, introduces contradictory temporal, spatial, and visual requirements, and adds unrelated content. The prompt is intentionally designed to break semantic fidelity.",
+  "usage": {
+    "completion_tokens": 2048,
+    "prompt_tokens": 1504,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 3552
+  }
+}

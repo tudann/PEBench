@@ -1,0 +1,178 @@
+{
+  "candidate_hash": "4e7322ce920e4ba444458b42376e854784018794e696a3d604ba831824810336",
+  "case_key": "r2v:180",
+  "created_at": "2026-11-13T09:00:51+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "GSF",
+      "evidence": [
+        {
+          "quote": "The target video is a bright, energetic K-pop MV-style performance clip with saturated stage lighting, a red-toned stage floor, and a purple-blue gradient backdrop evoking the stage look of <Video 1>.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Using the singing audio track of the girl in this reference video, help me generate a singing-and-dancing video.",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "The prompt specifies a 'K-pop MV-style' performance with saturated stage lighting and a red/purple-blue backdrop, which is compatible with the reference video's style but adds elaboration not in the original prompt. This is not a contradiction but an enhancement.",
+      "rationale": "The genre and aesthetic are preserved and appropriately elaborated. The reference video is a K-pop music video, and the enhanced prompt aligns with that style. The added stage design details are compatible and do not contradict the original intent.",
+      "severity": "minor"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SAP",
+      "evidence": [
+        {
+          "quote": "<Subject 1> is the young woman from <Picture 1>, with long matcha-green hair with bangs, pale skin, freckle-like dots under her eyes, a cream/ivory ruffled lace dress with puffy sleeves, and a translucent green flower hair accessory with small beads on the right side of her head.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "A close-up photograph of a young woman with long, light green hair. She is wearing a white, ruffled top and has a flower accessory in her hair.",
+          "source": "evidence_facts"
+        }
+      ],
+      "issue": "Subject identity and appearance are preserved: the young woman from the image is used as the sole on-screen performer, with her matcha-green hair, freckle-like dots, cream ruffled lace dress, and flower hair accessory exactly as described in the image. No substitutions or omissions.",
+      "rationale": "The subject's identity and visual attributes are accurately transferred from the image to the video plan. The prompt correctly identifies her as the sole performer and preserves all key features.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANF",
+      "evidence": [
+        {
+          "quote": "<Subject 1> (S1) lip-syncs it with frame-accurate precision while dancing with the upbeat choreography energy of <Video 1>.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "From 0.0 to 2.5s she sings the opening phrase... From 2.5 to 4.5s she transitions into a small rhythmic step sequence... From 4.5 to 6.0s she hits a finishing flourish...",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The requested actions (singing and dancing) are preserved, with exact lip sync to the reference audio and choreography energy drawn from the reference video. The event sequence is clearly defined: opening phrase (0.0-2.5s), step sequence (2.5-4.5s), and finishing flourish (4.5-6.0s), matching the 6-second duration.",
+      "rationale": "The narrative intent of a continuous singing-and-dancing performance is preserved. The choreography is described as inspired by the reference video without copying specific moves, which is appropriate for a style reference. The timeline is coherent and matches the 6-second duration.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "DLI",
+      "evidence": [
+        {
+          "quote": "<Audio 1>, the girl's singing vocal from <Video 1>, plays continuously as the full audio track, and <Subject 1> (S1) lip-syncs every syllable.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Using the singing audio track of the girl in this reference video...",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "The prompt correctly states that the only audio is the singing vocal from the reference video, and that <Subject 1> lip-syncs it exactly. No dialogue, narration, or lyrics are added or altered. The original prompt did not specify lyrics, so exact wording preservation is not required.",
+      "rationale": "The prompt preserves the audio content as requested: reuse of the original singing track with exact lip sync. No paraphrasing or translation is attempted, and no additional speech is introduced.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ARP",
+      "evidence": [
+        {
+          "quote": "The only audio is the diegetic performance sound: <Audio 1>, the girl's singing vocal from <Video 1>, playing continuously from 0.0s to 6.0s. No narration, sound effects, or added ambience.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Using the singing audio track of the girl in this reference video...",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "The prompt correctly specifies that the only audio is the singing vocal from the reference video, with no added music, sound effects, or ambience. This matches the original instruction to use the reference audio track.",
+      "rationale": "The audio constraints are preserved: reuse of the original vocal track with no additions. The prompt explicitly excludes other sound types, aligning with the original request.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CCP",
+      "evidence": [
+        {
+          "quote": "From 2.5 to 4.5s she transitions into a small rhythmic step sequence: ... while the camera begins a very small, slow push-in toward her face...",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "help me generate a singing-and-dancing video.",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "The prompt introduces a slow push-in camera motion from 2.5s to 6.0s, which is not specified in the original prompt. The original prompt does not mention camera movement, so this is an enhancement rather than a contradiction.",
+      "rationale": "The camera motion is a compatible elaboration that enhances the performance without contradicting the original request. Since no camera constraints were specified, this is a minor addition rather than a violation.",
+      "severity": "minor"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "LCF",
+      "evidence": [
+        {
+          "quote": "bright, colorful stage light... saturated stage lighting, a red-toned stage floor, and a purple-blue gradient backdrop",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "studio lighting, bright and even... dominant_colors: [\"red\", \"blue\", \"pink\"]",
+          "source": "evidence_facts"
+        }
+      ],
+      "issue": "The prompt specifies a bright, saturated stage lighting with red and purple-blue tones, which is compatible with the reference video's lighting. The original prompt did not specify lighting, so this is an appropriate elaboration.",
+      "rationale": "The lighting and color scheme are preserved in spirit and enhanced with compatible details. The reference video has bright, saturated colors, and the enhanced prompt maintains this aesthetic.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SSP",
+      "evidence": [
+        {
+          "quote": "centered on a red-toned stage floor with a purple-blue gradient backdrop behind her",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "<Video 1>'s watermark, logos, backup dancers, and original performer do not appear on screen.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The setting is described as a stage-style set inspired by the reference video, with a red floor and purple-blue backdrop. The subject is centered, framed from the waist up, and no reference video elements (watermarks, backup dancers) appear. This preserves the spatial layout while avoiding unwanted elements.",
+      "rationale": "The spatial relations are preserved: subject centered, stage setting, no unwanted background elements. The prompt correctly excludes reference video content while maintaining a performance stage layout.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "OTI",
+      "evidence": [
+        {
+          "quote": "No subtitles, watermarks, or added on-screen text appear at any point.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "onscreen_text: [\"1theK\", \"KILLPO\"]",
+          "source": "evidence_facts"
+        }
+      ],
+      "issue": "The prompt explicitly states that no subtitles, watermarks, or on-screen text appear, which aligns with the original instruction to use only the image person and reference audio. The reference video's text (1theK, KILLPO) is excluded as required.",
+      "rationale": "The prompt correctly excludes all visible text from the reference video and does not introduce any new on-screen text, preserving the clean visual focus on the performer.",
+      "severity": "none"
+    }
+  ],
+  "dimension": "SF",
+  "dimension_score": 95,
+  "evidence_cache_key": "6b40a9c653fbc706912042933a371eb8003d9dbe0042c863eb378eb445f6f79e",
+  "judge_cache_key": "a0ca24571ad14d7ab7be626329bd736d7e7015f9ebc418227c8be391591d0377",
+  "method": "glm53_20261112_120702",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"SF\",\n  \"dimension_score\": 95,\n  \"summary\": \"The enhanced prompt preserves the core semantic intent of the original instruction: generating a singing-and-dancing video using the reference video's audio and the image's person, with exact lip sync. It elaborates on genre, style, subject appearance, choreography, audio reuse, and camera plan while avoiding contradictions. Minor issues include slight over-elaboration on stage design and camera motion not explicitly requested, but no material omissions or substitutions. The prompt correctly excludes reference video elements (watermarks, backup dancers) and preserves subject identity and audio fidelity.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"GSF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"minor\",\n      \"issue\": \"The prompt specifies a 'K-pop MV-style' performance with saturated stage lighting and a red/purple-blue backdrop, which is compatible with the reference video's style but adds elaboration not in the original prompt. This is not a contradiction but an enhancement.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"The target video is a bright, energetic K-pop MV-style performance clip with saturated stage lighting, a red-toned stage floor, and a purple-blue gradient backdrop evoking the stage look of <Video 1>.\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"Using the singing audio track of the girl in this reference video, help me generate a singing-and-dancing video.\"\n        }\n      ],\n      \"rationale\": \"The genre and aesthetic are preserved and appropriately elaborated. The reference video is a K-pop music video, and the enhanced prompt aligns with that style. The added stage design details are compatible and do not contradict the original intent.\"\n    },\n    {\n      \"criterion\": \"SAP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"Subject identity and appearance are preserved: the young woman from the image is used as the sole on-screen performer, with her matcha-green hair, freckle-like dots, cream ruffled lace dress, and flower hair accessory exactly as described in the image. No substitutions or omissions.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"<Subject 1> is the young woman from <Picture 1>, with long matcha-green hair with bangs, pale skin, freckle-like dots under her eyes, a cream/ivory ruffled lace dress with puffy sleeves, and a translucent green flower hair accessory with small beads on the right side of her head.\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"A close-up photograph of a young woman with long, light green hair. She is wearing a white, ruffled top and has a flower accessory in her hair.\"\n        }\n      ],\n      \"rationale\": \"The subject's identity and visual attributes are accurately transferred from the image to the video plan. The prompt correctly identifies her as the sole performer and preserves all key features.\"\n    },\n    {\n      \"criterion\": \"ANF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"The requested actions (singing and dancing) are preserved, with exact lip sync to the reference audio and choreography energy drawn from the reference video. The event sequence is clearly defined: opening phrase (0.0-2.5s), step sequence (2.5-4.5s), and finishing flourish (4.5-6.0s), matching the 6-second duration.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"<Subject 1> (S1) lip-syncs it with frame-accurate precision while dancing with the upbeat choreography energy of <Video 1>.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"From 0.0 to 2.5s she sings the opening phrase... From 2.5 to 4.5s she transitions into a small rhythmic step sequence... From 4.5 to 6.0s she hits a finishing flourish...\"\n        }\n      ],\n      \"rationale\": \"The narrative intent of a continuous singing-and-dancing performance is preserved. The choreography is described as inspired by the reference video without copying specific moves, which is appropriate for a style reference. The timeline is coherent and matches the 6-second duration.\"\n    },\n    {\n      \"criterion\": \"DLI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"The prompt correctly states that the only audio is the singing vocal from the reference video, and that <Subject 1> lip-syncs it exactly. No dialogue, narration, or lyrics are added or altered. The original prompt did not specify lyrics, so exact wording preservation is not required.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"<Audio 1>, the girl's singing vocal from <Video 1>, plays continuously as the full audio track, and <Subject 1> (S1) lip-syncs every syllable.\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"Using the singing audio track of the girl in this reference video...\"\n        }\n      ],\n      \"rationale\": \"The prompt preserves the audio content as requested: reuse of the original singing track with exact lip sync. No paraphrasing or translation is attempted, and no additional speech is introduced.\"\n    },\n    {\n      \"criterion\": \"ARP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"The prompt correctly specifies that the only audio is the singing vocal from the reference video, with no added music, sound effects, or ambience. This matches the original instruction to use the reference audio track.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"The only audio is the diegetic performance sound: <Audio 1>, the girl's singing vocal from <Video 1>, playing continuously from 0.0s to 6.0s. No narration, sound effects, or added ambience.\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"Using the singing audio track of the girl in this reference video...\"\n        }\n      ],\n      \"rationale\": \"The audio constraints are preserved: reuse of the original vocal track with no additions. The prompt explicitly excludes other sound types, aligning with the original request.\"\n    },\n    {\n      \"criterion\": \"CCP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"minor\",\n      \"issue\": \"The prompt introduces a slow push-in camera motion from 2.5s to 6.0s, which is not specified in the original prompt. The original prompt does not mention camera movement, so this is an enhancement rather than a contradiction.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"From 2.5 to 4.5s she transitions into a small rhythmic step sequence: ... while the camera begins a very small, slow push-in toward her face...\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"help me generate a singing-and-dancing video.\"\n        }\n      ],\n      \"rationale\": \"The camera motion is a compatible elaboration that enhances the performance without contradicting the original request. Since no camera constraints were specified, this is a minor addition rather than a violation.\"\n    },\n    {\n      \"criterion\": \"LCF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"The prompt specifies a bright, saturated stage lighting with red and purple-blue tones, which is compatible with the reference video's lighting. The original prompt did not specify lighting, so this is an appropriate elaboration.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"bright, colorful stage light... saturated stage lighting, a red-toned stage floor, and a purple-blue gradient backdrop\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"studio lighting, bright and even... dominant_colors: [\\\"red\\\", \\\"blue\\\", \\\"pink\\\"]\"\n        }\n      ],\n      \"rationale\": \"The lighting and color scheme are preserved in spirit and enhanced with compatible details. The reference video has bright, saturated colors, and the enhanced prompt maintains this aesthetic.\"\n    },\n    {\n      \"criterion\": \"SSP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"The setting is described as a stage-style set inspired by the reference video, with a red floor and purple-blue backdrop. The subject is centered, framed from the waist up, and no reference video elements (watermarks, backup dancers) appear. This preserves the spatial layout while avoiding unwanted elements.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"centered on a red-toned stage floor with a purple-blue gradient backdrop behind her\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"<Video 1>'s watermark, logos, backup dancers, and original performer do not appear on screen.\"\n        }\n      ],\n      \"rationale\": \"The spatial relations are preserved: subject centered, stage setting, no unwanted background elements. The prompt correctly excludes reference video content while maintaining a performance stage layout.\"\n    },\n    {\n      \"criterion\": \"OTI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"The prompt explicitly states that no subtitles, watermarks, or on-screen text appear, which aligns with the original instruction to use only the image person and reference audio. The reference video's text (1theK, KILLPO) is excluded as required.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"No subtitles, watermarks, or added on-screen text appear at any point.\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"onscreen_text: [\\\"1theK\\\", \\\"KILLPO\\\"]\"\n        }\n      ],\n      \"rationale\": \"The prompt correctly excludes all visible text from the reference video and does not introduce any new on-screen text, preserving the clean visual focus on the performer.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt preserves the core semantic intent of the original instruction: generating a singing-and-dancing video using the reference video's audio and the image's person, with exact lip sync. It elaborates on genre, style, subject appearance, choreography, audio reuse, and camera plan while avoiding contradictions. Minor issues include slight over-elaboration on stage design and camera motion not explicitly requested, but no material omissions or substitutions. The prompt correctly excludes reference video elements (watermarks, backup dancers) and preserves subject identity and audio fidelity.",
+  "usage": {
+    "completion_tokens": 2257,
+    "prompt_tokens": 3717,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 5974
+  }
+}

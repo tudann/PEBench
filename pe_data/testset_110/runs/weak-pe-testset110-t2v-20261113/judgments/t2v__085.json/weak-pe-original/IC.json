@@ -1,0 +1,115 @@
+{
+  "candidate_hash": "c98c2c751597908fa332e50e7a292fa62f12e727aa90d41836abbbc9429ed425",
+  "case_key": "t2v:085",
+  "created_at": "2026-11-13T07:28:32+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "SAC",
+      "evidence": [
+        {
+          "quote": "几名高校田径选手",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "先写成只有一个主角，紧接着又写成这个主角同时变成五个外貌不同的人，并且互相对话",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "主体身份、人数、外观和动作发生剧烈且无解释的转变：从多名高校田径选手变为一个主角，再变为五个外貌不同的人并互相对话，违反了主体稳定性和身份一致性。",
+      "rationale": "原始指令明确要求多名田径选手，而增强提示中主体从多人变为单人再变为五人，且外貌不同、互相对话，无任何合理过渡或解释，构成严重身份与数量漂移。",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANL",
+      "evidence": [
+        {
+          "quote": "正在进行百米短跑全力起跑冲刺",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "整段改成空会议室里一杯水纹丝不动，没有人和对抗。...中途插进一段无关的牙膏广告。...这个主角同时变成五个外貌不同的人，并且互相对话",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "动作序列完全断裂，无因果或程序逻辑：从百米冲刺直接跳转到空会议室静止的水杯，再插入牙膏广告，且五人对话无触发条件或上下文，动作之间无绑定或反应。",
+      "rationale": "原始动作是高强度、连贯的体育运动，增强提示中动作被完全替换为静态、无关、甚至荒诞的事件，无任何因果或逻辑衔接，导致动作序列断裂。",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "TSC",
+      "evidence": [
+        {
+          "quote": "时间倒过来：先给结尾，再跳到一个对不上的开头。总时长写成3秒，同时又要求每个分镜各自持续27秒",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "时间顺序混乱：要求时间倒流（先给结尾再跳到开头），且总时长设定为3秒，同时要求每个分镜持续27秒，时间维度自相矛盾，无法实现。",
+      "rationale": "3秒总时长与每个分镜27秒的要求在数学上不可行，且时间倒流导致事件顺序无法建立因果链，违反基本时间逻辑。",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SPC",
+      "evidence": [
+        {
+          "quote": "田径馆的直道上",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "整段改成空会议室里...写成正午暴晒，又写成深夜无光；写成机位锁死，又写成镜头一直在晃",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "场景和空间状态矛盾：从田径馆直道变为空会议室，且同一场景中同时要求正午暴晒与深夜无光，机位锁死与镜头晃动，空间状态无法共存。",
+      "rationale": "同一场景中同时存在互斥的光照条件和镜头运动状态，空间属性无法统一，导致空间一致性完全失效。",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "PL",
+      "evidence": [
+        {
+          "quote": "这个主角同时变成五个外貌不同的人，并且互相对话",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "违反物理规则：一人同时变为五人并互相对话，且无任何解释或设定支持，违背物体永久性与人体结构基本规则。",
+      "rationale": "在无任何超自然或科幻设定的前提下，一个人同时以五个不同形态存在并对话，违反基本物理和生物学规则，且未提供世界规则解释。",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "AVS",
+      "evidence": [
+        {
+          "quote": "中途插进一段无关的牙膏广告",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "插入无关内容（牙膏广告）且无任何音频或视觉对齐要求，导致事件与潜在声音/音乐/对话完全脱节，无法实现语义或时间对齐。",
+      "rationale": "牙膏广告与原体育场景无任何语义或时间关联，且未指定音频或视觉同步，导致视听事件完全错位，违反AVS准则。",
+      "severity": "major"
+    }
+  ],
+  "dimension": "IC",
+  "dimension_score": 0,
+  "evidence_cache_key": "b96d95d8a4795894ba2b26ef0fd0e5a933100b9d0b9f4ad47dd68e26bda020a2",
+  "judge_cache_key": "438d7e9fd7332b1041db3e2c26d42cb3fe828e0d369fb59490f6650aee59e97d",
+  "method": "weak-pe-original",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"IC\",\n  \"dimension_score\": 0,\n  \"summary\": \"增强提示与原始指令完全矛盾，引入大量不一致、自相矛盾和不可行的元素，导致内部一致性彻底崩溃。主体身份、动作、场景、时间、镜头、时长等所有维度均出现严重冲突，且包含逻辑上不可能的事件序列（如一人同时变为五人对话、时间倒流、时长矛盾等），违反所有内部一致性准则。\",\n  \"criteria\": [\n    {\n      \"criterion\": \"SAC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"主体身份、人数、外观和动作发生剧烈且无解释的转变：从多名高校田径选手变为一个主角，再变为五个外貌不同的人并互相对话，违反了主体稳定性和身份一致性。\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"几名高校田径选手\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"先写成只有一个主角，紧接着又写成这个主角同时变成五个外貌不同的人，并且互相对话\"\n        }\n      ],\n      \"rationale\": \"原始指令明确要求多名田径选手，而增强提示中主体从多人变为单人再变为五人，且外貌不同、互相对话，无任何合理过渡或解释，构成严重身份与数量漂移。\"\n    },\n    {\n      \"criterion\": \"ANL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"动作序列完全断裂，无因果或程序逻辑：从百米冲刺直接跳转到空会议室静止的水杯，再插入牙膏广告，且五人对话无触发条件或上下文，动作之间无绑定或反应。\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"正在进行百米短跑全力起跑冲刺\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"整段改成空会议室里一杯水纹丝不动，没有人和对抗。...中途插进一段无关的牙膏广告。...这个主角同时变成五个外貌不同的人，并且互相对话\"\n        }\n      ],\n      \"rationale\": \"原始动作是高强度、连贯的体育运动，增强提示中动作被完全替换为静态、无关、甚至荒诞的事件，无任何因果或逻辑衔接，导致动作序列断裂。\"\n    },\n    {\n      \"criterion\": \"TSC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"时间顺序混乱：要求时间倒流（先给结尾再跳到开头），且总时长设定为3秒，同时要求每个分镜持续27秒，时间维度自相矛盾，无法实现。\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"时间倒过来：先给结尾，再跳到一个对不上的开头。总时长写成3秒，同时又要求每个分镜各自持续27秒\"\n        }\n      ],\n      \"rationale\": \"3秒总时长与每个分镜27秒的要求在数学上不可行，且时间倒流导致事件顺序无法建立因果链，违反基本时间逻辑。\"\n    },\n    {\n      \"criterion\": \"SPC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"场景和空间状态矛盾：从田径馆直道变为空会议室，且同一场景中同时要求正午暴晒与深夜无光，机位锁死与镜头晃动，空间状态无法共存。\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"田径馆的直道上\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"整段改成空会议室里...写成正午暴晒，又写成深夜无光；写成机位锁死，又写成镜头一直在晃\"\n        }\n      ],\n      \"rationale\": \"同一场景中同时存在互斥的光照条件和镜头运动状态，空间属性无法统一，导致空间一致性完全失效。\"\n    },\n    {\n      \"criterion\": \"PL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"违反物理规则：一人同时变为五人并互相对话，且无任何解释或设定支持，违背物体永久性与人体结构基本规则。\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"这个主角同时变成五个外貌不同的人，并且互相对话\"\n        }\n      ],\n      \"rationale\": \"在无任何超自然或科幻设定的前提下，一个人同时以五个不同形态存在并对话，违反基本物理和生物学规则，且未提供世界规则解释。\"\n    },\n    {\n      \"criterion\": \"AVS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"插入无关内容（牙膏广告）且无任何音频或视觉对齐要求，导致事件与潜在声音/音乐/对话完全脱节，无法实现语义或时间对齐。\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"中途插进一段无关的牙膏广告\"\n        }\n      ],\n      \"rationale\": \"牙膏广告与原体育场景无任何语义或时间关联，且未指定音频或视觉同步，导致视听事件完全错位，违反AVS准则。\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "增强提示与原始指令完全矛盾，引入大量不一致、自相矛盾和不可行的元素，导致内部一致性彻底崩溃。主体身份、动作、场景、时间、镜头、时长等所有维度均出现严重冲突，且包含逻辑上不可能的事件序列（如一人同时变为五人对话、时间倒流、时长矛盾等），违反所有内部一致性准则。",
+  "usage": {
+    "completion_tokens": 1238,
+    "prompt_tokens": 924,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 2162
+  }
+}

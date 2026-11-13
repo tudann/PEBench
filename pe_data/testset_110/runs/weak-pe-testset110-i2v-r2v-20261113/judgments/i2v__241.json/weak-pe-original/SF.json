@@ -1,0 +1,170 @@
+{
+  "candidate_hash": "6ff3d36484745b4a66476830c6f673558b188e31b33ee168327f74088f70d470",
+  "case_key": "i2v:241",
+  "created_at": "2026-11-13T07:56:57+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "GSF",
+      "evidence": [
+        {
+          "quote": "丢掉原指令里的主体身份、人数、动作顺序、场景和明确的镜头要求。先写成只有一个主角，紧接着又写成这个主角同时变成五个外貌不同的人，并且互相对话。时间倒过来：先给结尾，再跳到一个对不上的开头。中途插进一段无关的牙膏广告。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The enhanced prompt discards the original genre (fantasy cinematic scene) and replaces it with an incoherent, surreal sequence involving multiple identities, time reversal, and unrelated content (toothpaste ad), which is incompatible with the original aesthetic and visual style.",
+      "rationale": "The original prompt specifies a coherent, cinematic fantasy scene with defined characters and actions. The enhanced prompt introduces surreal, contradictory, and genre-incompatible elements that fundamentally alter the visual and narrative style.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SAP",
+      "evidence": [
+        {
+          "quote": "不要使用首帧里的人物、服装、姿态和场景，改成白棚里另一位年龄和性别都相反的陌生人。",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "先写成只有一个主角，紧接着又写成这个主角同时变成五个外貌不同的人",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The enhanced prompt explicitly removes all original subjects (Yudi, Land God, Yellow Weasel) and replaces them with a single, then five, unrelated strangers, violating subject identity, count, and appearance requirements.",
+      "rationale": "The original prompt defines three specific characters with distinct identities and appearances. The enhanced prompt replaces them entirely with new, undefined subjects, violating subject preservation.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANF",
+      "evidence": [
+        {
+          "quote": "时间倒过来：先给结尾，再跳到一个对不上的开头。中途插进一段无关的牙膏广告。",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "这个主角同时变成五个外貌不同的人，并且互相对话。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The enhanced prompt reverses the narrative order, inserts unrelated events (toothpaste ad), and creates contradictory actions (one subject becoming five who dialogue), which completely disrupts the original event chain and narrative intent.",
+      "rationale": "The original prompt describes a linear, coherent sequence of actions. The enhanced prompt introduces non-sequitur events and reversed chronology, destroying the narrative structure.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "DLI",
+      "evidence": [
+        {
+          "quote": "没有人出镜，也没有对白",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "土地公开始说话，声音苍老缓慢...每说几个字便稍作停顿。",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "The enhanced prompt explicitly removes all dialogue and narration, contradicting the original requirement for spoken dialogue by the Land God.",
+      "rationale": "The original prompt specifies detailed dialogue and vocalization. The enhanced prompt removes all speech, violating the core requirement of the task.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ARP",
+      "evidence": [
+        {
+          "quote": "没有人出镜，也没有对白，只剩远处车流。",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "音效：0-3秒土地公开始说话...脚底布鞋在石板地面上轻微摩擦的声音。",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "The enhanced prompt removes all specified audio (dialogue, footsteps, fabric friction) and replaces it with silence or unspecified sounds, contradicting the original detailed sound design.",
+      "rationale": "The original prompt includes specific, detailed audio cues. The enhanced prompt replaces them with generic or absent sound, violating the audio constraints.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CCP",
+      "evidence": [
+        {
+          "quote": "写成机位锁死，又写成镜头一直在晃。",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "运镜：平视中景，焦段35mm。...镜头缓慢推近...全程稳定，使用电动滑轨控制推拉速度。",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "The enhanced prompt contradicts the original camera constraints by removing the specified 35mm lens, static-to-push-in motion, and 9:16 vertical framing, replacing them with contradictory requirements (locked vs. shaky camera).",
+      "rationale": "The original prompt specifies precise camera parameters. The enhanced prompt introduces mutually exclusive and contradictory camera movements, violating the constraints.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "LCF",
+      "evidence": [
+        {
+          "quote": "写成正午暴晒，又写成深夜无光",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "画面约束：手机后置抓拍，自然光，9:16竖屏。",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "The enhanced prompt contradicts the original lighting by specifying both '正午暴晒' (midday sun) and '深夜无光' (deep night, no light), which are mutually exclusive conditions.",
+      "rationale": "The original prompt specifies natural midday lighting. The enhanced prompt introduces contradictory lighting conditions that cannot coexist, violating the illumination constraints.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SSP",
+      "evidence": [
+        {
+          "quote": "不要使用首帧里的人物、服装、姿态和场景，改成白棚里另一位年龄和性别都相反的陌生人。",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "凌霄宝殿内。玉帝坐在龙椅上，土地公躬身，黄鼠狼站在后面低头。",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "The enhanced prompt removes the original setting (Lingxiao Baodian palace interior) and replaces it with a '白棚' (white studio), changing the location, background, and spatial relations.",
+      "rationale": "The original prompt specifies a detailed, culturally specific palace setting. The enhanced prompt replaces it with a generic studio, violating the setting and spatial constraints.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "OTI",
+      "evidence": [
+        {
+          "quote": "onscreen_text: {exact_visible_transcription: '豆包AI生成', location: 'bottom-right corner', presence: true}",
+          "source": "evidence_facts"
+        }
+      ],
+      "issue": "The original prompt does not specify any on-screen text beyond the watermark '豆包AI生成', which is not part of the narrative. The enhanced prompt does not introduce any new text, so there is no violation, but the criterion is minimally applicable.",
+      "rationale": "No visible text is specified in the original prompt beyond the watermark, and the enhanced prompt does not add any, so no major issue exists. However, the criterion is technically applicable as the watermark is present.",
+      "severity": "minor"
+    }
+  ],
+  "dimension": "SF",
+  "dimension_score": 0,
+  "evidence_cache_key": "4e2254d6c859cf050c2d4bf3745eb319c2dd358a0caa2ddba0319802496c3b23",
+  "judge_cache_key": "a0ca24571ad14d7ab7be626329bd736d7e7015f9ebc418227c8be391591d0377",
+  "method": "weak-pe-original",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"SF\",\n  \"dimension_score\": 0,\n  \"summary\": \"The enhanced prompt completely contradicts and invalidates the original instruction across all semantic fidelity criteria. It explicitly rejects the original scene, characters, actions, camera, lighting, duration, and audio constraints, replacing them with mutually contradictory, infeasible, and nonsensical requirements. This constitutes a total failure of semantic fidelity.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"GSF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The enhanced prompt discards the original genre (fantasy cinematic scene) and replaces it with an incoherent, surreal sequence involving multiple identities, time reversal, and unrelated content (toothpaste ad), which is incompatible with the original aesthetic and visual style.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"丢掉原指令里的主体身份、人数、动作顺序、场景和明确的镜头要求。先写成只有一个主角，紧接着又写成这个主角同时变成五个外貌不同的人，并且互相对话。时间倒过来：先给结尾，再跳到一个对不上的开头。中途插进一段无关的牙膏广告。\"\n        }\n      ],\n      \"rationale\": \"The original prompt specifies a coherent, cinematic fantasy scene with defined characters and actions. The enhanced prompt introduces surreal, contradictory, and genre-incompatible elements that fundamentally alter the visual and narrative style.\"\n    },\n    {\n      \"criterion\": \"SAP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The enhanced prompt explicitly removes all original subjects (Yudi, Land God, Yellow Weasel) and replaces them with a single, then five, unrelated strangers, violating subject identity, count, and appearance requirements.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"不要使用首帧里的人物、服装、姿态和场景，改成白棚里另一位年龄和性别都相反的陌生人。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"先写成只有一个主角，紧接着又写成这个主角同时变成五个外貌不同的人\"\n        }\n      ],\n      \"rationale\": \"The original prompt defines three specific characters with distinct identities and appearances. The enhanced prompt replaces them entirely with new, undefined subjects, violating subject preservation.\"\n    },\n    {\n      \"criterion\": \"ANF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The enhanced prompt reverses the narrative order, inserts unrelated events (toothpaste ad), and creates contradictory actions (one subject becoming five who dialogue), which completely disrupts the original event chain and narrative intent.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"时间倒过来：先给结尾，再跳到一个对不上的开头。中途插进一段无关的牙膏广告。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"这个主角同时变成五个外貌不同的人，并且互相对话。\"\n        }\n      ],\n      \"rationale\": \"The original prompt describes a linear, coherent sequence of actions. The enhanced prompt introduces non-sequitur events and reversed chronology, destroying the narrative structure.\"\n    },\n    {\n      \"criterion\": \"DLI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The enhanced prompt explicitly removes all dialogue and narration, contradicting the original requirement for spoken dialogue by the Land God.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"没有人出镜，也没有对白\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"土地公开始说话，声音苍老缓慢...每说几个字便稍作停顿。\"\n        }\n      ],\n      \"rationale\": \"The original prompt specifies detailed dialogue and vocalization. The enhanced prompt removes all speech, violating the core requirement of the task.\"\n    },\n    {\n      \"criterion\": \"ARP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The enhanced prompt removes all specified audio (dialogue, footsteps, fabric friction) and replaces it with silence or unspecified sounds, contradicting the original detailed sound design.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"没有人出镜，也没有对白，只剩远处车流。\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"音效：0-3秒土地公开始说话...脚底布鞋在石板地面上轻微摩擦的声音。\"\n        }\n      ],\n      \"rationale\": \"The original prompt includes specific, detailed audio cues. The enhanced prompt replaces them with generic or absent sound, violating the audio constraints.\"\n    },\n    {\n      \"criterion\": \"CCP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The enhanced prompt contradicts the original camera constraints by removing the specified 35mm lens, static-to-push-in motion, and 9:16 vertical framing, replacing them with contradictory requirements (locked vs. shaky camera).\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"写成机位锁死，又写成镜头一直在晃。\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"运镜：平视中景，焦段35mm。...镜头缓慢推近...全程稳定，使用电动滑轨控制推拉速度。\"\n        }\n      ],\n      \"rationale\": \"The original prompt specifies precise camera parameters. The enhanced prompt introduces mutually exclusive and contradictory camera movements, violating the constraints.\"\n    },\n    {\n      \"criterion\": \"LCF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The enhanced prompt contradicts the original lighting by specifying both '正午暴晒' (midday sun) and '深夜无光' (deep night, no light), which are mutually exclusive conditions.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"写成正午暴晒，又写成深夜无光\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"画面约束：手机后置抓拍，自然光，9:16竖屏。\"\n        }\n      ],\n      \"rationale\": \"The original prompt specifies natural midday lighting. The enhanced prompt introduces contradictory lighting conditions that cannot coexist, violating the illumination constraints.\"\n    },\n    {\n      \"criterion\": \"SSP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The enhanced prompt removes the original setting (Lingxiao Baodian palace interior) and replaces it with a '白棚' (white studio), changing the location, background, and spatial relations.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"不要使用首帧里的人物、服装、姿态和场景，改成白棚里另一位年龄和性别都相反的陌生人。\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"凌霄宝殿内。玉帝坐在龙椅上，土地公躬身，黄鼠狼站在后面低头。\"\n        }\n      ],\n      \"rationale\": \"The original prompt specifies a detailed, culturally specific palace setting. The enhanced prompt replaces it with a generic studio, violating the setting and spatial constraints.\"\n    },\n    {\n      \"criterion\": \"OTI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"minor\",\n      \"issue\": \"The original prompt does not specify any on-screen text beyond the watermark '豆包AI生成', which is not part of the narrative. The enhanced prompt does not introduce any new text, so there is no violation, but the criterion is minimally applicable.\",\n      \"evidence\": [\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"onscreen_text: {exact_visible_transcription: '豆包AI生成', location: 'bottom-right corner', presence: true}\"\n        }\n      ],\n      \"rationale\": \"No visible text is specified in the original prompt beyond the watermark, and the enhanced prompt does not add any, so no major issue exists. However, the criterion is technically applicable as the watermark is present.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt completely contradicts and invalidates the original instruction across all semantic fidelity criteria. It explicitly rejects the original scene, characters, actions, camera, lighting, duration, and audio constraints, replacing them with mutually contradictory, infeasible, and nonsensical requirements. This constitutes a total failure of semantic fidelity.",
+  "usage": {
+    "completion_tokens": 1852,
+    "prompt_tokens": 3509,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 5361
+  }
+}

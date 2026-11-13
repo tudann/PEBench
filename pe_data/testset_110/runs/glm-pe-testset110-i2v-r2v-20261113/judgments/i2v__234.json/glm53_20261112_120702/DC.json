@@ -1,0 +1,174 @@
+{
+  "candidate_hash": "d67699b2a3da6b7f5a142ee3eb76328c2363b4195e49bd5d4456268e3be7f654",
+  "case_key": "i2v:234",
+  "created_at": "2026-11-13T08:10:00+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "STC",
+      "evidence": [
+        {
+          "quote": "at 0.00 seconds into the target video, <Picture 1> (from [Shot 1]) is fully referenced.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "The camera glides smoothly forward and slightly downward along the trail in a continuous tracking flight... the women continue walking across the grass toward the distant bonfire as the clip ends, with no cuts",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "The prompt establishes a clear temporal plan: starting at 0.00s with the image, progressing through a continuous aerial tracking shot from forest to meadow, ending at 5.0s with the women approaching the bonfire. Shot boundaries are defined by the single continuous movement, and duration is allocated appropriately to the described progression. The sequence is feasible and logically ordered.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CDS",
+      "evidence": [
+        {
+          "quote": "a high-angle aerial shot at 0.00 seconds matches the exact composition of <Picture 1>",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "The camera glides smoothly forward and slightly downward along the trail in a continuous tracking flight",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "The prompt specifies actionable camera parameters: high-angle aerial shot, continuous tracking flight, forward and downward motion. These align with the image’s composition and provide clear direction for camera movement, framing, and shot scale (medium-long shot).",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ETD",
+      "evidence": [
+        {
+          "quote": "with no cuts and no text anywhere on screen",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "the camera emerges from the tree line onto an open moonlit grassy meadow",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "The transition from forest to meadow is motivated by the camera’s physical movement, creating a spatial and visual progression. The single continuous shot supports narrative and spatial continuity without abrupt cuts or unmotivated transitions.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "LCS",
+      "evidence": [
+        {
+          "quote": "Warm orange flame glow lights their faces and costumes against the dark blue-green moonlit forest",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "color_temperature: cool overall with warm accents from flames",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "Lighting is specified with source (candles, torch, moonlight), direction (directional warm from flames, diffuse cool from moon), quality (flickering, natural), and color palette (warm orange/yellow vs. cool blue-green). This supports a realistic, cinematic look.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "NDE",
+      "evidence": [
+        {
+          "quote": "The camera glides smoothly forward... emerges from the tree line onto an open moonlit grassy meadow... the women continue walking across the grass toward the distant bonfire",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "The sequence shows clear progression: from dense forest to open meadow, with increasing visibility of the bonfire and river. The movement escalates spatially and visually, culminating in the approach to the bonfire, providing narrative and visual resolution.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CIF",
+      "evidence": [
+        {
+          "quote": "one wearing a floral wreath and white patterned dress, another in a red skirt with an ornamented apron",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "woman_4: floral crown, white blouse, dark vest with red trim, dark skirt with red embroidery",
+          "source": "evidence_facts"
+        }
+      ],
+      "issue": "Slight over-specification of costume details (e.g., 'white patterned dress', 'ornamented apron') not fully verifiable from image_1, which may distract from core visual intent.",
+      "rationale": "While the prompt adds detail to enrich the scene, some costume descriptions (e.g., 'patterned dress', 'ornamented apron') are not clearly supported by the image evidence, which shows simpler attire. This is a minor distraction but does not contradict or undermine the core request.",
+      "severity": "minor"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SDI",
+      "evidence": [
+        {
+          "quote": "Soft night-time forest ambience with a gentle breeze through spruce branches and faint rustle of long skirts and footsteps... shifting to quieter open-meadow air with faint distant crackle of the bonfire. Flames from the torch and candles flicker with a subtle audible hiss.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "The soundscape is integrated with visual timing: forest ambience during the forest segment, transitioning to meadow air and distant bonfire crackle. The flame hiss is synchronized with the visual flicker, supporting realism and immersion.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SPS",
+      "evidence": [
+        {
+          "quote": "группа женщин... с свечами и факелом",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "six women in traditional Slavic folk costumes",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Exact number of women is 7, but prompt mentions 'group' — no contradiction.",
+          "source": "evidence_facts"
+        }
+      ],
+      "issue": "Prompt mentions 'six women' but image shows seven; this discrepancy may affect subject count accuracy.",
+      "rationale": "The original prompt does not specify a number, but the enhanced prompt states 'six women' while the image clearly shows seven. This is a minor inconsistency that may affect precise subject count in generation, but does not materially alter the visual narrative or intent.",
+      "severity": "minor"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "VSS",
+      "evidence": [
+        {
+          "quote": "Live-action, photorealistic, maximum realism",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "high-angle aerial shot... continuous tracking flight",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "The prompt specifies medium (live-action), style (photorealistic, maximum realism), and visual treatment (aerial tracking, cinematic composition). These align with the image’s style and support a high-fidelity, cinematic output.",
+      "severity": "none"
+    }
+  ],
+  "dimension": "DC",
+  "dimension_score": 92,
+  "evidence_cache_key": "e05072598467fe5c06a7e72ee05db3d1b0239d56c764c4b171e85a08e04c9deb",
+  "judge_cache_key": "0754499d53388e6467fb078ab780e01b77f9f1c9e99d9029be2769351eb2b2eb",
+  "method": "glm53_20261112_120702",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"DC\",\n  \"dimension_score\": 92,\n  \"summary\": \"The enhanced prompt provides a highly detailed, coherent, and actionable visual and auditory plan that directly fulfills the original instruction. It establishes a clear temporal progression, specifies camera motion, lighting, composition, and sound with precision, and integrates the provided image as the starting frame. Minor issues include slight over-specification of costume details not fully verifiable from the image and a minor inconsistency in the number of women (image shows 7, prompt mentions 'six'), but these do not materially affect the overall feasibility or intent. The prompt avoids padding, maintains focus, and supports a cinematic, realistic output aligned with the original request.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"STC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"at 0.00 seconds into the target video, <Picture 1> (from [Shot 1]) is fully referenced.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"The camera glides smoothly forward and slightly downward along the trail in a continuous tracking flight... the women continue walking across the grass toward the distant bonfire as the clip ends, with no cuts\"\n        }\n      ],\n      \"rationale\": \"The prompt establishes a clear temporal plan: starting at 0.00s with the image, progressing through a continuous aerial tracking shot from forest to meadow, ending at 5.0s with the women approaching the bonfire. Shot boundaries are defined by the single continuous movement, and duration is allocated appropriately to the described progression. The sequence is feasible and logically ordered.\"\n    },\n    {\n      \"criterion\": \"CDS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"a high-angle aerial shot at 0.00 seconds matches the exact composition of <Picture 1>\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"The camera glides smoothly forward and slightly downward along the trail in a continuous tracking flight\"\n        }\n      ],\n      \"rationale\": \"The prompt specifies actionable camera parameters: high-angle aerial shot, continuous tracking flight, forward and downward motion. These align with the image’s composition and provide clear direction for camera movement, framing, and shot scale (medium-long shot).\"\n    },\n    {\n      \"criterion\": \"ETD\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"with no cuts and no text anywhere on screen\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"the camera emerges from the tree line onto an open moonlit grassy meadow\"\n        }\n      ],\n      \"rationale\": \"The transition from forest to meadow is motivated by the camera’s physical movement, creating a spatial and visual progression. The single continuous shot supports narrative and spatial continuity without abrupt cuts or unmotivated transitions.\"\n    },\n    {\n      \"criterion\": \"LCS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Warm orange flame glow lights their faces and costumes against the dark blue-green moonlit forest\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"color_temperature: cool overall with warm accents from flames\"\n        }\n      ],\n      \"rationale\": \"Lighting is specified with source (candles, torch, moonlight), direction (directional warm from flames, diffuse cool from moon), quality (flickering, natural), and color palette (warm orange/yellow vs. cool blue-green). This supports a realistic, cinematic look.\"\n    },\n    {\n      \"criterion\": \"NDE\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"The camera glides smoothly forward... emerges from the tree line onto an open moonlit grassy meadow... the women continue walking across the grass toward the distant bonfire\"\n        }\n      ],\n      \"rationale\": \"The sequence shows clear progression: from dense forest to open meadow, with increasing visibility of the bonfire and river. The movement escalates spatially and visually, culminating in the approach to the bonfire, providing narrative and visual resolution.\"\n    },\n    {\n      \"criterion\": \"CIF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"minor\",\n      \"issue\": \"Slight over-specification of costume details (e.g., 'white patterned dress', 'ornamented apron') not fully verifiable from image_1, which may distract from core visual intent.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"one wearing a floral wreath and white patterned dress, another in a red skirt with an ornamented apron\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"woman_4: floral crown, white blouse, dark vest with red trim, dark skirt with red embroidery\"\n        }\n      ],\n      \"rationale\": \"While the prompt adds detail to enrich the scene, some costume descriptions (e.g., 'patterned dress', 'ornamented apron') are not clearly supported by the image evidence, which shows simpler attire. This is a minor distraction but does not contradict or undermine the core request.\"\n    },\n    {\n      \"criterion\": \"SDI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Soft night-time forest ambience with a gentle breeze through spruce branches and faint rustle of long skirts and footsteps... shifting to quieter open-meadow air with faint distant crackle of the bonfire. Flames from the torch and candles flicker with a subtle audible hiss.\"\n        }\n      ],\n      \"rationale\": \"The soundscape is integrated with visual timing: forest ambience during the forest segment, transitioning to meadow air and distant bonfire crackle. The flame hiss is synchronized with the visual flicker, supporting realism and immersion.\"\n    },\n    {\n      \"criterion\": \"SPS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"minor\",\n      \"issue\": \"Prompt mentions 'six women' but image shows seven; this discrepancy may affect subject count accuracy.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"группа женщин... с свечами и факелом\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"six women in traditional Slavic folk costumes\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"Exact number of women is 7, but prompt mentions 'group' — no contradiction.\"\n        }\n      ],\n      \"rationale\": \"The original prompt does not specify a number, but the enhanced prompt states 'six women' while the image clearly shows seven. This is a minor inconsistency that may affect precise subject count in generation, but does not materially alter the visual narrative or intent.\"\n    },\n    {\n      \"criterion\": \"VSS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Live-action, photorealistic, maximum realism\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"high-angle aerial shot... continuous tracking flight\"\n        }\n      ],\n      \"rationale\": \"The prompt specifies medium (live-action), style (photorealistic, maximum realism), and visual treatment (aerial tracking, cinematic composition). These align with the image’s style and support a high-fidelity, cinematic output.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt provides a highly detailed, coherent, and actionable visual and auditory plan that directly fulfills the original instruction. It establishes a clear temporal progression, specifies camera motion, lighting, composition, and sound with precision, and integrates the provided image as the starting frame. Minor issues include slight over-specification of costume details not fully verifiable from the image and a minor inconsistency in the number of women (image shows 7, prompt mentions 'six'), but these do not materially affect the overall feasibility or intent. The prompt avoids padding, maintains focus, and supports a cinematic, realistic output aligned with the original request.",
+  "usage": {
+    "completion_tokens": 1794,
+    "prompt_tokens": 3170,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 4964
+  }
+}

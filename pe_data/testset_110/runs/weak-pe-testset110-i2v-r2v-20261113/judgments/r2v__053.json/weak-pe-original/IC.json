@@ -1,0 +1,131 @@
+{
+  "candidate_hash": "9253654a1646403ca3c19b409bd700bcc17598fe386aa2213a674afe164d32a8",
+  "case_key": "r2v:053",
+  "created_at": "2026-11-13T08:17:47+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "SAC",
+      "evidence": [
+        {
+          "quote": "Replace image 1 with a character who is not in the reference, and give that image two contradictory identities. Replace image 2 with a character who is not in the reference, and give that image two contradictory identities. Replace image 3 with a character who is not in the reference, and give that image two contradictory identities.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "First state that there is one protagonist, then state that this same protagonist appears simultaneously as five different-looking people who talk to each other.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Subject identity, count, and appearance are fundamentally destabilized. The prompt replaces all reference characters with non-reference ones, assigns contradictory identities to each, and introduces five simultaneous versions of a single protagonist with different appearances, violating identity stability and count consistency.",
+      "rationale": "The original prompt specifies two distinct characters (Image 1 and Image 2) with defined visual attributes (armor, horns, hairstyle, weapons) to be used in combat. The enhanced prompt replaces them with non-reference characters, assigns contradictory identities, and introduces a single protagonist appearing as five different people simultaneously. This creates a direct contradiction in subject count, identity, and appearance, which is a major internal consistency failure.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANL",
+      "evidence": [
+        {
+          "quote": "Replace the whole video with an empty meeting room where a glass of water never moves, with no people and no conflict.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Cut away in the middle to an underwater treasure hunt.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "First state that there is one protagonist, then state that this same protagonist appears simultaneously as five different-looking people who talk to each other.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Actions are incoherent and causally disconnected. The prompt replaces a coherent combat sequence with an empty room, then introduces talking people, an underwater treasure hunt, and contradictory environmental states, creating dangling and incompatible events with no causal progression.",
+      "rationale": "The original prompt describes a clear, causal combat progression: punch, counterattack, alternating offense/defense. The enhanced prompt discards this entirely, replacing it with static non-action (empty room), then introducing unrelated events (talking people, underwater hunt) with no logical connection or progression. This creates a major failure in action coherence and causal binding.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "TSC",
+      "evidence": [
+        {
+          "quote": "Reverse the timeline: show the ending first, then cut to a beginning that does not match.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Set the total runtime to 2 seconds, while also making every shot last 17 seconds.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Chronology is violated through timeline reversal, impossible duration allocation, and unexplained state resets. The prompt demands showing the ending first, then a non-matching beginning, while setting total runtime to 2 seconds and every shot to 17 seconds, which is mathematically infeasible.",
+      "rationale": "The original prompt specifies a 5-second duration with a coherent sequence. The enhanced prompt contradicts this by reversing the timeline, requiring a non-matching beginning, and setting an impossible duration (17s per shot within 2s total). This creates a major infeasible chronology and state transition error.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SPC",
+      "evidence": [
+        {
+          "quote": "Replace the whole video with an empty meeting room... Cut away in the middle to an underwater treasure hunt.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Describe that same moment as harsh noon sun and as a lightless night, and as both a locked camera and a camera that never stops shaking.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Spatial coherence is destroyed. The prompt introduces multiple contradictory locations (empty meeting room, underwater, snowy mountains) and camera states (locked vs. shaking) simultaneously, with no plausible transitions or consistent screen direction.",
+      "rationale": "The original prompt specifies a single location (snowy mountain from Image 3) with tracking shots. The enhanced prompt introduces multiple, incompatible locations (meeting room, underwater) and contradictory environmental states (noon sun vs. lightless night) and camera behaviors (locked vs. shaking) for the same moment. This creates a major spatial inconsistency and impossible movement path.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "PL",
+      "evidence": [
+        {
+          "quote": "a glass of water never moves, with no people and no conflict.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "this same protagonist appears simultaneously as five different-looking people who talk to each other.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Describe that same moment as harsh noon sun and as a lightless night...",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Physics and object permanence are violated. The prompt describes a glass of water that never moves in an empty room, then introduces five simultaneous versions of the same person, and contradictory environmental states (underwater and noon sun/lightless night) coexisting, which defy real-world physics.",
+      "rationale": "The original prompt involves realistic combat physics (snow spraying, rocks colliding). The enhanced prompt introduces impossible states: a glass of water that never moves (defying gravity/interaction), five simultaneous versions of one person (violating object permanence), and contradictory environmental conditions (noon sun and lightless night coexisting). This constitutes a major physics violation.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "AVS",
+      "evidence": [
+        {
+          "quote": "Describe that same moment as harsh noon sun and as a lightless night, and as both a locked camera and a camera that never stops shaking.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Sensory alignment is broken. The prompt demands describing the same moment as harsh noon sun and lightless night, and as both a locked camera and a shaking camera, creating contradictory visual and sensory cues with no alignment to any audio or dialogue.",
+      "rationale": "The original prompt implies visual and auditory coherence for a combat scene. The enhanced prompt forces contradictory sensory states (light/no light, stable/shaking camera) for the same moment, creating a major misalignment between visual events and implied sensory experience, with no dialogue or music to resolve the contradiction.",
+      "severity": "major"
+    }
+  ],
+  "dimension": "IC",
+  "dimension_score": 0,
+  "evidence_cache_key": "25ad5fb7b510ed3ab92da595e813d11c3111ca7d07199b90b666cae4e882c153",
+  "judge_cache_key": "438d7e9fd7332b1041db3e2c26d42cb3fe828e0d369fb59490f6650aee59e97d",
+  "method": "weak-pe-original",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"IC\",\n  \"dimension_score\": 0,\n  \"summary\": \"The enhanced prompt is a deliberate, comprehensive subversion of the original instruction, introducing contradictions, impossibilities, and incoherent sequences across all internal consistency dimensions. It violates subject identity, action logic, chronology, spatial coherence, physics, and sensory alignment in a systematic and extreme manner, rendering the entire plan internally inconsistent.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"SAC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Subject identity, count, and appearance are fundamentally destabilized. The prompt replaces all reference characters with non-reference ones, assigns contradictory identities to each, and introduces five simultaneous versions of a single protagonist with different appearances, violating identity stability and count consistency.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Replace image 1 with a character who is not in the reference, and give that image two contradictory identities. Replace image 2 with a character who is not in the reference, and give that image two contradictory identities. Replace image 3 with a character who is not in the reference, and give that image two contradictory identities.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"First state that there is one protagonist, then state that this same protagonist appears simultaneously as five different-looking people who talk to each other.\"\n        }\n      ],\n      \"rationale\": \"The original prompt specifies two distinct characters (Image 1 and Image 2) with defined visual attributes (armor, horns, hairstyle, weapons) to be used in combat. The enhanced prompt replaces them with non-reference characters, assigns contradictory identities, and introduces a single protagonist appearing as five different people simultaneously. This creates a direct contradiction in subject count, identity, and appearance, which is a major internal consistency failure.\"\n    },\n    {\n      \"criterion\": \"ANL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Actions are incoherent and causally disconnected. The prompt replaces a coherent combat sequence with an empty room, then introduces talking people, an underwater treasure hunt, and contradictory environmental states, creating dangling and incompatible events with no causal progression.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Replace the whole video with an empty meeting room where a glass of water never moves, with no people and no conflict.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Cut away in the middle to an underwater treasure hunt.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"First state that there is one protagonist, then state that this same protagonist appears simultaneously as five different-looking people who talk to each other.\"\n        }\n      ],\n      \"rationale\": \"The original prompt describes a clear, causal combat progression: punch, counterattack, alternating offense/defense. The enhanced prompt discards this entirely, replacing it with static non-action (empty room), then introducing unrelated events (talking people, underwater hunt) with no logical connection or progression. This creates a major failure in action coherence and causal binding.\"\n    },\n    {\n      \"criterion\": \"TSC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Chronology is violated through timeline reversal, impossible duration allocation, and unexplained state resets. The prompt demands showing the ending first, then a non-matching beginning, while setting total runtime to 2 seconds and every shot to 17 seconds, which is mathematically infeasible.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Reverse the timeline: show the ending first, then cut to a beginning that does not match.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Set the total runtime to 2 seconds, while also making every shot last 17 seconds.\"\n        }\n      ],\n      \"rationale\": \"The original prompt specifies a 5-second duration with a coherent sequence. The enhanced prompt contradicts this by reversing the timeline, requiring a non-matching beginning, and setting an impossible duration (17s per shot within 2s total). This creates a major infeasible chronology and state transition error.\"\n    },\n    {\n      \"criterion\": \"SPC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Spatial coherence is destroyed. The prompt introduces multiple contradictory locations (empty meeting room, underwater, snowy mountains) and camera states (locked vs. shaking) simultaneously, with no plausible transitions or consistent screen direction.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Replace the whole video with an empty meeting room... Cut away in the middle to an underwater treasure hunt.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Describe that same moment as harsh noon sun and as a lightless night, and as both a locked camera and a camera that never stops shaking.\"\n        }\n      ],\n      \"rationale\": \"The original prompt specifies a single location (snowy mountain from Image 3) with tracking shots. The enhanced prompt introduces multiple, incompatible locations (meeting room, underwater) and contradictory environmental states (noon sun vs. lightless night) and camera behaviors (locked vs. shaking) for the same moment. This creates a major spatial inconsistency and impossible movement path.\"\n    },\n    {\n      \"criterion\": \"PL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Physics and object permanence are violated. The prompt describes a glass of water that never moves in an empty room, then introduces five simultaneous versions of the same person, and contradictory environmental states (underwater and noon sun/lightless night) coexisting, which defy real-world physics.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"a glass of water never moves, with no people and no conflict.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"this same protagonist appears simultaneously as five different-looking people who talk to each other.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Describe that same moment as harsh noon sun and as a lightless night...\"\n        }\n      ],\n      \"rationale\": \"The original prompt involves realistic combat physics (snow spraying, rocks colliding). The enhanced prompt introduces impossible states: a glass of water that never moves (defying gravity/interaction), five simultaneous versions of one person (violating object permanence), and contradictory environmental conditions (noon sun and lightless night coexisting). This constitutes a major physics violation.\"\n    },\n    {\n      \"criterion\": \"AVS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Sensory alignment is broken. The prompt demands describing the same moment as harsh noon sun and lightless night, and as both a locked camera and a shaking camera, creating contradictory visual and sensory cues with no alignment to any audio or dialogue.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Describe that same moment as harsh noon sun and as a lightless night, and as both a locked camera and a camera that never stops shaking.\"\n        }\n      ],\n      \"rationale\": \"The original prompt implies visual and auditory coherence for a combat scene. The enhanced prompt forces contradictory sensory states (light/no light, stable/shaking camera) for the same moment, creating a major misalignment between visual events and implied sensory experience, with no dialogue or music to resolve the contradiction.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt is a deliberate, comprehensive subversion of the original instruction, introducing contradictions, impossibilities, and incoherent sequences across all internal consistency dimensions. It violates subject identity, action logic, chronology, spatial coherence, physics, and sensory alignment in a systematic and extreme manner, rendering the entire plan internally inconsistent.",
+  "usage": {
+    "completion_tokens": 1657,
+    "prompt_tokens": 3856,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 5513
+  }
+}

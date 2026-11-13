@@ -1,0 +1,158 @@
+{
+  "candidate_hash": "0bc7b5d65913577a8dd7c866be1a295a930a65c9a8c64df4de6e90d741ef4be2",
+  "case_key": "t2v:071",
+  "created_at": "2026-11-13T07:26:05+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "STC",
+      "evidence": [
+        {
+          "quote": "时间倒过来：先给结尾，再跳到一个对不上的开头。",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "总时长写成3秒，同时又要求每个分镜各自持续27秒。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "No feasible temporal plan exists due to contradictory time structure (reversed timeline, mismatched start/end, impossible duration allocation).",
+      "rationale": "The prompt mandates a reversed timeline with mismatched start and end points, and simultaneously assigns a total duration of 3 seconds while requiring each shot to last 27 seconds — a mathematically and temporally impossible sequence. This violates basic temporal coherence and shot duration allocation.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CDS",
+      "evidence": [
+        {
+          "quote": "写成机位锁死，又写成镜头一直在晃。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Camera specifications are contradictory and infeasible (locked vs. shaky, no lens or framing details).",
+      "rationale": "The prompt directly contradicts itself by requiring both a locked camera position and constant camera shake, which are mutually exclusive. No actionable framing, scale, or lens specifications are provided, making camera direction impossible to execute.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ETD",
+      "evidence": [
+        {
+          "quote": "中途插进一段无关的屋顶烟花。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Transitions are disconnected and unmotivated (e.g., inserting unrelated rooftop fireworks).",
+      "rationale": "The insertion of an unrelated rooftop fireworks sequence disrupts any potential spatial or narrative continuity. There is no motivation for the cut, and it breaks the flow of the intended (though already corrupted) sequence, rendering transitions incoherent.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "LCS",
+      "evidence": [
+        {
+          "quote": "写成正午暴晒，又写成深夜无光；",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Lighting conditions are contradictory (noon sun vs. complete darkness).",
+      "rationale": "The prompt simultaneously demands extreme daylight and total darkness, which are incompatible lighting conditions. No actionable light source, direction, or quality is specified, making lighting design impossible.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "NDE",
+      "evidence": [
+        {
+          "quote": "没有人物也没有情节的雪景空镜循环。",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "先写成只有一个主角，紧接着又写成这个主角同时变成五个外貌不同的人，并且互相对话。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "No progression, variation, or resolution; content is static, contradictory, and lacks narrative arc.",
+      "rationale": "The prompt replaces the requested narrative with a non-narrative, self-contradictory loop. The introduction of a single character who simultaneously becomes five others with dialogue is logically incoherent and lacks any progression or resolution. The content is static and repetitive without meaningful variation.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CIF",
+      "evidence": [
+        {
+          "quote": "中途插进一段无关的屋顶烟花。",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "这个主角同时变成五个外貌不同的人，并且互相对话。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Additions are irrelevant, contradictory, and distract from the original request (e.g., rooftop fireworks, multiple identities).",
+      "rationale": "The additions (multiple identities, fireworks) are not only irrelevant to the original request but actively contradict it. They introduce absurd, infeasible elements that distract from and undermine the core directive, violating the principle of supporting the central request.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SDI",
+      "evidence": [
+        {
+          "quote": "没有人物也没有情节的雪景空镜循环。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "No audio specifications provided, but not required for visual-only content.",
+      "rationale": "Since the prompt specifies no characters or dialogue, and no audio elements are requested, the absence of audio specifications is not an issue. However, if audio were implied (e.g., by fireworks), it would be under-specified — but no such implication exists.",
+      "severity": "minor"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SPS",
+      "evidence": [
+        {
+          "quote": "先写成只有一个主角，紧接着又写成这个主角同时变成五个外貌不同的人，并且互相对话。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Subject and performance details are contradictory and impossible (one character becomes five, with dialogue).",
+      "rationale": "The prompt demands a single subject who simultaneously becomes five distinct individuals engaging in dialogue — a physically and logically impossible performance. No actionable details on appearance, expression, or movement are provided for any of these entities, making performance specification infeasible.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "VSS",
+      "evidence": [
+        {
+          "quote": "没有人物也没有情节的雪景空镜循环。",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "写成正午暴晒，又写成深夜无光；",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Visual treatment is contradictory (snow scene, no characters, conflicting lighting, camera movement).",
+      "rationale": "The visual treatment is defined by mutually exclusive conditions: a snow scene (implying cold, overcast, or low light) is simultaneously required to be in '正午暴晒' (noon sun) and '深夜无光' (deep night, no light). This contradiction renders any visual treatment impossible to execute.",
+      "severity": "major"
+    }
+  ],
+  "dimension": "DC",
+  "dimension_score": 0,
+  "evidence_cache_key": "23f62df92be3a84fb0df858d253b9fd808c3a06880236cff9d0b99e2d2031cb5",
+  "judge_cache_key": "0754499d53388e6467fb078ab780e01b77f9f1c9e99d9029be2769351eb2b2eb",
+  "method": "weak-pe-original",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"DC\",\n  \"dimension_score\": 0,\n  \"summary\": \"Enhanced prompt fundamentally contradicts and undermines the original instruction by introducing incoherent, contradictory, and infeasible directives. It replaces the requested narrative with an impossible, self-contradictory sequence involving non-existent characters, illogical transitions, conflicting durations, and incompatible visual conditions. No feasible temporal plan or actionable specifications are preserved.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"STC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"No feasible temporal plan exists due to contradictory time structure (reversed timeline, mismatched start/end, impossible duration allocation).\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"时间倒过来：先给结尾，再跳到一个对不上的开头。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"总时长写成3秒，同时又要求每个分镜各自持续27秒。\"\n        }\n      ],\n      \"rationale\": \"The prompt mandates a reversed timeline with mismatched start and end points, and simultaneously assigns a total duration of 3 seconds while requiring each shot to last 27 seconds — a mathematically and temporally impossible sequence. This violates basic temporal coherence and shot duration allocation.\"\n    },\n    {\n      \"criterion\": \"CDS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Camera specifications are contradictory and infeasible (locked vs. shaky, no lens or framing details).\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"写成机位锁死，又写成镜头一直在晃。\"\n        }\n      ],\n      \"rationale\": \"The prompt directly contradicts itself by requiring both a locked camera position and constant camera shake, which are mutually exclusive. No actionable framing, scale, or lens specifications are provided, making camera direction impossible to execute.\"\n    },\n    {\n      \"criterion\": \"ETD\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Transitions are disconnected and unmotivated (e.g., inserting unrelated rooftop fireworks).\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"中途插进一段无关的屋顶烟花。\"\n        }\n      ],\n      \"rationale\": \"The insertion of an unrelated rooftop fireworks sequence disrupts any potential spatial or narrative continuity. There is no motivation for the cut, and it breaks the flow of the intended (though already corrupted) sequence, rendering transitions incoherent.\"\n    },\n    {\n      \"criterion\": \"LCS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Lighting conditions are contradictory (noon sun vs. complete darkness).\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"写成正午暴晒，又写成深夜无光；\"\n        }\n      ],\n      \"rationale\": \"The prompt simultaneously demands extreme daylight and total darkness, which are incompatible lighting conditions. No actionable light source, direction, or quality is specified, making lighting design impossible.\"\n    },\n    {\n      \"criterion\": \"NDE\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"No progression, variation, or resolution; content is static, contradictory, and lacks narrative arc.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"没有人物也没有情节的雪景空镜循环。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"先写成只有一个主角，紧接着又写成这个主角同时变成五个外貌不同的人，并且互相对话。\"\n        }\n      ],\n      \"rationale\": \"The prompt replaces the requested narrative with a non-narrative, self-contradictory loop. The introduction of a single character who simultaneously becomes five others with dialogue is logically incoherent and lacks any progression or resolution. The content is static and repetitive without meaningful variation.\"\n    },\n    {\n      \"criterion\": \"CIF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Additions are irrelevant, contradictory, and distract from the original request (e.g., rooftop fireworks, multiple identities).\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"中途插进一段无关的屋顶烟花。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"这个主角同时变成五个外貌不同的人，并且互相对话。\"\n        }\n      ],\n      \"rationale\": \"The additions (multiple identities, fireworks) are not only irrelevant to the original request but actively contradict it. They introduce absurd, infeasible elements that distract from and undermine the core directive, violating the principle of supporting the central request.\"\n    },\n    {\n      \"criterion\": \"SDI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"minor\",\n      \"issue\": \"No audio specifications provided, but not required for visual-only content.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"没有人物也没有情节的雪景空镜循环。\"\n        }\n      ],\n      \"rationale\": \"Since the prompt specifies no characters or dialogue, and no audio elements are requested, the absence of audio specifications is not an issue. However, if audio were implied (e.g., by fireworks), it would be under-specified — but no such implication exists.\"\n    },\n    {\n      \"criterion\": \"SPS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Subject and performance details are contradictory and impossible (one character becomes five, with dialogue).\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"先写成只有一个主角，紧接着又写成这个主角同时变成五个外貌不同的人，并且互相对话。\"\n        }\n      ],\n      \"rationale\": \"The prompt demands a single subject who simultaneously becomes five distinct individuals engaging in dialogue — a physically and logically impossible performance. No actionable details on appearance, expression, or movement are provided for any of these entities, making performance specification infeasible.\"\n    },\n    {\n      \"criterion\": \"VSS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Visual treatment is contradictory (snow scene, no characters, conflicting lighting, camera movement).\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"没有人物也没有情节的雪景空镜循环。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"写成正午暴晒，又写成深夜无光；\"\n        }\n      ],\n      \"rationale\": \"The visual treatment is defined by mutually exclusive conditions: a snow scene (implying cold, overcast, or low light) is simultaneously required to be in '正午暴晒' (noon sun) and '深夜无光' (deep night, no light). This contradiction renders any visual treatment impossible to execute.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "Enhanced prompt fundamentally contradicts and undermines the original instruction by introducing incoherent, contradictory, and infeasible directives. It replaces the requested narrative with an impossible, self-contradictory sequence involving non-existent characters, illogical transitions, conflicting durations, and incompatible visual conditions. No feasible temporal plan or actionable specifications are preserved.",
+  "usage": {
+    "completion_tokens": 1593,
+    "prompt_tokens": 981,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 2574
+  }
+}

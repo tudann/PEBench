@@ -1,0 +1,194 @@
+{
+  "candidate_hash": "8d582fa5f62eadd93a7333ee7eec5a156e0eb08ee0a48161d303a4324bee77c1",
+  "case_key": "i2v:103",
+  "created_at": "2026-11-13T07:27:46+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "GSF",
+      "evidence": [
+        {
+          "quote": "Create a professional animation for this image, giving the character smooth and natural movements.",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Replace the whole video with a product catalog blowing across a white background, reduced to blurred color blocks.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "primary_style: classical portrait, secondary_styles: [anthropomorphic, fantasy, Renaissance-inspired]",
+          "source": "evidence_facts"
+        }
+      ],
+      "issue": "The original request is for a professional animation in a classical portrait style with Renaissance-inspired, anthropomorphic fantasy elements. The enhanced prompt replaces this with a product catalog blowing across a white background, reduced to blurred color blocks — a completely incompatible genre and aesthetic.",
+      "rationale": "The original medium is a digital painting animation with a defined aesthetic. The enhanced prompt replaces it with a generic, abstract product catalog, which is incompatible with the requested genre and visual style.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SAP",
+      "evidence": [
+        {
+          "quote": "identity: Shiba Inu dog with human-like posture and clothing",
+          "source": "evidence_facts"
+        },
+        {
+          "quote": "Ignore the person, clothing, pose, and setting in the first frame, and replace them with a stranger of the opposite age and gender in a white studio.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "state that this same protagonist appears simultaneously as five different-looking people who talk to each other.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original subject is a Shiba Inu dog in Renaissance attire. The enhanced prompt ignores this identity, replacing it with a stranger of opposite age and gender in a white studio, and introduces five different-looking people who talk to each other — a complete substitution of subject identity and count.",
+      "rationale": "The subject identity, count, and appearance are explicitly overwritten, violating the core requirement to preserve the original character.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANF",
+      "evidence": [
+        {
+          "quote": "The dog looks down at a piece of paper as if delivering information, then looks up at the camera and continues speaking, with its hands moving in sync with the speech.",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Reverse the timeline: show the ending first, then cut to a beginning that does not match. Cut away in the middle to an underwater treasure hunt.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original action sequence is: dog looks down at paper, then looks up and speaks with hand movements. The enhanced prompt reverses the timeline, cuts to an unrelated underwater treasure hunt, and introduces contradictory events (e.g., same moment as harsh noon sun and lightless night), completely altering the narrative intent and event order.",
+      "rationale": "The requested action sequence is replaced with a disjointed, non-sequential narrative that contradicts the original intent.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "DLI",
+      "evidence": [
+        {
+          "quote": "there should be no dialogue.",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "five different-looking people who talk to each other.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original prompt explicitly requires 'no dialogue'. The enhanced prompt introduces multiple talking characters, directly contradicting this constraint.",
+      "rationale": "The requirement for silence is explicitly violated by introducing dialogue, which is a direct contradiction.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ARP",
+      "evidence": [
+        {
+          "quote": "The background music should match the mood and style of the image",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Replace the whole video with a product catalog blowing across a white background...",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original prompt requires background music matching the mood and style. The enhanced prompt does not mention music, but introduces a product catalog and underwater scene — implying a different sonic environment — and does not preserve the requested audio constraints.",
+      "rationale": "The audio requirement is not preserved; the new content implies a different sonic context, and no mention of music is made, violating the explicit instruction.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CCP",
+      "evidence": [
+        {
+          "quote": "Keep the camera centered on the character throughout the frame.",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Drop the requested identity, count, action order, setting, and any explicit camera instruction.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Describe that same moment as... a locked camera and a camera that never stops shaking.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Set the total runtime to 2 seconds, while also making every shot last 17 seconds.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original prompt requires a single static shot centered on the character. The enhanced prompt drops this instruction and introduces contradictory camera constraints: 'locked camera' and 'camera that never stops shaking' simultaneously, and also specifies 17-second shots in a 2-second video — an infeasible condition.",
+      "rationale": "The camera constraints are explicitly dropped and replaced with contradictory and infeasible conditions, violating the original requirement.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "LCF",
+      "evidence": [
+        {
+          "quote": "color_temperature: warm to neutral, light_sources_and_direction: soft, diffused light from front-left, time-of-day_cues: daytime",
+          "source": "evidence_facts"
+        },
+        {
+          "quote": "Describe that same moment as harsh noon sun and as a lightless night...",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original image has warm-to-neutral lighting, soft diffused light from front-left, and a daytime setting. The enhanced prompt contradicts this by describing the same moment as both 'harsh noon sun' and 'lightless night', which are incompatible lighting conditions.",
+      "rationale": "The lighting conditions are directly contradicted, introducing mutually exclusive states that cannot coexist in a single scene.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SSP",
+      "evidence": [
+        {
+          "quote": "scene_type: studio-style portrait with naturalistic background, foreground: stone table with map, background: soft-focus blue sky with light clouds",
+          "source": "evidence_facts"
+        },
+        {
+          "quote": "replace them with a stranger of the opposite age and gender in a white studio. Cut away in the middle to an underwater treasure hunt.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original setting is a stone table with a map, against a soft sky background. The enhanced prompt replaces this with a white studio and an underwater treasure hunt, completely altering the setting and spatial layout.",
+      "rationale": "The setting is entirely replaced with unrelated environments, violating the spatial and background requirements.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "OTI",
+      "evidence": [
+        {
+          "quote": "there should be no dialogue.",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "onscreen_text: presence: false",
+          "source": "evidence_facts"
+        }
+      ],
+      "issue": "The original prompt does not specify any on-screen text, and the image contains no visible text. The enhanced prompt does not introduce any text, so there is no violation.",
+      "rationale": "No on-screen text was requested or present in the original, and none is introduced in the enhanced prompt, so this criterion is satisfied.",
+      "severity": "none"
+    }
+  ],
+  "dimension": "SF",
+  "dimension_score": 0,
+  "evidence_cache_key": "846275a6121e83901321d62ad1d2d067ae23e1c1cc78b4bdb0014b489efe030b",
+  "judge_cache_key": "a0ca24571ad14d7ab7be626329bd736d7e7015f9ebc418227c8be391591d0377",
+  "method": "weak-pe-original",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"SF\",\n  \"dimension_score\": 0,\n  \"summary\": \"The enhanced prompt completely disregards the original instruction, replacing the requested animation with an unrelated, contradictory, and incoherent sequence. It violates nearly all semantic fidelity criteria by altering genre, medium, subject identity, actions, timeline, setting, camera constraints, lighting, and duration. The prompt introduces impossible conditions (e.g., 17-second shots in a 2-second video) and contradicts explicit requirements (e.g., no dialogue vs. multiple talking characters).\",\n  \"criteria\": [\n    {\n      \"criterion\": \"GSF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original request is for a professional animation in a classical portrait style with Renaissance-inspired, anthropomorphic fantasy elements. The enhanced prompt replaces this with a product catalog blowing across a white background, reduced to blurred color blocks — a completely incompatible genre and aesthetic.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"Create a professional animation for this image, giving the character smooth and natural movements.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Replace the whole video with a product catalog blowing across a white background, reduced to blurred color blocks.\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"primary_style: classical portrait, secondary_styles: [anthropomorphic, fantasy, Renaissance-inspired]\"\n        }\n      ],\n      \"rationale\": \"The original medium is a digital painting animation with a defined aesthetic. The enhanced prompt replaces it with a generic, abstract product catalog, which is incompatible with the requested genre and visual style.\"\n    },\n    {\n      \"criterion\": \"SAP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original subject is a Shiba Inu dog in Renaissance attire. The enhanced prompt ignores this identity, replacing it with a stranger of opposite age and gender in a white studio, and introduces five different-looking people who talk to each other — a complete substitution of subject identity and count.\",\n      \"evidence\": [\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"identity: Shiba Inu dog with human-like posture and clothing\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Ignore the person, clothing, pose, and setting in the first frame, and replace them with a stranger of the opposite age and gender in a white studio.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"state that this same protagonist appears simultaneously as five different-looking people who talk to each other.\"\n        }\n      ],\n      \"rationale\": \"The subject identity, count, and appearance are explicitly overwritten, violating the core requirement to preserve the original character.\"\n    },\n    {\n      \"criterion\": \"ANF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original action sequence is: dog looks down at paper, then looks up and speaks with hand movements. The enhanced prompt reverses the timeline, cuts to an unrelated underwater treasure hunt, and introduces contradictory events (e.g., same moment as harsh noon sun and lightless night), completely altering the narrative intent and event order.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"The dog looks down at a piece of paper as if delivering information, then looks up at the camera and continues speaking, with its hands moving in sync with the speech.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Reverse the timeline: show the ending first, then cut to a beginning that does not match. Cut away in the middle to an underwater treasure hunt.\"\n        }\n      ],\n      \"rationale\": \"The requested action sequence is replaced with a disjointed, non-sequential narrative that contradicts the original intent.\"\n    },\n    {\n      \"criterion\": \"DLI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original prompt explicitly requires 'no dialogue'. The enhanced prompt introduces multiple talking characters, directly contradicting this constraint.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"there should be no dialogue.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"five different-looking people who talk to each other.\"\n        }\n      ],\n      \"rationale\": \"The requirement for silence is explicitly violated by introducing dialogue, which is a direct contradiction.\"\n    },\n    {\n      \"criterion\": \"ARP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original prompt requires background music matching the mood and style. The enhanced prompt does not mention music, but introduces a product catalog and underwater scene — implying a different sonic environment — and does not preserve the requested audio constraints.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"The background music should match the mood and style of the image\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Replace the whole video with a product catalog blowing across a white background...\"\n        }\n      ],\n      \"rationale\": \"The audio requirement is not preserved; the new content implies a different sonic context, and no mention of music is made, violating the explicit instruction.\"\n    },\n    {\n      \"criterion\": \"CCP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original prompt requires a single static shot centered on the character. The enhanced prompt drops this instruction and introduces contradictory camera constraints: 'locked camera' and 'camera that never stops shaking' simultaneously, and also specifies 17-second shots in a 2-second video — an infeasible condition.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"Keep the camera centered on the character throughout the frame.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Drop the requested identity, count, action order, setting, and any explicit camera instruction.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Describe that same moment as... a locked camera and a camera that never stops shaking.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Set the total runtime to 2 seconds, while also making every shot last 17 seconds.\"\n        }\n      ],\n      \"rationale\": \"The camera constraints are explicitly dropped and replaced with contradictory and infeasible conditions, violating the original requirement.\"\n    },\n    {\n      \"criterion\": \"LCF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original image has warm-to-neutral lighting, soft diffused light from front-left, and a daytime setting. The enhanced prompt contradicts this by describing the same moment as both 'harsh noon sun' and 'lightless night', which are incompatible lighting conditions.\",\n      \"evidence\": [\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"color_temperature: warm to neutral, light_sources_and_direction: soft, diffused light from front-left, time-of-day_cues: daytime\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Describe that same moment as harsh noon sun and as a lightless night...\"\n        }\n      ],\n      \"rationale\": \"The lighting conditions are directly contradicted, introducing mutually exclusive states that cannot coexist in a single scene.\"\n    },\n    {\n      \"criterion\": \"SSP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original setting is a stone table with a map, against a soft sky background. The enhanced prompt replaces this with a white studio and an underwater treasure hunt, completely altering the setting and spatial layout.\",\n      \"evidence\": [\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"scene_type: studio-style portrait with naturalistic background, foreground: stone table with map, background: soft-focus blue sky with light clouds\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"replace them with a stranger of the opposite age and gender in a white studio. Cut away in the middle to an underwater treasure hunt.\"\n        }\n      ],\n      \"rationale\": \"The setting is entirely replaced with unrelated environments, violating the spatial and background requirements.\"\n    },\n    {\n      \"criterion\": \"OTI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"The original prompt does not specify any on-screen text, and the image contains no visible text. The enhanced prompt does not introduce any text, so there is no violation.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"there should be no dialogue.\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"onscreen_text: presence: false\"\n        }\n      ],\n      \"rationale\": \"No on-screen text was requested or present in the original, and none is introduced in the enhanced prompt, so this criterion is satisfied.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt completely disregards the original instruction, replacing the requested animation with an unrelated, contradictory, and incoherent sequence. It violates nearly all semantic fidelity criteria by altering genre, medium, subject identity, actions, timeline, setting, camera constraints, lighting, and duration. The prompt introduces impossible conditions (e.g., 17-second shots in a 2-second video) and contradicts explicit requirements (e.g., no dialogue vs. multiple talking characters).",
+  "usage": {
+    "completion_tokens": 2003,
+    "prompt_tokens": 2316,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 4319
+  }
+}

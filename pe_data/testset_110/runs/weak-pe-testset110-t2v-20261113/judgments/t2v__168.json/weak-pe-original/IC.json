@@ -1,0 +1,127 @@
+{
+  "candidate_hash": "ebebe5a37ef0d5ba66efd343a09bd50f7a72d7750d6a5b81e296359dd1651718",
+  "case_key": "t2v:168",
+  "created_at": "2026-11-13T07:44:48+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "SAC",
+      "evidence": [
+        {
+          "quote": "一只由光粒构成的渡鸦作为唯一主体",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "先写成只有一个主角，紧接着又写成这个主角同时变成五个外貌不同的人，并且互相对话",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "主体身份、数量和外观发生根本性矛盾：原始为单体光尘渡鸦，增强提示中先设定为单主角，随即变为五个外貌不同的人并互相对话，且未说明身份转换逻辑，导致主体身份和数量严重不一致。",
+      "rationale": "主体身份和数量在原始与增强提示间发生不可调和的冲突，且增强提示中未提供任何合理转换机制或解释，构成严重属性漂移。",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANL",
+      "evidence": [
+        {
+          "quote": "渡鸦开始了一段从容的降落过程...最终停落在枝干上",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "时间倒过来：先给结尾，再跳到一个对不上的开头。中途插进一段无关的屋顶烟花",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "动作序列完全断裂且逻辑混乱：原始为渡鸦降落的连贯动作，增强提示中插入无关对话、屋顶烟花，且要求时间倒置（先结尾再开头），导致动作因果链断裂，无合理衔接或反应。",
+      "rationale": "动作序列被人为打乱，插入无关事件，且无因果绑定或合理过渡，破坏了动作的连贯性和可理解性。",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "TSC",
+      "evidence": [
+        {
+          "quote": "该镜头[00.00-15.00秒]",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "总时长写成3秒，同时又要求每个分镜各自持续27秒",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "时间顺序和时长设定自相矛盾：原始为15秒连续镜头，增强提示要求总时长3秒，同时每个分镜27秒，且要求时间倒置，导致时间轴无法成立。",
+      "rationale": "时间参数冲突（3秒 vs 27秒）与倒序要求共同导致时间线不可执行，构成根本性时序错误。",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SPC",
+      "evidence": [
+        {
+          "quote": "全局镜头语言采用平稳克制的拍摄方式...采用浅景深，焦点持续锁定在主体身上",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "写成机位锁死，又写成镜头一直在晃。同一段写成正午暴晒，又写成深夜无光",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "空间设定矛盾：原始为固定机位、林间空地，增强提示中要求“机位锁死，又写成镜头一直在晃”，且场景在“正午暴晒”与“深夜无光”间切换，导致空间状态和视角不一致。",
+      "rationale": "空间状态（光照、机位）在增强提示中频繁切换且无过渡，与原始稳定空间设定冲突，破坏空间一致性。",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "PL",
+      "evidence": [
+        {
+          "quote": "一只由光粒构成的渡鸦...在破晓时刻落驻到一截横生树干上",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "不要特效和变形。...这个主角同时变成五个外貌不同的人",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "物理规则被违反：主体从单体渡鸦瞬间变为五人，且无任何物理或叙事解释；同时要求“不要特效和变形”，但又要求“主角同时变成五个外貌不同的人”，构成逻辑矛盾。",
+      "rationale": "在禁止特效的前提下要求主体变形，违反基本物理和叙事规则，且无合理设定支撑，构成严重矛盾。",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "AVS",
+      "evidence": [
+        {
+          "quote": "音频类型仅包含环境声与关键音效，不使用任何配乐",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "中途插进一段无关的屋顶烟花",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "视听对齐完全缺失：原始仅含环境声与关键音效，增强提示中插入“屋顶烟花”等无关事件，且未说明其声音或视觉同步，导致视听内容无关联或错位。",
+      "rationale": "插入的烟花事件无对应声音或视觉同步描述，且与原始安静氛围冲突，破坏视听一致性。",
+      "severity": "major"
+    }
+  ],
+  "dimension": "IC",
+  "dimension_score": 0,
+  "evidence_cache_key": "0f4209e0436b2da86d8211bdb0751ac962cd67db2e92072f4e841ace67c3f8ae",
+  "judge_cache_key": "438d7e9fd7332b1041db3e2c26d42cb3fe828e0d369fb59490f6650aee59e97d",
+  "method": "weak-pe-original",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"IC\",\n  \"dimension_score\": 0,\n  \"summary\": \"增强提示完全违背原始指令的主体、场景、动作、时序、镜头语言和视觉风格，引入多重矛盾、不一致和不可行的设定，导致内部一致性彻底崩溃。主体从单体渡鸦变为五人对话，时间顺序倒置，场景在正午与深夜间切换，镜头从固定变为晃动，时长设定自相矛盾，且插入无关内容（屋顶烟花），所有核心一致性维度均出现重大问题。\",\n  \"criteria\": [\n    {\n      \"criterion\": \"SAC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"主体身份、数量和外观发生根本性矛盾：原始为单体光尘渡鸦，增强提示中先设定为单主角，随即变为五个外貌不同的人并互相对话，且未说明身份转换逻辑，导致主体身份和数量严重不一致。\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"一只由光粒构成的渡鸦作为唯一主体\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"先写成只有一个主角，紧接着又写成这个主角同时变成五个外貌不同的人，并且互相对话\"\n        }\n      ],\n      \"rationale\": \"主体身份和数量在原始与增强提示间发生不可调和的冲突，且增强提示中未提供任何合理转换机制或解释，构成严重属性漂移。\"\n    },\n    {\n      \"criterion\": \"ANL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"动作序列完全断裂且逻辑混乱：原始为渡鸦降落的连贯动作，增强提示中插入无关对话、屋顶烟花，且要求时间倒置（先结尾再开头），导致动作因果链断裂，无合理衔接或反应。\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"渡鸦开始了一段从容的降落过程...最终停落在枝干上\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"时间倒过来：先给结尾，再跳到一个对不上的开头。中途插进一段无关的屋顶烟花\"\n        }\n      ],\n      \"rationale\": \"动作序列被人为打乱，插入无关事件，且无因果绑定或合理过渡，破坏了动作的连贯性和可理解性。\"\n    },\n    {\n      \"criterion\": \"TSC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"时间顺序和时长设定自相矛盾：原始为15秒连续镜头，增强提示要求总时长3秒，同时每个分镜27秒，且要求时间倒置，导致时间轴无法成立。\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"该镜头[00.00-15.00秒]\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"总时长写成3秒，同时又要求每个分镜各自持续27秒\"\n        }\n      ],\n      \"rationale\": \"时间参数冲突（3秒 vs 27秒）与倒序要求共同导致时间线不可执行，构成根本性时序错误。\"\n    },\n    {\n      \"criterion\": \"SPC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"空间设定矛盾：原始为固定机位、林间空地，增强提示中要求“机位锁死，又写成镜头一直在晃”，且场景在“正午暴晒”与“深夜无光”间切换，导致空间状态和视角不一致。\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"全局镜头语言采用平稳克制的拍摄方式...采用浅景深，焦点持续锁定在主体身上\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"写成机位锁死，又写成镜头一直在晃。同一段写成正午暴晒，又写成深夜无光\"\n        }\n      ],\n      \"rationale\": \"空间状态（光照、机位）在增强提示中频繁切换且无过渡，与原始稳定空间设定冲突，破坏空间一致性。\"\n    },\n    {\n      \"criterion\": \"PL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"物理规则被违反：主体从单体渡鸦瞬间变为五人，且无任何物理或叙事解释；同时要求“不要特效和变形”，但又要求“主角同时变成五个外貌不同的人”，构成逻辑矛盾。\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"一只由光粒构成的渡鸦...在破晓时刻落驻到一截横生树干上\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"不要特效和变形。...这个主角同时变成五个外貌不同的人\"\n        }\n      ],\n      \"rationale\": \"在禁止特效的前提下要求主体变形，违反基本物理和叙事规则，且无合理设定支撑，构成严重矛盾。\"\n    },\n    {\n      \"criterion\": \"AVS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"视听对齐完全缺失：原始仅含环境声与关键音效，增强提示中插入“屋顶烟花”等无关事件，且未说明其声音或视觉同步，导致视听内容无关联或错位。\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"音频类型仅包含环境声与关键音效，不使用任何配乐\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"中途插进一段无关的屋顶烟花\"\n        }\n      ],\n      \"rationale\": \"插入的烟花事件无对应声音或视觉同步描述，且与原始安静氛围冲突，破坏视听一致性。\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "增强提示完全违背原始指令的主体、场景、动作、时序、镜头语言和视觉风格，引入多重矛盾、不一致和不可行的设定，导致内部一致性彻底崩溃。主体从单体渡鸦变为五人对话，时间顺序倒置，场景在正午与深夜间切换，镜头从固定变为晃动，时长设定自相矛盾，且插入无关内容（屋顶烟花），所有核心一致性维度均出现重大问题。",
+  "usage": {
+    "completion_tokens": 1350,
+    "prompt_tokens": 1653,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 3003
+  }
+}

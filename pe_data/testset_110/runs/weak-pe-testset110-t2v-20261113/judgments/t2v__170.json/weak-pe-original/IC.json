@@ -1,0 +1,110 @@
+{
+  "candidate_hash": "ab140167afee97e3914bb78e5378b775c353a05a575ae854af84e5274aab1d54",
+  "case_key": "t2v:170",
+  "created_at": "2026-11-13T07:46:28+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "SAC",
+      "evidence": [
+        {
+          "quote": "先写成只有一个主角，紧接着又写成这个主角同时变成五个外貌不同的人，并且互相对话。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "主体身份、人数和外观在增强提示中发生剧烈且无解释的转变：从无主体到一个主角，再到五个外貌不同的人同时对话，违反了主体稳定性和身份一致性。",
+      "rationale": "原始指令明确描述了一个单一主体（通过‘近景突入’、‘身位跟随’、‘袍角翻飞’等动作暗示）的战斗场景，而增强提示中主体数量和身份在无过渡情况下突变，构成严重身份与属性漂移。",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANL",
+      "evidence": [
+        {
+          "quote": "整段改成空会议室里一杯水纹丝不动，没有人和对抗。...中途插进一段无关的海底寻宝。",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "[0-2s] 强势起镜：近景突入 + 急速回旋 + 紧张气场逼近\n[2-4s] 绕身调度：全角环拍 + 身位跟随 + 袍角翻飞",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "动作序列被完全破坏：原始指令中的战斗动作链（逼近→环拍→推进→升空→终击→落幕）被替换为静态水杯、对话、海底寻宝等无关事件，无因果或程序性衔接。",
+      "rationale": "原始指令构建了一个清晰的战斗动作流程，而增强提示中插入的非相关事件（如水杯、海底寻宝）与主体动作完全脱节，破坏了动作的因果连贯性。",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "TSC",
+      "evidence": [
+        {
+          "quote": "总时长写成3秒，同时又要求每个分镜各自持续27秒。时间倒过来：先给结尾，再跳到一个对不上的开头。",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "[0-2s]...[2-4s]...[4-6s]...[6-8s]...[8-10s]...[10-15s]",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "时间逻辑严重矛盾：总时长被设定为3秒，但要求每个分镜持续27秒，且时间顺序被倒置（先结尾再开头），导致时间分配不可行。",
+      "rationale": "原始指令的时间轴清晰且可执行（15秒内分段推进），而增强提示中的时间设定自相矛盾，无法在物理或叙事上实现，构成时间逻辑崩溃。",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SPC",
+      "evidence": [
+        {
+          "quote": "写成机位锁死，又写成镜头一直在晃。...整段改成空会议室里一杯水纹丝不动...中途插进一段无关的海底寻宝。",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "绕身调度：全角环拍 + 身位跟随 + 袍角翻飞\n盘旋拔升：仰角低机位 + 旋绕升空 + 力场迸发",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "空间设定混乱：原始指令中的动态调度（环拍、平移、升空）被替换为静态会议室、海底场景，且镜头运动在‘锁死’与‘一直在晃’之间矛盾切换，破坏空间一致性。",
+      "rationale": "原始指令中的空间动态（如环拍、升空）与增强提示中的静态/矛盾空间（会议室、海底、镜头晃动/锁死）无法共存，导致空间轨迹和位置关系断裂。",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "PL",
+      "evidence": [
+        {
+          "quote": "这个主角同时变成五个外貌不同的人，并且互相对话。...写成正午暴晒，又写成深夜无光",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "物理规则被违反：一个主体同时变成五个不同外貌的人并对话，违背了物体永久性和人体物理限制；水杯在暴晒与无光环境中同时存在，也违反现实物理条件。",
+      "rationale": "原始指令中的战斗场景基于现实物理逻辑（如动作、镜头运动），而增强提示中引入的超现实元素（分身对话、环境瞬变）无规则支撑，破坏了物理一致性。",
+      "severity": "major"
+    },
+    {
+      "applicability": "not_applicable",
+      "criterion": "AVS",
+      "evidence": [],
+      "issue": "",
+      "rationale": "原始指令和增强提示均未包含对话、音乐、音效或歌词等可与视觉事件对齐的音频元素，因此该维度不适用。",
+      "severity": null
+    }
+  ],
+  "dimension": "IC",
+  "dimension_score": 0,
+  "evidence_cache_key": "6e8b46e4faaea4c41a3ed079c31d7c4b4fe5d0b8b96da8aa0471cbf323dcdb69",
+  "judge_cache_key": "438d7e9fd7332b1041db3e2c26d42cb3fe828e0d369fb59490f6650aee59e97d",
+  "method": "weak-pe-original",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"IC\",\n  \"dimension_score\": 0,\n  \"summary\": \"增强提示与原始指令在主体身份、动作序列、场景设定、时间逻辑、镜头运动和物理一致性上存在多重严重矛盾与不一致，导致内部逻辑完全崩溃，无法形成连贯的视觉叙事。\",\n  \"criteria\": [\n    {\n      \"criterion\": \"SAC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"主体身份、人数和外观在增强提示中发生剧烈且无解释的转变：从无主体到一个主角，再到五个外貌不同的人同时对话，违反了主体稳定性和身份一致性。\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"先写成只有一个主角，紧接着又写成这个主角同时变成五个外貌不同的人，并且互相对话。\"\n        }\n      ],\n      \"rationale\": \"原始指令明确描述了一个单一主体（通过‘近景突入’、‘身位跟随’、‘袍角翻飞’等动作暗示）的战斗场景，而增强提示中主体数量和身份在无过渡情况下突变，构成严重身份与属性漂移。\"\n    },\n    {\n      \"criterion\": \"ANL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"动作序列被完全破坏：原始指令中的战斗动作链（逼近→环拍→推进→升空→终击→落幕）被替换为静态水杯、对话、海底寻宝等无关事件，无因果或程序性衔接。\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"整段改成空会议室里一杯水纹丝不动，没有人和对抗。...中途插进一段无关的海底寻宝。\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"[0-2s] 强势起镜：近景突入 + 急速回旋 + 紧张气场逼近\\n[2-4s] 绕身调度：全角环拍 + 身位跟随 + 袍角翻飞\"\n        }\n      ],\n      \"rationale\": \"原始指令构建了一个清晰的战斗动作流程，而增强提示中插入的非相关事件（如水杯、海底寻宝）与主体动作完全脱节，破坏了动作的因果连贯性。\"\n    },\n    {\n      \"criterion\": \"TSC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"时间逻辑严重矛盾：总时长被设定为3秒，但要求每个分镜持续27秒，且时间顺序被倒置（先结尾再开头），导致时间分配不可行。\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"总时长写成3秒，同时又要求每个分镜各自持续27秒。时间倒过来：先给结尾，再跳到一个对不上的开头。\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"[0-2s]...[2-4s]...[4-6s]...[6-8s]...[8-10s]...[10-15s]\"\n        }\n      ],\n      \"rationale\": \"原始指令的时间轴清晰且可执行（15秒内分段推进），而增强提示中的时间设定自相矛盾，无法在物理或叙事上实现，构成时间逻辑崩溃。\"\n    },\n    {\n      \"criterion\": \"SPC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"空间设定混乱：原始指令中的动态调度（环拍、平移、升空）被替换为静态会议室、海底场景，且镜头运动在‘锁死’与‘一直在晃’之间矛盾切换，破坏空间一致性。\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"写成机位锁死，又写成镜头一直在晃。...整段改成空会议室里一杯水纹丝不动...中途插进一段无关的海底寻宝。\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"绕身调度：全角环拍 + 身位跟随 + 袍角翻飞\\n盘旋拔升：仰角低机位 + 旋绕升空 + 力场迸发\"\n        }\n      ],\n      \"rationale\": \"原始指令中的空间动态（如环拍、升空）与增强提示中的静态/矛盾空间（会议室、海底、镜头晃动/锁死）无法共存，导致空间轨迹和位置关系断裂。\"\n    },\n    {\n      \"criterion\": \"PL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"物理规则被违反：一个主体同时变成五个不同外貌的人并对话，违背了物体永久性和人体物理限制；水杯在暴晒与无光环境中同时存在，也违反现实物理条件。\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"这个主角同时变成五个外貌不同的人，并且互相对话。...写成正午暴晒，又写成深夜无光\"\n        }\n      ],\n      \"rationale\": \"原始指令中的战斗场景基于现实物理逻辑（如动作、镜头运动），而增强提示中引入的超现实元素（分身对话、环境瞬变）无规则支撑，破坏了物理一致性。\"\n    },\n    {\n      \"criterion\": \"AVS\",\n      \"applicability\": \"not_applicable\",\n      \"severity\": null,\n      \"issue\": \"\",\n      \"evidence\": [],\n      \"rationale\": \"原始指令和增强提示均未包含对话、音乐、音效或歌词等可与视觉事件对齐的音频元素，因此该维度不适用。\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "增强提示与原始指令在主体身份、动作序列、场景设定、时间逻辑、镜头运动和物理一致性上存在多重严重矛盾与不一致，导致内部逻辑完全崩溃，无法形成连贯的视觉叙事。",
+  "usage": {
+    "completion_tokens": 1311,
+    "prompt_tokens": 1138,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 2449
+  }
+}

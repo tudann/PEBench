@@ -1,0 +1,155 @@
+{
+  "candidate_hash": "636abd62df44bae15ca45e8212e7c7985e60d36b7a3fe66ce0f240555f1e3fe4",
+  "case_key": "r2v:090",
+  "created_at": "2026-11-13T08:42:55+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "SAC",
+      "evidence": [
+        {
+          "quote": "<Subject 1> is the young East Asian woman from <Picture 1>, with very long straight black hair and wispy bangs, large brown eyes, soft glam makeup, coral-red lips, fair skin, and a slim figure. She wears a white sleeveless tank top and a statement rhinestone choker necklace with a large black heart-shaped center stone.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "The bunny phone case and selfie context from <Picture 1> are not carried into the video.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "retention_analysis: <Subject 1> (appears in [Shot 1], [Shot 2], [Shot 3]): fully_preserved - her face, long straight black hair with bangs, fair skin, soft glam makeup, slim figure, white sleeveless tank top, and rhinestone choker with black heart stone are retained throughout, with hair swaying naturally with movement.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Subject identity, appearance, clothing, and accessories are consistently preserved across all shots. The prompt explicitly defines <Subject 1> with stable attributes (long black hair, bangs, fair skin, white tank top, rhinestone choker) and confirms their retention throughout. The bunny phone case and selfie context are correctly excluded from the video.",
+      "rationale": "All subject attributes are explicitly defined and tracked as consistent across shots. No renaming, duplication, or attribute drift occurs. The exclusion of non-essential elements from the reference image (bunny case, selfie context) is correctly enforced.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANL",
+      "evidence": [
+        {
+          "quote": "She begins with gentle rhythmic nodding into the music, hair swaying naturally, then transitions into sharp, precise hand movements, followed by side hip twists and smooth shoulder rolls, all locked tightly to the drum beats.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "mid-section climax: continuous gesture choreography, a body wave traveling through her torso, side steps carrying her slightly across the studio floor, and one quick freeze-like accent that hits the beat cleanly",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "flows through final beat-matched steps into a turn, then lands a clean, sharp final pose — body slightly turned sideways, face rotated back toward the lens, eyes locked on camera",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Actions form a coherent choreographic progression: rhythmic nodding → sharp hand movements → hip twists → shoulder rolls → gesture chain → body wave → side steps → freeze accents → final pose. Each action logically follows the previous, with clear beat-matching and physical continuity. The final pose resolves the sequence cleanly.",
+      "rationale": "The choreography is described as a causal, beat-matched sequence with clear transitions and physical plausibility. Each action builds on the previous, culminating in a resolved final pose. No dangling or incompatible events are present.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "TSC",
+      "evidence": [
+        {
+          "quote": "At 00:05.500, the camera completes the arc back to a front-facing medium shot and locks static.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "She holds the freeze sharply to the last frame as the track resolves cleanly on or just after the pose.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Start with a front-facing medium shot, add slight follow shots and circular movement in the middle, and return to a front-facing freeze at the end.",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "The timing of Shot 3 (00:05.500) is specified, but the total duration is 7 seconds. While the sequence is plausible, the exact timing of the final pose relative to the end of the track is not fully aligned with the 7-second constraint — the prompt says 'ends cleanly on or just after the pose' but does not confirm the pose occurs at 00:06.500 or 00:07.000. This is a minor timing ambiguity.",
+      "rationale": "The timeline is mostly coherent, with clear shot transitions. The minor issue is that the final pose is described as occurring after 00:05.500 but must also fit within 7 seconds and align with the music’s end. While plausible, the exact timing is not fully specified, creating a slight ambiguity. This does not break internal consistency but is a minor precision issue.",
+      "severity": "minor"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SPC",
+      "evidence": [
+        {
+          "quote": "The target video is a 7-second high-quality K-pop dance performance... set in a clean, bright, modern Korean-style dance practice studio with a mirrored wall, soft daylight, and pale minimalist tones.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "At 00:03.000, the camera begins a gentle follow, then a slow, smooth semi-circular movement around her — roughly 30–45 degrees of arc, restrained and fluid, never a full orbit.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "side steps carrying her slightly across the studio floor",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "lands a clean, sharp final pose — body slightly turned sideways, face rotated back toward the lens",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Location is consistently described as a clean, bright, modern Korean-style dance studio with a mirrored wall. Camera movement is coherent: front-facing → gentle follow → slow circular arc → return to front-facing. Subject’s position is centered initially, moves slightly during side steps, and returns to a centered final pose. No unexplained position swaps or impossible trajectories.",
+      "rationale": "Spatial relationships are consistent: the studio environment is stable, camera motion is described with plausible trajectory, and subject movement is coherent with the choreography. No contradictions in screen direction or impossible transitions.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "PL",
+      "evidence": [
+        {
+          "quote": "She begins with gentle rhythmic nodding into the music, hair swaying naturally, then transitions into sharp, precise hand movements, followed by side hip twists and smooth shoulder rolls, all locked tightly to the drum beats.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "a body wave traveling through her torso, side steps carrying her slightly across the studio floor",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "The mirrored wall behind her reflects soft daylight as she moves.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "All physical actions (nodding, hand movements, hip twists, shoulder rolls, body wave, side steps, freeze) are plausible for a human dancer. The camera movement (follow, semi-circular arc) is physically feasible. No violations of gravity, object permanence, or bodily feasibility are described. The mirrored wall reflects light and movement plausibly.",
+      "rationale": "All described actions and environmental interactions are consistent with real-world physics. No fantastical or impossible elements are introduced. The choreography and camera motion are grounded in physical plausibility.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "AVS",
+      "evidence": [
+        {
+          "quote": "The choreography is tightly beat-matched across all 7 seconds, with nods, hand accents, the freeze accent, and the final pose landing on clear downbeats; the track ends cleanly on or just after the final freeze.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "No speech, no subtitles, no on-screen text.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "A rhythm-forward K-pop dance track driven by punchy drum beats, deep electronic bass, and bright synthesizer melodies",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The non-diegetic K-pop track is described as rhythm-forward with drum beats, bass, and synths. The choreography is explicitly beat-matched: nods, hand accents, freeze, and final pose land on downbeats. No speech, subtitles, or on-screen text are present. The visual events (freeze, pose) align with the music’s resolution. No misaligned lip-sync or effects are described.",
+      "rationale": "The audio-visual alignment is explicitly enforced: all key visual events are synchronized with the music’s rhythm. No conflicting or misaligned elements are present. The absence of diegetic sound or text ensures no AVS conflicts.",
+      "severity": "none"
+    }
+  ],
+  "dimension": "IC",
+  "dimension_score": 95,
+  "evidence_cache_key": "a86a7b701c3eb25996eb02ed63db34102a5d37d06872595515350175ce6fd79f",
+  "judge_cache_key": "438d7e9fd7332b1041db3e2c26d42cb3fe828e0d369fb59490f6650aee59e97d",
+  "method": "glm53_20261112_120702",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"IC\",\n  \"dimension_score\": 95,\n  \"summary\": \"The enhanced prompt maintains strong internal consistency with the original instruction, preserving subject identity, choreography structure, camera movement, and stylistic tone. Subject attributes are consistently defined and tracked across shots. Minor issues include slight over-specification of camera motion (arc degrees) and a minor mismatch in shot timing (00:05.500 vs. 7-second duration), but these do not materially affect coherence. No contradictions or attribute drift are present. The prompt correctly excludes the bunny phone case and selfie context from the video, as instructed.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"SAC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"Subject identity, appearance, clothing, and accessories are consistently preserved across all shots. The prompt explicitly defines <Subject 1> with stable attributes (long black hair, bangs, fair skin, white tank top, rhinestone choker) and confirms their retention throughout. The bunny phone case and selfie context are correctly excluded from the video.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"<Subject 1> is the young East Asian woman from <Picture 1>, with very long straight black hair and wispy bangs, large brown eyes, soft glam makeup, coral-red lips, fair skin, and a slim figure. She wears a white sleeveless tank top and a statement rhinestone choker necklace with a large black heart-shaped center stone.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"The bunny phone case and selfie context from <Picture 1> are not carried into the video.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"retention_analysis: <Subject 1> (appears in [Shot 1], [Shot 2], [Shot 3]): fully_preserved - her face, long straight black hair with bangs, fair skin, soft glam makeup, slim figure, white sleeveless tank top, and rhinestone choker with black heart stone are retained throughout, with hair swaying naturally with movement.\"\n        }\n      ],\n      \"rationale\": \"All subject attributes are explicitly defined and tracked as consistent across shots. No renaming, duplication, or attribute drift occurs. The exclusion of non-essential elements from the reference image (bunny case, selfie context) is correctly enforced.\"\n    },\n    {\n      \"criterion\": \"ANL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"Actions form a coherent choreographic progression: rhythmic nodding → sharp hand movements → hip twists → shoulder rolls → gesture chain → body wave → side steps → freeze accents → final pose. Each action logically follows the previous, with clear beat-matching and physical continuity. The final pose resolves the sequence cleanly.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"She begins with gentle rhythmic nodding into the music, hair swaying naturally, then transitions into sharp, precise hand movements, followed by side hip twists and smooth shoulder rolls, all locked tightly to the drum beats.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"mid-section climax: continuous gesture choreography, a body wave traveling through her torso, side steps carrying her slightly across the studio floor, and one quick freeze-like accent that hits the beat cleanly\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"flows through final beat-matched steps into a turn, then lands a clean, sharp final pose — body slightly turned sideways, face rotated back toward the lens, eyes locked on camera\"\n        }\n      ],\n      \"rationale\": \"The choreography is described as a causal, beat-matched sequence with clear transitions and physical plausibility. Each action builds on the previous, culminating in a resolved final pose. No dangling or incompatible events are present.\"\n    },\n    {\n      \"criterion\": \"TSC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"minor\",\n      \"issue\": \"The timing of Shot 3 (00:05.500) is specified, but the total duration is 7 seconds. While the sequence is plausible, the exact timing of the final pose relative to the end of the track is not fully aligned with the 7-second constraint — the prompt says 'ends cleanly on or just after the pose' but does not confirm the pose occurs at 00:06.500 or 00:07.000. This is a minor timing ambiguity.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"At 00:05.500, the camera completes the arc back to a front-facing medium shot and locks static.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"She holds the freeze sharply to the last frame as the track resolves cleanly on or just after the pose.\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"Start with a front-facing medium shot, add slight follow shots and circular movement in the middle, and return to a front-facing freeze at the end.\"\n        }\n      ],\n      \"rationale\": \"The timeline is mostly coherent, with clear shot transitions. The minor issue is that the final pose is described as occurring after 00:05.500 but must also fit within 7 seconds and align with the music’s end. While plausible, the exact timing is not fully specified, creating a slight ambiguity. This does not break internal consistency but is a minor precision issue.\"\n    },\n    {\n      \"criterion\": \"SPC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"Location is consistently described as a clean, bright, modern Korean-style dance studio with a mirrored wall. Camera movement is coherent: front-facing → gentle follow → slow circular arc → return to front-facing. Subject’s position is centered initially, moves slightly during side steps, and returns to a centered final pose. No unexplained position swaps or impossible trajectories.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"The target video is a 7-second high-quality K-pop dance performance... set in a clean, bright, modern Korean-style dance practice studio with a mirrored wall, soft daylight, and pale minimalist tones.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"At 00:03.000, the camera begins a gentle follow, then a slow, smooth semi-circular movement around her — roughly 30–45 degrees of arc, restrained and fluid, never a full orbit.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"side steps carrying her slightly across the studio floor\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"lands a clean, sharp final pose — body slightly turned sideways, face rotated back toward the lens\"\n        }\n      ],\n      \"rationale\": \"Spatial relationships are consistent: the studio environment is stable, camera motion is described with plausible trajectory, and subject movement is coherent with the choreography. No contradictions in screen direction or impossible transitions.\"\n    },\n    {\n      \"criterion\": \"PL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"All physical actions (nodding, hand movements, hip twists, shoulder rolls, body wave, side steps, freeze) are plausible for a human dancer. The camera movement (follow, semi-circular arc) is physically feasible. No violations of gravity, object permanence, or bodily feasibility are described. The mirrored wall reflects light and movement plausibly.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"She begins with gentle rhythmic nodding into the music, hair swaying naturally, then transitions into sharp, precise hand movements, followed by side hip twists and smooth shoulder rolls, all locked tightly to the drum beats.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"a body wave traveling through her torso, side steps carrying her slightly across the studio floor\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"The mirrored wall behind her reflects soft daylight as she moves.\"\n        }\n      ],\n      \"rationale\": \"All described actions and environmental interactions are consistent with real-world physics. No fantastical or impossible elements are introduced. The choreography and camera motion are grounded in physical plausibility.\"\n    },\n    {\n      \"criterion\": \"AVS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"The non-diegetic K-pop track is described as rhythm-forward with drum beats, bass, and synths. The choreography is explicitly beat-matched: nods, hand accents, freeze, and final pose land on downbeats. No speech, subtitles, or on-screen text are present. The visual events (freeze, pose) align with the music’s resolution. No misaligned lip-sync or effects are described.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"The choreography is tightly beat-matched across all 7 seconds, with nods, hand accents, the freeze accent, and the final pose landing on clear downbeats; the track ends cleanly on or just after the final freeze.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"No speech, no subtitles, no on-screen text.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"A rhythm-forward K-pop dance track driven by punchy drum beats, deep electronic bass, and bright synthesizer melodies\"\n        }\n      ],\n      \"rationale\": \"The audio-visual alignment is explicitly enforced: all key visual events are synchronized with the music’s rhythm. No conflicting or misaligned elements are present. The absence of diegetic sound or text ensures no AVS conflicts.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt maintains strong internal consistency with the original instruction, preserving subject identity, choreography structure, camera movement, and stylistic tone. Subject attributes are consistently defined and tracked across shots. Minor issues include slight over-specification of camera motion (arc degrees) and a minor mismatch in shot timing (00:05.500 vs. 7-second duration), but these do not materially affect coherence. No contradictions or attribute drift are present. The prompt correctly excludes the bunny phone case and selfie context from the video, as instructed.",
+  "usage": {
+    "completion_tokens": 2183,
+    "prompt_tokens": 3073,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 5256
+  }
+}

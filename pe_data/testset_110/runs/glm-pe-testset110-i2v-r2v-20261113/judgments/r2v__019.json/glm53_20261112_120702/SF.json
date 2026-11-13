@@ -1,0 +1,190 @@
+{
+  "candidate_hash": "b01c8b76d4c0007a114d0efb9321b94d15d85fd42af6e0166fcd631fdb0caa99",
+  "case_key": "r2v:019",
+  "created_at": "2026-11-13T08:26:24+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "GSF",
+      "evidence": [
+        {
+          "quote": "图片1里的男人慢慢靠近发光的图片2，认真打量它；随后，图片1伸出手指轻轻碰了碰图片2，图片2立刻扭动起来并释放电流。被电到之后，图片1的头发瞬间变成焦黑色。图片2说道：“小心！离我远点！”图片1一边捂着头发一边说：“好的，知道啦！我再也不手欠了。”",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "The target video is a 10-second photorealistic comedic clip on a clean, bright studio set.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "The enhanced prompt maintains the photorealistic comedic style requested in the original. It specifies a studio setting and live-action aesthetic, which is compatible with the original's implied visual tone. No incompatible style (e.g., animation or cartoon) is introduced.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SAP",
+      "evidence": [
+        {
+          "quote": "图片1里的男人...头发瞬间变成焦黑色",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "<Subject 1> is the elderly man from <Picture 1>, with voluminous wavy silver-white hair... His white wavy hair must visibly flip to scorched charcoal-black, wispy and frazzled, after the electric shock.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "The man in image_1 has white hair; the prompt describes his hair turning black after being shocked, which is not visible in the image.",
+          "source": "evidence_facts"
+        }
+      ],
+      "issue": "",
+      "rationale": "Subject 1's identity, appearance (silver-white hair, mustache, suit, bow tie), and transformation (hair to scorched black) are preserved. Subject 2 (plasma orb) is accurately described with its visual attributes. The binding of the hair change to the zap event is correctly maintained.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANF",
+      "evidence": [
+        {
+          "quote": "慢慢靠近...认真打量...轻轻碰了碰...释放电流...头发瞬间变成焦黑色...图片2说道...图片1一边捂着头发一边说",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "slowly leans toward...examines it curiously...taps it...is zapped...hair instantly turns scorched charcoal-black...<Subject 2> speaks its warning line...<Subject 1> clutches his frazzled black hair and replies sheepishly",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "The sequence of actions (approach, inspect, tap, zap, hair change, dialogue) is preserved in correct order. The narrative intent (comedy of accidental shock) is maintained. No events are added or omitted that alter the core plot.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "DLI",
+      "evidence": [
+        {
+          "quote": "图片2说道：“小心！离我远点！”图片1一边捂着头发一边说：“好的，知道啦！我再也不手欠了。”",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "<d>[Chinese] 小心！离我远点！</d> Then <Subject 1> (S1), clutching his frazzled black hair with both hands, winces and replies sheepishly, <d>[Chinese] 好的，知道啦！我再也不手欠了。</d>",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "The exact Chinese dialogue lines are preserved with correct speaker attribution. No paraphrasing or translation is applied. The delivery context (after zap, sheepish reply) is maintained.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ARP",
+      "evidence": [
+        {
+          "quote": "图片2立刻扭动起来并释放电流。被电到之后，图片1的头发瞬间变成焦黑色。",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "A soft continuous electric crackle-hum from the orb runs throughout; a sharp zap-crackle burst hits at the tap moment... followed by a faint sizzle from the scorched hair",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The enhanced prompt adds a continuous electric crackle-hum and a faint sizzle, which are not explicitly mentioned in the original prompt but are narratively compatible.",
+      "rationale": "The original prompt does not specify any sound effects. The enhanced prompt adds ambient and event-specific sounds (crackle-hum, zap, sizzle) that are plausible and enhance realism without contradicting the original. This is a minor elaboration, not a violation.",
+      "severity": "minor"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CCP",
+      "evidence": [
+        {
+          "quote": "图片1里的男人慢慢靠近发光的图片2，认真打量它",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "A static medium close-up with a gentle slow push-in shows <Subject 1>... slowly leans in, eyes narrowed with curiosity",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The enhanced prompt specifies a 'gentle slow push-in' in Shot 1, which is not mentioned in the original prompt.",
+      "rationale": "The original prompt does not specify camera movement. The slow push-in is a compatible elaboration that supports the 'slowly leans toward' action. It does not override any explicit camera constraint and is not a major deviation.",
+      "severity": "minor"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "LCF",
+      "evidence": [
+        {
+          "quote": "发光的图片2",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "clean, bright studio set with soft key lighting; the orb casts a realistic violet glow on nearby surfaces",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "soft, diffused frontal lighting, likely studio setup",
+          "source": "evidence_facts"
+        }
+      ],
+      "issue": "",
+      "rationale": "The lighting is preserved as bright and studio-based. The violet glow from the orb is maintained. No changes to time of day or color grading are introduced. The enhanced prompt adds 'soft key lighting' which is compatible with the original's implied studio setting.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SSP",
+      "evidence": [
+        {
+          "quote": "图片1里的男人慢慢靠近发光的图片2",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "standing a step away from <Subject 2>, the floating glossy violet-purple plasma sphere... positioned slightly right of center above its soft shadow",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "background: plain, uniform light gray, no objects or depth cues",
+          "source": "evidence_facts"
+        }
+      ],
+      "issue": "",
+      "rationale": "The setting is preserved as a clean studio with no background objects. The relative positions (man approaching orb, orb floating) are maintained. The spatial relationship is correctly described without contradiction.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "OTI",
+      "evidence": [
+        {
+          "quote": "图片2说道：“小心！离我远点！”图片1一边捂着头发一边说：“好的，知道啦！我再也不手欠了。”",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "<d>[Chinese] 小心！离我远点！</d> ... <d>[Chinese] 好的，知道啦！我再也不手欠了。</d>",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "The dialogue is preserved as spoken lines, not as onscreen text. No visible titles, signs, or subtitles are requested or added. The exact wording and language are maintained.",
+      "severity": "none"
+    }
+  ],
+  "dimension": "SF",
+  "dimension_score": 95,
+  "evidence_cache_key": "1fbc8ae693fd6febc4a7e38c601569b548db78a6f227c60ed1e79e0e7da515cf",
+  "judge_cache_key": "a0ca24571ad14d7ab7be626329bd736d7e7015f9ebc418227c8be391591d0377",
+  "method": "glm53_20261112_120702",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"SF\",\n  \"dimension_score\": 95,\n  \"summary\": \"The enhanced prompt preserves the core narrative, subjects, actions, dialogue, and visual style of the original instruction with high fidelity. It accurately maps the two reference images to subjects, specifies the required transformation (hair color change), and details the sequence of events, camera shots, and soundscape. Minor issues include slight elaboration in camera movement (slow push-in) and sound design (continuous hum) not explicitly in the original, but these are compatible and do not contradict the intent. The prompt correctly handles the Chinese dialogue and preserves the comedic tone. No major omissions or contradictions are found.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"GSF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"图片1里的男人慢慢靠近发光的图片2，认真打量它；随后，图片1伸出手指轻轻碰了碰图片2，图片2立刻扭动起来并释放电流。被电到之后，图片1的头发瞬间变成焦黑色。图片2说道：“小心！离我远点！”图片1一边捂着头发一边说：“好的，知道啦！我再也不手欠了。”\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"The target video is a 10-second photorealistic comedic clip on a clean, bright studio set.\"\n        }\n      ],\n      \"rationale\": \"The enhanced prompt maintains the photorealistic comedic style requested in the original. It specifies a studio setting and live-action aesthetic, which is compatible with the original's implied visual tone. No incompatible style (e.g., animation or cartoon) is introduced.\"\n    },\n    {\n      \"criterion\": \"SAP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"图片1里的男人...头发瞬间变成焦黑色\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"<Subject 1> is the elderly man from <Picture 1>, with voluminous wavy silver-white hair... His white wavy hair must visibly flip to scorched charcoal-black, wispy and frazzled, after the electric shock.\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"The man in image_1 has white hair; the prompt describes his hair turning black after being shocked, which is not visible in the image.\"\n        }\n      ],\n      \"rationale\": \"Subject 1's identity, appearance (silver-white hair, mustache, suit, bow tie), and transformation (hair to scorched black) are preserved. Subject 2 (plasma orb) is accurately described with its visual attributes. The binding of the hair change to the zap event is correctly maintained.\"\n    },\n    {\n      \"criterion\": \"ANF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"慢慢靠近...认真打量...轻轻碰了碰...释放电流...头发瞬间变成焦黑色...图片2说道...图片1一边捂着头发一边说\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"slowly leans toward...examines it curiously...taps it...is zapped...hair instantly turns scorched charcoal-black...<Subject 2> speaks its warning line...<Subject 1> clutches his frazzled black hair and replies sheepishly\"\n        }\n      ],\n      \"rationale\": \"The sequence of actions (approach, inspect, tap, zap, hair change, dialogue) is preserved in correct order. The narrative intent (comedy of accidental shock) is maintained. No events are added or omitted that alter the core plot.\"\n    },\n    {\n      \"criterion\": \"DLI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"图片2说道：“小心！离我远点！”图片1一边捂着头发一边说：“好的，知道啦！我再也不手欠了。”\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"<d>[Chinese] 小心！离我远点！</d> Then <Subject 1> (S1), clutching his frazzled black hair with both hands, winces and replies sheepishly, <d>[Chinese] 好的，知道啦！我再也不手欠了。</d>\"\n        }\n      ],\n      \"rationale\": \"The exact Chinese dialogue lines are preserved with correct speaker attribution. No paraphrasing or translation is applied. The delivery context (after zap, sheepish reply) is maintained.\"\n    },\n    {\n      \"criterion\": \"ARP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"minor\",\n      \"issue\": \"The enhanced prompt adds a continuous electric crackle-hum and a faint sizzle, which are not explicitly mentioned in the original prompt but are narratively compatible.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"图片2立刻扭动起来并释放电流。被电到之后，图片1的头发瞬间变成焦黑色。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"A soft continuous electric crackle-hum from the orb runs throughout; a sharp zap-crackle burst hits at the tap moment... followed by a faint sizzle from the scorched hair\"\n        }\n      ],\n      \"rationale\": \"The original prompt does not specify any sound effects. The enhanced prompt adds ambient and event-specific sounds (crackle-hum, zap, sizzle) that are plausible and enhance realism without contradicting the original. This is a minor elaboration, not a violation.\"\n    },\n    {\n      \"criterion\": \"CCP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"minor\",\n      \"issue\": \"The enhanced prompt specifies a 'gentle slow push-in' in Shot 1, which is not mentioned in the original prompt.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"图片1里的男人慢慢靠近发光的图片2，认真打量它\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"A static medium close-up with a gentle slow push-in shows <Subject 1>... slowly leans in, eyes narrowed with curiosity\"\n        }\n      ],\n      \"rationale\": \"The original prompt does not specify camera movement. The slow push-in is a compatible elaboration that supports the 'slowly leans toward' action. It does not override any explicit camera constraint and is not a major deviation.\"\n    },\n    {\n      \"criterion\": \"LCF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"发光的图片2\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"clean, bright studio set with soft key lighting; the orb casts a realistic violet glow on nearby surfaces\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"soft, diffused frontal lighting, likely studio setup\"\n        }\n      ],\n      \"rationale\": \"The lighting is preserved as bright and studio-based. The violet glow from the orb is maintained. No changes to time of day or color grading are introduced. The enhanced prompt adds 'soft key lighting' which is compatible with the original's implied studio setting.\"\n    },\n    {\n      \"criterion\": \"SSP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"图片1里的男人慢慢靠近发光的图片2\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"standing a step away from <Subject 2>, the floating glossy violet-purple plasma sphere... positioned slightly right of center above its soft shadow\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"background: plain, uniform light gray, no objects or depth cues\"\n        }\n      ],\n      \"rationale\": \"The setting is preserved as a clean studio with no background objects. The relative positions (man approaching orb, orb floating) are maintained. The spatial relationship is correctly described without contradiction.\"\n    },\n    {\n      \"criterion\": \"OTI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"图片2说道：“小心！离我远点！”图片1一边捂着头发一边说：“好的，知道啦！我再也不手欠了。”\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"<d>[Chinese] 小心！离我远点！</d> ... <d>[Chinese] 好的，知道啦！我再也不手欠了。</d>\"\n        }\n      ],\n      \"rationale\": \"The dialogue is preserved as spoken lines, not as onscreen text. No visible titles, signs, or subtitles are requested or added. The exact wording and language are maintained.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt preserves the core narrative, subjects, actions, dialogue, and visual style of the original instruction with high fidelity. It accurately maps the two reference images to subjects, specifies the required transformation (hair color change), and details the sequence of events, camera shots, and soundscape. Minor issues include slight elaboration in camera movement (slow push-in) and sound design (continuous hum) not explicitly in the original, but these are compatible and do not contradict the intent. The prompt correctly handles the Chinese dialogue and preserves the comedic tone. No major omissions or contradictions are found.",
+  "usage": {
+    "completion_tokens": 2083,
+    "prompt_tokens": 3869,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 5952
+  }
+}

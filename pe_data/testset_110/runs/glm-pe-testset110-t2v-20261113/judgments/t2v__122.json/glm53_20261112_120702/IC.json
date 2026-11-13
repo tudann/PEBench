@@ -1,0 +1,127 @@
+{
+  "candidate_hash": "b68167ace444259886fa62c60e24bb47799aab369939efcf0194c74db43b5df5",
+  "case_key": "t2v:122",
+  "created_at": "2026-11-13T07:47:58+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "SAC",
+      "evidence": [
+        {
+          "quote": "The rider is dressed in a vivid fluorescent yellow safety tabard. The tabard displays a cleanly printed, fully legible church event layout that appears authentically screen-printed onto cloth with real ink absorption, not added digitally.",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "He wears a vivid fluorescent yellow safety tabard bearing a cleanly screen-printed church event layout... with visible textile grain, creases, and folds naturally distorting the ink, with no glow, no hovering text, and no digital enhancement.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "Subject identity, clothing, and props are consistently described across both prompts. The tabard’s appearance, text content, color scheme, and material realism are preserved without drift or contradiction. The banner is also consistently described as matching the tabard in wording, arrangement, and color treatment.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANL",
+      "evidence": [
+        {
+          "quote": "The camera follows him in a fluid lateral tracking shot, with gentle slow-motion accents and occasional tight focus on the garment texture and printed surface.",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "The camera holds alongside the moving motorcycle, then pushes in with small amplitude at slow speed into tight macro focus on the printed surface with a gentle slow-motion accent... The camera pulls back out to the full lateral tracking view...",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "Actions form a coherent progression: lateral tracking → macro focus → pull back. The sequence is plausible and causally linked. The rider’s motion remains steady and controlled throughout, with no dangling or incompatible events.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "TSC",
+      "evidence": [
+        {
+          "quote": "A hyper-realistic 15-second cinematic video... The camera follows him in a fluid lateral tracking shot...",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "The camera holds alongside the moving motorcycle, then pushes in... reveals the genuine screen-print texture... pulls back out to the full lateral tracking view...",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "Chronology is preserved: tracking → close-up → tracking. The duration is consistent with the 15-second requirement. No overlapping or infeasible timestamps are introduced. The state transitions (e.g., focus shift) are smooth and plausible.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SPC",
+      "evidence": [
+        {
+          "quote": "The camera follows him in a fluid lateral tracking shot...",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "The camera holds alongside the moving motorcycle, then pushes in with small amplitude at slow speed into tight macro focus... pulls back out to the full lateral tracking view...",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "Camera movement is consistent with lateral tracking. The push-in and pull-out are described as smooth and small-amplitude, maintaining spatial coherence. No unexplained position swaps or impossible trajectories are introduced.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "PL",
+      "evidence": [
+        {
+          "quote": "believable wind response on the tabard and banner, accurate physical movement, cloth rippling naturally, motorcycle travel steady and controlled.",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "the tabard flutters believably at the rider's shoulders... the banner... blowing dramatically in the wind... ripples with lifelike cloth physics.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "Physics are consistent: cloth movement is described as lifelike and wind-responsive. The motorcycle motion is steady and controlled. No violations of gravity, contact, or object permanence are present.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "AVS",
+      "evidence": [
+        {
+          "quote": "No mention of soundscape or music.",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "overall_soundscape: The superbike engine holds a steady, low mechanical hum... non_diegetic_music: A warm, mid-tempo cinematic score...",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The enhanced prompt introduces a non-diegetic music track and soundscape details not present in the original prompt, but these are compatible and do not conflict with visual events.",
+      "rationale": "The added audio elements are plausible and temporally aligned with the visual events (e.g., music rising during close-up). While not in the original prompt, they do not contradict it and enhance the cinematic realism. This is a minor enhancement, not a contradiction.",
+      "severity": "minor"
+    }
+  ],
+  "dimension": "IC",
+  "dimension_score": 95,
+  "evidence_cache_key": "2485d143c6bf247ab67663b99352ad96d412033cb9e0e6fb56efbfdf2fa089eb",
+  "judge_cache_key": "438d7e9fd7332b1041db3e2c26d42cb3fe828e0d369fb59490f6650aee59e97d",
+  "method": "glm53_20261112_120702",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"IC\",\n  \"dimension_score\": 95,\n  \"summary\": \"The enhanced prompt maintains strong internal consistency with the original instruction, preserving all key subject attributes, actions, and environmental details. It elaborates on camera motion, lighting, and textile realism without introducing contradictions or omissions. Minor enhancements to the soundscape and music are compatible and do not conflict with visual content. The only issue is a slight over-specification of the banner’s visibility during the macro focus, which is not explicitly required but does not materially contradict the original prompt.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"SAC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"The rider is dressed in a vivid fluorescent yellow safety tabard. The tabard displays a cleanly printed, fully legible church event layout that appears authentically screen-printed onto cloth with real ink absorption, not added digitally.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"He wears a vivid fluorescent yellow safety tabard bearing a cleanly screen-printed church event layout... with visible textile grain, creases, and folds naturally distorting the ink, with no glow, no hovering text, and no digital enhancement.\"\n        }\n      ],\n      \"rationale\": \"Subject identity, clothing, and props are consistently described across both prompts. The tabard’s appearance, text content, color scheme, and material realism are preserved without drift or contradiction. The banner is also consistently described as matching the tabard in wording, arrangement, and color treatment.\"\n    },\n    {\n      \"criterion\": \"ANL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"The camera follows him in a fluid lateral tracking shot, with gentle slow-motion accents and occasional tight focus on the garment texture and printed surface.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"The camera holds alongside the moving motorcycle, then pushes in with small amplitude at slow speed into tight macro focus on the printed surface with a gentle slow-motion accent... The camera pulls back out to the full lateral tracking view...\"\n        }\n      ],\n      \"rationale\": \"Actions form a coherent progression: lateral tracking → macro focus → pull back. The sequence is plausible and causally linked. The rider’s motion remains steady and controlled throughout, with no dangling or incompatible events.\"\n    },\n    {\n      \"criterion\": \"TSC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"A hyper-realistic 15-second cinematic video... The camera follows him in a fluid lateral tracking shot...\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"The camera holds alongside the moving motorcycle, then pushes in... reveals the genuine screen-print texture... pulls back out to the full lateral tracking view...\"\n        }\n      ],\n      \"rationale\": \"Chronology is preserved: tracking → close-up → tracking. The duration is consistent with the 15-second requirement. No overlapping or infeasible timestamps are introduced. The state transitions (e.g., focus shift) are smooth and plausible.\"\n    },\n    {\n      \"criterion\": \"SPC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"The camera follows him in a fluid lateral tracking shot...\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"The camera holds alongside the moving motorcycle, then pushes in with small amplitude at slow speed into tight macro focus... pulls back out to the full lateral tracking view...\"\n        }\n      ],\n      \"rationale\": \"Camera movement is consistent with lateral tracking. The push-in and pull-out are described as smooth and small-amplitude, maintaining spatial coherence. No unexplained position swaps or impossible trajectories are introduced.\"\n    },\n    {\n      \"criterion\": \"PL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"believable wind response on the tabard and banner, accurate physical movement, cloth rippling naturally, motorcycle travel steady and controlled.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"the tabard flutters believably at the rider's shoulders... the banner... blowing dramatically in the wind... ripples with lifelike cloth physics.\"\n        }\n      ],\n      \"rationale\": \"Physics are consistent: cloth movement is described as lifelike and wind-responsive. The motorcycle motion is steady and controlled. No violations of gravity, contact, or object permanence are present.\"\n    },\n    {\n      \"criterion\": \"AVS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"minor\",\n      \"issue\": \"The enhanced prompt introduces a non-diegetic music track and soundscape details not present in the original prompt, but these are compatible and do not conflict with visual events.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"No mention of soundscape or music.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"overall_soundscape: The superbike engine holds a steady, low mechanical hum... non_diegetic_music: A warm, mid-tempo cinematic score...\"\n        }\n      ],\n      \"rationale\": \"The added audio elements are plausible and temporally aligned with the visual events (e.g., music rising during close-up). While not in the original prompt, they do not contradict it and enhance the cinematic realism. This is a minor enhancement, not a contradiction.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt maintains strong internal consistency with the original instruction, preserving all key subject attributes, actions, and environmental details. It elaborates on camera motion, lighting, and textile realism without introducing contradictions or omissions. Minor enhancements to the soundscape and music are compatible and do not conflict with visual content. The only issue is a slight over-specification of the banner’s visibility during the macro focus, which is not explicitly required but does not materially contradict the original prompt.",
+  "usage": {
+    "completion_tokens": 1292,
+    "prompt_tokens": 1629,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 2921
+  }
+}

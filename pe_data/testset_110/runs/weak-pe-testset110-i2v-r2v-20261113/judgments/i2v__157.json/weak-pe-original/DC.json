@@ -1,0 +1,142 @@
+{
+  "candidate_hash": "d8513a0019c0226db7213b61cc854a3cd43bc138dad524143f5b03c54eba9a98",
+  "case_key": "i2v:157",
+  "created_at": "2026-11-13T07:42:40+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "STC",
+      "evidence": [
+        {
+          "quote": "总时长写成2秒，同时又要求每个分镜各自持续22秒。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "No feasible temporal plan exists due to contradictory duration requirements (2 seconds total vs. 22 seconds per shot), reversed narrative order (ending first, then mismatched beginning), and insertion of unrelated content (roof fireworks).",
+      "rationale": "The prompt explicitly contradicts itself on duration, making any temporal plan impossible. The instruction to reverse time order and insert unrelated content further invalidates continuity and shot sequencing.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CDS",
+      "evidence": [
+        {
+          "quote": "写成机位锁死，又写成镜头一直在晃。镜头每半秒甩动、环绕、急推。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Camera specifications are contradictory and infeasible: '机位锁死' (locked position) vs. '镜头一直在晃' (constant shaking), and '镜头每半秒甩动、环绕、急推' (every half-second whip, orbit, dolly) — these cannot coexist in a single shot.",
+      "rationale": "The prompt simultaneously demands static and hyperactive camera movement, which is physically impossible. This renders all framing, angle, and motion specifications invalid.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ETD",
+      "evidence": [
+        {
+          "quote": "时间倒过来：先给结尾，再跳到一个对不上的开头。中途插进一段无关的屋顶烟花。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Transitions are undefined and disconnected: time reversal, mismatched beginning and ending, and insertion of unrelated content (roof fireworks) without continuity or motivation.",
+      "rationale": "The prompt breaks narrative and spatial continuity by reversing time and inserting unrelated content without any transitional logic, making cuts and transitions incoherent.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "LCS",
+      "evidence": [
+        {
+          "quote": "写成正午暴晒，又写成深夜无光；",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Lighting is contradictory: '正午暴晒' (noon sun) vs. '深夜无光' (deep night, no light), which cannot coexist in the same scene without impossible transitions.",
+      "rationale": "The prompt demands mutually exclusive lighting conditions without any transition or justification, making lighting specifications impossible to fulfill.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "NDE",
+      "evidence": [
+        {
+          "quote": "丢掉原指令里的主体身份、人数、动作顺序、场景和明确的镜头要求。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "No progression, variation, or resolution is provided. The content is static, contradictory, and lacks narrative or visual development. The instruction to 'drop all original subject identity, number, action order, scene, and camera requirements' removes all structure.",
+      "rationale": "The prompt eliminates all narrative and visual progression, replacing it with absurd, disconnected elements. There is no escalation, variation, or resolution — only contradiction and chaos.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CIF",
+      "evidence": [
+        {
+          "quote": "这个主角同时变成五个外貌不同的人，并且互相对话。中途插进一段无关的屋顶烟花。全程循环响亮的流行合唱，并让角色对口型。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Additions are irrelevant and distracting: multiple characters, dialogue, fireworks, and contradictory audio (loud pop music with lip-sync) that contradict the original ASMR-only audio requirement.",
+      "rationale": "The additions are not only irrelevant but directly contradict the original prompt’s core constraints (no characters, no music, no dialogue). They distract from and invalidate the intended result.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SDI",
+      "evidence": [
+        {
+          "quote": "整段改成完全无声的黑场。...全程循环响亮的流行合唱，并让角色对口型。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Audio specifications are contradictory: '全程无声的黑场' (silent black screen) vs. '全程循环响亮的流行合唱' (loud pop chorus throughout). Also, lip-syncing is required without any visual or audio source for synchronization.",
+      "rationale": "The prompt demands silence and loud music simultaneously, which is impossible. Lip-syncing without a visual or audio reference is infeasible and adds no meaningful integration.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SPS",
+      "evidence": [
+        {
+          "quote": "先写成只有一个主角，紧接着又写成这个主角同时变成五个外貌不同的人，并且互相对话。...改成白棚里另一位年龄和性别都相反的陌生人。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Subject and performance details are contradictory: one character becomes five, with no defined appearance, expression, or interaction. The instruction to replace the original subject with a 'white studio stranger of opposite age and gender' contradicts the original 'no characters' rule.",
+      "rationale": "The prompt introduces characters and complex interactions that directly violate the original constraint of 'no hand, person, or any biological entity'. The subject details are undefined and contradictory.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "VSS",
+      "evidence": [
+        {
+          "quote": "整段改成完全无声的黑场。...改成白棚里另一位年龄和性别都相反的陌生人。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Visual style and medium are undefined and contradictory: '完全无声的黑场' (silent black screen) vs. '白棚里另一位年龄和性别都相反的陌生人' (white studio with stranger), with no specification of rendering, texture, or production design.",
+      "rationale": "The prompt contradicts itself by demanding a black screen while also requiring a detailed scene with a character. No actionable visual treatment or medium specification is provided.",
+      "severity": "major"
+    }
+  ],
+  "dimension": "DC",
+  "dimension_score": 0,
+  "evidence_cache_key": "ac74dae3951052ac354c4899840ee20e6d8cda58de5e4095553c374837d8032c",
+  "judge_cache_key": "0754499d53388e6467fb078ab780e01b77f9f1c9e99d9029be2769351eb2b2eb",
+  "method": "weak-pe-original",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"DC\",\n  \"dimension_score\": 0,\n  \"summary\": \"Enhanced prompt is incoherent, contradictory, and structurally invalid for video generation. It violates core temporal, spatial, and technical constraints from the original prompt, introduces impossible conditions (e.g., 2-second total duration with 22-second per-shot), and replaces the original content with absurd, conflicting, and non-visual instructions. No feasible plan or actionable specifications remain.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"STC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"No feasible temporal plan exists due to contradictory duration requirements (2 seconds total vs. 22 seconds per shot), reversed narrative order (ending first, then mismatched beginning), and insertion of unrelated content (roof fireworks).\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"总时长写成2秒，同时又要求每个分镜各自持续22秒。\"\n        }\n      ],\n      \"rationale\": \"The prompt explicitly contradicts itself on duration, making any temporal plan impossible. The instruction to reverse time order and insert unrelated content further invalidates continuity and shot sequencing.\"\n    },\n    {\n      \"criterion\": \"CDS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Camera specifications are contradictory and infeasible: '机位锁死' (locked position) vs. '镜头一直在晃' (constant shaking), and '镜头每半秒甩动、环绕、急推' (every half-second whip, orbit, dolly) — these cannot coexist in a single shot.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"写成机位锁死，又写成镜头一直在晃。镜头每半秒甩动、环绕、急推。\"\n        }\n      ],\n      \"rationale\": \"The prompt simultaneously demands static and hyperactive camera movement, which is physically impossible. This renders all framing, angle, and motion specifications invalid.\"\n    },\n    {\n      \"criterion\": \"ETD\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Transitions are undefined and disconnected: time reversal, mismatched beginning and ending, and insertion of unrelated content (roof fireworks) without continuity or motivation.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"时间倒过来：先给结尾，再跳到一个对不上的开头。中途插进一段无关的屋顶烟花。\"\n        }\n      ],\n      \"rationale\": \"The prompt breaks narrative and spatial continuity by reversing time and inserting unrelated content without any transitional logic, making cuts and transitions incoherent.\"\n    },\n    {\n      \"criterion\": \"LCS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Lighting is contradictory: '正午暴晒' (noon sun) vs. '深夜无光' (deep night, no light), which cannot coexist in the same scene without impossible transitions.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"写成正午暴晒，又写成深夜无光；\"\n        }\n      ],\n      \"rationale\": \"The prompt demands mutually exclusive lighting conditions without any transition or justification, making lighting specifications impossible to fulfill.\"\n    },\n    {\n      \"criterion\": \"NDE\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"No progression, variation, or resolution is provided. The content is static, contradictory, and lacks narrative or visual development. The instruction to 'drop all original subject identity, number, action order, scene, and camera requirements' removes all structure.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"丢掉原指令里的主体身份、人数、动作顺序、场景和明确的镜头要求。\"\n        }\n      ],\n      \"rationale\": \"The prompt eliminates all narrative and visual progression, replacing it with absurd, disconnected elements. There is no escalation, variation, or resolution — only contradiction and chaos.\"\n    },\n    {\n      \"criterion\": \"CIF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Additions are irrelevant and distracting: multiple characters, dialogue, fireworks, and contradictory audio (loud pop music with lip-sync) that contradict the original ASMR-only audio requirement.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"这个主角同时变成五个外貌不同的人，并且互相对话。中途插进一段无关的屋顶烟花。全程循环响亮的流行合唱，并让角色对口型。\"\n        }\n      ],\n      \"rationale\": \"The additions are not only irrelevant but directly contradict the original prompt’s core constraints (no characters, no music, no dialogue). They distract from and invalidate the intended result.\"\n    },\n    {\n      \"criterion\": \"SDI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Audio specifications are contradictory: '全程无声的黑场' (silent black screen) vs. '全程循环响亮的流行合唱' (loud pop chorus throughout). Also, lip-syncing is required without any visual or audio source for synchronization.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"整段改成完全无声的黑场。...全程循环响亮的流行合唱，并让角色对口型。\"\n        }\n      ],\n      \"rationale\": \"The prompt demands silence and loud music simultaneously, which is impossible. Lip-syncing without a visual or audio reference is infeasible and adds no meaningful integration.\"\n    },\n    {\n      \"criterion\": \"SPS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Subject and performance details are contradictory: one character becomes five, with no defined appearance, expression, or interaction. The instruction to replace the original subject with a 'white studio stranger of opposite age and gender' contradicts the original 'no characters' rule.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"先写成只有一个主角，紧接着又写成这个主角同时变成五个外貌不同的人，并且互相对话。...改成白棚里另一位年龄和性别都相反的陌生人。\"\n        }\n      ],\n      \"rationale\": \"The prompt introduces characters and complex interactions that directly violate the original constraint of 'no hand, person, or any biological entity'. The subject details are undefined and contradictory.\"\n    },\n    {\n      \"criterion\": \"VSS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Visual style and medium are undefined and contradictory: '完全无声的黑场' (silent black screen) vs. '白棚里另一位年龄和性别都相反的陌生人' (white studio with stranger), with no specification of rendering, texture, or production design.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"整段改成完全无声的黑场。...改成白棚里另一位年龄和性别都相反的陌生人。\"\n        }\n      ],\n      \"rationale\": \"The prompt contradicts itself by demanding a black screen while also requiring a detailed scene with a character. No actionable visual treatment or medium specification is provided.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "Enhanced prompt is incoherent, contradictory, and structurally invalid for video generation. It violates core temporal, spatial, and technical constraints from the original prompt, introduces impossible conditions (e.g., 2-second total duration with 22-second per-shot), and replaces the original content with absurd, conflicting, and non-visual instructions. No feasible plan or actionable specifications remain.",
+  "usage": {
+    "completion_tokens": 1638,
+    "prompt_tokens": 3673,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 5311
+  }
+}

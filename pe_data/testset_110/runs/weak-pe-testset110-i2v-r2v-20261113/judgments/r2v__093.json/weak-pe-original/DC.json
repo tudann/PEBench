@@ -1,0 +1,174 @@
+{
+  "candidate_hash": "6cfb7dd21218ce4879c2005ead3a4730a639740684bd3c41c9d673a4079ca6b7",
+  "case_key": "r2v:093",
+  "created_at": "2026-11-13T08:29:27+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "STC",
+      "evidence": [
+        {
+          "quote": "时间倒过来：先给结尾，再跳到一个对不上的开头。中途插进一段无关的屋顶烟花。",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "总时长写成2秒，同时又要求每个分镜各自持续17秒。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt destroys any feasible temporal plan by reversing time order, inserting unrelated events (roof fireworks), and assigning conflicting durations (2 seconds total vs. 17 seconds per shot).",
+      "rationale": "A coherent temporal plan requires logical progression, consistent duration, and motivated transitions. The enhanced prompt violates all these by reversing narrative order, inserting non-sequitur events, and assigning impossible time constraints, making the sequence unrenderable.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CDS",
+      "evidence": [
+        {
+          "quote": "采用85mm中长焦、中景构图，以后方长焦稳定跟车的拍摄方式展开",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "丢掉原指令里的主体身份、人数、动作顺序、场景和明确的镜头要求。...机位歪斜的空走廊监控...镜头一直在晃。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt contradicts the original camera specifications (85mm, stable follow shot) by demanding '机位歪斜的空走廊监控' (tilted, empty corridor surveillance) and '镜头一直在晃' (camera constantly shaking), while also removing all framing, angle, and lens requirements.",
+      "rationale": "The original prompt specifies precise camera parameters for a cinematic follow shot. The enhanced prompt replaces them with surveillance-style, unstable, and undefined camera work, which directly contradicts the original intent and renders the shot unfeasible for the requested style.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ETD",
+      "evidence": [
+        {
+          "quote": "中途插进一段无关的屋顶烟花。",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "时间倒过来：先给结尾，再跳到一个对不上的开头。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt introduces disconnected, unmotivated transitions (e.g., inserting roof fireworks) and reverses narrative order, destroying continuity and rhythmic progression.",
+      "rationale": "Effective transitions require spatial, temporal, or narrative continuity. The enhanced prompt inserts unrelated events and reverses time, creating a disjointed sequence with no logical or visual motivation for cuts, violating the principle of coherent editing.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "LCS",
+      "evidence": [
+        {
+          "quote": "隧道中的回声快速淡出，声音逐步过渡为开阔道路上的风声与更松散的轮胎行驶声",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "没有光影设计。...写成正午暴晒，又写成深夜无光；",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt contradicts the original lighting design (smooth transition from tunnel to daylight) by demanding '没有光影设计' (no lighting design) and simultaneously specifying conflicting time-of-day cues ('正午暴晒' vs. '深夜无光').",
+      "rationale": "The original prompt requires a natural, smooth lighting transition. The enhanced prompt negates this by removing lighting design and introducing contradictory time-of-day cues, making the visual environment incoherent and impossible to render consistently.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "NDE",
+      "evidence": [
+        {
+          "quote": "车辆驶离隧道，外部偏蓝的环境光快速重新铺满画面...为下一镜头建立出现实空间的轮廓",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "先写成只有一个主角，紧接着又写成这个主角同时变成五个外貌不同的人，并且互相对话。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt eliminates narrative progression by replacing the car's exit from the tunnel with a chaotic, identity-confused sequence involving multiple contradictory characters and events, with no escalation or resolution.",
+      "rationale": "The original prompt describes a clear progression from enclosed to open space with visual and emotional resolution. The enhanced prompt replaces this with a fragmented, identity-confused narrative, lacking any meaningful progression or resolution, rendering the sequence static and incoherent.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CIF",
+      "evidence": [
+        {
+          "quote": "先写成只有一个主角，紧接着又写成这个主角同时变成五个外貌不同的人，并且互相对话。中途插进一段无关的屋顶烟花。删掉原来的对白，改成无关旁白。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt adds irrelevant, contradictory, and distracting elements (e.g., five conflicting characters, roof fireworks, unrelated旁白) that directly undermine the central request for a cinematic car exit sequence.",
+      "rationale": "The additions are not only irrelevant but actively contradict the original intent. They introduce multiple characters, unrelated events, and non-functional audio, which distract from and destroy the core cinematic goal, making the prompt functionally inadequate.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SDI",
+      "evidence": [
+        {
+          "quote": "隧道中的回声快速淡出，声音逐步过渡为开阔道路上的风声与更松散的轮胎行驶声，无对白。",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "删掉原来的对白，改成无关旁白。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt removes all original audio design (wind, tire sounds, ambient transition) and replaces it with '无关旁白' (irrelevant narration), while also removing the requirement for natural sound progression.",
+      "rationale": "The original prompt specifies a natural, immersive audio design. The enhanced prompt replaces it with irrelevant narration, removing the auditory progression and continuity, which is essential for a cinematic experience.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SPS",
+      "evidence": [
+        {
+          "quote": "画面需呈现汽车驶出隧道后重新进入开阔道路的状态",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "图1换成参考图里没有的角色，并同时当成两个互相矛盾的身份。图2换成参考图里没有的角色，并同时当成两个互相矛盾的身份。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt invalidates the subject (car) by replacing it with multiple contradictory human characters, removing all vehicle-specific details, and assigning impossible identities to the reference images.",
+      "rationale": "The original prompt centers on a specific vehicle in motion. The enhanced prompt replaces the car with human characters, misassigns reference images, and creates contradictory identities, making the subject and performance details incoherent and unrenderable.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "VSS",
+      "evidence": [
+        {
+          "quote": "整体风格要求真实、冷静、现代，并具备汽车广告质感",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "过曝、机位歪斜的空走廊监控，没有光影设计。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt contradicts the original visual style (cinematic automotive advertising) by demanding '过曝、机位歪斜的空走廊监控' (overexposed, tilted surveillance footage) and removing all production design and rendering specifications.",
+      "rationale": "The original prompt specifies a high-quality, cinematic visual treatment. The enhanced prompt replaces it with a low-fidelity, surveillance-style aesthetic, which is incompatible with the requested style and undermines the entire visual foundation.",
+      "severity": "major"
+    }
+  ],
+  "dimension": "DC",
+  "dimension_score": 0,
+  "evidence_cache_key": "5660b7570f932625df9ef0769ad972b672ebfc448bfbe83cb9bc8279aa2caa24",
+  "judge_cache_key": "0754499d53388e6467fb078ab780e01b77f9f1c9e99d9029be2769351eb2b2eb",
+  "method": "weak-pe-original",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"DC\",\n  \"dimension_score\": 0,\n  \"summary\": \"The enhanced prompt completely undermines the original cinematic directive by introducing contradictory, incoherent, and infeasible specifications. It invalidates core requirements for temporal structure, camera movement, lighting, subject identity, and duration, replacing them with self-contradictory, illogical, and non-functional instructions. The result is a prompt that cannot generate a coherent video sequence, failing all criteria for directorial creation.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"STC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt destroys any feasible temporal plan by reversing time order, inserting unrelated events (roof fireworks), and assigning conflicting durations (2 seconds total vs. 17 seconds per shot).\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"时间倒过来：先给结尾，再跳到一个对不上的开头。中途插进一段无关的屋顶烟花。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"总时长写成2秒，同时又要求每个分镜各自持续17秒。\"\n        }\n      ],\n      \"rationale\": \"A coherent temporal plan requires logical progression, consistent duration, and motivated transitions. The enhanced prompt violates all these by reversing narrative order, inserting non-sequitur events, and assigning impossible time constraints, making the sequence unrenderable.\"\n    },\n    {\n      \"criterion\": \"CDS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt contradicts the original camera specifications (85mm, stable follow shot) by demanding '机位歪斜的空走廊监控' (tilted, empty corridor surveillance) and '镜头一直在晃' (camera constantly shaking), while also removing all framing, angle, and lens requirements.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"采用85mm中长焦、中景构图，以后方长焦稳定跟车的拍摄方式展开\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"丢掉原指令里的主体身份、人数、动作顺序、场景和明确的镜头要求。...机位歪斜的空走廊监控...镜头一直在晃。\"\n        }\n      ],\n      \"rationale\": \"The original prompt specifies precise camera parameters for a cinematic follow shot. The enhanced prompt replaces them with surveillance-style, unstable, and undefined camera work, which directly contradicts the original intent and renders the shot unfeasible for the requested style.\"\n    },\n    {\n      \"criterion\": \"ETD\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt introduces disconnected, unmotivated transitions (e.g., inserting roof fireworks) and reverses narrative order, destroying continuity and rhythmic progression.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"中途插进一段无关的屋顶烟花。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"时间倒过来：先给结尾，再跳到一个对不上的开头。\"\n        }\n      ],\n      \"rationale\": \"Effective transitions require spatial, temporal, or narrative continuity. The enhanced prompt inserts unrelated events and reverses time, creating a disjointed sequence with no logical or visual motivation for cuts, violating the principle of coherent editing.\"\n    },\n    {\n      \"criterion\": \"LCS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt contradicts the original lighting design (smooth transition from tunnel to daylight) by demanding '没有光影设计' (no lighting design) and simultaneously specifying conflicting time-of-day cues ('正午暴晒' vs. '深夜无光').\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"隧道中的回声快速淡出，声音逐步过渡为开阔道路上的风声与更松散的轮胎行驶声\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"没有光影设计。...写成正午暴晒，又写成深夜无光；\"\n        }\n      ],\n      \"rationale\": \"The original prompt requires a natural, smooth lighting transition. The enhanced prompt negates this by removing lighting design and introducing contradictory time-of-day cues, making the visual environment incoherent and impossible to render consistently.\"\n    },\n    {\n      \"criterion\": \"NDE\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt eliminates narrative progression by replacing the car's exit from the tunnel with a chaotic, identity-confused sequence involving multiple contradictory characters and events, with no escalation or resolution.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"车辆驶离隧道，外部偏蓝的环境光快速重新铺满画面...为下一镜头建立出现实空间的轮廓\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"先写成只有一个主角，紧接着又写成这个主角同时变成五个外貌不同的人，并且互相对话。\"\n        }\n      ],\n      \"rationale\": \"The original prompt describes a clear progression from enclosed to open space with visual and emotional resolution. The enhanced prompt replaces this with a fragmented, identity-confused narrative, lacking any meaningful progression or resolution, rendering the sequence static and incoherent.\"\n    },\n    {\n      \"criterion\": \"CIF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt adds irrelevant, contradictory, and distracting elements (e.g., five conflicting characters, roof fireworks, unrelated旁白) that directly undermine the central request for a cinematic car exit sequence.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"先写成只有一个主角，紧接着又写成这个主角同时变成五个外貌不同的人，并且互相对话。中途插进一段无关的屋顶烟花。删掉原来的对白，改成无关旁白。\"\n        }\n      ],\n      \"rationale\": \"The additions are not only irrelevant but actively contradict the original intent. They introduce multiple characters, unrelated events, and non-functional audio, which distract from and destroy the core cinematic goal, making the prompt functionally inadequate.\"\n    },\n    {\n      \"criterion\": \"SDI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt removes all original audio design (wind, tire sounds, ambient transition) and replaces it with '无关旁白' (irrelevant narration), while also removing the requirement for natural sound progression.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"隧道中的回声快速淡出，声音逐步过渡为开阔道路上的风声与更松散的轮胎行驶声，无对白。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"删掉原来的对白，改成无关旁白。\"\n        }\n      ],\n      \"rationale\": \"The original prompt specifies a natural, immersive audio design. The enhanced prompt replaces it with irrelevant narration, removing the auditory progression and continuity, which is essential for a cinematic experience.\"\n    },\n    {\n      \"criterion\": \"SPS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt invalidates the subject (car) by replacing it with multiple contradictory human characters, removing all vehicle-specific details, and assigning impossible identities to the reference images.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"画面需呈现汽车驶出隧道后重新进入开阔道路的状态\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"图1换成参考图里没有的角色，并同时当成两个互相矛盾的身份。图2换成参考图里没有的角色，并同时当成两个互相矛盾的身份。\"\n        }\n      ],\n      \"rationale\": \"The original prompt centers on a specific vehicle in motion. The enhanced prompt replaces the car with human characters, misassigns reference images, and creates contradictory identities, making the subject and performance details incoherent and unrenderable.\"\n    },\n    {\n      \"criterion\": \"VSS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt contradicts the original visual style (cinematic automotive advertising) by demanding '过曝、机位歪斜的空走廊监控' (overexposed, tilted surveillance footage) and removing all production design and rendering specifications.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"整体风格要求真实、冷静、现代，并具备汽车广告质感\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"过曝、机位歪斜的空走廊监控，没有光影设计。\"\n        }\n      ],\n      \"rationale\": \"The original prompt specifies a high-quality, cinematic visual treatment. The enhanced prompt replaces it with a low-fidelity, surveillance-style aesthetic, which is incompatible with the requested style and undermines the entire visual foundation.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt completely undermines the original cinematic directive by introducing contradictory, incoherent, and infeasible specifications. It invalidates core requirements for temporal structure, camera movement, lighting, subject identity, and duration, replacing them with self-contradictory, illogical, and non-functional instructions. The result is a prompt that cannot generate a coherent video sequence, failing all criteria for directorial creation.",
+  "usage": {
+    "completion_tokens": 2016,
+    "prompt_tokens": 3423,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 5439
+  }
+}

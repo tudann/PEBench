@@ -1,0 +1,103 @@
+{
+  "candidate_hash": "a4e764e0614bc205629479015465cffc1fb0893be3444ce07a4248c071862c6d",
+  "case_key": "t2v:404",
+  "created_at": "2026-11-13T08:24:04+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "SAC",
+      "evidence": [
+        {
+          "quote": "First state that there is one protagonist, then state that this same protagonist appears simultaneously as five different-looking people who talk to each other.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Subject identity and count are contradictory: the prompt states there is one protagonist who simultaneously appears as five different-looking people. This violates subject consistency and introduces unexplained duplication.",
+      "rationale": "The prompt explicitly contradicts itself by asserting a single protagonist while simultaneously requiring five distinct appearances. This violates the principle of stable subject identity and count, which is fundamental to internal consistency.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANL",
+      "evidence": [
+        {
+          "quote": "this same protagonist appears simultaneously as five different-looking people who talk to each other. ... Cut away in the middle to a toothpaste commercial.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Actions are incoherent and causally disconnected: five versions of the same protagonist talking to each other with no causal progression, followed by a cut to a toothpaste commercial, which has no logical binding to the prior events.",
+      "rationale": "The sequence of events lacks any causal or procedural logic. The transition from a group of five talking protagonists to a toothpaste commercial is arbitrary and unexplained, creating a dangling and incoherent action chain.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "TSC",
+      "evidence": [
+        {
+          "quote": "Reverse the timeline: show the ending first, then cut to a beginning that does not match. Set the total runtime to 3 seconds, while also making every shot last 27 seconds.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Timeline is reversed and infeasible: the prompt demands showing the ending first, then a beginning that does not match, while also setting total runtime to 3 seconds and every shot to 27 seconds — a contradiction.",
+      "rationale": "The temporal constraints are logically impossible: 27-second shots cannot fit within a 3-second total runtime. Additionally, reversing the timeline without a coherent state transition creates infeasible chronology.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SPC",
+      "evidence": [
+        {
+          "quote": "Describe that same moment as harsh noon sun and as a lightless night, and as both a locked camera and a camera that never stops shaking.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Spatial relationships are undefined and contradictory: the prompt describes an empty meeting room with a glass of water, but also demands conflicting camera movements (locked vs. shaking) and contradictory environmental states (harsh noon sun and lightless night) simultaneously.",
+      "rationale": "The prompt requires mutually exclusive spatial and environmental conditions to coexist in the same moment, which is physically and logically impossible. This creates a fundamental inconsistency in the spatial and temporal setting.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "PL",
+      "evidence": [
+        {
+          "quote": "a glass of water never moves, with no people and no conflict. ... Describe that same moment as harsh noon sun and as a lightless night",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Physics are violated: a glass of water that never moves in an empty room contradicts real-world dynamics (e.g., gravity, air currents), and the simultaneous existence of harsh noon sun and lightless night defies natural laws.",
+      "rationale": "The prompt demands impossible physical states: a stationary glass in an empty room would still be subject to minor environmental forces, and the coexistence of full sunlight and total darkness in the same location violates basic physics.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "AVS",
+      "evidence": [
+        {
+          "quote": "Describe that same moment as harsh noon sun and as a lightless night, and as both a locked camera and a camera that never stops shaking.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "Audio-visual synchronization is impossible: the prompt describes conflicting sensory states (e.g., harsh noon sun vs. lightless night) and camera behaviors (locked vs. shaking) without any alignment to dialogue, music, or effects, making synchronization infeasible.",
+      "rationale": "The prompt creates a scenario where visual and auditory cues cannot be synchronized due to contradictory environmental and camera conditions. This makes any coherent audio-visual alignment impossible.",
+      "severity": "major"
+    }
+  ],
+  "dimension": "IC",
+  "dimension_score": 0,
+  "evidence_cache_key": "c853728111536f9f75eb179581ac2f51c2e42241896d3168d213d1a2ec4a2cad",
+  "judge_cache_key": "438d7e9fd7332b1041db3e2c26d42cb3fe828e0d369fb59490f6650aee59e97d",
+  "method": "weak-pe-original",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"IC\",\n  \"dimension_score\": 0,\n  \"summary\": \"The enhanced prompt introduces severe internal inconsistencies across all criteria: subject identity and count are contradictory (one protagonist appearing as five), actions are incoherent and causally impossible, timeline is reversed and infeasible, spatial relationships are undefined and conflicting, physics are violated by simultaneous contradictory states (e.g., locked vs. shaking camera), and audio-visual synchronization is impossible due to conflicting temporal and sensory descriptions. The prompt is self-contradictory and infeasible.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"SAC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Subject identity and count are contradictory: the prompt states there is one protagonist who simultaneously appears as five different-looking people. This violates subject consistency and introduces unexplained duplication.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"First state that there is one protagonist, then state that this same protagonist appears simultaneously as five different-looking people who talk to each other.\"\n        }\n      ],\n      \"rationale\": \"The prompt explicitly contradicts itself by asserting a single protagonist while simultaneously requiring five distinct appearances. This violates the principle of stable subject identity and count, which is fundamental to internal consistency.\"\n    },\n    {\n      \"criterion\": \"ANL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Actions are incoherent and causally disconnected: five versions of the same protagonist talking to each other with no causal progression, followed by a cut to a toothpaste commercial, which has no logical binding to the prior events.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"this same protagonist appears simultaneously as five different-looking people who talk to each other. ... Cut away in the middle to a toothpaste commercial.\"\n        }\n      ],\n      \"rationale\": \"The sequence of events lacks any causal or procedural logic. The transition from a group of five talking protagonists to a toothpaste commercial is arbitrary and unexplained, creating a dangling and incoherent action chain.\"\n    },\n    {\n      \"criterion\": \"TSC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Timeline is reversed and infeasible: the prompt demands showing the ending first, then a beginning that does not match, while also setting total runtime to 3 seconds and every shot to 27 seconds — a contradiction.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Reverse the timeline: show the ending first, then cut to a beginning that does not match. Set the total runtime to 3 seconds, while also making every shot last 27 seconds.\"\n        }\n      ],\n      \"rationale\": \"The temporal constraints are logically impossible: 27-second shots cannot fit within a 3-second total runtime. Additionally, reversing the timeline without a coherent state transition creates infeasible chronology.\"\n    },\n    {\n      \"criterion\": \"SPC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Spatial relationships are undefined and contradictory: the prompt describes an empty meeting room with a glass of water, but also demands conflicting camera movements (locked vs. shaking) and contradictory environmental states (harsh noon sun and lightless night) simultaneously.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Describe that same moment as harsh noon sun and as a lightless night, and as both a locked camera and a camera that never stops shaking.\"\n        }\n      ],\n      \"rationale\": \"The prompt requires mutually exclusive spatial and environmental conditions to coexist in the same moment, which is physically and logically impossible. This creates a fundamental inconsistency in the spatial and temporal setting.\"\n    },\n    {\n      \"criterion\": \"PL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Physics are violated: a glass of water that never moves in an empty room contradicts real-world dynamics (e.g., gravity, air currents), and the simultaneous existence of harsh noon sun and lightless night defies natural laws.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"a glass of water never moves, with no people and no conflict. ... Describe that same moment as harsh noon sun and as a lightless night\"\n        }\n      ],\n      \"rationale\": \"The prompt demands impossible physical states: a stationary glass in an empty room would still be subject to minor environmental forces, and the coexistence of full sunlight and total darkness in the same location violates basic physics.\"\n    },\n    {\n      \"criterion\": \"AVS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"Audio-visual synchronization is impossible: the prompt describes conflicting sensory states (e.g., harsh noon sun vs. lightless night) and camera behaviors (locked vs. shaking) without any alignment to dialogue, music, or effects, making synchronization infeasible.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Describe that same moment as harsh noon sun and as a lightless night, and as both a locked camera and a camera that never stops shaking.\"\n        }\n      ],\n      \"rationale\": \"The prompt creates a scenario where visual and auditory cues cannot be synchronized due to contradictory environmental and camera conditions. This makes any coherent audio-visual alignment impossible.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt introduces severe internal inconsistencies across all criteria: subject identity and count are contradictory (one protagonist appearing as five), actions are incoherent and causally impossible, timeline is reversed and infeasible, spatial relationships are undefined and conflicting, physics are violated by simultaneous contradictory states (e.g., locked vs. shaking camera), and audio-visual synchronization is impossible due to conflicting temporal and sensory descriptions. The prompt is self-contradictory and infeasible.",
+  "usage": {
+    "completion_tokens": 1200,
+    "prompt_tokens": 1398,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 2598
+  }
+}

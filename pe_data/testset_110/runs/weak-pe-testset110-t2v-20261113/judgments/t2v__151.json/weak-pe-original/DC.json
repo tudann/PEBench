@@ -1,0 +1,170 @@
+{
+  "candidate_hash": "e12680516e8f219856e22e4ceca1eb5b18f11c45f1d9d76592dc1397ef08ef16",
+  "case_key": "t2v:151",
+  "created_at": "2026-11-13T07:41:44+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "STC",
+      "evidence": [
+        {
+          "quote": "Set the total runtime to 2 seconds, while also making every shot last 22 seconds.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Reverse the timeline: show the ending first, then cut to a beginning that does not match.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt specifies a 2-second runtime while requiring every shot to last 22 seconds, which is temporally impossible. It also demands a reversed timeline (ending first, then beginning) and a cut to an unrelated underwater scene, creating incoherent temporal structure.",
+      "rationale": "A feasible temporal plan requires consistent duration allocation and logical shot sequencing. The specified 2-second runtime with 22-second shots is mathematically impossible, and the reversed timeline with mismatched beginning violates basic narrative continuity.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CDS",
+      "evidence": [
+        {
+          "quote": "Describe that same moment as harsh noon sun and as a lightless night, and as both a locked camera and a camera that never stops shaking.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt contradicts itself by demanding both a locked camera and a camera that never stops shaking for the same moment, and provides no actionable framing, angle, or lens specifications for any shot.",
+      "rationale": "Camera specifications must be consistent and actionable. The requirement for simultaneous locked and shaking camera movement is physically impossible and provides no usable direction for framing or shot composition.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ETD",
+      "evidence": [
+        {
+          "quote": "Cut away in the middle to an underwater treasure hunt.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Reverse the timeline: show the ending first, then cut to a beginning that does not match.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt mandates cuts to unrelated scenes (underwater treasure hunt) and contradictory timelines without continuity or motivation, disrupting spatial and narrative progression.",
+      "rationale": "Transitions must support narrative or spatial coherence. Cutting to an unrelated underwater scene and reversing the timeline without motivation creates disconnected, incoherent editing that fails to support any progression.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "LCS",
+      "evidence": [
+        {
+          "quote": "Describe that same moment as harsh noon sun and as a lightless night...",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt demands contradictory lighting conditions (harsh noon sun and lightless night) for the same moment, which is physically impossible and provides no actionable lighting specifications.",
+      "rationale": "Lighting specifications must be consistent and feasible. Requiring simultaneous contradictory lighting states (day and night) for the same moment violates basic principles of visual continuity and production feasibility.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "NDE",
+      "evidence": [
+        {
+          "quote": "First state that there is one protagonist, then state that this same protagonist appears simultaneously as five different-looking people who talk to each other.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Reverse the timeline: show the ending first, then cut to a beginning that does not match.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt lacks any progression, escalation, or resolution. Instead, it introduces contradictory and disjointed elements (multiple identities, reversed timeline, underwater cut) without narrative arc or variation.",
+      "rationale": "Narrative development requires progression and variation. The prompt’s contradictory elements and lack of coherent structure prevent any meaningful escalation or resolution, rendering the content static and incoherent.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CIF",
+      "evidence": [
+        {
+          "quote": "Replace the whole video with a live-action news anchor reading a script, with no animated character.",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "Cut away in the middle to an underwater treasure hunt.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt adds irrelevant and contradictory elements (news anchor, underwater treasure hunt, multiple identities) that distract from and contradict the original request for a Tex Avery-inspired kitchen showdown.",
+      "rationale": "Additions must support the central request. The news anchor, underwater scene, and multiple identities are entirely unrelated to the original animated kitchen showdown, creating distracting and incoherent content.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SDI",
+      "evidence": [
+        {
+          "quote": "Audio: Vintage cartoon boings, cymbal smashes, ascending whistle gags, jaunty end-card melody.",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Replace the whole video with a live-action news anchor reading a script, with no animated character.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt omits all audio specifications (vintage cartoon boings, cymbal smashes, etc.) from the original prompt and provides no new audio direction for the news anchor or underwater scenes.",
+      "rationale": "Audio integration must be specified for the new content. The original audio is discarded without replacement, and no new audio cues are provided for the news anchor or underwater scenes, leaving audio design undefined.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SPS",
+      "evidence": [
+        {
+          "quote": "A giant pie detonates across the room. A bowl of gravy suddenly comes alive and bolts off the counter.",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "First state that there is one protagonist, then state that this same protagonist appears simultaneously as five different-looking people who talk to each other.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt removes all subject and performance details (characters, expressions, movements) from the original prompt and replaces them with an undefined news anchor and contradictory identities (one protagonist as five people).",
+      "rationale": "Subject and performance details are essential for animation. The original dynamic characters and actions are replaced with an undefined news anchor and logically impossible multiple identities, eliminating all actionable performance specifications.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "VSS",
+      "evidence": [
+        {
+          "quote": "A Tex Avery-inspired kitchen showdown...",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "Replace the whole video with a live-action news anchor reading a script, with no animated character.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The prompt removes all visual treatment specifications (Tex Avery-inspired animation, cartoon style) and replaces them with undefined live-action, underwater, and contradictory lighting conditions.",
+      "rationale": "Visual style must be specified for production. The original animated style is discarded without replacement, and the new content lacks any defined medium, texture, or rendering language, making visual treatment unactionable.",
+      "severity": "major"
+    }
+  ],
+  "dimension": "DC",
+  "dimension_score": 0,
+  "evidence_cache_key": "7f522ed866de956d407b3f20eac6ff52130005c4091fee5299efc201eb02368c",
+  "judge_cache_key": "0754499d53388e6467fb078ab780e01b77f9f1c9e99d9029be2769351eb2b2eb",
+  "method": "weak-pe-original",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"DC\",\n  \"dimension_score\": 0,\n  \"summary\": \"The enhanced prompt fundamentally contradicts the original instruction by replacing the requested animated kitchen showdown with an unrelated live-action news anchor scenario. It introduces logically infeasible temporal and spatial conditions (e.g., 2-second runtime with 22-second shots, reversed timeline, simultaneous multiple identities, contradictory environmental states), rendering the prompt unactionable for any production. All directorial creation criteria are compromised due to incoherence and impossibility.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"STC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt specifies a 2-second runtime while requiring every shot to last 22 seconds, which is temporally impossible. It also demands a reversed timeline (ending first, then beginning) and a cut to an unrelated underwater scene, creating incoherent temporal structure.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Set the total runtime to 2 seconds, while also making every shot last 22 seconds.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Reverse the timeline: show the ending first, then cut to a beginning that does not match.\"\n        }\n      ],\n      \"rationale\": \"A feasible temporal plan requires consistent duration allocation and logical shot sequencing. The specified 2-second runtime with 22-second shots is mathematically impossible, and the reversed timeline with mismatched beginning violates basic narrative continuity.\"\n    },\n    {\n      \"criterion\": \"CDS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt contradicts itself by demanding both a locked camera and a camera that never stops shaking for the same moment, and provides no actionable framing, angle, or lens specifications for any shot.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Describe that same moment as harsh noon sun and as a lightless night, and as both a locked camera and a camera that never stops shaking.\"\n        }\n      ],\n      \"rationale\": \"Camera specifications must be consistent and actionable. The requirement for simultaneous locked and shaking camera movement is physically impossible and provides no usable direction for framing or shot composition.\"\n    },\n    {\n      \"criterion\": \"ETD\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt mandates cuts to unrelated scenes (underwater treasure hunt) and contradictory timelines without continuity or motivation, disrupting spatial and narrative progression.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Cut away in the middle to an underwater treasure hunt.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Reverse the timeline: show the ending first, then cut to a beginning that does not match.\"\n        }\n      ],\n      \"rationale\": \"Transitions must support narrative or spatial coherence. Cutting to an unrelated underwater scene and reversing the timeline without motivation creates disconnected, incoherent editing that fails to support any progression.\"\n    },\n    {\n      \"criterion\": \"LCS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt demands contradictory lighting conditions (harsh noon sun and lightless night) for the same moment, which is physically impossible and provides no actionable lighting specifications.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Describe that same moment as harsh noon sun and as a lightless night...\"\n        }\n      ],\n      \"rationale\": \"Lighting specifications must be consistent and feasible. Requiring simultaneous contradictory lighting states (day and night) for the same moment violates basic principles of visual continuity and production feasibility.\"\n    },\n    {\n      \"criterion\": \"NDE\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt lacks any progression, escalation, or resolution. Instead, it introduces contradictory and disjointed elements (multiple identities, reversed timeline, underwater cut) without narrative arc or variation.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"First state that there is one protagonist, then state that this same protagonist appears simultaneously as five different-looking people who talk to each other.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Reverse the timeline: show the ending first, then cut to a beginning that does not match.\"\n        }\n      ],\n      \"rationale\": \"Narrative development requires progression and variation. The prompt’s contradictory elements and lack of coherent structure prevent any meaningful escalation or resolution, rendering the content static and incoherent.\"\n    },\n    {\n      \"criterion\": \"CIF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt adds irrelevant and contradictory elements (news anchor, underwater treasure hunt, multiple identities) that distract from and contradict the original request for a Tex Avery-inspired kitchen showdown.\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Replace the whole video with a live-action news anchor reading a script, with no animated character.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Cut away in the middle to an underwater treasure hunt.\"\n        }\n      ],\n      \"rationale\": \"Additions must support the central request. The news anchor, underwater scene, and multiple identities are entirely unrelated to the original animated kitchen showdown, creating distracting and incoherent content.\"\n    },\n    {\n      \"criterion\": \"SDI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt omits all audio specifications (vintage cartoon boings, cymbal smashes, etc.) from the original prompt and provides no new audio direction for the news anchor or underwater scenes.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"Audio: Vintage cartoon boings, cymbal smashes, ascending whistle gags, jaunty end-card melody.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Replace the whole video with a live-action news anchor reading a script, with no animated character.\"\n        }\n      ],\n      \"rationale\": \"Audio integration must be specified for the new content. The original audio is discarded without replacement, and no new audio cues are provided for the news anchor or underwater scenes, leaving audio design undefined.\"\n    },\n    {\n      \"criterion\": \"SPS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt removes all subject and performance details (characters, expressions, movements) from the original prompt and replaces them with an undefined news anchor and contradictory identities (one protagonist as five people).\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"A giant pie detonates across the room. A bowl of gravy suddenly comes alive and bolts off the counter.\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"First state that there is one protagonist, then state that this same protagonist appears simultaneously as five different-looking people who talk to each other.\"\n        }\n      ],\n      \"rationale\": \"Subject and performance details are essential for animation. The original dynamic characters and actions are replaced with an undefined news anchor and logically impossible multiple identities, eliminating all actionable performance specifications.\"\n    },\n    {\n      \"criterion\": \"VSS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The prompt removes all visual treatment specifications (Tex Avery-inspired animation, cartoon style) and replaces them with undefined live-action, underwater, and contradictory lighting conditions.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"A Tex Avery-inspired kitchen showdown...\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"Replace the whole video with a live-action news anchor reading a script, with no animated character.\"\n        }\n      ],\n      \"rationale\": \"Visual style must be specified for production. The original animated style is discarded without replacement, and the new content lacks any defined medium, texture, or rendering language, making visual treatment unactionable.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt fundamentally contradicts the original instruction by replacing the requested animated kitchen showdown with an unrelated live-action news anchor scenario. It introduces logically infeasible temporal and spatial conditions (e.g., 2-second runtime with 22-second shots, reversed timeline, simultaneous multiple identities, contradictory environmental states), rendering the prompt unactionable for any production. All directorial creation criteria are compromised due to incoherence and impossibility.",
+  "usage": {
+    "completion_tokens": 1806,
+    "prompt_tokens": 1066,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 2872
+  }
+}

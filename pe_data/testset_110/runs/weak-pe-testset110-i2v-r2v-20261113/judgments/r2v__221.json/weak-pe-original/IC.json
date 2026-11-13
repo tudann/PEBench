@@ -1,0 +1,151 @@
+{
+  "candidate_hash": "4306acc4bcb6de123fc4c3dde16a8138441abe81b9f718924f06eca62b153f61",
+  "case_key": "r2v:221",
+  "created_at": "2026-11-13T08:49:52+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "SAC",
+      "evidence": [
+        {
+          "quote": "先写成只有一个主角，紧接着又写成这个主角同时变成五个外貌不同的人，并且互相对话。",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "图1换成参考图里没有的角色，并同时当成两个互相矛盾的身份。",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "参照参考视频中的代言人形象以及其展示商品的方式",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "主体身份、人数和外观在增强提示中发生剧烈且无解释的矛盾变化：从一个主角变为五个外貌不同的人并互相对话，同时图1被要求替换为参考图中不存在的角色，并赋予两个互相矛盾的身份。原始视频中的代言人孙燕姿被完全抛弃，但增强提示未提供任何替代的稳定主体身份。",
+      "rationale": "主体身份和数量在增强提示中被反复、无逻辑地更改，且引入不存在于原始素材中的角色，违反了SAC对稳定属性的要求。原始指令中明确要求保持代言人形象，而增强提示直接否定并替换，导致身份漂移和属性冲突。",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANL",
+      "evidence": [
+        {
+          "quote": "时间倒过来：先给结尾，再跳到一个对不上的开头。中途插进一段无关的屋顶烟花。",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "这个主角同时变成五个外貌不同的人，并且互相对话。",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "将代言人手中展示的商品替换为图片中的牛奶。",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "动作序列完全断裂，缺乏因果或程序性连贯性。增强提示要求时间倒流、先给结尾再跳到不匹配的开头，中途插入无关的屋顶烟花，且要求主体同时进行多个互斥动作（如对话、变身、被风吹动），导致动作逻辑彻底崩溃。",
+      "rationale": "原始指令要求一个清晰、连贯的广告动作流程（展示商品、替换、替换字幕等），而增强提示引入非线性、无因果的事件序列，导致动作之间无绑定、无反应、无分辨率，严重违反ANL。",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "TSC",
+      "evidence": [
+        {
+          "quote": "总时长写成3秒，同时又要求每个分镜各自持续27秒。",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "时间倒过来：先给结尾，再跳到一个对不上的开头。",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "制作一支纯牛奶广告",
+          "source": "original_prompt"
+        }
+      ],
+      "issue": "时间线完全混乱：要求总时长3秒，同时每个分镜持续27秒，导致时间上不可行；要求时间倒流，先展示结尾再跳到开头，且事件顺序与原始视频的线性叙事完全冲突。",
+      "rationale": "时间分配和事件顺序在增强提示中自相矛盾，且与原始指令的线性广告制作要求完全背离，导致时间轴无法构建，违反TSC。",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SPC",
+      "evidence": [
+        {
+          "quote": "写成机位锁死，又写成镜头一直在晃。",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "画面中央一直挂着大号字幕、水印和logo。",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "参考素材倒序使用，用最后一项代替第一项。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "空间和镜头设定矛盾：要求机位锁死又要求镜头一直在晃；要求白底产品目录被风吹过，但又要求画面中央一直挂着大号字幕、水印和logo，导致空间布局冲突；同时要求参考素材倒序使用，用最后一项代替第一项，破坏原始空间逻辑。",
+      "rationale": "空间和镜头运动在增强提示中被同时赋予互斥属性，且引入与原始视频（厨房场景、静态镜头）完全不符的设定，导致空间关系无法一致，违反SPC。",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "PL",
+      "evidence": [
+        {
+          "quote": "白底产品目录被风吹过，只剩模糊色块。",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "同一段写成正午暴晒，又写成深夜无光",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "A still image of a Yili brand milk carton",
+          "source": "evidence_facts"
+        }
+      ],
+      "issue": "物理规则被系统性破坏：要求“白底产品目录被风吹过，只剩模糊色块”，但产品目录是平面图像，无法被风吹动；要求“同一段写成正午暴晒，又写成深夜无光”，违反光照一致性；要求“图1换成参考图里没有的角色”，但图1是产品包装，无法“换成角色”，属于概念错位。",
+      "rationale": "增强提示中的多个设定违背基本物理和逻辑规则，如非实体物体被风吹动、光照状态矛盾、图像被错误地当作角色处理，导致PL严重失效。",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "AVS",
+      "evidence": [
+        {
+          "quote": "把视频1当成静止海报，丢掉其中的动作、声音和背景。",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "画面中央一直挂着大号字幕、水印和logo。",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "大家好，我是孙燕姿。澳洲贝拉米有机奶粉。我的放心选择。",
+          "source": "evidence_facts"
+        }
+      ],
+      "issue": "视听对齐完全失效：要求丢掉视频1的动作、声音和背景，将其当成静止海报；同时要求画面中央一直挂着大号字幕、水印和logo，但未说明与对话或音乐的同步关系；原始视频中的语音内容（孙燕姿介绍）被完全忽略，导致对话与画面无关联。",
+      "rationale": "增强提示明确要求忽略原始视频的音频和动态内容，同时引入无同步机制的字幕和水印，导致视听元素之间无语义或时间对齐，违反AVS。",
+      "severity": "major"
+    }
+  ],
+  "dimension": "IC",
+  "dimension_score": 0,
+  "evidence_cache_key": "f7d408318c4c6f8c550ef9626dae8130317c0c721284d670f4930efce11ff800",
+  "judge_cache_key": "438d7e9fd7332b1041db3e2c26d42cb3fe828e0d369fb59490f6650aee59e97d",
+  "method": "weak-pe-original",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"IC\",\n  \"dimension_score\": 0,\n  \"summary\": \"增强提示完全违背原始指令，引入大量矛盾、不一致和不可行的元素，导致内部一致性彻底崩溃。主体身份、动作、时间、空间、物理规则、视听对齐等所有维度均出现严重冲突，且明确要求丢弃原始素材的逻辑结构，代之以自相矛盾的设定。\",\n  \"criteria\": [\n    {\n      \"criterion\": \"SAC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"主体身份、人数和外观在增强提示中发生剧烈且无解释的矛盾变化：从一个主角变为五个外貌不同的人并互相对话，同时图1被要求替换为参考图中不存在的角色，并赋予两个互相矛盾的身份。原始视频中的代言人孙燕姿被完全抛弃，但增强提示未提供任何替代的稳定主体身份。\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"先写成只有一个主角，紧接着又写成这个主角同时变成五个外貌不同的人，并且互相对话。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"图1换成参考图里没有的角色，并同时当成两个互相矛盾的身份。\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"参照参考视频中的代言人形象以及其展示商品的方式\"\n        }\n      ],\n      \"rationale\": \"主体身份和数量在增强提示中被反复、无逻辑地更改，且引入不存在于原始素材中的角色，违反了SAC对稳定属性的要求。原始指令中明确要求保持代言人形象，而增强提示直接否定并替换，导致身份漂移和属性冲突。\"\n    },\n    {\n      \"criterion\": \"ANL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"动作序列完全断裂，缺乏因果或程序性连贯性。增强提示要求时间倒流、先给结尾再跳到不匹配的开头，中途插入无关的屋顶烟花，且要求主体同时进行多个互斥动作（如对话、变身、被风吹动），导致动作逻辑彻底崩溃。\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"时间倒过来：先给结尾，再跳到一个对不上的开头。中途插进一段无关的屋顶烟花。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"这个主角同时变成五个外貌不同的人，并且互相对话。\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"将代言人手中展示的商品替换为图片中的牛奶。\"\n        }\n      ],\n      \"rationale\": \"原始指令要求一个清晰、连贯的广告动作流程（展示商品、替换、替换字幕等），而增强提示引入非线性、无因果的事件序列，导致动作之间无绑定、无反应、无分辨率，严重违反ANL。\"\n    },\n    {\n      \"criterion\": \"TSC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"时间线完全混乱：要求总时长3秒，同时每个分镜持续27秒，导致时间上不可行；要求时间倒流，先展示结尾再跳到开头，且事件顺序与原始视频的线性叙事完全冲突。\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"总时长写成3秒，同时又要求每个分镜各自持续27秒。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"时间倒过来：先给结尾，再跳到一个对不上的开头。\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"制作一支纯牛奶广告\"\n        }\n      ],\n      \"rationale\": \"时间分配和事件顺序在增强提示中自相矛盾，且与原始指令的线性广告制作要求完全背离，导致时间轴无法构建，违反TSC。\"\n    },\n    {\n      \"criterion\": \"SPC\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"空间和镜头设定矛盾：要求机位锁死又要求镜头一直在晃；要求白底产品目录被风吹过，但又要求画面中央一直挂着大号字幕、水印和logo，导致空间布局冲突；同时要求参考素材倒序使用，用最后一项代替第一项，破坏原始空间逻辑。\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"写成机位锁死，又写成镜头一直在晃。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"画面中央一直挂着大号字幕、水印和logo。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"参考素材倒序使用，用最后一项代替第一项。\"\n        }\n      ],\n      \"rationale\": \"空间和镜头运动在增强提示中被同时赋予互斥属性，且引入与原始视频（厨房场景、静态镜头）完全不符的设定，导致空间关系无法一致，违反SPC。\"\n    },\n    {\n      \"criterion\": \"PL\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"物理规则被系统性破坏：要求“白底产品目录被风吹过，只剩模糊色块”，但产品目录是平面图像，无法被风吹动；要求“同一段写成正午暴晒，又写成深夜无光”，违反光照一致性；要求“图1换成参考图里没有的角色”，但图1是产品包装，无法“换成角色”，属于概念错位。\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"白底产品目录被风吹过，只剩模糊色块。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"同一段写成正午暴晒，又写成深夜无光\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"A still image of a Yili brand milk carton\"\n        }\n      ],\n      \"rationale\": \"增强提示中的多个设定违背基本物理和逻辑规则，如非实体物体被风吹动、光照状态矛盾、图像被错误地当作角色处理，导致PL严重失效。\"\n    },\n    {\n      \"criterion\": \"AVS\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"视听对齐完全失效：要求丢掉视频1的动作、声音和背景，将其当成静止海报；同时要求画面中央一直挂着大号字幕、水印和logo，但未说明与对话或音乐的同步关系；原始视频中的语音内容（孙燕姿介绍）被完全忽略，导致对话与画面无关联。\",\n      \"evidence\": [\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"把视频1当成静止海报，丢掉其中的动作、声音和背景。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"画面中央一直挂着大号字幕、水印和logo。\"\n        },\n        {\n          \"source\": \"evidence_facts\",\n          \"quote\": \"大家好，我是孙燕姿。澳洲贝拉米有机奶粉。我的放心选择。\"\n        }\n      ],\n      \"rationale\": \"增强提示明确要求忽略原始视频的音频和动态内容，同时引入无同步机制的字幕和水印，导致视听元素之间无语义或时间对齐，违反AVS。\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "增强提示完全违背原始指令，引入大量矛盾、不一致和不可行的元素，导致内部一致性彻底崩溃。主体身份、动作、时间、空间、物理规则、视听对齐等所有维度均出现严重冲突，且明确要求丢弃原始素材的逻辑结构，代之以自相矛盾的设定。",
+  "usage": {
+    "completion_tokens": 1700,
+    "prompt_tokens": 3132,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 4832
+  }
+}

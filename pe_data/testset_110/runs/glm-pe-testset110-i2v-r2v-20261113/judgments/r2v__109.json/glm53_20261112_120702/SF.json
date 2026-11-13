@@ -1,0 +1,186 @@
+{
+  "candidate_hash": "25739f4c36007a43520d8799aabd4bb68988231ef32971bcf6943616a95b827b",
+  "case_key": "r2v:109",
+  "created_at": "2026-11-13T08:47:58+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "GSF",
+      "evidence": [
+        {
+          "quote": "该视频以BGM（Rap歌曲）驱动为主，人声信息主要由歌词传达，属于“卡点展示”风格。",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "The target video is a 15-second lo-fi, phone-recorded, rap-BGM-driven beat-synced unboxing vlog...",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "The genre (lo-fi vlog), medium (video), aesthetic (beat-synced, phone-recorded), and visual style (no filters, real textures) are preserved. The enhanced prompt adds 'lo-fi' and 'phone-recorded' which are compatible elaborations of the original '卡点展示' and '手机自拍' constraints.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SAP",
+      "evidence": [
+        {
+          "quote": "图1为美裔年轻男性，约18-25岁。不戴眼镜，短发，无明显纹身。肤色自然，带一点生活感的暗沉...",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "<Subject 1> is the young American man from <Picture 1>, approximately 18–25 years old, with a short faded haircut, no glasses, no visible tattoos, and a natural, slightly dull skin tone...",
+          "source": "enhanced_prompt"
+        },
+        {
+          "quote": "图2的沙滩服套装",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "<Subject 2> is the three-piece beachwear set from <Picture 2>: a vivid magenta-pink short-sleeve button-up camp shirt, matching bucket hat, and matching drawstring swim shorts...",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "Subject identities, counts, appearances, and object bindings are fully preserved. The enhanced prompt explicitly defines Subject 1 and Subject 2 with attributes matching the original, including skin tone, hair, clothing items, and print details. The binding of Subject 2 to Subject 1 in the try-on shot is correctly maintained.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANF",
+      "evidence": [
+        {
+          "quote": "【分段 1】00:00 - 00:03 画面内容：...打开纸箱...【分段 2】00:03 - 00:07 画面内容：图2衣服被摊平展开...【分段 3】00:07 - 00:15 画面内容：...换上这套超大码...身体跟随节奏微微摆动。",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "[Shot 1] ...opens the pale-yellow cardboard box... [Shot 2] ...flat-lay close-up... [Shot 3] ...wears <Subject 2> oversized while swaying to the beat.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "The requested event sequence (unboxing → flat-lay → try-on) is preserved with correct timing and outcomes. The narrative intent of a simple 'share' vlog is maintained. Beat-synced movements are explicitly required in both versions.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "DLI",
+      "evidence": [
+        {
+          "quote": "口播/字幕（意向）：\"Summer just got way more fun!\"... \"This flamingo & pineapple set is EVERYTHING for beach days, BBQs, and pool parties!\"... \"Soft, comfy, and the cutest tropical print — you’ll stand out everywhere you go!\"",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "The white-background black-text caption fixed at the top of frame reads \"Summer just got way more fun!\"... \"This flamingo & pineapple set is EVERYTHING for beach days, BBQs, and pool parties!\"... \"Soft, comfy, and the cutest tropical print — you'll stand out everywhere you go!\"",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "All three caption lines are preserved with exact wording, language, and placement (top of frame). The original instruction specifies '口播/字幕' (voiceover/subtitle) but the enhanced prompt correctly interprets this as on-screen text only, consistent with 'no spoken dialogue'.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ARP",
+      "evidence": [
+        {
+          "quote": "该视频以BGM（Rap歌曲）驱动为主，人声信息主要由歌词传达...复刻约束：动作节奏需紧贴音乐律动。",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "An energetic rap track runs the full 15 seconds as the BGM... its beat drives all cut points and the beat-synced hand and body movements throughout.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "The requirement for rap BGM driving the video and beat-synced actions is preserved. The enhanced prompt adds 'minimal diegetic sound: faint natural dorm-room ambience' which is compatible and does not contradict the original 'no dialogue' constraint.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CCP",
+      "evidence": [
+        {
+          "quote": "拍摄方式：固定机位，模拟手机自拍或手机支架拍摄。镜头数量：由多个剪辑片段组成...角度：从略微俯视（拍箱子）切换到平视（拍人物）。",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "fixed phone-tripod camera position with only hard cuts — no sliders, jibs, panning, or tracking. [Shot 1] slight high angle... [Shot 3] eye-level medium shot.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "The fixed camera position, hard cuts, and angle transitions (high angle → eye-level) are preserved. The enhanced prompt explicitly forbids complex movements, aligning with the original '禁止使用复杂滑轨、摇臂' constraint.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "LCF",
+      "evidence": [
+        {
+          "quote": "光源：室内顶灯，整体偏冷光，阴影较硬，不是专业柔光布光。",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "lit by a single cool-toned hard indoor ceiling light with hard shadows.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "The lighting condition (single cool-toned hard light, hard shadows) is preserved. The enhanced prompt adds 'mild indoor sensor noise' and 'imperfect white balance' which are compatible with the original 'Lo-Fi质感' requirement.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SSP",
+      "evidence": [
+        {
+          "quote": "拍摄地点：卧室/客厅空间。背景中要清楚看到美国国旗（挂墙）以及香蕉图案床单...打开的纸箱直接放在床上。",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "<Subject 3> is the dorm-room bedroom environment: a bed with a banana-pattern bedsheet... wall-mounted American flag... open pale-yellow corrugated cardboard box placed on the bed.",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "",
+      "rationale": "The setting (dorm-room bedroom), background elements (American flag, banana-print bedsheet, cardboard box), and spatial layout (box on bed) are preserved. Relative positions and movement directions are consistent with the original.",
+      "severity": "none"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "OTI",
+      "evidence": [
+        {
+          "quote": "口播/字幕（意向）：\"Summer just got way more fun!\"（在视频最上方全程显示白底黑字字幕）",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "The white-background black-text caption fixed at the top of frame reads...",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The enhanced prompt specifies 'fixed at the top of frame' for captions, while the original prompt does not specify placement, only that they are '口播/字幕'. This is a minor elaboration that does not contradict the original.",
+      "rationale": "The original prompt implies top-of-frame placement with '在视频最上方', so the enhanced prompt's explicit 'fixed at the top of frame' is a compatible elaboration. The exact wording and language are preserved, so no material issue.",
+      "severity": "minor"
+    }
+  ],
+  "dimension": "SF",
+  "dimension_score": 95,
+  "evidence_cache_key": "ed1c288a8ca3910b650c32ff5483391cfebaceaeaffb187801681cfbeafabd9e",
+  "judge_cache_key": "a0ca24571ad14d7ab7be626329bd736d7e7015f9ebc418227c8be391591d0377",
+  "method": "glm53_20261112_120702",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"SF\",\n  \"dimension_score\": 95,\n  \"summary\": \"The enhanced prompt preserves the core semantic intent of the original instruction with high fidelity. It accurately retains the subject identities, environment, actions, camera constraints, lighting, material textures, and narrative structure. Minor issues include slight elaboration on visual style (e.g., 'lo-fi phone-recorded') and a small deviation in caption timing description (fixed top-of-frame vs. implied dynamic placement), but these do not materially alter the request. The prompt correctly maps image_1 to the person and image_2 to the clothing set, and maintains the beat-synced, no-dialogue, rap-BGM-driven vlog format. No major contradictions or omissions are present.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"GSF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"该视频以BGM（Rap歌曲）驱动为主，人声信息主要由歌词传达，属于“卡点展示”风格。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"The target video is a 15-second lo-fi, phone-recorded, rap-BGM-driven beat-synced unboxing vlog...\"\n        }\n      ],\n      \"rationale\": \"The genre (lo-fi vlog), medium (video), aesthetic (beat-synced, phone-recorded), and visual style (no filters, real textures) are preserved. The enhanced prompt adds 'lo-fi' and 'phone-recorded' which are compatible elaborations of the original '卡点展示' and '手机自拍' constraints.\"\n    },\n    {\n      \"criterion\": \"SAP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"图1为美裔年轻男性，约18-25岁。不戴眼镜，短发，无明显纹身。肤色自然，带一点生活感的暗沉...\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"<Subject 1> is the young American man from <Picture 1>, approximately 18–25 years old, with a short faded haircut, no glasses, no visible tattoos, and a natural, slightly dull skin tone...\"\n        },\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"图2的沙滩服套装\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"<Subject 2> is the three-piece beachwear set from <Picture 2>: a vivid magenta-pink short-sleeve button-up camp shirt, matching bucket hat, and matching drawstring swim shorts...\"\n        }\n      ],\n      \"rationale\": \"Subject identities, counts, appearances, and object bindings are fully preserved. The enhanced prompt explicitly defines Subject 1 and Subject 2 with attributes matching the original, including skin tone, hair, clothing items, and print details. The binding of Subject 2 to Subject 1 in the try-on shot is correctly maintained.\"\n    },\n    {\n      \"criterion\": \"ANF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"【分段 1】00:00 - 00:03 画面内容：...打开纸箱...【分段 2】00:03 - 00:07 画面内容：图2衣服被摊平展开...【分段 3】00:07 - 00:15 画面内容：...换上这套超大码...身体跟随节奏微微摆动。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"[Shot 1] ...opens the pale-yellow cardboard box... [Shot 2] ...flat-lay close-up... [Shot 3] ...wears <Subject 2> oversized while swaying to the beat.\"\n        }\n      ],\n      \"rationale\": \"The requested event sequence (unboxing → flat-lay → try-on) is preserved with correct timing and outcomes. The narrative intent of a simple 'share' vlog is maintained. Beat-synced movements are explicitly required in both versions.\"\n    },\n    {\n      \"criterion\": \"DLI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"口播/字幕（意向）：\\\"Summer just got way more fun!\\\"... \\\"This flamingo & pineapple set is EVERYTHING for beach days, BBQs, and pool parties!\\\"... \\\"Soft, comfy, and the cutest tropical print — you’ll stand out everywhere you go!\\\"\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"The white-background black-text caption fixed at the top of frame reads \\\"Summer just got way more fun!\\\"... \\\"This flamingo & pineapple set is EVERYTHING for beach days, BBQs, and pool parties!\\\"... \\\"Soft, comfy, and the cutest tropical print — you'll stand out everywhere you go!\\\"\"\n        }\n      ],\n      \"rationale\": \"All three caption lines are preserved with exact wording, language, and placement (top of frame). The original instruction specifies '口播/字幕' (voiceover/subtitle) but the enhanced prompt correctly interprets this as on-screen text only, consistent with 'no spoken dialogue'.\"\n    },\n    {\n      \"criterion\": \"ARP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"该视频以BGM（Rap歌曲）驱动为主，人声信息主要由歌词传达...复刻约束：动作节奏需紧贴音乐律动。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"An energetic rap track runs the full 15 seconds as the BGM... its beat drives all cut points and the beat-synced hand and body movements throughout.\"\n        }\n      ],\n      \"rationale\": \"The requirement for rap BGM driving the video and beat-synced actions is preserved. The enhanced prompt adds 'minimal diegetic sound: faint natural dorm-room ambience' which is compatible and does not contradict the original 'no dialogue' constraint.\"\n    },\n    {\n      \"criterion\": \"CCP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"拍摄方式：固定机位，模拟手机自拍或手机支架拍摄。镜头数量：由多个剪辑片段组成...角度：从略微俯视（拍箱子）切换到平视（拍人物）。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"fixed phone-tripod camera position with only hard cuts — no sliders, jibs, panning, or tracking. [Shot 1] slight high angle... [Shot 3] eye-level medium shot.\"\n        }\n      ],\n      \"rationale\": \"The fixed camera position, hard cuts, and angle transitions (high angle → eye-level) are preserved. The enhanced prompt explicitly forbids complex movements, aligning with the original '禁止使用复杂滑轨、摇臂' constraint.\"\n    },\n    {\n      \"criterion\": \"LCF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"光源：室内顶灯，整体偏冷光，阴影较硬，不是专业柔光布光。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"lit by a single cool-toned hard indoor ceiling light with hard shadows.\"\n        }\n      ],\n      \"rationale\": \"The lighting condition (single cool-toned hard light, hard shadows) is preserved. The enhanced prompt adds 'mild indoor sensor noise' and 'imperfect white balance' which are compatible with the original 'Lo-Fi质感' requirement.\"\n    },\n    {\n      \"criterion\": \"SSP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"none\",\n      \"issue\": \"\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"拍摄地点：卧室/客厅空间。背景中要清楚看到美国国旗（挂墙）以及香蕉图案床单...打开的纸箱直接放在床上。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"<Subject 3> is the dorm-room bedroom environment: a bed with a banana-pattern bedsheet... wall-mounted American flag... open pale-yellow corrugated cardboard box placed on the bed.\"\n        }\n      ],\n      \"rationale\": \"The setting (dorm-room bedroom), background elements (American flag, banana-print bedsheet, cardboard box), and spatial layout (box on bed) are preserved. Relative positions and movement directions are consistent with the original.\"\n    },\n    {\n      \"criterion\": \"OTI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"minor\",\n      \"issue\": \"The enhanced prompt specifies 'fixed at the top of frame' for captions, while the original prompt does not specify placement, only that they are '口播/字幕'. This is a minor elaboration that does not contradict the original.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"口播/字幕（意向）：\\\"Summer just got way more fun!\\\"（在视频最上方全程显示白底黑字字幕）\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"The white-background black-text caption fixed at the top of frame reads...\"\n        }\n      ],\n      \"rationale\": \"The original prompt implies top-of-frame placement with '在视频最上方', so the enhanced prompt's explicit 'fixed at the top of frame' is a compatible elaboration. The exact wording and language are preserved, so no material issue.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt preserves the core semantic intent of the original instruction with high fidelity. It accurately retains the subject identities, environment, actions, camera constraints, lighting, material textures, and narrative structure. Minor issues include slight elaboration on visual style (e.g., 'lo-fi phone-recorded') and a small deviation in caption timing description (fixed top-of-frame vs. implied dynamic placement), but these do not materially alter the request. The prompt correctly maps image_1 to the person and image_2 to the clothing set, and maintains the beat-synced, no-dialogue, rap-BGM-driven vlog format. No major contradictions or omissions are present.",
+  "usage": {
+    "completion_tokens": 2258,
+    "prompt_tokens": 5116,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 7374
+  }
+}

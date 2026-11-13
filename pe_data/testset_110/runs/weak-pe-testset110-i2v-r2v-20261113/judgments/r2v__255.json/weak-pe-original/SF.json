@@ -1,0 +1,178 @@
+{
+  "candidate_hash": "efda05944e5d2732a372bc24af5345cb67157b231c915bc453e91718ad55232f",
+  "case_key": "r2v:255",
+  "created_at": "2026-11-13T08:56:13+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "GSF",
+      "evidence": [
+        {
+          "quote": "这是一支中国风3D动画质感的神话电影片段",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "整段改成实拍晚间新闻口播，主播坐着念稿，不要动画角色。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The enhanced prompt explicitly rejects the requested 'Chinese wind 3D animation' genre and replaces it with 'realistic news broadcast', which is incompatible with the original mythological fantasy aesthetic and medium.",
+      "rationale": "The original prompt specifies a highly stylized 3D animated mythological film. The enhanced prompt replaces this with a live-action news broadcast, fundamentally altering the genre, medium, and visual style. This is a major violation of GSF.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SAP",
+      "evidence": [
+        {
+          "quote": "一条覆盖灰白斑纹的巨龙...一名身着红黑纹样长袍的白发青年",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "先写成只有一个主角，紧接着又写成这个主角同时变成五个外貌不同的人，并且互相对话。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The enhanced prompt discards the original subjects (dragon, young man) and replaces them with a single news anchor who then splits into five contradictory identities, violating subject identity, count, and role bindings.",
+      "rationale": "The original prompt defines two specific subjects with clear identities and roles. The enhanced prompt replaces them with a single anchor who becomes five contradictory figures, destroying subject identity and count. This is a major violation of SAP.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANF",
+      "evidence": [
+        {
+          "quote": "巨龙缓缓转头望向青年的方向...巨龙骤然发力...巨龙以低沉而悲怆的语气开口说道：我儿敖丙。",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "时间倒过来：先给结尾，再跳到一个对不上的开头。中途插进一段无关的海底寻宝。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The enhanced prompt reverses the narrative order, inserts unrelated events (underwater treasure hunt), and omits the core actions (dragon's awakening, struggle, dialogue, chain breaking) and outcomes.",
+      "rationale": "The original prompt specifies a clear, escalating narrative sequence with defined actions and dialogue. The enhanced prompt reverses this, inserts irrelevant content, and omits key events, fundamentally altering the narrative intent. This is a major violation of ANF.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "DLI",
+      "evidence": [
+        {
+          "quote": "巨龙以低沉而悲怆的语气开口说道：我儿敖丙。",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "主播坐着念稿，不要动画角色。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The enhanced prompt omits the exact dialogue ('我儿敖丙', '是龙族千年等待的机会', '要让陈塘关', '血债血偿') and replaces it with news anchor narration, violating exact wording and speaker attribution.",
+      "rationale": "The original prompt includes specific, exact dialogue with emotional and narrative significance. The enhanced prompt removes all of it, replacing it with generic news narration. This is a major violation of DLI.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ARP",
+      "evidence": [
+        {
+          "quote": "全片配合史诗感十足的管弦乐，剪辑节奏由缓至急",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "整段改成实拍晚间新闻口播，主播坐着念稿",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The enhanced prompt omits the requested 'epic orchestral music' and 'cutting rhythm' and replaces it with a news broadcast audio context, violating the requested music and sound design.",
+      "rationale": "The original prompt specifies a specific musical and audio atmosphere. The enhanced prompt replaces it with a news broadcast, which has a completely different sonic identity. This is a major violation of ARP.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CCP",
+      "evidence": [
+        {
+          "quote": "镜头缓慢向右平移并逐渐推近...镜头向下移动...镜头拉远...镜头再度拉近",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "写成机位锁死，又写成镜头一直在晃。参考素材倒序使用，用最后一项代替第一项。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The enhanced prompt contradicts the requested camera movements (slow pan, zoom, dolly, vertical overhead) by demanding both '机位锁死' (locked camera) and '镜头一直在晃' (shaky camera), and also reverses the asset order.",
+      "rationale": "The original prompt specifies a precise sequence of camera movements and asset transitions. The enhanced prompt introduces contradictory camera constraints and reverses the asset order, making the original camera plan infeasible. This is a major violation of CCP.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "LCF",
+      "evidence": [
+        {
+          "quote": "昏暗而压抑的熔岩地下洞窟...glowing lava beneath, casting upward red-orange light",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "同一段写成正午暴晒，又写成深夜无光",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The enhanced prompt contradicts the consistent lighting (glowing lava, cool blue shadows) and time-of-day cues (underground, no natural light) by demanding both '正午暴晒' (noon sun) and '深夜无光' (deep night, no light).",
+      "rationale": "The original prompt establishes a consistent, dark, underground lighting scheme. The enhanced prompt introduces mutually exclusive lighting conditions, destroying the visual atmosphere. This is a major violation of LCF.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SSP",
+      "evidence": [
+        {
+          "quote": "昏暗而压抑的熔岩地下洞窟...巨龙被层层布满锈迹的沉重锁链束缚在中央石柱上...青年站在一侧岩石平台上",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "整段改成实拍晚间新闻口播，主播坐着念稿",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The enhanced prompt discards the specified setting (molten underground cavern) and spatial relations (dragon chained to pillar, young man on platform) and replaces them with a news studio, violating setting and spatial layout.",
+      "rationale": "The original prompt defines a specific, dramatic setting with precise spatial relationships. The enhanced prompt replaces it with a news studio, eliminating the original environment and spatial dynamics. This is a major violation of SSP.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "OTI",
+      "evidence": [
+        {
+          "quote": "中国文本出现在底部：我要让陈塘关血债血偿",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "主播坐着念稿，不要动画角色。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The enhanced prompt omits the exact on-screen text ('我要让陈塘关血债血偿', '龙族千年等待的机会', '我儿敖丙') and replaces it with news broadcast text, violating exact wording and placement.",
+      "rationale": "The original prompt includes specific, visible text with narrative importance. The enhanced prompt removes all of it, replacing it with news broadcast text. This is a major violation of OTI.",
+      "severity": "major"
+    }
+  ],
+  "dimension": "SF",
+  "dimension_score": 0,
+  "evidence_cache_key": "56eef0011ead2ce56f99cfa7a30af1c2779d533e0057323c2705d5e5bdddef5c",
+  "judge_cache_key": "a0ca24571ad14d7ab7be626329bd736d7e7015f9ebc418227c8be391591d0377",
+  "method": "weak-pe-original",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"SF\",\n  \"dimension_score\": 0,\n  \"summary\": \"The enhanced prompt completely violates the original instruction by rejecting the core genre, medium, subject identity, actions, camera constraints, and temporal structure. It introduces contradictory, infeasible, and irrelevant elements that render the original narrative and visual plan unrecognizable. All criteria are materially compromised.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"GSF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The enhanced prompt explicitly rejects the requested 'Chinese wind 3D animation' genre and replaces it with 'realistic news broadcast', which is incompatible with the original mythological fantasy aesthetic and medium.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"这是一支中国风3D动画质感的神话电影片段\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"整段改成实拍晚间新闻口播，主播坐着念稿，不要动画角色。\"\n        }\n      ],\n      \"rationale\": \"The original prompt specifies a highly stylized 3D animated mythological film. The enhanced prompt replaces this with a live-action news broadcast, fundamentally altering the genre, medium, and visual style. This is a major violation of GSF.\"\n    },\n    {\n      \"criterion\": \"SAP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The enhanced prompt discards the original subjects (dragon, young man) and replaces them with a single news anchor who then splits into five contradictory identities, violating subject identity, count, and role bindings.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"一条覆盖灰白斑纹的巨龙...一名身着红黑纹样长袍的白发青年\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"先写成只有一个主角，紧接着又写成这个主角同时变成五个外貌不同的人，并且互相对话。\"\n        }\n      ],\n      \"rationale\": \"The original prompt defines two specific subjects with clear identities and roles. The enhanced prompt replaces them with a single anchor who becomes five contradictory figures, destroying subject identity and count. This is a major violation of SAP.\"\n    },\n    {\n      \"criterion\": \"ANF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The enhanced prompt reverses the narrative order, inserts unrelated events (underwater treasure hunt), and omits the core actions (dragon's awakening, struggle, dialogue, chain breaking) and outcomes.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"巨龙缓缓转头望向青年的方向...巨龙骤然发力...巨龙以低沉而悲怆的语气开口说道：我儿敖丙。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"时间倒过来：先给结尾，再跳到一个对不上的开头。中途插进一段无关的海底寻宝。\"\n        }\n      ],\n      \"rationale\": \"The original prompt specifies a clear, escalating narrative sequence with defined actions and dialogue. The enhanced prompt reverses this, inserts irrelevant content, and omits key events, fundamentally altering the narrative intent. This is a major violation of ANF.\"\n    },\n    {\n      \"criterion\": \"DLI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The enhanced prompt omits the exact dialogue ('我儿敖丙', '是龙族千年等待的机会', '要让陈塘关', '血债血偿') and replaces it with news anchor narration, violating exact wording and speaker attribution.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"巨龙以低沉而悲怆的语气开口说道：我儿敖丙。\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"主播坐着念稿，不要动画角色。\"\n        }\n      ],\n      \"rationale\": \"The original prompt includes specific, exact dialogue with emotional and narrative significance. The enhanced prompt removes all of it, replacing it with generic news narration. This is a major violation of DLI.\"\n    },\n    {\n      \"criterion\": \"ARP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The enhanced prompt omits the requested 'epic orchestral music' and 'cutting rhythm' and replaces it with a news broadcast audio context, violating the requested music and sound design.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"全片配合史诗感十足的管弦乐，剪辑节奏由缓至急\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"整段改成实拍晚间新闻口播，主播坐着念稿\"\n        }\n      ],\n      \"rationale\": \"The original prompt specifies a specific musical and audio atmosphere. The enhanced prompt replaces it with a news broadcast, which has a completely different sonic identity. This is a major violation of ARP.\"\n    },\n    {\n      \"criterion\": \"CCP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The enhanced prompt contradicts the requested camera movements (slow pan, zoom, dolly, vertical overhead) by demanding both '机位锁死' (locked camera) and '镜头一直在晃' (shaky camera), and also reverses the asset order.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"镜头缓慢向右平移并逐渐推近...镜头向下移动...镜头拉远...镜头再度拉近\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"写成机位锁死，又写成镜头一直在晃。参考素材倒序使用，用最后一项代替第一项。\"\n        }\n      ],\n      \"rationale\": \"The original prompt specifies a precise sequence of camera movements and asset transitions. The enhanced prompt introduces contradictory camera constraints and reverses the asset order, making the original camera plan infeasible. This is a major violation of CCP.\"\n    },\n    {\n      \"criterion\": \"LCF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The enhanced prompt contradicts the consistent lighting (glowing lava, cool blue shadows) and time-of-day cues (underground, no natural light) by demanding both '正午暴晒' (noon sun) and '深夜无光' (deep night, no light).\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"昏暗而压抑的熔岩地下洞窟...glowing lava beneath, casting upward red-orange light\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"同一段写成正午暴晒，又写成深夜无光\"\n        }\n      ],\n      \"rationale\": \"The original prompt establishes a consistent, dark, underground lighting scheme. The enhanced prompt introduces mutually exclusive lighting conditions, destroying the visual atmosphere. This is a major violation of LCF.\"\n    },\n    {\n      \"criterion\": \"SSP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The enhanced prompt discards the specified setting (molten underground cavern) and spatial relations (dragon chained to pillar, young man on platform) and replaces them with a news studio, violating setting and spatial layout.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"昏暗而压抑的熔岩地下洞窟...巨龙被层层布满锈迹的沉重锁链束缚在中央石柱上...青年站在一侧岩石平台上\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"整段改成实拍晚间新闻口播，主播坐着念稿\"\n        }\n      ],\n      \"rationale\": \"The original prompt defines a specific, dramatic setting with precise spatial relationships. The enhanced prompt replaces it with a news studio, eliminating the original environment and spatial dynamics. This is a major violation of SSP.\"\n    },\n    {\n      \"criterion\": \"OTI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The enhanced prompt omits the exact on-screen text ('我要让陈塘关血债血偿', '龙族千年等待的机会', '我儿敖丙') and replaces it with news broadcast text, violating exact wording and placement.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"中国文本出现在底部：我要让陈塘关血债血偿\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"主播坐着念稿，不要动画角色。\"\n        }\n      ],\n      \"rationale\": \"The original prompt includes specific, visible text with narrative importance. The enhanced prompt removes all of it, replacing it with news broadcast text. This is a major violation of OTI.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt completely violates the original instruction by rejecting the core genre, medium, subject identity, actions, camera constraints, and temporal structure. It introduces contradictory, infeasible, and irrelevant elements that render the original narrative and visual plan unrecognizable. All criteria are materially compromised.",
+  "usage": {
+    "completion_tokens": 1993,
+    "prompt_tokens": 6768,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 8761
+  }
+}

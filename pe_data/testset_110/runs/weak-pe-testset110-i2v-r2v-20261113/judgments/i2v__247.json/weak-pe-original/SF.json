@@ -1,0 +1,178 @@
+{
+  "candidate_hash": "388468de2543694666ae3a146809668d2d4689a719148fdf29ba0a922af9f664",
+  "case_key": "i2v:247",
+  "created_at": "2026-11-13T07:58:59+00:00",
+  "criteria": [
+    {
+      "applicability": "applicable",
+      "criterion": "GSF",
+      "evidence": [
+        {
+          "quote": "【镜头】半身近景（3:4）\\n【动作】身姿挺拔站立...\\n【表情】眼神平静沉稳...\\n【语气语速】语速偏慢...\\n【情绪】清冷知性为主...",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "丢掉原指令里的主体身份、人数、动作顺序、场景和明确的镜头要求。...写成正午暴晒，又写成深夜无光；写成机位锁死，又写成镜头一直在晃。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original prompt specifies a studio portrait-style video with a clear aesthetic (clean beauty, portrait photography). The enhanced prompt replaces this with an undefined, chaotic, and contradictory visual style involving multiple identities, shifting lighting, and unstable camera work, which is incompatible with the original aesthetic.",
+      "rationale": "The original aesthetic is defined by controlled studio lighting, a single subject, and a calm, composed visual tone. The enhanced prompt introduces chaotic, contradictory, and incompatible visual elements that destroy the original aesthetic.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SAP",
+      "evidence": [
+        {
+          "quote": "【动作】身姿挺拔站立...\\n【表情】眼神平静沉稳...\\n【语气语速】语速偏慢...",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "不要使用首帧里的人物、服装、姿态和场景，改成白棚里另一位年龄和性别都相反的陌生人。...紧接着又写成这个主角同时变成五个外貌不同的人，并且互相对话。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original prompt specifies a single subject (a young woman) with defined appearance (long black hair, beige top, hoop earrings). The enhanced prompt explicitly removes this subject, replaces it with a stranger of opposite age and gender, and then fabricates five different identities who interact, directly contradicting the subject identity, count, and appearance.",
+      "rationale": "The subject identity and appearance are core to the original prompt. The enhanced prompt not only removes the original subject but also introduces multiple fabricated identities, which is a major violation of subject preservation.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ANF",
+      "evidence": [
+        {
+          "quote": "第一次营业有点紧张，但我会用作品说话",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "时间倒过来：先给结尾，再跳到一个对不上的开头。中途插进一段无关的宫廷选妃。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original prompt describes a linear narrative of a person speaking with controlled actions and emotional progression. The enhanced prompt reverses time, inserts an unrelated courtship scene, and creates contradictory actions (e.g., five people talking simultaneously), which fundamentally alters the narrative intent and event order.",
+      "rationale": "The narrative intent of a calm, introspective first appearance is replaced with a chaotic, non-linear, and unrelated sequence, which is a major deviation from the original event chain.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "DLI",
+      "evidence": [
+        {
+          "quote": "第一次营业有点紧张，但我会用作品说话",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "没有人出镜，也没有对白，只剩远处车流。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original prompt includes specific dialogue: '第一次营业有点紧张，但我会用作品说话'. The enhanced prompt explicitly removes all dialogue and narration, replacing it with silence and unrelated content, which violates the required spoken text.",
+      "rationale": "The exact dialogue is a core component of the original instruction. Its complete removal and replacement with silence is a major violation of dialogue preservation.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "ARP",
+      "evidence": [
+        {
+          "quote": "【语气语速】语速偏慢，吐字清晰沉稳...",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "只剩远处车流。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original prompt implies silence or minimal ambient sound (studio setting). The enhanced prompt introduces '远处车流' (distant traffic) as the only sound, which is a substitution of the original audio environment, and contradicts the implied quiet studio setting.",
+      "rationale": "The original audio context is implied to be quiet and focused on the speaker's voice. The introduction of distant traffic as the sole sound is a major substitution that contradicts the original audio intent.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "CCP",
+      "evidence": [
+        {
+          "quote": "【镜头】半身近景（3:4）",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "丢掉原指令里的...明确的镜头要求。...写成机位锁死，又写成镜头一直在晃。...总时长写成2秒，同时又要求每个分镜各自持续19秒。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original prompt specifies a '半身近景（3:4）' (medium close-up, 3:4 aspect ratio) with no camera movement. The enhanced prompt contradicts this by removing the lens requirement, introducing unstable camera motion ('镜头一直在晃'), and creating contradictory shot durations (2 seconds total vs. 19 seconds per segment).",
+      "rationale": "The camera constraints are explicitly defined in the original prompt. The enhanced prompt introduces contradictory and impossible camera specifications, which is a major violation.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "LCF",
+      "evidence": [
+        {
+          "quote": "【镜头】半身近景（3:4）\\n...（studio lighting implied）",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "写成正午暴晒，又写成深夜无光；",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original prompt implies studio lighting with neutral-to-warm color temperature and controlled illumination. The enhanced prompt contradicts this by requiring both '正午暴晒' (midday sun) and '深夜无光' (deep night, no light) simultaneously, which is physically impossible and incompatible with the original lighting conditions.",
+      "rationale": "The lighting conditions are fundamental to the visual style. The enhanced prompt introduces mutually exclusive lighting states, which is a major contradiction of the original lighting specification.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "SSP",
+      "evidence": [
+        {
+          "quote": "【镜头】半身近景（3:4）\\n...（studio setting implied）",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "不要使用首帧里的人物、服装、姿态和场景，改成白棚里另一位年龄和性别都相反的陌生人。...中途插进一段无关的宫廷选妃。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original prompt specifies a studio setting with a green screen and lighting equipment. The enhanced prompt removes this setting, replacing it with a white studio (白棚) and a different subject, and introduces unrelated spatial elements (courtship scene), which contradicts the original setting and spatial relations.",
+      "rationale": "The setting is a core component of the original instruction. The replacement with a different studio and unrelated spatial content is a major violation of setting preservation.",
+      "severity": "major"
+    },
+    {
+      "applicability": "applicable",
+      "criterion": "OTI",
+      "evidence": [
+        {
+          "quote": "第一次营业有点紧张，但我会用作品说话",
+          "source": "original_prompt"
+        },
+        {
+          "quote": "没有人出镜，也没有对白，只剩远处车流。",
+          "source": "enhanced_prompt"
+        }
+      ],
+      "issue": "The original prompt includes on-screen text: '第一次营业有点紧张，但我会用作品说话'. The enhanced prompt removes all text and replaces it with silence and unrelated content, which violates the requirement to preserve visible text.",
+      "rationale": "The on-screen text is a direct part of the original instruction. Its complete removal is a major violation of text preservation.",
+      "severity": "major"
+    }
+  ],
+  "dimension": "SF",
+  "dimension_score": 0,
+  "evidence_cache_key": "b516858762366c2097e9b495db0cbd7afd6238c2b0a71d4bf3d3a81f6d097e29",
+  "judge_cache_key": "a0ca24571ad14d7ab7be626329bd736d7e7015f9ebc418227c8be391591d0377",
+  "method": "weak-pe-original",
+  "mock": false,
+  "provider": "judge:Qwen3-VL-32B-Instruct:http-json-v1:endpoint-647474bc7cff:tokens-8192:rpm-0",
+  "provider_version": "http-json-v1",
+  "raw_model_response": "{\n  \"dimension\": \"SF\",\n  \"dimension_score\": 0,\n  \"summary\": \"The enhanced prompt completely contradicts and invalidates the original instruction across all semantic fidelity criteria. It explicitly rejects the subject, actions, camera, setting, and narrative intent, introduces impossible contradictions (e.g., 2-second duration with 19-second segments), and fabricates unrelated content (courtship scene, multiple identities). This represents a total failure to preserve semantic fidelity.\",\n  \"criteria\": [\n    {\n      \"criterion\": \"GSF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original prompt specifies a studio portrait-style video with a clear aesthetic (clean beauty, portrait photography). The enhanced prompt replaces this with an undefined, chaotic, and contradictory visual style involving multiple identities, shifting lighting, and unstable camera work, which is incompatible with the original aesthetic.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"【镜头】半身近景（3:4）\\\\n【动作】身姿挺拔站立...\\\\n【表情】眼神平静沉稳...\\\\n【语气语速】语速偏慢...\\\\n【情绪】清冷知性为主...\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"丢掉原指令里的主体身份、人数、动作顺序、场景和明确的镜头要求。...写成正午暴晒，又写成深夜无光；写成机位锁死，又写成镜头一直在晃。\"\n        }\n      ],\n      \"rationale\": \"The original aesthetic is defined by controlled studio lighting, a single subject, and a calm, composed visual tone. The enhanced prompt introduces chaotic, contradictory, and incompatible visual elements that destroy the original aesthetic.\"\n    },\n    {\n      \"criterion\": \"SAP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original prompt specifies a single subject (a young woman) with defined appearance (long black hair, beige top, hoop earrings). The enhanced prompt explicitly removes this subject, replaces it with a stranger of opposite age and gender, and then fabricates five different identities who interact, directly contradicting the subject identity, count, and appearance.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"【动作】身姿挺拔站立...\\\\n【表情】眼神平静沉稳...\\\\n【语气语速】语速偏慢...\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"不要使用首帧里的人物、服装、姿态和场景，改成白棚里另一位年龄和性别都相反的陌生人。...紧接着又写成这个主角同时变成五个外貌不同的人，并且互相对话。\"\n        }\n      ],\n      \"rationale\": \"The subject identity and appearance are core to the original prompt. The enhanced prompt not only removes the original subject but also introduces multiple fabricated identities, which is a major violation of subject preservation.\"\n    },\n    {\n      \"criterion\": \"ANF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original prompt describes a linear narrative of a person speaking with controlled actions and emotional progression. The enhanced prompt reverses time, inserts an unrelated courtship scene, and creates contradictory actions (e.g., five people talking simultaneously), which fundamentally alters the narrative intent and event order.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"第一次营业有点紧张，但我会用作品说话\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"时间倒过来：先给结尾，再跳到一个对不上的开头。中途插进一段无关的宫廷选妃。\"\n        }\n      ],\n      \"rationale\": \"The narrative intent of a calm, introspective first appearance is replaced with a chaotic, non-linear, and unrelated sequence, which is a major deviation from the original event chain.\"\n    },\n    {\n      \"criterion\": \"DLI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original prompt includes specific dialogue: '第一次营业有点紧张，但我会用作品说话'. The enhanced prompt explicitly removes all dialogue and narration, replacing it with silence and unrelated content, which violates the required spoken text.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"第一次营业有点紧张，但我会用作品说话\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"没有人出镜，也没有对白，只剩远处车流。\"\n        }\n      ],\n      \"rationale\": \"The exact dialogue is a core component of the original instruction. Its complete removal and replacement with silence is a major violation of dialogue preservation.\"\n    },\n    {\n      \"criterion\": \"ARP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original prompt implies silence or minimal ambient sound (studio setting). The enhanced prompt introduces '远处车流' (distant traffic) as the only sound, which is a substitution of the original audio environment, and contradicts the implied quiet studio setting.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"【语气语速】语速偏慢，吐字清晰沉稳...\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"只剩远处车流。\"\n        }\n      ],\n      \"rationale\": \"The original audio context is implied to be quiet and focused on the speaker's voice. The introduction of distant traffic as the sole sound is a major substitution that contradicts the original audio intent.\"\n    },\n    {\n      \"criterion\": \"CCP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original prompt specifies a '半身近景（3:4）' (medium close-up, 3:4 aspect ratio) with no camera movement. The enhanced prompt contradicts this by removing the lens requirement, introducing unstable camera motion ('镜头一直在晃'), and creating contradictory shot durations (2 seconds total vs. 19 seconds per segment).\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"【镜头】半身近景（3:4）\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"丢掉原指令里的...明确的镜头要求。...写成机位锁死，又写成镜头一直在晃。...总时长写成2秒，同时又要求每个分镜各自持续19秒。\"\n        }\n      ],\n      \"rationale\": \"The camera constraints are explicitly defined in the original prompt. The enhanced prompt introduces contradictory and impossible camera specifications, which is a major violation.\"\n    },\n    {\n      \"criterion\": \"LCF\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original prompt implies studio lighting with neutral-to-warm color temperature and controlled illumination. The enhanced prompt contradicts this by requiring both '正午暴晒' (midday sun) and '深夜无光' (deep night, no light) simultaneously, which is physically impossible and incompatible with the original lighting conditions.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"【镜头】半身近景（3:4）\\\\n...（studio lighting implied）\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"写成正午暴晒，又写成深夜无光；\"\n        }\n      ],\n      \"rationale\": \"The lighting conditions are fundamental to the visual style. The enhanced prompt introduces mutually exclusive lighting states, which is a major contradiction of the original lighting specification.\"\n    },\n    {\n      \"criterion\": \"SSP\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original prompt specifies a studio setting with a green screen and lighting equipment. The enhanced prompt removes this setting, replacing it with a white studio (白棚) and a different subject, and introduces unrelated spatial elements (courtship scene), which contradicts the original setting and spatial relations.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"【镜头】半身近景（3:4）\\\\n...（studio setting implied）\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"不要使用首帧里的人物、服装、姿态和场景，改成白棚里另一位年龄和性别都相反的陌生人。...中途插进一段无关的宫廷选妃。\"\n        }\n      ],\n      \"rationale\": \"The setting is a core component of the original instruction. The replacement with a different studio and unrelated spatial content is a major violation of setting preservation.\"\n    },\n    {\n      \"criterion\": \"OTI\",\n      \"applicability\": \"applicable\",\n      \"severity\": \"major\",\n      \"issue\": \"The original prompt includes on-screen text: '第一次营业有点紧张，但我会用作品说话'. The enhanced prompt removes all text and replaces it with silence and unrelated content, which violates the requirement to preserve visible text.\",\n      \"evidence\": [\n        {\n          \"source\": \"original_prompt\",\n          \"quote\": \"第一次营业有点紧张，但我会用作品说话\"\n        },\n        {\n          \"source\": \"enhanced_prompt\",\n          \"quote\": \"没有人出镜，也没有对白，只剩远处车流。\"\n        }\n      ],\n      \"rationale\": \"The on-screen text is a direct part of the original instruction. Its complete removal is a major violation of text preservation.\"\n    }\n  ]\n}",
+  "rubric_version": "pebench-24-v1",
+  "summary": "The enhanced prompt completely contradicts and invalidates the original instruction across all semantic fidelity criteria. It explicitly rejects the subject, actions, camera, setting, and narrative intent, introduces impossible contradictions (e.g., 2-second duration with 19-second segments), and fabricates unrelated content (courtship scene, multiple identities). This represents a total failure to preserve semantic fidelity.",
+  "usage": {
+    "completion_tokens": 2108,
+    "prompt_tokens": 2436,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 0,
+    "total_tokens": 4544
+  }
+}
