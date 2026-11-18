@@ -34,7 +34,7 @@ def _current_judgments(run_dir: Path):
                 continue
             candidate = read_json(candidate_path)
             evidence = read_json(evidence_path)
-            expected_judge_key = hashlib.sha256(f"{judge_identity}:{RUBRIC_VERSION}:{dimension}".encode()).hexdigest()
+            expected_judge_key = hashlib.sha256(f"{judge_identity}:{run.get('rubric_version', RUBRIC_VERSION)}:{dimension}".encode()).hexdigest()
             if (candidate.get("candidate_hash") != value.get("candidate_hash")
                     or evidence.get("cache_key") != value.get("evidence_cache_key")
                     or value.get("judge_cache_key") != expected_judge_key):
@@ -73,6 +73,9 @@ def _aggregate_dimension(values: list[dict[str, Any]], dimension: str) -> dict[s
 def summarize(run_dir: str | Path) -> dict[str, Any]:
     run = Path(run_dir)
     meta = read_json(run / "run.json")
+    if meta.get("protocol") == "text-v3":
+        from .text_report import summarize_text
+        return summarize_text(run)
     case_doc = read_json(run / "cases.json") if (run / "cases.json").is_file() else {"cases": []}
     case_info = {row["case_key"]: row for row in case_doc.get("cases", [])}
     by_method: dict[str, list[dict[str, Any]]] = defaultdict(list)
@@ -92,6 +95,11 @@ def summarize(run_dir: str | Path) -> dict[str, Any]:
             for field, value_key in (("mode", "mode"), ("task_category", "task_category"),
                                      ("task_type", "task_type"), ("duration", "duration")):
                 group_value = info.get(value_key)
+                if group_value is not None:
+                    groups[f"{field}:{group_value}"][value["dimension"]].append(value)
+            metadata = info.get("source_metadata") or {}
+            for field in ("scene", "ability"):
+                group_value = metadata.get(field)
                 if group_value is not None:
                     groups[f"{field}:{group_value}"][value["dimension"]].append(value)
         group_out = {}
@@ -122,6 +130,9 @@ def summarize(run_dir: str | Path) -> dict[str, Any]:
 
 
 def render_markdown(summary: dict[str, Any]) -> str:
+    if summary.get("protocol") == "text-v3":
+        from .text_report import render_text_markdown
+        return render_text_markdown(summary)
     lines = [f"# PEBench evaluation summary: `{summary['run_id']}`", "",
              f"Dataset fingerprint: `{summary['dataset_fingerprint']}`", "",
              f"Status: **{summary['summary_status']}**", "",

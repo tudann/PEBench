@@ -1,0 +1,32 @@
+paths:
+  data_root: .
+  output_root: runs
+  candidate_file: candidates_official_log_20261118.jsonl
+  template_file: candidates_template.jsonl
+selection:
+  modes:
+  - t2v
+  case_keys: []
+  task_categories: []
+  task_types: []
+  limit: null
+run:
+  protocol: text-v3
+  run_id: official-vs-log-sf02-ic02-dc06-20261118
+  method: production-line-pe
+  inspect_content: true
+  resume: true
+  max_workers: 32
+provider:
+  type: real
+  trust_env: false
+  timeout_seconds: 900
+  max_tokens: 8192
+  requests_per_minute: 0
+  judge:
+    endpoint: http://127.0.0.1:8011/v1/chat/completions
+    model: Qwen3-VL-32B-Instruct
+    api_key_env: PEBENCH_LOCAL_MODEL_API_KEY
+    api_key_file: secrets/judge_api_key
+  image_facts: null
+  video_facts: null

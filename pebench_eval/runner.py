@@ -1,9 +1,11 @@
 from __future__ import annotations
 
 import datetime as dt
+import hashlib
 import json
 import re
 import uuid
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
 from typing import Any
 
@@ -68,10 +70,47 @@ def _load_judgment(path: Path, *, case_key: str, method: str, dimension: str,
     return None
 
 
+def _judge_and_store(provider: Any, judge_provider: Any, sample: dict[str, Any],
+                     candidate: dict[str, Any], evidence: dict[str, Any], dimension: str,
+                     case_key: str, evidence_key: str, judge_identity: str,
+                     target: Path, error_path: Path) -> None:
+    import hashlib
+    try:
+        value = provider.judge(sample, candidate, evidence, dimension)
+        value = validate_dimension_result(value, dimension)
+        raw_response = value.pop("_pebench_raw_model_response", getattr(judge_provider, "last_raw_response", ""))
+        usage = value.pop("_pebench_usage", getattr(judge_provider, "last_usage", None))
+        judge_key = hashlib.sha256(f"{judge_identity}:{RUBRIC_VERSION}:{dimension}".encode()).hexdigest()
+        value.update({"case_key": case_key, "method": candidate["method"], "dimension": dimension,
+                      "candidate_hash": candidate["candidate_hash"], "evidence_cache_key": evidence_key,
+                      "judge_cache_key": judge_key, "raw_model_response": raw_response,
+                      "usage": usage, "created_at": _now()})
+        write_json(target, value)
+        error_path.unlink(missing_ok=True)
+    except Exception as exc:
+        write_json(error_path, {"case_key": case_key, "method": candidate["method"],
+                                "dimension": dimension, "stage": "judge",
+                                "error_type": type(exc).__name__, "error": str(exc),
+                                "created_at": _now()})
+
+
 def run_pipeline(*, data_root: str | Path, output_root: str | Path, provider: Any,
                  candidate_file: str | Path | None = None, modes: set[str] | None = None,
                  limit: int | None = None, run_id: str | None = None, resume: bool = True,
-                 inspect_content: bool = True, case_filter_keys: set[str] | None = None) -> Path:
+                 inspect_content: bool = True, case_filter_keys: set[str] | None = None,
+                 max_workers: int = 1, protocol: str = "legacy", checkpoint_source: str | Path | None = None) -> Path:
+    if protocol == "text-v3":
+        from .text_runner import run_text_pipeline
+        return run_text_pipeline(data_root=data_root, output_root=output_root, provider=provider,
+                                 candidate_file=candidate_file, modes=modes, limit=limit, run_id=run_id,
+                                 resume=resume, inspect_content=inspect_content,
+                                 case_filter_keys=case_filter_keys, max_workers=max_workers, checkpoint_source=checkpoint_source)
+    if checkpoint_source:
+        raise ValueError("checkpoint_source is supported only by text-v3")
+    if protocol != "legacy":
+        raise ValueError("protocol must be legacy or text-v3")
+    if type(max_workers) is not int or not 1 <= max_workers <= 128:
+        raise ValueError("max_workers must be an integer in [1, 128]")
     root = Path(data_root).resolve()
     all_cases = load_cases(root)
     eligible_cases = [case for case in all_cases if case_filter_keys is None or case.key in case_filter_keys]
@@ -113,6 +152,8 @@ def run_pipeline(*, data_root: str | Path, output_root: str | Path, provider: An
         raise ValueError("run directory must stay inside output_root")
     run_json = run_dir / "run.json"
     previous = read_json(run_json) if run_json.is_file() else None
+    if previous and previous.get("protocol") == "text-v3":
+        raise ValueError("existing run uses text-v3; use a new run_id for legacy evaluation")
     saved_manifest = read_json(run_dir / "cases.json") if previous and (run_dir / "cases.json").is_file() else None
     if previous and (not saved_manifest or [c.get("case_key") for c in saved_manifest.get("cases", [])] != [c.key for c in selected_cases]):
         raise ValueError("existing run has a different case scope; use a new run_id")
@@ -152,46 +193,34 @@ def run_pipeline(*, data_root: str | Path, output_root: str | Path, provider: An
         for candidate in rows:
             write_json(run_dir / "candidates" / _safe(candidate["method"]) /
                        case_filename(f"{candidate['mode']}:{candidate['capid']}"), candidate)
-    for case in selected_cases:
-        sample = case.to_dict()
-        try:
-            evidence_provider = provider.evidence_provider(case) if hasattr(provider, "evidence_provider") else provider
-            evidence_identity = getattr(evidence_provider, "identity", f"{evidence_provider.name}:{evidence_provider.version}")
-            evidence_key = evidence_cache_key(case, manifest, evidence_identity, evidence_provider.version)
-            evidence = _load_or_extract_evidence(run_dir, case, sample, manifest, provider)
-            (run_dir / "evidence" / (case_filename(case.key) + ".error.json")).unlink(missing_ok=True)
-        except Exception as exc:
-            evidence_path = run_dir / "evidence" / (case_filename(case.key) + ".error.json")
-            write_json(evidence_path, {"case_key": case.key, "stage": "evidence",
-                                       "error_type": type(exc).__name__, "error": str(exc), "created_at": _now()})
-            continue
-        judge_provider = provider.judge_provider() if hasattr(provider, "judge_provider") else provider
-        import hashlib
-        judge_identity = getattr(judge_provider, "identity", f"{judge_provider.name}:{judge_provider.version}")
-        for candidate in by_case.get(case.key, []):
-            method = candidate["method"]
-            method_dir = _safe(method)
-            for dimension in DIMENSIONS:
-                judge_key = hashlib.sha256(f"{judge_identity}:{RUBRIC_VERSION}:{dimension}".encode()).hexdigest()
-                target = run_dir / "judgments" / case_filename(case.key) / method_dir / f"{dimension}.json"
-                error_path = target.with_suffix(".error.json")
-                if resume and _load_judgment(target, case_key=case.key, method=method, dimension=dimension,
-                                             candidate_hash=candidate["candidate_hash"], evidence_key=evidence_key, judge_key=judge_key):
-                    continue
-                try:
-                    value = provider.judge(sample, candidate, evidence, dimension)
-                    value = validate_dimension_result(value, dimension)
-                    raw_response = getattr(judge_provider, "last_raw_response", "")
-                    value.update({"case_key": case.key, "method": method, "dimension": dimension,
-                                  "candidate_hash": candidate["candidate_hash"], "evidence_cache_key": evidence_key,
-                                  "judge_cache_key": judge_key, "raw_model_response": raw_response,
-                                  "usage": getattr(judge_provider, "last_usage", None), "created_at": _now()})
-                    write_json(target, value)
-                    error_path.unlink(missing_ok=True)
-                except Exception as exc:
-                    write_json(error_path, {"case_key": case.key, "method": method, "dimension": dimension,
-                                            "stage": "judge", "error_type": type(exc).__name__,
-                                            "error": str(exc), "created_at": _now()})
+    judge_provider = provider.judge_provider() if hasattr(provider, "judge_provider") else provider
+    judge_identity = getattr(judge_provider, "identity", f"{judge_provider.name}:{judge_provider.version}")
+    with ThreadPoolExecutor(max_workers=max_workers) as pool:
+        for case in selected_cases:
+            sample = case.to_dict()
+            try:
+                evidence_provider = provider.evidence_provider(case) if hasattr(provider, "evidence_provider") else provider
+                evidence_identity = getattr(evidence_provider, "identity", f"{evidence_provider.name}:{evidence_provider.version}")
+                evidence_key = evidence_cache_key(case, manifest, evidence_identity, evidence_provider.version)
+                evidence = _load_or_extract_evidence(run_dir, case, sample, manifest, provider)
+                (run_dir / "evidence" / (case_filename(case.key) + ".error.json")).unlink(missing_ok=True)
+            except Exception as exc:
+                evidence_path = run_dir / "evidence" / (case_filename(case.key) + ".error.json")
+                write_json(evidence_path, {"case_key": case.key, "stage": "evidence",
+                                           "error_type": type(exc).__name__, "error": str(exc), "created_at": _now()})
+                continue
+            for candidate in by_case.get(case.key, []):
+                method_dir = _safe(candidate["method"])
+                for dimension in DIMENSIONS:
+                    judge_key = hashlib.sha256(f"{judge_identity}:{RUBRIC_VERSION}:{dimension}".encode()).hexdigest()
+                    target = run_dir / "judgments" / case_filename(case.key) / method_dir / f"{dimension}.json"
+                    error_path = target.with_suffix(".error.json")
+                    if resume and _load_judgment(target, case_key=case.key, method=candidate["method"],
+                                                 dimension=dimension, candidate_hash=candidate["candidate_hash"],
+                                                 evidence_key=evidence_key, judge_key=judge_key):
+                        continue
+                    pool.submit(_judge_and_store, provider, judge_provider, sample, candidate, evidence,
+                                dimension, case.key, evidence_key, judge_identity, target, error_path)
     summary = summarize(run_dir)
     error_count = len(list(run_dir.rglob("*.error.json")))
     method_count = len({row["method"] for rows in by_case.values() for row in rows})

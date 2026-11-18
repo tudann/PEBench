@@ -46,18 +46,21 @@ class Case:
     mode: str
     capid: str
     prompt: str
-    duration: float
+    duration: float | None
     task_category: str
     task_type: str
     assets: tuple[Asset, ...]
     source_file: str
+    source_metadata: dict[str, Any] | None = None
+    source_facts: dict[str, Any] | None = None
+    source_facts_meta: dict[str, Any] | None = None
 
     @property
     def key(self) -> str:
         return f"{self.mode}:{self.capid}"
 
     def to_dict(self) -> dict[str, Any]:
-        return {
+        value = {
             "case_key": self.key, "mode": self.mode, "capid": self.capid,
             "prompt": self.prompt, "duration": self.duration,
             "task_category": self.task_category, "task_type": self.task_type,
@@ -66,6 +69,13 @@ class Case:
                        for a in self.assets],
             "source_file": self.source_file,
         }
+        if self.source_metadata is not None:
+            value["source_metadata"] = self.source_metadata
+        if self.source_facts is not None:
+            value["source_facts"] = self.source_facts
+        if self.source_facts_meta is not None:
+            value["source_facts_meta"] = self.source_facts_meta
+        return value
 
 
 def _path_for_asset(data_root: Path, local_path: str) -> Path:
@@ -104,12 +114,25 @@ def load_cases(data_root: str | Path) -> list[Case]:
             prompt = row.get("prompt")
             if not isinstance(prompt, str) or not prompt.strip():
                 raise ValueError(f"{filename}:{row_number}: prompt is empty")
-            try:
-                duration = float(row["duration"])
-            except (KeyError, TypeError, ValueError):
-                raise ValueError(f"{filename}:{row_number}: invalid duration") from None
-            if not (duration > 0):
-                raise ValueError(f"{filename}:{row_number}: duration must be positive")
+            duration_value = row.get("duration")
+            if duration_value is None or duration_value == "":
+                duration = None
+            else:
+                try:
+                    duration = float(duration_value)
+                except (TypeError, ValueError):
+                    raise ValueError(f"{filename}:{row_number}: invalid duration") from None
+                if not (duration > 0):
+                    raise ValueError(f"{filename}:{row_number}: duration must be positive or null")
+            source_metadata = row.get("source_metadata")
+            source_facts = row.get("source_facts")
+            source_facts_meta = row.get("source_facts_meta")
+            if source_metadata is not None and not isinstance(source_metadata, dict):
+                raise ValueError(f"{filename}:{row_number}: source_metadata must be an object")
+            if source_facts is not None and not isinstance(source_facts, dict):
+                raise ValueError(f"{filename}:{row_number}: source_facts must be an object")
+            if source_facts_meta is not None and not isinstance(source_facts_meta, dict):
+                raise ValueError(f"{filename}:{row_number}: source_facts_meta must be an object")
             media = row.get("media", []) or []
             if not isinstance(media, list):
                 raise ValueError(f"{filename}:{row_number}: media must be a list")
@@ -131,7 +154,8 @@ def load_cases(data_root: str | Path) -> list[Case]:
             if mode == "r2v" and not assets:
                 raise ValueError(f"{filename}:{row_number}: R2V requires at least one reference asset")
             cases.append(Case(mode, capid, prompt, duration, str(row.get("task_category", "")),
-                              str(row.get("task_type", "")), tuple(assets), filename))
+                              str(row.get("task_type", "")), tuple(assets), filename,
+                              source_metadata, source_facts, source_facts_meta))
     if len({case.key for case in cases}) != len(cases):
         raise ValueError("case keys are not unique across benchmark files")
     return cases

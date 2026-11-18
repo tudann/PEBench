@@ -27,12 +27,17 @@ def load_config(path: str | Path) -> dict:
     cfg = _mapping(value, 'config', {'paths', 'selection', 'run', 'provider'})
     paths = _mapping(cfg.get('paths', {}), 'paths', {'data_root', 'output_root', 'candidate_file', 'template_file'})
     selection = _mapping(cfg.get('selection', {}), 'selection', {'modes', 'case_keys', 'task_categories', 'task_types', 'limit'})
-    run = _mapping(cfg.get('run', {}), 'run', {'run_id', 'method', 'inspect_content', 'resume'})
+    run = _mapping(cfg.get('run', {}), 'run', {'run_id', 'method', 'inspect_content', 'resume', 'max_workers', 'protocol', 'checkpoint_source'})
     provider = _mapping(cfg.get('provider', {}), 'provider', {'type', 'timeout_seconds', 'max_tokens', 'requests_per_minute', 'trust_env', 'judge', 'image_facts', 'video_facts'})
     for section, values in [('paths', paths), ('run', run)]:
         for key, item in values.items():
-            if key in {'inspect_content', 'resume'}:
+            if key == 'checkpoint_source' and isinstance(item, list):
+                if not item or any(not isinstance(x, str) or not x.strip() for x in item):
+                    raise ValueError('run.checkpoint_source must contain nonempty paths')
+            elif key in {'inspect_content', 'resume'}:
                 if not isinstance(item, bool): raise ValueError(f'{section}.{key} must be boolean')
+            elif section == 'run' and key == 'max_workers':
+                continue
             elif item is not None and (not isinstance(item, str) or not item.strip()):
                 raise ValueError(f'{section}.{key} must be a non-empty string or null')
     for key in ('modes', 'case_keys', 'task_categories', 'task_types'):
@@ -45,6 +50,10 @@ def load_config(path: str | Path) -> dict:
     if limit is not None and (type(limit) is not int or limit < 1): raise ValueError('selection.limit must be a positive integer or null')
     if provider.get('type', 'mock') not in {'mock', 'real'}: raise ValueError('provider.type must be mock or real')
     if 'trust_env' in provider and not isinstance(provider['trust_env'], bool): raise ValueError('provider.trust_env must be boolean')
+    if run.get('protocol', 'legacy') not in {'legacy', 'text-v3'}:
+        raise ValueError('run.protocol must be legacy or text-v3')
+    if 'max_workers' in run and (type(run['max_workers']) is not int or not 1 <= run['max_workers'] <= 128):
+        raise ValueError('run.max_workers must be an integer in [1, 128]')
     for key, low, high in [('timeout_seconds', 1, 3600), ('max_tokens', 256, 65536), ('requests_per_minute', 0, 10000)]:
         if key in provider and (type(provider[key]) is not int or not low <= provider[key] <= high):
             raise ValueError(f'provider.{key} must be an integer in [{low}, {high}]')

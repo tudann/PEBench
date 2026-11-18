@@ -10,7 +10,8 @@ from unittest.mock import patch
 from pebench_eval.dataset import load_cases, sha256_file, validate_assets
 from pebench_eval.evidence import normalize_fact_response, validate_evidence
 from pebench_eval.prompts import evidence_user, validate_dimension_result
-from pebench_eval.providers import MockProvider, OpenAICompatibleProvider, ProviderBundle
+from pebench_eval.prompt_facts import validate_prompt_facts
+from pebench_eval.providers import MockProvider, OpenAICompatibleProvider, ProviderBundle, salvage_json_object
 from pebench_eval.media_transport import MAX_INLINE_IMAGE_BYTES, IMAGE_TRANSPORT_VERSION, prepare_image
 from pebench_eval.report import summarize
 from pebench_eval.runner import run_pipeline
@@ -56,6 +57,51 @@ class PipelineTests(unittest.TestCase):
         path.write_text(json.dumps(raw))
         with self.assertRaises(ValueError):
             load_cases(self.root)
+
+    def test_source_prompt_facts_require_verbatim_quotes_and_null_duration_is_supported(self):
+        path = self.root / "t2v_500.json"
+        raw = json.loads(path.read_text(encoding="utf-8"))
+        raw[0]["duration"] = None
+        path.write_text(json.dumps(raw), encoding="utf-8")
+        case = load_cases(self.root)[0]
+        self.assertIsNone(case.duration)
+        facts = {"case_key": case.key, "requirements": [
+            {"id": "R1", "category": "subject", "polarity": "required",
+             "source_quote": "A cat", "statement": "A cat is present.", "order_index": None}
+        ], "ambiguities": []}
+        self.assertEqual(validate_prompt_facts(facts, case), facts)
+        invalid = json.loads(json.dumps(facts))
+        invalid["requirements"][0]["source_quote"] = "A dog"
+        with self.assertRaisesRegex(ValueError, "exact substring"):
+            validate_prompt_facts(invalid, case)
+
+    def test_null_issue_and_rationale_become_empty_strings(self):
+        dim = "DC"
+        value = {"dimension": dim, "dimension_score": 90, "summary": "ok", "criteria": [
+            {"criterion": code, "applicability": "applicable", "severity": "none",
+             "issue": None, "evidence": [{"source": "enhanced_prompt", "quote": "shot"}], "rationale": None}
+            for code in DIMENSIONS[dim][1]]}
+        result = validate_dimension_result(value, dim)
+        self.assertEqual(result["criteria"][0]["issue"], "")
+        self.assertEqual(result["criteria"][0]["rationale"], "")
+
+    def test_evidence_object_and_null_quote_are_normalized(self):
+        dim = "SF"
+        value = {"dimension": dim, "dimension_score": 80, "summary": None, "criteria": [
+            {"criterion": code, "applicability": "applicable", "severity": "none",
+             "issue": "", "evidence": {"source": None, "quote": None}, "rationale": ""}
+            for code in DIMENSIONS[dim][1]]}
+        value["criteria"].append("not-a-criterion")
+        result = validate_dimension_result(value, dim)
+        self.assertEqual(result["summary"], "")
+        self.assertEqual(result["criteria"][0]["evidence"], [{"source": "enhanced_prompt", "quote": ""}])
+
+    def test_truncated_json_object_is_closed_and_parsed(self):
+        text = '{"dimension":"DC","dimension_score":90,"summary":"ok","criteria":[{"criterion":"STC","issue":"cut'
+        value = salvage_json_object(text)
+        self.assertEqual(value["dimension"], "DC")
+        self.assertEqual(value["criteria"][0]["criterion"], "STC")
+        self.assertIsNone(salvage_json_object("not json"))
 
     def test_dimension_contract_rejects_missing_criterion(self):
         dim = "SF"

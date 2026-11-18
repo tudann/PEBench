@@ -7,12 +7,16 @@ from .prompts import EVIDENCE_PROMPT_VERSION
 
 
 def text_only_evidence(case: Case, *, provider: str, provider_version: str) -> dict[str, Any]:
-    return {
+    value = {
         "schema_version": EVIDENCE_PROMPT_VERSION, "provider": provider,
         "provider_version": provider_version, "mode": case.mode, "case_key": case.key,
         "assets": [], "cross_asset_relations": [], "limitations": [],
         "source": "original_instruction_only",
     }
+    if case.source_facts is not None:
+        value["source_prompt_requirements"] = case.source_facts
+        value["source_prompt_requirements_meta"] = case.source_facts_meta or {}
+    return value
 
 
 def asset_manifest_evidence(case: Case, asset_manifest: dict[str, dict[str, Any]], *, provider: str,

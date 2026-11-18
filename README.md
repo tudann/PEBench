@@ -81,7 +81,7 @@ For a small pilot, add `--mode i2v --limit 20` or another mode selection. Reusin
 
 ## Notes on comparability
 
-- The paper names GPT-5.4 for image facts and the unified evaluator, and Qwen3.5-Omni-Plus for R2V cases with video. Use those exact versions when accessible; otherwise record the replacement models and treat the results as a local reproduction.
+- The active AA T2V reproduction config uses the local Qwen3-VL-32B-Instruct service on GPU 4 at http://127.0.0.1:8011/v1/chat/completions for source-fact extraction and unified judging. Other configs may select different models explicitly.
 - The pipeline emits a 0-100 dimension score requested by the paper's output format, and separately computes criterion pass rates from `none/minor/major` severities. The score conversion is model-reported; the exact paper aggregation formula is not asserted here.
 - R2V asset IDs preserve modality-local numbering (`image_1`, `video_1`) and the original input order. The evaluator must not infer facts that are absent from the cached evidence.
 - The current real HTTP adapter and video-message extension are structurally tested with mocked transport. A real API integration test still requires configured credentials, an endpoint that supports image/video payloads, and model-accessible media URLs.
@@ -103,6 +103,12 @@ python3 -m pebench_eval summarize --run-dir runs/my-run
 
 筛选条件取交集，再应用 limit；空列表表示不限制。所有四个命令使用相同筛选逻辑。YAML 评估要求候选文件覆盖所有选中 case（每个 case 至少一个候选），不同方法仍可部分覆盖。默认只选 1 个 T2V 案例，避免意外批量调用。当前数据仅有 `t2v`、`i2v`、`r2v` 模式，不支持 `t2va`、`r2va`；Speech 等内容类别不等于素材一定包含音轨。
 
-默认裁判为网关 `gpt-5.4`；图片事实配置为 null 时继承裁判。环境变量 `PEBENCH_JUDGE_API_KEY` 优先，其次读取项目数据盘 `secrets/judge_api_key`；该文件权限为 0600，已加入忽略列表。不要将密钥写进 YAML 或报告。要切换其他兼容模型，修改 judge 的 endpoint、model 和密钥来源；独立图片模型可设置同样的四项。`video_facts` 目前为 null；接入视频模型时需要填写 endpoint、model、密钥来源与 public_base_url，服务必须支持 `video_url` 并可访问素材。已部署的 Omni 尚未启动或联调，也没有独立音轨输入适配，不能将当前配置视为完整音视频验证。
-
+AA T2V 当前默认裁判为 4 号卡上的本地 Qwen3-VL-32B-Instruct（http://127.0.0.1:8011/v1/chat/completions）；图片事实配置为 null 时继承裁判。其他实验配置需显式指定各自的 endpoint、model 和密钥来源。不要将密钥写进 YAML 或报告。video_facts 目前为 null；接入视频模型时需要填写 endpoint、model、密钥来源与 public_base_url，服务必须支持 video_url 并可访问素材。已部署的 Omni 尚未启动或联调，也没有独立音轨输入适配，不能将当前配置视为完整音视频验证。
 同一 run ID 恢复时选中的 case 必须与首次一致，且候选内容一旦写入后不能改变；更换范围或 PE 内容请使用新 run ID。`prepare` 后再 `evaluate` 时，候选文件需覆盖准备阶段选中的所有 case。运行产物和缓存位于 PFS 数据盘的输出目录。
+
+
+## Text-only paired evaluation (text-v3)
+
+A separate `text-v3` protocol compares two PE texts against a frozen source-only plan, without generated videos or human review. SF evaluates weighted source requirements, IC checks evidenced internal conflicts, and DC uses positive 0–4 design ratings. Scores are calculated locally (20% SF, 20% IC, 60% DC), with a documented critical-violation cap. Anonymous A/B evaluation runs in both orders and automatically reviews unstable results. Historical evaluations retain their original rubric and score conversion.
+
+Use `pe_data/aa_t2v_159/config_text_v3.yaml` for a new run, or select `--protocol text-v3` with two candidates per T2V case. `rubric-check` runs controlled text mutations against the configured real model. Full rules, usage, request costs and limitations are in [docs/text_v3_evaluation.md](docs/text_v3_evaluation.md).
